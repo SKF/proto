@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option csharp_namespace = "SKF.Enlight.API.MProxyHub";
+
+package mhubapi;
+
+service MicrologProxyHub {
+  rpc DeepPing (Void) returns (DeepPingOutput) {}
+  rpc SetTaskStatus (SetTaskStatusInput) returns (Void) {}
+  rpc AvailableDSKFStream (AvailableDSKFStreamInput) returns (stream AvailableDSKFStreamOutput) {}
+}
+
+message AvailableDSKFStreamInput {}
+
+message AvailableDSKFStreamOutput {
+  string task_id = 1;
+  string dskf_file = 2;
+}
+
+message SetTaskStatusInput {
+  string task_id = 1;
+  string user_id = 2;
+  TaskStatus status = 3;
+}
+
+enum TaskStatus {
+  NOT_SENT = 0;
+  SENT = 1;
+  RECEIVED = 2;
+  COMPLETED = 3;
+}
+
+message DeepPingOutput {
+  string value = 1;
+}
+
+message Void {}

@@ -1,0 +1,206 @@
+# Use the `minimal` base image. Which is unfortunately not well documented
+# (not present in https://docs.travis-ci.com/user/languages/.
+# Each job is then responsible to override this with their specific image.
+language: minimal
+
+env:
+  global:
+    - DIRS="hierarchy iam iot mhub pas"
+
+stages:
+  - install
+  - build
+  - name: deploy
+    if: branch = master
+
+addons:
+  apt:
+    packages:
+      - tree
+
+# Travis does not share any data between jobs, which we need.
+# Cache all the generated files between stages (and builds)
+# Each 'language:' has gets its own cache from Travis automatically.
+cache:
+  directories:
+    - build
+
+# Skip any language defaults
+install: skip
+
+# Skip any language defaults
+script: skip
+
+# NOTE: All 'stage:' targets _MUST_ have the 'language:' tag to see the correct
+# cache folders!
+jobs:
+  include:
+    # Golang
+    - stage: install
+      name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
+      language: go
+      go: "1.10"
+      before_install:
+        - tree build
+        - rm -rf build
+      install:
+        - mkdir -p build/protoc
+        - pushd build/protoc
+        - wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
+        - unzip -o protoc*.zip
+        - popd
+      script:
+        - go get -u github.com/golang/protobuf/protoc-gen-go
+        - mv $GOPATH/bin build/bin
+      after_failure:
+        - tree build
+        - tree $GOPATH
+
+    - stage: build
+      name: "Go: Generate sources"
+      language: go
+      go: "1.10"
+      script:
+        - mkdir -p build/go
+        - PROTOC=build/protoc/bin/protoc
+        - PLUGIN=build/bin/protoc-gen-go
+        - ls -la $PLUGIN
+        - for DIR in $DIRS; do mkdir -p build/go/$DIR; $PROTOC --go_out build/go/ --plugin $PLUGIN $DIR/*.proto; done
+      after_failure:
+        - ls -l $PROTOC
+        - ls -l $PLUGIN
+        - tree build
+        - tree $GOPATH
+
+    - stage: deploy
+      name: "Go: Deploy generated sources back to repo"
+      language: go
+      go: "1.10"
+      deploy:
+        provider: pages
+        local-dir: build/go/
+        target-branch: go1
+        keep-history: true
+        github-token: $GITHUB_TOKEN
+        skip_cleanup: true
+        verbose: true
+      after_failure:
+        - tree build
+        - tree $GOPATH
+
+    # C# & .NET
+    - stage: install
+      name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
+      language: csharp
+      mono: none
+      dotnet: 2.0
+      before_install:
+        - tree build
+        - rm -rf build
+      install:
+        - mkdir -p build/csharp_project
+        - pushd build/csharp_project
+        - dotnet new console
+        - env NUGET_PACKAGES=$PWD/packages dotnet add package grpc.tools
+        - popd
+      after_failure:
+        - tree build
+
+    - stage: build
+      name: "C#: Generate sources and build .NET nupkg"
+      language: csharp
+      mono: none
+      dotnet: 2.0
+      script:
+        - TOOLS=$(ls -d build/csharp_project/packages/grpc.tools/*/tools/linux_x64/)
+        - PROTOC=$TOOLS/protoc
+        - PLUGIN=$TOOLS/grpc_csharp_plugin
+        - for DIR in $DIRS; do mkdir -p build/csharp/$DIR; $PROTOC --csharp_out build/csharp/$DIR --grpc_out build/csharp/$DIR --plugin protoc-gen-grpc=$PLUGIN $DIR/*.proto; done
+      after_success: # TODO import generated code
+        - dotnet build --configuration Release --no-restore --verbosity n
+        - dotnet pack --configuration Release --no-build --no-restore --verbosity n /p:Version=$TRAVIS_BUILD_NUMBER
+      after_failure:
+        - ls -l $TOOLS
+        - ls -l $PROTOC
+        - ls -l $PLUGIN
+        - tree build
+
+    - stage: deploy
+      name: "C#: Deploy generated sources back to repo"
+      language: csharp
+      mono: none
+      dotnet: 2.0
+      deploy:
+        provider: pages
+        local-dir: build/csharp/
+        target-branch: csharp
+        keep-history: true
+        github-token: $GITHUB_TOKEN
+        skip_cleanup: true
+        verbose: true
+      after_failure:
+        - tree build
+
+    - stage: deploy
+      name: "C#: Deploy nupkg to NuGet"
+      language: csharp
+      mono: none
+      dotnet: 2.0
+      script: true # TODO
+      after_failure:
+        - tree build
+
+    # Python
+    - stage: install
+      name: "Python: Clean cache and fetch python gRPC plugin"
+      language: python
+      python: "3.6"
+      before_install:
+        - tree build
+        - rm -rf build
+      install:
+        - python -m pip install virtualenv
+        - virtualenv build/venv
+        - source build/venv/bin/activate
+        - python -m pip install --upgrade pip
+        - python -m pip install grpcio-tools googleapis-common-protos
+      after_failure:
+        - tree build
+
+    - stage: build
+      name: "Python: Generate sources and build wheel pkg"
+      language: python
+      python: "3.6"
+      script:
+        - python -m pip install virtualenv
+        - virtualenv build/venv
+        - source build/venv/bin/activate
+        - for DIR in $DIRS; do mkdir -p build/python/$DIR; python -m grpc_tools.protoc -I $DIR --python_out build/python/$DIR --grpc_python_out build/python/$DIR $DIR/*.proto; done
+      after_success: # TODO
+        - touch build/python/gen.$TRAVIS_BUILD_NUMBER.whl
+      after_failure:
+        - tree build
+
+    - stage: deploy
+      name: "Python: Deploy generated sources back to repo"
+      language: python
+      python: "3.6"
+      deploy:
+        provider: pages
+        local-dir: build/python/
+        target-branch: python
+        keep-history: true
+        github-token: $GITHUB_TOKEN
+        skip_cleanup: true
+        verbose: true
+      after_failure:
+        - tree build
+
+    - stage: deploy
+      name: "Python: Deploy wheel to PyPi"
+      language: python
+      python: "3.6"
+      script: true # TODO
+      after_failure:
+        - tree build
+
