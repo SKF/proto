@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "SKF.Enlight.API.Hierarchy";
 
-package hierarchyapi;
+package grpcapi;
 
 service Hierarchy {
   rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
