@@ -6,7 +6,7 @@ option java_outer_classname = "iam";
 
 option csharp_namespace = "SKF.Enlight.API.IAM";
 
-package iamapi;
+package grpcapi;
 
 service IAM {
   rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
