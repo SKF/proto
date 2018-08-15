@@ -15,69 +15,79 @@ class IoTStub(object):
       channel: A grpc.Channel.
     """
     self.DeepPing = channel.unary_unary(
-        '/iotapi.IoT/DeepPing',
+        '/iotgrpcapi.IoT/DeepPing',
         request_serializer=grpcapi__pb2.PrimitiveVoid.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveString.FromString,
         )
     self.CreateTask = channel.unary_unary(
-        '/iotapi.IoT/CreateTask',
+        '/iotgrpcapi.IoT/CreateTask',
         request_serializer=grpcapi__pb2.InitialTaskDescription.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveString.FromString,
         )
     self.GetAllTasks = channel.unary_unary(
-        '/iotapi.IoT/GetAllTasks',
+        '/iotgrpcapi.IoT/GetAllTasks',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.TaskDescriptions.FromString,
         )
     self.GetUncompletedTasks = channel.unary_unary(
-        '/iotapi.IoT/GetUncompletedTasks',
+        '/iotgrpcapi.IoT/GetUncompletedTasks',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.TaskDescriptions.FromString,
         )
     self.SetTaskCompleted = channel.unary_unary(
-        '/iotapi.IoT/SetTaskCompleted',
+        '/iotgrpcapi.IoT/SetTaskCompleted',
         request_serializer=grpcapi__pb2.TaskUser.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveVoid.FromString,
         )
     self.DeleteTask = channel.unary_unary(
-        '/iotapi.IoT/DeleteTask',
+        '/iotgrpcapi.IoT/DeleteTask',
         request_serializer=grpcapi__pb2.TaskUser.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveVoid.FromString,
         )
     self.GetUncompletedTasksByHierarchy = channel.unary_unary(
-        '/iotapi.IoT/GetUncompletedTasksByHierarchy',
+        '/iotgrpcapi.IoT/GetUncompletedTasksByHierarchy',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.TaskDescriptions.FromString,
         )
     self.SetTaskStatus = channel.unary_unary(
-        '/iotapi.IoT/SetTaskStatus',
+        '/iotgrpcapi.IoT/SetTaskStatus',
         request_serializer=grpcapi__pb2.SetTaskStatusInput.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveVoid.FromString,
         )
     self.GetTaskStream = channel.unary_stream(
-        '/iotapi.IoT/GetTaskStream',
+        '/iotgrpcapi.IoT/GetTaskStream',
         request_serializer=grpcapi__pb2.GetTaskStreamInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetTaskStreamOutput.FromString,
         )
     self.IngestNodeData = channel.unary_unary(
-        '/iotapi.IoT/IngestNodeData',
+        '/iotgrpcapi.IoT/IngestNodeData',
         request_serializer=grpcapi__pb2.IngestNodeDataInput.SerializeToString,
         response_deserializer=grpcapi__pb2.IngestNodeDataOutput.FromString,
         )
     self.IngestNodeDataStream = channel.stream_unary(
-        '/iotapi.IoT/IngestNodeDataStream',
+        '/iotgrpcapi.IoT/IngestNodeDataStream',
         request_serializer=grpcapi__pb2.IngestNodeDataStreamInput.SerializeToString,
         response_deserializer=grpcapi__pb2.IngestNodeDataStreamOutput.FromString,
         )
+    self.GetLatestNodeData = channel.unary_unary(
+        '/iotgrpcapi.IoT/GetLatestNodeData',
+        request_serializer=grpcapi__pb2.GetLatestNodeDataInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetLatestNodeDataOutput.FromString,
+        )
     self.GetNodeData = channel.unary_unary(
-        '/iotapi.IoT/GetNodeData',
+        '/iotgrpcapi.IoT/GetNodeData',
         request_serializer=grpcapi__pb2.GetNodeDataInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetNodeDataOutput.FromString,
         )
     self.GetNodeDataStream = channel.unary_stream(
-        '/iotapi.IoT/GetNodeDataStream',
+        '/iotgrpcapi.IoT/GetNodeDataStream',
         request_serializer=grpcapi__pb2.GetNodeDataStreamInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetNodeDataStreamOutput.FromString,
+        )
+    self.GetMedia = channel.unary_unary(
+        '/iotgrpcapi.IoT/GetMedia',
+        request_serializer=grpcapi__pb2.GetMediaInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetMediaOutput.FromString,
         )
 
 
@@ -162,6 +172,13 @@ class IoTServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetLatestNodeData(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def GetNodeData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -170,6 +187,13 @@ class IoTServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def GetNodeDataStream(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetMedia(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -234,6 +258,11 @@ def add_IoTServicer_to_server(servicer, server):
           request_deserializer=grpcapi__pb2.IngestNodeDataStreamInput.FromString,
           response_serializer=grpcapi__pb2.IngestNodeDataStreamOutput.SerializeToString,
       ),
+      'GetLatestNodeData': grpc.unary_unary_rpc_method_handler(
+          servicer.GetLatestNodeData,
+          request_deserializer=grpcapi__pb2.GetLatestNodeDataInput.FromString,
+          response_serializer=grpcapi__pb2.GetLatestNodeDataOutput.SerializeToString,
+      ),
       'GetNodeData': grpc.unary_unary_rpc_method_handler(
           servicer.GetNodeData,
           request_deserializer=grpcapi__pb2.GetNodeDataInput.FromString,
@@ -244,7 +273,12 @@ def add_IoTServicer_to_server(servicer, server):
           request_deserializer=grpcapi__pb2.GetNodeDataStreamInput.FromString,
           response_serializer=grpcapi__pb2.GetNodeDataStreamOutput.SerializeToString,
       ),
+      'GetMedia': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMedia,
+          request_deserializer=grpcapi__pb2.GetMediaInput.FromString,
+          response_serializer=grpcapi__pb2.GetMediaOutput.SerializeToString,
+      ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'iotapi.IoT', rpc_method_handlers)
+      'iotgrpcapi.IoT', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

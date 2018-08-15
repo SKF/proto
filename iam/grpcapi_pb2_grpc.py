@@ -15,27 +15,27 @@ class IAMStub(object):
       channel: A grpc.Channel.
     """
     self.DeepPing = channel.unary_unary(
-        '/iamapi.IAM/DeepPing',
+        '/grpcapi.IAM/DeepPing',
         request_serializer=grpcapi__pb2.PrimitiveVoid.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveString.FromString,
         )
     self.CheckAuthentication = channel.unary_unary(
-        '/iamapi.IAM/CheckAuthentication',
+        '/grpcapi.IAM/CheckAuthentication',
         request_serializer=grpcapi__pb2.CheckAuthenticationInput.SerializeToString,
         response_deserializer=grpcapi__pb2.User.FromString,
         )
     self.GetHierarchyRelations = channel.unary_unary(
-        '/iamapi.IAM/GetHierarchyRelations',
+        '/grpcapi.IAM/GetHierarchyRelations',
         request_serializer=grpcapi__pb2.GetHierarchyRelationsInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetHierarchyRelationsOutput.FromString,
         )
     self.GetEventRecords = channel.unary_unary(
-        '/iamapi.IAM/GetEventRecords',
+        '/grpcapi.IAM/GetEventRecords',
         request_serializer=grpcapi__pb2.GetEventRecordsInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetEventRecordsOutput.FromString,
         )
     self.GetEventRecordStream = channel.unary_stream(
-        '/iamapi.IAM/GetEventRecordStream',
+        '/grpcapi.IAM/GetEventRecordStream',
         request_serializer=grpcapi__pb2.PrimitiveVoid.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveBytes.FromString,
         )
@@ -110,5 +110,5 @@ def add_IAMServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'iamapi.IAM', rpc_method_handlers)
+      'grpcapi.IAM', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

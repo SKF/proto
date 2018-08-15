@@ -17,9 +17,9 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpcapi.proto',
-  package='iamapi',
+  package='grpcapi',
   syntax='proto3',
-  serialized_pb=_b('\n\rgrpcapi.proto\x12\x06iamapi\"-\n\x1aGetHierarchyRelationsInput\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"/\n\x1bGetHierarchyRelationsOutput\x12\x10\n\x08node_ids\x18\x01 \x03(\t\"<\n\x18\x43heckAuthenticationInput\x12\r\n\x05token\x18\x01 \x01(\t\x12\x11\n\tmethodArn\x18\x02 \x01(\t\"L\n\x14GetEventRecordsInput\x12\r\n\x05since\x18\x01 \x01(\x03\x12%\n\x05limit\x18\x02 \x01(\x0b\x32\x16.iamapi.PrimitiveInt32\"(\n\x15GetEventRecordsOutput\x12\x0f\n\x07records\x18\x01 \x01(\x0c\"\x85\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x16\n\x0e\x65ulaAgreedDate\x18\x03 \x01(\t\x12\x11\n\tvalidEula\x18\x04 \x01(\t\x12\x10\n\x08username\x18\x05 \x01(\t\x12\x12\n\nuserStatus\x18\x06 \x01(\t\x12\x11\n\tuserRoles\x18\x07 \x01(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\x0ePrimitiveInt32\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x1f\n\x0ePrimitiveBytes\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x0f\n\rPrimitiveVoid2\x8d\x03\n\x03IAM\x12<\n\x08\x44\x65\x65pPing\x12\x15.iamapi.PrimitiveVoid\x1a\x17.iamapi.PrimitiveString\"\x00\x12G\n\x13\x43heckAuthentication\x12 .iamapi.CheckAuthenticationInput\x1a\x0c.iamapi.User\"\x00\x12\x62\n\x15GetHierarchyRelations\x12\".iamapi.GetHierarchyRelationsInput\x1a#.iamapi.GetHierarchyRelationsOutput\"\x00\x12P\n\x0fGetEventRecords\x12\x1c.iamapi.GetEventRecordsInput\x1a\x1d.iamapi.GetEventRecordsOutput\"\x00\x12I\n\x14GetEventRecordStream\x12\x15.iamapi.PrimitiveVoid\x1a\x16.iamapi.PrimitiveBytes\"\x00\x30\x01\x42:\n\x1b\x63om.skf.enlight.iam.grpcapiB\x03iamP\x01\xaa\x02\x13SKF.Enlight.API.IAMb\x06proto3')
+  serialized_pb=_b('\n\rgrpcapi.proto\x12\x07grpcapi\"-\n\x1aGetHierarchyRelationsInput\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"/\n\x1bGetHierarchyRelationsOutput\x12\x10\n\x08node_ids\x18\x01 \x03(\t\"<\n\x18\x43heckAuthenticationInput\x12\r\n\x05token\x18\x01 \x01(\t\x12\x11\n\tmethodArn\x18\x02 \x01(\t\"M\n\x14GetEventRecordsInput\x12\r\n\x05since\x18\x01 \x01(\x03\x12&\n\x05limit\x18\x02 \x01(\x0b\x32\x17.grpcapi.PrimitiveInt32\"(\n\x15GetEventRecordsOutput\x12\x0f\n\x07records\x18\x01 \x01(\x0c\"\x85\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x16\n\x0e\x65ulaAgreedDate\x18\x03 \x01(\t\x12\x11\n\tvalidEula\x18\x04 \x01(\t\x12\x10\n\x08username\x18\x05 \x01(\t\x12\x12\n\nuserStatus\x18\x06 \x01(\t\x12\x11\n\tuserRoles\x18\x07 \x01(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\x0ePrimitiveInt32\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x1f\n\x0ePrimitiveBytes\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x0f\n\rPrimitiveVoid2\x97\x03\n\x03IAM\x12>\n\x08\x44\x65\x65pPing\x12\x16.grpcapi.PrimitiveVoid\x1a\x18.grpcapi.PrimitiveString\"\x00\x12I\n\x13\x43heckAuthentication\x12!.grpcapi.CheckAuthenticationInput\x1a\r.grpcapi.User\"\x00\x12\x64\n\x15GetHierarchyRelations\x12#.grpcapi.GetHierarchyRelationsInput\x1a$.grpcapi.GetHierarchyRelationsOutput\"\x00\x12R\n\x0fGetEventRecords\x12\x1d.grpcapi.GetEventRecordsInput\x1a\x1e.grpcapi.GetEventRecordsOutput\"\x00\x12K\n\x14GetEventRecordStream\x12\x16.grpcapi.PrimitiveVoid\x1a\x17.grpcapi.PrimitiveBytes\"\x00\x30\x01\x42:\n\x1b\x63om.skf.enlight.iam.grpcapiB\x03iamP\x01\xaa\x02\x13SKF.Enlight.API.IAMb\x06proto3')
 )
 
 
@@ -27,13 +27,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _GETHIERARCHYRELATIONSINPUT = _descriptor.Descriptor(
   name='GetHierarchyRelationsInput',
-  full_name='iamapi.GetHierarchyRelationsInput',
+  full_name='grpcapi.GetHierarchyRelationsInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='iamapi.GetHierarchyRelationsInput.user_id', index=0,
+      name='user_id', full_name='grpcapi.GetHierarchyRelationsInput.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -51,20 +51,20 @@ _GETHIERARCHYRELATIONSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25,
-  serialized_end=70,
+  serialized_start=26,
+  serialized_end=71,
 )
 
 
 _GETHIERARCHYRELATIONSOUTPUT = _descriptor.Descriptor(
   name='GetHierarchyRelationsOutput',
-  full_name='iamapi.GetHierarchyRelationsOutput',
+  full_name='grpcapi.GetHierarchyRelationsOutput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_ids', full_name='iamapi.GetHierarchyRelationsOutput.node_ids', index=0,
+      name='node_ids', full_name='grpcapi.GetHierarchyRelationsOutput.node_ids', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -82,27 +82,27 @@ _GETHIERARCHYRELATIONSOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=119,
+  serialized_start=73,
+  serialized_end=120,
 )
 
 
 _CHECKAUTHENTICATIONINPUT = _descriptor.Descriptor(
   name='CheckAuthenticationInput',
-  full_name='iamapi.CheckAuthenticationInput',
+  full_name='grpcapi.CheckAuthenticationInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='token', full_name='iamapi.CheckAuthenticationInput.token', index=0,
+      name='token', full_name='grpcapi.CheckAuthenticationInput.token', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='methodArn', full_name='iamapi.CheckAuthenticationInput.methodArn', index=1,
+      name='methodArn', full_name='grpcapi.CheckAuthenticationInput.methodArn', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -120,27 +120,27 @@ _CHECKAUTHENTICATIONINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=121,
-  serialized_end=181,
+  serialized_start=122,
+  serialized_end=182,
 )
 
 
 _GETEVENTRECORDSINPUT = _descriptor.Descriptor(
   name='GetEventRecordsInput',
-  full_name='iamapi.GetEventRecordsInput',
+  full_name='grpcapi.GetEventRecordsInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='since', full_name='iamapi.GetEventRecordsInput.since', index=0,
+      name='since', full_name='grpcapi.GetEventRecordsInput.since', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='iamapi.GetEventRecordsInput.limit', index=1,
+      name='limit', full_name='grpcapi.GetEventRecordsInput.limit', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -158,20 +158,20 @@ _GETEVENTRECORDSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=259,
+  serialized_start=184,
+  serialized_end=261,
 )
 
 
 _GETEVENTRECORDSOUTPUT = _descriptor.Descriptor(
   name='GetEventRecordsOutput',
-  full_name='iamapi.GetEventRecordsOutput',
+  full_name='grpcapi.GetEventRecordsOutput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='records', full_name='iamapi.GetEventRecordsOutput.records', index=0,
+      name='records', full_name='grpcapi.GetEventRecordsOutput.records', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -189,62 +189,62 @@ _GETEVENTRECORDSOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=261,
-  serialized_end=301,
+  serialized_start=263,
+  serialized_end=303,
 )
 
 
 _USER = _descriptor.Descriptor(
   name='User',
-  full_name='iamapi.User',
+  full_name='grpcapi.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='iamapi.User.id', index=0,
+      name='id', full_name='grpcapi.User.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='email', full_name='iamapi.User.email', index=1,
+      name='email', full_name='grpcapi.User.email', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='eulaAgreedDate', full_name='iamapi.User.eulaAgreedDate', index=2,
+      name='eulaAgreedDate', full_name='grpcapi.User.eulaAgreedDate', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='validEula', full_name='iamapi.User.validEula', index=3,
+      name='validEula', full_name='grpcapi.User.validEula', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='username', full_name='iamapi.User.username', index=4,
+      name='username', full_name='grpcapi.User.username', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='userStatus', full_name='iamapi.User.userStatus', index=5,
+      name='userStatus', full_name='grpcapi.User.userStatus', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='userRoles', full_name='iamapi.User.userRoles', index=6,
+      name='userRoles', full_name='grpcapi.User.userRoles', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -262,20 +262,20 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=437,
+  serialized_start=306,
+  serialized_end=439,
 )
 
 
 _PRIMITIVESTRING = _descriptor.Descriptor(
   name='PrimitiveString',
-  full_name='iamapi.PrimitiveString',
+  full_name='grpcapi.PrimitiveString',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iamapi.PrimitiveString.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveString.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -293,20 +293,20 @@ _PRIMITIVESTRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=439,
-  serialized_end=471,
+  serialized_start=441,
+  serialized_end=473,
 )
 
 
 _PRIMITIVEINT32 = _descriptor.Descriptor(
   name='PrimitiveInt32',
-  full_name='iamapi.PrimitiveInt32',
+  full_name='grpcapi.PrimitiveInt32',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iamapi.PrimitiveInt32.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveInt32.value', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -324,20 +324,20 @@ _PRIMITIVEINT32 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=473,
-  serialized_end=504,
+  serialized_start=475,
+  serialized_end=506,
 )
 
 
 _PRIMITIVEBOOL = _descriptor.Descriptor(
   name='PrimitiveBool',
-  full_name='iamapi.PrimitiveBool',
+  full_name='grpcapi.PrimitiveBool',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iamapi.PrimitiveBool.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveBool.value', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -355,20 +355,20 @@ _PRIMITIVEBOOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=506,
-  serialized_end=536,
+  serialized_start=508,
+  serialized_end=538,
 )
 
 
 _PRIMITIVEBYTES = _descriptor.Descriptor(
   name='PrimitiveBytes',
-  full_name='iamapi.PrimitiveBytes',
+  full_name='grpcapi.PrimitiveBytes',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iamapi.PrimitiveBytes.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveBytes.value', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -386,14 +386,14 @@ _PRIMITIVEBYTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=538,
-  serialized_end=569,
+  serialized_start=540,
+  serialized_end=571,
 )
 
 
 _PRIMITIVEVOID = _descriptor.Descriptor(
   name='PrimitiveVoid',
-  full_name='iamapi.PrimitiveVoid',
+  full_name='grpcapi.PrimitiveVoid',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -410,8 +410,8 @@ _PRIMITIVEVOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=571,
-  serialized_end=586,
+  serialized_start=573,
+  serialized_end=588,
 )
 
 _GETEVENTRECORDSINPUT.fields_by_name['limit'].message_type = _PRIMITIVEINT32
@@ -431,77 +431,77 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 GetHierarchyRelationsInput = _reflection.GeneratedProtocolMessageType('GetHierarchyRelationsInput', (_message.Message,), dict(
   DESCRIPTOR = _GETHIERARCHYRELATIONSINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.GetHierarchyRelationsInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetHierarchyRelationsInput)
   ))
 _sym_db.RegisterMessage(GetHierarchyRelationsInput)
 
 GetHierarchyRelationsOutput = _reflection.GeneratedProtocolMessageType('GetHierarchyRelationsOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETHIERARCHYRELATIONSOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.GetHierarchyRelationsOutput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetHierarchyRelationsOutput)
   ))
 _sym_db.RegisterMessage(GetHierarchyRelationsOutput)
 
 CheckAuthenticationInput = _reflection.GeneratedProtocolMessageType('CheckAuthenticationInput', (_message.Message,), dict(
   DESCRIPTOR = _CHECKAUTHENTICATIONINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.CheckAuthenticationInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.CheckAuthenticationInput)
   ))
 _sym_db.RegisterMessage(CheckAuthenticationInput)
 
 GetEventRecordsInput = _reflection.GeneratedProtocolMessageType('GetEventRecordsInput', (_message.Message,), dict(
   DESCRIPTOR = _GETEVENTRECORDSINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.GetEventRecordsInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetEventRecordsInput)
   ))
 _sym_db.RegisterMessage(GetEventRecordsInput)
 
 GetEventRecordsOutput = _reflection.GeneratedProtocolMessageType('GetEventRecordsOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETEVENTRECORDSOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.GetEventRecordsOutput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetEventRecordsOutput)
   ))
 _sym_db.RegisterMessage(GetEventRecordsOutput)
 
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
   DESCRIPTOR = _USER,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.User)
+  # @@protoc_insertion_point(class_scope:grpcapi.User)
   ))
 _sym_db.RegisterMessage(User)
 
 PrimitiveString = _reflection.GeneratedProtocolMessageType('PrimitiveString', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVESTRING,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.PrimitiveString)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveString)
   ))
 _sym_db.RegisterMessage(PrimitiveString)
 
 PrimitiveInt32 = _reflection.GeneratedProtocolMessageType('PrimitiveInt32', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEINT32,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.PrimitiveInt32)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveInt32)
   ))
 _sym_db.RegisterMessage(PrimitiveInt32)
 
 PrimitiveBool = _reflection.GeneratedProtocolMessageType('PrimitiveBool', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEBOOL,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.PrimitiveBool)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveBool)
   ))
 _sym_db.RegisterMessage(PrimitiveBool)
 
 PrimitiveBytes = _reflection.GeneratedProtocolMessageType('PrimitiveBytes', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEBYTES,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.PrimitiveBytes)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveBytes)
   ))
 _sym_db.RegisterMessage(PrimitiveBytes)
 
 PrimitiveVoid = _reflection.GeneratedProtocolMessageType('PrimitiveVoid', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEVOID,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iamapi.PrimitiveVoid)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveVoid)
   ))
 _sym_db.RegisterMessage(PrimitiveVoid)
 
@@ -511,16 +511,16 @@ DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b
 
 _IAM = _descriptor.ServiceDescriptor(
   name='IAM',
-  full_name='iamapi.IAM',
+  full_name='grpcapi.IAM',
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=589,
-  serialized_end=986,
+  serialized_start=591,
+  serialized_end=998,
   methods=[
   _descriptor.MethodDescriptor(
     name='DeepPing',
-    full_name='iamapi.IAM.DeepPing',
+    full_name='grpcapi.IAM.DeepPing',
     index=0,
     containing_service=None,
     input_type=_PRIMITIVEVOID,
@@ -529,7 +529,7 @@ _IAM = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='CheckAuthentication',
-    full_name='iamapi.IAM.CheckAuthentication',
+    full_name='grpcapi.IAM.CheckAuthentication',
     index=1,
     containing_service=None,
     input_type=_CHECKAUTHENTICATIONINPUT,
@@ -538,7 +538,7 @@ _IAM = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetHierarchyRelations',
-    full_name='iamapi.IAM.GetHierarchyRelations',
+    full_name='grpcapi.IAM.GetHierarchyRelations',
     index=2,
     containing_service=None,
     input_type=_GETHIERARCHYRELATIONSINPUT,
@@ -547,7 +547,7 @@ _IAM = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetEventRecords',
-    full_name='iamapi.IAM.GetEventRecords',
+    full_name='grpcapi.IAM.GetEventRecords',
     index=3,
     containing_service=None,
     input_type=_GETEVENTRECORDSINPUT,
@@ -556,7 +556,7 @@ _IAM = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetEventRecordStream',
-    full_name='iamapi.IAM.GetEventRecordStream',
+    full_name='grpcapi.IAM.GetEventRecordStream',
     index=4,
     containing_service=None,
     input_type=_PRIMITIVEVOID,

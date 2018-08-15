@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpcapi.proto',
   package='mhubapi',
   syntax='proto3',
-  serialized_pb=_b('\n\rgrpcapi.proto\x12\x07mhubapi\"\x1a\n\x18\x41vailableDSKFStreamInput\"?\n\x19\x41vailableDSKFStreamOutput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\x11\n\tdskf_file\x18\x02 \x01(\t\"[\n\x12SetTaskStatusInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12#\n\x06status\x18\x03 \x01(\x0e\x32\x13.mhubapi.TaskStatus\"\x1f\n\x0e\x44\x65\x65pPingOutput\x12\r\n\x05value\x18\x01 \x01(\t\"\x06\n\x04Void*A\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\r\n\tCOMPLETED\x10\x03\x32\xe9\x01\n\x10MicrologProxyHub\x12\x34\n\x08\x44\x65\x65pPing\x12\r.mhubapi.Void\x1a\x17.mhubapi.DeepPingOutput\"\x00\x12=\n\rSetTaskStatus\x12\x1b.mhubapi.SetTaskStatusInput\x1a\r.mhubapi.Void\"\x00\x12`\n\x13\x41vailableDSKFStream\x12!.mhubapi.AvailableDSKFStreamInput\x1a\".mhubapi.AvailableDSKFStreamOutput\"\x00\x30\x01\x42\x1c\xaa\x02\x19SKF.Enlight.API.MProxyHubb\x06proto3')
+  serialized_pb=_b('\n\rgrpcapi.proto\x12\x07mhubapi\"\x1a\n\x18\x41vailableDSKFStreamInput\"\'\n\x19\x41vailableDSKFStreamOutput\x12\n\n\x02id\x18\x01 \x01(\x03\"E\n\x12SetTaskStatusInput\x12\n\n\x02id\x18\x01 \x01(\x03\x12#\n\x06status\x18\x02 \x01(\x0e\x32\x13.mhubapi.TaskStatus\"\x1f\n\x0e\x44\x65\x65pPingOutput\x12\r\n\x05value\x18\x01 \x01(\t\"\x06\n\x04Void*A\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\r\n\tCOMPLETED\x10\x03\x32\xe9\x01\n\x10MicrologProxyHub\x12\x34\n\x08\x44\x65\x65pPing\x12\r.mhubapi.Void\x1a\x17.mhubapi.DeepPingOutput\"\x00\x12=\n\rSetTaskStatus\x12\x1b.mhubapi.SetTaskStatusInput\x1a\r.mhubapi.Void\"\x00\x12`\n\x13\x41vailableDSKFStream\x12!.mhubapi.AvailableDSKFStreamInput\x1a\".mhubapi.AvailableDSKFStreamOutput\"\x00\x30\x01\x42\x1c\xaa\x02\x19SKF.Enlight.API.MProxyHubb\x06proto3')
 )
 
 _TASKSTATUS = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _TASKSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=253,
-  serialized_end=318,
+  serialized_start=207,
+  serialized_end=272,
 )
 _sym_db.RegisterEnumDescriptor(_TASKSTATUS)
 
@@ -93,60 +93,8 @@ _AVAILABLEDSKFSTREAMOUTPUT = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='task_id', full_name='mhubapi.AvailableDSKFStreamOutput.task_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='dskf_file', full_name='mhubapi.AvailableDSKFStreamOutput.dskf_file', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=54,
-  serialized_end=117,
-)
-
-
-_SETTASKSTATUSINPUT = _descriptor.Descriptor(
-  name='SetTaskStatusInput',
-  full_name='mhubapi.SetTaskStatusInput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='task_id', full_name='mhubapi.SetTaskStatusInput.task_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='user_id', full_name='mhubapi.SetTaskStatusInput.user_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='mhubapi.SetTaskStatusInput.status', index=2,
-      number=3, type=14, cpp_type=8, label=1,
+      name='id', full_name='mhubapi.AvailableDSKFStreamOutput.id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -163,8 +111,46 @@ _SETTASKSTATUSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=119,
-  serialized_end=210,
+  serialized_start=54,
+  serialized_end=93,
+)
+
+
+_SETTASKSTATUSINPUT = _descriptor.Descriptor(
+  name='SetTaskStatusInput',
+  full_name='mhubapi.SetTaskStatusInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='mhubapi.SetTaskStatusInput.id', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='mhubapi.SetTaskStatusInput.status', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=95,
+  serialized_end=164,
 )
 
 
@@ -194,8 +180,8 @@ _DEEPPINGOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=212,
-  serialized_end=243,
+  serialized_start=166,
+  serialized_end=197,
 )
 
 
@@ -218,8 +204,8 @@ _VOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=245,
-  serialized_end=251,
+  serialized_start=199,
+  serialized_end=205,
 )
 
 _SETTASKSTATUSINPUT.fields_by_name['status'].enum_type = _TASKSTATUS
@@ -276,8 +262,8 @@ _MICROLOGPROXYHUB = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=321,
-  serialized_end=554,
+  serialized_start=275,
+  serialized_end=508,
   methods=[
   _descriptor.MethodDescriptor(
     name='DeepPing',

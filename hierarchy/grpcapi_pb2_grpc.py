@@ -15,52 +15,52 @@ class HierarchyStub(object):
       channel: A grpc.Channel.
     """
     self.DeepPing = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/DeepPing',
+        '/grpcapi.Hierarchy/DeepPing',
         request_serializer=grpcapi__pb2.PrimitiveVoid.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveString.FromString,
         )
     self.GetNode = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetNode',
+        '/grpcapi.Hierarchy/GetNode',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.Node.FromString,
         )
     self.GetNodes = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetNodes',
+        '/grpcapi.Hierarchy/GetNodes',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.Nodes.FromString,
         )
     self.GetChildNodes = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetChildNodes',
+        '/grpcapi.Hierarchy/GetChildNodes',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.Nodes.FromString,
         )
     self.GetParentNode = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetParentNode',
+        '/grpcapi.Hierarchy/GetParentNode',
         request_serializer=grpcapi__pb2.PrimitiveString.SerializeToString,
         response_deserializer=grpcapi__pb2.Node.FromString,
         )
     self.GetAncestors = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetAncestors',
+        '/grpcapi.Hierarchy/GetAncestors',
         request_serializer=grpcapi__pb2.GetAncestorsInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetAncestorsOutput.FromString,
         )
     self.SaveNode = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/SaveNode',
+        '/grpcapi.Hierarchy/SaveNode',
         request_serializer=grpcapi__pb2.SaveNodeInput.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveString.FromString,
         )
     self.DeleteNode = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/DeleteNode',
+        '/grpcapi.Hierarchy/DeleteNode',
         request_serializer=grpcapi__pb2.DeleteNodeInput.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveVoid.FromString,
         )
     self.GetEvents = channel.unary_unary(
-        '/hierarchyapi.Hierarchy/GetEvents',
+        '/grpcapi.Hierarchy/GetEvents',
         request_serializer=grpcapi__pb2.GetEventsInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetEventsOutput.FromString,
         )
     self.GetEventStream = channel.unary_stream(
-        '/hierarchyapi.Hierarchy/GetEventStream',
+        '/grpcapi.Hierarchy/GetEventStream',
         request_serializer=grpcapi__pb2.PrimitiveVoid.SerializeToString,
         response_deserializer=grpcapi__pb2.PrimitiveBytes.FromString,
         )
@@ -195,5 +195,5 @@ def add_HierarchyServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'hierarchyapi.Hierarchy', rpc_method_handlers)
+      'grpcapi.Hierarchy', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

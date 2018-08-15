@@ -18,14 +18,14 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpcapi.proto',
-  package='hierarchyapi',
+  package='grpcapi',
   syntax='proto3',
-  serialized_pb=_b('\n\rgrpcapi.proto\x12\x0chierarchyapi\"4\n\x06Origin\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x10\n\x08provider\x18\x03 \x01(\t\"o\n\x10MeasurementPoint\x12\x0f\n\x07\x61ngular\x18\x01 \x01(\t\x12\x0f\n\x07\x62\x65\x61ring\x18\x03 \x01(\x05\x12\x17\n\x0fmeasurementType\x18\x04 \x01(\t\x12\r\n\x05shaft\x18\x05 \x01(\t\x12\x11\n\tshaftSide\x18\x06 \x01(\t\"\x7f\n\x0fInspectionPoint\x12\x1a\n\x12OBSOLETE_valueType\x18\x01 \x01(\t\x12*\n\tvalueType\x18\x04 \x01(\x0e\x32\x17.hierarchyapi.ValueType\x12\x13\n\x0bnumericUnit\x18\x02 \x01(\t\x12\x0f\n\x07\x61nswers\x18\x03 \x03(\t\" \n\tAssetNode\x12\x13\n\x0b\x63riticality\x18\x01 \x01(\t\"\xae\x02\n\x04Node\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\x12\x13\n\x0b\x63riticality\x18\x05 \x01(\t\x12\x0f\n\x07subType\x18\x06 \x01(\t\x12$\n\x06origin\x18\x07 \x01(\x0b\x32\x14.hierarchyapi.Origin\x12*\n\tassetNode\x18\x08 \x01(\x0b\x32\x17.hierarchyapi.AssetNode\x12\x38\n\x10measurementPoint\x18\t \x01(\x0b\x32\x1e.hierarchyapi.MeasurementPoint\x12\x36\n\x0finspectionPoint\x18\n \x01(\x0b\x32\x1d.hierarchyapi.InspectionPoint\"*\n\x05Nodes\x12!\n\x05nodes\x18\x01 \x03(\x0b\x32\x12.hierarchyapi.Node\"L\n\x0eGetEventsInput\x12\r\n\x05since\x18\x01 \x01(\x03\x12+\n\x05limit\x18\x02 \x01(\x0b\x32\x1c.hierarchyapi.PrimitiveInt32\"!\n\x0fGetEventsOutput\x12\x0e\n\x06\x65vents\x18\x01 \x01(\x0c\"\x7f\n\rSaveNodeInput\x12\x0e\n\x06userId\x18\x01 \x01(\t\x12 \n\x04node\x18\x03 \x01(\x0b\x32\x12.hierarchyapi.Node\x12\x10\n\x08parentId\x18\x02 \x01(\t\x12*\n\x0cparentOrigin\x18\x04 \x01(\x0b\x32\x14.hierarchyapi.Origin\"W\n\x0f\x44\x65leteNodeInput\x12\x0e\n\x06userId\x18\x01 \x01(\t\x12\x0e\n\x06nodeId\x18\x02 \x01(\t\x12$\n\x06origin\x18\x03 \x01(\x0b\x32\x14.hierarchyapi.Origin\"$\n\x11GetAncestorsInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\"?\n\x12GetAncestorsOutput\x12)\n\x05nodes\x18\x01 \x03(\x0b\x32\x1a.hierarchyapi.AncestorNode\"\x95\x01\n\x0c\x41ncestorNode\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x06origin\x18\x02 \x01(\x0b\x32\x14.hierarchyapi.Origin\x12\r\n\x05label\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0c\n\x04type\x18\x05 \x01(\t\x12\x0f\n\x07subType\x18\x06 \x01(\t\x12\x10\n\x08parentId\x18\x07 \x01(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\x0ePrimitiveInt32\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1f\n\x0ePrimitiveBytes\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x0f\n\rPrimitiveVoid*=\n\tValueType\x12\x0b\n\x07NUMERIC\x10\x00\x12\x11\n\rSINGLE_CHOICE\x10\x01\x12\x10\n\x0cMULTI_CHOICE\x10\x02\x32\xec\x05\n\tHierarchy\x12H\n\x08\x44\x65\x65pPing\x12\x1b.hierarchyapi.PrimitiveVoid\x1a\x1d.hierarchyapi.PrimitiveString\"\x00\x12>\n\x07GetNode\x12\x1d.hierarchyapi.PrimitiveString\x1a\x12.hierarchyapi.Node\"\x00\x12@\n\x08GetNodes\x12\x1d.hierarchyapi.PrimitiveString\x1a\x13.hierarchyapi.Nodes\"\x00\x12\x45\n\rGetChildNodes\x12\x1d.hierarchyapi.PrimitiveString\x1a\x13.hierarchyapi.Nodes\"\x00\x12\x44\n\rGetParentNode\x12\x1d.hierarchyapi.PrimitiveString\x1a\x12.hierarchyapi.Node\"\x00\x12S\n\x0cGetAncestors\x12\x1f.hierarchyapi.GetAncestorsInput\x1a .hierarchyapi.GetAncestorsOutput\"\x00\x12H\n\x08SaveNode\x12\x1b.hierarchyapi.SaveNodeInput\x1a\x1d.hierarchyapi.PrimitiveString\"\x00\x12J\n\nDeleteNode\x12\x1d.hierarchyapi.DeleteNodeInput\x1a\x1b.hierarchyapi.PrimitiveVoid\"\x00\x12J\n\tGetEvents\x12\x1c.hierarchyapi.GetEventsInput\x1a\x1d.hierarchyapi.GetEventsOutput\"\x00\x12O\n\x0eGetEventStream\x12\x1b.hierarchyapi.PrimitiveVoid\x1a\x1c.hierarchyapi.PrimitiveBytes\"\x00\x30\x01\x42\x1c\xaa\x02\x19SKF.Enlight.API.Hierarchyb\x06proto3')
+  serialized_pb=_b('\n\rgrpcapi.proto\x12\x07grpcapi\"4\n\x06Origin\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x10\n\x08provider\x18\x03 \x01(\t\"o\n\x10MeasurementPoint\x12\x0f\n\x07\x61ngular\x18\x01 \x01(\t\x12\x0f\n\x07\x62\x65\x61ring\x18\x03 \x01(\x05\x12\x17\n\x0fmeasurementType\x18\x04 \x01(\t\x12\r\n\x05shaft\x18\x05 \x01(\t\x12\x11\n\tshaftSide\x18\x06 \x01(\t\"z\n\x0fInspectionPoint\x12\x1a\n\x12OBSOLETE_valueType\x18\x01 \x01(\t\x12%\n\tvalueType\x18\x04 \x01(\x0e\x32\x12.grpcapi.ValueType\x12\x13\n\x0bnumericUnit\x18\x02 \x01(\t\x12\x0f\n\x07\x61nswers\x18\x03 \x03(\t\" \n\tAssetNode\x12\x13\n\x0b\x63riticality\x18\x01 \x01(\t\"\x9a\x02\n\x04Node\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\x12\x13\n\x0b\x63riticality\x18\x05 \x01(\t\x12\x0f\n\x07subType\x18\x06 \x01(\t\x12\x1f\n\x06origin\x18\x07 \x01(\x0b\x32\x0f.grpcapi.Origin\x12%\n\tassetNode\x18\x08 \x01(\x0b\x32\x12.grpcapi.AssetNode\x12\x33\n\x10measurementPoint\x18\t \x01(\x0b\x32\x19.grpcapi.MeasurementPoint\x12\x31\n\x0finspectionPoint\x18\n \x01(\x0b\x32\x18.grpcapi.InspectionPoint\"%\n\x05Nodes\x12\x1c\n\x05nodes\x18\x01 \x03(\x0b\x32\r.grpcapi.Node\"G\n\x0eGetEventsInput\x12\r\n\x05since\x18\x01 \x01(\x03\x12&\n\x05limit\x18\x02 \x01(\x0b\x32\x17.grpcapi.PrimitiveInt32\"!\n\x0fGetEventsOutput\x12\x0e\n\x06\x65vents\x18\x01 \x01(\x0c\"u\n\rSaveNodeInput\x12\x0e\n\x06userId\x18\x01 \x01(\t\x12\x1b\n\x04node\x18\x03 \x01(\x0b\x32\r.grpcapi.Node\x12\x10\n\x08parentId\x18\x02 \x01(\t\x12%\n\x0cparentOrigin\x18\x04 \x01(\x0b\x32\x0f.grpcapi.Origin\"R\n\x0f\x44\x65leteNodeInput\x12\x0e\n\x06userId\x18\x01 \x01(\t\x12\x0e\n\x06nodeId\x18\x02 \x01(\t\x12\x1f\n\x06origin\x18\x03 \x01(\x0b\x32\x0f.grpcapi.Origin\"$\n\x11GetAncestorsInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\":\n\x12GetAncestorsOutput\x12$\n\x05nodes\x18\x01 \x03(\x0b\x32\x15.grpcapi.AncestorNode\"\x90\x01\n\x0c\x41ncestorNode\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1f\n\x06origin\x18\x02 \x01(\x0b\x32\x0f.grpcapi.Origin\x12\r\n\x05label\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0c\n\x04type\x18\x05 \x01(\t\x12\x0f\n\x07subType\x18\x06 \x01(\t\x12\x10\n\x08parentId\x18\x07 \x01(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\x0ePrimitiveInt32\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1f\n\x0ePrimitiveBytes\x12\r\n\x05value\x18\x01 \x01(\x0c\"\x0f\n\rPrimitiveVoid*=\n\tValueType\x12\x0b\n\x07NUMERIC\x10\x00\x12\x11\n\rSINGLE_CHOICE\x10\x01\x12\x10\n\x0cMULTI_CHOICE\x10\x02\x32\x88\x05\n\tHierarchy\x12>\n\x08\x44\x65\x65pPing\x12\x16.grpcapi.PrimitiveVoid\x1a\x18.grpcapi.PrimitiveString\"\x00\x12\x34\n\x07GetNode\x12\x18.grpcapi.PrimitiveString\x1a\r.grpcapi.Node\"\x00\x12\x36\n\x08GetNodes\x12\x18.grpcapi.PrimitiveString\x1a\x0e.grpcapi.Nodes\"\x00\x12;\n\rGetChildNodes\x12\x18.grpcapi.PrimitiveString\x1a\x0e.grpcapi.Nodes\"\x00\x12:\n\rGetParentNode\x12\x18.grpcapi.PrimitiveString\x1a\r.grpcapi.Node\"\x00\x12I\n\x0cGetAncestors\x12\x1a.grpcapi.GetAncestorsInput\x1a\x1b.grpcapi.GetAncestorsOutput\"\x00\x12>\n\x08SaveNode\x12\x16.grpcapi.SaveNodeInput\x1a\x18.grpcapi.PrimitiveString\"\x00\x12@\n\nDeleteNode\x12\x18.grpcapi.DeleteNodeInput\x1a\x16.grpcapi.PrimitiveVoid\"\x00\x12@\n\tGetEvents\x12\x17.grpcapi.GetEventsInput\x1a\x18.grpcapi.GetEventsOutput\"\x00\x12\x45\n\x0eGetEventStream\x12\x16.grpcapi.PrimitiveVoid\x1a\x17.grpcapi.PrimitiveBytes\"\x00\x30\x01\x42\x1c\xaa\x02\x19SKF.Enlight.API.Hierarchyb\x06proto3')
 )
 
 _VALUETYPE = _descriptor.EnumDescriptor(
   name='ValueType',
-  full_name='hierarchyapi.ValueType',
+  full_name='grpcapi.ValueType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -44,8 +44,8 @@ _VALUETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1413,
-  serialized_end=1474,
+  serialized_start=1348,
+  serialized_end=1409,
 )
 _sym_db.RegisterEnumDescriptor(_VALUETYPE)
 
@@ -58,27 +58,27 @@ MULTI_CHOICE = 2
 
 _ORIGIN = _descriptor.Descriptor(
   name='Origin',
-  full_name='hierarchyapi.Origin',
+  full_name='grpcapi.Origin',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='hierarchyapi.Origin.id', index=0,
+      name='id', full_name='grpcapi.Origin.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='hierarchyapi.Origin.type', index=1,
+      name='type', full_name='grpcapi.Origin.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='provider', full_name='hierarchyapi.Origin.provider', index=2,
+      name='provider', full_name='grpcapi.Origin.provider', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -96,48 +96,48 @@ _ORIGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31,
-  serialized_end=83,
+  serialized_start=26,
+  serialized_end=78,
 )
 
 
 _MEASUREMENTPOINT = _descriptor.Descriptor(
   name='MeasurementPoint',
-  full_name='hierarchyapi.MeasurementPoint',
+  full_name='grpcapi.MeasurementPoint',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='angular', full_name='hierarchyapi.MeasurementPoint.angular', index=0,
+      name='angular', full_name='grpcapi.MeasurementPoint.angular', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='bearing', full_name='hierarchyapi.MeasurementPoint.bearing', index=1,
+      name='bearing', full_name='grpcapi.MeasurementPoint.bearing', index=1,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='measurementType', full_name='hierarchyapi.MeasurementPoint.measurementType', index=2,
+      name='measurementType', full_name='grpcapi.MeasurementPoint.measurementType', index=2,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='shaft', full_name='hierarchyapi.MeasurementPoint.shaft', index=3,
+      name='shaft', full_name='grpcapi.MeasurementPoint.shaft', index=3,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='shaftSide', full_name='hierarchyapi.MeasurementPoint.shaftSide', index=4,
+      name='shaftSide', full_name='grpcapi.MeasurementPoint.shaftSide', index=4,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -155,41 +155,41 @@ _MEASUREMENTPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=85,
-  serialized_end=196,
+  serialized_start=80,
+  serialized_end=191,
 )
 
 
 _INSPECTIONPOINT = _descriptor.Descriptor(
   name='InspectionPoint',
-  full_name='hierarchyapi.InspectionPoint',
+  full_name='grpcapi.InspectionPoint',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='OBSOLETE_valueType', full_name='hierarchyapi.InspectionPoint.OBSOLETE_valueType', index=0,
+      name='OBSOLETE_valueType', full_name='grpcapi.InspectionPoint.OBSOLETE_valueType', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='valueType', full_name='hierarchyapi.InspectionPoint.valueType', index=1,
+      name='valueType', full_name='grpcapi.InspectionPoint.valueType', index=1,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='numericUnit', full_name='hierarchyapi.InspectionPoint.numericUnit', index=2,
+      name='numericUnit', full_name='grpcapi.InspectionPoint.numericUnit', index=2,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='answers', full_name='hierarchyapi.InspectionPoint.answers', index=3,
+      name='answers', full_name='grpcapi.InspectionPoint.answers', index=3,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -207,20 +207,20 @@ _INSPECTIONPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=325,
+  serialized_start=193,
+  serialized_end=315,
 )
 
 
 _ASSETNODE = _descriptor.Descriptor(
   name='AssetNode',
-  full_name='hierarchyapi.AssetNode',
+  full_name='grpcapi.AssetNode',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='criticality', full_name='hierarchyapi.AssetNode.criticality', index=0,
+      name='criticality', full_name='grpcapi.AssetNode.criticality', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -238,83 +238,83 @@ _ASSETNODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=327,
-  serialized_end=359,
+  serialized_start=317,
+  serialized_end=349,
 )
 
 
 _NODE = _descriptor.Descriptor(
   name='Node',
-  full_name='hierarchyapi.Node',
+  full_name='grpcapi.Node',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='hierarchyapi.Node.id', index=0,
+      name='id', full_name='grpcapi.Node.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='label', full_name='hierarchyapi.Node.label', index=1,
+      name='label', full_name='grpcapi.Node.label', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='description', full_name='hierarchyapi.Node.description', index=2,
+      name='description', full_name='grpcapi.Node.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='hierarchyapi.Node.type', index=3,
+      name='type', full_name='grpcapi.Node.type', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='criticality', full_name='hierarchyapi.Node.criticality', index=4,
+      name='criticality', full_name='grpcapi.Node.criticality', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='subType', full_name='hierarchyapi.Node.subType', index=5,
+      name='subType', full_name='grpcapi.Node.subType', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='origin', full_name='hierarchyapi.Node.origin', index=6,
+      name='origin', full_name='grpcapi.Node.origin', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='assetNode', full_name='hierarchyapi.Node.assetNode', index=7,
+      name='assetNode', full_name='grpcapi.Node.assetNode', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='measurementPoint', full_name='hierarchyapi.Node.measurementPoint', index=8,
+      name='measurementPoint', full_name='grpcapi.Node.measurementPoint', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='inspectionPoint', full_name='hierarchyapi.Node.inspectionPoint', index=9,
+      name='inspectionPoint', full_name='grpcapi.Node.inspectionPoint', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -332,20 +332,20 @@ _NODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=362,
-  serialized_end=664,
+  serialized_start=352,
+  serialized_end=634,
 )
 
 
 _NODES = _descriptor.Descriptor(
   name='Nodes',
-  full_name='hierarchyapi.Nodes',
+  full_name='grpcapi.Nodes',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nodes', full_name='hierarchyapi.Nodes.nodes', index=0,
+      name='nodes', full_name='grpcapi.Nodes.nodes', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -363,27 +363,27 @@ _NODES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=666,
-  serialized_end=708,
+  serialized_start=636,
+  serialized_end=673,
 )
 
 
 _GETEVENTSINPUT = _descriptor.Descriptor(
   name='GetEventsInput',
-  full_name='hierarchyapi.GetEventsInput',
+  full_name='grpcapi.GetEventsInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='since', full_name='hierarchyapi.GetEventsInput.since', index=0,
+      name='since', full_name='grpcapi.GetEventsInput.since', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='hierarchyapi.GetEventsInput.limit', index=1,
+      name='limit', full_name='grpcapi.GetEventsInput.limit', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -401,20 +401,20 @@ _GETEVENTSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=710,
-  serialized_end=786,
+  serialized_start=675,
+  serialized_end=746,
 )
 
 
 _GETEVENTSOUTPUT = _descriptor.Descriptor(
   name='GetEventsOutput',
-  full_name='hierarchyapi.GetEventsOutput',
+  full_name='grpcapi.GetEventsOutput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='events', full_name='hierarchyapi.GetEventsOutput.events', index=0,
+      name='events', full_name='grpcapi.GetEventsOutput.events', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -432,41 +432,41 @@ _GETEVENTSOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=788,
-  serialized_end=821,
+  serialized_start=748,
+  serialized_end=781,
 )
 
 
 _SAVENODEINPUT = _descriptor.Descriptor(
   name='SaveNodeInput',
-  full_name='hierarchyapi.SaveNodeInput',
+  full_name='grpcapi.SaveNodeInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='userId', full_name='hierarchyapi.SaveNodeInput.userId', index=0,
+      name='userId', full_name='grpcapi.SaveNodeInput.userId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='node', full_name='hierarchyapi.SaveNodeInput.node', index=1,
+      name='node', full_name='grpcapi.SaveNodeInput.node', index=1,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parentId', full_name='hierarchyapi.SaveNodeInput.parentId', index=2,
+      name='parentId', full_name='grpcapi.SaveNodeInput.parentId', index=2,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parentOrigin', full_name='hierarchyapi.SaveNodeInput.parentOrigin', index=3,
+      name='parentOrigin', full_name='grpcapi.SaveNodeInput.parentOrigin', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -484,34 +484,34 @@ _SAVENODEINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=950,
+  serialized_start=783,
+  serialized_end=900,
 )
 
 
 _DELETENODEINPUT = _descriptor.Descriptor(
   name='DeleteNodeInput',
-  full_name='hierarchyapi.DeleteNodeInput',
+  full_name='grpcapi.DeleteNodeInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='userId', full_name='hierarchyapi.DeleteNodeInput.userId', index=0,
+      name='userId', full_name='grpcapi.DeleteNodeInput.userId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='nodeId', full_name='hierarchyapi.DeleteNodeInput.nodeId', index=1,
+      name='nodeId', full_name='grpcapi.DeleteNodeInput.nodeId', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='origin', full_name='hierarchyapi.DeleteNodeInput.origin', index=2,
+      name='origin', full_name='grpcapi.DeleteNodeInput.origin', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -529,20 +529,20 @@ _DELETENODEINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=952,
-  serialized_end=1039,
+  serialized_start=902,
+  serialized_end=984,
 )
 
 
 _GETANCESTORSINPUT = _descriptor.Descriptor(
   name='GetAncestorsInput',
-  full_name='hierarchyapi.GetAncestorsInput',
+  full_name='grpcapi.GetAncestorsInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_id', full_name='hierarchyapi.GetAncestorsInput.node_id', index=0,
+      name='node_id', full_name='grpcapi.GetAncestorsInput.node_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -560,20 +560,20 @@ _GETANCESTORSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1041,
-  serialized_end=1077,
+  serialized_start=986,
+  serialized_end=1022,
 )
 
 
 _GETANCESTORSOUTPUT = _descriptor.Descriptor(
   name='GetAncestorsOutput',
-  full_name='hierarchyapi.GetAncestorsOutput',
+  full_name='grpcapi.GetAncestorsOutput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nodes', full_name='hierarchyapi.GetAncestorsOutput.nodes', index=0,
+      name='nodes', full_name='grpcapi.GetAncestorsOutput.nodes', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -591,62 +591,62 @@ _GETANCESTORSOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1079,
-  serialized_end=1142,
+  serialized_start=1024,
+  serialized_end=1082,
 )
 
 
 _ANCESTORNODE = _descriptor.Descriptor(
   name='AncestorNode',
-  full_name='hierarchyapi.AncestorNode',
+  full_name='grpcapi.AncestorNode',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='hierarchyapi.AncestorNode.id', index=0,
+      name='id', full_name='grpcapi.AncestorNode.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='origin', full_name='hierarchyapi.AncestorNode.origin', index=1,
+      name='origin', full_name='grpcapi.AncestorNode.origin', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='label', full_name='hierarchyapi.AncestorNode.label', index=2,
+      name='label', full_name='grpcapi.AncestorNode.label', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='description', full_name='hierarchyapi.AncestorNode.description', index=3,
+      name='description', full_name='grpcapi.AncestorNode.description', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='hierarchyapi.AncestorNode.type', index=4,
+      name='type', full_name='grpcapi.AncestorNode.type', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='subType', full_name='hierarchyapi.AncestorNode.subType', index=5,
+      name='subType', full_name='grpcapi.AncestorNode.subType', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parentId', full_name='hierarchyapi.AncestorNode.parentId', index=6,
+      name='parentId', full_name='grpcapi.AncestorNode.parentId', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -664,20 +664,20 @@ _ANCESTORNODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1145,
-  serialized_end=1294,
+  serialized_start=1085,
+  serialized_end=1229,
 )
 
 
 _PRIMITIVESTRING = _descriptor.Descriptor(
   name='PrimitiveString',
-  full_name='hierarchyapi.PrimitiveString',
+  full_name='grpcapi.PrimitiveString',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='hierarchyapi.PrimitiveString.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveString.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -695,20 +695,20 @@ _PRIMITIVESTRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1296,
-  serialized_end=1328,
+  serialized_start=1231,
+  serialized_end=1263,
 )
 
 
 _PRIMITIVEINT32 = _descriptor.Descriptor(
   name='PrimitiveInt32',
-  full_name='hierarchyapi.PrimitiveInt32',
+  full_name='grpcapi.PrimitiveInt32',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='hierarchyapi.PrimitiveInt32.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveInt32.value', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -726,20 +726,20 @@ _PRIMITIVEINT32 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1330,
-  serialized_end=1361,
+  serialized_start=1265,
+  serialized_end=1296,
 )
 
 
 _PRIMITIVEBYTES = _descriptor.Descriptor(
   name='PrimitiveBytes',
-  full_name='hierarchyapi.PrimitiveBytes',
+  full_name='grpcapi.PrimitiveBytes',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='hierarchyapi.PrimitiveBytes.value', index=0,
+      name='value', full_name='grpcapi.PrimitiveBytes.value', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -757,14 +757,14 @@ _PRIMITIVEBYTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1363,
-  serialized_end=1394,
+  serialized_start=1298,
+  serialized_end=1329,
 )
 
 
 _PRIMITIVEVOID = _descriptor.Descriptor(
   name='PrimitiveVoid',
-  full_name='hierarchyapi.PrimitiveVoid',
+  full_name='grpcapi.PrimitiveVoid',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -781,8 +781,8 @@ _PRIMITIVEVOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1396,
-  serialized_end=1411,
+  serialized_start=1331,
+  serialized_end=1346,
 )
 
 _INSPECTIONPOINT.fields_by_name['valueType'].enum_type = _VALUETYPE
@@ -820,119 +820,119 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Origin = _reflection.GeneratedProtocolMessageType('Origin', (_message.Message,), dict(
   DESCRIPTOR = _ORIGIN,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.Origin)
+  # @@protoc_insertion_point(class_scope:grpcapi.Origin)
   ))
 _sym_db.RegisterMessage(Origin)
 
 MeasurementPoint = _reflection.GeneratedProtocolMessageType('MeasurementPoint', (_message.Message,), dict(
   DESCRIPTOR = _MEASUREMENTPOINT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.MeasurementPoint)
+  # @@protoc_insertion_point(class_scope:grpcapi.MeasurementPoint)
   ))
 _sym_db.RegisterMessage(MeasurementPoint)
 
 InspectionPoint = _reflection.GeneratedProtocolMessageType('InspectionPoint', (_message.Message,), dict(
   DESCRIPTOR = _INSPECTIONPOINT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.InspectionPoint)
+  # @@protoc_insertion_point(class_scope:grpcapi.InspectionPoint)
   ))
 _sym_db.RegisterMessage(InspectionPoint)
 
 AssetNode = _reflection.GeneratedProtocolMessageType('AssetNode', (_message.Message,), dict(
   DESCRIPTOR = _ASSETNODE,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.AssetNode)
+  # @@protoc_insertion_point(class_scope:grpcapi.AssetNode)
   ))
 _sym_db.RegisterMessage(AssetNode)
 
 Node = _reflection.GeneratedProtocolMessageType('Node', (_message.Message,), dict(
   DESCRIPTOR = _NODE,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.Node)
+  # @@protoc_insertion_point(class_scope:grpcapi.Node)
   ))
 _sym_db.RegisterMessage(Node)
 
 Nodes = _reflection.GeneratedProtocolMessageType('Nodes', (_message.Message,), dict(
   DESCRIPTOR = _NODES,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.Nodes)
+  # @@protoc_insertion_point(class_scope:grpcapi.Nodes)
   ))
 _sym_db.RegisterMessage(Nodes)
 
 GetEventsInput = _reflection.GeneratedProtocolMessageType('GetEventsInput', (_message.Message,), dict(
   DESCRIPTOR = _GETEVENTSINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.GetEventsInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetEventsInput)
   ))
 _sym_db.RegisterMessage(GetEventsInput)
 
 GetEventsOutput = _reflection.GeneratedProtocolMessageType('GetEventsOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETEVENTSOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.GetEventsOutput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetEventsOutput)
   ))
 _sym_db.RegisterMessage(GetEventsOutput)
 
 SaveNodeInput = _reflection.GeneratedProtocolMessageType('SaveNodeInput', (_message.Message,), dict(
   DESCRIPTOR = _SAVENODEINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.SaveNodeInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.SaveNodeInput)
   ))
 _sym_db.RegisterMessage(SaveNodeInput)
 
 DeleteNodeInput = _reflection.GeneratedProtocolMessageType('DeleteNodeInput', (_message.Message,), dict(
   DESCRIPTOR = _DELETENODEINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.DeleteNodeInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.DeleteNodeInput)
   ))
 _sym_db.RegisterMessage(DeleteNodeInput)
 
 GetAncestorsInput = _reflection.GeneratedProtocolMessageType('GetAncestorsInput', (_message.Message,), dict(
   DESCRIPTOR = _GETANCESTORSINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.GetAncestorsInput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetAncestorsInput)
   ))
 _sym_db.RegisterMessage(GetAncestorsInput)
 
 GetAncestorsOutput = _reflection.GeneratedProtocolMessageType('GetAncestorsOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETANCESTORSOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.GetAncestorsOutput)
+  # @@protoc_insertion_point(class_scope:grpcapi.GetAncestorsOutput)
   ))
 _sym_db.RegisterMessage(GetAncestorsOutput)
 
 AncestorNode = _reflection.GeneratedProtocolMessageType('AncestorNode', (_message.Message,), dict(
   DESCRIPTOR = _ANCESTORNODE,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.AncestorNode)
+  # @@protoc_insertion_point(class_scope:grpcapi.AncestorNode)
   ))
 _sym_db.RegisterMessage(AncestorNode)
 
 PrimitiveString = _reflection.GeneratedProtocolMessageType('PrimitiveString', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVESTRING,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.PrimitiveString)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveString)
   ))
 _sym_db.RegisterMessage(PrimitiveString)
 
 PrimitiveInt32 = _reflection.GeneratedProtocolMessageType('PrimitiveInt32', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEINT32,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.PrimitiveInt32)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveInt32)
   ))
 _sym_db.RegisterMessage(PrimitiveInt32)
 
 PrimitiveBytes = _reflection.GeneratedProtocolMessageType('PrimitiveBytes', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEBYTES,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.PrimitiveBytes)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveBytes)
   ))
 _sym_db.RegisterMessage(PrimitiveBytes)
 
 PrimitiveVoid = _reflection.GeneratedProtocolMessageType('PrimitiveVoid', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEVOID,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:hierarchyapi.PrimitiveVoid)
+  # @@protoc_insertion_point(class_scope:grpcapi.PrimitiveVoid)
   ))
 _sym_db.RegisterMessage(PrimitiveVoid)
 
@@ -942,16 +942,16 @@ DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b
 
 _HIERARCHY = _descriptor.ServiceDescriptor(
   name='Hierarchy',
-  full_name='hierarchyapi.Hierarchy',
+  full_name='grpcapi.Hierarchy',
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=1477,
-  serialized_end=2225,
+  serialized_start=1412,
+  serialized_end=2060,
   methods=[
   _descriptor.MethodDescriptor(
     name='DeepPing',
-    full_name='hierarchyapi.Hierarchy.DeepPing',
+    full_name='grpcapi.Hierarchy.DeepPing',
     index=0,
     containing_service=None,
     input_type=_PRIMITIVEVOID,
@@ -960,7 +960,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetNode',
-    full_name='hierarchyapi.Hierarchy.GetNode',
+    full_name='grpcapi.Hierarchy.GetNode',
     index=1,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -969,7 +969,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetNodes',
-    full_name='hierarchyapi.Hierarchy.GetNodes',
+    full_name='grpcapi.Hierarchy.GetNodes',
     index=2,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -978,7 +978,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetChildNodes',
-    full_name='hierarchyapi.Hierarchy.GetChildNodes',
+    full_name='grpcapi.Hierarchy.GetChildNodes',
     index=3,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -987,7 +987,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetParentNode',
-    full_name='hierarchyapi.Hierarchy.GetParentNode',
+    full_name='grpcapi.Hierarchy.GetParentNode',
     index=4,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -996,7 +996,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetAncestors',
-    full_name='hierarchyapi.Hierarchy.GetAncestors',
+    full_name='grpcapi.Hierarchy.GetAncestors',
     index=5,
     containing_service=None,
     input_type=_GETANCESTORSINPUT,
@@ -1005,7 +1005,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SaveNode',
-    full_name='hierarchyapi.Hierarchy.SaveNode',
+    full_name='grpcapi.Hierarchy.SaveNode',
     index=6,
     containing_service=None,
     input_type=_SAVENODEINPUT,
@@ -1014,7 +1014,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteNode',
-    full_name='hierarchyapi.Hierarchy.DeleteNode',
+    full_name='grpcapi.Hierarchy.DeleteNode',
     index=7,
     containing_service=None,
     input_type=_DELETENODEINPUT,
@@ -1023,7 +1023,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetEvents',
-    full_name='hierarchyapi.Hierarchy.GetEvents',
+    full_name='grpcapi.Hierarchy.GetEvents',
     index=8,
     containing_service=None,
     input_type=_GETEVENTSINPUT,
@@ -1032,7 +1032,7 @@ _HIERARCHY = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetEventStream',
-    full_name='hierarchyapi.Hierarchy.GetEventStream',
+    full_name='grpcapi.Hierarchy.GetEventStream',
     index=9,
     containing_service=None,
     input_type=_PRIMITIVEVOID,

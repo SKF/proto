@@ -18,14 +18,14 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpcapi.proto',
-  package='iotapi',
+  package='iotgrpcapi',
   syntax='proto3',
-  serialized_pb=_b('\n\rgrpcapi.proto\x12\x06iotapi\"\x8c\x02\n\x0fTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\x12\x11\n\ttask_name\x18\x03 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x04 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x05 \x01(\x03\x12\x14\n\x0cis_completed\x18\x06 \x01(\x08\x12>\n\x17\x66unctional_location_ids\x18\x07 \x01(\x0b\x32\x1d.iotapi.FunctionalLocationIds\x12\"\n\x06status\x18\x08 \x01(\x0e\x32\x12.iotapi.TaskStatus\x12\x18\n\x10\x65xternal_task_id\x18\t \x01(\t\"\xec\x01\n\x16InitialTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x11\n\ttask_name\x18\x02 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x03 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x04 \x01(\x03\x12>\n\x17\x66unctional_location_ids\x18\x05 \x01(\x0b\x32\x1d.iotapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\x06 \x01(\t\x12\"\n\x06status\x18\x07 \x01(\x0e\x32\x12.iotapi.TaskStatus\",\n\x08TaskUser\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\"Z\n\x12SetTaskStatusInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\"\n\x06status\x18\x02 \x01(\x0e\x32\x12.iotapi.TaskStatus\x12\x0f\n\x07user_id\x18\x03 \x01(\t\"I\n\x10TaskDescriptions\x12\x35\n\x14task_description_arr\x18\x01 \x03(\x0b\x32\x17.iotapi.TaskDescription\"\'\n\x15\x46unctionalLocationIds\x12\x0e\n\x06id_arr\x18\x01 \x03(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x0f\n\rPrimitiveVoid\"\xfc\x01\n\x08NodeData\x12\x12\n\ncreated_at\x18\x01 \x01(\x03\x12\x31\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1b.iotapi.NodeDataContentType\x12%\n\ndata_point\x18\x03 \x01(\x0b\x32\x11.iotapi.DataPoint\x12\"\n\x08spectrum\x18\x04 \x01(\x0b\x32\x10.iotapi.Spectrum\x12\'\n\x0btime_series\x18\x05 \x01(\x0b\x32\x12.iotapi.TimeSeries\x12\x0c\n\x04note\x18\x06 \x01(\t\x12\r\n\x05media\x18\x07 \x01(\x0c\x12\x18\n\x10question_answers\x18\x08 \x03(\t\"\"\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"S\n\tDataPoint\x12&\n\ncoordinate\x18\x01 \x01(\x0b\x32\x12.iotapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"\x7f\n\x08Spectrum\x12\'\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x12.iotapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\x12\x17\n\x0fwindow_function\x18\x04 \x01(\t\x12\x11\n\tspeed_rpm\x18\x05 \x01(\x01\"U\n\nTimeSeries\x12\'\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x12.iotapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"K\n\x13IngestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12#\n\tnode_data\x18\x02 \x01(\x0b\x32\x10.iotapi.NodeData\"\x16\n\x14IngestNodeDataOutput\"V\n\x19IngestNodeDataStreamInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12(\n\x0enode_data_list\x18\x02 \x03(\x0b\x32\x10.iotapi.NodeData\"\x1c\n\x1aIngestNodeDataStreamOutput\"i\n\x10GetNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x31\n\x0c\x63ontent_type\x18\x03 \x01(\x0e\x32\x1b.iotapi.NodeDataContentType\"=\n\x11GetNodeDataOutput\x12(\n\x0enode_data_list\x18\x01 \x03(\x0b\x32\x10.iotapi.NodeData\"\x18\n\x16GetNodeDataStreamInput\"O\n\x17GetNodeDataStreamOutput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12#\n\tnode_data\x18\x02 \x01(\x0b\x32\x10.iotapi.NodeData\"*\n\x12GetTaskStreamInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\"<\n\x13GetTaskStreamOutput\x12%\n\x04task\x18\x01 \x01(\x0b\x32\x17.iotapi.TaskDescription*A\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\r\n\tCOMPLETED\x10\x03*|\n\x13NodeDataContentType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nDATA_POINT\x10\x01\x12\x0c\n\x08SPECTRUM\x10\x02\x12\x0f\n\x0bTIME_SERIES\x10\x03\x12\x08\n\x04NOTE\x10\x04\x12\t\n\x05MEDIA\x10\x05\x12\x14\n\x10QUESTION_ANSWERS\x10\x06\x32\xd1\x07\n\x03IoT\x12<\n\x08\x44\x65\x65pPing\x12\x15.iotapi.PrimitiveVoid\x1a\x17.iotapi.PrimitiveString\"\x00\x12G\n\nCreateTask\x12\x1e.iotapi.InitialTaskDescription\x1a\x17.iotapi.PrimitiveString\"\x00\x12\x42\n\x0bGetAllTasks\x12\x17.iotapi.PrimitiveString\x1a\x18.iotapi.TaskDescriptions\"\x00\x12J\n\x13GetUncompletedTasks\x12\x17.iotapi.PrimitiveString\x1a\x18.iotapi.TaskDescriptions\"\x00\x12=\n\x10SetTaskCompleted\x12\x10.iotapi.TaskUser\x1a\x15.iotapi.PrimitiveVoid\"\x00\x12\x37\n\nDeleteTask\x12\x10.iotapi.TaskUser\x1a\x15.iotapi.PrimitiveVoid\"\x00\x12U\n\x1eGetUncompletedTasksByHierarchy\x12\x17.iotapi.PrimitiveString\x1a\x18.iotapi.TaskDescriptions\"\x00\x12\x44\n\rSetTaskStatus\x12\x1a.iotapi.SetTaskStatusInput\x1a\x15.iotapi.PrimitiveVoid\"\x00\x12L\n\rGetTaskStream\x12\x1a.iotapi.GetTaskStreamInput\x1a\x1b.iotapi.GetTaskStreamOutput\"\x00\x30\x01\x12M\n\x0eIngestNodeData\x12\x1b.iotapi.IngestNodeDataInput\x1a\x1c.iotapi.IngestNodeDataOutput\"\x00\x12\x61\n\x14IngestNodeDataStream\x12!.iotapi.IngestNodeDataStreamInput\x1a\".iotapi.IngestNodeDataStreamOutput\"\x00(\x01\x12\x44\n\x0bGetNodeData\x12\x18.iotapi.GetNodeDataInput\x1a\x19.iotapi.GetNodeDataOutput\"\x00\x12X\n\x11GetNodeDataStream\x12\x1e.iotapi.GetNodeDataStreamInput\x1a\x1f.iotapi.GetNodeDataStreamOutput\"\x00\x30\x01\x42\x16\xaa\x02\x13SKF.Enlight.API.IoTb\x06proto3')
+  serialized_pb=_b('\n\rgrpcapi.proto\x12\niotgrpcapi\"\xaf\x02\n\x0fTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\x12\x11\n\ttask_name\x18\x03 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x04 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x05 \x01(\x03\x12\x14\n\x0cis_completed\x18\x06 \x01(\x08\x12\x42\n\x17\x66unctional_location_ids\x18\x07 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\t \x01(\t\x12&\n\x06status\x18\x08 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x19\n\x11status_updated_at\x18\n \x01(\x03\"\xf4\x01\n\x16InitialTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x11\n\ttask_name\x18\x02 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x03 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x04 \x01(\x03\x12\x42\n\x17\x66unctional_location_ids\x18\x05 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\x06 \x01(\t\x12&\n\x06status\x18\x07 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\",\n\x08TaskUser\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\"r\n\x12SetTaskStatusInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x12\n\nupdated_at\x18\x04 \x01(\x03\"M\n\x10TaskDescriptions\x12\x39\n\x14task_description_arr\x18\x01 \x03(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"\'\n\x15\x46unctionalLocationIds\x12\x0e\n\x06id_arr\x18\x01 \x03(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x0f\n\rPrimitiveVoid\"\xb5\x02\n\x08NodeData\x12\x12\n\ncreated_at\x18\x01 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\x12)\n\ndata_point\x18\x03 \x01(\x0b\x32\x15.iotgrpcapi.DataPoint\x12&\n\x08spectrum\x18\x04 \x01(\x0b\x32\x14.iotgrpcapi.Spectrum\x12+\n\x0btime_series\x18\x05 \x01(\x0b\x32\x16.iotgrpcapi.TimeSeries\x12\x0c\n\x04note\x18\x06 \x01(\t\x12\x11\n\x05media\x18\x07 \x01(\x0c\x42\x02\x18\x01\x12#\n\x08media_v2\x18\t \x01(\x0b\x32\x11.iotgrpcapi.Media\x12\x18\n\x10question_answers\x18\x08 \x03(\t\"\"\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"W\n\tDataPoint\x12*\n\ncoordinate\x18\x01 \x01(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"\x83\x01\n\x08Spectrum\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\x12\x17\n\x0fwindow_function\x18\x04 \x01(\t\x12\x11\n\tspeed_rpm\x18\x05 \x01(\x01\"Y\n\nTimeSeries\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"G\n\x05Media\x12\n\n\x02id\x18\x01 \x01(\t\x12#\n\x04type\x18\x02 \x01(\x0e\x32\x15.iotgrpcapi.MediaType\x12\r\n\x05media\x18\x03 \x01(\x0c\"4\n\x06Origin\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x10\n\x08provider\x18\x03 \x01(\t\"s\n\x13IngestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x16\n\x14IngestNodeDataOutput\"~\n\x19IngestNodeDataStreamInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12,\n\x0enode_data_list\x18\x02 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"\x1c\n\x1aIngestNodeDataStreamOutput\"m\n\x10GetNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x03 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"A\n\x11GetNodeDataOutput\x12,\n\x0enode_data_list\x18\x01 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"`\n\x16GetLatestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"B\n\x17GetLatestNodeDataOutput\x12\'\n\tnode_data\x18\x01 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x18\n\x16GetNodeDataStreamInput\"S\n\x17GetNodeDataStreamOutput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"2\n\rGetMediaInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x10\n\x08media_id\x18\x02 \x01(\t\"2\n\x0eGetMediaOutput\x12 \n\x05media\x18\x01 \x01(\x0b\x32\x11.iotgrpcapi.Media\"*\n\x12GetTaskStreamInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\"@\n\x13GetTaskStreamOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription*R\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\x0f\n\x0bIN_PROGRESS\x10\x04\x12\r\n\tCOMPLETED\x10\x03*\x8e\x01\n\x13NodeDataContentType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nDATA_POINT\x10\x01\x12\x0c\n\x08SPECTRUM\x10\x02\x12\x0f\n\x0bTIME_SERIES\x10\x03\x12\x08\n\x04NOTE\x10\x04\x12\r\n\x05MEDIA\x10\x05\x1a\x02\x08\x01\x12\x0c\n\x08MEDIA_V2\x10\x07\x12\x14\n\x10QUESTION_ANSWERS\x10\x06*F\n\tMediaType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tAUDIO_WAV\x10\x01\x12\x0e\n\nIMAGE_JPEG\x10\x02\x12\r\n\tIMAGE_PNG\x10\x03\x32\xe1\t\n\x03IoT\x12\x44\n\x08\x44\x65\x65pPing\x12\x19.iotgrpcapi.PrimitiveVoid\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12O\n\nCreateTask\x12\".iotgrpcapi.InitialTaskDescription\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12J\n\x0bGetAllTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12R\n\x13GetUncompletedTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12H\n\x10SetTaskCompleted\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x03\x88\x02\x01\x12?\n\nDeleteTask\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12]\n\x1eGetUncompletedTasksByHierarchy\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12L\n\rSetTaskStatus\x12\x1e.iotgrpcapi.SetTaskStatusInput\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12T\n\rGetTaskStream\x12\x1e.iotgrpcapi.GetTaskStreamInput\x1a\x1f.iotgrpcapi.GetTaskStreamOutput\"\x00\x30\x01\x12U\n\x0eIngestNodeData\x12\x1f.iotgrpcapi.IngestNodeDataInput\x1a .iotgrpcapi.IngestNodeDataOutput\"\x00\x12i\n\x14IngestNodeDataStream\x12%.iotgrpcapi.IngestNodeDataStreamInput\x1a&.iotgrpcapi.IngestNodeDataStreamOutput\"\x00(\x01\x12^\n\x11GetLatestNodeData\x12\".iotgrpcapi.GetLatestNodeDataInput\x1a#.iotgrpcapi.GetLatestNodeDataOutput\"\x00\x12L\n\x0bGetNodeData\x12\x1c.iotgrpcapi.GetNodeDataInput\x1a\x1d.iotgrpcapi.GetNodeDataOutput\"\x00\x12`\n\x11GetNodeDataStream\x12\".iotgrpcapi.GetNodeDataStreamInput\x1a#.iotgrpcapi.GetNodeDataStreamOutput\"\x00\x30\x01\x12\x43\n\x08GetMedia\x12\x19.iotgrpcapi.GetMediaInput\x1a\x1a.iotgrpcapi.GetMediaOutput\"\x00\x42\x16\xaa\x02\x13SKF.Enlight.API.IoTb\x06proto3')
 )
 
 _TASKSTATUS = _descriptor.EnumDescriptor(
   name='TaskStatus',
-  full_name='iotapi.TaskStatus',
+  full_name='iotgrpcapi.TaskStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -42,21 +42,25 @@ _TASKSTATUS = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPLETED', index=3, number=3,
+      name='IN_PROGRESS', index=3, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COMPLETED', index=4, number=3,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2066,
-  serialized_end=2131,
+  serialized_start=2704,
+  serialized_end=2786,
 )
 _sym_db.RegisterEnumDescriptor(_TASKSTATUS)
 
 TaskStatus = enum_type_wrapper.EnumTypeWrapper(_TASKSTATUS)
 _NODEDATACONTENTTYPE = _descriptor.EnumDescriptor(
   name='NodeDataContentType',
-  full_name='iotapi.NodeDataContentType',
+  full_name='iotgrpcapi.NodeDataContentType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -82,24 +86,60 @@ _NODEDATACONTENTTYPE = _descriptor.EnumDescriptor(
       type=None),
     _descriptor.EnumValueDescriptor(
       name='MEDIA', index=5, number=5,
+      options=_descriptor._ParseOptions(descriptor_pb2.EnumValueOptions(), _b('\010\001')),
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MEDIA_V2', index=6, number=7,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='QUESTION_ANSWERS', index=6, number=6,
+      name='QUESTION_ANSWERS', index=7, number=6,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2133,
-  serialized_end=2257,
+  serialized_start=2789,
+  serialized_end=2931,
 )
 _sym_db.RegisterEnumDescriptor(_NODEDATACONTENTTYPE)
 
 NodeDataContentType = enum_type_wrapper.EnumTypeWrapper(_NODEDATACONTENTTYPE)
+_MEDIATYPE = _descriptor.EnumDescriptor(
+  name='MediaType',
+  full_name='iotgrpcapi.MediaType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AUDIO_WAV', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IMAGE_JPEG', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IMAGE_PNG', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2933,
+  serialized_end=3003,
+)
+_sym_db.RegisterEnumDescriptor(_MEDIATYPE)
+
+MediaType = enum_type_wrapper.EnumTypeWrapper(_MEDIATYPE)
 NOT_SENT = 0
 SENT = 1
 RECEIVED = 2
+IN_PROGRESS = 4
 COMPLETED = 3
 DEFAULT = 0
 DATA_POINT = 1
@@ -107,77 +147,89 @@ SPECTRUM = 2
 TIME_SERIES = 3
 NOTE = 4
 MEDIA = 5
+MEDIA_V2 = 7
 QUESTION_ANSWERS = 6
+UNKNOWN = 0
+AUDIO_WAV = 1
+IMAGE_JPEG = 2
+IMAGE_PNG = 3
 
 
 
 _TASKDESCRIPTION = _descriptor.Descriptor(
   name='TaskDescription',
-  full_name='iotapi.TaskDescription',
+  full_name='iotgrpcapi.TaskDescription',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='iotapi.TaskDescription.user_id', index=0,
+      name='user_id', full_name='iotgrpcapi.TaskDescription.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='task_id', full_name='iotapi.TaskDescription.task_id', index=1,
+      name='task_id', full_name='iotgrpcapi.TaskDescription.task_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='task_name', full_name='iotapi.TaskDescription.task_name', index=2,
+      name='task_name', full_name='iotgrpcapi.TaskDescription.task_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hierarchy_id', full_name='iotapi.TaskDescription.hierarchy_id', index=3,
+      name='hierarchy_id', full_name='iotgrpcapi.TaskDescription.hierarchy_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='due_date_timestamp', full_name='iotapi.TaskDescription.due_date_timestamp', index=4,
+      name='due_date_timestamp', full_name='iotgrpcapi.TaskDescription.due_date_timestamp', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_completed', full_name='iotapi.TaskDescription.is_completed', index=5,
+      name='is_completed', full_name='iotgrpcapi.TaskDescription.is_completed', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='functional_location_ids', full_name='iotapi.TaskDescription.functional_location_ids', index=6,
+      name='functional_location_ids', full_name='iotgrpcapi.TaskDescription.functional_location_ids', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='iotapi.TaskDescription.status', index=7,
+      name='external_task_id', full_name='iotgrpcapi.TaskDescription.external_task_id', index=7,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='iotgrpcapi.TaskDescription.status', index=8,
       number=8, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='external_task_id', full_name='iotapi.TaskDescription.external_task_id', index=8,
-      number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='status_updated_at', full_name='iotgrpcapi.TaskDescription.status_updated_at', index=9,
+      number=10, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -193,62 +245,62 @@ _TASKDESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=294,
+  serialized_start=30,
+  serialized_end=333,
 )
 
 
 _INITIALTASKDESCRIPTION = _descriptor.Descriptor(
   name='InitialTaskDescription',
-  full_name='iotapi.InitialTaskDescription',
+  full_name='iotgrpcapi.InitialTaskDescription',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='iotapi.InitialTaskDescription.user_id', index=0,
+      name='user_id', full_name='iotgrpcapi.InitialTaskDescription.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='task_name', full_name='iotapi.InitialTaskDescription.task_name', index=1,
+      name='task_name', full_name='iotgrpcapi.InitialTaskDescription.task_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hierarchy_id', full_name='iotapi.InitialTaskDescription.hierarchy_id', index=2,
+      name='hierarchy_id', full_name='iotgrpcapi.InitialTaskDescription.hierarchy_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='due_date_timestamp', full_name='iotapi.InitialTaskDescription.due_date_timestamp', index=3,
+      name='due_date_timestamp', full_name='iotgrpcapi.InitialTaskDescription.due_date_timestamp', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='functional_location_ids', full_name='iotapi.InitialTaskDescription.functional_location_ids', index=4,
+      name='functional_location_ids', full_name='iotgrpcapi.InitialTaskDescription.functional_location_ids', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='external_task_id', full_name='iotapi.InitialTaskDescription.external_task_id', index=5,
+      name='external_task_id', full_name='iotgrpcapi.InitialTaskDescription.external_task_id', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='iotapi.InitialTaskDescription.status', index=6,
+      name='status', full_name='iotgrpcapi.InitialTaskDescription.status', index=6,
       number=7, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -266,27 +318,27 @@ _INITIALTASKDESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=297,
-  serialized_end=533,
+  serialized_start=336,
+  serialized_end=580,
 )
 
 
 _TASKUSER = _descriptor.Descriptor(
   name='TaskUser',
-  full_name='iotapi.TaskUser',
+  full_name='iotgrpcapi.TaskUser',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='iotapi.TaskUser.user_id', index=0,
+      name='user_id', full_name='iotgrpcapi.TaskUser.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='task_id', full_name='iotapi.TaskUser.task_id', index=1,
+      name='task_id', full_name='iotgrpcapi.TaskUser.task_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -304,36 +356,43 @@ _TASKUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=535,
-  serialized_end=579,
+  serialized_start=582,
+  serialized_end=626,
 )
 
 
 _SETTASKSTATUSINPUT = _descriptor.Descriptor(
   name='SetTaskStatusInput',
-  full_name='iotapi.SetTaskStatusInput',
+  full_name='iotgrpcapi.SetTaskStatusInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='task_id', full_name='iotapi.SetTaskStatusInput.task_id', index=0,
+      name='task_id', full_name='iotgrpcapi.SetTaskStatusInput.task_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='status', full_name='iotapi.SetTaskStatusInput.status', index=1,
+      name='user_id', full_name='iotgrpcapi.SetTaskStatusInput.user_id', index=1,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='iotgrpcapi.SetTaskStatusInput.status', index=2,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='iotapi.SetTaskStatusInput.user_id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='updated_at', full_name='iotgrpcapi.SetTaskStatusInput.updated_at', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -349,20 +408,20 @@ _SETTASKSTATUSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=581,
-  serialized_end=671,
+  serialized_start=628,
+  serialized_end=742,
 )
 
 
 _TASKDESCRIPTIONS = _descriptor.Descriptor(
   name='TaskDescriptions',
-  full_name='iotapi.TaskDescriptions',
+  full_name='iotgrpcapi.TaskDescriptions',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='task_description_arr', full_name='iotapi.TaskDescriptions.task_description_arr', index=0,
+      name='task_description_arr', full_name='iotgrpcapi.TaskDescriptions.task_description_arr', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -380,20 +439,20 @@ _TASKDESCRIPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=673,
-  serialized_end=746,
+  serialized_start=744,
+  serialized_end=821,
 )
 
 
 _FUNCTIONALLOCATIONIDS = _descriptor.Descriptor(
   name='FunctionalLocationIds',
-  full_name='iotapi.FunctionalLocationIds',
+  full_name='iotgrpcapi.FunctionalLocationIds',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id_arr', full_name='iotapi.FunctionalLocationIds.id_arr', index=0,
+      name='id_arr', full_name='iotgrpcapi.FunctionalLocationIds.id_arr', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -411,20 +470,20 @@ _FUNCTIONALLOCATIONIDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=748,
-  serialized_end=787,
+  serialized_start=823,
+  serialized_end=862,
 )
 
 
 _PRIMITIVESTRING = _descriptor.Descriptor(
   name='PrimitiveString',
-  full_name='iotapi.PrimitiveString',
+  full_name='iotgrpcapi.PrimitiveString',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iotapi.PrimitiveString.value', index=0,
+      name='value', full_name='iotgrpcapi.PrimitiveString.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -442,20 +501,20 @@ _PRIMITIVESTRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=789,
-  serialized_end=821,
+  serialized_start=864,
+  serialized_end=896,
 )
 
 
 _PRIMITIVEBOOL = _descriptor.Descriptor(
   name='PrimitiveBool',
-  full_name='iotapi.PrimitiveBool',
+  full_name='iotgrpcapi.PrimitiveBool',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='iotapi.PrimitiveBool.value', index=0,
+      name='value', full_name='iotgrpcapi.PrimitiveBool.value', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -473,14 +532,14 @@ _PRIMITIVEBOOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=853,
+  serialized_start=898,
+  serialized_end=928,
 )
 
 
 _PRIMITIVEVOID = _descriptor.Descriptor(
   name='PrimitiveVoid',
-  full_name='iotapi.PrimitiveVoid',
+  full_name='iotgrpcapi.PrimitiveVoid',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -497,69 +556,76 @@ _PRIMITIVEVOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=855,
-  serialized_end=870,
+  serialized_start=930,
+  serialized_end=945,
 )
 
 
 _NODEDATA = _descriptor.Descriptor(
   name='NodeData',
-  full_name='iotapi.NodeData',
+  full_name='iotgrpcapi.NodeData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='created_at', full_name='iotapi.NodeData.created_at', index=0,
+      name='created_at', full_name='iotgrpcapi.NodeData.created_at', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='content_type', full_name='iotapi.NodeData.content_type', index=1,
+      name='content_type', full_name='iotgrpcapi.NodeData.content_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data_point', full_name='iotapi.NodeData.data_point', index=2,
+      name='data_point', full_name='iotgrpcapi.NodeData.data_point', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='spectrum', full_name='iotapi.NodeData.spectrum', index=3,
+      name='spectrum', full_name='iotgrpcapi.NodeData.spectrum', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_series', full_name='iotapi.NodeData.time_series', index=4,
+      name='time_series', full_name='iotgrpcapi.NodeData.time_series', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='note', full_name='iotapi.NodeData.note', index=5,
+      name='note', full_name='iotgrpcapi.NodeData.note', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='media', full_name='iotapi.NodeData.media', index=6,
+      name='media', full_name='iotgrpcapi.NodeData.media', index=6,
       number=7, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001')), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='media_v2', full_name='iotgrpcapi.NodeData.media_v2', index=7,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='question_answers', full_name='iotapi.NodeData.question_answers', index=7,
+      name='question_answers', full_name='iotgrpcapi.NodeData.question_answers', index=8,
       number=8, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -577,27 +643,27 @@ _NODEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=873,
-  serialized_end=1125,
+  serialized_start=948,
+  serialized_end=1257,
 )
 
 
 _COORDINATE = _descriptor.Descriptor(
   name='Coordinate',
-  full_name='iotapi.Coordinate',
+  full_name='iotgrpcapi.Coordinate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='x', full_name='iotapi.Coordinate.x', index=0,
+      name='x', full_name='iotgrpcapi.Coordinate.x', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y', full_name='iotapi.Coordinate.y', index=1,
+      name='y', full_name='iotgrpcapi.Coordinate.y', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -615,34 +681,34 @@ _COORDINATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1127,
-  serialized_end=1161,
+  serialized_start=1259,
+  serialized_end=1293,
 )
 
 
 _DATAPOINT = _descriptor.Descriptor(
   name='DataPoint',
-  full_name='iotapi.DataPoint',
+  full_name='iotgrpcapi.DataPoint',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='coordinate', full_name='iotapi.DataPoint.coordinate', index=0,
+      name='coordinate', full_name='iotgrpcapi.DataPoint.coordinate', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='x_unit', full_name='iotapi.DataPoint.x_unit', index=1,
+      name='x_unit', full_name='iotgrpcapi.DataPoint.x_unit', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y_unit', full_name='iotapi.DataPoint.y_unit', index=2,
+      name='y_unit', full_name='iotgrpcapi.DataPoint.y_unit', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -660,48 +726,48 @@ _DATAPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1163,
-  serialized_end=1246,
+  serialized_start=1295,
+  serialized_end=1382,
 )
 
 
 _SPECTRUM = _descriptor.Descriptor(
   name='Spectrum',
-  full_name='iotapi.Spectrum',
+  full_name='iotgrpcapi.Spectrum',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='coordinates', full_name='iotapi.Spectrum.coordinates', index=0,
+      name='coordinates', full_name='iotgrpcapi.Spectrum.coordinates', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='x_unit', full_name='iotapi.Spectrum.x_unit', index=1,
+      name='x_unit', full_name='iotgrpcapi.Spectrum.x_unit', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y_unit', full_name='iotapi.Spectrum.y_unit', index=2,
+      name='y_unit', full_name='iotgrpcapi.Spectrum.y_unit', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='window_function', full_name='iotapi.Spectrum.window_function', index=3,
+      name='window_function', full_name='iotgrpcapi.Spectrum.window_function', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='speed_rpm', full_name='iotapi.Spectrum.speed_rpm', index=4,
+      name='speed_rpm', full_name='iotgrpcapi.Spectrum.speed_rpm', index=4,
       number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -719,34 +785,34 @@ _SPECTRUM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1248,
-  serialized_end=1375,
+  serialized_start=1385,
+  serialized_end=1516,
 )
 
 
 _TIMESERIES = _descriptor.Descriptor(
   name='TimeSeries',
-  full_name='iotapi.TimeSeries',
+  full_name='iotgrpcapi.TimeSeries',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='coordinates', full_name='iotapi.TimeSeries.coordinates', index=0,
+      name='coordinates', full_name='iotgrpcapi.TimeSeries.coordinates', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='x_unit', full_name='iotapi.TimeSeries.x_unit', index=1,
+      name='x_unit', full_name='iotgrpcapi.TimeSeries.x_unit', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y_unit', full_name='iotapi.TimeSeries.y_unit', index=2,
+      name='y_unit', full_name='iotgrpcapi.TimeSeries.y_unit', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -764,27 +830,124 @@ _TIMESERIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1377,
-  serialized_end=1462,
+  serialized_start=1518,
+  serialized_end=1607,
 )
 
 
-_INGESTNODEDATAINPUT = _descriptor.Descriptor(
-  name='IngestNodeDataInput',
-  full_name='iotapi.IngestNodeDataInput',
+_MEDIA = _descriptor.Descriptor(
+  name='Media',
+  full_name='iotgrpcapi.Media',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_id', full_name='iotapi.IngestNodeDataInput.node_id', index=0,
+      name='id', full_name='iotgrpcapi.Media.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='node_data', full_name='iotapi.IngestNodeDataInput.node_data', index=1,
+      name='type', full_name='iotgrpcapi.Media.type', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='media', full_name='iotgrpcapi.Media.media', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1609,
+  serialized_end=1680,
+)
+
+
+_ORIGIN = _descriptor.Descriptor(
+  name='Origin',
+  full_name='iotgrpcapi.Origin',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='iotgrpcapi.Origin.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='iotgrpcapi.Origin.type', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='provider', full_name='iotgrpcapi.Origin.provider', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1682,
+  serialized_end=1734,
+)
+
+
+_INGESTNODEDATAINPUT = _descriptor.Descriptor(
+  name='IngestNodeDataInput',
+  full_name='iotgrpcapi.IngestNodeDataInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_id', full_name='iotgrpcapi.IngestNodeDataInput.node_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='origin', full_name='iotgrpcapi.IngestNodeDataInput.origin', index=1,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='node_data', full_name='iotgrpcapi.IngestNodeDataInput.node_data', index=2,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -802,176 +965,14 @@ _INGESTNODEDATAINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1464,
-  serialized_end=1539,
+  serialized_start=1736,
+  serialized_end=1851,
 )
 
 
 _INGESTNODEDATAOUTPUT = _descriptor.Descriptor(
   name='IngestNodeDataOutput',
-  full_name='iotapi.IngestNodeDataOutput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1541,
-  serialized_end=1563,
-)
-
-
-_INGESTNODEDATASTREAMINPUT = _descriptor.Descriptor(
-  name='IngestNodeDataStreamInput',
-  full_name='iotapi.IngestNodeDataStreamInput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='node_id', full_name='iotapi.IngestNodeDataStreamInput.node_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='node_data_list', full_name='iotapi.IngestNodeDataStreamInput.node_data_list', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1565,
-  serialized_end=1651,
-)
-
-
-_INGESTNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
-  name='IngestNodeDataStreamOutput',
-  full_name='iotapi.IngestNodeDataStreamOutput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1653,
-  serialized_end=1681,
-)
-
-
-_GETNODEDATAINPUT = _descriptor.Descriptor(
-  name='GetNodeDataInput',
-  full_name='iotapi.GetNodeDataInput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='node_id', full_name='iotapi.GetNodeDataInput.node_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='iotapi.GetNodeDataInput.timestamp', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='content_type', full_name='iotapi.GetNodeDataInput.content_type', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1683,
-  serialized_end=1788,
-)
-
-
-_GETNODEDATAOUTPUT = _descriptor.Descriptor(
-  name='GetNodeDataOutput',
-  full_name='iotapi.GetNodeDataOutput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='node_data_list', full_name='iotapi.GetNodeDataOutput.node_data_list', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1790,
-  serialized_end=1851,
-)
-
-
-_GETNODEDATASTREAMINPUT = _descriptor.Descriptor(
-  name='GetNodeDataStreamInput',
-  full_name='iotapi.GetNodeDataStreamInput',
+  full_name='iotgrpcapi.IngestNodeDataOutput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -989,59 +990,35 @@ _GETNODEDATASTREAMINPUT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1853,
-  serialized_end=1877,
+  serialized_end=1875,
 )
 
 
-_GETNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
-  name='GetNodeDataStreamOutput',
-  full_name='iotapi.GetNodeDataStreamOutput',
+_INGESTNODEDATASTREAMINPUT = _descriptor.Descriptor(
+  name='IngestNodeDataStreamInput',
+  full_name='iotgrpcapi.IngestNodeDataStreamInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_id', full_name='iotapi.GetNodeDataStreamOutput.node_id', index=0,
+      name='node_id', full_name='iotgrpcapi.IngestNodeDataStreamInput.node_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='node_data', full_name='iotapi.GetNodeDataStreamOutput.node_data', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      name='origin', full_name='iotgrpcapi.IngestNodeDataStreamInput.origin', index=1,
+      number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1879,
-  serialized_end=1958,
-)
-
-
-_GETTASKSTREAMINPUT = _descriptor.Descriptor(
-  name='GetTaskStreamInput',
-  full_name='iotapi.GetTaskStreamInput',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
     _descriptor.FieldDescriptor(
-      name='hierarchy_id', full_name='iotapi.GetTaskStreamInput.hierarchy_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='node_data_list', full_name='iotgrpcapi.IngestNodeDataStreamInput.node_data_list', index=2,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -1057,20 +1034,158 @@ _GETTASKSTREAMINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1960,
-  serialized_end=2002,
+  serialized_start=1877,
+  serialized_end=2003,
 )
 
 
-_GETTASKSTREAMOUTPUT = _descriptor.Descriptor(
-  name='GetTaskStreamOutput',
-  full_name='iotapi.GetTaskStreamOutput',
+_INGESTNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
+  name='IngestNodeDataStreamOutput',
+  full_name='iotgrpcapi.IngestNodeDataStreamOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2005,
+  serialized_end=2033,
+)
+
+
+_GETNODEDATAINPUT = _descriptor.Descriptor(
+  name='GetNodeDataInput',
+  full_name='iotgrpcapi.GetNodeDataInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='task', full_name='iotapi.GetTaskStreamOutput.task', index=0,
+      name='node_id', full_name='iotgrpcapi.GetNodeDataInput.node_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='iotgrpcapi.GetNodeDataInput.timestamp', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='content_type', full_name='iotgrpcapi.GetNodeDataInput.content_type', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2035,
+  serialized_end=2144,
+)
+
+
+_GETNODEDATAOUTPUT = _descriptor.Descriptor(
+  name='GetNodeDataOutput',
+  full_name='iotgrpcapi.GetNodeDataOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_data_list', full_name='iotgrpcapi.GetNodeDataOutput.node_data_list', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2146,
+  serialized_end=2211,
+)
+
+
+_GETLATESTNODEDATAINPUT = _descriptor.Descriptor(
+  name='GetLatestNodeDataInput',
+  full_name='iotgrpcapi.GetLatestNodeDataInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_id', full_name='iotgrpcapi.GetLatestNodeDataInput.node_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='content_type', full_name='iotgrpcapi.GetLatestNodeDataInput.content_type', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2213,
+  serialized_end=2309,
+)
+
+
+_GETLATESTNODEDATAOUTPUT = _descriptor.Descriptor(
+  name='GetLatestNodeDataOutput',
+  full_name='iotgrpcapi.GetLatestNodeDataOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_data', full_name='iotgrpcapi.GetLatestNodeDataOutput.node_data', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1088,8 +1203,201 @@ _GETTASKSTREAMOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2004,
-  serialized_end=2064,
+  serialized_start=2311,
+  serialized_end=2377,
+)
+
+
+_GETNODEDATASTREAMINPUT = _descriptor.Descriptor(
+  name='GetNodeDataStreamInput',
+  full_name='iotgrpcapi.GetNodeDataStreamInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2379,
+  serialized_end=2403,
+)
+
+
+_GETNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
+  name='GetNodeDataStreamOutput',
+  full_name='iotgrpcapi.GetNodeDataStreamOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_id', full_name='iotgrpcapi.GetNodeDataStreamOutput.node_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='node_data', full_name='iotgrpcapi.GetNodeDataStreamOutput.node_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2405,
+  serialized_end=2488,
+)
+
+
+_GETMEDIAINPUT = _descriptor.Descriptor(
+  name='GetMediaInput',
+  full_name='iotgrpcapi.GetMediaInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='node_id', full_name='iotgrpcapi.GetMediaInput.node_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='media_id', full_name='iotgrpcapi.GetMediaInput.media_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2490,
+  serialized_end=2540,
+)
+
+
+_GETMEDIAOUTPUT = _descriptor.Descriptor(
+  name='GetMediaOutput',
+  full_name='iotgrpcapi.GetMediaOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='media', full_name='iotgrpcapi.GetMediaOutput.media', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2542,
+  serialized_end=2592,
+)
+
+
+_GETTASKSTREAMINPUT = _descriptor.Descriptor(
+  name='GetTaskStreamInput',
+  full_name='iotgrpcapi.GetTaskStreamInput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hierarchy_id', full_name='iotgrpcapi.GetTaskStreamInput.hierarchy_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2594,
+  serialized_end=2636,
+)
+
+
+_GETTASKSTREAMOUTPUT = _descriptor.Descriptor(
+  name='GetTaskStreamOutput',
+  full_name='iotgrpcapi.GetTaskStreamOutput',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='task', full_name='iotgrpcapi.GetTaskStreamOutput.task', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2638,
+  serialized_end=2702,
 )
 
 _TASKDESCRIPTION.fields_by_name['functional_location_ids'].message_type = _FUNCTIONALLOCATIONIDS
@@ -1102,14 +1410,21 @@ _NODEDATA.fields_by_name['content_type'].enum_type = _NODEDATACONTENTTYPE
 _NODEDATA.fields_by_name['data_point'].message_type = _DATAPOINT
 _NODEDATA.fields_by_name['spectrum'].message_type = _SPECTRUM
 _NODEDATA.fields_by_name['time_series'].message_type = _TIMESERIES
+_NODEDATA.fields_by_name['media_v2'].message_type = _MEDIA
 _DATAPOINT.fields_by_name['coordinate'].message_type = _COORDINATE
 _SPECTRUM.fields_by_name['coordinates'].message_type = _COORDINATE
 _TIMESERIES.fields_by_name['coordinates'].message_type = _COORDINATE
+_MEDIA.fields_by_name['type'].enum_type = _MEDIATYPE
+_INGESTNODEDATAINPUT.fields_by_name['origin'].message_type = _ORIGIN
 _INGESTNODEDATAINPUT.fields_by_name['node_data'].message_type = _NODEDATA
+_INGESTNODEDATASTREAMINPUT.fields_by_name['origin'].message_type = _ORIGIN
 _INGESTNODEDATASTREAMINPUT.fields_by_name['node_data_list'].message_type = _NODEDATA
 _GETNODEDATAINPUT.fields_by_name['content_type'].enum_type = _NODEDATACONTENTTYPE
 _GETNODEDATAOUTPUT.fields_by_name['node_data_list'].message_type = _NODEDATA
+_GETLATESTNODEDATAINPUT.fields_by_name['content_type'].enum_type = _NODEDATACONTENTTYPE
+_GETLATESTNODEDATAOUTPUT.fields_by_name['node_data'].message_type = _NODEDATA
 _GETNODEDATASTREAMOUTPUT.fields_by_name['node_data'].message_type = _NODEDATA
+_GETMEDIAOUTPUT.fields_by_name['media'].message_type = _MEDIA
 _GETTASKSTREAMOUTPUT.fields_by_name['task'].message_type = _TASKDESCRIPTION
 DESCRIPTOR.message_types_by_name['TaskDescription'] = _TASKDESCRIPTION
 DESCRIPTOR.message_types_by_name['InitialTaskDescription'] = _INITIALTASKDESCRIPTION
@@ -1125,204 +1440,257 @@ DESCRIPTOR.message_types_by_name['Coordinate'] = _COORDINATE
 DESCRIPTOR.message_types_by_name['DataPoint'] = _DATAPOINT
 DESCRIPTOR.message_types_by_name['Spectrum'] = _SPECTRUM
 DESCRIPTOR.message_types_by_name['TimeSeries'] = _TIMESERIES
+DESCRIPTOR.message_types_by_name['Media'] = _MEDIA
+DESCRIPTOR.message_types_by_name['Origin'] = _ORIGIN
 DESCRIPTOR.message_types_by_name['IngestNodeDataInput'] = _INGESTNODEDATAINPUT
 DESCRIPTOR.message_types_by_name['IngestNodeDataOutput'] = _INGESTNODEDATAOUTPUT
 DESCRIPTOR.message_types_by_name['IngestNodeDataStreamInput'] = _INGESTNODEDATASTREAMINPUT
 DESCRIPTOR.message_types_by_name['IngestNodeDataStreamOutput'] = _INGESTNODEDATASTREAMOUTPUT
 DESCRIPTOR.message_types_by_name['GetNodeDataInput'] = _GETNODEDATAINPUT
 DESCRIPTOR.message_types_by_name['GetNodeDataOutput'] = _GETNODEDATAOUTPUT
+DESCRIPTOR.message_types_by_name['GetLatestNodeDataInput'] = _GETLATESTNODEDATAINPUT
+DESCRIPTOR.message_types_by_name['GetLatestNodeDataOutput'] = _GETLATESTNODEDATAOUTPUT
 DESCRIPTOR.message_types_by_name['GetNodeDataStreamInput'] = _GETNODEDATASTREAMINPUT
 DESCRIPTOR.message_types_by_name['GetNodeDataStreamOutput'] = _GETNODEDATASTREAMOUTPUT
+DESCRIPTOR.message_types_by_name['GetMediaInput'] = _GETMEDIAINPUT
+DESCRIPTOR.message_types_by_name['GetMediaOutput'] = _GETMEDIAOUTPUT
 DESCRIPTOR.message_types_by_name['GetTaskStreamInput'] = _GETTASKSTREAMINPUT
 DESCRIPTOR.message_types_by_name['GetTaskStreamOutput'] = _GETTASKSTREAMOUTPUT
 DESCRIPTOR.enum_types_by_name['TaskStatus'] = _TASKSTATUS
 DESCRIPTOR.enum_types_by_name['NodeDataContentType'] = _NODEDATACONTENTTYPE
+DESCRIPTOR.enum_types_by_name['MediaType'] = _MEDIATYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TaskDescription = _reflection.GeneratedProtocolMessageType('TaskDescription', (_message.Message,), dict(
   DESCRIPTOR = _TASKDESCRIPTION,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.TaskDescription)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.TaskDescription)
   ))
 _sym_db.RegisterMessage(TaskDescription)
 
 InitialTaskDescription = _reflection.GeneratedProtocolMessageType('InitialTaskDescription', (_message.Message,), dict(
   DESCRIPTOR = _INITIALTASKDESCRIPTION,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.InitialTaskDescription)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.InitialTaskDescription)
   ))
 _sym_db.RegisterMessage(InitialTaskDescription)
 
 TaskUser = _reflection.GeneratedProtocolMessageType('TaskUser', (_message.Message,), dict(
   DESCRIPTOR = _TASKUSER,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.TaskUser)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.TaskUser)
   ))
 _sym_db.RegisterMessage(TaskUser)
 
 SetTaskStatusInput = _reflection.GeneratedProtocolMessageType('SetTaskStatusInput', (_message.Message,), dict(
   DESCRIPTOR = _SETTASKSTATUSINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.SetTaskStatusInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.SetTaskStatusInput)
   ))
 _sym_db.RegisterMessage(SetTaskStatusInput)
 
 TaskDescriptions = _reflection.GeneratedProtocolMessageType('TaskDescriptions', (_message.Message,), dict(
   DESCRIPTOR = _TASKDESCRIPTIONS,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.TaskDescriptions)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.TaskDescriptions)
   ))
 _sym_db.RegisterMessage(TaskDescriptions)
 
 FunctionalLocationIds = _reflection.GeneratedProtocolMessageType('FunctionalLocationIds', (_message.Message,), dict(
   DESCRIPTOR = _FUNCTIONALLOCATIONIDS,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.FunctionalLocationIds)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.FunctionalLocationIds)
   ))
 _sym_db.RegisterMessage(FunctionalLocationIds)
 
 PrimitiveString = _reflection.GeneratedProtocolMessageType('PrimitiveString', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVESTRING,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.PrimitiveString)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.PrimitiveString)
   ))
 _sym_db.RegisterMessage(PrimitiveString)
 
 PrimitiveBool = _reflection.GeneratedProtocolMessageType('PrimitiveBool', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEBOOL,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.PrimitiveBool)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.PrimitiveBool)
   ))
 _sym_db.RegisterMessage(PrimitiveBool)
 
 PrimitiveVoid = _reflection.GeneratedProtocolMessageType('PrimitiveVoid', (_message.Message,), dict(
   DESCRIPTOR = _PRIMITIVEVOID,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.PrimitiveVoid)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.PrimitiveVoid)
   ))
 _sym_db.RegisterMessage(PrimitiveVoid)
 
 NodeData = _reflection.GeneratedProtocolMessageType('NodeData', (_message.Message,), dict(
   DESCRIPTOR = _NODEDATA,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.NodeData)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.NodeData)
   ))
 _sym_db.RegisterMessage(NodeData)
 
 Coordinate = _reflection.GeneratedProtocolMessageType('Coordinate', (_message.Message,), dict(
   DESCRIPTOR = _COORDINATE,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.Coordinate)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.Coordinate)
   ))
 _sym_db.RegisterMessage(Coordinate)
 
 DataPoint = _reflection.GeneratedProtocolMessageType('DataPoint', (_message.Message,), dict(
   DESCRIPTOR = _DATAPOINT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.DataPoint)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.DataPoint)
   ))
 _sym_db.RegisterMessage(DataPoint)
 
 Spectrum = _reflection.GeneratedProtocolMessageType('Spectrum', (_message.Message,), dict(
   DESCRIPTOR = _SPECTRUM,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.Spectrum)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.Spectrum)
   ))
 _sym_db.RegisterMessage(Spectrum)
 
 TimeSeries = _reflection.GeneratedProtocolMessageType('TimeSeries', (_message.Message,), dict(
   DESCRIPTOR = _TIMESERIES,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.TimeSeries)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.TimeSeries)
   ))
 _sym_db.RegisterMessage(TimeSeries)
+
+Media = _reflection.GeneratedProtocolMessageType('Media', (_message.Message,), dict(
+  DESCRIPTOR = _MEDIA,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.Media)
+  ))
+_sym_db.RegisterMessage(Media)
+
+Origin = _reflection.GeneratedProtocolMessageType('Origin', (_message.Message,), dict(
+  DESCRIPTOR = _ORIGIN,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.Origin)
+  ))
+_sym_db.RegisterMessage(Origin)
 
 IngestNodeDataInput = _reflection.GeneratedProtocolMessageType('IngestNodeDataInput', (_message.Message,), dict(
   DESCRIPTOR = _INGESTNODEDATAINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.IngestNodeDataInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.IngestNodeDataInput)
   ))
 _sym_db.RegisterMessage(IngestNodeDataInput)
 
 IngestNodeDataOutput = _reflection.GeneratedProtocolMessageType('IngestNodeDataOutput', (_message.Message,), dict(
   DESCRIPTOR = _INGESTNODEDATAOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.IngestNodeDataOutput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.IngestNodeDataOutput)
   ))
 _sym_db.RegisterMessage(IngestNodeDataOutput)
 
 IngestNodeDataStreamInput = _reflection.GeneratedProtocolMessageType('IngestNodeDataStreamInput', (_message.Message,), dict(
   DESCRIPTOR = _INGESTNODEDATASTREAMINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.IngestNodeDataStreamInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.IngestNodeDataStreamInput)
   ))
 _sym_db.RegisterMessage(IngestNodeDataStreamInput)
 
 IngestNodeDataStreamOutput = _reflection.GeneratedProtocolMessageType('IngestNodeDataStreamOutput', (_message.Message,), dict(
   DESCRIPTOR = _INGESTNODEDATASTREAMOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.IngestNodeDataStreamOutput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.IngestNodeDataStreamOutput)
   ))
 _sym_db.RegisterMessage(IngestNodeDataStreamOutput)
 
 GetNodeDataInput = _reflection.GeneratedProtocolMessageType('GetNodeDataInput', (_message.Message,), dict(
   DESCRIPTOR = _GETNODEDATAINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetNodeDataInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetNodeDataInput)
   ))
 _sym_db.RegisterMessage(GetNodeDataInput)
 
 GetNodeDataOutput = _reflection.GeneratedProtocolMessageType('GetNodeDataOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETNODEDATAOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetNodeDataOutput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetNodeDataOutput)
   ))
 _sym_db.RegisterMessage(GetNodeDataOutput)
+
+GetLatestNodeDataInput = _reflection.GeneratedProtocolMessageType('GetLatestNodeDataInput', (_message.Message,), dict(
+  DESCRIPTOR = _GETLATESTNODEDATAINPUT,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetLatestNodeDataInput)
+  ))
+_sym_db.RegisterMessage(GetLatestNodeDataInput)
+
+GetLatestNodeDataOutput = _reflection.GeneratedProtocolMessageType('GetLatestNodeDataOutput', (_message.Message,), dict(
+  DESCRIPTOR = _GETLATESTNODEDATAOUTPUT,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetLatestNodeDataOutput)
+  ))
+_sym_db.RegisterMessage(GetLatestNodeDataOutput)
 
 GetNodeDataStreamInput = _reflection.GeneratedProtocolMessageType('GetNodeDataStreamInput', (_message.Message,), dict(
   DESCRIPTOR = _GETNODEDATASTREAMINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetNodeDataStreamInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetNodeDataStreamInput)
   ))
 _sym_db.RegisterMessage(GetNodeDataStreamInput)
 
 GetNodeDataStreamOutput = _reflection.GeneratedProtocolMessageType('GetNodeDataStreamOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETNODEDATASTREAMOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetNodeDataStreamOutput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetNodeDataStreamOutput)
   ))
 _sym_db.RegisterMessage(GetNodeDataStreamOutput)
+
+GetMediaInput = _reflection.GeneratedProtocolMessageType('GetMediaInput', (_message.Message,), dict(
+  DESCRIPTOR = _GETMEDIAINPUT,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetMediaInput)
+  ))
+_sym_db.RegisterMessage(GetMediaInput)
+
+GetMediaOutput = _reflection.GeneratedProtocolMessageType('GetMediaOutput', (_message.Message,), dict(
+  DESCRIPTOR = _GETMEDIAOUTPUT,
+  __module__ = 'grpcapi_pb2'
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetMediaOutput)
+  ))
+_sym_db.RegisterMessage(GetMediaOutput)
 
 GetTaskStreamInput = _reflection.GeneratedProtocolMessageType('GetTaskStreamInput', (_message.Message,), dict(
   DESCRIPTOR = _GETTASKSTREAMINPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetTaskStreamInput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetTaskStreamInput)
   ))
 _sym_db.RegisterMessage(GetTaskStreamInput)
 
 GetTaskStreamOutput = _reflection.GeneratedProtocolMessageType('GetTaskStreamOutput', (_message.Message,), dict(
   DESCRIPTOR = _GETTASKSTREAMOUTPUT,
   __module__ = 'grpcapi_pb2'
-  # @@protoc_insertion_point(class_scope:iotapi.GetTaskStreamOutput)
+  # @@protoc_insertion_point(class_scope:iotgrpcapi.GetTaskStreamOutput)
   ))
 _sym_db.RegisterMessage(GetTaskStreamOutput)
 
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\252\002\023SKF.Enlight.API.IoT'))
+_NODEDATACONTENTTYPE.values_by_name["MEDIA"].has_options = True
+_NODEDATACONTENTTYPE.values_by_name["MEDIA"]._options = _descriptor._ParseOptions(descriptor_pb2.EnumValueOptions(), _b('\010\001'))
+_NODEDATA.fields_by_name['media'].has_options = True
+_NODEDATA.fields_by_name['media']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))
 
 _IOT = _descriptor.ServiceDescriptor(
   name='IoT',
-  full_name='iotapi.IoT',
+  full_name='iotgrpcapi.IoT',
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=2260,
-  serialized_end=3237,
+  serialized_start=3006,
+  serialized_end=4255,
   methods=[
   _descriptor.MethodDescriptor(
     name='DeepPing',
-    full_name='iotapi.IoT.DeepPing',
+    full_name='iotgrpcapi.IoT.DeepPing',
     index=0,
     containing_service=None,
     input_type=_PRIMITIVEVOID,
@@ -1331,7 +1699,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='CreateTask',
-    full_name='iotapi.IoT.CreateTask',
+    full_name='iotgrpcapi.IoT.CreateTask',
     index=1,
     containing_service=None,
     input_type=_INITIALTASKDESCRIPTION,
@@ -1340,7 +1708,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetAllTasks',
-    full_name='iotapi.IoT.GetAllTasks',
+    full_name='iotgrpcapi.IoT.GetAllTasks',
     index=2,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -1349,7 +1717,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetUncompletedTasks',
-    full_name='iotapi.IoT.GetUncompletedTasks',
+    full_name='iotgrpcapi.IoT.GetUncompletedTasks',
     index=3,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -1358,16 +1726,16 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SetTaskCompleted',
-    full_name='iotapi.IoT.SetTaskCompleted',
+    full_name='iotgrpcapi.IoT.SetTaskCompleted',
     index=4,
     containing_service=None,
     input_type=_TASKUSER,
     output_type=_PRIMITIVEVOID,
-    options=None,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\210\002\001')),
   ),
   _descriptor.MethodDescriptor(
     name='DeleteTask',
-    full_name='iotapi.IoT.DeleteTask',
+    full_name='iotgrpcapi.IoT.DeleteTask',
     index=5,
     containing_service=None,
     input_type=_TASKUSER,
@@ -1376,7 +1744,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetUncompletedTasksByHierarchy',
-    full_name='iotapi.IoT.GetUncompletedTasksByHierarchy',
+    full_name='iotgrpcapi.IoT.GetUncompletedTasksByHierarchy',
     index=6,
     containing_service=None,
     input_type=_PRIMITIVESTRING,
@@ -1385,7 +1753,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SetTaskStatus',
-    full_name='iotapi.IoT.SetTaskStatus',
+    full_name='iotgrpcapi.IoT.SetTaskStatus',
     index=7,
     containing_service=None,
     input_type=_SETTASKSTATUSINPUT,
@@ -1394,7 +1762,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetTaskStream',
-    full_name='iotapi.IoT.GetTaskStream',
+    full_name='iotgrpcapi.IoT.GetTaskStream',
     index=8,
     containing_service=None,
     input_type=_GETTASKSTREAMINPUT,
@@ -1403,7 +1771,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IngestNodeData',
-    full_name='iotapi.IoT.IngestNodeData',
+    full_name='iotgrpcapi.IoT.IngestNodeData',
     index=9,
     containing_service=None,
     input_type=_INGESTNODEDATAINPUT,
@@ -1412,7 +1780,7 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='IngestNodeDataStream',
-    full_name='iotapi.IoT.IngestNodeDataStream',
+    full_name='iotgrpcapi.IoT.IngestNodeDataStream',
     index=10,
     containing_service=None,
     input_type=_INGESTNODEDATASTREAMINPUT,
@@ -1420,9 +1788,18 @@ _IOT = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetNodeData',
-    full_name='iotapi.IoT.GetNodeData',
+    name='GetLatestNodeData',
+    full_name='iotgrpcapi.IoT.GetLatestNodeData',
     index=11,
+    containing_service=None,
+    input_type=_GETLATESTNODEDATAINPUT,
+    output_type=_GETLATESTNODEDATAOUTPUT,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetNodeData',
+    full_name='iotgrpcapi.IoT.GetNodeData',
+    index=12,
     containing_service=None,
     input_type=_GETNODEDATAINPUT,
     output_type=_GETNODEDATAOUTPUT,
@@ -1430,11 +1807,20 @@ _IOT = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetNodeDataStream',
-    full_name='iotapi.IoT.GetNodeDataStream',
-    index=12,
+    full_name='iotgrpcapi.IoT.GetNodeDataStream',
+    index=13,
     containing_service=None,
     input_type=_GETNODEDATASTREAMINPUT,
     output_type=_GETNODEDATASTREAMOUTPUT,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetMedia',
+    full_name='iotgrpcapi.IoT.GetMedia',
+    index=14,
+    containing_service=None,
+    input_type=_GETMEDIAINPUT,
+    output_type=_GETMEDIAOUTPUT,
     options=None,
   ),
 ])

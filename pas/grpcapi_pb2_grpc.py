@@ -19,20 +19,30 @@ class PointAlarmStatusStub(object):
         request_serializer=grpcapi__pb2.Void.SerializeToString,
         response_deserializer=grpcapi__pb2.DeepPingOutput.FromString,
         )
-    self.SetPointStatus = channel.unary_unary(
-        '/pasapi.PointAlarmStatus/SetPointStatus',
-        request_serializer=grpcapi__pb2.SetPointStatusInput.SerializeToString,
-        response_deserializer=grpcapi__pb2.SetPointStatusOutput.FromString,
+    self.SetPointAlarmThreshold = channel.unary_unary(
+        '/pasapi.PointAlarmStatus/SetPointAlarmThreshold',
+        request_serializer=grpcapi__pb2.SetPointAlarmThresholdInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.SetPointAlarmThresholdOutput.FromString,
         )
-    self.GetPointStatus = channel.unary_unary(
-        '/pasapi.PointAlarmStatus/GetPointStatus',
-        request_serializer=grpcapi__pb2.GetPointStatusInput.SerializeToString,
-        response_deserializer=grpcapi__pb2.GetPointStatusOutput.FromString,
+    self.GetPointAlarmThreshold = channel.unary_unary(
+        '/pasapi.PointAlarmStatus/GetPointAlarmThreshold',
+        request_serializer=grpcapi__pb2.GetPointAlarmThresholdInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetPointAlarmThresholdOutput.FromString,
         )
-    self.GetPointStatusStream = channel.unary_stream(
-        '/pasapi.PointAlarmStatus/GetPointStatusStream',
-        request_serializer=grpcapi__pb2.GetPointStatusStreamInput.SerializeToString,
-        response_deserializer=grpcapi__pb2.GetPointStatusStreamOutput.FromString,
+    self.SetPointAlarmStatus = channel.unary_unary(
+        '/pasapi.PointAlarmStatus/SetPointAlarmStatus',
+        request_serializer=grpcapi__pb2.SetPointAlarmStatusInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.SetPointAlarmStatusOutput.FromString,
+        )
+    self.GetPointAlarmStatus = channel.unary_unary(
+        '/pasapi.PointAlarmStatus/GetPointAlarmStatus',
+        request_serializer=grpcapi__pb2.GetPointAlarmStatusInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetPointAlarmStatusOutput.FromString,
+        )
+    self.GetPointAlarmStatusStream = channel.unary_stream(
+        '/pasapi.PointAlarmStatus/GetPointAlarmStatusStream',
+        request_serializer=grpcapi__pb2.GetPointAlarmStatusStreamInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetPointAlarmStatusStreamOutput.FromString,
         )
 
 
@@ -47,21 +57,35 @@ class PointAlarmStatusServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SetPointStatus(self, request, context):
+  def SetPointAlarmThreshold(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetPointStatus(self, request, context):
+  def GetPointAlarmThreshold(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetPointStatusStream(self, request, context):
+  def SetPointAlarmStatus(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetPointAlarmStatus(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetPointAlarmStatusStream(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -76,20 +100,30 @@ def add_PointAlarmStatusServicer_to_server(servicer, server):
           request_deserializer=grpcapi__pb2.Void.FromString,
           response_serializer=grpcapi__pb2.DeepPingOutput.SerializeToString,
       ),
-      'SetPointStatus': grpc.unary_unary_rpc_method_handler(
-          servicer.SetPointStatus,
-          request_deserializer=grpcapi__pb2.SetPointStatusInput.FromString,
-          response_serializer=grpcapi__pb2.SetPointStatusOutput.SerializeToString,
+      'SetPointAlarmThreshold': grpc.unary_unary_rpc_method_handler(
+          servicer.SetPointAlarmThreshold,
+          request_deserializer=grpcapi__pb2.SetPointAlarmThresholdInput.FromString,
+          response_serializer=grpcapi__pb2.SetPointAlarmThresholdOutput.SerializeToString,
       ),
-      'GetPointStatus': grpc.unary_unary_rpc_method_handler(
-          servicer.GetPointStatus,
-          request_deserializer=grpcapi__pb2.GetPointStatusInput.FromString,
-          response_serializer=grpcapi__pb2.GetPointStatusOutput.SerializeToString,
+      'GetPointAlarmThreshold': grpc.unary_unary_rpc_method_handler(
+          servicer.GetPointAlarmThreshold,
+          request_deserializer=grpcapi__pb2.GetPointAlarmThresholdInput.FromString,
+          response_serializer=grpcapi__pb2.GetPointAlarmThresholdOutput.SerializeToString,
       ),
-      'GetPointStatusStream': grpc.unary_stream_rpc_method_handler(
-          servicer.GetPointStatusStream,
-          request_deserializer=grpcapi__pb2.GetPointStatusStreamInput.FromString,
-          response_serializer=grpcapi__pb2.GetPointStatusStreamOutput.SerializeToString,
+      'SetPointAlarmStatus': grpc.unary_unary_rpc_method_handler(
+          servicer.SetPointAlarmStatus,
+          request_deserializer=grpcapi__pb2.SetPointAlarmStatusInput.FromString,
+          response_serializer=grpcapi__pb2.SetPointAlarmStatusOutput.SerializeToString,
+      ),
+      'GetPointAlarmStatus': grpc.unary_unary_rpc_method_handler(
+          servicer.GetPointAlarmStatus,
+          request_deserializer=grpcapi__pb2.GetPointAlarmStatusInput.FromString,
+          response_serializer=grpcapi__pb2.GetPointAlarmStatusOutput.SerializeToString,
+      ),
+      'GetPointAlarmStatusStream': grpc.unary_stream_rpc_method_handler(
+          servicer.GetPointAlarmStatusStream,
+          request_deserializer=grpcapi__pb2.GetPointAlarmStatusStreamInput.FromString,
+          response_serializer=grpcapi__pb2.GetPointAlarmStatusStreamOutput.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
