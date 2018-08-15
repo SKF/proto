@@ -25,25 +25,24 @@ namespace SKF.Enlight.API.MProxyHub {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJtaHViL2dycGNhcGkucHJvdG8SB21odWJhcGkiGgoYQXZhaWxhYmxlRFNL",
-            "RlN0cmVhbUlucHV0Ij8KGUF2YWlsYWJsZURTS0ZTdHJlYW1PdXRwdXQSDwoH",
-            "dGFza19pZBgBIAEoCRIRCglkc2tmX2ZpbGUYAiABKAkiWwoSU2V0VGFza1N0",
-            "YXR1c0lucHV0Eg8KB3Rhc2tfaWQYASABKAkSDwoHdXNlcl9pZBgCIAEoCRIj",
-            "CgZzdGF0dXMYAyABKA4yEy5taHViYXBpLlRhc2tTdGF0dXMiHwoORGVlcFBp",
-            "bmdPdXRwdXQSDQoFdmFsdWUYASABKAkiBgoEVm9pZCpBCgpUYXNrU3RhdHVz",
-            "EgwKCE5PVF9TRU5UEAASCAoEU0VOVBABEgwKCFJFQ0VJVkVEEAISDQoJQ09N",
-            "UExFVEVEEAMy6QEKEE1pY3JvbG9nUHJveHlIdWISNAoIRGVlcFBpbmcSDS5t",
-            "aHViYXBpLlZvaWQaFy5taHViYXBpLkRlZXBQaW5nT3V0cHV0IgASPQoNU2V0",
-            "VGFza1N0YXR1cxIbLm1odWJhcGkuU2V0VGFza1N0YXR1c0lucHV0Gg0ubWh1",
-            "YmFwaS5Wb2lkIgASYAoTQXZhaWxhYmxlRFNLRlN0cmVhbRIhLm1odWJhcGku",
-            "QXZhaWxhYmxlRFNLRlN0cmVhbUlucHV0GiIubWh1YmFwaS5BdmFpbGFibGVE",
-            "U0tGU3RyZWFtT3V0cHV0IgAwAUIcqgIZU0tGLkVubGlnaHQuQVBJLk1Qcm94",
-            "eUh1YmIGcHJvdG8z"));
+            "RlN0cmVhbUlucHV0IicKGUF2YWlsYWJsZURTS0ZTdHJlYW1PdXRwdXQSCgoC",
+            "aWQYASABKAMiRQoSU2V0VGFza1N0YXR1c0lucHV0EgoKAmlkGAEgASgDEiMK",
+            "BnN0YXR1cxgCIAEoDjITLm1odWJhcGkuVGFza1N0YXR1cyIfCg5EZWVwUGlu",
+            "Z091dHB1dBINCgV2YWx1ZRgBIAEoCSIGCgRWb2lkKkEKClRhc2tTdGF0dXMS",
+            "DAoITk9UX1NFTlQQABIICgRTRU5UEAESDAoIUkVDRUlWRUQQAhINCglDT01Q",
+            "TEVURUQQAzLpAQoQTWljcm9sb2dQcm94eUh1YhI0CghEZWVwUGluZxINLm1o",
+            "dWJhcGkuVm9pZBoXLm1odWJhcGkuRGVlcFBpbmdPdXRwdXQiABI9Cg1TZXRU",
+            "YXNrU3RhdHVzEhsubWh1YmFwaS5TZXRUYXNrU3RhdHVzSW5wdXQaDS5taHVi",
+            "YXBpLlZvaWQiABJgChNBdmFpbGFibGVEU0tGU3RyZWFtEiEubWh1YmFwaS5B",
+            "dmFpbGFibGVEU0tGU3RyZWFtSW5wdXQaIi5taHViYXBpLkF2YWlsYWJsZURT",
+            "S0ZTdHJlYW1PdXRwdXQiADABQhyqAhlTS0YuRW5saWdodC5BUEkuTVByb3h5",
+            "SHViYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.MProxyHub.TaskStatus), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamInput), global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamInput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamOutput), global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamOutput.Parser, new[]{ "TaskId", "DskfFile" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.SetTaskStatusInput), global::SKF.Enlight.API.MProxyHub.SetTaskStatusInput.Parser, new[]{ "TaskId", "UserId", "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamOutput), global::SKF.Enlight.API.MProxyHub.AvailableDSKFStreamOutput.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.SetTaskStatusInput), global::SKF.Enlight.API.MProxyHub.SetTaskStatusInput.Parser, new[]{ "Id", "Status" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.DeepPingOutput), global::SKF.Enlight.API.MProxyHub.DeepPingOutput.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.MProxyHub.Void), global::SKF.Enlight.API.MProxyHub.Void.Parser, null, null, null, null)
           }));
@@ -188,8 +187,7 @@ namespace SKF.Enlight.API.MProxyHub {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AvailableDSKFStreamOutput(AvailableDSKFStreamOutput other) : this() {
-      taskId_ = other.taskId_;
-      dskfFile_ = other.dskfFile_;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -198,25 +196,14 @@ namespace SKF.Enlight.API.MProxyHub {
       return new AvailableDSKFStreamOutput(this);
     }
 
-    /// <summary>Field number for the "task_id" field.</summary>
-    public const int TaskIdFieldNumber = 1;
-    private string taskId_ = "";
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TaskId {
-      get { return taskId_; }
+    public long Id {
+      get { return id_; }
       set {
-        taskId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "dskf_file" field.</summary>
-    public const int DskfFileFieldNumber = 2;
-    private string dskfFile_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DskfFile {
-      get { return dskfFile_; }
-      set {
-        dskfFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
@@ -233,16 +220,14 @@ namespace SKF.Enlight.API.MProxyHub {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TaskId != other.TaskId) return false;
-      if (DskfFile != other.DskfFile) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TaskId.Length != 0) hash ^= TaskId.GetHashCode();
-      if (DskfFile.Length != 0) hash ^= DskfFile.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -256,13 +241,9 @@ namespace SKF.Enlight.API.MProxyHub {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TaskId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TaskId);
-      }
-      if (DskfFile.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DskfFile);
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -272,11 +253,8 @@ namespace SKF.Enlight.API.MProxyHub {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TaskId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskId);
-      }
-      if (DskfFile.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DskfFile);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -289,11 +267,8 @@ namespace SKF.Enlight.API.MProxyHub {
       if (other == null) {
         return;
       }
-      if (other.TaskId.Length != 0) {
-        TaskId = other.TaskId;
-      }
-      if (other.DskfFile.Length != 0) {
-        DskfFile = other.DskfFile;
+      if (other.Id != 0L) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -306,12 +281,8 @@ namespace SKF.Enlight.API.MProxyHub {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            TaskId = input.ReadString();
-            break;
-          }
-          case 18: {
-            DskfFile = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
         }
@@ -345,8 +316,7 @@ namespace SKF.Enlight.API.MProxyHub {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetTaskStatusInput(SetTaskStatusInput other) : this() {
-      taskId_ = other.taskId_;
-      userId_ = other.userId_;
+      id_ = other.id_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -356,30 +326,19 @@ namespace SKF.Enlight.API.MProxyHub {
       return new SetTaskStatusInput(this);
     }
 
-    /// <summary>Field number for the "task_id" field.</summary>
-    public const int TaskIdFieldNumber = 1;
-    private string taskId_ = "";
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private long id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TaskId {
-      get { return taskId_; }
+    public long Id {
+      get { return id_; }
       set {
-        taskId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 2;
-    private string userId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string UserId {
-      get { return userId_; }
-      set {
-        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 3;
+    public const int StatusFieldNumber = 2;
     private global::SKF.Enlight.API.MProxyHub.TaskStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.MProxyHub.TaskStatus Status {
@@ -402,8 +361,7 @@ namespace SKF.Enlight.API.MProxyHub {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TaskId != other.TaskId) return false;
-      if (UserId != other.UserId) return false;
+      if (Id != other.Id) return false;
       if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -411,8 +369,7 @@ namespace SKF.Enlight.API.MProxyHub {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TaskId.Length != 0) hash ^= TaskId.GetHashCode();
-      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -427,16 +384,12 @@ namespace SKF.Enlight.API.MProxyHub {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TaskId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TaskId);
-      }
-      if (UserId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(UserId);
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
       }
       if (Status != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -447,11 +400,8 @@ namespace SKF.Enlight.API.MProxyHub {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TaskId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskId);
-      }
-      if (UserId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
       }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
@@ -467,11 +417,8 @@ namespace SKF.Enlight.API.MProxyHub {
       if (other == null) {
         return;
       }
-      if (other.TaskId.Length != 0) {
-        TaskId = other.TaskId;
-      }
-      if (other.UserId.Length != 0) {
-        UserId = other.UserId;
+      if (other.Id != 0L) {
+        Id = other.Id;
       }
       if (other.Status != 0) {
         Status = other.Status;
@@ -487,15 +434,11 @@ namespace SKF.Enlight.API.MProxyHub {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            TaskId = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
-          case 18: {
-            UserId = input.ReadString();
-            break;
-          }
-          case 24: {
+          case 16: {
             status_ = (global::SKF.Enlight.API.MProxyHub.TaskStatus) input.ReadEnum();
             break;
           }

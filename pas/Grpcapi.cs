@@ -25,35 +25,61 @@ namespace SKF.Enlight.API.PAS {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFwYXMvZ3JwY2FwaS5wcm90bxIGcGFzYXBpIh8KDkRlZXBQaW5nT3V0cHV0",
-            "Eg0KBXZhbHVlGAEgASgJIlEKE1NldFBvaW50U3RhdHVzSW5wdXQSDwoHbm9k",
-            "ZV9pZBgBIAEoCRIpCgxhbGFybV9zdGF0dXMYAiABKA4yEy5wYXNhcGkuQWxh",
-            "cm1TdGF0dXMiFgoUU2V0UG9pbnRTdGF0dXNPdXRwdXQiJgoTR2V0UG9pbnRT",
-            "dGF0dXNJbnB1dBIPCgdub2RlX2lkGAEgASgJIkEKFEdldFBvaW50U3RhdHVz",
-            "T3V0cHV0EikKDGFsYXJtX3N0YXR1cxgBIAEoDjITLnBhc2FwaS5BbGFybVN0",
-            "YXR1cyIbChlHZXRQb2ludFN0YXR1c1N0cmVhbUlucHV0IlgKGkdldFBvaW50",
-            "U3RhdHVzU3RyZWFtT3V0cHV0Eg8KB25vZGVfaWQYASABKAkSKQoMYWxhcm1f",
-            "c3RhdHVzGAIgASgOMhMucGFzYXBpLkFsYXJtU3RhdHVzIgYKBFZvaWQqTwoL",
-            "QWxhcm1TdGF0dXMSEgoOTk9UX0NPTkZJR1VSRUQQABILCgdOT19EQVRBEAES",
-            "CAoER09PRBACEgkKBUFMRVJUEAMSCgoGREFOR0VSEAQyxwIKEFBvaW50QWxh",
-            "cm1TdGF0dXMSMgoIRGVlcFBpbmcSDC5wYXNhcGkuVm9pZBoWLnBhc2FwaS5E",
-            "ZWVwUGluZ091dHB1dCIAEk0KDlNldFBvaW50U3RhdHVzEhsucGFzYXBpLlNl",
-            "dFBvaW50U3RhdHVzSW5wdXQaHC5wYXNhcGkuU2V0UG9pbnRTdGF0dXNPdXRw",
-            "dXQiABJNCg5HZXRQb2ludFN0YXR1cxIbLnBhc2FwaS5HZXRQb2ludFN0YXR1",
-            "c0lucHV0GhwucGFzYXBpLkdldFBvaW50U3RhdHVzT3V0cHV0IgASYQoUR2V0",
-            "UG9pbnRTdGF0dXNTdHJlYW0SIS5wYXNhcGkuR2V0UG9pbnRTdGF0dXNTdHJl",
-            "YW1JbnB1dBoiLnBhc2FwaS5HZXRQb2ludFN0YXR1c1N0cmVhbU91dHB1dCIA",
-            "MAFCFqoCE1NLRi5FbmxpZ2h0LkFQSS5QQVNiBnByb3RvMw=="));
+            "Eg0KBXZhbHVlGAEgASgJIoYBChtTZXRQb2ludEFsYXJtVGhyZXNob2xkSW5w",
+            "dXQSDwoHbm9kZV9pZBgBIAEoCRIPCgd1c2VyX2lkGAIgASgJEiMKBHR5cGUY",
+            "AyABKA4yFS5wYXNhcGkuVGhyZXNob2xkVHlwZRIgCgdvdmVyYWxsGAQgASgL",
+            "Mg8ucGFzYXBpLk92ZXJhbGwiHgocU2V0UG9pbnRBbGFybVRocmVzaG9sZE91",
+            "dHB1dCIuChtHZXRQb2ludEFsYXJtVGhyZXNob2xkSW5wdXQSDwoHbm9kZV9p",
+            "ZBgBIAEoCSJlChxHZXRQb2ludEFsYXJtVGhyZXNob2xkT3V0cHV0EiMKBHR5",
+            "cGUYASABKA4yFS5wYXNhcGkuVGhyZXNob2xkVHlwZRIgCgdvdmVyYWxsGAIg",
+            "ASgLMg8ucGFzYXBpLk92ZXJhbGwiVgoYU2V0UG9pbnRBbGFybVN0YXR1c0lu",
+            "cHV0Eg8KB25vZGVfaWQYASABKAkSKQoMYWxhcm1fc3RhdHVzGAIgASgOMhMu",
+            "cGFzYXBpLkFsYXJtU3RhdHVzIhsKGVNldFBvaW50QWxhcm1TdGF0dXNPdXRw",
+            "dXQiKwoYR2V0UG9pbnRBbGFybVN0YXR1c0lucHV0Eg8KB25vZGVfaWQYASAB",
+            "KAkiRgoZR2V0UG9pbnRBbGFybVN0YXR1c091dHB1dBIpCgxhbGFybV9zdGF0",
+            "dXMYASABKA4yEy5wYXNhcGkuQWxhcm1TdGF0dXMiIAoeR2V0UG9pbnRBbGFy",
+            "bVN0YXR1c1N0cmVhbUlucHV0Il0KH0dldFBvaW50QWxhcm1TdGF0dXNTdHJl",
+            "YW1PdXRwdXQSDwoHbm9kZV9pZBgBIAEoCRIpCgxhbGFybV9zdGF0dXMYAiAB",
+            "KA4yEy5wYXNhcGkuQWxhcm1TdGF0dXMiBgoEVm9pZCIdCgxEb3VibGVPYmpl",
+            "Y3QSDQoFdmFsdWUYASABKAEirwEKB092ZXJhbGwSKAoKb3V0ZXJfaGlnaBgB",
+            "IAEoCzIULnBhc2FwaS5Eb3VibGVPYmplY3QSKAoKaW5uZXJfaGlnaBgCIAEo",
+            "CzIULnBhc2FwaS5Eb3VibGVPYmplY3QSJwoJaW5uZXJfbG93GAMgASgLMhQu",
+            "cGFzYXBpLkRvdWJsZU9iamVjdBInCglvdXRlcl9sb3cYBCABKAsyFC5wYXNh",
+            "cGkuRG91YmxlT2JqZWN0Kk8KC0FsYXJtU3RhdHVzEhIKDk5PVF9DT05GSUdV",
+            "UkVEEAASCwoHTk9fREFUQRABEggKBEdPT0QQAhIJCgVBTEVSVBADEgoKBkRB",
+            "TkdFUhAEKksKDVRocmVzaG9sZFR5cGUSCAoETk9ORRAAEhUKEU9WRVJBTExf",
+            "SU5fV0lORE9XEAESGQoVT1ZFUkFMTF9PVVRfT0ZfV0lORE9XEAIywgQKEFBv",
+            "aW50QWxhcm1TdGF0dXMSMgoIRGVlcFBpbmcSDC5wYXNhcGkuVm9pZBoWLnBh",
+            "c2FwaS5EZWVwUGluZ091dHB1dCIAEmUKFlNldFBvaW50QWxhcm1UaHJlc2hv",
+            "bGQSIy5wYXNhcGkuU2V0UG9pbnRBbGFybVRocmVzaG9sZElucHV0GiQucGFz",
+            "YXBpLlNldFBvaW50QWxhcm1UaHJlc2hvbGRPdXRwdXQiABJlChZHZXRQb2lu",
+            "dEFsYXJtVGhyZXNob2xkEiMucGFzYXBpLkdldFBvaW50QWxhcm1UaHJlc2hv",
+            "bGRJbnB1dBokLnBhc2FwaS5HZXRQb2ludEFsYXJtVGhyZXNob2xkT3V0cHV0",
+            "IgASXAoTU2V0UG9pbnRBbGFybVN0YXR1cxIgLnBhc2FwaS5TZXRQb2ludEFs",
+            "YXJtU3RhdHVzSW5wdXQaIS5wYXNhcGkuU2V0UG9pbnRBbGFybVN0YXR1c091",
+            "dHB1dCIAElwKE0dldFBvaW50QWxhcm1TdGF0dXMSIC5wYXNhcGkuR2V0UG9p",
+            "bnRBbGFybVN0YXR1c0lucHV0GiEucGFzYXBpLkdldFBvaW50QWxhcm1TdGF0",
+            "dXNPdXRwdXQiABJwChlHZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFtEiYucGFz",
+            "YXBpLkdldFBvaW50QWxhcm1TdGF0dXNTdHJlYW1JbnB1dBonLnBhc2FwaS5H",
+            "ZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFtT3V0cHV0IgAwAUIWqgITU0tGLkVu",
+            "bGlnaHQuQVBJLlBBU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.AlarmStatus), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.AlarmStatus), typeof(global::SKF.Enlight.API.PAS.ThresholdType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DeepPingOutput), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointStatusInput), global::SKF.Enlight.API.PAS.SetPointStatusInput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointStatusOutput), global::SKF.Enlight.API.PAS.SetPointStatusOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointStatusInput), global::SKF.Enlight.API.PAS.GetPointStatusInput.Parser, new[]{ "NodeId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointStatusOutput), global::SKF.Enlight.API.PAS.GetPointStatusOutput.Parser, new[]{ "AlarmStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointStatusStreamInput), global::SKF.Enlight.API.PAS.GetPointStatusStreamInput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointStatusStreamOutput), global::SKF.Enlight.API.PAS.GetPointStatusStreamOutput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Void), global::SKF.Enlight.API.PAS.Void.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser, new[]{ "NodeId", "UserId", "Type", "Overall" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser, new[]{ "NodeId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput.Parser, new[]{ "Type", "Overall" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser, new[]{ "NodeId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser, new[]{ "AlarmStatus" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Void), global::SKF.Enlight.API.PAS.Void.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DoubleObject), global::SKF.Enlight.API.PAS.DoubleObject.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Overall), global::SKF.Enlight.API.PAS.Overall.Parser, new[]{ "OuterHigh", "InnerHigh", "InnerLow", "OuterLow" }, null, null, null)
           }));
     }
     #endregion
@@ -81,6 +107,12 @@ namespace SKF.Enlight.API.PAS {
     /// Latest measurement data within a danger interval.
     /// </summary>
     [pbr::OriginalName("DANGER")] Danger = 4,
+  }
+
+  public enum ThresholdType {
+    [pbr::OriginalName("NONE")] None = 0,
+    [pbr::OriginalName("OVERALL_IN_WINDOW")] OverallInWindow = 1,
+    [pbr::OriginalName("OVERALL_OUT_OF_WINDOW")] OverallOutOfWindow = 2,
   }
 
   #endregion
@@ -219,13 +251,13 @@ namespace SKF.Enlight.API.PAS {
   }
 
   /// <summary>
-  /// SetPointStatus Messages
+  /// SetPointAlarmThreshold Messages
   /// </summary>
-  public sealed partial class SetPointStatusInput : pb::IMessage<SetPointStatusInput> {
-    private static readonly pb::MessageParser<SetPointStatusInput> _parser = new pb::MessageParser<SetPointStatusInput>(() => new SetPointStatusInput());
+  public sealed partial class SetPointAlarmThresholdInput : pb::IMessage<SetPointAlarmThresholdInput> {
+    private static readonly pb::MessageParser<SetPointAlarmThresholdInput> _parser = new pb::MessageParser<SetPointAlarmThresholdInput>(() => new SetPointAlarmThresholdInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SetPointStatusInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<SetPointAlarmThresholdInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -238,22 +270,640 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusInput() {
+    public SetPointAlarmThresholdInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusInput(SetPointStatusInput other) : this() {
+    public SetPointAlarmThresholdInput(SetPointAlarmThresholdInput other) : this() {
+      nodeId_ = other.nodeId_;
+      userId_ = other.userId_;
+      type_ = other.type_;
+      Overall = other.overall_ != null ? other.Overall.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmThresholdInput Clone() {
+      return new SetPointAlarmThresholdInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 2;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 3;
+    private global::SKF.Enlight.API.PAS.ThresholdType type_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.ThresholdType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "overall" field.</summary>
+    public const int OverallFieldNumber = 4;
+    private global::SKF.Enlight.API.PAS.Overall overall_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.Overall Overall {
+      get { return overall_; }
+      set {
+        overall_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetPointAlarmThresholdInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetPointAlarmThresholdInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      if (UserId != other.UserId) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(Overall, other.Overall)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (Type != 0) hash ^= Type.GetHashCode();
+      if (overall_ != null) hash ^= Overall.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Type);
+      }
+      if (overall_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Overall);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (Type != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (overall_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overall);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetPointAlarmThresholdInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      if (other.Type != 0) {
+        Type = other.Type;
+      }
+      if (other.overall_ != null) {
+        if (overall_ == null) {
+          overall_ = new global::SKF.Enlight.API.PAS.Overall();
+        }
+        Overall.MergeFrom(other.Overall);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 24: {
+            type_ = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (overall_ == null) {
+              overall_ = new global::SKF.Enlight.API.PAS.Overall();
+            }
+            input.ReadMessage(overall_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SetPointAlarmThresholdOutput : pb::IMessage<SetPointAlarmThresholdOutput> {
+    private static readonly pb::MessageParser<SetPointAlarmThresholdOutput> _parser = new pb::MessageParser<SetPointAlarmThresholdOutput>(() => new SetPointAlarmThresholdOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetPointAlarmThresholdOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmThresholdOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmThresholdOutput(SetPointAlarmThresholdOutput other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmThresholdOutput Clone() {
+      return new SetPointAlarmThresholdOutput(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetPointAlarmThresholdOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetPointAlarmThresholdOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetPointAlarmThresholdOutput other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// GetPointAlarmThreshold Messages
+  /// </summary>
+  public sealed partial class GetPointAlarmThresholdInput : pb::IMessage<GetPointAlarmThresholdInput> {
+    private static readonly pb::MessageParser<GetPointAlarmThresholdInput> _parser = new pb::MessageParser<GetPointAlarmThresholdInput>(() => new GetPointAlarmThresholdInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetPointAlarmThresholdInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdInput(GetPointAlarmThresholdInput other) : this() {
+      nodeId_ = other.nodeId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdInput Clone() {
+      return new GetPointAlarmThresholdInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetPointAlarmThresholdInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetPointAlarmThresholdInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetPointAlarmThresholdInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetPointAlarmThresholdOutput : pb::IMessage<GetPointAlarmThresholdOutput> {
+    private static readonly pb::MessageParser<GetPointAlarmThresholdOutput> _parser = new pb::MessageParser<GetPointAlarmThresholdOutput>(() => new GetPointAlarmThresholdOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetPointAlarmThresholdOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdOutput(GetPointAlarmThresholdOutput other) : this() {
+      type_ = other.type_;
+      Overall = other.overall_ != null ? other.Overall.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPointAlarmThresholdOutput Clone() {
+      return new GetPointAlarmThresholdOutput(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::SKF.Enlight.API.PAS.ThresholdType type_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.ThresholdType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "overall" field.</summary>
+    public const int OverallFieldNumber = 2;
+    private global::SKF.Enlight.API.PAS.Overall overall_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.Overall Overall {
+      get { return overall_; }
+      set {
+        overall_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetPointAlarmThresholdOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetPointAlarmThresholdOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if (!object.Equals(Overall, other.Overall)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != 0) hash ^= Type.GetHashCode();
+      if (overall_ != null) hash ^= Overall.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Type != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (overall_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Overall);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (overall_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overall);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetPointAlarmThresholdOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != 0) {
+        Type = other.Type;
+      }
+      if (other.overall_ != null) {
+        if (overall_ == null) {
+          overall_ = new global::SKF.Enlight.API.PAS.Overall();
+        }
+        Overall.MergeFrom(other.Overall);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            type_ = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (overall_ == null) {
+              overall_ = new global::SKF.Enlight.API.PAS.Overall();
+            }
+            input.ReadMessage(overall_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// SetPointAlarmStatus Messages
+  /// </summary>
+  public sealed partial class SetPointAlarmStatusInput : pb::IMessage<SetPointAlarmStatusInput> {
+    private static readonly pb::MessageParser<SetPointAlarmStatusInput> _parser = new pb::MessageParser<SetPointAlarmStatusInput>(() => new SetPointAlarmStatusInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetPointAlarmStatusInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmStatusInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetPointAlarmStatusInput(SetPointAlarmStatusInput other) : this() {
       nodeId_ = other.nodeId_;
       alarmStatus_ = other.alarmStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusInput Clone() {
-      return new SetPointStatusInput(this);
+    public SetPointAlarmStatusInput Clone() {
+      return new SetPointAlarmStatusInput(this);
     }
 
     /// <summary>Field number for the "node_id" field.</summary>
@@ -280,11 +930,11 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SetPointStatusInput);
+      return Equals(other as SetPointAlarmStatusInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SetPointStatusInput other) {
+    public bool Equals(SetPointAlarmStatusInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -343,7 +993,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SetPointStatusInput other) {
+    public void MergeFrom(SetPointAlarmStatusInput other) {
       if (other == null) {
         return;
       }
@@ -378,15 +1028,15 @@ namespace SKF.Enlight.API.PAS {
 
   }
 
-  public sealed partial class SetPointStatusOutput : pb::IMessage<SetPointStatusOutput> {
-    private static readonly pb::MessageParser<SetPointStatusOutput> _parser = new pb::MessageParser<SetPointStatusOutput>(() => new SetPointStatusOutput());
+  public sealed partial class SetPointAlarmStatusOutput : pb::IMessage<SetPointAlarmStatusOutput> {
+    private static readonly pb::MessageParser<SetPointAlarmStatusOutput> _parser = new pb::MessageParser<SetPointAlarmStatusOutput>(() => new SetPointAlarmStatusOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SetPointStatusOutput> Parser { get { return _parser; } }
+    public static pb::MessageParser<SetPointAlarmStatusOutput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -395,29 +1045,29 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusOutput() {
+    public SetPointAlarmStatusOutput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusOutput(SetPointStatusOutput other) : this() {
+    public SetPointAlarmStatusOutput(SetPointAlarmStatusOutput other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SetPointStatusOutput Clone() {
-      return new SetPointStatusOutput(this);
+    public SetPointAlarmStatusOutput Clone() {
+      return new SetPointAlarmStatusOutput(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SetPointStatusOutput);
+      return Equals(other as SetPointAlarmStatusOutput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SetPointStatusOutput other) {
+    public bool Equals(SetPointAlarmStatusOutput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -458,7 +1108,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SetPointStatusOutput other) {
+    public void MergeFrom(SetPointAlarmStatusOutput other) {
       if (other == null) {
         return;
       }
@@ -480,17 +1130,17 @@ namespace SKF.Enlight.API.PAS {
   }
 
   /// <summary>
-  /// GetPointStatus Messages
+  /// GetPointAlarmStatus Messages
   /// </summary>
-  public sealed partial class GetPointStatusInput : pb::IMessage<GetPointStatusInput> {
-    private static readonly pb::MessageParser<GetPointStatusInput> _parser = new pb::MessageParser<GetPointStatusInput>(() => new GetPointStatusInput());
+  public sealed partial class GetPointAlarmStatusInput : pb::IMessage<GetPointAlarmStatusInput> {
+    private static readonly pb::MessageParser<GetPointAlarmStatusInput> _parser = new pb::MessageParser<GetPointAlarmStatusInput>(() => new GetPointAlarmStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetPointStatusInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetPointAlarmStatusInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -499,21 +1149,21 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusInput() {
+    public GetPointAlarmStatusInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusInput(GetPointStatusInput other) : this() {
+    public GetPointAlarmStatusInput(GetPointAlarmStatusInput other) : this() {
       nodeId_ = other.nodeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusInput Clone() {
-      return new GetPointStatusInput(this);
+    public GetPointAlarmStatusInput Clone() {
+      return new GetPointAlarmStatusInput(this);
     }
 
     /// <summary>Field number for the "node_id" field.</summary>
@@ -529,11 +1179,11 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetPointStatusInput);
+      return Equals(other as GetPointAlarmStatusInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetPointStatusInput other) {
+    public bool Equals(GetPointAlarmStatusInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -583,7 +1233,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetPointStatusInput other) {
+    public void MergeFrom(GetPointAlarmStatusInput other) {
       if (other == null) {
         return;
       }
@@ -611,15 +1261,15 @@ namespace SKF.Enlight.API.PAS {
 
   }
 
-  public sealed partial class GetPointStatusOutput : pb::IMessage<GetPointStatusOutput> {
-    private static readonly pb::MessageParser<GetPointStatusOutput> _parser = new pb::MessageParser<GetPointStatusOutput>(() => new GetPointStatusOutput());
+  public sealed partial class GetPointAlarmStatusOutput : pb::IMessage<GetPointAlarmStatusOutput> {
+    private static readonly pb::MessageParser<GetPointAlarmStatusOutput> _parser = new pb::MessageParser<GetPointAlarmStatusOutput>(() => new GetPointAlarmStatusOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetPointStatusOutput> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetPointAlarmStatusOutput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -628,21 +1278,21 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusOutput() {
+    public GetPointAlarmStatusOutput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusOutput(GetPointStatusOutput other) : this() {
+    public GetPointAlarmStatusOutput(GetPointAlarmStatusOutput other) : this() {
       alarmStatus_ = other.alarmStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusOutput Clone() {
-      return new GetPointStatusOutput(this);
+    public GetPointAlarmStatusOutput Clone() {
+      return new GetPointAlarmStatusOutput(this);
     }
 
     /// <summary>Field number for the "alarm_status" field.</summary>
@@ -658,11 +1308,11 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetPointStatusOutput);
+      return Equals(other as GetPointAlarmStatusOutput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetPointStatusOutput other) {
+    public bool Equals(GetPointAlarmStatusOutput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -712,7 +1362,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetPointStatusOutput other) {
+    public void MergeFrom(GetPointAlarmStatusOutput other) {
       if (other == null) {
         return;
       }
@@ -741,17 +1391,17 @@ namespace SKF.Enlight.API.PAS {
   }
 
   /// <summary>
-  /// GetPointStatusStream Messages
+  /// GetPointAlarmStatusStream Messages
   /// </summary>
-  public sealed partial class GetPointStatusStreamInput : pb::IMessage<GetPointStatusStreamInput> {
-    private static readonly pb::MessageParser<GetPointStatusStreamInput> _parser = new pb::MessageParser<GetPointStatusStreamInput>(() => new GetPointStatusStreamInput());
+  public sealed partial class GetPointAlarmStatusStreamInput : pb::IMessage<GetPointAlarmStatusStreamInput> {
+    private static readonly pb::MessageParser<GetPointAlarmStatusStreamInput> _parser = new pb::MessageParser<GetPointAlarmStatusStreamInput>(() => new GetPointAlarmStatusStreamInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetPointStatusStreamInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetPointAlarmStatusStreamInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -760,29 +1410,29 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamInput() {
+    public GetPointAlarmStatusStreamInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamInput(GetPointStatusStreamInput other) : this() {
+    public GetPointAlarmStatusStreamInput(GetPointAlarmStatusStreamInput other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamInput Clone() {
-      return new GetPointStatusStreamInput(this);
+    public GetPointAlarmStatusStreamInput Clone() {
+      return new GetPointAlarmStatusStreamInput(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetPointStatusStreamInput);
+      return Equals(other as GetPointAlarmStatusStreamInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetPointStatusStreamInput other) {
+    public bool Equals(GetPointAlarmStatusStreamInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -823,7 +1473,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetPointStatusStreamInput other) {
+    public void MergeFrom(GetPointAlarmStatusStreamInput other) {
       if (other == null) {
         return;
       }
@@ -844,15 +1494,15 @@ namespace SKF.Enlight.API.PAS {
 
   }
 
-  public sealed partial class GetPointStatusStreamOutput : pb::IMessage<GetPointStatusStreamOutput> {
-    private static readonly pb::MessageParser<GetPointStatusStreamOutput> _parser = new pb::MessageParser<GetPointStatusStreamOutput>(() => new GetPointStatusStreamOutput());
+  public sealed partial class GetPointAlarmStatusStreamOutput : pb::IMessage<GetPointAlarmStatusStreamOutput> {
+    private static readonly pb::MessageParser<GetPointAlarmStatusStreamOutput> _parser = new pb::MessageParser<GetPointAlarmStatusStreamOutput>(() => new GetPointAlarmStatusStreamOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetPointStatusStreamOutput> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetPointAlarmStatusStreamOutput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -861,22 +1511,22 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamOutput() {
+    public GetPointAlarmStatusStreamOutput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamOutput(GetPointStatusStreamOutput other) : this() {
+    public GetPointAlarmStatusStreamOutput(GetPointAlarmStatusStreamOutput other) : this() {
       nodeId_ = other.nodeId_;
       alarmStatus_ = other.alarmStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPointStatusStreamOutput Clone() {
-      return new GetPointStatusStreamOutput(this);
+    public GetPointAlarmStatusStreamOutput Clone() {
+      return new GetPointAlarmStatusStreamOutput(this);
     }
 
     /// <summary>Field number for the "node_id" field.</summary>
@@ -903,11 +1553,11 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetPointStatusStreamOutput);
+      return Equals(other as GetPointAlarmStatusStreamOutput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetPointStatusStreamOutput other) {
+    public bool Equals(GetPointAlarmStatusStreamOutput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -966,7 +1616,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetPointStatusStreamOutput other) {
+    public void MergeFrom(GetPointAlarmStatusStreamOutput other) {
       if (other == null) {
         return;
       }
@@ -1009,7 +1659,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1096,6 +1746,372 @@ namespace SKF.Enlight.API.PAS {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DoubleObject : pb::IMessage<DoubleObject> {
+    private static readonly pb::MessageParser<DoubleObject> _parser = new pb::MessageParser<DoubleObject>(() => new DoubleObject());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DoubleObject> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DoubleObject() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DoubleObject(DoubleObject other) : this() {
+      value_ = other.value_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DoubleObject Clone() {
+      return new DoubleObject(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private double value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DoubleObject);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DoubleObject other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Value != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DoubleObject other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value != 0D) {
+        Value = other.Value;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            Value = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Overall : pb::IMessage<Overall> {
+    private static readonly pb::MessageParser<Overall> _parser = new pb::MessageParser<Overall>(() => new Overall());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Overall> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Overall() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Overall(Overall other) : this() {
+      OuterHigh = other.outerHigh_ != null ? other.OuterHigh.Clone() : null;
+      InnerHigh = other.innerHigh_ != null ? other.InnerHigh.Clone() : null;
+      InnerLow = other.innerLow_ != null ? other.InnerLow.Clone() : null;
+      OuterLow = other.outerLow_ != null ? other.OuterLow.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Overall Clone() {
+      return new Overall(this);
+    }
+
+    /// <summary>Field number for the "outer_high" field.</summary>
+    public const int OuterHighFieldNumber = 1;
+    private global::SKF.Enlight.API.PAS.DoubleObject outerHigh_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.DoubleObject OuterHigh {
+      get { return outerHigh_; }
+      set {
+        outerHigh_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inner_high" field.</summary>
+    public const int InnerHighFieldNumber = 2;
+    private global::SKF.Enlight.API.PAS.DoubleObject innerHigh_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.DoubleObject InnerHigh {
+      get { return innerHigh_; }
+      set {
+        innerHigh_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inner_low" field.</summary>
+    public const int InnerLowFieldNumber = 3;
+    private global::SKF.Enlight.API.PAS.DoubleObject innerLow_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.DoubleObject InnerLow {
+      get { return innerLow_; }
+      set {
+        innerLow_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outer_low" field.</summary>
+    public const int OuterLowFieldNumber = 4;
+    private global::SKF.Enlight.API.PAS.DoubleObject outerLow_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.DoubleObject OuterLow {
+      get { return outerLow_; }
+      set {
+        outerLow_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Overall);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Overall other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OuterHigh, other.OuterHigh)) return false;
+      if (!object.Equals(InnerHigh, other.InnerHigh)) return false;
+      if (!object.Equals(InnerLow, other.InnerLow)) return false;
+      if (!object.Equals(OuterLow, other.OuterLow)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (outerHigh_ != null) hash ^= OuterHigh.GetHashCode();
+      if (innerHigh_ != null) hash ^= InnerHigh.GetHashCode();
+      if (innerLow_ != null) hash ^= InnerLow.GetHashCode();
+      if (outerLow_ != null) hash ^= OuterLow.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (outerHigh_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OuterHigh);
+      }
+      if (innerHigh_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InnerHigh);
+      }
+      if (innerLow_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InnerLow);
+      }
+      if (outerLow_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(OuterLow);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (outerHigh_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OuterHigh);
+      }
+      if (innerHigh_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InnerHigh);
+      }
+      if (innerLow_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InnerLow);
+      }
+      if (outerLow_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OuterLow);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Overall other) {
+      if (other == null) {
+        return;
+      }
+      if (other.outerHigh_ != null) {
+        if (outerHigh_ == null) {
+          outerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+        }
+        OuterHigh.MergeFrom(other.OuterHigh);
+      }
+      if (other.innerHigh_ != null) {
+        if (innerHigh_ == null) {
+          innerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+        }
+        InnerHigh.MergeFrom(other.InnerHigh);
+      }
+      if (other.innerLow_ != null) {
+        if (innerLow_ == null) {
+          innerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+        }
+        InnerLow.MergeFrom(other.InnerLow);
+      }
+      if (other.outerLow_ != null) {
+        if (outerLow_ == null) {
+          outerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+        }
+        OuterLow.MergeFrom(other.OuterLow);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (outerHigh_ == null) {
+              outerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(outerHigh_);
+            break;
+          }
+          case 18: {
+            if (innerHigh_ == null) {
+              innerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(innerHigh_);
+            break;
+          }
+          case 26: {
+            if (innerLow_ == null) {
+              innerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(innerLow_);
+            break;
+          }
+          case 34: {
+            if (outerLow_ == null) {
+              outerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(outerLow_);
+            break;
+          }
         }
       }
     }

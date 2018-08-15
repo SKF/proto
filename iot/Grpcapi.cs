@@ -24,104 +24,133 @@ namespace SKF.Enlight.API.IoT {
     static GrpcapiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFpb3QvZ3JwY2FwaS5wcm90bxIGaW90YXBpIowCCg9UYXNrRGVzY3JpcHRp",
-            "b24SDwoHdXNlcl9pZBgBIAEoCRIPCgd0YXNrX2lkGAIgASgJEhEKCXRhc2tf",
-            "bmFtZRgDIAEoCRIUCgxoaWVyYXJjaHlfaWQYBCABKAkSGgoSZHVlX2RhdGVf",
-            "dGltZXN0YW1wGAUgASgDEhQKDGlzX2NvbXBsZXRlZBgGIAEoCBI+ChdmdW5j",
-            "dGlvbmFsX2xvY2F0aW9uX2lkcxgHIAEoCzIdLmlvdGFwaS5GdW5jdGlvbmFs",
-            "TG9jYXRpb25JZHMSIgoGc3RhdHVzGAggASgOMhIuaW90YXBpLlRhc2tTdGF0",
-            "dXMSGAoQZXh0ZXJuYWxfdGFza19pZBgJIAEoCSLsAQoWSW5pdGlhbFRhc2tE",
-            "ZXNjcmlwdGlvbhIPCgd1c2VyX2lkGAEgASgJEhEKCXRhc2tfbmFtZRgCIAEo",
-            "CRIUCgxoaWVyYXJjaHlfaWQYAyABKAkSGgoSZHVlX2RhdGVfdGltZXN0YW1w",
-            "GAQgASgDEj4KF2Z1bmN0aW9uYWxfbG9jYXRpb25faWRzGAUgASgLMh0uaW90",
-            "YXBpLkZ1bmN0aW9uYWxMb2NhdGlvbklkcxIYChBleHRlcm5hbF90YXNrX2lk",
-            "GAYgASgJEiIKBnN0YXR1cxgHIAEoDjISLmlvdGFwaS5UYXNrU3RhdHVzIiwK",
-            "CFRhc2tVc2VyEg8KB3VzZXJfaWQYASABKAkSDwoHdGFza19pZBgCIAEoCSJa",
-            "ChJTZXRUYXNrU3RhdHVzSW5wdXQSDwoHdGFza19pZBgBIAEoCRIiCgZzdGF0",
-            "dXMYAiABKA4yEi5pb3RhcGkuVGFza1N0YXR1cxIPCgd1c2VyX2lkGAMgASgJ",
-            "IkkKEFRhc2tEZXNjcmlwdGlvbnMSNQoUdGFza19kZXNjcmlwdGlvbl9hcnIY",
-            "ASADKAsyFy5pb3RhcGkuVGFza0Rlc2NyaXB0aW9uIicKFUZ1bmN0aW9uYWxM",
-            "b2NhdGlvbklkcxIOCgZpZF9hcnIYASADKAkiIAoPUHJpbWl0aXZlU3RyaW5n",
-            "Eg0KBXZhbHVlGAEgASgJIh4KDVByaW1pdGl2ZUJvb2wSDQoFdmFsdWUYASAB",
-            "KAgiDwoNUHJpbWl0aXZlVm9pZCL8AQoITm9kZURhdGESEgoKY3JlYXRlZF9h",
-            "dBgBIAEoAxIxCgxjb250ZW50X3R5cGUYAiABKA4yGy5pb3RhcGkuTm9kZURh",
-            "dGFDb250ZW50VHlwZRIlCgpkYXRhX3BvaW50GAMgASgLMhEuaW90YXBpLkRh",
-            "dGFQb2ludBIiCghzcGVjdHJ1bRgEIAEoCzIQLmlvdGFwaS5TcGVjdHJ1bRIn",
-            "Cgt0aW1lX3NlcmllcxgFIAEoCzISLmlvdGFwaS5UaW1lU2VyaWVzEgwKBG5v",
-            "dGUYBiABKAkSDQoFbWVkaWEYByABKAwSGAoQcXVlc3Rpb25fYW5zd2VycxgI",
-            "IAMoCSIiCgpDb29yZGluYXRlEgkKAXgYASABKAESCQoBeRgCIAEoASJTCglE",
-            "YXRhUG9pbnQSJgoKY29vcmRpbmF0ZRgBIAEoCzISLmlvdGFwaS5Db29yZGlu",
-            "YXRlEg4KBnhfdW5pdBgCIAEoCRIOCgZ5X3VuaXQYAyABKAkifwoIU3BlY3Ry",
-            "dW0SJwoLY29vcmRpbmF0ZXMYASADKAsyEi5pb3RhcGkuQ29vcmRpbmF0ZRIO",
-            "CgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMgASgJEhcKD3dpbmRvd19mdW5j",
-            "dGlvbhgEIAEoCRIRCglzcGVlZF9ycG0YBSABKAEiVQoKVGltZVNlcmllcxIn",
-            "Cgtjb29yZGluYXRlcxgBIAMoCzISLmlvdGFwaS5Db29yZGluYXRlEg4KBnhf",
-            "dW5pdBgCIAEoCRIOCgZ5X3VuaXQYAyABKAkiSwoTSW5nZXN0Tm9kZURhdGFJ",
-            "bnB1dBIPCgdub2RlX2lkGAEgASgJEiMKCW5vZGVfZGF0YRgCIAEoCzIQLmlv",
-            "dGFwaS5Ob2RlRGF0YSIWChRJbmdlc3ROb2RlRGF0YU91dHB1dCJWChlJbmdl",
-            "c3ROb2RlRGF0YVN0cmVhbUlucHV0Eg8KB25vZGVfaWQYASABKAkSKAoObm9k",
-            "ZV9kYXRhX2xpc3QYAiADKAsyEC5pb3RhcGkuTm9kZURhdGEiHAoaSW5nZXN0",
-            "Tm9kZURhdGFTdHJlYW1PdXRwdXQiaQoQR2V0Tm9kZURhdGFJbnB1dBIPCgdu",
-            "b2RlX2lkGAEgASgJEhEKCXRpbWVzdGFtcBgCIAEoAxIxCgxjb250ZW50X3R5",
-            "cGUYAyABKA4yGy5pb3RhcGkuTm9kZURhdGFDb250ZW50VHlwZSI9ChFHZXRO",
-            "b2RlRGF0YU91dHB1dBIoCg5ub2RlX2RhdGFfbGlzdBgBIAMoCzIQLmlvdGFw",
-            "aS5Ob2RlRGF0YSIYChZHZXROb2RlRGF0YVN0cmVhbUlucHV0Ik8KF0dldE5v",
-            "ZGVEYXRhU3RyZWFtT3V0cHV0Eg8KB25vZGVfaWQYASABKAkSIwoJbm9kZV9k",
-            "YXRhGAIgASgLMhAuaW90YXBpLk5vZGVEYXRhIioKEkdldFRhc2tTdHJlYW1J",
-            "bnB1dBIUCgxoaWVyYXJjaHlfaWQYASABKAkiPAoTR2V0VGFza1N0cmVhbU91",
-            "dHB1dBIlCgR0YXNrGAEgASgLMhcuaW90YXBpLlRhc2tEZXNjcmlwdGlvbipB",
-            "CgpUYXNrU3RhdHVzEgwKCE5PVF9TRU5UEAASCAoEU0VOVBABEgwKCFJFQ0VJ",
-            "VkVEEAISDQoJQ09NUExFVEVEEAMqfAoTTm9kZURhdGFDb250ZW50VHlwZRIL",
-            "CgdERUZBVUxUEAASDgoKREFUQV9QT0lOVBABEgwKCFNQRUNUUlVNEAISDwoL",
-            "VElNRV9TRVJJRVMQAxIICgROT1RFEAQSCQoFTUVESUEQBRIUChBRVUVTVElP",
-            "Tl9BTlNXRVJTEAYy0QcKA0lvVBI8CghEZWVwUGluZxIVLmlvdGFwaS5Qcmlt",
-            "aXRpdmVWb2lkGhcuaW90YXBpLlByaW1pdGl2ZVN0cmluZyIAEkcKCkNyZWF0",
-            "ZVRhc2sSHi5pb3RhcGkuSW5pdGlhbFRhc2tEZXNjcmlwdGlvbhoXLmlvdGFw",
-            "aS5QcmltaXRpdmVTdHJpbmciABJCCgtHZXRBbGxUYXNrcxIXLmlvdGFwaS5Q",
-            "cmltaXRpdmVTdHJpbmcaGC5pb3RhcGkuVGFza0Rlc2NyaXB0aW9ucyIAEkoK",
-            "E0dldFVuY29tcGxldGVkVGFza3MSFy5pb3RhcGkuUHJpbWl0aXZlU3RyaW5n",
-            "GhguaW90YXBpLlRhc2tEZXNjcmlwdGlvbnMiABI9ChBTZXRUYXNrQ29tcGxl",
-            "dGVkEhAuaW90YXBpLlRhc2tVc2VyGhUuaW90YXBpLlByaW1pdGl2ZVZvaWQi",
-            "ABI3CgpEZWxldGVUYXNrEhAuaW90YXBpLlRhc2tVc2VyGhUuaW90YXBpLlBy",
-            "aW1pdGl2ZVZvaWQiABJVCh5HZXRVbmNvbXBsZXRlZFRhc2tzQnlIaWVyYXJj",
-            "aHkSFy5pb3RhcGkuUHJpbWl0aXZlU3RyaW5nGhguaW90YXBpLlRhc2tEZXNj",
-            "cmlwdGlvbnMiABJECg1TZXRUYXNrU3RhdHVzEhouaW90YXBpLlNldFRhc2tT",
-            "dGF0dXNJbnB1dBoVLmlvdGFwaS5QcmltaXRpdmVWb2lkIgASTAoNR2V0VGFz",
-            "a1N0cmVhbRIaLmlvdGFwaS5HZXRUYXNrU3RyZWFtSW5wdXQaGy5pb3RhcGku",
-            "R2V0VGFza1N0cmVhbU91dHB1dCIAMAESTQoOSW5nZXN0Tm9kZURhdGESGy5p",
-            "b3RhcGkuSW5nZXN0Tm9kZURhdGFJbnB1dBocLmlvdGFwaS5Jbmdlc3ROb2Rl",
-            "RGF0YU91dHB1dCIAEmEKFEluZ2VzdE5vZGVEYXRhU3RyZWFtEiEuaW90YXBp",
-            "LkluZ2VzdE5vZGVEYXRhU3RyZWFtSW5wdXQaIi5pb3RhcGkuSW5nZXN0Tm9k",
-            "ZURhdGFTdHJlYW1PdXRwdXQiACgBEkQKC0dldE5vZGVEYXRhEhguaW90YXBp",
-            "LkdldE5vZGVEYXRhSW5wdXQaGS5pb3RhcGkuR2V0Tm9kZURhdGFPdXRwdXQi",
-            "ABJYChFHZXROb2RlRGF0YVN0cmVhbRIeLmlvdGFwaS5HZXROb2RlRGF0YVN0",
-            "cmVhbUlucHV0Gh8uaW90YXBpLkdldE5vZGVEYXRhU3RyZWFtT3V0cHV0IgAw",
-            "AUIWqgITU0tGLkVubGlnaHQuQVBJLklvVGIGcHJvdG8z"));
+            "ChFpb3QvZ3JwY2FwaS5wcm90bxIKaW90Z3JwY2FwaSKvAgoPVGFza0Rlc2Ny",
+            "aXB0aW9uEg8KB3VzZXJfaWQYASABKAkSDwoHdGFza19pZBgCIAEoCRIRCgl0",
+            "YXNrX25hbWUYAyABKAkSFAoMaGllcmFyY2h5X2lkGAQgASgJEhoKEmR1ZV9k",
+            "YXRlX3RpbWVzdGFtcBgFIAEoAxIUCgxpc19jb21wbGV0ZWQYBiABKAgSQgoX",
+            "ZnVuY3Rpb25hbF9sb2NhdGlvbl9pZHMYByABKAsyIS5pb3RncnBjYXBpLkZ1",
+            "bmN0aW9uYWxMb2NhdGlvbklkcxIYChBleHRlcm5hbF90YXNrX2lkGAkgASgJ",
+            "EiYKBnN0YXR1cxgIIAEoDjIWLmlvdGdycGNhcGkuVGFza1N0YXR1cxIZChFz",
+            "dGF0dXNfdXBkYXRlZF9hdBgKIAEoAyL0AQoWSW5pdGlhbFRhc2tEZXNjcmlw",
+            "dGlvbhIPCgd1c2VyX2lkGAEgASgJEhEKCXRhc2tfbmFtZRgCIAEoCRIUCgxo",
+            "aWVyYXJjaHlfaWQYAyABKAkSGgoSZHVlX2RhdGVfdGltZXN0YW1wGAQgASgD",
+            "EkIKF2Z1bmN0aW9uYWxfbG9jYXRpb25faWRzGAUgASgLMiEuaW90Z3JwY2Fw",
+            "aS5GdW5jdGlvbmFsTG9jYXRpb25JZHMSGAoQZXh0ZXJuYWxfdGFza19pZBgG",
+            "IAEoCRImCgZzdGF0dXMYByABKA4yFi5pb3RncnBjYXBpLlRhc2tTdGF0dXMi",
+            "LAoIVGFza1VzZXISDwoHdXNlcl9pZBgBIAEoCRIPCgd0YXNrX2lkGAIgASgJ",
+            "InIKElNldFRhc2tTdGF0dXNJbnB1dBIPCgd0YXNrX2lkGAEgASgJEg8KB3Vz",
+            "ZXJfaWQYAyABKAkSJgoGc3RhdHVzGAIgASgOMhYuaW90Z3JwY2FwaS5UYXNr",
+            "U3RhdHVzEhIKCnVwZGF0ZWRfYXQYBCABKAMiTQoQVGFza0Rlc2NyaXB0aW9u",
+            "cxI5ChR0YXNrX2Rlc2NyaXB0aW9uX2FychgBIAMoCzIbLmlvdGdycGNhcGku",
+            "VGFza0Rlc2NyaXB0aW9uIicKFUZ1bmN0aW9uYWxMb2NhdGlvbklkcxIOCgZp",
+            "ZF9hcnIYASADKAkiIAoPUHJpbWl0aXZlU3RyaW5nEg0KBXZhbHVlGAEgASgJ",
+            "Ih4KDVByaW1pdGl2ZUJvb2wSDQoFdmFsdWUYASABKAgiDwoNUHJpbWl0aXZl",
+            "Vm9pZCK1AgoITm9kZURhdGESEgoKY3JlYXRlZF9hdBgBIAEoAxI1Cgxjb250",
+            "ZW50X3R5cGUYAiABKA4yHy5pb3RncnBjYXBpLk5vZGVEYXRhQ29udGVudFR5",
+            "cGUSKQoKZGF0YV9wb2ludBgDIAEoCzIVLmlvdGdycGNhcGkuRGF0YVBvaW50",
+            "EiYKCHNwZWN0cnVtGAQgASgLMhQuaW90Z3JwY2FwaS5TcGVjdHJ1bRIrCgt0",
+            "aW1lX3NlcmllcxgFIAEoCzIWLmlvdGdycGNhcGkuVGltZVNlcmllcxIMCgRu",
+            "b3RlGAYgASgJEhEKBW1lZGlhGAcgASgMQgIYARIjCghtZWRpYV92MhgJIAEo",
+            "CzIRLmlvdGdycGNhcGkuTWVkaWESGAoQcXVlc3Rpb25fYW5zd2VycxgIIAMo",
+            "CSIiCgpDb29yZGluYXRlEgkKAXgYASABKAESCQoBeRgCIAEoASJXCglEYXRh",
+            "UG9pbnQSKgoKY29vcmRpbmF0ZRgBIAEoCzIWLmlvdGdycGNhcGkuQ29vcmRp",
+            "bmF0ZRIOCgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMgASgJIoMBCghTcGVj",
+            "dHJ1bRIrCgtjb29yZGluYXRlcxgBIAMoCzIWLmlvdGdycGNhcGkuQ29vcmRp",
+            "bmF0ZRIOCgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMgASgJEhcKD3dpbmRv",
+            "d19mdW5jdGlvbhgEIAEoCRIRCglzcGVlZF9ycG0YBSABKAEiWQoKVGltZVNl",
+            "cmllcxIrCgtjb29yZGluYXRlcxgBIAMoCzIWLmlvdGdycGNhcGkuQ29vcmRp",
+            "bmF0ZRIOCgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMgASgJIkcKBU1lZGlh",
+            "EgoKAmlkGAEgASgJEiMKBHR5cGUYAiABKA4yFS5pb3RncnBjYXBpLk1lZGlh",
+            "VHlwZRINCgVtZWRpYRgDIAEoDCI0CgZPcmlnaW4SCgoCaWQYASABKAkSDAoE",
+            "dHlwZRgCIAEoCRIQCghwcm92aWRlchgDIAEoCSJzChNJbmdlc3ROb2RlRGF0",
+            "YUlucHV0Eg8KB25vZGVfaWQYASABKAkSIgoGb3JpZ2luGAMgASgLMhIuaW90",
+            "Z3JwY2FwaS5PcmlnaW4SJwoJbm9kZV9kYXRhGAIgASgLMhQuaW90Z3JwY2Fw",
+            "aS5Ob2RlRGF0YSIWChRJbmdlc3ROb2RlRGF0YU91dHB1dCJ+ChlJbmdlc3RO",
+            "b2RlRGF0YVN0cmVhbUlucHV0Eg8KB25vZGVfaWQYASABKAkSIgoGb3JpZ2lu",
+            "GAMgASgLMhIuaW90Z3JwY2FwaS5PcmlnaW4SLAoObm9kZV9kYXRhX2xpc3QY",
+            "AiADKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIhwKGkluZ2VzdE5vZGVEYXRh",
+            "U3RyZWFtT3V0cHV0Im0KEEdldE5vZGVEYXRhSW5wdXQSDwoHbm9kZV9pZBgB",
+            "IAEoCRIRCgl0aW1lc3RhbXAYAiABKAMSNQoMY29udGVudF90eXBlGAMgASgO",
+            "Mh8uaW90Z3JwY2FwaS5Ob2RlRGF0YUNvbnRlbnRUeXBlIkEKEUdldE5vZGVE",
+            "YXRhT3V0cHV0EiwKDm5vZGVfZGF0YV9saXN0GAEgAygLMhQuaW90Z3JwY2Fw",
+            "aS5Ob2RlRGF0YSJgChZHZXRMYXRlc3ROb2RlRGF0YUlucHV0Eg8KB25vZGVf",
+            "aWQYASABKAkSNQoMY29udGVudF90eXBlGAIgASgOMh8uaW90Z3JwY2FwaS5O",
+            "b2RlRGF0YUNvbnRlbnRUeXBlIkIKF0dldExhdGVzdE5vZGVEYXRhT3V0cHV0",
+            "EicKCW5vZGVfZGF0YRgBIAEoCzIULmlvdGdycGNhcGkuTm9kZURhdGEiGAoW",
+            "R2V0Tm9kZURhdGFTdHJlYW1JbnB1dCJTChdHZXROb2RlRGF0YVN0cmVhbU91",
+            "dHB1dBIPCgdub2RlX2lkGAEgASgJEicKCW5vZGVfZGF0YRgCIAEoCzIULmlv",
+            "dGdycGNhcGkuTm9kZURhdGEiMgoNR2V0TWVkaWFJbnB1dBIPCgdub2RlX2lk",
+            "GAEgASgJEhAKCG1lZGlhX2lkGAIgASgJIjIKDkdldE1lZGlhT3V0cHV0EiAK",
+            "BW1lZGlhGAEgASgLMhEuaW90Z3JwY2FwaS5NZWRpYSIqChJHZXRUYXNrU3Ry",
+            "ZWFtSW5wdXQSFAoMaGllcmFyY2h5X2lkGAEgASgJIkAKE0dldFRhc2tTdHJl",
+            "YW1PdXRwdXQSKQoEdGFzaxgBIAEoCzIbLmlvdGdycGNhcGkuVGFza0Rlc2Ny",
+            "aXB0aW9uKlIKClRhc2tTdGF0dXMSDAoITk9UX1NFTlQQABIICgRTRU5UEAES",
+            "DAoIUkVDRUlWRUQQAhIPCgtJTl9QUk9HUkVTUxAEEg0KCUNPTVBMRVRFRBAD",
+            "Ko4BChNOb2RlRGF0YUNvbnRlbnRUeXBlEgsKB0RFRkFVTFQQABIOCgpEQVRB",
+            "X1BPSU5UEAESDAoIU1BFQ1RSVU0QAhIPCgtUSU1FX1NFUklFUxADEggKBE5P",
+            "VEUQBBINCgVNRURJQRAFGgIIARIMCghNRURJQV9WMhAHEhQKEFFVRVNUSU9O",
+            "X0FOU1dFUlMQBipGCglNZWRpYVR5cGUSCwoHVU5LTk9XThAAEg0KCUFVRElP",
+            "X1dBVhABEg4KCklNQUdFX0pQRUcQAhINCglJTUFHRV9QTkcQAzLhCQoDSW9U",
+            "EkQKCERlZXBQaW5nEhkuaW90Z3JwY2FwaS5QcmltaXRpdmVWb2lkGhsuaW90",
+            "Z3JwY2FwaS5QcmltaXRpdmVTdHJpbmciABJPCgpDcmVhdGVUYXNrEiIuaW90",
+            "Z3JwY2FwaS5Jbml0aWFsVGFza0Rlc2NyaXB0aW9uGhsuaW90Z3JwY2FwaS5Q",
+            "cmltaXRpdmVTdHJpbmciABJKCgtHZXRBbGxUYXNrcxIbLmlvdGdycGNhcGku",
+            "UHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25z",
+            "IgASUgoTR2V0VW5jb21wbGV0ZWRUYXNrcxIbLmlvdGdycGNhcGkuUHJpbWl0",
+            "aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25zIgASSAoQ",
+            "U2V0VGFza0NvbXBsZXRlZBIULmlvdGdycGNhcGkuVGFza1VzZXIaGS5pb3Rn",
+            "cnBjYXBpLlByaW1pdGl2ZVZvaWQiA4gCARI/CgpEZWxldGVUYXNrEhQuaW90",
+            "Z3JwY2FwaS5UYXNrVXNlchoZLmlvdGdycGNhcGkuUHJpbWl0aXZlVm9pZCIA",
+            "El0KHkdldFVuY29tcGxldGVkVGFza3NCeUhpZXJhcmNoeRIbLmlvdGdycGNh",
+            "cGkuUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRp",
+            "b25zIgASTAoNU2V0VGFza1N0YXR1cxIeLmlvdGdycGNhcGkuU2V0VGFza1N0",
+            "YXR1c0lucHV0GhkuaW90Z3JwY2FwaS5QcmltaXRpdmVWb2lkIgASVAoNR2V0",
+            "VGFza1N0cmVhbRIeLmlvdGdycGNhcGkuR2V0VGFza1N0cmVhbUlucHV0Gh8u",
+            "aW90Z3JwY2FwaS5HZXRUYXNrU3RyZWFtT3V0cHV0IgAwARJVCg5Jbmdlc3RO",
+            "b2RlRGF0YRIfLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFJbnB1dBogLmlv",
+            "dGdycGNhcGkuSW5nZXN0Tm9kZURhdGFPdXRwdXQiABJpChRJbmdlc3ROb2Rl",
+            "RGF0YVN0cmVhbRIlLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1J",
+            "bnB1dBomLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1PdXRwdXQi",
+            "ACgBEl4KEUdldExhdGVzdE5vZGVEYXRhEiIuaW90Z3JwY2FwaS5HZXRMYXRl",
+            "c3ROb2RlRGF0YUlucHV0GiMuaW90Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0",
+            "YU91dHB1dCIAEkwKC0dldE5vZGVEYXRhEhwuaW90Z3JwY2FwaS5HZXROb2Rl",
+            "RGF0YUlucHV0Gh0uaW90Z3JwY2FwaS5HZXROb2RlRGF0YU91dHB1dCIAEmAK",
+            "EUdldE5vZGVEYXRhU3RyZWFtEiIuaW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0",
+            "cmVhbUlucHV0GiMuaW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0cmVhbU91dHB1",
+            "dCIAMAESQwoIR2V0TWVkaWESGS5pb3RncnBjYXBpLkdldE1lZGlhSW5wdXQa",
+            "Gi5pb3RncnBjYXBpLkdldE1lZGlhT3V0cHV0IgBCFqoCE1NLRi5FbmxpZ2h0",
+            "LkFQSS5Jb1RiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescription), global::SKF.Enlight.API.IoT.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "Status", "ExternalTaskId" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescription), global::SKF.Enlight.API.IoT.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "ExternalTaskId", "Status", "StatusUpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.InitialTaskDescription), global::SKF.Enlight.API.IoT.InitialTaskDescription.Parser, new[]{ "UserId", "TaskName", "HierarchyId", "DueDateTimestamp", "FunctionalLocationIds", "ExternalTaskId", "Status" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskUser), global::SKF.Enlight.API.IoT.TaskUser.Parser, new[]{ "UserId", "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.SetTaskStatusInput), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser, new[]{ "TaskId", "Status", "UserId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.SetTaskStatusInput), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser, new[]{ "TaskId", "UserId", "Status", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescriptions), global::SKF.Enlight.API.IoT.TaskDescriptions.Parser, new[]{ "TaskDescriptionArr" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.FunctionalLocationIds), global::SKF.Enlight.API.IoT.FunctionalLocationIds.Parser, new[]{ "IdArr" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveString), global::SKF.Enlight.API.IoT.PrimitiveString.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveBool), global::SKF.Enlight.API.IoT.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveVoid), global::SKF.Enlight.API.IoT.PrimitiveVoid.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeData), global::SKF.Enlight.API.IoT.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "QuestionAnswers" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeData), global::SKF.Enlight.API.IoT.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Coordinate), global::SKF.Enlight.API.IoT.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DataPoint), global::SKF.Enlight.API.IoT.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Spectrum), global::SKF.Enlight.API.IoT.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TimeSeries), global::SKF.Enlight.API.IoT.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Media), global::SKF.Enlight.API.IoT.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Origin), global::SKF.Enlight.API.IoT.Origin.Parser, new[]{ "Id", "Type", "Provider" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "Origin", "NodeData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataOutput), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "NodeDataList" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "Origin", "NodeDataList" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataInput), global::SKF.Enlight.API.IoT.GetNodeDataInput.Parser, new[]{ "NodeId", "Timestamp", "ContentType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataOutput), global::SKF.Enlight.API.IoT.GetNodeDataOutput.Parser, new[]{ "NodeDataList" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput), global::SKF.Enlight.API.IoT.GetLatestNodeDataInput.Parser, new[]{ "NodeId", "ContentType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput), global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput.Parser, new[]{ "NodeData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaInput), global::SKF.Enlight.API.IoT.GetMediaInput.Parser, new[]{ "NodeId", "MediaId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaOutput), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser, new[]{ "Media" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamInput), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamOutput), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null)
           }));
@@ -134,6 +163,7 @@ namespace SKF.Enlight.API.IoT {
     [pbr::OriginalName("NOT_SENT")] NotSent = 0,
     [pbr::OriginalName("SENT")] Sent = 1,
     [pbr::OriginalName("RECEIVED")] Received = 2,
+    [pbr::OriginalName("IN_PROGRESS")] InProgress = 4,
     [pbr::OriginalName("COMPLETED")] Completed = 3,
   }
 
@@ -144,7 +174,15 @@ namespace SKF.Enlight.API.IoT {
     [pbr::OriginalName("TIME_SERIES")] TimeSeries = 3,
     [pbr::OriginalName("NOTE")] Note = 4,
     [pbr::OriginalName("MEDIA")] Media = 5,
+    [pbr::OriginalName("MEDIA_V2")] MediaV2 = 7,
     [pbr::OriginalName("QUESTION_ANSWERS")] QuestionAnswers = 6,
+  }
+
+  public enum MediaType {
+    [pbr::OriginalName("UNKNOWN")] Unknown = 0,
+    [pbr::OriginalName("AUDIO_WAV")] AudioWav = 1,
+    [pbr::OriginalName("IMAGE_JPEG")] ImageJpeg = 2,
+    [pbr::OriginalName("IMAGE_PNG")] ImagePng = 3,
   }
 
   #endregion
@@ -182,8 +220,9 @@ namespace SKF.Enlight.API.IoT {
       dueDateTimestamp_ = other.dueDateTimestamp_;
       isCompleted_ = other.isCompleted_;
       FunctionalLocationIds = other.functionalLocationIds_ != null ? other.FunctionalLocationIds.Clone() : null;
-      status_ = other.status_;
       externalTaskId_ = other.externalTaskId_;
+      status_ = other.status_;
+      statusUpdatedAt_ = other.statusUpdatedAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -269,6 +308,17 @@ namespace SKF.Enlight.API.IoT {
       }
     }
 
+    /// <summary>Field number for the "external_task_id" field.</summary>
+    public const int ExternalTaskIdFieldNumber = 9;
+    private string externalTaskId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExternalTaskId {
+      get { return externalTaskId_; }
+      set {
+        externalTaskId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
     private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
@@ -280,14 +330,17 @@ namespace SKF.Enlight.API.IoT {
       }
     }
 
-    /// <summary>Field number for the "external_task_id" field.</summary>
-    public const int ExternalTaskIdFieldNumber = 9;
-    private string externalTaskId_ = "";
+    /// <summary>Field number for the "status_updated_at" field.</summary>
+    public const int StatusUpdatedAtFieldNumber = 10;
+    private long statusUpdatedAt_;
+    /// <summary>
+    /// ms
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ExternalTaskId {
-      get { return externalTaskId_; }
+    public long StatusUpdatedAt {
+      get { return statusUpdatedAt_; }
       set {
-        externalTaskId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        statusUpdatedAt_ = value;
       }
     }
 
@@ -311,8 +364,9 @@ namespace SKF.Enlight.API.IoT {
       if (DueDateTimestamp != other.DueDateTimestamp) return false;
       if (IsCompleted != other.IsCompleted) return false;
       if (!object.Equals(FunctionalLocationIds, other.FunctionalLocationIds)) return false;
-      if (Status != other.Status) return false;
       if (ExternalTaskId != other.ExternalTaskId) return false;
+      if (Status != other.Status) return false;
+      if (StatusUpdatedAt != other.StatusUpdatedAt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -326,8 +380,9 @@ namespace SKF.Enlight.API.IoT {
       if (DueDateTimestamp != 0L) hash ^= DueDateTimestamp.GetHashCode();
       if (IsCompleted != false) hash ^= IsCompleted.GetHashCode();
       if (functionalLocationIds_ != null) hash ^= FunctionalLocationIds.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
       if (ExternalTaskId.Length != 0) hash ^= ExternalTaskId.GetHashCode();
+      if (Status != 0) hash ^= Status.GetHashCode();
+      if (StatusUpdatedAt != 0L) hash ^= StatusUpdatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -377,6 +432,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(74);
         output.WriteString(ExternalTaskId);
       }
+      if (StatusUpdatedAt != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(StatusUpdatedAt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -406,11 +465,14 @@ namespace SKF.Enlight.API.IoT {
       if (functionalLocationIds_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FunctionalLocationIds);
       }
+      if (ExternalTaskId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalTaskId);
+      }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (ExternalTaskId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalTaskId);
+      if (StatusUpdatedAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StatusUpdatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -447,11 +509,14 @@ namespace SKF.Enlight.API.IoT {
         }
         FunctionalLocationIds.MergeFrom(other.FunctionalLocationIds);
       }
+      if (other.ExternalTaskId.Length != 0) {
+        ExternalTaskId = other.ExternalTaskId;
+      }
       if (other.Status != 0) {
         Status = other.Status;
       }
-      if (other.ExternalTaskId.Length != 0) {
-        ExternalTaskId = other.ExternalTaskId;
+      if (other.StatusUpdatedAt != 0L) {
+        StatusUpdatedAt = other.StatusUpdatedAt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -501,6 +566,10 @@ namespace SKF.Enlight.API.IoT {
           }
           case 74: {
             ExternalTaskId = input.ReadString();
+            break;
+          }
+          case 80: {
+            StatusUpdatedAt = input.ReadInt64();
             break;
           }
         }
@@ -995,8 +1064,9 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SetTaskStatusInput(SetTaskStatusInput other) : this() {
       taskId_ = other.taskId_;
-      status_ = other.status_;
       userId_ = other.userId_;
+      status_ = other.status_;
+      updatedAt_ = other.updatedAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1016,6 +1086,17 @@ namespace SKF.Enlight.API.IoT {
       }
     }
 
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 3;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
     private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
@@ -1027,14 +1108,17 @@ namespace SKF.Enlight.API.IoT {
       }
     }
 
-    /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 3;
-    private string userId_ = "";
+    /// <summary>Field number for the "updated_at" field.</summary>
+    public const int UpdatedAtFieldNumber = 4;
+    private long updatedAt_;
+    /// <summary>
+    /// ms
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string UserId {
-      get { return userId_; }
+    public long UpdatedAt {
+      get { return updatedAt_; }
       set {
-        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        updatedAt_ = value;
       }
     }
 
@@ -1052,8 +1136,9 @@ namespace SKF.Enlight.API.IoT {
         return true;
       }
       if (TaskId != other.TaskId) return false;
-      if (Status != other.Status) return false;
       if (UserId != other.UserId) return false;
+      if (Status != other.Status) return false;
+      if (UpdatedAt != other.UpdatedAt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1061,8 +1146,9 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (TaskId.Length != 0) hash ^= TaskId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (Status != 0) hash ^= Status.GetHashCode();
+      if (UpdatedAt != 0L) hash ^= UpdatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1088,6 +1174,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(26);
         output.WriteString(UserId);
       }
+      if (UpdatedAt != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(UpdatedAt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1099,11 +1189,14 @@ namespace SKF.Enlight.API.IoT {
       if (TaskId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskId);
       }
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (UserId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      if (UpdatedAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1119,11 +1212,14 @@ namespace SKF.Enlight.API.IoT {
       if (other.TaskId.Length != 0) {
         TaskId = other.TaskId;
       }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
       if (other.Status != 0) {
         Status = other.Status;
       }
-      if (other.UserId.Length != 0) {
-        UserId = other.UserId;
+      if (other.UpdatedAt != 0L) {
+        UpdatedAt = other.UpdatedAt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1146,6 +1242,10 @@ namespace SKF.Enlight.API.IoT {
           }
           case 26: {
             UserId = input.ReadString();
+            break;
+          }
+          case 32: {
+            UpdatedAt = input.ReadInt64();
             break;
           }
         }
@@ -1787,6 +1887,7 @@ namespace SKF.Enlight.API.IoT {
       TimeSeries = other.timeSeries_ != null ? other.TimeSeries.Clone() : null;
       note_ = other.note_;
       media_ = other.media_;
+      MediaV2 = other.mediaV2_ != null ? other.MediaV2.Clone() : null;
       questionAnswers_ = other.questionAnswers_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1865,11 +1966,23 @@ namespace SKF.Enlight.API.IoT {
     /// <summary>Field number for the "media" field.</summary>
     public const int MediaFieldNumber = 7;
     private pb::ByteString media_ = pb::ByteString.Empty;
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Media {
       get { return media_; }
       set {
         media_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_v2" field.</summary>
+    public const int MediaV2FieldNumber = 9;
+    private global::SKF.Enlight.API.IoT.Media mediaV2_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.Media MediaV2 {
+      get { return mediaV2_; }
+      set {
+        mediaV2_ = value;
       }
     }
 
@@ -1903,6 +2016,7 @@ namespace SKF.Enlight.API.IoT {
       if (!object.Equals(TimeSeries, other.TimeSeries)) return false;
       if (Note != other.Note) return false;
       if (Media != other.Media) return false;
+      if (!object.Equals(MediaV2, other.MediaV2)) return false;
       if(!questionAnswers_.Equals(other.questionAnswers_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1917,6 +2031,7 @@ namespace SKF.Enlight.API.IoT {
       if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
       if (Note.Length != 0) hash ^= Note.GetHashCode();
       if (Media.Length != 0) hash ^= Media.GetHashCode();
+      if (mediaV2_ != null) hash ^= MediaV2.GetHashCode();
       hash ^= questionAnswers_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1960,6 +2075,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteBytes(Media);
       }
       questionAnswers_.WriteTo(output, _repeated_questionAnswers_codec);
+      if (mediaV2_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(MediaV2);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1988,6 +2107,9 @@ namespace SKF.Enlight.API.IoT {
       }
       if (Media.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Media);
+      }
+      if (mediaV2_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MediaV2);
       }
       size += questionAnswers_.CalculateSize(_repeated_questionAnswers_codec);
       if (_unknownFields != null) {
@@ -2030,6 +2152,12 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.Media.Length != 0) {
         Media = other.Media;
+      }
+      if (other.mediaV2_ != null) {
+        if (mediaV2_ == null) {
+          mediaV2_ = new global::SKF.Enlight.API.IoT.Media();
+        }
+        MediaV2.MergeFrom(other.MediaV2);
       }
       questionAnswers_.Add(other.questionAnswers_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2082,6 +2210,13 @@ namespace SKF.Enlight.API.IoT {
           }
           case 66: {
             questionAnswers_.AddEntriesFrom(input, _repeated_questionAnswers_codec);
+            break;
+          }
+          case 74: {
+            if (mediaV2_ == null) {
+              mediaV2_ = new global::SKF.Enlight.API.IoT.Media();
+            }
+            input.ReadMessage(mediaV2_);
             break;
           }
         }
@@ -2848,6 +2983,376 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  public sealed partial class Media : pb::IMessage<Media> {
+    private static readonly pb::MessageParser<Media> _parser = new pb::MessageParser<Media>(() => new Media());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Media> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media(Media other) : this() {
+      id_ = other.id_;
+      type_ = other.type_;
+      media_ = other.media_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media Clone() {
+      return new Media(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::SKF.Enlight.API.IoT.MediaType type_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.MediaType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "media" field.</summary>
+    public const int Media_FieldNumber = 3;
+    private pb::ByteString media_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Media_ {
+      get { return media_; }
+      set {
+        media_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Media);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Media other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Type != other.Type) return false;
+      if (Media_ != other.Media_) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Media_.Length != 0) hash ^= Media_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (Media_.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Media_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Type != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (Media_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Media_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Media other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Type != 0) {
+        Type = other.Type;
+      }
+      if (other.Media_.Length != 0) {
+        Media_ = other.Media_;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            type_ = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Media_ = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Origin : pb::IMessage<Origin> {
+    private static readonly pb::MessageParser<Origin> _parser = new pb::MessageParser<Origin>(() => new Origin());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Origin> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Origin() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Origin(Origin other) : this() {
+      id_ = other.id_;
+      type_ = other.type_;
+      provider_ = other.provider_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Origin Clone() {
+      return new Origin(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "provider" field.</summary>
+    public const int ProviderFieldNumber = 3;
+    private string provider_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Provider {
+      get { return provider_; }
+      set {
+        provider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Origin);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Origin other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Type != other.Type) return false;
+      if (Provider != other.Provider) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
+      if (Provider.Length != 0) hash ^= Provider.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      if (Provider.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Provider);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      if (Provider.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Origin other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      if (other.Provider.Length != 0) {
+        Provider = other.Provider;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            Provider = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// IngestNodeData messages
   /// </summary>
@@ -2859,7 +3364,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2877,6 +3382,7 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public IngestNodeDataInput(IngestNodeDataInput other) : this() {
       nodeId_ = other.nodeId_;
+      Origin = other.origin_ != null ? other.Origin.Clone() : null;
       NodeData = other.nodeData_ != null ? other.NodeData.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2894,6 +3400,17 @@ namespace SKF.Enlight.API.IoT {
       get { return nodeId_; }
       set {
         nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 3;
+    private global::SKF.Enlight.API.IoT.Origin origin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.Origin Origin {
+      get { return origin_; }
+      set {
+        origin_ = value;
       }
     }
 
@@ -2922,6 +3439,7 @@ namespace SKF.Enlight.API.IoT {
         return true;
       }
       if (NodeId != other.NodeId) return false;
+      if (!object.Equals(Origin, other.Origin)) return false;
       if (!object.Equals(NodeData, other.NodeData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2930,6 +3448,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (origin_ != null) hash ^= Origin.GetHashCode();
       if (nodeData_ != null) hash ^= NodeData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2952,6 +3471,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(18);
         output.WriteMessage(NodeData);
       }
+      if (origin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Origin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2962,6 +3485,9 @@ namespace SKF.Enlight.API.IoT {
       int size = 0;
       if (NodeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (origin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Origin);
       }
       if (nodeData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodeData);
@@ -2979,6 +3505,12 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.NodeId.Length != 0) {
         NodeId = other.NodeId;
+      }
+      if (other.origin_ != null) {
+        if (origin_ == null) {
+          origin_ = new global::SKF.Enlight.API.IoT.Origin();
+        }
+        Origin.MergeFrom(other.Origin);
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
@@ -3008,6 +3540,13 @@ namespace SKF.Enlight.API.IoT {
             input.ReadMessage(nodeData_);
             break;
           }
+          case 26: {
+            if (origin_ == null) {
+              origin_ = new global::SKF.Enlight.API.IoT.Origin();
+            }
+            input.ReadMessage(origin_);
+            break;
+          }
         }
       }
     }
@@ -3022,7 +3561,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[15]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3126,7 +3665,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[16]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3144,6 +3683,7 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public IngestNodeDataStreamInput(IngestNodeDataStreamInput other) : this() {
       nodeId_ = other.nodeId_;
+      Origin = other.origin_ != null ? other.Origin.Clone() : null;
       nodeDataList_ = other.nodeDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3161,6 +3701,17 @@ namespace SKF.Enlight.API.IoT {
       get { return nodeId_; }
       set {
         nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 3;
+    private global::SKF.Enlight.API.IoT.Origin origin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.Origin Origin {
+      get { return origin_; }
+      set {
+        origin_ = value;
       }
     }
 
@@ -3188,6 +3739,7 @@ namespace SKF.Enlight.API.IoT {
         return true;
       }
       if (NodeId != other.NodeId) return false;
+      if (!object.Equals(Origin, other.Origin)) return false;
       if(!nodeDataList_.Equals(other.nodeDataList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3196,6 +3748,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (origin_ != null) hash ^= Origin.GetHashCode();
       hash ^= nodeDataList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3215,6 +3768,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteString(NodeId);
       }
       nodeDataList_.WriteTo(output, _repeated_nodeDataList_codec);
+      if (origin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Origin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3225,6 +3782,9 @@ namespace SKF.Enlight.API.IoT {
       int size = 0;
       if (NodeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (origin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Origin);
       }
       size += nodeDataList_.CalculateSize(_repeated_nodeDataList_codec);
       if (_unknownFields != null) {
@@ -3240,6 +3800,12 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.NodeId.Length != 0) {
         NodeId = other.NodeId;
+      }
+      if (other.origin_ != null) {
+        if (origin_ == null) {
+          origin_ = new global::SKF.Enlight.API.IoT.Origin();
+        }
+        Origin.MergeFrom(other.Origin);
       }
       nodeDataList_.Add(other.nodeDataList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3261,6 +3827,13 @@ namespace SKF.Enlight.API.IoT {
             nodeDataList_.AddEntriesFrom(input, _repeated_nodeDataList_codec);
             break;
           }
+          case 26: {
+            if (origin_ == null) {
+              origin_ = new global::SKF.Enlight.API.IoT.Origin();
+            }
+            input.ReadMessage(origin_);
+            break;
+          }
         }
       }
     }
@@ -3275,7 +3848,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[17]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3379,7 +3952,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[18]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3564,7 +4137,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[19]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3678,6 +4251,301 @@ namespace SKF.Enlight.API.IoT {
   }
 
   /// <summary>
+  /// GetLatestNodeData messages
+  /// </summary>
+  public sealed partial class GetLatestNodeDataInput : pb::IMessage<GetLatestNodeDataInput> {
+    private static readonly pb::MessageParser<GetLatestNodeDataInput> _parser = new pb::MessageParser<GetLatestNodeDataInput>(() => new GetLatestNodeDataInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetLatestNodeDataInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataInput(GetLatestNodeDataInput other) : this() {
+      nodeId_ = other.nodeId_;
+      contentType_ = other.contentType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataInput Clone() {
+      return new GetLatestNodeDataInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "content_type" field.</summary>
+    public const int ContentTypeFieldNumber = 2;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
+      get { return contentType_; }
+      set {
+        contentType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetLatestNodeDataInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetLatestNodeDataInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      if (ContentType != other.ContentType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (ContentType != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ContentType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (ContentType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetLatestNodeDataInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      if (other.ContentType != 0) {
+        ContentType = other.ContentType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 16: {
+            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetLatestNodeDataOutput : pb::IMessage<GetLatestNodeDataOutput> {
+    private static readonly pb::MessageParser<GetLatestNodeDataOutput> _parser = new pb::MessageParser<GetLatestNodeDataOutput>(() => new GetLatestNodeDataOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetLatestNodeDataOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataOutput(GetLatestNodeDataOutput other) : this() {
+      NodeData = other.nodeData_ != null ? other.NodeData.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLatestNodeDataOutput Clone() {
+      return new GetLatestNodeDataOutput(this);
+    }
+
+    /// <summary>Field number for the "node_data" field.</summary>
+    public const int NodeDataFieldNumber = 1;
+    private global::SKF.Enlight.API.IoT.NodeData nodeData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.NodeData NodeData {
+      get { return nodeData_; }
+      set {
+        nodeData_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetLatestNodeDataOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetLatestNodeDataOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NodeData, other.NodeData)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (nodeData_ != null) hash ^= NodeData.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (nodeData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NodeData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (nodeData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodeData);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetLatestNodeDataOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.nodeData_ != null) {
+        if (nodeData_ == null) {
+          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+        }
+        NodeData.MergeFrom(other.NodeData);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (nodeData_ == null) {
+              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+            }
+            input.ReadMessage(nodeData_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// GetNodeDataStream messages
   /// </summary>
   public sealed partial class GetNodeDataStreamInput : pb::IMessage<GetNodeDataStreamInput> {
@@ -3688,7 +4556,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[20]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3789,7 +4657,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[21]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3944,6 +4812,301 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  /// <summary>
+  /// GetMedia messages
+  /// </summary>
+  public sealed partial class GetMediaInput : pb::IMessage<GetMediaInput> {
+    private static readonly pb::MessageParser<GetMediaInput> _parser = new pb::MessageParser<GetMediaInput>(() => new GetMediaInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMediaInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaInput(GetMediaInput other) : this() {
+      nodeId_ = other.nodeId_;
+      mediaId_ = other.mediaId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaInput Clone() {
+      return new GetMediaInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_id" field.</summary>
+    public const int MediaIdFieldNumber = 2;
+    private string mediaId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MediaId {
+      get { return mediaId_; }
+      set {
+        mediaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMediaInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMediaInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      if (MediaId != other.MediaId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (MediaId.Length != 0) hash ^= MediaId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MediaId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (MediaId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMediaInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      if (other.MediaId.Length != 0) {
+        MediaId = other.MediaId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            MediaId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetMediaOutput : pb::IMessage<GetMediaOutput> {
+    private static readonly pb::MessageParser<GetMediaOutput> _parser = new pb::MessageParser<GetMediaOutput>(() => new GetMediaOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMediaOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaOutput(GetMediaOutput other) : this() {
+      Media = other.media_ != null ? other.Media.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaOutput Clone() {
+      return new GetMediaOutput(this);
+    }
+
+    /// <summary>Field number for the "media" field.</summary>
+    public const int MediaFieldNumber = 1;
+    private global::SKF.Enlight.API.IoT.Media media_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.Media Media {
+      get { return media_; }
+      set {
+        media_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMediaOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMediaOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Media, other.Media)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (media_ != null) hash ^= Media.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (media_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Media);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (media_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Media);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMediaOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.media_ != null) {
+        if (media_ == null) {
+          media_ = new global::SKF.Enlight.API.IoT.Media();
+        }
+        Media.MergeFrom(other.Media);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (media_ == null) {
+              media_ = new global::SKF.Enlight.API.IoT.Media();
+            }
+            input.ReadMessage(media_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class GetTaskStreamInput : pb::IMessage<GetTaskStreamInput> {
     private static readonly pb::MessageParser<GetTaskStreamInput> _parser = new pb::MessageParser<GetTaskStreamInput>(() => new GetTaskStreamInput());
     private pb::UnknownFieldSet _unknownFields;
@@ -3952,7 +5115,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[22]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4081,7 +5244,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[23]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
