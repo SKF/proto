@@ -59,6 +59,21 @@ class IoTStub(object):
         request_serializer=grpcapi__pb2.GetTaskStreamInput.SerializeToString,
         response_deserializer=grpcapi__pb2.GetTaskStreamOutput.FromString,
         )
+    self.GetTasksByStatus = channel.unary_unary(
+        '/iotgrpcapi.IoT/GetTasksByStatus',
+        request_serializer=grpcapi__pb2.GetTasksByStatusInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetTasksByStatusOutput.FromString,
+        )
+    self.GetTaskByUUID = channel.unary_unary(
+        '/iotgrpcapi.IoT/GetTaskByUUID',
+        request_serializer=grpcapi__pb2.GetTaskByUUIDInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetTaskByUUIDOutput.FromString,
+        )
+    self.GetTaskByLongId = channel.unary_unary(
+        '/iotgrpcapi.IoT/GetTaskByLongId',
+        request_serializer=grpcapi__pb2.GetTaskByLongIdInput.SerializeToString,
+        response_deserializer=grpcapi__pb2.GetTaskByLongIdOutput.FromString,
+        )
     self.IngestNodeData = channel.unary_unary(
         '/iotgrpcapi.IoT/IngestNodeData',
         request_serializer=grpcapi__pb2.IngestNodeDataInput.SerializeToString,
@@ -158,6 +173,27 @@ class IoTServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetTasksByStatus(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetTaskByUUID(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetTaskByLongId(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def IngestNodeData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -247,6 +283,21 @@ def add_IoTServicer_to_server(servicer, server):
           servicer.GetTaskStream,
           request_deserializer=grpcapi__pb2.GetTaskStreamInput.FromString,
           response_serializer=grpcapi__pb2.GetTaskStreamOutput.SerializeToString,
+      ),
+      'GetTasksByStatus': grpc.unary_unary_rpc_method_handler(
+          servicer.GetTasksByStatus,
+          request_deserializer=grpcapi__pb2.GetTasksByStatusInput.FromString,
+          response_serializer=grpcapi__pb2.GetTasksByStatusOutput.SerializeToString,
+      ),
+      'GetTaskByUUID': grpc.unary_unary_rpc_method_handler(
+          servicer.GetTaskByUUID,
+          request_deserializer=grpcapi__pb2.GetTaskByUUIDInput.FromString,
+          response_serializer=grpcapi__pb2.GetTaskByUUIDOutput.SerializeToString,
+      ),
+      'GetTaskByLongId': grpc.unary_unary_rpc_method_handler(
+          servicer.GetTaskByLongId,
+          request_deserializer=grpcapi__pb2.GetTaskByLongIdInput.FromString,
+          response_serializer=grpcapi__pb2.GetTaskByLongIdOutput.SerializeToString,
       ),
       'IngestNodeData': grpc.unary_unary_rpc_method_handler(
           servicer.IngestNodeData,
