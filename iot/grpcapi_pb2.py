@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpcapi.proto',
   package='iotgrpcapi',
   syntax='proto3',
-  serialized_pb=_b('\n\rgrpcapi.proto\x12\niotgrpcapi\"\xaf\x02\n\x0fTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\x12\x11\n\ttask_name\x18\x03 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x04 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x05 \x01(\x03\x12\x14\n\x0cis_completed\x18\x06 \x01(\x08\x12\x42\n\x17\x66unctional_location_ids\x18\x07 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\t \x01(\t\x12&\n\x06status\x18\x08 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x19\n\x11status_updated_at\x18\n \x01(\x03\"\xf4\x01\n\x16InitialTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x11\n\ttask_name\x18\x02 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x03 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x04 \x01(\x03\x12\x42\n\x17\x66unctional_location_ids\x18\x05 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\x06 \x01(\t\x12&\n\x06status\x18\x07 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\",\n\x08TaskUser\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\"r\n\x12SetTaskStatusInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x12\n\nupdated_at\x18\x04 \x01(\x03\"M\n\x10TaskDescriptions\x12\x39\n\x14task_description_arr\x18\x01 \x03(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"\'\n\x15\x46unctionalLocationIds\x12\x0e\n\x06id_arr\x18\x01 \x03(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x0f\n\rPrimitiveVoid\"\xb5\x02\n\x08NodeData\x12\x12\n\ncreated_at\x18\x01 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\x12)\n\ndata_point\x18\x03 \x01(\x0b\x32\x15.iotgrpcapi.DataPoint\x12&\n\x08spectrum\x18\x04 \x01(\x0b\x32\x14.iotgrpcapi.Spectrum\x12+\n\x0btime_series\x18\x05 \x01(\x0b\x32\x16.iotgrpcapi.TimeSeries\x12\x0c\n\x04note\x18\x06 \x01(\t\x12\x11\n\x05media\x18\x07 \x01(\x0c\x42\x02\x18\x01\x12#\n\x08media_v2\x18\t \x01(\x0b\x32\x11.iotgrpcapi.Media\x12\x18\n\x10question_answers\x18\x08 \x03(\t\"\"\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"W\n\tDataPoint\x12*\n\ncoordinate\x18\x01 \x01(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"\x83\x01\n\x08Spectrum\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\x12\x17\n\x0fwindow_function\x18\x04 \x01(\t\x12\x11\n\tspeed_rpm\x18\x05 \x01(\x01\"Y\n\nTimeSeries\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"G\n\x05Media\x12\n\n\x02id\x18\x01 \x01(\t\x12#\n\x04type\x18\x02 \x01(\x0e\x32\x15.iotgrpcapi.MediaType\x12\r\n\x05media\x18\x03 \x01(\x0c\"4\n\x06Origin\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x10\n\x08provider\x18\x03 \x01(\t\"s\n\x13IngestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x16\n\x14IngestNodeDataOutput\"~\n\x19IngestNodeDataStreamInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12,\n\x0enode_data_list\x18\x02 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"\x1c\n\x1aIngestNodeDataStreamOutput\"m\n\x10GetNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x03 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"A\n\x11GetNodeDataOutput\x12,\n\x0enode_data_list\x18\x01 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"`\n\x16GetLatestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"B\n\x17GetLatestNodeDataOutput\x12\'\n\tnode_data\x18\x01 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x18\n\x16GetNodeDataStreamInput\"S\n\x17GetNodeDataStreamOutput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"2\n\rGetMediaInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x10\n\x08media_id\x18\x02 \x01(\t\"2\n\x0eGetMediaOutput\x12 \n\x05media\x18\x01 \x01(\x0b\x32\x11.iotgrpcapi.Media\"*\n\x12GetTaskStreamInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\"@\n\x13GetTaskStreamOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"U\n\x15GetTasksByStatusInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\"H\n\x16GetTasksByStatusOutput\x12.\n\ttask_list\x18\x01 \x03(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"%\n\x12GetTaskByUUIDInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\"@\n\x13GetTaskByUUIDOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"\'\n\x14GetTaskByLongIdInput\x12\x0f\n\x07task_id\x18\x01 \x01(\x04\"B\n\x15GetTaskByLongIdOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription*R\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\x0f\n\x0bIN_PROGRESS\x10\x04\x12\r\n\tCOMPLETED\x10\x03*\x8e\x01\n\x13NodeDataContentType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nDATA_POINT\x10\x01\x12\x0c\n\x08SPECTRUM\x10\x02\x12\x0f\n\x0bTIME_SERIES\x10\x03\x12\x08\n\x04NOTE\x10\x04\x12\r\n\x05MEDIA\x10\x05\x1a\x02\x08\x01\x12\x0c\n\x08MEDIA_V2\x10\x07\x12\x14\n\x10QUESTION_ANSWERS\x10\x06*F\n\tMediaType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tAUDIO_WAV\x10\x01\x12\x0e\n\nIMAGE_JPEG\x10\x02\x12\r\n\tIMAGE_PNG\x10\x03\x32\xec\x0b\n\x03IoT\x12\x44\n\x08\x44\x65\x65pPing\x12\x19.iotgrpcapi.PrimitiveVoid\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12O\n\nCreateTask\x12\".iotgrpcapi.InitialTaskDescription\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12J\n\x0bGetAllTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12R\n\x13GetUncompletedTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12H\n\x10SetTaskCompleted\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x03\x88\x02\x01\x12?\n\nDeleteTask\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12]\n\x1eGetUncompletedTasksByHierarchy\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12L\n\rSetTaskStatus\x12\x1e.iotgrpcapi.SetTaskStatusInput\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12T\n\rGetTaskStream\x12\x1e.iotgrpcapi.GetTaskStreamInput\x1a\x1f.iotgrpcapi.GetTaskStreamOutput\"\x00\x30\x01\x12[\n\x10GetTasksByStatus\x12!.iotgrpcapi.GetTasksByStatusInput\x1a\".iotgrpcapi.GetTasksByStatusOutput\"\x00\x12R\n\rGetTaskByUUID\x12\x1e.iotgrpcapi.GetTaskByUUIDInput\x1a\x1f.iotgrpcapi.GetTaskByUUIDOutput\"\x00\x12X\n\x0fGetTaskByLongId\x12 .iotgrpcapi.GetTaskByLongIdInput\x1a!.iotgrpcapi.GetTaskByLongIdOutput\"\x00\x12U\n\x0eIngestNodeData\x12\x1f.iotgrpcapi.IngestNodeDataInput\x1a .iotgrpcapi.IngestNodeDataOutput\"\x00\x12i\n\x14IngestNodeDataStream\x12%.iotgrpcapi.IngestNodeDataStreamInput\x1a&.iotgrpcapi.IngestNodeDataStreamOutput\"\x00(\x01\x12^\n\x11GetLatestNodeData\x12\".iotgrpcapi.GetLatestNodeDataInput\x1a#.iotgrpcapi.GetLatestNodeDataOutput\"\x00\x12L\n\x0bGetNodeData\x12\x1c.iotgrpcapi.GetNodeDataInput\x1a\x1d.iotgrpcapi.GetNodeDataOutput\"\x00\x12`\n\x11GetNodeDataStream\x12\".iotgrpcapi.GetNodeDataStreamInput\x1a#.iotgrpcapi.GetNodeDataStreamOutput\"\x00\x30\x01\x12\x43\n\x08GetMedia\x12\x19.iotgrpcapi.GetMediaInput\x1a\x1a.iotgrpcapi.GetMediaOutput\"\x00\x42\x16\xaa\x02\x13SKF.Enlight.API.IoTb\x06proto3')
+  serialized_pb=_b('\n\rgrpcapi.proto\x12\niotgrpcapi\"\xc0\x02\n\x0fTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\x12\x11\n\ttask_name\x18\x03 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x04 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x05 \x01(\x03\x12\x14\n\x0cis_completed\x18\x06 \x01(\x08\x12\x42\n\x17\x66unctional_location_ids\x18\x07 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\t \x01(\t\x12&\n\x06status\x18\x08 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x19\n\x11status_updated_at\x18\n \x01(\x03\x12\x0f\n\x07long_id\x18\x0b \x01(\x04\"\xf4\x01\n\x16InitialTaskDescription\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x11\n\ttask_name\x18\x02 \x01(\t\x12\x14\n\x0chierarchy_id\x18\x03 \x01(\t\x12\x1a\n\x12\x64ue_date_timestamp\x18\x04 \x01(\x03\x12\x42\n\x17\x66unctional_location_ids\x18\x05 \x01(\x0b\x32!.iotgrpcapi.FunctionalLocationIds\x12\x18\n\x10\x65xternal_task_id\x18\x06 \x01(\t\x12&\n\x06status\x18\x07 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\",\n\x08TaskUser\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07task_id\x18\x02 \x01(\t\"r\n\x12SetTaskStatusInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\x12\x12\n\nupdated_at\x18\x04 \x01(\x03\"M\n\x10TaskDescriptions\x12\x39\n\x14task_description_arr\x18\x01 \x03(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"\'\n\x15\x46unctionalLocationIds\x12\x0e\n\x06id_arr\x18\x01 \x03(\t\" \n\x0fPrimitiveString\x12\r\n\x05value\x18\x01 \x01(\t\"\x1e\n\rPrimitiveBool\x12\r\n\x05value\x18\x01 \x01(\x08\"\x0f\n\rPrimitiveVoid\"\xb5\x02\n\x08NodeData\x12\x12\n\ncreated_at\x18\x01 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\x12)\n\ndata_point\x18\x03 \x01(\x0b\x32\x15.iotgrpcapi.DataPoint\x12&\n\x08spectrum\x18\x04 \x01(\x0b\x32\x14.iotgrpcapi.Spectrum\x12+\n\x0btime_series\x18\x05 \x01(\x0b\x32\x16.iotgrpcapi.TimeSeries\x12\x0c\n\x04note\x18\x06 \x01(\t\x12\x11\n\x05media\x18\x07 \x01(\x0c\x42\x02\x18\x01\x12#\n\x08media_v2\x18\t \x01(\x0b\x32\x11.iotgrpcapi.Media\x12\x18\n\x10question_answers\x18\x08 \x03(\t\"\"\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"W\n\tDataPoint\x12*\n\ncoordinate\x18\x01 \x01(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"\x83\x01\n\x08Spectrum\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\x12\x17\n\x0fwindow_function\x18\x04 \x01(\t\x12\x11\n\tspeed_rpm\x18\x05 \x01(\x01\"Y\n\nTimeSeries\x12+\n\x0b\x63oordinates\x18\x01 \x03(\x0b\x32\x16.iotgrpcapi.Coordinate\x12\x0e\n\x06x_unit\x18\x02 \x01(\t\x12\x0e\n\x06y_unit\x18\x03 \x01(\t\"G\n\x05Media\x12\n\n\x02id\x18\x01 \x01(\t\x12#\n\x04type\x18\x02 \x01(\x0e\x32\x15.iotgrpcapi.MediaType\x12\r\n\x05media\x18\x03 \x01(\x0c\"4\n\x06Origin\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x10\n\x08provider\x18\x03 \x01(\t\"s\n\x13IngestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x16\n\x14IngestNodeDataOutput\"~\n\x19IngestNodeDataStreamInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\"\n\x06origin\x18\x03 \x01(\x0b\x32\x12.iotgrpcapi.Origin\x12,\n\x0enode_data_list\x18\x02 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"\x1c\n\x1aIngestNodeDataStreamOutput\"m\n\x10GetNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x35\n\x0c\x63ontent_type\x18\x03 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"A\n\x11GetNodeDataOutput\x12,\n\x0enode_data_list\x18\x01 \x03(\x0b\x32\x14.iotgrpcapi.NodeData\"`\n\x16GetLatestNodeDataInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x35\n\x0c\x63ontent_type\x18\x02 \x01(\x0e\x32\x1f.iotgrpcapi.NodeDataContentType\"B\n\x17GetLatestNodeDataOutput\x12\'\n\tnode_data\x18\x01 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"\x18\n\x16GetNodeDataStreamInput\"S\n\x17GetNodeDataStreamOutput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\'\n\tnode_data\x18\x02 \x01(\x0b\x32\x14.iotgrpcapi.NodeData\"2\n\rGetMediaInput\x12\x0f\n\x07node_id\x18\x01 \x01(\t\x12\x10\n\x08media_id\x18\x02 \x01(\t\"2\n\x0eGetMediaOutput\x12 \n\x05media\x18\x01 \x01(\x0b\x32\x11.iotgrpcapi.Media\"*\n\x12GetTaskStreamInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\"@\n\x13GetTaskStreamOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"U\n\x15GetTasksByStatusInput\x12\x14\n\x0chierarchy_id\x18\x01 \x01(\t\x12&\n\x06status\x18\x02 \x01(\x0e\x32\x16.iotgrpcapi.TaskStatus\"H\n\x16GetTasksByStatusOutput\x12.\n\ttask_list\x18\x01 \x03(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"%\n\x12GetTaskByUUIDInput\x12\x0f\n\x07task_id\x18\x01 \x01(\t\"@\n\x13GetTaskByUUIDOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription\"\'\n\x14GetTaskByLongIdInput\x12\x0f\n\x07task_id\x18\x01 \x01(\x04\"B\n\x15GetTaskByLongIdOutput\x12)\n\x04task\x18\x01 \x01(\x0b\x32\x1b.iotgrpcapi.TaskDescription*R\n\nTaskStatus\x12\x0c\n\x08NOT_SENT\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\x0c\n\x08RECEIVED\x10\x02\x12\x0f\n\x0bIN_PROGRESS\x10\x04\x12\r\n\tCOMPLETED\x10\x03*\x8e\x01\n\x13NodeDataContentType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nDATA_POINT\x10\x01\x12\x0c\n\x08SPECTRUM\x10\x02\x12\x0f\n\x0bTIME_SERIES\x10\x03\x12\x08\n\x04NOTE\x10\x04\x12\r\n\x05MEDIA\x10\x05\x1a\x02\x08\x01\x12\x0c\n\x08MEDIA_V2\x10\x07\x12\x14\n\x10QUESTION_ANSWERS\x10\x06*F\n\tMediaType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tAUDIO_WAV\x10\x01\x12\x0e\n\nIMAGE_JPEG\x10\x02\x12\r\n\tIMAGE_PNG\x10\x03\x32\xec\x0b\n\x03IoT\x12\x44\n\x08\x44\x65\x65pPing\x12\x19.iotgrpcapi.PrimitiveVoid\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12O\n\nCreateTask\x12\".iotgrpcapi.InitialTaskDescription\x1a\x1b.iotgrpcapi.PrimitiveString\"\x00\x12J\n\x0bGetAllTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12R\n\x13GetUncompletedTasks\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12H\n\x10SetTaskCompleted\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x03\x88\x02\x01\x12?\n\nDeleteTask\x12\x14.iotgrpcapi.TaskUser\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12]\n\x1eGetUncompletedTasksByHierarchy\x12\x1b.iotgrpcapi.PrimitiveString\x1a\x1c.iotgrpcapi.TaskDescriptions\"\x00\x12L\n\rSetTaskStatus\x12\x1e.iotgrpcapi.SetTaskStatusInput\x1a\x19.iotgrpcapi.PrimitiveVoid\"\x00\x12T\n\rGetTaskStream\x12\x1e.iotgrpcapi.GetTaskStreamInput\x1a\x1f.iotgrpcapi.GetTaskStreamOutput\"\x00\x30\x01\x12[\n\x10GetTasksByStatus\x12!.iotgrpcapi.GetTasksByStatusInput\x1a\".iotgrpcapi.GetTasksByStatusOutput\"\x00\x12R\n\rGetTaskByUUID\x12\x1e.iotgrpcapi.GetTaskByUUIDInput\x1a\x1f.iotgrpcapi.GetTaskByUUIDOutput\"\x00\x12X\n\x0fGetTaskByLongId\x12 .iotgrpcapi.GetTaskByLongIdInput\x1a!.iotgrpcapi.GetTaskByLongIdOutput\"\x00\x12U\n\x0eIngestNodeData\x12\x1f.iotgrpcapi.IngestNodeDataInput\x1a .iotgrpcapi.IngestNodeDataOutput\"\x00\x12i\n\x14IngestNodeDataStream\x12%.iotgrpcapi.IngestNodeDataStreamInput\x1a&.iotgrpcapi.IngestNodeDataStreamOutput\"\x00(\x01\x12^\n\x11GetLatestNodeData\x12\".iotgrpcapi.GetLatestNodeDataInput\x1a#.iotgrpcapi.GetLatestNodeDataOutput\"\x00\x12L\n\x0bGetNodeData\x12\x1c.iotgrpcapi.GetNodeDataInput\x1a\x1d.iotgrpcapi.GetNodeDataOutput\"\x00\x12`\n\x11GetNodeDataStream\x12\".iotgrpcapi.GetNodeDataStreamInput\x1a#.iotgrpcapi.GetNodeDataStreamOutput\"\x00\x30\x01\x12\x43\n\x08GetMedia\x12\x19.iotgrpcapi.GetMediaInput\x1a\x1a.iotgrpcapi.GetMediaOutput\"\x00\x42\x16\xaa\x02\x13SKF.Enlight.API.IoTb\x06proto3')
 )
 
 _TASKSTATUS = _descriptor.EnumDescriptor(
@@ -52,8 +52,8 @@ _TASKSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3079,
-  serialized_end=3161,
+  serialized_start=3096,
+  serialized_end=3178,
 )
 _sym_db.RegisterEnumDescriptor(_TASKSTATUS)
 
@@ -99,8 +99,8 @@ _NODEDATACONTENTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3164,
-  serialized_end=3306,
+  serialized_start=3181,
+  serialized_end=3323,
 )
 _sym_db.RegisterEnumDescriptor(_NODEDATACONTENTTYPE)
 
@@ -130,8 +130,8 @@ _MEDIATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3308,
-  serialized_end=3378,
+  serialized_start=3325,
+  serialized_end=3395,
 )
 _sym_db.RegisterEnumDescriptor(_MEDIATYPE)
 
@@ -233,6 +233,13 @@ _TASKDESCRIPTION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='long_id', full_name='iotgrpcapi.TaskDescription.long_id', index=10,
+      number=11, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -246,7 +253,7 @@ _TASKDESCRIPTION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=30,
-  serialized_end=333,
+  serialized_end=350,
 )
 
 
@@ -318,8 +325,8 @@ _INITIALTASKDESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=580,
+  serialized_start=353,
+  serialized_end=597,
 )
 
 
@@ -356,8 +363,8 @@ _TASKUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=582,
-  serialized_end=626,
+  serialized_start=599,
+  serialized_end=643,
 )
 
 
@@ -408,8 +415,8 @@ _SETTASKSTATUSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=628,
-  serialized_end=742,
+  serialized_start=645,
+  serialized_end=759,
 )
 
 
@@ -439,8 +446,8 @@ _TASKDESCRIPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=744,
-  serialized_end=821,
+  serialized_start=761,
+  serialized_end=838,
 )
 
 
@@ -470,8 +477,8 @@ _FUNCTIONALLOCATIONIDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=823,
-  serialized_end=862,
+  serialized_start=840,
+  serialized_end=879,
 )
 
 
@@ -501,8 +508,8 @@ _PRIMITIVESTRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=864,
-  serialized_end=896,
+  serialized_start=881,
+  serialized_end=913,
 )
 
 
@@ -532,8 +539,8 @@ _PRIMITIVEBOOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=898,
-  serialized_end=928,
+  serialized_start=915,
+  serialized_end=945,
 )
 
 
@@ -556,8 +563,8 @@ _PRIMITIVEVOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=930,
-  serialized_end=945,
+  serialized_start=947,
+  serialized_end=962,
 )
 
 
@@ -643,8 +650,8 @@ _NODEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=1257,
+  serialized_start=965,
+  serialized_end=1274,
 )
 
 
@@ -681,8 +688,8 @@ _COORDINATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1259,
-  serialized_end=1293,
+  serialized_start=1276,
+  serialized_end=1310,
 )
 
 
@@ -726,8 +733,8 @@ _DATAPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1295,
-  serialized_end=1382,
+  serialized_start=1312,
+  serialized_end=1399,
 )
 
 
@@ -785,8 +792,8 @@ _SPECTRUM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1385,
-  serialized_end=1516,
+  serialized_start=1402,
+  serialized_end=1533,
 )
 
 
@@ -830,8 +837,8 @@ _TIMESERIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1518,
-  serialized_end=1607,
+  serialized_start=1535,
+  serialized_end=1624,
 )
 
 
@@ -875,8 +882,8 @@ _MEDIA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1609,
-  serialized_end=1680,
+  serialized_start=1626,
+  serialized_end=1697,
 )
 
 
@@ -920,8 +927,8 @@ _ORIGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1682,
-  serialized_end=1734,
+  serialized_start=1699,
+  serialized_end=1751,
 )
 
 
@@ -965,8 +972,8 @@ _INGESTNODEDATAINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1736,
-  serialized_end=1851,
+  serialized_start=1753,
+  serialized_end=1868,
 )
 
 
@@ -989,8 +996,8 @@ _INGESTNODEDATAOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1853,
-  serialized_end=1875,
+  serialized_start=1870,
+  serialized_end=1892,
 )
 
 
@@ -1034,8 +1041,8 @@ _INGESTNODEDATASTREAMINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1877,
-  serialized_end=2003,
+  serialized_start=1894,
+  serialized_end=2020,
 )
 
 
@@ -1058,8 +1065,8 @@ _INGESTNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2005,
-  serialized_end=2033,
+  serialized_start=2022,
+  serialized_end=2050,
 )
 
 
@@ -1103,8 +1110,8 @@ _GETNODEDATAINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2035,
-  serialized_end=2144,
+  serialized_start=2052,
+  serialized_end=2161,
 )
 
 
@@ -1134,8 +1141,8 @@ _GETNODEDATAOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2146,
-  serialized_end=2211,
+  serialized_start=2163,
+  serialized_end=2228,
 )
 
 
@@ -1172,8 +1179,8 @@ _GETLATESTNODEDATAINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2213,
-  serialized_end=2309,
+  serialized_start=2230,
+  serialized_end=2326,
 )
 
 
@@ -1203,8 +1210,8 @@ _GETLATESTNODEDATAOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2311,
-  serialized_end=2377,
+  serialized_start=2328,
+  serialized_end=2394,
 )
 
 
@@ -1227,8 +1234,8 @@ _GETNODEDATASTREAMINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2379,
-  serialized_end=2403,
+  serialized_start=2396,
+  serialized_end=2420,
 )
 
 
@@ -1265,8 +1272,8 @@ _GETNODEDATASTREAMOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2405,
-  serialized_end=2488,
+  serialized_start=2422,
+  serialized_end=2505,
 )
 
 
@@ -1303,8 +1310,8 @@ _GETMEDIAINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2490,
-  serialized_end=2540,
+  serialized_start=2507,
+  serialized_end=2557,
 )
 
 
@@ -1334,8 +1341,8 @@ _GETMEDIAOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2542,
-  serialized_end=2592,
+  serialized_start=2559,
+  serialized_end=2609,
 )
 
 
@@ -1365,8 +1372,8 @@ _GETTASKSTREAMINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2594,
-  serialized_end=2636,
+  serialized_start=2611,
+  serialized_end=2653,
 )
 
 
@@ -1396,8 +1403,8 @@ _GETTASKSTREAMOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2638,
-  serialized_end=2702,
+  serialized_start=2655,
+  serialized_end=2719,
 )
 
 
@@ -1434,8 +1441,8 @@ _GETTASKSBYSTATUSINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2704,
-  serialized_end=2789,
+  serialized_start=2721,
+  serialized_end=2806,
 )
 
 
@@ -1465,8 +1472,8 @@ _GETTASKSBYSTATUSOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2791,
-  serialized_end=2863,
+  serialized_start=2808,
+  serialized_end=2880,
 )
 
 
@@ -1496,8 +1503,8 @@ _GETTASKBYUUIDINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2865,
-  serialized_end=2902,
+  serialized_start=2882,
+  serialized_end=2919,
 )
 
 
@@ -1527,8 +1534,8 @@ _GETTASKBYUUIDOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2904,
-  serialized_end=2968,
+  serialized_start=2921,
+  serialized_end=2985,
 )
 
 
@@ -1558,8 +1565,8 @@ _GETTASKBYLONGIDINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2970,
-  serialized_end=3009,
+  serialized_start=2987,
+  serialized_end=3026,
 )
 
 
@@ -1589,8 +1596,8 @@ _GETTASKBYLONGIDOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3011,
-  serialized_end=3077,
+  serialized_start=3028,
+  serialized_end=3094,
 )
 
 _TASKDESCRIPTION.fields_by_name['functional_location_ids'].message_type = _FUNCTIONALLOCATIONIDS
@@ -1930,8 +1937,8 @@ _IOT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=3381,
-  serialized_end=4897,
+  serialized_start=3398,
+  serialized_end=4914,
   methods=[
   _descriptor.MethodDescriptor(
     name='DeepPing',
