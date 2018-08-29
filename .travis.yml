@@ -5,7 +5,7 @@ language: minimal
 
 env:
   global:
-    - DIRS="hierarchy iam iot mhub pas"
+    - DIRS="hierarchy iam iot pas"
 
 stages:
   - install
@@ -203,4 +203,3 @@ jobs:
       script: true # TODO
       after_failure:
         - tree build
-
