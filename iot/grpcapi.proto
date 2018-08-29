@@ -2,8 +2,6 @@ syntax = "proto3";
 
 option csharp_namespace = "SKF.Enlight.API.IoT";
 
-package iotgrpcapi;
-
 service IoT {
   rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
 
@@ -41,7 +39,7 @@ message TaskDescription {
   string external_task_id = 9;
   TaskStatus status = 8;
   int64 status_updated_at = 10; // ms
-  uint64 long_id = 11;
+  int64 long_id = 11;
 }
 
 message InitialTaskDescription {
@@ -245,7 +243,7 @@ message GetTaskByUUIDOutput {
 }
 
 message GetTaskByLongIdInput {
-  uint64 task_id = 1;
+  int64 task_id = 1;
 }
 
 message GetTaskByLongIdOutput {
