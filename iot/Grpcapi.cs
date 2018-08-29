@@ -31,7 +31,7 @@ namespace SKF.Enlight.API.IoT {
             "ZnVuY3Rpb25hbF9sb2NhdGlvbl9pZHMYByABKAsyIS5pb3RncnBjYXBpLkZ1",
             "bmN0aW9uYWxMb2NhdGlvbklkcxIYChBleHRlcm5hbF90YXNrX2lkGAkgASgJ",
             "EiYKBnN0YXR1cxgIIAEoDjIWLmlvdGdycGNhcGkuVGFza1N0YXR1cxIZChFz",
-            "dGF0dXNfdXBkYXRlZF9hdBgKIAEoAxIPCgdsb25nX2lkGAsgASgEIvQBChZJ",
+            "dGF0dXNfdXBkYXRlZF9hdBgKIAEoAxIPCgdsb25nX2lkGAsgASgDIvQBChZJ",
             "bml0aWFsVGFza0Rlc2NyaXB0aW9uEg8KB3VzZXJfaWQYASABKAkSEQoJdGFz",
             "a19uYW1lGAIgASgJEhQKDGhpZXJhcmNoeV9pZBgDIAEoCRIaChJkdWVfZGF0",
             "ZV90aW1lc3RhbXAYBCABKAMSQgoXZnVuY3Rpb25hbF9sb2NhdGlvbl9pZHMY",
@@ -91,7 +91,7 @@ namespace SKF.Enlight.API.IoT {
             "dGlvbiIlChJHZXRUYXNrQnlVVUlESW5wdXQSDwoHdGFza19pZBgBIAEoCSJA",
             "ChNHZXRUYXNrQnlVVUlET3V0cHV0EikKBHRhc2sYASABKAsyGy5pb3RncnBj",
             "YXBpLlRhc2tEZXNjcmlwdGlvbiInChRHZXRUYXNrQnlMb25nSWRJbnB1dBIP",
-            "Cgd0YXNrX2lkGAEgASgEIkIKFUdldFRhc2tCeUxvbmdJZE91dHB1dBIpCgR0",
+            "Cgd0YXNrX2lkGAEgASgDIkIKFUdldFRhc2tCeUxvbmdJZE91dHB1dBIpCgR0",
             "YXNrGAEgASgLMhsuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb24qUgoKVGFz",
             "a1N0YXR1cxIMCghOT1RfU0VOVBAAEggKBFNFTlQQARIMCghSRUNFSVZFRBAC",
             "Eg8KC0lOX1BST0dSRVNTEAQSDQoJQ09NUExFVEVEEAMqjgEKE05vZGVEYXRh",
@@ -367,9 +367,9 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "long_id" field.</summary>
     public const int LongIdFieldNumber = 11;
-    private ulong longId_;
+    private long longId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong LongId {
+    public long LongId {
       get { return longId_; }
       set {
         longId_ = value;
@@ -416,7 +416,7 @@ namespace SKF.Enlight.API.IoT {
       if (ExternalTaskId.Length != 0) hash ^= ExternalTaskId.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
       if (StatusUpdatedAt != 0L) hash ^= StatusUpdatedAt.GetHashCode();
-      if (LongId != 0UL) hash ^= LongId.GetHashCode();
+      if (LongId != 0L) hash ^= LongId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -470,9 +470,9 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(80);
         output.WriteInt64(StatusUpdatedAt);
       }
-      if (LongId != 0UL) {
+      if (LongId != 0L) {
         output.WriteRawTag(88);
-        output.WriteUInt64(LongId);
+        output.WriteInt64(LongId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -512,8 +512,8 @@ namespace SKF.Enlight.API.IoT {
       if (StatusUpdatedAt != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StatusUpdatedAt);
       }
-      if (LongId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(LongId);
+      if (LongId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LongId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -559,7 +559,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.StatusUpdatedAt != 0L) {
         StatusUpdatedAt = other.StatusUpdatedAt;
       }
-      if (other.LongId != 0UL) {
+      if (other.LongId != 0L) {
         LongId = other.LongId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -617,7 +617,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 88: {
-            LongId = input.ReadUInt64();
+            LongId = input.ReadInt64();
             break;
           }
         }
@@ -5997,9 +5997,9 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "task_id" field.</summary>
     public const int TaskIdFieldNumber = 1;
-    private ulong taskId_;
+    private long taskId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong TaskId {
+    public long TaskId {
       get { return taskId_; }
       set {
         taskId_ = value;
@@ -6026,7 +6026,7 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TaskId != 0UL) hash ^= TaskId.GetHashCode();
+      if (TaskId != 0L) hash ^= TaskId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6040,9 +6040,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TaskId != 0UL) {
+      if (TaskId != 0L) {
         output.WriteRawTag(8);
-        output.WriteUInt64(TaskId);
+        output.WriteInt64(TaskId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -6052,8 +6052,8 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TaskId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TaskId);
+      if (TaskId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TaskId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6066,7 +6066,7 @@ namespace SKF.Enlight.API.IoT {
       if (other == null) {
         return;
       }
-      if (other.TaskId != 0UL) {
+      if (other.TaskId != 0L) {
         TaskId = other.TaskId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -6081,7 +6081,7 @@ namespace SKF.Enlight.API.IoT {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TaskId = input.ReadUInt64();
+            TaskId = input.ReadInt64();
             break;
           }
         }
