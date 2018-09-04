@@ -10,8 +10,7 @@ env:
 stages:
   - install
   - build
-  - name: deploy
-    if: branch = master
+  - deploy
 
 addons:
   apt:
@@ -78,7 +77,7 @@ jobs:
       go: "1.10"
       deploy:
         provider: script
-        script: bash deploy.sh go go1 build/go/
+        script: bash upload_to_github.sh go go1 build/go/
         on:
           tags: true
       after_failure:
@@ -129,7 +128,7 @@ jobs:
       dotnet: 2.0
       deploy:
         provider: script
-        script: bash deploy.sh csharp csharp build/csharp/
+        script: bash upload_to_github.sh csharp csharp build/csharp/
         on:
           tags: true
       after_failure:
@@ -181,7 +180,7 @@ jobs:
       python: "3.6"
       deploy:
         provider: script
-        script: bash deploy.sh python python build/python/
+        script: bash upload_to_github.sh python python build/python/
         on:
           tags: true
       after_failure:
