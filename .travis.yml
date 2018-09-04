@@ -81,6 +81,7 @@ jobs:
         script: bash deploy.sh go go1 build/go/
         on:
           tags: true
+          all_branches: true
       after_failure:
         - tree build
         - tree $GOPATH
@@ -132,6 +133,7 @@ jobs:
         script: bash deploy.sh csharp csharp build/csharp/
         on:
           tags: true
+          all_branches: true
       after_failure:
         - tree build
 
@@ -184,6 +186,7 @@ jobs:
         script: bash deploy.sh python python build/python/
         on:
           tags: true
+          all_branches: true
       after_failure:
         - tree build
 
