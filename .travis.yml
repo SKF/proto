@@ -76,16 +76,9 @@ jobs:
       name: "Go: Deploy generated sources back to repo"
       language: go
       go: "1.10"
-      before_deploy:
-        - git tag "${TRAVIS_TAG}-go"
       deploy:
-        provider: pages
-        local-dir: build/go/
-        target-branch: go1
-        keep-history: true
-        github-token: $GITHUB_TOKEN
-        skip_cleanup: true
-        verbose: true
+        provider: script
+        script: bash deploy.sh go go1 build/go/
         on:
           tags: true
       after_failure:
@@ -134,16 +127,9 @@ jobs:
       language: csharp
       mono: none
       dotnet: 2.0
-      before_deploy:
-        - git tag "${TRAVIS_TAG}-csharp"
       deploy:
-        provider: pages
-        local-dir: build/csharp/
-        target-branch: csharp
-        keep-history: true
-        github-token: $GITHUB_TOKEN
-        skip_cleanup: true
-        verbose: true
+        provider: script
+        script: bash deploy.sh csharp csharp build/csharp/
         on:
           tags: true
       after_failure:
@@ -193,16 +179,9 @@ jobs:
       name: "Python: Deploy generated sources back to repo"
       language: python
       python: "3.6"
-      before_deploy:
-        - git tag "${TRAVIS_TAG}-python"
       deploy:
-        provider: pages
-        local-dir: build/python/
-        target-branch: python
-        keep-history: true
-        github-token: $GITHUB_TOKEN
-        skip_cleanup: true
-        verbose: true
+        provider: script
+        script: bash deploy.sh python python build/python/
         on:
           tags: true
       after_failure:
