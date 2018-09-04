@@ -78,8 +78,6 @@ jobs:
       deploy:
         provider: script
         script: bash upload_to_github.sh go go1 build/go/
-        on:
-          tags: true
       after_failure:
         - tree build
         - tree $GOPATH
