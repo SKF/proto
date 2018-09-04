@@ -18,7 +18,7 @@ commit_files() {
 }
 
 upload_files() {
-  git remote add origin https://${GH_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
+  git remote add origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
   git push --quiet --set-upstream origin $1 
 }
 
