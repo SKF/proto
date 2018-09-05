@@ -15,7 +15,8 @@ setup_git() {
 }
 
 commit_files() {
-  git checkout -b $2 --track origin/$2
+  git branch -a
+  git checkout -b $2 --track remotes/origin/$2
   git rm -rf .
 
   for i in $( ls $3 ); do
@@ -26,7 +27,7 @@ commit_files() {
   done
 
   git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  git tag "${TRAVIS_TAG}-$1"
+  # git tag "${TRAVIS_TAG}-$1"
 }
 
 upload_files() {
@@ -36,4 +37,4 @@ upload_files() {
 
 setup_git
 commit_files $1 $2 $3
-upload_files $2
+# upload_files $2

@@ -80,119 +80,119 @@ jobs:
         script: bash upload_to_github.sh go go1 build/go
         skip_cleanup: true
         on:
-          tags: true
+          all_branches: true
       after_failure:
         - tree build
         - tree $GOPATH
 
-    # C# & .NET
-    - stage: install
-      name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
-      language: csharp
-      mono: none
-      dotnet: 2.0
-      before_install:
-        - tree build
-        - rm -rf build
-      install:
-        - mkdir -p build/csharp_project
-        - pushd build/csharp_project
-        - dotnet new console
-        - env NUGET_PACKAGES=$PWD/packages dotnet add package grpc.tools
-        - popd
-      after_failure:
-        - tree build
+    # # C# & .NET
+    # - stage: install
+    #   name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
+    #   language: csharp
+    #   mono: none
+    #   dotnet: 2.0
+    #   before_install:
+    #     - tree build
+    #     - rm -rf build
+    #   install:
+    #     - mkdir -p build/csharp_project
+    #     - pushd build/csharp_project
+    #     - dotnet new console
+    #     - env NUGET_PACKAGES=$PWD/packages dotnet add package grpc.tools
+    #     - popd
+    #   after_failure:
+    #     - tree build
 
-    - stage: build
-      name: "C#: Generate sources and build .NET nupkg"
-      language: csharp
-      mono: none
-      dotnet: 2.0
-      script:
-        - TOOLS=$(ls -d build/csharp_project/packages/grpc.tools/*/tools/linux_x64/)
-        - PROTOC=$TOOLS/protoc
-        - PLUGIN=$TOOLS/grpc_csharp_plugin
-        - for DIR in $DIRS; do mkdir -p build/csharp/$DIR; $PROTOC --csharp_out build/csharp/$DIR --grpc_out build/csharp/$DIR --plugin protoc-gen-grpc=$PLUGIN $DIR/*.proto; done
-      after_success: # TODO import generated code
-        - dotnet build --configuration Release --no-restore --verbosity n
-        - dotnet pack --configuration Release --no-build --no-restore --verbosity n /p:Version=$TRAVIS_BUILD_NUMBER
-      after_failure:
-        - ls -l $TOOLS
-        - ls -l $PROTOC
-        - ls -l $PLUGIN
-        - tree build
+    # - stage: build
+    #   name: "C#: Generate sources and build .NET nupkg"
+    #   language: csharp
+    #   mono: none
+    #   dotnet: 2.0
+    #   script:
+    #     - TOOLS=$(ls -d build/csharp_project/packages/grpc.tools/*/tools/linux_x64/)
+    #     - PROTOC=$TOOLS/protoc
+    #     - PLUGIN=$TOOLS/grpc_csharp_plugin
+    #     - for DIR in $DIRS; do mkdir -p build/csharp/$DIR; $PROTOC --csharp_out build/csharp/$DIR --grpc_out build/csharp/$DIR --plugin protoc-gen-grpc=$PLUGIN $DIR/*.proto; done
+    #   after_success: # TODO import generated code
+    #     - dotnet build --configuration Release --no-restore --verbosity n
+    #     - dotnet pack --configuration Release --no-build --no-restore --verbosity n /p:Version=$TRAVIS_BUILD_NUMBER
+    #   after_failure:
+    #     - ls -l $TOOLS
+    #     - ls -l $PROTOC
+    #     - ls -l $PLUGIN
+    #     - tree build
 
-    - stage: deploy
-      name: "C#: Deploy generated sources back to repo"
-      language: csharp
-      mono: none
-      dotnet: 2.0
-      deploy:
-        provider: script
-        script: bash upload_to_github.sh csharp csharp build/csharp
-        skip_cleanup: true
-        on:
-          tags: true
-      after_failure:
-        - tree build
+    # - stage: deploy
+    #   name: "C#: Deploy generated sources back to repo"
+    #   language: csharp
+    #   mono: none
+    #   dotnet: 2.0
+    #   deploy:
+    #     provider: script
+    #     script: bash upload_to_github.sh csharp csharp build/csharp
+    #     skip_cleanup: true
+    #     on:
+    #       tags: true
+    #   after_failure:
+    #     - tree build
 
-    - stage: deploy
-      name: "C#: Deploy nupkg to NuGet"
-      language: csharp
-      mono: none
-      dotnet: 2.0
-      script: true # TODO
-      after_failure:
-        - tree build
+    # - stage: deploy
+    #   name: "C#: Deploy nupkg to NuGet"
+    #   language: csharp
+    #   mono: none
+    #   dotnet: 2.0
+    #   script: true # TODO
+    #   after_failure:
+    #     - tree build
 
-    # Python
-    - stage: install
-      name: "Python: Clean cache and fetch python gRPC plugin"
-      language: python
-      python: "3.6"
-      before_install:
-        - tree build
-        - rm -rf build
-      install:
-        - python -m pip install virtualenv
-        - virtualenv build/venv
-        - source build/venv/bin/activate
-        - python -m pip install --upgrade pip
-        - python -m pip install grpcio-tools googleapis-common-protos
-      after_failure:
-        - tree build
+    # # Python
+    # - stage: install
+    #   name: "Python: Clean cache and fetch python gRPC plugin"
+    #   language: python
+    #   python: "3.6"
+    #   before_install:
+    #     - tree build
+    #     - rm -rf build
+    #   install:
+    #     - python -m pip install virtualenv
+    #     - virtualenv build/venv
+    #     - source build/venv/bin/activate
+    #     - python -m pip install --upgrade pip
+    #     - python -m pip install grpcio-tools googleapis-common-protos
+    #   after_failure:
+    #     - tree build
 
-    - stage: build
-      name: "Python: Generate sources and build wheel pkg"
-      language: python
-      python: "3.6"
-      script:
-        - python -m pip install virtualenv
-        - virtualenv build/venv
-        - source build/venv/bin/activate
-        - for DIR in $DIRS; do mkdir -p build/python/$DIR; python -m grpc_tools.protoc -I $DIR --python_out build/python/$DIR --grpc_python_out build/python/$DIR $DIR/*.proto; done
-      after_success: # TODO
-        - touch build/python/gen.$TRAVIS_BUILD_NUMBER.whl
-      after_failure:
-        - tree build
+    # - stage: build
+    #   name: "Python: Generate sources and build wheel pkg"
+    #   language: python
+    #   python: "3.6"
+    #   script:
+    #     - python -m pip install virtualenv
+    #     - virtualenv build/venv
+    #     - source build/venv/bin/activate
+    #     - for DIR in $DIRS; do mkdir -p build/python/$DIR; python -m grpc_tools.protoc -I $DIR --python_out build/python/$DIR --grpc_python_out build/python/$DIR $DIR/*.proto; done
+    #   after_success: # TODO
+    #     - touch build/python/gen.$TRAVIS_BUILD_NUMBER.whl
+    #   after_failure:
+    #     - tree build
 
-    - stage: deploy
-      name: "Python: Deploy generated sources back to repo"
-      language: python
-      python: "3.6"
-      deploy:
-        provider: script
-        script: bash upload_to_github.sh python python build/python
-        skip_cleanup: true
-        on:
-          tags: true
-      after_failure:
-        - tree build
+    # - stage: deploy
+    #   name: "Python: Deploy generated sources back to repo"
+    #   language: python
+    #   python: "3.6"
+    #   deploy:
+    #     provider: script
+    #     script: bash upload_to_github.sh python python build/python
+    #     skip_cleanup: true
+    #     on:
+    #       tags: true
+    #   after_failure:
+    #     - tree build
 
-    - stage: deploy
-      name: "Python: Deploy wheel to PyPi"
-      language: python
-      python: "3.6"
-      script: true # TODO
-      after_failure:
-        - tree build
+    # - stage: deploy
+    #   name: "Python: Deploy wheel to PyPi"
+    #   language: python
+    #   python: "3.6"
+    #   script: true # TODO
+    #   after_failure:
+    #     - tree build
