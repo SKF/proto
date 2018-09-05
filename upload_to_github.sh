@@ -23,9 +23,7 @@ commit_files() {
   git checkout -b $2
 
   for i in $( ls $3 ); do
-    contains services $i
-    if [ $? eq 0 ]
-    then
+    if contains services $i; then
       cp -rf $3/$i .
       git add -v $i
     fi
