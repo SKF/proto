@@ -15,15 +15,11 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
-contains() {
-    [[ $1 =~ (^|[[:space:]])$2($|[[:space:]]) ]] && exit 0 || exit 1
-}
-
 commit_files() {
   git checkout -b $2
 
   for i in $( ls $3 ); do
-    if contains services $i; then
+    if [[ $services =~ (^|[[:space:]])$i($|[[:space:]]) ]]; then
       cp -rf $3/$i .
       git add -v $i
     fi
