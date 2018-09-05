@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+services="hierarchy iam iot pas"
+
 # $1 language
 echo "language: $1"
 # $2 branch
@@ -13,10 +15,22 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
+contains() {
+    [[ $1 =~ (^|[[:space:]])$2($|[[:space:]]) ]] && exit(0) || exit(1)
+}
+
 commit_files() {
   git checkout -b $2
-  cp -rf $3/* .
-  git add -v .
+
+  for i in $( ls $3 ); do
+    contains services $i
+    if [ $? eq 0 ]
+    then
+      cp -rf $3/$i .
+      git add -v $i
+    fi
+  done
+
   git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
   # git tag "${TRAVIS_TAG}-$1"
 }
