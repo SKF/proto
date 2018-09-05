@@ -77,7 +77,9 @@ jobs:
       go: "1.10"
       deploy:
         provider: script
-        script: bash upload_to_github.sh go go1 build/go/
+        script:
+          - ls -l .
+          - upload_to_github.sh go go1 build/go/
         on:
           all_branches: true
       after_failure:
