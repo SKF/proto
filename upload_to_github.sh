@@ -15,7 +15,8 @@ setup_git() {
 }
 
 commit_files() {
-  git checkout -b $2 --track origin/$2
+  git fetch --all
+  git checkout $2
   git rm -rf .
 
   for i in $( ls $3 ); do
@@ -25,7 +26,7 @@ commit_files() {
     fi
   done
 
-  git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
+  git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
   git tag "${TRAVIS_TAG}-$1"
 }
 

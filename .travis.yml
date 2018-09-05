@@ -25,7 +25,8 @@ cache:
     - build
 
 # Skip any language defaults
-install: skip
+install:
+  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 
 # Skip any language defaults
 script: skip
