@@ -11,10 +11,11 @@ echo "files: $3"
 setup_git() {
   git config --global user.email "deploy@travis-ci.org"
   git config --global user.name "Travis CI"
+  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
-  git checkout origin/$2
+  git checkout -b $2 --track origin/$2
   git rm -rf .
 
   for i in $( ls $3 ); do
@@ -29,8 +30,7 @@ commit_files() {
 }
 
 upload_files() {
-  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
-  git push -v --set-upstream origin $1
+  git push -v
   git push --tag
 }
 
