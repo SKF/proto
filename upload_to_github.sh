@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-services="hierarchy iam iot pas"
-
 # $1 language
 echo "language: $1"
 # $2 branch
@@ -17,9 +15,10 @@ setup_git() {
 
 commit_files() {
   git checkout -b $2
+  git rm -rf .
 
   for i in $( ls $3 ); do
-    if [[ $services =~ (^|[[:space:]])$i($|[[:space:]]) ]]; then
+    if [[ ${DIRS} =~ (^|[[:space:]])$i($|[[:space:]]) ]]; then
       cp -rf $3/$i .
       git add -v $i
     fi
@@ -30,8 +29,9 @@ commit_files() {
 }
 
 upload_files() {
-  git remote add origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
-  git push -v --set-upstream origin $1 
+  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
+  git push -v --set-upstream origin $1
+  git push --tag
 }
 
 setup_git
