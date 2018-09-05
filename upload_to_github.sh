@@ -15,9 +15,7 @@ setup_git() {
 }
 
 commit_files() {
-  git fetch --all
-  git branch -a
-  git checkout -b $2 --track remotes/origin/$2
+  git checkout -b $2
   git rm -rf .
 
   for i in $( ls $3 ); do
