@@ -27,7 +27,7 @@ commit_files() {
     fi
   done
 
-  git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
+  git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
   # git tag "${TRAVIS_TAG}-$1"
 }
 
