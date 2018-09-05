@@ -14,7 +14,7 @@ setup_git() {
 }
 
 commit_files() {
-  git checkout -b $2
+  git checkout origin/$2
   git rm -rf .
 
   for i in $( ls $3 ); do
