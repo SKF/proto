@@ -7,7 +7,6 @@ echo "language: $1"
 echo "branch: $2"
 # $3 files
 echo "files: $3"
-ls -l $3
 
 setup_git() {
   git config --global user.email "deploy@travis-ci.org"
@@ -15,19 +14,17 @@ setup_git() {
 }
 
 commit_files() {
-  git status
   git checkout -b $2
   git add -v $3
-  git status
   git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  # git tag "${TRAVIS_TAG}-$1"
+  git tag "${TRAVIS_TAG}-$1"
 }
 
 upload_files() {
   git remote add origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin $1 
+  git push -v --set-upstream origin $1 
 }
 
 setup_git
 commit_files $1 $2 $3
-# upload_files $2
+upload_files $2
