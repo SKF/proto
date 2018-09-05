@@ -15,9 +15,10 @@ setup_git() {
 
 commit_files() {
   git checkout -b $2
-  git add -v $3
+  cp -rf $3/* .
+  git add -v .
   git commit -v -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  git tag "${TRAVIS_TAG}-$1"
+  # git tag "${TRAVIS_TAG}-$1"
 }
 
 upload_files() {
@@ -27,4 +28,4 @@ upload_files() {
 
 setup_git
 commit_files $1 $2 $3
-upload_files $2
+# upload_files $2
