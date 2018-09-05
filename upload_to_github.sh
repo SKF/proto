@@ -7,6 +7,7 @@ echo "language: $1"
 echo "branch: $2"
 # $3 files
 echo "files: $3"
+ls -l $3
 
 setup_git() {
   git config --global user.email "deploy@travis-ci.org"
