@@ -16,7 +16,6 @@ setup_git() {
 
 commit_files() {
   git fetch --all
-  # git branch -a
   git checkout $2
   git rm -rf .
 
@@ -28,7 +27,7 @@ commit_files() {
   done
 
   git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  # git tag "${TRAVIS_TAG}-$1"
+  git tag "${TRAVIS_TAG}-$1"
 }
 
 upload_files() {
@@ -38,4 +37,4 @@ upload_files() {
 
 setup_git
 commit_files $1 $2 $3
-# upload_files $2
+upload_files $2
