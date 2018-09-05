@@ -80,7 +80,7 @@ jobs:
         skip_cleanup: true
         script:
           - ls -l .
-          - upload_to_github.sh go go1 build/go/
+          - sh upload_to_github.sh go go1 build/go/
         on:
           all_branches: true
       after_failure:
