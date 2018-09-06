@@ -1,10 +1,10 @@
 syntax = "proto3";
 
+option csharp_namespace = "SKF.Enlight.API.IAM";
+
 option java_multiple_files = true;
 option java_package = "com.skf.enlight.iam.grpcapi";
 option java_outer_classname = "iam";
-
-option csharp_namespace = "SKF.Enlight.API.IAM";
 
 package grpcapi;
 
@@ -15,7 +15,6 @@ service IAM {
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
 
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
-  rpc GetEventRecordStream (PrimitiveVoid) returns (stream PrimitiveBytes) {}
 }
 
 // Input & output messages

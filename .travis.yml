@@ -5,7 +5,7 @@ language: minimal
 
 env:
   global:
-    - DIRS="hierarchy iam iot pas"
+    - SERVICES="hierarchy iam iot pas reports"
 
 stages:
   - install
@@ -65,7 +65,7 @@ jobs:
         - PROTOC=build/protoc/bin/protoc
         - PLUGIN=build/bin/protoc-gen-go
         - ls -la $PLUGIN
-        - for DIR in $DIRS; do mkdir -p build/go/$DIR; $PROTOC --go_out build/go/ --plugin $PLUGIN $DIR/*.proto; done
+        - for SERVICE in $SERVICES; do mkdir -p build/go/$SERVICE; $PROTOC --go_out build/go/ --plugin $PLUGIN $SERVICE/*.proto; done
       after_failure:
         - ls -l $PROTOC
         - ls -l $PLUGIN
@@ -113,7 +113,7 @@ jobs:
         - TOOLS=$(ls -d build/csharp_project/packages/grpc.tools/*/tools/linux_x64/)
         - PROTOC=$TOOLS/protoc
         - PLUGIN=$TOOLS/grpc_csharp_plugin
-        - for DIR in $DIRS; do mkdir -p build/csharp/$DIR; $PROTOC --csharp_out build/csharp/$DIR --grpc_out build/csharp/$DIR --plugin protoc-gen-grpc=$PLUGIN $DIR/*.proto; done
+        - for SERVICE in $SERVICES; do mkdir -p build/csharp/$SERVICE; $PROTOC --csharp_out build/csharp/$SERVICE --grpc_out build/csharp/$SERVICE --plugin protoc-gen-grpc=$PLUGIN $SERVICE/*.proto; done
       after_success: # TODO import generated code
         - dotnet build --configuration Release --no-restore --verbosity n
         - dotnet pack --configuration Release --no-build --no-restore --verbosity n /p:Version=$TRAVIS_BUILD_NUMBER
@@ -171,7 +171,7 @@ jobs:
         - python -m pip install virtualenv
         - virtualenv build/venv
         - source build/venv/bin/activate
-        - for DIR in $DIRS; do mkdir -p build/python/$DIR; python -m grpc_tools.protoc -I $DIR --python_out build/python/$DIR --grpc_python_out build/python/$DIR $DIR/*.proto; done
+        - for SERVICE in $SERVICES; do mkdir -p build/python/$SERVICE; python -m grpc_tools.protoc -I $SERVICE --python_out build/python/$SERVICE --grpc_python_out build/python/$SERVICE $SERVICE/*.proto; done
       after_success: # TODO
         - touch build/python/gen.$TRAVIS_BUILD_NUMBER.whl
       after_failure:
