@@ -6,6 +6,7 @@ package grpcapi
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
+import common "github.com/SKF/proto/common"
 
 import (
 	context "golang.org/x/net/context"
@@ -46,61 +47,7 @@ func (x ValueType) String() string {
 	return proto.EnumName(ValueType_name, int32(x))
 }
 func (ValueType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{0}
-}
-
-type Origin struct {
-	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Type                 string   `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
-	Provider             string   `protobuf:"bytes,3,opt,name=provider,proto3" json:"provider,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *Origin) Reset()         { *m = Origin{} }
-func (m *Origin) String() string { return proto.CompactTextString(m) }
-func (*Origin) ProtoMessage()    {}
-func (*Origin) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{0}
-}
-func (m *Origin) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Origin.Unmarshal(m, b)
-}
-func (m *Origin) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Origin.Marshal(b, m, deterministic)
-}
-func (dst *Origin) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Origin.Merge(dst, src)
-}
-func (m *Origin) XXX_Size() int {
-	return xxx_messageInfo_Origin.Size(m)
-}
-func (m *Origin) XXX_DiscardUnknown() {
-	xxx_messageInfo_Origin.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Origin proto.InternalMessageInfo
-
-func (m *Origin) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *Origin) GetType() string {
-	if m != nil {
-		return m.Type
-	}
-	return ""
-}
-
-func (m *Origin) GetProvider() string {
-	if m != nil {
-		return m.Provider
-	}
-	return ""
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{0}
 }
 
 type MeasurementPoint struct {
@@ -118,7 +65,7 @@ func (m *MeasurementPoint) Reset()         { *m = MeasurementPoint{} }
 func (m *MeasurementPoint) String() string { return proto.CompactTextString(m) }
 func (*MeasurementPoint) ProtoMessage()    {}
 func (*MeasurementPoint) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{1}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{0}
 }
 func (m *MeasurementPoint) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MeasurementPoint.Unmarshal(m, b)
@@ -187,7 +134,7 @@ func (m *InspectionPoint) Reset()         { *m = InspectionPoint{} }
 func (m *InspectionPoint) String() string { return proto.CompactTextString(m) }
 func (*InspectionPoint) ProtoMessage()    {}
 func (*InspectionPoint) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{2}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{1}
 }
 func (m *InspectionPoint) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InspectionPoint.Unmarshal(m, b)
@@ -246,7 +193,7 @@ func (m *AssetNode) Reset()         { *m = AssetNode{} }
 func (m *AssetNode) String() string { return proto.CompactTextString(m) }
 func (*AssetNode) ProtoMessage()    {}
 func (*AssetNode) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{3}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{2}
 }
 func (m *AssetNode) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AssetNode.Unmarshal(m, b)
@@ -274,28 +221,28 @@ func (m *AssetNode) GetCriticality() string {
 }
 
 type Node struct {
-	Id                   string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Label                string            `protobuf:"bytes,2,opt,name=label,proto3" json:"label,omitempty"`
-	Description          string            `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
-	Type                 string            `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`
-	Criticality          string            `protobuf:"bytes,5,opt,name=criticality,proto3" json:"criticality,omitempty"`
-	SubType              string            `protobuf:"bytes,6,opt,name=subType,proto3" json:"subType,omitempty"`
-	Origin               *Origin           `protobuf:"bytes,7,opt,name=origin,proto3" json:"origin,omitempty"`
-	AssetNode            *AssetNode        `protobuf:"bytes,8,opt,name=assetNode,proto3" json:"assetNode,omitempty"`
-	MeasurementPoint     *MeasurementPoint `protobuf:"bytes,9,opt,name=measurementPoint,proto3" json:"measurementPoint,omitempty"`
-	InspectionPoint      *InspectionPoint  `protobuf:"bytes,10,opt,name=inspectionPoint,proto3" json:"inspectionPoint,omitempty"`
-	ChildOrderNumber     int64             `protobuf:"varint,11,opt,name=childOrderNumber,proto3" json:"childOrderNumber,omitempty"` // Deprecated: Do not use.
-	Position             *PrimitiveInt64   `protobuf:"bytes,12,opt,name=position,proto3" json:"position,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
+	Id                   string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Label                string                 `protobuf:"bytes,2,opt,name=label,proto3" json:"label,omitempty"`
+	Description          string                 `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	Type                 string                 `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`
+	Criticality          string                 `protobuf:"bytes,5,opt,name=criticality,proto3" json:"criticality,omitempty"`
+	SubType              string                 `protobuf:"bytes,6,opt,name=subType,proto3" json:"subType,omitempty"`
+	Origin               *common.Origin         `protobuf:"bytes,7,opt,name=origin,proto3" json:"origin,omitempty"`
+	AssetNode            *AssetNode             `protobuf:"bytes,8,opt,name=assetNode,proto3" json:"assetNode,omitempty"`
+	MeasurementPoint     *MeasurementPoint      `protobuf:"bytes,9,opt,name=measurementPoint,proto3" json:"measurementPoint,omitempty"`
+	InspectionPoint      *InspectionPoint       `protobuf:"bytes,10,opt,name=inspectionPoint,proto3" json:"inspectionPoint,omitempty"`
+	ChildOrderNumber     int64                  `protobuf:"varint,11,opt,name=childOrderNumber,proto3" json:"childOrderNumber,omitempty"` // Deprecated: Do not use.
+	Position             *common.PrimitiveInt64 `protobuf:"bytes,12,opt,name=position,proto3" json:"position,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *Node) Reset()         { *m = Node{} }
 func (m *Node) String() string { return proto.CompactTextString(m) }
 func (*Node) ProtoMessage()    {}
 func (*Node) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{4}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{3}
 }
 func (m *Node) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Node.Unmarshal(m, b)
@@ -357,7 +304,7 @@ func (m *Node) GetSubType() string {
 	return ""
 }
 
-func (m *Node) GetOrigin() *Origin {
+func (m *Node) GetOrigin() *common.Origin {
 	if m != nil {
 		return m.Origin
 	}
@@ -393,7 +340,7 @@ func (m *Node) GetChildOrderNumber() int64 {
 	return 0
 }
 
-func (m *Node) GetPosition() *PrimitiveInt64 {
+func (m *Node) GetPosition() *common.PrimitiveInt64 {
 	if m != nil {
 		return m.Position
 	}
@@ -411,7 +358,7 @@ func (m *Nodes) Reset()         { *m = Nodes{} }
 func (m *Nodes) String() string { return proto.CompactTextString(m) }
 func (*Nodes) ProtoMessage()    {}
 func (*Nodes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{5}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{4}
 }
 func (m *Nodes) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Nodes.Unmarshal(m, b)
@@ -439,18 +386,18 @@ func (m *Nodes) GetNodes() []*Node {
 }
 
 type GetEventsInput struct {
-	Since                int64           `protobuf:"varint,1,opt,name=since,proto3" json:"since,omitempty"`
-	Limit                *PrimitiveInt32 `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	Since                int64                  `protobuf:"varint,1,opt,name=since,proto3" json:"since,omitempty"`
+	Limit                *common.PrimitiveInt32 `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *GetEventsInput) Reset()         { *m = GetEventsInput{} }
 func (m *GetEventsInput) String() string { return proto.CompactTextString(m) }
 func (*GetEventsInput) ProtoMessage()    {}
 func (*GetEventsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{6}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{5}
 }
 func (m *GetEventsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventsInput.Unmarshal(m, b)
@@ -477,7 +424,7 @@ func (m *GetEventsInput) GetSince() int64 {
 	return 0
 }
 
-func (m *GetEventsInput) GetLimit() *PrimitiveInt32 {
+func (m *GetEventsInput) GetLimit() *common.PrimitiveInt32 {
 	if m != nil {
 		return m.Limit
 	}
@@ -495,7 +442,7 @@ func (m *GetEventsOutput) Reset()         { *m = GetEventsOutput{} }
 func (m *GetEventsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetEventsOutput) ProtoMessage()    {}
 func (*GetEventsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{7}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{6}
 }
 func (m *GetEventsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventsOutput.Unmarshal(m, b)
@@ -523,20 +470,20 @@ func (m *GetEventsOutput) GetEvents() []byte {
 }
 
 type SaveNodeInput struct {
-	UserId               string   `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	Node                 *Node    `protobuf:"bytes,3,opt,name=node,proto3" json:"node,omitempty"`
-	ParentId             string   `protobuf:"bytes,2,opt,name=parentId,proto3" json:"parentId,omitempty"`
-	ParentOrigin         *Origin  `protobuf:"bytes,4,opt,name=parentOrigin,proto3" json:"parentOrigin,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	UserId               string         `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	Node                 *Node          `protobuf:"bytes,3,opt,name=node,proto3" json:"node,omitempty"`
+	ParentId             string         `protobuf:"bytes,2,opt,name=parentId,proto3" json:"parentId,omitempty"`
+	ParentOrigin         *common.Origin `protobuf:"bytes,4,opt,name=parentOrigin,proto3" json:"parentOrigin,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
 }
 
 func (m *SaveNodeInput) Reset()         { *m = SaveNodeInput{} }
 func (m *SaveNodeInput) String() string { return proto.CompactTextString(m) }
 func (*SaveNodeInput) ProtoMessage()    {}
 func (*SaveNodeInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{8}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{7}
 }
 func (m *SaveNodeInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaveNodeInput.Unmarshal(m, b)
@@ -577,7 +524,7 @@ func (m *SaveNodeInput) GetParentId() string {
 	return ""
 }
 
-func (m *SaveNodeInput) GetParentOrigin() *Origin {
+func (m *SaveNodeInput) GetParentOrigin() *common.Origin {
 	if m != nil {
 		return m.ParentOrigin
 	}
@@ -585,19 +532,19 @@ func (m *SaveNodeInput) GetParentOrigin() *Origin {
 }
 
 type DeleteNodeInput struct {
-	UserId               string   `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	NodeId               string   `protobuf:"bytes,2,opt,name=nodeId,proto3" json:"nodeId,omitempty"`
-	Origin               *Origin  `protobuf:"bytes,3,opt,name=origin,proto3" json:"origin,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	UserId               string         `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	NodeId               string         `protobuf:"bytes,2,opt,name=nodeId,proto3" json:"nodeId,omitempty"`
+	Origin               *common.Origin `protobuf:"bytes,3,opt,name=origin,proto3" json:"origin,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
 }
 
 func (m *DeleteNodeInput) Reset()         { *m = DeleteNodeInput{} }
 func (m *DeleteNodeInput) String() string { return proto.CompactTextString(m) }
 func (*DeleteNodeInput) ProtoMessage()    {}
 func (*DeleteNodeInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{9}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{8}
 }
 func (m *DeleteNodeInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteNodeInput.Unmarshal(m, b)
@@ -631,7 +578,7 @@ func (m *DeleteNodeInput) GetNodeId() string {
 	return ""
 }
 
-func (m *DeleteNodeInput) GetOrigin() *Origin {
+func (m *DeleteNodeInput) GetOrigin() *common.Origin {
 	if m != nil {
 		return m.Origin
 	}
@@ -649,7 +596,7 @@ func (m *GetAncestorsInput) Reset()         { *m = GetAncestorsInput{} }
 func (m *GetAncestorsInput) String() string { return proto.CompactTextString(m) }
 func (*GetAncestorsInput) ProtoMessage()    {}
 func (*GetAncestorsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{10}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{9}
 }
 func (m *GetAncestorsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAncestorsInput.Unmarshal(m, b)
@@ -687,7 +634,7 @@ func (m *GetAncestorsOutput) Reset()         { *m = GetAncestorsOutput{} }
 func (m *GetAncestorsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetAncestorsOutput) ProtoMessage()    {}
 func (*GetAncestorsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{11}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{10}
 }
 func (m *GetAncestorsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAncestorsOutput.Unmarshal(m, b)
@@ -715,23 +662,23 @@ func (m *GetAncestorsOutput) GetNodes() []*AncestorNode {
 }
 
 type AncestorNode struct {
-	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Origin               *Origin  `protobuf:"bytes,2,opt,name=origin,proto3" json:"origin,omitempty"`
-	Label                string   `protobuf:"bytes,3,opt,name=label,proto3" json:"label,omitempty"`
-	Description          string   `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`
-	Type                 string   `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`
-	SubType              string   `protobuf:"bytes,6,opt,name=subType,proto3" json:"subType,omitempty"`
-	ParentId             string   `protobuf:"bytes,7,opt,name=parentId,proto3" json:"parentId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Id                   string         `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Origin               *common.Origin `protobuf:"bytes,2,opt,name=origin,proto3" json:"origin,omitempty"`
+	Label                string         `protobuf:"bytes,3,opt,name=label,proto3" json:"label,omitempty"`
+	Description          string         `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`
+	Type                 string         `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`
+	SubType              string         `protobuf:"bytes,6,opt,name=subType,proto3" json:"subType,omitempty"`
+	ParentId             string         `protobuf:"bytes,7,opt,name=parentId,proto3" json:"parentId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
 }
 
 func (m *AncestorNode) Reset()         { *m = AncestorNode{} }
 func (m *AncestorNode) String() string { return proto.CompactTextString(m) }
 func (*AncestorNode) ProtoMessage()    {}
 func (*AncestorNode) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{12}
+	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{11}
 }
 func (m *AncestorNode) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AncestorNode.Unmarshal(m, b)
@@ -758,7 +705,7 @@ func (m *AncestorNode) GetId() string {
 	return ""
 }
 
-func (m *AncestorNode) GetOrigin() *Origin {
+func (m *AncestorNode) GetOrigin() *common.Origin {
 	if m != nil {
 		return m.Origin
 	}
@@ -800,190 +747,7 @@ func (m *AncestorNode) GetParentId() string {
 	return ""
 }
 
-type PrimitiveString struct {
-	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveString) Reset()         { *m = PrimitiveString{} }
-func (m *PrimitiveString) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveString) ProtoMessage()    {}
-func (*PrimitiveString) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{13}
-}
-func (m *PrimitiveString) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveString.Unmarshal(m, b)
-}
-func (m *PrimitiveString) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveString.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveString) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveString.Merge(dst, src)
-}
-func (m *PrimitiveString) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveString.Size(m)
-}
-func (m *PrimitiveString) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveString.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveString proto.InternalMessageInfo
-
-func (m *PrimitiveString) GetValue() string {
-	if m != nil {
-		return m.Value
-	}
-	return ""
-}
-
-type PrimitiveInt32 struct {
-	Value                int32    `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveInt32) Reset()         { *m = PrimitiveInt32{} }
-func (m *PrimitiveInt32) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveInt32) ProtoMessage()    {}
-func (*PrimitiveInt32) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{14}
-}
-func (m *PrimitiveInt32) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveInt32.Unmarshal(m, b)
-}
-func (m *PrimitiveInt32) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveInt32.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveInt32) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveInt32.Merge(dst, src)
-}
-func (m *PrimitiveInt32) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveInt32.Size(m)
-}
-func (m *PrimitiveInt32) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveInt32.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveInt32 proto.InternalMessageInfo
-
-func (m *PrimitiveInt32) GetValue() int32 {
-	if m != nil {
-		return m.Value
-	}
-	return 0
-}
-
-type PrimitiveInt64 struct {
-	Value                int64    `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveInt64) Reset()         { *m = PrimitiveInt64{} }
-func (m *PrimitiveInt64) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveInt64) ProtoMessage()    {}
-func (*PrimitiveInt64) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{15}
-}
-func (m *PrimitiveInt64) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveInt64.Unmarshal(m, b)
-}
-func (m *PrimitiveInt64) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveInt64.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveInt64) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveInt64.Merge(dst, src)
-}
-func (m *PrimitiveInt64) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveInt64.Size(m)
-}
-func (m *PrimitiveInt64) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveInt64.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveInt64 proto.InternalMessageInfo
-
-func (m *PrimitiveInt64) GetValue() int64 {
-	if m != nil {
-		return m.Value
-	}
-	return 0
-}
-
-type PrimitiveBytes struct {
-	Value                []byte   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveBytes) Reset()         { *m = PrimitiveBytes{} }
-func (m *PrimitiveBytes) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveBytes) ProtoMessage()    {}
-func (*PrimitiveBytes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{16}
-}
-func (m *PrimitiveBytes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveBytes.Unmarshal(m, b)
-}
-func (m *PrimitiveBytes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveBytes.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveBytes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveBytes.Merge(dst, src)
-}
-func (m *PrimitiveBytes) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveBytes.Size(m)
-}
-func (m *PrimitiveBytes) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveBytes.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveBytes proto.InternalMessageInfo
-
-func (m *PrimitiveBytes) GetValue() []byte {
-	if m != nil {
-		return m.Value
-	}
-	return nil
-}
-
-type PrimitiveVoid struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveVoid) Reset()         { *m = PrimitiveVoid{} }
-func (m *PrimitiveVoid) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveVoid) ProtoMessage()    {}
-func (*PrimitiveVoid) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c4ae82f6008d8567, []int{17}
-}
-func (m *PrimitiveVoid) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveVoid.Unmarshal(m, b)
-}
-func (m *PrimitiveVoid) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveVoid.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveVoid) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveVoid.Merge(dst, src)
-}
-func (m *PrimitiveVoid) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveVoid.Size(m)
-}
-func (m *PrimitiveVoid) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveVoid.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveVoid proto.InternalMessageInfo
-
 func init() {
-	proto.RegisterType((*Origin)(nil), "grpcapi.Origin")
 	proto.RegisterType((*MeasurementPoint)(nil), "grpcapi.MeasurementPoint")
 	proto.RegisterType((*InspectionPoint)(nil), "grpcapi.InspectionPoint")
 	proto.RegisterType((*AssetNode)(nil), "grpcapi.AssetNode")
@@ -996,11 +760,6 @@ func init() {
 	proto.RegisterType((*GetAncestorsInput)(nil), "grpcapi.GetAncestorsInput")
 	proto.RegisterType((*GetAncestorsOutput)(nil), "grpcapi.GetAncestorsOutput")
 	proto.RegisterType((*AncestorNode)(nil), "grpcapi.AncestorNode")
-	proto.RegisterType((*PrimitiveString)(nil), "grpcapi.PrimitiveString")
-	proto.RegisterType((*PrimitiveInt32)(nil), "grpcapi.PrimitiveInt32")
-	proto.RegisterType((*PrimitiveInt64)(nil), "grpcapi.PrimitiveInt64")
-	proto.RegisterType((*PrimitiveBytes)(nil), "grpcapi.PrimitiveBytes")
-	proto.RegisterType((*PrimitiveVoid)(nil), "grpcapi.PrimitiveVoid")
 	proto.RegisterEnum("grpcapi.ValueType", ValueType_name, ValueType_value)
 }
 
@@ -1016,15 +775,15 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type HierarchyClient interface {
-	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error)
-	GetNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error)
-	GetNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
-	GetChildNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
-	GetParentNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error)
+	DeepPing(ctx context.Context, in *common.Void, opts ...grpc.CallOption) (*common.PrimitiveString, error)
+	GetNode(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Node, error)
+	GetNodes(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
+	GetChildNodes(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
+	GetParentNode(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Node, error)
 	GetAncestors(ctx context.Context, in *GetAncestorsInput, opts ...grpc.CallOption) (*GetAncestorsOutput, error)
-	GetNodeIdByOrigin(ctx context.Context, in *Origin, opts ...grpc.CallOption) (*PrimitiveString, error)
-	SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*PrimitiveString, error)
-	DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*PrimitiveVoid, error)
+	GetNodeIdByOrigin(ctx context.Context, in *common.Origin, opts ...grpc.CallOption) (*common.PrimitiveString, error)
+	SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*common.PrimitiveString, error)
+	DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*common.Void, error)
 	GetEvents(ctx context.Context, in *GetEventsInput, opts ...grpc.CallOption) (*GetEventsOutput, error)
 }
 
@@ -1036,8 +795,8 @@ func NewHierarchyClient(cc *grpc.ClientConn) HierarchyClient {
 	return &hierarchyClient{cc}
 }
 
-func (c *hierarchyClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error) {
-	out := new(PrimitiveString)
+func (c *hierarchyClient) DeepPing(ctx context.Context, in *common.Void, opts ...grpc.CallOption) (*common.PrimitiveString, error) {
+	out := new(common.PrimitiveString)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/DeepPing", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -1045,7 +804,7 @@ func (c *hierarchyClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts 
 	return out, nil
 }
 
-func (c *hierarchyClient) GetNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
+func (c *hierarchyClient) GetNode(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
 	out := new(Node)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNode", in, out, opts...)
 	if err != nil {
@@ -1054,7 +813,7 @@ func (c *hierarchyClient) GetNode(ctx context.Context, in *PrimitiveString, opts
 	return out, nil
 }
 
-func (c *hierarchyClient) GetNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
+func (c *hierarchyClient) GetNodes(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
 	out := new(Nodes)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNodes", in, out, opts...)
 	if err != nil {
@@ -1063,7 +822,7 @@ func (c *hierarchyClient) GetNodes(ctx context.Context, in *PrimitiveString, opt
 	return out, nil
 }
 
-func (c *hierarchyClient) GetChildNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
+func (c *hierarchyClient) GetChildNodes(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
 	out := new(Nodes)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetChildNodes", in, out, opts...)
 	if err != nil {
@@ -1072,7 +831,7 @@ func (c *hierarchyClient) GetChildNodes(ctx context.Context, in *PrimitiveString
 	return out, nil
 }
 
-func (c *hierarchyClient) GetParentNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
+func (c *hierarchyClient) GetParentNode(ctx context.Context, in *common.PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
 	out := new(Node)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetParentNode", in, out, opts...)
 	if err != nil {
@@ -1090,8 +849,8 @@ func (c *hierarchyClient) GetAncestors(ctx context.Context, in *GetAncestorsInpu
 	return out, nil
 }
 
-func (c *hierarchyClient) GetNodeIdByOrigin(ctx context.Context, in *Origin, opts ...grpc.CallOption) (*PrimitiveString, error) {
-	out := new(PrimitiveString)
+func (c *hierarchyClient) GetNodeIdByOrigin(ctx context.Context, in *common.Origin, opts ...grpc.CallOption) (*common.PrimitiveString, error) {
+	out := new(common.PrimitiveString)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNodeIdByOrigin", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -1099,8 +858,8 @@ func (c *hierarchyClient) GetNodeIdByOrigin(ctx context.Context, in *Origin, opt
 	return out, nil
 }
 
-func (c *hierarchyClient) SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*PrimitiveString, error) {
-	out := new(PrimitiveString)
+func (c *hierarchyClient) SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*common.PrimitiveString, error) {
+	out := new(common.PrimitiveString)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/SaveNode", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -1108,8 +867,8 @@ func (c *hierarchyClient) SaveNode(ctx context.Context, in *SaveNodeInput, opts 
 	return out, nil
 }
 
-func (c *hierarchyClient) DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*PrimitiveVoid, error) {
-	out := new(PrimitiveVoid)
+func (c *hierarchyClient) DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*common.Void, error) {
+	out := new(common.Void)
 	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/DeleteNode", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -1128,15 +887,15 @@ func (c *hierarchyClient) GetEvents(ctx context.Context, in *GetEventsInput, opt
 
 // HierarchyServer is the server API for Hierarchy service.
 type HierarchyServer interface {
-	DeepPing(context.Context, *PrimitiveVoid) (*PrimitiveString, error)
-	GetNode(context.Context, *PrimitiveString) (*Node, error)
-	GetNodes(context.Context, *PrimitiveString) (*Nodes, error)
-	GetChildNodes(context.Context, *PrimitiveString) (*Nodes, error)
-	GetParentNode(context.Context, *PrimitiveString) (*Node, error)
+	DeepPing(context.Context, *common.Void) (*common.PrimitiveString, error)
+	GetNode(context.Context, *common.PrimitiveString) (*Node, error)
+	GetNodes(context.Context, *common.PrimitiveString) (*Nodes, error)
+	GetChildNodes(context.Context, *common.PrimitiveString) (*Nodes, error)
+	GetParentNode(context.Context, *common.PrimitiveString) (*Node, error)
 	GetAncestors(context.Context, *GetAncestorsInput) (*GetAncestorsOutput, error)
-	GetNodeIdByOrigin(context.Context, *Origin) (*PrimitiveString, error)
-	SaveNode(context.Context, *SaveNodeInput) (*PrimitiveString, error)
-	DeleteNode(context.Context, *DeleteNodeInput) (*PrimitiveVoid, error)
+	GetNodeIdByOrigin(context.Context, *common.Origin) (*common.PrimitiveString, error)
+	SaveNode(context.Context, *SaveNodeInput) (*common.PrimitiveString, error)
+	DeleteNode(context.Context, *DeleteNodeInput) (*common.Void, error)
 	GetEvents(context.Context, *GetEventsInput) (*GetEventsOutput, error)
 }
 
@@ -1145,7 +904,7 @@ func RegisterHierarchyServer(s *grpc.Server, srv HierarchyServer) {
 }
 
 func _Hierarchy_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveVoid)
+	in := new(common.Void)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1157,13 +916,13 @@ func _Hierarchy_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: "/grpcapi.Hierarchy/DeepPing",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).DeepPing(ctx, req.(*PrimitiveVoid))
+		return srv.(HierarchyServer).DeepPing(ctx, req.(*common.Void))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Hierarchy_GetNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveString)
+	in := new(common.PrimitiveString)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1175,13 +934,13 @@ func _Hierarchy_GetNode_Handler(srv interface{}, ctx context.Context, dec func(i
 		FullMethod: "/grpcapi.Hierarchy/GetNode",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).GetNode(ctx, req.(*PrimitiveString))
+		return srv.(HierarchyServer).GetNode(ctx, req.(*common.PrimitiveString))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Hierarchy_GetNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveString)
+	in := new(common.PrimitiveString)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1193,13 +952,13 @@ func _Hierarchy_GetNodes_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: "/grpcapi.Hierarchy/GetNodes",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).GetNodes(ctx, req.(*PrimitiveString))
+		return srv.(HierarchyServer).GetNodes(ctx, req.(*common.PrimitiveString))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Hierarchy_GetChildNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveString)
+	in := new(common.PrimitiveString)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1211,13 +970,13 @@ func _Hierarchy_GetChildNodes_Handler(srv interface{}, ctx context.Context, dec 
 		FullMethod: "/grpcapi.Hierarchy/GetChildNodes",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).GetChildNodes(ctx, req.(*PrimitiveString))
+		return srv.(HierarchyServer).GetChildNodes(ctx, req.(*common.PrimitiveString))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Hierarchy_GetParentNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveString)
+	in := new(common.PrimitiveString)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1229,7 +988,7 @@ func _Hierarchy_GetParentNode_Handler(srv interface{}, ctx context.Context, dec 
 		FullMethod: "/grpcapi.Hierarchy/GetParentNode",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).GetParentNode(ctx, req.(*PrimitiveString))
+		return srv.(HierarchyServer).GetParentNode(ctx, req.(*common.PrimitiveString))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1253,7 +1012,7 @@ func _Hierarchy_GetAncestors_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 func _Hierarchy_GetNodeIdByOrigin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Origin)
+	in := new(common.Origin)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1265,7 +1024,7 @@ func _Hierarchy_GetNodeIdByOrigin_Handler(srv interface{}, ctx context.Context, 
 		FullMethod: "/grpcapi.Hierarchy/GetNodeIdByOrigin",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(HierarchyServer).GetNodeIdByOrigin(ctx, req.(*Origin))
+		return srv.(HierarchyServer).GetNodeIdByOrigin(ctx, req.(*common.Origin))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1373,72 +1132,69 @@ var _Hierarchy_serviceDesc = grpc.ServiceDesc{
 	Metadata: "hierarchy/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("hierarchy/grpcapi.proto", fileDescriptor_grpcapi_c4ae82f6008d8567) }
+func init() { proto.RegisterFile("hierarchy/grpcapi.proto", fileDescriptor_grpcapi_13bef9ce6e0159f6) }
 
-var fileDescriptor_grpcapi_c4ae82f6008d8567 = []byte{
-	// 1024 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x56, 0xcd, 0x72, 0xe2, 0xc6,
-	0x13, 0x47, 0x08, 0xf1, 0xd1, 0xc6, 0x06, 0x4f, 0xf9, 0x6f, 0x6b, 0xf9, 0xef, 0x81, 0x28, 0x55,
-	0x59, 0x92, 0xac, 0x49, 0x0a, 0xbb, 0x7c, 0x48, 0x2a, 0x5b, 0x6b, 0xbc, 0x04, 0xab, 0x62, 0x1b,
-	0x4a, 0xd8, 0x7b, 0x75, 0x09, 0x69, 0x02, 0x93, 0x02, 0x49, 0x35, 0x1a, 0x48, 0x71, 0xce, 0x63,
-	0xe4, 0x9a, 0x53, 0x0e, 0x79, 0x8f, 0x3c, 0x4a, 0xde, 0x22, 0xa5, 0x91, 0x34, 0xfa, 0xc0, 0x50,
-	0xd9, 0x9b, 0xba, 0xfb, 0xd7, 0x3d, 0x3d, 0xdd, 0xbf, 0xee, 0x11, 0x9c, 0xcd, 0x09, 0xa6, 0x26,
-	0xb5, 0xe6, 0x9b, 0x6f, 0x66, 0xd4, 0xb3, 0x4c, 0x8f, 0x74, 0x3d, 0xea, 0x32, 0x17, 0x55, 0x22,
-	0x51, 0xbb, 0x85, 0xf2, 0x88, 0x92, 0x19, 0x71, 0xd0, 0x11, 0x14, 0x89, 0xad, 0x4a, 0x6d, 0xa9,
-	0x53, 0x33, 0x8a, 0xc4, 0x46, 0x08, 0x4a, 0x6c, 0xe3, 0x61, 0xb5, 0xc8, 0x35, 0xfc, 0x1b, 0xb5,
-	0xa0, 0xea, 0x51, 0x77, 0x4d, 0x6c, 0x4c, 0x55, 0x99, 0xeb, 0x85, 0xac, 0xfd, 0x21, 0x41, 0xf3,
-	0x1e, 0x9b, 0xfe, 0x8a, 0xe2, 0x25, 0x76, 0xd8, 0xd8, 0x25, 0x0e, 0x43, 0x2a, 0x54, 0x4c, 0x67,
-	0xb6, 0x5a, 0x98, 0x34, 0x8a, 0x1c, 0x8b, 0x81, 0x65, 0x8a, 0x4d, 0x4a, 0x9c, 0x19, 0x8f, 0xa4,
-	0x18, 0xb1, 0x88, 0x3a, 0xd0, 0x58, 0x26, 0x71, 0x1e, 0x83, 0x1c, 0x4a, 0xdc, 0x37, 0xaf, 0x46,
-	0x27, 0xa0, 0xf8, 0x73, 0xf3, 0x67, 0xa6, 0x2a, 0xdc, 0x1e, 0x0a, 0xe8, 0x35, 0xd4, 0xf8, 0xc7,
-	0x84, 0xd8, 0x58, 0x2d, 0x73, 0x4b, 0xa2, 0xd0, 0xfe, 0x92, 0xa0, 0xa1, 0x3b, 0xbe, 0x87, 0x2d,
-	0x46, 0x5c, 0x27, 0xcc, 0xf2, 0x1c, 0xd0, 0xa8, 0x3f, 0x19, 0xdd, 0x0d, 0x1e, 0x07, 0xcf, 0x6b,
-	0x73, 0xb1, 0xc2, 0xfc, 0xd0, 0x30, 0xe1, 0xe3, 0xd8, 0xf2, 0x31, 0x36, 0xa0, 0x6f, 0xa1, 0x96,
-	0xa0, 0x82, 0xd4, 0x8e, 0x7a, 0xa8, 0x1b, 0xd7, 0x57, 0xc0, 0x8c, 0x04, 0x84, 0xda, 0x70, 0xe0,
-	0xac, 0x96, 0x98, 0x12, 0xeb, 0xc9, 0x21, 0x2c, 0x2a, 0x69, 0x5a, 0x15, 0x16, 0xca, 0xff, 0x15,
-	0x53, 0x5f, 0x95, 0xdb, 0x72, 0x58, 0x28, 0x2e, 0x6a, 0xe7, 0x50, 0xbb, 0xf6, 0x7d, 0xcc, 0x1e,
-	0x5c, 0x9b, 0x07, 0xb2, 0x28, 0x61, 0xc4, 0x32, 0x17, 0x84, 0x6d, 0xa2, 0x14, 0xd3, 0x2a, 0xed,
-	0x1f, 0x19, 0x4a, 0x1c, 0x9a, 0xef, 0xe7, 0x09, 0x28, 0x0b, 0x73, 0x8a, 0x17, 0xd1, 0xe9, 0xa1,
-	0x10, 0x04, 0xb4, 0xb1, 0x6f, 0x51, 0xe2, 0x05, 0xe5, 0x88, 0x9a, 0x9a, 0x56, 0x09, 0x1e, 0x94,
-	0x52, 0x3c, 0xc8, 0xa5, 0xa1, 0x6c, 0xa5, 0x11, 0xdc, 0xc7, 0x5f, 0x4d, 0x79, 0x85, 0xc2, 0x16,
-	0xc4, 0x22, 0x7a, 0x03, 0x65, 0x97, 0x33, 0x4e, 0xad, 0xb4, 0xa5, 0xce, 0x41, 0xaf, 0x21, 0x4a,
-	0x17, 0x12, 0xd1, 0x88, 0xcc, 0x41, 0x99, 0xcd, 0xf8, 0xe2, 0x6a, 0x95, 0x63, 0x93, 0x32, 0x8b,
-	0x92, 0x18, 0x09, 0x08, 0x0d, 0xa0, 0xb9, 0xcc, 0x31, 0x50, 0xad, 0x71, 0xc7, 0x57, 0xc2, 0x31,
-	0x4f, 0x51, 0x63, 0xcb, 0x05, 0xf5, 0xa1, 0x41, 0xb2, 0x0c, 0x51, 0x81, 0x47, 0x51, 0x45, 0x94,
-	0x1c, 0x83, 0x8c, 0xbc, 0x03, 0xea, 0x42, 0xd3, 0x9a, 0x93, 0x85, 0x3d, 0xa2, 0x36, 0xa6, 0x0f,
-	0xab, 0xe5, 0x14, 0x53, 0xf5, 0xa0, 0x2d, 0x75, 0xe4, 0x7e, 0x51, 0x95, 0x8c, 0x2d, 0x1b, 0xba,
-	0x80, 0xaa, 0xe7, 0xfa, 0x84, 0x37, 0xa1, 0xce, 0x0f, 0x3b, 0x13, 0x87, 0x8d, 0x29, 0x59, 0x12,
-	0x46, 0xd6, 0x58, 0x77, 0xd8, 0xd5, 0xa5, 0x21, 0x80, 0xda, 0x5b, 0x50, 0x82, 0x7b, 0xfb, 0xe8,
-	0x73, 0x50, 0x9c, 0xe0, 0x43, 0x95, 0xda, 0x72, 0xe7, 0xa0, 0x77, 0x28, 0x5c, 0x79, 0x85, 0x42,
-	0x9b, 0xf6, 0x04, 0x47, 0x43, 0xcc, 0x06, 0x6b, 0xec, 0x30, 0x5f, 0x77, 0xbc, 0x15, 0xe3, 0xf3,
-	0x43, 0x1c, 0x2b, 0xa4, 0xba, 0x6c, 0x84, 0x02, 0x3a, 0x07, 0x65, 0x11, 0x1c, 0xc8, 0x89, 0xb2,
-	0x2b, 0x8f, 0x8b, 0x9e, 0x11, 0xa2, 0xb4, 0x2f, 0xa1, 0x21, 0xc2, 0x8e, 0x56, 0x2c, 0x88, 0x7b,
-	0x0a, 0x65, 0xcc, 0x65, 0x1e, 0xb8, 0x6e, 0x44, 0x92, 0xf6, 0xbb, 0x04, 0x87, 0x13, 0x73, 0x8d,
-	0x83, 0xac, 0xc2, 0x0c, 0x4e, 0xa1, 0xbc, 0xf2, 0x31, 0xd5, 0x63, 0xa2, 0x46, 0x12, 0xfa, 0x0c,
-	0x4a, 0x41, 0xd2, 0x9c, 0x8f, 0x5b, 0xf7, 0xe1, 0x26, 0xbe, 0x8b, 0x4c, 0x8a, 0x1d, 0xa6, 0xdb,
-	0x11, 0xa5, 0x85, 0x8c, 0x2e, 0xa0, 0x1e, 0x7e, 0x87, 0x94, 0xe2, 0xdc, 0x7d, 0x81, 0x69, 0x19,
-	0x90, 0xf6, 0x0b, 0x34, 0x3e, 0xe0, 0x05, 0x66, 0xff, 0x21, 0xbd, 0x53, 0x28, 0x07, 0x39, 0x88,
-	0x93, 0x23, 0x29, 0xc5, 0x6d, 0x79, 0x2f, 0xb7, 0xb5, 0xb7, 0x70, 0x3c, 0xc4, 0xec, 0xda, 0xb1,
-	0xb0, 0xcf, 0x5c, 0x1a, 0xb5, 0xe3, 0x0c, 0x2a, 0x41, 0x9c, 0x67, 0x31, 0xb6, 0x51, 0x58, 0xed,
-	0x1a, 0x50, 0x1a, 0x1d, 0x55, 0xf9, 0xeb, 0x6c, 0xd3, 0xff, 0x97, 0xcc, 0x46, 0x04, 0x4c, 0x37,
-	0xff, 0x6f, 0x09, 0xea, 0x69, 0xfd, 0xd6, 0x7a, 0x48, 0x52, 0x2f, 0xee, 0x1f, 0x4b, 0xb1, 0x47,
-	0xe4, 0x3d, 0x7b, 0xa4, 0xb4, 0x7b, 0x8f, 0x28, 0xa9, 0x3d, 0xb2, 0x7b, 0x4b, 0xa4, 0xbb, 0x5b,
-	0xc9, 0x76, 0x57, 0x7b, 0x03, 0x0d, 0x41, 0xc5, 0x09, 0xe3, 0x6f, 0xc6, 0x09, 0x28, 0x7c, 0xdb,
-	0x46, 0x17, 0x0a, 0x05, 0xed, 0x0b, 0x38, 0xca, 0x72, 0x36, 0x8b, 0x53, 0x76, 0xe0, 0xae, 0x2e,
-	0xb3, 0x38, 0xf9, 0x25, 0x5c, 0x7f, 0xc3, 0xb0, 0x9f, 0xc5, 0xd5, 0x63, 0x5c, 0x03, 0x0e, 0x05,
-	0xee, 0xa3, 0x4b, 0xec, 0xaf, 0x7e, 0x80, 0x5a, 0xf2, 0x7c, 0x1c, 0x40, 0xe5, 0xe1, 0xe9, 0x7e,
-	0x60, 0xe8, 0x37, 0xcd, 0x02, 0x3a, 0x86, 0xc3, 0x89, 0xfe, 0x30, 0xbc, 0x1b, 0x3c, 0xdf, 0xdc,
-	0x8e, 0xf4, 0x9b, 0x41, 0x53, 0x42, 0x4d, 0xa8, 0xdf, 0x3f, 0xdd, 0x3d, 0xea, 0xb1, 0xa6, 0xd8,
-	0xfb, 0x4d, 0x81, 0xda, 0x6d, 0xfc, 0x92, 0xa3, 0x77, 0x50, 0xfd, 0x80, 0xb1, 0x37, 0x0e, 0xee,
-	0x7d, 0xba, 0x3d, 0x9c, 0xc1, 0x81, 0x2d, 0x75, 0x5b, 0x1f, 0x56, 0x4a, 0x2b, 0xa0, 0x4b, 0xa8,
-	0x0c, 0xa3, 0x85, 0xb9, 0x13, 0xd6, 0xca, 0x8e, 0x9c, 0x56, 0x40, 0x57, 0x50, 0x8d, 0xbc, 0xfc,
-	0x3d, 0x6e, 0x47, 0x19, 0x37, 0x5f, 0x2b, 0xa0, 0xef, 0xe1, 0x70, 0x88, 0xd9, 0x4d, 0xb0, 0xef,
-	0x3e, 0xdd, 0xf9, 0x3b, 0xee, 0x3c, 0xe6, 0x8d, 0xff, 0xd4, 0x84, 0x75, 0xa8, 0xa7, 0x87, 0x06,
-	0xb5, 0x04, 0x60, 0x6b, 0xf2, 0x5a, 0xff, 0x7f, 0xd1, 0x16, 0xce, 0x99, 0x56, 0x40, 0xef, 0xf9,
-	0xb4, 0xf2, 0xb5, 0x60, 0xf7, 0x37, 0xd1, 0xff, 0x52, 0x7e, 0x40, 0xf6, 0xd6, 0xfc, 0x1d, 0x54,
-	0xe3, 0xc5, 0x97, 0xea, 0x59, 0x66, 0x17, 0xee, 0xf5, 0x7f, 0x0f, 0x90, 0xec, 0xa6, 0x54, 0x15,
-	0x72, 0x0b, 0xab, 0xb5, 0x83, 0x0f, 0x3c, 0x42, 0x4d, 0xac, 0x69, 0x74, 0x96, 0xbe, 0x6f, 0xea,
-	0x45, 0x48, 0xe5, 0x90, 0xdb, 0xe9, 0x5a, 0xa1, 0xff, 0xfa, 0xcf, 0xe2, 0xab, 0xc9, 0x4f, 0x3f,
-	0x76, 0x07, 0xce, 0x82, 0xcc, 0xe6, 0xac, 0x7b, 0x3d, 0xd6, 0xbb, 0x82, 0x95, 0xd3, 0x32, 0xff,
-	0xb1, 0xbc, 0xf8, 0x37, 0x00, 0x00, 0xff, 0xff, 0x9c, 0xd8, 0x24, 0x92, 0x73, 0x0a, 0x00, 0x00,
+var fileDescriptor_grpcapi_13bef9ce6e0159f6 = []byte{
+	// 963 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x56, 0xdd, 0x6e, 0xe2, 0x46,
+	0x14, 0xc6, 0xfc, 0x73, 0x20, 0x40, 0xa6, 0x2d, 0xf1, 0xd2, 0xbd, 0xa0, 0xae, 0x54, 0xd1, 0x36,
+	0xcb, 0x56, 0xa4, 0x5d, 0xa9, 0x95, 0xb6, 0x6a, 0xc8, 0x52, 0xd6, 0x6a, 0x12, 0x90, 0x49, 0xf6,
+	0x36, 0x32, 0xf6, 0x14, 0x46, 0x82, 0xb1, 0x35, 0x1e, 0x52, 0xe5, 0x55, 0x7a, 0xdd, 0xab, 0x5e,
+	0xf4, 0x39, 0xfa, 0x26, 0xfb, 0x1a, 0xd5, 0xcc, 0xf8, 0x0f, 0x5c, 0xd0, 0xee, 0x15, 0x73, 0x7e,
+	0xe7, 0x9b, 0x73, 0xbe, 0x73, 0x0c, 0x9c, 0xad, 0x08, 0x66, 0x36, 0x73, 0x56, 0x4f, 0x2f, 0x97,
+	0xcc, 0x77, 0x6c, 0x9f, 0x0c, 0x7c, 0xe6, 0x71, 0x0f, 0x55, 0x42, 0xb1, 0xfb, 0x89, 0xe3, 0x6d,
+	0x36, 0x1e, 0x7d, 0xa9, 0x7e, 0x94, 0xd5, 0xf8, 0x4b, 0x83, 0xf6, 0x0d, 0xb6, 0x83, 0x2d, 0xc3,
+	0x1b, 0x4c, 0xf9, 0xcc, 0x23, 0x94, 0x23, 0x1d, 0x2a, 0x36, 0x5d, 0x6e, 0xd7, 0x36, 0xd3, 0xb5,
+	0x9e, 0xd6, 0xaf, 0x59, 0x91, 0x28, 0x2c, 0x0b, 0x6c, 0x33, 0x42, 0x97, 0x7a, 0xa1, 0xa7, 0xf5,
+	0x4b, 0x56, 0x24, 0xa2, 0x3e, 0xb4, 0x36, 0x49, 0x9e, 0xbb, 0x27, 0x1f, 0xeb, 0x45, 0x19, 0xbb,
+	0xaf, 0x46, 0x9f, 0x42, 0x29, 0x58, 0xd9, 0xbf, 0x73, 0xbd, 0x24, 0xed, 0x4a, 0x40, 0xcf, 0xa1,
+	0x26, 0x0f, 0x73, 0xe2, 0x62, 0xbd, 0x2c, 0x2d, 0x89, 0xc2, 0xf8, 0x47, 0x83, 0x96, 0x49, 0x03,
+	0x1f, 0x3b, 0x9c, 0x78, 0x54, 0xa1, 0x7c, 0x01, 0x68, 0x3a, 0x9a, 0x4f, 0xaf, 0xc7, 0x77, 0xe3,
+	0x87, 0x47, 0x7b, 0xbd, 0xc5, 0xf2, 0x52, 0x05, 0xf8, 0x34, 0xb2, 0xbc, 0x8b, 0x0c, 0xe8, 0x3b,
+	0xa8, 0x25, 0x5e, 0x02, 0x5a, 0x73, 0x88, 0x06, 0x51, 0xa9, 0x62, 0x37, 0x2b, 0x71, 0x42, 0x3d,
+	0xa8, 0xd3, 0xed, 0x06, 0x33, 0xe2, 0xdc, 0x53, 0xc2, 0xf5, 0xbc, 0xcc, 0x9c, 0x56, 0xa9, 0x42,
+	0x05, 0x7f, 0x60, 0x16, 0xe8, 0x85, 0x5e, 0x41, 0x15, 0x4a, 0x8a, 0xc6, 0x0b, 0xa8, 0x5d, 0x06,
+	0x01, 0xe6, 0xb7, 0x9e, 0x2b, 0x13, 0x39, 0x8c, 0x70, 0xe2, 0xd8, 0x6b, 0xc2, 0x9f, 0x42, 0x88,
+	0x69, 0x95, 0xf1, 0xbe, 0x00, 0x45, 0xe9, 0xda, 0x84, 0x3c, 0x71, 0x43, 0x8f, 0x3c, 0x71, 0x45,
+	0xb1, 0xd6, 0xf6, 0x02, 0xaf, 0xc3, 0xdb, 0x95, 0x20, 0x12, 0xba, 0x38, 0x70, 0x18, 0xf1, 0x45,
+	0x39, 0x64, 0x2b, 0x6a, 0x56, 0x5a, 0x85, 0x10, 0x14, 0x79, 0xd2, 0x03, 0x79, 0xde, 0x87, 0x51,
+	0xca, 0xc0, 0x10, 0xef, 0x09, 0xb6, 0x0b, 0x59, 0x21, 0xd5, 0x82, 0x48, 0x44, 0x5f, 0x41, 0xd9,
+	0x63, 0x64, 0x49, 0xa8, 0x5e, 0xe9, 0x69, 0xfd, 0xfa, 0xb0, 0x39, 0x08, 0x69, 0x34, 0x95, 0x5a,
+	0x2b, 0xb4, 0x8a, 0x2a, 0xdb, 0xd1, 0xbb, 0xf5, 0xaa, 0x74, 0x4d, 0xaa, 0x1c, 0x57, 0xc4, 0x4a,
+	0x9c, 0xd0, 0x18, 0xda, 0x9b, 0x3d, 0x02, 0xea, 0x35, 0x19, 0xf8, 0x2c, 0x0e, 0xdc, 0x67, 0xa8,
+	0x95, 0x09, 0x41, 0x23, 0x68, 0x91, 0x5d, 0x82, 0xe8, 0x20, 0xb3, 0xe8, 0x71, 0x96, 0x3d, 0x02,
+	0x59, 0xfb, 0x01, 0x68, 0x00, 0x6d, 0x67, 0x45, 0xd6, 0xee, 0x94, 0xb9, 0x98, 0xdd, 0x6e, 0x37,
+	0x0b, 0xcc, 0xf4, 0x7a, 0x4f, 0xeb, 0x17, 0x46, 0x79, 0x5d, 0xb3, 0x32, 0x36, 0x34, 0x84, 0xaa,
+	0xef, 0x05, 0x44, 0xf6, 0xa0, 0x21, 0x2f, 0xeb, 0x44, 0x65, 0x99, 0x31, 0xb2, 0x21, 0x9c, 0x3c,
+	0x62, 0x93, 0xf2, 0x57, 0xdf, 0x5b, 0xb1, 0x9f, 0x71, 0x0e, 0x25, 0xf1, 0xec, 0x00, 0x7d, 0x09,
+	0x25, 0x2a, 0x0e, 0xba, 0xd6, 0x2b, 0xf4, 0xeb, 0xc3, 0x93, 0x18, 0xa6, 0x2c, 0x90, 0xb2, 0x19,
+	0x77, 0xd0, 0x9c, 0x60, 0x3e, 0x7e, 0xc4, 0x94, 0x07, 0x26, 0xf5, 0xb7, 0x5c, 0x4e, 0x0f, 0xa1,
+	0x8e, 0x22, 0x7a, 0xc1, 0x52, 0x02, 0x3a, 0x87, 0xd2, 0x5a, 0x5c, 0x28, 0x69, 0x72, 0x00, 0xc6,
+	0xc5, 0xd0, 0x52, 0x4e, 0xc6, 0xd7, 0xd0, 0x8a, 0xb3, 0x4e, 0xb7, 0x5c, 0xa4, 0xed, 0x40, 0x19,
+	0x4b, 0x59, 0xe6, 0x6d, 0x58, 0xa1, 0x64, 0xfc, 0xa9, 0xc1, 0xc9, 0xdc, 0x7e, 0xc4, 0x02, 0x94,
+	0x02, 0xd0, 0x81, 0xf2, 0x36, 0xc0, 0xcc, 0x8c, 0x58, 0x1a, 0x4a, 0xe8, 0x0b, 0x28, 0x0a, 0xcc,
+	0x92, 0x8c, 0x99, 0xe7, 0x48, 0x13, 0xea, 0x42, 0xd5, 0xb7, 0x19, 0xa6, 0xdc, 0x74, 0x43, 0x3e,
+	0xc7, 0x32, 0x1a, 0x42, 0x43, 0x9d, 0x15, 0xa1, 0x24, 0x71, 0xb3, 0x34, 0xdb, 0xf1, 0x31, 0x08,
+	0xb4, 0xde, 0xe0, 0x35, 0xe6, 0x1f, 0x80, 0xae, 0x03, 0x65, 0x01, 0x21, 0xbe, 0x38, 0x94, 0x52,
+	0xbc, 0x2e, 0x1c, 0xe3, 0xb5, 0x71, 0x0e, 0xa7, 0x13, 0xcc, 0x2f, 0xa9, 0x83, 0x03, 0xee, 0xb1,
+	0xb0, 0x17, 0x67, 0x50, 0x11, 0x69, 0x1e, 0xe2, 0x89, 0x0d, 0xb3, 0x1a, 0x97, 0x80, 0xd2, 0xde,
+	0x61, 0x8d, 0xbf, 0xdd, 0xed, 0xf8, 0x67, 0xc9, 0x5c, 0x84, 0x8e, 0xe9, 0xce, 0xff, 0xab, 0x41,
+	0x23, 0xad, 0xcf, 0x6c, 0x86, 0x04, 0x79, 0xfe, 0xe8, 0x44, 0xc6, 0x1b, 0xa4, 0x70, 0x64, 0x83,
+	0x14, 0x0f, 0x6f, 0x90, 0x52, 0x6a, 0x83, 0x1c, 0xde, 0x0f, 0xe9, 0xd6, 0x56, 0x76, 0x5b, 0xfb,
+	0xcd, 0x6b, 0xa8, 0x25, 0x6b, 0xb8, 0x0e, 0x95, 0xdb, 0xfb, 0x9b, 0xb1, 0x65, 0x5e, 0xb5, 0x73,
+	0xe8, 0x14, 0x4e, 0xe6, 0xe6, 0xed, 0xe4, 0x7a, 0xfc, 0x70, 0xf5, 0x76, 0x6a, 0x5e, 0x8d, 0xdb,
+	0x1a, 0x6a, 0x43, 0xe3, 0xe6, 0xfe, 0xfa, 0xce, 0x8c, 0x34, 0xf9, 0xe1, 0xfb, 0x22, 0xd4, 0xde,
+	0x46, 0x1f, 0x37, 0x74, 0x01, 0xd5, 0x37, 0x18, 0xfb, 0x33, 0xf1, 0xcd, 0x69, 0x44, 0x4f, 0x7e,
+	0xe7, 0x11, 0xb7, 0x7b, 0x96, 0x21, 0xfd, 0x9c, 0x8b, 0x4f, 0x93, 0x91, 0x43, 0x17, 0x50, 0x99,
+	0x84, 0xeb, 0xe6, 0x90, 0x57, 0x77, 0x97, 0xb1, 0x46, 0x0e, 0xfd, 0x00, 0xd5, 0x30, 0x28, 0x38,
+	0x1c, 0xd5, 0xdc, 0x89, 0x0a, 0x8c, 0x1c, 0xfa, 0x09, 0x4e, 0x26, 0x98, 0x5f, 0x89, 0x5d, 0xf1,
+	0xd1, 0xb1, 0x3f, 0xca, 0xd8, 0x99, 0x2c, 0xdc, 0x47, 0xa2, 0x35, 0xa1, 0x91, 0xa6, 0x1c, 0xea,
+	0xc6, 0x0e, 0x19, 0xde, 0x76, 0x3f, 0xff, 0x5f, 0x9b, 0x62, 0xa9, 0x91, 0x43, 0x3f, 0x4b, 0xae,
+	0xcb, 0x99, 0x72, 0x47, 0x4f, 0x8a, 0x4e, 0x68, 0x8f, 0x5e, 0xc7, 0xaa, 0xfd, 0x1a, 0xaa, 0xd1,
+	0xca, 0x40, 0x9d, 0xf8, 0xaa, 0x9d, 0x2d, 0x72, 0x2c, 0xfc, 0x15, 0x40, 0x32, 0xd5, 0x28, 0x59,
+	0xdf, 0x7b, 0xa3, 0xde, 0xdd, 0xe9, 0xbe, 0x91, 0x43, 0xbf, 0x40, 0x2d, 0xde, 0x6a, 0xe8, 0x2c,
+	0xfd, 0xc4, 0xd4, 0xfe, 0xec, 0xea, 0x59, 0x43, 0xf4, 0xf0, 0xd1, 0xf3, 0xbf, 0xf3, 0xcf, 0xe6,
+	0xbf, 0xfd, 0x3a, 0x18, 0xd3, 0x35, 0x59, 0xae, 0xf8, 0xe0, 0x72, 0x66, 0x0e, 0x62, 0xe6, 0x2d,
+	0xca, 0xf2, 0x1f, 0xd3, 0xc5, 0x7f, 0x01, 0x00, 0x00, 0xff, 0xff, 0x0a, 0xee, 0x7b, 0x43, 0x6a,
+	0x09, 0x00, 0x00,
 }

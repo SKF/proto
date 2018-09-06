@@ -6,6 +6,7 @@ package grpcapi
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
+import common "github.com/SKF/proto/common"
 
 import (
 	context "golang.org/x/net/context"
@@ -35,7 +36,7 @@ func (m *GetHierarchyRelationsInput) Reset()         { *m = GetHierarchyRelation
 func (m *GetHierarchyRelationsInput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsInput) ProtoMessage()    {}
 func (*GetHierarchyRelationsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{0}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{0}
 }
 func (m *GetHierarchyRelationsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsInput.Unmarshal(m, b)
@@ -73,7 +74,7 @@ func (m *GetHierarchyRelationsOutput) Reset()         { *m = GetHierarchyRelatio
 func (m *GetHierarchyRelationsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsOutput) ProtoMessage()    {}
 func (*GetHierarchyRelationsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{1}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{1}
 }
 func (m *GetHierarchyRelationsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsOutput.Unmarshal(m, b)
@@ -112,7 +113,7 @@ func (m *CheckAuthenticationInput) Reset()         { *m = CheckAuthenticationInp
 func (m *CheckAuthenticationInput) String() string { return proto.CompactTextString(m) }
 func (*CheckAuthenticationInput) ProtoMessage()    {}
 func (*CheckAuthenticationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{2}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{2}
 }
 func (m *CheckAuthenticationInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CheckAuthenticationInput.Unmarshal(m, b)
@@ -147,18 +148,18 @@ func (m *CheckAuthenticationInput) GetMethodArn() string {
 }
 
 type GetEventRecordsInput struct {
-	Since                int64           `protobuf:"varint,1,opt,name=since,proto3" json:"since,omitempty"`
-	Limit                *PrimitiveInt32 `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	Since                int64                  `protobuf:"varint,1,opt,name=since,proto3" json:"since,omitempty"`
+	Limit                *common.PrimitiveInt32 `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *GetEventRecordsInput) Reset()         { *m = GetEventRecordsInput{} }
 func (m *GetEventRecordsInput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsInput) ProtoMessage()    {}
 func (*GetEventRecordsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{3}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{3}
 }
 func (m *GetEventRecordsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsInput.Unmarshal(m, b)
@@ -185,7 +186,7 @@ func (m *GetEventRecordsInput) GetSince() int64 {
 	return 0
 }
 
-func (m *GetEventRecordsInput) GetLimit() *PrimitiveInt32 {
+func (m *GetEventRecordsInput) GetLimit() *common.PrimitiveInt32 {
 	if m != nil {
 		return m.Limit
 	}
@@ -203,7 +204,7 @@ func (m *GetEventRecordsOutput) Reset()         { *m = GetEventRecordsOutput{} }
 func (m *GetEventRecordsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsOutput) ProtoMessage()    {}
 func (*GetEventRecordsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{4}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{4}
 }
 func (m *GetEventRecordsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsOutput.Unmarshal(m, b)
@@ -247,7 +248,7 @@ func (m *User) Reset()         { *m = User{} }
 func (m *User) String() string { return proto.CompactTextString(m) }
 func (*User) ProtoMessage()    {}
 func (*User) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{5}
+	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{5}
 }
 func (m *User) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_User.Unmarshal(m, b)
@@ -316,189 +317,6 @@ func (m *User) GetUserRoles() string {
 	return ""
 }
 
-// Primitive types
-type PrimitiveString struct {
-	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveString) Reset()         { *m = PrimitiveString{} }
-func (m *PrimitiveString) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveString) ProtoMessage()    {}
-func (*PrimitiveString) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{6}
-}
-func (m *PrimitiveString) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveString.Unmarshal(m, b)
-}
-func (m *PrimitiveString) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveString.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveString) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveString.Merge(dst, src)
-}
-func (m *PrimitiveString) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveString.Size(m)
-}
-func (m *PrimitiveString) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveString.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveString proto.InternalMessageInfo
-
-func (m *PrimitiveString) GetValue() string {
-	if m != nil {
-		return m.Value
-	}
-	return ""
-}
-
-type PrimitiveInt32 struct {
-	Value                int32    `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveInt32) Reset()         { *m = PrimitiveInt32{} }
-func (m *PrimitiveInt32) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveInt32) ProtoMessage()    {}
-func (*PrimitiveInt32) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{7}
-}
-func (m *PrimitiveInt32) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveInt32.Unmarshal(m, b)
-}
-func (m *PrimitiveInt32) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveInt32.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveInt32) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveInt32.Merge(dst, src)
-}
-func (m *PrimitiveInt32) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveInt32.Size(m)
-}
-func (m *PrimitiveInt32) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveInt32.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveInt32 proto.InternalMessageInfo
-
-func (m *PrimitiveInt32) GetValue() int32 {
-	if m != nil {
-		return m.Value
-	}
-	return 0
-}
-
-type PrimitiveBool struct {
-	Value                bool     `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveBool) Reset()         { *m = PrimitiveBool{} }
-func (m *PrimitiveBool) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveBool) ProtoMessage()    {}
-func (*PrimitiveBool) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{8}
-}
-func (m *PrimitiveBool) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveBool.Unmarshal(m, b)
-}
-func (m *PrimitiveBool) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveBool.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveBool) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveBool.Merge(dst, src)
-}
-func (m *PrimitiveBool) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveBool.Size(m)
-}
-func (m *PrimitiveBool) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveBool.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveBool proto.InternalMessageInfo
-
-func (m *PrimitiveBool) GetValue() bool {
-	if m != nil {
-		return m.Value
-	}
-	return false
-}
-
-type PrimitiveBytes struct {
-	Value                []byte   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveBytes) Reset()         { *m = PrimitiveBytes{} }
-func (m *PrimitiveBytes) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveBytes) ProtoMessage()    {}
-func (*PrimitiveBytes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{9}
-}
-func (m *PrimitiveBytes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveBytes.Unmarshal(m, b)
-}
-func (m *PrimitiveBytes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveBytes.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveBytes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveBytes.Merge(dst, src)
-}
-func (m *PrimitiveBytes) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveBytes.Size(m)
-}
-func (m *PrimitiveBytes) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveBytes.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveBytes proto.InternalMessageInfo
-
-func (m *PrimitiveBytes) GetValue() []byte {
-	if m != nil {
-		return m.Value
-	}
-	return nil
-}
-
-type PrimitiveVoid struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PrimitiveVoid) Reset()         { *m = PrimitiveVoid{} }
-func (m *PrimitiveVoid) String() string { return proto.CompactTextString(m) }
-func (*PrimitiveVoid) ProtoMessage()    {}
-func (*PrimitiveVoid) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fb9b75323b01a2e3, []int{10}
-}
-func (m *PrimitiveVoid) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrimitiveVoid.Unmarshal(m, b)
-}
-func (m *PrimitiveVoid) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrimitiveVoid.Marshal(b, m, deterministic)
-}
-func (dst *PrimitiveVoid) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrimitiveVoid.Merge(dst, src)
-}
-func (m *PrimitiveVoid) XXX_Size() int {
-	return xxx_messageInfo_PrimitiveVoid.Size(m)
-}
-func (m *PrimitiveVoid) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrimitiveVoid.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrimitiveVoid proto.InternalMessageInfo
-
 func init() {
 	proto.RegisterType((*GetHierarchyRelationsInput)(nil), "grpcapi.GetHierarchyRelationsInput")
 	proto.RegisterType((*GetHierarchyRelationsOutput)(nil), "grpcapi.GetHierarchyRelationsOutput")
@@ -506,11 +324,6 @@ func init() {
 	proto.RegisterType((*GetEventRecordsInput)(nil), "grpcapi.GetEventRecordsInput")
 	proto.RegisterType((*GetEventRecordsOutput)(nil), "grpcapi.GetEventRecordsOutput")
 	proto.RegisterType((*User)(nil), "grpcapi.User")
-	proto.RegisterType((*PrimitiveString)(nil), "grpcapi.PrimitiveString")
-	proto.RegisterType((*PrimitiveInt32)(nil), "grpcapi.PrimitiveInt32")
-	proto.RegisterType((*PrimitiveBool)(nil), "grpcapi.PrimitiveBool")
-	proto.RegisterType((*PrimitiveBytes)(nil), "grpcapi.PrimitiveBytes")
-	proto.RegisterType((*PrimitiveVoid)(nil), "grpcapi.PrimitiveVoid")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -525,7 +338,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type IAMClient interface {
-	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error)
+	DeepPing(ctx context.Context, in *common.Void, opts ...grpc.CallOption) (*common.PrimitiveString, error)
 	CheckAuthentication(ctx context.Context, in *CheckAuthenticationInput, opts ...grpc.CallOption) (*User, error)
 	GetHierarchyRelations(ctx context.Context, in *GetHierarchyRelationsInput, opts ...grpc.CallOption) (*GetHierarchyRelationsOutput, error)
 	GetEventRecords(ctx context.Context, in *GetEventRecordsInput, opts ...grpc.CallOption) (*GetEventRecordsOutput, error)
@@ -539,8 +352,8 @@ func NewIAMClient(cc *grpc.ClientConn) IAMClient {
 	return &iAMClient{cc}
 }
 
-func (c *iAMClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error) {
-	out := new(PrimitiveString)
+func (c *iAMClient) DeepPing(ctx context.Context, in *common.Void, opts ...grpc.CallOption) (*common.PrimitiveString, error) {
+	out := new(common.PrimitiveString)
 	err := c.cc.Invoke(ctx, "/grpcapi.IAM/DeepPing", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -577,7 +390,7 @@ func (c *iAMClient) GetEventRecords(ctx context.Context, in *GetEventRecordsInpu
 
 // IAMServer is the server API for IAM service.
 type IAMServer interface {
-	DeepPing(context.Context, *PrimitiveVoid) (*PrimitiveString, error)
+	DeepPing(context.Context, *common.Void) (*common.PrimitiveString, error)
 	CheckAuthentication(context.Context, *CheckAuthenticationInput) (*User, error)
 	GetHierarchyRelations(context.Context, *GetHierarchyRelationsInput) (*GetHierarchyRelationsOutput, error)
 	GetEventRecords(context.Context, *GetEventRecordsInput) (*GetEventRecordsOutput, error)
@@ -588,7 +401,7 @@ func RegisterIAMServer(s *grpc.Server, srv IAMServer) {
 }
 
 func _IAM_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrimitiveVoid)
+	in := new(common.Void)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -600,7 +413,7 @@ func _IAM_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interf
 		FullMethod: "/grpcapi.IAM/DeepPing",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).DeepPing(ctx, req.(*PrimitiveVoid))
+		return srv.(IAMServer).DeepPing(ctx, req.(*common.Void))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -684,43 +497,40 @@ var _IAM_serviceDesc = grpc.ServiceDesc{
 	Metadata: "iam/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_fb9b75323b01a2e3) }
+func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_fcc05907c15edaec) }
 
-var fileDescriptor_grpcapi_fb9b75323b01a2e3 = []byte{
-	// 558 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x54, 0x4d, 0x6f, 0xd3, 0x40,
-	0x10, 0x6d, 0x92, 0xa6, 0x49, 0x87, 0x36, 0x11, 0xdb, 0x42, 0x8d, 0x0b, 0x55, 0x31, 0x50, 0x7a,
-	0xc1, 0x88, 0x54, 0x48, 0x88, 0x03, 0x92, 0x43, 0x43, 0xb1, 0x50, 0x21, 0x72, 0x04, 0x17, 0x0e,
-	0xd5, 0xe2, 0x1d, 0x92, 0x55, 0xec, 0xdd, 0x68, 0xbd, 0x8e, 0xd4, 0xbf, 0xc4, 0x4f, 0x41, 0xfc,
-	0x28, 0xb4, 0x76, 0x6c, 0xf2, 0xc9, 0xcd, 0xef, 0xcd, 0x9b, 0xb7, 0x3b, 0xb3, 0x33, 0x86, 0xbb,
-	0x9c, 0xc6, 0x2f, 0x87, 0x6a, 0x12, 0xd2, 0x09, 0x77, 0x27, 0x4a, 0x6a, 0x49, 0x1a, 0x33, 0xe8,
-	0xbc, 0x06, 0xfb, 0x0a, 0xf5, 0x47, 0x8e, 0x8a, 0xaa, 0x70, 0x74, 0x1b, 0x60, 0x44, 0x35, 0x97,
-	0x22, 0xf1, 0xc5, 0x24, 0xd5, 0xe4, 0x08, 0x1a, 0x69, 0x82, 0xea, 0x86, 0x33, 0xab, 0x72, 0x5a,
-	0x39, 0xdf, 0x0d, 0x76, 0x0c, 0xf4, 0x99, 0xf3, 0x06, 0x8e, 0xd7, 0xa6, 0x7d, 0x49, 0xb5, 0xc9,
-	0x7b, 0x00, 0x4d, 0x21, 0x19, 0xde, 0x70, 0x96, 0x58, 0x95, 0xd3, 0xda, 0xf9, 0x6e, 0xd0, 0x30,
-	0xd8, 0x67, 0x89, 0xf3, 0x19, 0xac, 0xf7, 0x23, 0x0c, 0xc7, 0x5e, 0xaa, 0x47, 0x28, 0x34, 0x0f,
-	0xb3, 0xc4, 0xfc, 0xb8, 0x43, 0xa8, 0x6b, 0x39, 0x46, 0x31, 0x3b, 0x2c, 0x07, 0xe4, 0x21, 0xec,
-	0xc6, 0xa8, 0x47, 0x92, 0x79, 0x4a, 0x58, 0xd5, 0x2c, 0xf2, 0x8f, 0x70, 0xbe, 0xc3, 0xe1, 0x15,
-	0xea, 0xde, 0x14, 0x85, 0x0e, 0x30, 0x94, 0x8a, 0x25, 0xa5, 0x57, 0xc2, 0x45, 0x88, 0x99, 0x57,
-	0x2d, 0xc8, 0x01, 0x79, 0x01, 0xf5, 0x88, 0xc7, 0x5c, 0x67, 0x3e, 0x77, 0x3a, 0x47, 0x6e, 0xd1,
-	0x96, 0xbe, 0x32, 0x34, 0x9f, 0xa2, 0x2f, 0xf4, 0x45, 0x27, 0xc8, 0x55, 0xce, 0x2b, 0xb8, 0xb7,
-	0x64, 0x3e, 0x2b, 0xd0, 0x82, 0x86, 0xca, 0x89, 0xcc, 0x7f, 0x2f, 0x28, 0xa0, 0xf3, 0xa7, 0x02,
-	0xdb, 0x5f, 0x13, 0x54, 0xa4, 0x05, 0xd5, 0xb2, 0x6d, 0x55, 0xce, 0xcc, 0x85, 0x30, 0xa6, 0x3c,
-	0x9a, 0x95, 0x90, 0x03, 0x72, 0x06, 0x2d, 0x4c, 0x23, 0xea, 0x0d, 0x15, 0x22, 0xbb, 0xa4, 0x1a,
-	0xad, 0x5a, 0x16, 0x5e, 0x62, 0x4d, 0x13, 0xa6, 0x34, 0xe2, 0xac, 0x97, 0x46, 0xd4, 0xda, 0xce,
-	0x9b, 0x50, 0x12, 0xc4, 0x86, 0xa6, 0x79, 0x18, 0x41, 0x63, 0xb4, 0xea, 0x59, 0xb0, 0xc4, 0xe4,
-	0x04, 0xc0, 0x7c, 0x0f, 0x34, 0xd5, 0x69, 0x62, 0xed, 0x64, 0xd1, 0x39, 0xc6, 0x38, 0x1b, 0x14,
-	0xc8, 0x08, 0x13, 0xab, 0x91, 0x3b, 0x97, 0x84, 0xf3, 0x1c, 0xda, 0x65, 0x6b, 0x06, 0x5a, 0x71,
-	0x31, 0x34, 0x85, 0x4c, 0x69, 0x94, 0x62, 0xf1, 0x4a, 0x19, 0x70, 0xce, 0xa0, 0xb5, 0xd8, 0xc3,
-	0x45, 0x5d, 0xbd, 0xd0, 0x3d, 0x83, 0xfd, 0x52, 0xd7, 0x95, 0x32, 0x5a, 0x94, 0x35, 0xd7, 0xd9,
-	0x75, 0x6f, 0x35, 0x26, 0x8b, 0xba, 0xbd, 0x42, 0xd7, 0x9e, 0xb3, 0xfb, 0x26, 0x39, 0xeb, 0xfc,
-	0xae, 0x42, 0xcd, 0xf7, 0xae, 0xc9, 0x3b, 0x68, 0x5e, 0x22, 0x4e, 0xfa, 0xe6, 0xc6, 0xf7, 0x57,
-	0x9f, 0xd9, 0x68, 0x6d, 0x6b, 0x95, 0xcf, 0x6b, 0x74, 0xb6, 0x88, 0x0f, 0x07, 0x6b, 0xe6, 0x94,
-	0x3c, 0x2e, 0x53, 0x36, 0x4d, 0xb1, 0xbd, 0x5f, 0x4a, 0xcc, 0x1c, 0x38, 0x5b, 0x84, 0x65, 0x53,
-	0xb4, 0xba, 0x2c, 0xe4, 0x49, 0xa9, 0xdc, 0xbc, 0x83, 0xf6, 0xd3, 0xff, 0x8b, 0xf2, 0x81, 0x74,
-	0xb6, 0x48, 0x00, 0xed, 0xa5, 0x59, 0x25, 0x8f, 0xe6, 0x53, 0x57, 0x56, 0xc4, 0x3e, 0xd9, 0x14,
-	0x2e, 0x3c, 0xbb, 0x6f, 0xe1, 0x38, 0x94, 0xb1, 0x9b, 0x8c, 0x7f, 0xba, 0x28, 0x22, 0x3e, 0x1c,
-	0x69, 0x97, 0xd3, 0xb8, 0x48, 0xeb, 0xd6, 0x38, 0x8d, 0xfb, 0x95, 0x5f, 0xd5, 0x83, 0xc1, 0xa7,
-	0x0f, 0x6e, 0x6f, 0x26, 0xf0, 0xfa, 0xbe, 0xeb, 0x7b, 0xd7, 0x3f, 0x76, 0xb2, 0x3f, 0xcd, 0xc5,
-	0xdf, 0x00, 0x00, 0x00, 0xff, 0xff, 0x5d, 0x4d, 0x12, 0xcb, 0x7e, 0x04, 0x00, 0x00,
+var fileDescriptor_grpcapi_fcc05907c15edaec = []byte{
+	// 497 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x53, 0xdd, 0x6e, 0xd3, 0x4c,
+	0x10, 0xcd, 0x4f, 0xf3, 0x37, 0x5f, 0xbf, 0x22, 0x36, 0xa5, 0x35, 0x06, 0xaa, 0x62, 0x10, 0xea,
+	0x05, 0x72, 0x45, 0x22, 0x24, 0x6e, 0x0d, 0x0d, 0xc5, 0x42, 0x85, 0xc8, 0x11, 0x5c, 0x70, 0x53,
+	0x2d, 0xde, 0x51, 0xb2, 0xaa, 0xbd, 0x1b, 0xad, 0xd7, 0x91, 0x78, 0x25, 0x5e, 0x82, 0x17, 0xe0,
+	0xa1, 0xd0, 0xee, 0x3a, 0xa6, 0x4a, 0x1a, 0xae, 0xec, 0x73, 0xce, 0xcc, 0x59, 0xef, 0x99, 0x31,
+	0xdc, 0xe7, 0x34, 0x3f, 0x9f, 0xab, 0x65, 0x4a, 0x97, 0x3c, 0x5c, 0x2a, 0xa9, 0x25, 0xe9, 0x55,
+	0xd0, 0x1f, 0xa6, 0x32, 0xcf, 0xa5, 0x38, 0x77, 0x0f, 0xa7, 0x06, 0xaf, 0xc1, 0xbf, 0x44, 0xfd,
+	0x81, 0xa3, 0xa2, 0x2a, 0x5d, 0xfc, 0x48, 0x30, 0xa3, 0x9a, 0x4b, 0x51, 0xc4, 0x62, 0x59, 0x6a,
+	0x72, 0x0c, 0xbd, 0xb2, 0x40, 0x75, 0xcd, 0x99, 0xd7, 0x3c, 0x6d, 0x9e, 0x0d, 0x92, 0xae, 0x81,
+	0x31, 0x0b, 0xde, 0xc0, 0xa3, 0x3b, 0xdb, 0x3e, 0x97, 0xda, 0xf4, 0x3d, 0x84, 0xbe, 0x90, 0x0c,
+	0xaf, 0x39, 0x2b, 0xbc, 0xe6, 0x69, 0xfb, 0x6c, 0x90, 0xf4, 0x0c, 0x8e, 0x59, 0x11, 0x7c, 0x02,
+	0xef, 0xdd, 0x02, 0xd3, 0x9b, 0xa8, 0xd4, 0x0b, 0x14, 0x9a, 0xa7, 0xb6, 0xd1, 0x1d, 0x77, 0x08,
+	0x1d, 0x2d, 0x6f, 0x50, 0x54, 0x87, 0x39, 0x40, 0x1e, 0xc3, 0x20, 0x47, 0xbd, 0x90, 0x2c, 0x52,
+	0xc2, 0x6b, 0x59, 0xe5, 0x2f, 0x11, 0x7c, 0x83, 0xc3, 0x4b, 0xd4, 0x93, 0x15, 0x0a, 0x9d, 0x60,
+	0x2a, 0x15, 0x2b, 0x6a, 0xaf, 0x82, 0x8b, 0x14, 0xad, 0x57, 0x3b, 0x71, 0x80, 0xbc, 0x84, 0x4e,
+	0xc6, 0x73, 0xae, 0xad, 0xcf, 0x7f, 0xa3, 0xa3, 0xb0, 0x0a, 0x63, 0xaa, 0x0c, 0xcb, 0x57, 0x18,
+	0x0b, 0x3d, 0x1e, 0x25, 0xae, 0x28, 0x78, 0x05, 0x0f, 0x36, 0xbc, 0xab, 0xfb, 0x79, 0xd0, 0x53,
+	0x8e, 0xb0, 0xf6, 0xfb, 0xc9, 0x1a, 0x06, 0xbf, 0x9b, 0xb0, 0xf7, 0xa5, 0x40, 0x45, 0x0e, 0xa0,
+	0x55, 0xa7, 0xd6, 0xe2, 0xcc, 0x7c, 0x0f, 0xe6, 0x94, 0x67, 0xd5, 0x0d, 0x1c, 0x20, 0x2f, 0xe0,
+	0x00, 0xcb, 0x8c, 0x46, 0x73, 0x85, 0xc8, 0x2e, 0xa8, 0x46, 0xaf, 0x6d, 0xe5, 0x0d, 0xd6, 0x64,
+	0xb0, 0xa2, 0x19, 0x67, 0x93, 0x32, 0xa3, 0xde, 0x9e, 0xcb, 0xa0, 0x26, 0x88, 0x0f, 0x7d, 0x33,
+	0x17, 0x41, 0x73, 0xf4, 0x3a, 0x56, 0xac, 0x31, 0x39, 0x01, 0x30, 0xef, 0x33, 0x4d, 0x75, 0x59,
+	0x78, 0x5d, 0xab, 0xde, 0x62, 0x8c, 0xb3, 0x41, 0x89, 0xcc, 0xb0, 0xf0, 0x7a, 0xce, 0xb9, 0x26,
+	0x46, 0xbf, 0x5a, 0xd0, 0x8e, 0xa3, 0x2b, 0x32, 0x86, 0xfe, 0x05, 0xe2, 0x72, 0xca, 0xc5, 0x9c,
+	0xec, 0xaf, 0x43, 0xfb, 0x2a, 0x39, 0xf3, 0x8f, 0xb7, 0x22, 0x9c, 0x69, 0xc5, 0xc5, 0x3c, 0x68,
+	0x90, 0x18, 0x86, 0x77, 0x8c, 0x9a, 0x3c, 0x0d, 0xd7, 0x0b, 0xba, 0x6b, 0x11, 0xfc, 0xff, 0xeb,
+	0x12, 0x93, 0x65, 0xd0, 0x20, 0xcc, 0x4e, 0x62, 0x7b, 0xdf, 0xc8, 0xb3, 0xba, 0x72, 0xf7, 0x1a,
+	0xfb, 0xcf, 0xff, 0x5d, 0xe4, 0x86, 0x1a, 0x34, 0x48, 0x02, 0xf7, 0x36, 0xe6, 0x4d, 0x9e, 0xdc,
+	0x6e, 0xdd, 0xda, 0x32, 0xff, 0x64, 0x97, 0xbc, 0xf6, 0x7c, 0x7b, 0xf4, 0xb3, 0x35, 0x9c, 0x7d,
+	0x7c, 0x1f, 0x4e, 0x44, 0xc6, 0xe7, 0x0b, 0x1d, 0x46, 0xd3, 0x38, 0x8c, 0xa3, 0xab, 0xef, 0x5d,
+	0xfb, 0xff, 0x8d, 0xff, 0x04, 0x00, 0x00, 0xff, 0xff, 0x4f, 0xa9, 0x9a, 0x46, 0xb2, 0x03, 0x00,
+	0x00,
 }
