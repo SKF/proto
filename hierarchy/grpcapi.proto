@@ -1,30 +1,25 @@
 syntax = "proto3";
+package grpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.Hierarchy";
 
-package grpcapi;
+import "common/common.proto";
 
 service Hierarchy {
-  rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
+  rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
-  rpc GetNode (PrimitiveString) returns (Node) {}
-  rpc GetNodes (PrimitiveString) returns (Nodes) {}
-  rpc GetChildNodes (PrimitiveString) returns (Nodes) {}
-  rpc GetParentNode (PrimitiveString) returns (Node) {}
+  rpc GetNode (common.PrimitiveString) returns (Node) {}
+  rpc GetNodes (common.PrimitiveString) returns (Nodes) {}
+  rpc GetChildNodes (common.PrimitiveString) returns (Nodes) {}
+  rpc GetParentNode (common.PrimitiveString) returns (Node) {}
   rpc GetAncestors (GetAncestorsInput) returns (GetAncestorsOutput) {}
 
-  rpc GetNodeIdByOrigin (Origin) returns (PrimitiveString) {}
+  rpc GetNodeIdByOrigin (common.Origin) returns (common.PrimitiveString) {}
 
-  rpc SaveNode (SaveNodeInput) returns (PrimitiveString) {}
-  rpc DeleteNode (DeleteNodeInput) returns (PrimitiveVoid) {}
+  rpc SaveNode (SaveNodeInput) returns (common.PrimitiveString) {}
+  rpc DeleteNode (DeleteNodeInput) returns (common.Void) {}
 
   rpc GetEvents (GetEventsInput) returns (GetEventsOutput) {}
-}
-
-message Origin {
-  string id = 1;
-  string type = 2;
-  string provider = 3;
 }
 
 message MeasurementPoint {
@@ -59,12 +54,12 @@ message Node {
   string type = 4;
   string criticality = 5;
   string subType = 6;
-  Origin origin = 7;
+  common.Origin origin = 7;
   AssetNode assetNode = 8;
   MeasurementPoint measurementPoint = 9;
   InspectionPoint inspectionPoint = 10;
   int64 childOrderNumber = 11 [deprecated=true];
-  PrimitiveInt64 position = 12;
+  common.PrimitiveInt64 position = 12;
 }
 
 message Nodes {
@@ -73,7 +68,7 @@ message Nodes {
 
 message GetEventsInput {
   int64 since = 1;
-  PrimitiveInt32 limit = 2;
+  common.PrimitiveInt32 limit = 2;
 }
 
 message GetEventsOutput {
@@ -84,13 +79,13 @@ message SaveNodeInput {
   string userId = 1;
   Node node = 3;
   string parentId = 2;
-  Origin parentOrigin = 4;
+  common.Origin parentOrigin = 4;
 }
 
 message DeleteNodeInput {
   string userId = 1;
   string nodeId = 2;
-  Origin origin = 3;
+  common.Origin origin = 3;
 }
 
 message GetAncestorsInput {
@@ -103,28 +98,10 @@ message GetAncestorsOutput {
 
 message AncestorNode {
   string id = 1;
-  Origin origin = 2;
+  common.Origin origin = 2;
   string label = 3;
   string description = 4;
   string type = 5;
   string subType = 6;
   string parentId = 7;
 }
-
-message PrimitiveString {
-  string value = 1;
-}
-
-message PrimitiveInt32 {
-  int32 value = 1;
-}
-
-message PrimitiveInt64{
-  int64 value = 1;
-}
-
-message PrimitiveBytes {
-  bytes value = 1;
-}
-
-message PrimitiveVoid {}

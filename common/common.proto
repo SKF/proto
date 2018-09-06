@@ -1,0 +1,33 @@
+syntax = "proto3";
+package common;
+
+option go_package = "github.com/SKF/proto/common";
+option csharp_namespace = "SKF.Enlight.API.Common";
+
+message Origin {
+  string id = 1;
+  string type = 2;
+  string provider = 3;
+}
+
+message PrimitiveString {
+  string value = 1;
+}
+
+message PrimitiveInt32 {
+  int32 value = 1;
+}
+
+message PrimitiveInt64{
+  int64 value = 1;
+}
+
+message PrimitiveBytes {
+  bytes value = 1;
+}
+
+message PrimitiveBool {
+  bool value = 1;
+}
+
+message Void {}
