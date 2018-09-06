@@ -21,8 +21,8 @@ commit_files() {
 
   for service in $( ls $3 ); do
     if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
-      cp -rf $3/$i .
-      git add -v $i
+      cp -rf $3/$service .
+      git add -v $service
     fi
   done
 
