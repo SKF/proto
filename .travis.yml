@@ -142,11 +142,7 @@ jobs:
       language: csharp
       mono: none
       dotnet: 2.0
-      deploy:
-        provider: script
-        script: true # TODO
-        on:
-          tags: true
+      script: true # TODO
       after_failure:
         - tree build
 
@@ -198,10 +194,6 @@ jobs:
       name: "Python: Deploy wheel to PyPi"
       language: python
       python: "3.6"
-      deploy:
-        provider: script
-        script: true # TODO
-        on:
-          tags: true
+      script: true # TODO
       after_failure:
         - tree build

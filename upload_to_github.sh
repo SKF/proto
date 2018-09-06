@@ -17,10 +17,10 @@ setup_git() {
 commit_files() {
   git fetch --all
   git checkout $2
-  git rm -rf .
+  git rm -rf --ignore-unmatch .
 
-  for i in $( ls $3 ); do
-    if [[ ${DIRS} =~ (^|[[:space:]])$i($|[[:space:]]) ]]; then
+  for service in $( ls $3 ); do
+    if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
       cp -rf $3/$i .
       git add -v $i
     fi
