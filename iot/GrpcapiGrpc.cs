@@ -12,8 +12,8 @@ namespace SKF.Enlight.API.IoT {
   {
     static readonly string __ServiceName = "iotgrpcapi.IoT";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.PrimitiveVoid> __Marshaller_iotgrpcapi_PrimitiveVoid = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.PrimitiveVoid.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.PrimitiveString> __Marshaller_iotgrpcapi_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.PrimitiveString.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.InitialTaskDescription> __Marshaller_iotgrpcapi_InitialTaskDescription = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.InitialTaskDescription.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.TaskDescriptions> __Marshaller_iotgrpcapi_TaskDescriptions = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.TaskDescriptions.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.TaskUser> __Marshaller_iotgrpcapi_TaskUser = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.TaskUser.Parser.ParseFrom);
@@ -39,61 +39,61 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaInput> __Marshaller_iotgrpcapi_GetMediaInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaOutput> __Marshaller_iotgrpcapi_GetMediaOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveVoid, global::SKF.Enlight.API.IoT.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveVoid, global::SKF.Enlight.API.IoT.PrimitiveString>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeepPing",
-        __Marshaller_iotgrpcapi_PrimitiveVoid,
-        __Marshaller_iotgrpcapi_PrimitiveString);
+        __Marshaller_common_Void,
+        __Marshaller_common_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.InitialTaskDescription, global::SKF.Enlight.API.IoT.PrimitiveString> __Method_CreateTask = new grpc::Method<global::SKF.Enlight.API.IoT.InitialTaskDescription, global::SKF.Enlight.API.IoT.PrimitiveString>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.InitialTaskDescription, global::SKF.Enlight.API.Common.PrimitiveString> __Method_CreateTask = new grpc::Method<global::SKF.Enlight.API.IoT.InitialTaskDescription, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateTask",
         __Marshaller_iotgrpcapi_InitialTaskDescription,
-        __Marshaller_iotgrpcapi_PrimitiveString);
+        __Marshaller_common_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetAllTasks = new grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetAllTasks = new grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllTasks",
-        __Marshaller_iotgrpcapi_PrimitiveString,
+        __Marshaller_common_PrimitiveString,
         __Marshaller_iotgrpcapi_TaskDescriptions);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetUncompletedTasks = new grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetUncompletedTasks = new grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetUncompletedTasks",
-        __Marshaller_iotgrpcapi_PrimitiveString,
+        __Marshaller_common_PrimitiveString,
         __Marshaller_iotgrpcapi_TaskDescriptions);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.IoT.PrimitiveVoid> __Method_SetTaskCompleted = new grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.IoT.PrimitiveVoid>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void> __Method_SetTaskCompleted = new grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetTaskCompleted",
         __Marshaller_iotgrpcapi_TaskUser,
-        __Marshaller_iotgrpcapi_PrimitiveVoid);
+        __Marshaller_common_Void);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.IoT.PrimitiveVoid> __Method_DeleteTask = new grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.IoT.PrimitiveVoid>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void> __Method_DeleteTask = new grpc::Method<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteTask",
         __Marshaller_iotgrpcapi_TaskUser,
-        __Marshaller_iotgrpcapi_PrimitiveVoid);
+        __Marshaller_common_Void);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetUncompletedTasksByHierarchy = new grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions> __Method_GetUncompletedTasksByHierarchy = new grpc::Method<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetUncompletedTasksByHierarchy",
-        __Marshaller_iotgrpcapi_PrimitiveString,
+        __Marshaller_common_PrimitiveString,
         __Marshaller_iotgrpcapi_TaskDescriptions);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.SetTaskStatusInput, global::SKF.Enlight.API.IoT.PrimitiveVoid> __Method_SetTaskStatus = new grpc::Method<global::SKF.Enlight.API.IoT.SetTaskStatusInput, global::SKF.Enlight.API.IoT.PrimitiveVoid>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.SetTaskStatusInput, global::SKF.Enlight.API.Common.Void> __Method_SetTaskStatus = new grpc::Method<global::SKF.Enlight.API.IoT.SetTaskStatusInput, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetTaskStatus",
         __Marshaller_iotgrpcapi_SetTaskStatusInput,
-        __Marshaller_iotgrpcapi_PrimitiveVoid);
+        __Marshaller_common_Void);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetTaskStreamInput, global::SKF.Enlight.API.IoT.GetTaskStreamOutput> __Method_GetTaskStream = new grpc::Method<global::SKF.Enlight.API.IoT.GetTaskStreamInput, global::SKF.Enlight.API.IoT.GetTaskStreamOutput>(
         grpc::MethodType.ServerStreaming,
@@ -174,42 +174,42 @@ namespace SKF.Enlight.API.IoT {
     /// <summary>Base class for server-side implementations of IoT</summary>
     public abstract partial class IoTBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PrimitiveString> DeepPing(global::SKF.Enlight.API.IoT.PrimitiveVoid request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PrimitiveString> CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PrimitiveVoid> DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -289,131 +289,131 @@ namespace SKF.Enlight.API.IoT {
       {
       }
 
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveString DeepPing(global::SKF.Enlight.API.IoT.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveString DeepPing(global::SKF.Enlight.API.IoT.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.IoT.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.IoT.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveString CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveString CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString CreateTask(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTask, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveString> CreateTaskAsync(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> CreateTaskAsync(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveString> CreateTaskAsync(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> CreateTaskAsync(global::SKF.Enlight.API.IoT.InitialTaskDescription request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTask, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetAllTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetAllTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetAllTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetAllTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllTasks, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasksAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasksAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasksAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetAllTasksAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllTasks, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUncompletedTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasks(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasks(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUncompletedTasks, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUncompletedTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUncompletedTasks, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetTaskCompleted(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void SetTaskCompleted(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetTaskCompleted, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskCompletedAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetTaskCompletedAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetTaskCompletedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskCompletedAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetTaskCompletedAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetTaskCompleted, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void DeleteTask(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTask, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> DeleteTaskAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> DeleteTaskAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> DeleteTaskAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> DeleteTaskAsync(global::SKF.Enlight.API.IoT.TaskUser request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTask, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUncompletedTasksByHierarchy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IoT.TaskDescriptions GetUncompletedTasksByHierarchy(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUncompletedTasksByHierarchy, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchyAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchyAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUncompletedTasksByHierarchyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchyAsync(global::SKF.Enlight.API.IoT.PrimitiveString request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.TaskDescriptions> GetUncompletedTasksByHierarchyAsync(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUncompletedTasksByHierarchy, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetTaskStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.PrimitiveVoid SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void SetTaskStatus(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetTaskStatus, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskStatusAsync(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetTaskStatusAsync(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetTaskStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PrimitiveVoid> SetTaskStatusAsync(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetTaskStatusAsync(global::SKF.Enlight.API.IoT.SetTaskStatusInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetTaskStatus, null, options, request);
       }

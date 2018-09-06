@@ -12,7 +12,7 @@ namespace SKF.Enlight.API.Reports {
   {
     static readonly string __ServiceName = "reportsgrpcapi.Reports";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.PrimitiveVoid> __Marshaller_reportsgrpcapi_PrimitiveVoid = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.PrimitiveVoid.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.DeepPingOutput> __Marshaller_reportsgrpcapi_DeepPingOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.DeepPingOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthInput> __Marshaller_reportsgrpcapi_GetAssetHealthInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetAssetHealthInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthOutput> __Marshaller_reportsgrpcapi_GetAssetHealthOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetAssetHealthOutput.Parser.ParseFrom);
@@ -25,11 +25,11 @@ namespace SKF.Enlight.API.Reports {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryInput> __Marshaller_reportsgrpcapi_GetComplianceSummaryInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceSummaryInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput> __Marshaller_reportsgrpcapi_GetComplianceSummaryOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Reports.PrimitiveVoid, global::SKF.Enlight.API.Reports.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Reports.PrimitiveVoid, global::SKF.Enlight.API.Reports.DeepPingOutput>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Reports.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Reports.DeepPingOutput>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeepPing",
-        __Marshaller_reportsgrpcapi_PrimitiveVoid,
+        __Marshaller_common_Void,
         __Marshaller_reportsgrpcapi_DeepPingOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Reports.GetAssetHealthInput, global::SKF.Enlight.API.Reports.GetAssetHealthOutput> __Method_GetAssetHealth = new grpc::Method<global::SKF.Enlight.API.Reports.GetAssetHealthInput, global::SKF.Enlight.API.Reports.GetAssetHealthOutput>(
@@ -76,7 +76,7 @@ namespace SKF.Enlight.API.Reports {
     /// <summary>Base class for server-side implementations of Reports</summary>
     public abstract partial class ReportsBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPing(global::SKF.Enlight.API.Reports.PrimitiveVoid request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -131,19 +131,19 @@ namespace SKF.Enlight.API.Reports {
       {
       }
 
-      public virtual global::SKF.Enlight.API.Reports.DeepPingOutput DeepPing(global::SKF.Enlight.API.Reports.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Reports.DeepPingOutput DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Reports.DeepPingOutput DeepPing(global::SKF.Enlight.API.Reports.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Reports.DeepPingOutput DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Reports.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Reports.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }

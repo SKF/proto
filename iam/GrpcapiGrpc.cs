@@ -12,8 +12,8 @@ namespace SKF.Enlight.API.IAM {
   {
     static readonly string __ServiceName = "grpcapi.IAM";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.PrimitiveVoid> __Marshaller_grpcapi_PrimitiveVoid = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.PrimitiveVoid.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.PrimitiveString> __Marshaller_grpcapi_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.PrimitiveString.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationInput> __Marshaller_grpcapi_CheckAuthenticationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.User> __Marshaller_grpcapi_User = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.User.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput> __Marshaller_grpcapi_GetHierarchyRelationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser.ParseFrom);
@@ -21,12 +21,12 @@ namespace SKF.Enlight.API.IAM {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsInput> __Marshaller_grpcapi_GetEventRecordsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetEventRecordsInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsOutput> __Marshaller_grpcapi_GetEventRecordsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IAM.PrimitiveVoid, global::SKF.Enlight.API.IAM.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.IAM.PrimitiveVoid, global::SKF.Enlight.API.IAM.PrimitiveString>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeepPing",
-        __Marshaller_grpcapi_PrimitiveVoid,
-        __Marshaller_grpcapi_PrimitiveString);
+        __Marshaller_common_Void,
+        __Marshaller_common_PrimitiveString);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.User> __Method_CheckAuthentication = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.User>(
         grpc::MethodType.Unary,
@@ -58,7 +58,7 @@ namespace SKF.Enlight.API.IAM {
     /// <summary>Base class for server-side implementations of IAM</summary>
     public abstract partial class IAMBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.PrimitiveString> DeepPing(global::SKF.Enlight.API.IAM.PrimitiveVoid request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -103,19 +103,19 @@ namespace SKF.Enlight.API.IAM {
       {
       }
 
-      public virtual global::SKF.Enlight.API.IAM.PrimitiveString DeepPing(global::SKF.Enlight.API.IAM.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IAM.PrimitiveString DeepPing(global::SKF.Enlight.API.IAM.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.PrimitiveString DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.IAM.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.IAM.PrimitiveVoid request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }

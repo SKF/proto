@@ -12,7 +12,7 @@ namespace SKF.Enlight.API.PAS {
   {
     static readonly string __ServiceName = "pasapi.PointAlarmStatus";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.Void> __Marshaller_pasapi_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.Void.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.DeepPingOutput> __Marshaller_pasapi_DeepPingOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput> __Marshaller_pasapi_SetPointAlarmThresholdInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput> __Marshaller_pasapi_SetPointAlarmThresholdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser.ParseFrom);
@@ -25,11 +25,11 @@ namespace SKF.Enlight.API.PAS {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput> __Marshaller_pasapi_GetPointAlarmStatusStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> __Marshaller_pasapi_GetPointAlarmStatusStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.PAS.Void, global::SKF.Enlight.API.PAS.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.PAS.Void, global::SKF.Enlight.API.PAS.DeepPingOutput>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.PAS.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.PAS.DeepPingOutput>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeepPing",
-        __Marshaller_pasapi_Void,
+        __Marshaller_common_Void,
         __Marshaller_pasapi_DeepPingOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput, global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput> __Method_SetPointAlarmThreshold = new grpc::Method<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput, global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput>(
@@ -76,7 +76,7 @@ namespace SKF.Enlight.API.PAS {
     /// <summary>Base class for server-side implementations of PointAlarmStatus</summary>
     public abstract partial class PointAlarmStatusBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPing(global::SKF.Enlight.API.PAS.Void request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -131,19 +131,19 @@ namespace SKF.Enlight.API.PAS {
       {
       }
 
-      public virtual global::SKF.Enlight.API.PAS.DeepPingOutput DeepPing(global::SKF.Enlight.API.PAS.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.PAS.DeepPingOutput DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.PAS.DeepPingOutput DeepPing(global::SKF.Enlight.API.PAS.Void request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.PAS.DeepPingOutput DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.PAS.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.PAS.Void request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }
