@@ -19,6 +19,9 @@ commit_files() {
   git checkout $2
   git rm -rf --ignore-unmatch .
 
+  cp -rf $3/common .
+  git add -v common
+
   for service in $( ls $3 ); do
     if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
       cp -rf $3/$service .
