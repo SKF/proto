@@ -50,6 +50,7 @@ jobs:
         - unzip -o protoc*.zip
         - popd
       script:
+        - go get -u google.golang.org/grpc
         - go get -u github.com/golang/protobuf/protoc-gen-go
         - mv $GOPATH/bin build/bin
       after_failure:
@@ -158,7 +159,7 @@ jobs:
       name: "Python: Generate sources and build wheel pkg"
       language: python
       python: "3.6"
-      script: bash build_python.sh
+      script: bash scripts/build_python.sh
       after_success: # TODO
         - touch build/python/gen.$TRAVIS_BUILD_NUMBER.whl
       after_failure:
