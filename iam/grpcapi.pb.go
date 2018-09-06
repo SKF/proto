@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -506,6 +511,177 @@ func init() {
 	proto.RegisterType((*PrimitiveBool)(nil), "grpcapi.PrimitiveBool")
 	proto.RegisterType((*PrimitiveBytes)(nil), "grpcapi.PrimitiveBytes")
 	proto.RegisterType((*PrimitiveVoid)(nil), "grpcapi.PrimitiveVoid")
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// IAMClient is the client API for IAM service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type IAMClient interface {
+	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error)
+	CheckAuthentication(ctx context.Context, in *CheckAuthenticationInput, opts ...grpc.CallOption) (*User, error)
+	GetHierarchyRelations(ctx context.Context, in *GetHierarchyRelationsInput, opts ...grpc.CallOption) (*GetHierarchyRelationsOutput, error)
+	GetEventRecords(ctx context.Context, in *GetEventRecordsInput, opts ...grpc.CallOption) (*GetEventRecordsOutput, error)
+}
+
+type iAMClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewIAMClient(cc *grpc.ClientConn) IAMClient {
+	return &iAMClient{cc}
+}
+
+func (c *iAMClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/DeepPing", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *iAMClient) CheckAuthentication(ctx context.Context, in *CheckAuthenticationInput, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/CheckAuthentication", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *iAMClient) GetHierarchyRelations(ctx context.Context, in *GetHierarchyRelationsInput, opts ...grpc.CallOption) (*GetHierarchyRelationsOutput, error) {
+	out := new(GetHierarchyRelationsOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/GetHierarchyRelations", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *iAMClient) GetEventRecords(ctx context.Context, in *GetEventRecordsInput, opts ...grpc.CallOption) (*GetEventRecordsOutput, error) {
+	out := new(GetEventRecordsOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/GetEventRecords", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// IAMServer is the server API for IAM service.
+type IAMServer interface {
+	DeepPing(context.Context, *PrimitiveVoid) (*PrimitiveString, error)
+	CheckAuthentication(context.Context, *CheckAuthenticationInput) (*User, error)
+	GetHierarchyRelations(context.Context, *GetHierarchyRelationsInput) (*GetHierarchyRelationsOutput, error)
+	GetEventRecords(context.Context, *GetEventRecordsInput) (*GetEventRecordsOutput, error)
+}
+
+func RegisterIAMServer(s *grpc.Server, srv IAMServer) {
+	s.RegisterService(&_IAM_serviceDesc, srv)
+}
+
+func _IAM_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveVoid)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).DeepPing(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/DeepPing",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).DeepPing(ctx, req.(*PrimitiveVoid))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IAM_CheckAuthentication_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CheckAuthenticationInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).CheckAuthentication(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/CheckAuthentication",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).CheckAuthentication(ctx, req.(*CheckAuthenticationInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IAM_GetHierarchyRelations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetHierarchyRelationsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).GetHierarchyRelations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/GetHierarchyRelations",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).GetHierarchyRelations(ctx, req.(*GetHierarchyRelationsInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IAM_GetEventRecords_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetEventRecordsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).GetEventRecords(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/GetEventRecords",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).GetEventRecords(ctx, req.(*GetEventRecordsInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _IAM_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "grpcapi.IAM",
+	HandlerType: (*IAMServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeepPing",
+			Handler:    _IAM_DeepPing_Handler,
+		},
+		{
+			MethodName: "CheckAuthentication",
+			Handler:    _IAM_CheckAuthentication_Handler,
+		},
+		{
+			MethodName: "GetHierarchyRelations",
+			Handler:    _IAM_GetHierarchyRelations_Handler,
+		},
+		{
+			MethodName: "GetEventRecords",
+			Handler:    _IAM_GetEventRecords_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "iam/grpcapi.proto",
 }
 
 func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_fb9b75323b01a2e3) }

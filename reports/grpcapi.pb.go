@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -1098,6 +1103,243 @@ func init() {
 	proto.RegisterType((*GetComplianceSummaryOutput)(nil), "reportsgrpcapi.GetComplianceSummaryOutput")
 	proto.RegisterType((*StatusNote)(nil), "reportsgrpcapi.StatusNote")
 	proto.RegisterType((*System)(nil), "reportsgrpcapi.System")
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// ReportsClient is the client API for Reports service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type ReportsClient interface {
+	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*DeepPingOutput, error)
+	GetAssetHealth(ctx context.Context, in *GetAssetHealthInput, opts ...grpc.CallOption) (*GetAssetHealthOutput, error)
+	GetFunctionalLocationHealth(ctx context.Context, in *GetFunctionalLocationHealthInput, opts ...grpc.CallOption) (*GetFunctionalLocationHealthOutput, error)
+	GetComplianceLog(ctx context.Context, in *GetComplianceLogInput, opts ...grpc.CallOption) (*GetComplianceLogOutput, error)
+	GetReports(ctx context.Context, in *GetReportsInput, opts ...grpc.CallOption) (*GetReportsOutput, error)
+	GetComplianceSummary(ctx context.Context, in *GetComplianceSummaryInput, opts ...grpc.CallOption) (*GetComplianceSummaryOutput, error)
+}
+
+type reportsClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewReportsClient(cc *grpc.ClientConn) ReportsClient {
+	return &reportsClient{cc}
+}
+
+func (c *reportsClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*DeepPingOutput, error) {
+	out := new(DeepPingOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/DeepPing", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *reportsClient) GetAssetHealth(ctx context.Context, in *GetAssetHealthInput, opts ...grpc.CallOption) (*GetAssetHealthOutput, error) {
+	out := new(GetAssetHealthOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/GetAssetHealth", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *reportsClient) GetFunctionalLocationHealth(ctx context.Context, in *GetFunctionalLocationHealthInput, opts ...grpc.CallOption) (*GetFunctionalLocationHealthOutput, error) {
+	out := new(GetFunctionalLocationHealthOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/GetFunctionalLocationHealth", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *reportsClient) GetComplianceLog(ctx context.Context, in *GetComplianceLogInput, opts ...grpc.CallOption) (*GetComplianceLogOutput, error) {
+	out := new(GetComplianceLogOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/GetComplianceLog", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *reportsClient) GetReports(ctx context.Context, in *GetReportsInput, opts ...grpc.CallOption) (*GetReportsOutput, error) {
+	out := new(GetReportsOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/GetReports", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *reportsClient) GetComplianceSummary(ctx context.Context, in *GetComplianceSummaryInput, opts ...grpc.CallOption) (*GetComplianceSummaryOutput, error) {
+	out := new(GetComplianceSummaryOutput)
+	err := c.cc.Invoke(ctx, "/reportsgrpcapi.Reports/GetComplianceSummary", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// ReportsServer is the server API for Reports service.
+type ReportsServer interface {
+	DeepPing(context.Context, *PrimitiveVoid) (*DeepPingOutput, error)
+	GetAssetHealth(context.Context, *GetAssetHealthInput) (*GetAssetHealthOutput, error)
+	GetFunctionalLocationHealth(context.Context, *GetFunctionalLocationHealthInput) (*GetFunctionalLocationHealthOutput, error)
+	GetComplianceLog(context.Context, *GetComplianceLogInput) (*GetComplianceLogOutput, error)
+	GetReports(context.Context, *GetReportsInput) (*GetReportsOutput, error)
+	GetComplianceSummary(context.Context, *GetComplianceSummaryInput) (*GetComplianceSummaryOutput, error)
+}
+
+func RegisterReportsServer(s *grpc.Server, srv ReportsServer) {
+	s.RegisterService(&_Reports_serviceDesc, srv)
+}
+
+func _Reports_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveVoid)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).DeepPing(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/DeepPing",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).DeepPing(ctx, req.(*PrimitiveVoid))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Reports_GetAssetHealth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAssetHealthInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).GetAssetHealth(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/GetAssetHealth",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).GetAssetHealth(ctx, req.(*GetAssetHealthInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Reports_GetFunctionalLocationHealth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFunctionalLocationHealthInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).GetFunctionalLocationHealth(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/GetFunctionalLocationHealth",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).GetFunctionalLocationHealth(ctx, req.(*GetFunctionalLocationHealthInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Reports_GetComplianceLog_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetComplianceLogInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).GetComplianceLog(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/GetComplianceLog",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).GetComplianceLog(ctx, req.(*GetComplianceLogInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Reports_GetReports_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetReportsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).GetReports(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/GetReports",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).GetReports(ctx, req.(*GetReportsInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Reports_GetComplianceSummary_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetComplianceSummaryInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ReportsServer).GetComplianceSummary(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/reportsgrpcapi.Reports/GetComplianceSummary",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ReportsServer).GetComplianceSummary(ctx, req.(*GetComplianceSummaryInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Reports_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "reportsgrpcapi.Reports",
+	HandlerType: (*ReportsServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeepPing",
+			Handler:    _Reports_DeepPing_Handler,
+		},
+		{
+			MethodName: "GetAssetHealth",
+			Handler:    _Reports_GetAssetHealth_Handler,
+		},
+		{
+			MethodName: "GetFunctionalLocationHealth",
+			Handler:    _Reports_GetFunctionalLocationHealth_Handler,
+		},
+		{
+			MethodName: "GetComplianceLog",
+			Handler:    _Reports_GetComplianceLog_Handler,
+		},
+		{
+			MethodName: "GetReports",
+			Handler:    _Reports_GetReports_Handler,
+		},
+		{
+			MethodName: "GetComplianceSummary",
+			Handler:    _Reports_GetComplianceSummary_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "reports/grpcapi.proto",
 }
 
 func init() { proto.RegisterFile("reports/grpcapi.proto", fileDescriptor_grpcapi_decc03afb9d5e0a7) }

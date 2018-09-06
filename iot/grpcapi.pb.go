@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -1911,6 +1916,729 @@ func init() {
 	proto.RegisterEnum("iotgrpcapi.TaskStatus", TaskStatus_name, TaskStatus_value)
 	proto.RegisterEnum("iotgrpcapi.NodeDataContentType", NodeDataContentType_name, NodeDataContentType_value)
 	proto.RegisterEnum("iotgrpcapi.MediaType", MediaType_name, MediaType_value)
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// IoTClient is the client API for IoT service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type IoTClient interface {
+	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error)
+	CreateTask(ctx context.Context, in *InitialTaskDescription, opts ...grpc.CallOption) (*PrimitiveString, error)
+	GetAllTasks(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error)
+	GetUncompletedTasks(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error)
+	SetTaskCompleted(ctx context.Context, in *TaskUser, opts ...grpc.CallOption) (*PrimitiveVoid, error)
+	DeleteTask(ctx context.Context, in *TaskUser, opts ...grpc.CallOption) (*PrimitiveVoid, error)
+	GetUncompletedTasksByHierarchy(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error)
+	SetTaskStatus(ctx context.Context, in *SetTaskStatusInput, opts ...grpc.CallOption) (*PrimitiveVoid, error)
+	GetTaskStream(ctx context.Context, in *GetTaskStreamInput, opts ...grpc.CallOption) (IoT_GetTaskStreamClient, error)
+	GetTasksByStatus(ctx context.Context, in *GetTasksByStatusInput, opts ...grpc.CallOption) (*GetTasksByStatusOutput, error)
+	GetTaskByUUID(ctx context.Context, in *GetTaskByUUIDInput, opts ...grpc.CallOption) (*GetTaskByUUIDOutput, error)
+	GetTaskByLongId(ctx context.Context, in *GetTaskByLongIdInput, opts ...grpc.CallOption) (*GetTaskByLongIdOutput, error)
+	IngestNodeData(ctx context.Context, in *IngestNodeDataInput, opts ...grpc.CallOption) (*IngestNodeDataOutput, error)
+	IngestNodeDataStream(ctx context.Context, opts ...grpc.CallOption) (IoT_IngestNodeDataStreamClient, error)
+	GetLatestNodeData(ctx context.Context, in *GetLatestNodeDataInput, opts ...grpc.CallOption) (*GetLatestNodeDataOutput, error)
+	GetNodeData(ctx context.Context, in *GetNodeDataInput, opts ...grpc.CallOption) (*GetNodeDataOutput, error)
+	GetNodeDataStream(ctx context.Context, in *GetNodeDataStreamInput, opts ...grpc.CallOption) (IoT_GetNodeDataStreamClient, error)
+	GetMedia(ctx context.Context, in *GetMediaInput, opts ...grpc.CallOption) (*GetMediaOutput, error)
+}
+
+type ioTClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewIoTClient(cc *grpc.ClientConn) IoTClient {
+	return &ioTClient{cc}
+}
+
+func (c *ioTClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/DeepPing", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) CreateTask(ctx context.Context, in *InitialTaskDescription, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/CreateTask", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetAllTasks(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error) {
+	out := new(TaskDescriptions)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetAllTasks", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetUncompletedTasks(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error) {
+	out := new(TaskDescriptions)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetUncompletedTasks", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// Deprecated: Do not use.
+func (c *ioTClient) SetTaskCompleted(ctx context.Context, in *TaskUser, opts ...grpc.CallOption) (*PrimitiveVoid, error) {
+	out := new(PrimitiveVoid)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/SetTaskCompleted", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) DeleteTask(ctx context.Context, in *TaskUser, opts ...grpc.CallOption) (*PrimitiveVoid, error) {
+	out := new(PrimitiveVoid)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/DeleteTask", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetUncompletedTasksByHierarchy(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*TaskDescriptions, error) {
+	out := new(TaskDescriptions)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetUncompletedTasksByHierarchy", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) SetTaskStatus(ctx context.Context, in *SetTaskStatusInput, opts ...grpc.CallOption) (*PrimitiveVoid, error) {
+	out := new(PrimitiveVoid)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/SetTaskStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetTaskStream(ctx context.Context, in *GetTaskStreamInput, opts ...grpc.CallOption) (IoT_GetTaskStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_IoT_serviceDesc.Streams[0], "/iotgrpcapi.IoT/GetTaskStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &ioTGetTaskStreamClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type IoT_GetTaskStreamClient interface {
+	Recv() (*GetTaskStreamOutput, error)
+	grpc.ClientStream
+}
+
+type ioTGetTaskStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *ioTGetTaskStreamClient) Recv() (*GetTaskStreamOutput, error) {
+	m := new(GetTaskStreamOutput)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *ioTClient) GetTasksByStatus(ctx context.Context, in *GetTasksByStatusInput, opts ...grpc.CallOption) (*GetTasksByStatusOutput, error) {
+	out := new(GetTasksByStatusOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetTasksByStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetTaskByUUID(ctx context.Context, in *GetTaskByUUIDInput, opts ...grpc.CallOption) (*GetTaskByUUIDOutput, error) {
+	out := new(GetTaskByUUIDOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetTaskByUUID", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetTaskByLongId(ctx context.Context, in *GetTaskByLongIdInput, opts ...grpc.CallOption) (*GetTaskByLongIdOutput, error) {
+	out := new(GetTaskByLongIdOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetTaskByLongId", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) IngestNodeData(ctx context.Context, in *IngestNodeDataInput, opts ...grpc.CallOption) (*IngestNodeDataOutput, error) {
+	out := new(IngestNodeDataOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/IngestNodeData", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) IngestNodeDataStream(ctx context.Context, opts ...grpc.CallOption) (IoT_IngestNodeDataStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_IoT_serviceDesc.Streams[1], "/iotgrpcapi.IoT/IngestNodeDataStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &ioTIngestNodeDataStreamClient{stream}
+	return x, nil
+}
+
+type IoT_IngestNodeDataStreamClient interface {
+	Send(*IngestNodeDataStreamInput) error
+	CloseAndRecv() (*IngestNodeDataStreamOutput, error)
+	grpc.ClientStream
+}
+
+type ioTIngestNodeDataStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *ioTIngestNodeDataStreamClient) Send(m *IngestNodeDataStreamInput) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *ioTIngestNodeDataStreamClient) CloseAndRecv() (*IngestNodeDataStreamOutput, error) {
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	m := new(IngestNodeDataStreamOutput)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *ioTClient) GetLatestNodeData(ctx context.Context, in *GetLatestNodeDataInput, opts ...grpc.CallOption) (*GetLatestNodeDataOutput, error) {
+	out := new(GetLatestNodeDataOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetLatestNodeData", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetNodeData(ctx context.Context, in *GetNodeDataInput, opts ...grpc.CallOption) (*GetNodeDataOutput, error) {
+	out := new(GetNodeDataOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetNodeData", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ioTClient) GetNodeDataStream(ctx context.Context, in *GetNodeDataStreamInput, opts ...grpc.CallOption) (IoT_GetNodeDataStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_IoT_serviceDesc.Streams[2], "/iotgrpcapi.IoT/GetNodeDataStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &ioTGetNodeDataStreamClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type IoT_GetNodeDataStreamClient interface {
+	Recv() (*GetNodeDataStreamOutput, error)
+	grpc.ClientStream
+}
+
+type ioTGetNodeDataStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *ioTGetNodeDataStreamClient) Recv() (*GetNodeDataStreamOutput, error) {
+	m := new(GetNodeDataStreamOutput)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *ioTClient) GetMedia(ctx context.Context, in *GetMediaInput, opts ...grpc.CallOption) (*GetMediaOutput, error) {
+	out := new(GetMediaOutput)
+	err := c.cc.Invoke(ctx, "/iotgrpcapi.IoT/GetMedia", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// IoTServer is the server API for IoT service.
+type IoTServer interface {
+	DeepPing(context.Context, *PrimitiveVoid) (*PrimitiveString, error)
+	CreateTask(context.Context, *InitialTaskDescription) (*PrimitiveString, error)
+	GetAllTasks(context.Context, *PrimitiveString) (*TaskDescriptions, error)
+	GetUncompletedTasks(context.Context, *PrimitiveString) (*TaskDescriptions, error)
+	SetTaskCompleted(context.Context, *TaskUser) (*PrimitiveVoid, error)
+	DeleteTask(context.Context, *TaskUser) (*PrimitiveVoid, error)
+	GetUncompletedTasksByHierarchy(context.Context, *PrimitiveString) (*TaskDescriptions, error)
+	SetTaskStatus(context.Context, *SetTaskStatusInput) (*PrimitiveVoid, error)
+	GetTaskStream(*GetTaskStreamInput, IoT_GetTaskStreamServer) error
+	GetTasksByStatus(context.Context, *GetTasksByStatusInput) (*GetTasksByStatusOutput, error)
+	GetTaskByUUID(context.Context, *GetTaskByUUIDInput) (*GetTaskByUUIDOutput, error)
+	GetTaskByLongId(context.Context, *GetTaskByLongIdInput) (*GetTaskByLongIdOutput, error)
+	IngestNodeData(context.Context, *IngestNodeDataInput) (*IngestNodeDataOutput, error)
+	IngestNodeDataStream(IoT_IngestNodeDataStreamServer) error
+	GetLatestNodeData(context.Context, *GetLatestNodeDataInput) (*GetLatestNodeDataOutput, error)
+	GetNodeData(context.Context, *GetNodeDataInput) (*GetNodeDataOutput, error)
+	GetNodeDataStream(*GetNodeDataStreamInput, IoT_GetNodeDataStreamServer) error
+	GetMedia(context.Context, *GetMediaInput) (*GetMediaOutput, error)
+}
+
+func RegisterIoTServer(s *grpc.Server, srv IoTServer) {
+	s.RegisterService(&_IoT_serviceDesc, srv)
+}
+
+func _IoT_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveVoid)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).DeepPing(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/DeepPing",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).DeepPing(ctx, req.(*PrimitiveVoid))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_CreateTask_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(InitialTaskDescription)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).CreateTask(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/CreateTask",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).CreateTask(ctx, req.(*InitialTaskDescription))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetAllTasks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetAllTasks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetAllTasks",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetAllTasks(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetUncompletedTasks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetUncompletedTasks(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetUncompletedTasks",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetUncompletedTasks(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_SetTaskCompleted_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TaskUser)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).SetTaskCompleted(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/SetTaskCompleted",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).SetTaskCompleted(ctx, req.(*TaskUser))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_DeleteTask_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TaskUser)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).DeleteTask(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/DeleteTask",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).DeleteTask(ctx, req.(*TaskUser))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetUncompletedTasksByHierarchy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetUncompletedTasksByHierarchy(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetUncompletedTasksByHierarchy",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetUncompletedTasksByHierarchy(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_SetTaskStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetTaskStatusInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).SetTaskStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/SetTaskStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).SetTaskStatus(ctx, req.(*SetTaskStatusInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetTaskStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(GetTaskStreamInput)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(IoTServer).GetTaskStream(m, &ioTGetTaskStreamServer{stream})
+}
+
+type IoT_GetTaskStreamServer interface {
+	Send(*GetTaskStreamOutput) error
+	grpc.ServerStream
+}
+
+type ioTGetTaskStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *ioTGetTaskStreamServer) Send(m *GetTaskStreamOutput) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func _IoT_GetTasksByStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetTasksByStatusInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetTasksByStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetTasksByStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetTasksByStatus(ctx, req.(*GetTasksByStatusInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetTaskByUUID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetTaskByUUIDInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetTaskByUUID(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetTaskByUUID",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetTaskByUUID(ctx, req.(*GetTaskByUUIDInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetTaskByLongId_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetTaskByLongIdInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetTaskByLongId(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetTaskByLongId",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetTaskByLongId(ctx, req.(*GetTaskByLongIdInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_IngestNodeData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IngestNodeDataInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).IngestNodeData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/IngestNodeData",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).IngestNodeData(ctx, req.(*IngestNodeDataInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_IngestNodeDataStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(IoTServer).IngestNodeDataStream(&ioTIngestNodeDataStreamServer{stream})
+}
+
+type IoT_IngestNodeDataStreamServer interface {
+	SendAndClose(*IngestNodeDataStreamOutput) error
+	Recv() (*IngestNodeDataStreamInput, error)
+	grpc.ServerStream
+}
+
+type ioTIngestNodeDataStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *ioTIngestNodeDataStreamServer) SendAndClose(m *IngestNodeDataStreamOutput) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *ioTIngestNodeDataStreamServer) Recv() (*IngestNodeDataStreamInput, error) {
+	m := new(IngestNodeDataStreamInput)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func _IoT_GetLatestNodeData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetLatestNodeDataInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetLatestNodeData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetLatestNodeData",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetLatestNodeData(ctx, req.(*GetLatestNodeDataInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetNodeData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetNodeDataInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetNodeData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetNodeData",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetNodeData(ctx, req.(*GetNodeDataInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IoT_GetNodeDataStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(GetNodeDataStreamInput)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(IoTServer).GetNodeDataStream(m, &ioTGetNodeDataStreamServer{stream})
+}
+
+type IoT_GetNodeDataStreamServer interface {
+	Send(*GetNodeDataStreamOutput) error
+	grpc.ServerStream
+}
+
+type ioTGetNodeDataStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *ioTGetNodeDataStreamServer) Send(m *GetNodeDataStreamOutput) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func _IoT_GetMedia_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetMediaInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IoTServer).GetMedia(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/iotgrpcapi.IoT/GetMedia",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IoTServer).GetMedia(ctx, req.(*GetMediaInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _IoT_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "iotgrpcapi.IoT",
+	HandlerType: (*IoTServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeepPing",
+			Handler:    _IoT_DeepPing_Handler,
+		},
+		{
+			MethodName: "CreateTask",
+			Handler:    _IoT_CreateTask_Handler,
+		},
+		{
+			MethodName: "GetAllTasks",
+			Handler:    _IoT_GetAllTasks_Handler,
+		},
+		{
+			MethodName: "GetUncompletedTasks",
+			Handler:    _IoT_GetUncompletedTasks_Handler,
+		},
+		{
+			MethodName: "SetTaskCompleted",
+			Handler:    _IoT_SetTaskCompleted_Handler,
+		},
+		{
+			MethodName: "DeleteTask",
+			Handler:    _IoT_DeleteTask_Handler,
+		},
+		{
+			MethodName: "GetUncompletedTasksByHierarchy",
+			Handler:    _IoT_GetUncompletedTasksByHierarchy_Handler,
+		},
+		{
+			MethodName: "SetTaskStatus",
+			Handler:    _IoT_SetTaskStatus_Handler,
+		},
+		{
+			MethodName: "GetTasksByStatus",
+			Handler:    _IoT_GetTasksByStatus_Handler,
+		},
+		{
+			MethodName: "GetTaskByUUID",
+			Handler:    _IoT_GetTaskByUUID_Handler,
+		},
+		{
+			MethodName: "GetTaskByLongId",
+			Handler:    _IoT_GetTaskByLongId_Handler,
+		},
+		{
+			MethodName: "IngestNodeData",
+			Handler:    _IoT_IngestNodeData_Handler,
+		},
+		{
+			MethodName: "GetLatestNodeData",
+			Handler:    _IoT_GetLatestNodeData_Handler,
+		},
+		{
+			MethodName: "GetNodeData",
+			Handler:    _IoT_GetNodeData_Handler,
+		},
+		{
+			MethodName: "GetMedia",
+			Handler:    _IoT_GetMedia_Handler,
+		},
+	},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "GetTaskStream",
+			Handler:       _IoT_GetTaskStream_Handler,
+			ServerStreams: true,
+		},
+		{
+			StreamName:    "IngestNodeDataStream",
+			Handler:       _IoT_IngestNodeDataStream_Handler,
+			ClientStreams: true,
+		},
+		{
+			StreamName:    "GetNodeDataStream",
+			Handler:       _IoT_GetNodeDataStream_Handler,
+			ServerStreams: true,
+		},
+	},
+	Metadata: "iot/grpcapi.proto",
 }
 
 func init() { proto.RegisterFile("iot/grpcapi.proto", fileDescriptor_grpcapi_5af1a8e517f8af06) }

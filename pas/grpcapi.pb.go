@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -671,6 +676,271 @@ func init() {
 	proto.RegisterType((*Overall)(nil), "pasapi.Overall")
 	proto.RegisterEnum("pasapi.AlarmStatus", AlarmStatus_name, AlarmStatus_value)
 	proto.RegisterEnum("pasapi.ThresholdType", ThresholdType_name, ThresholdType_value)
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// PointAlarmStatusClient is the client API for PointAlarmStatus service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type PointAlarmStatusClient interface {
+	DeepPing(ctx context.Context, in *Void, opts ...grpc.CallOption) (*DeepPingOutput, error)
+	SetPointAlarmThreshold(ctx context.Context, in *SetPointAlarmThresholdInput, opts ...grpc.CallOption) (*SetPointAlarmThresholdOutput, error)
+	GetPointAlarmThreshold(ctx context.Context, in *GetPointAlarmThresholdInput, opts ...grpc.CallOption) (*GetPointAlarmThresholdOutput, error)
+	SetPointAlarmStatus(ctx context.Context, in *SetPointAlarmStatusInput, opts ...grpc.CallOption) (*SetPointAlarmStatusOutput, error)
+	GetPointAlarmStatus(ctx context.Context, in *GetPointAlarmStatusInput, opts ...grpc.CallOption) (*GetPointAlarmStatusOutput, error)
+	GetPointAlarmStatusStream(ctx context.Context, in *GetPointAlarmStatusStreamInput, opts ...grpc.CallOption) (PointAlarmStatus_GetPointAlarmStatusStreamClient, error)
+}
+
+type pointAlarmStatusClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewPointAlarmStatusClient(cc *grpc.ClientConn) PointAlarmStatusClient {
+	return &pointAlarmStatusClient{cc}
+}
+
+func (c *pointAlarmStatusClient) DeepPing(ctx context.Context, in *Void, opts ...grpc.CallOption) (*DeepPingOutput, error) {
+	out := new(DeepPingOutput)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/DeepPing", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *pointAlarmStatusClient) SetPointAlarmThreshold(ctx context.Context, in *SetPointAlarmThresholdInput, opts ...grpc.CallOption) (*SetPointAlarmThresholdOutput, error) {
+	out := new(SetPointAlarmThresholdOutput)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/SetPointAlarmThreshold", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *pointAlarmStatusClient) GetPointAlarmThreshold(ctx context.Context, in *GetPointAlarmThresholdInput, opts ...grpc.CallOption) (*GetPointAlarmThresholdOutput, error) {
+	out := new(GetPointAlarmThresholdOutput)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/GetPointAlarmThreshold", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *pointAlarmStatusClient) SetPointAlarmStatus(ctx context.Context, in *SetPointAlarmStatusInput, opts ...grpc.CallOption) (*SetPointAlarmStatusOutput, error) {
+	out := new(SetPointAlarmStatusOutput)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/SetPointAlarmStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *pointAlarmStatusClient) GetPointAlarmStatus(ctx context.Context, in *GetPointAlarmStatusInput, opts ...grpc.CallOption) (*GetPointAlarmStatusOutput, error) {
+	out := new(GetPointAlarmStatusOutput)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/GetPointAlarmStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *pointAlarmStatusClient) GetPointAlarmStatusStream(ctx context.Context, in *GetPointAlarmStatusStreamInput, opts ...grpc.CallOption) (PointAlarmStatus_GetPointAlarmStatusStreamClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_PointAlarmStatus_serviceDesc.Streams[0], "/pasapi.PointAlarmStatus/GetPointAlarmStatusStream", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &pointAlarmStatusGetPointAlarmStatusStreamClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type PointAlarmStatus_GetPointAlarmStatusStreamClient interface {
+	Recv() (*GetPointAlarmStatusStreamOutput, error)
+	grpc.ClientStream
+}
+
+type pointAlarmStatusGetPointAlarmStatusStreamClient struct {
+	grpc.ClientStream
+}
+
+func (x *pointAlarmStatusGetPointAlarmStatusStreamClient) Recv() (*GetPointAlarmStatusStreamOutput, error) {
+	m := new(GetPointAlarmStatusStreamOutput)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+// PointAlarmStatusServer is the server API for PointAlarmStatus service.
+type PointAlarmStatusServer interface {
+	DeepPing(context.Context, *Void) (*DeepPingOutput, error)
+	SetPointAlarmThreshold(context.Context, *SetPointAlarmThresholdInput) (*SetPointAlarmThresholdOutput, error)
+	GetPointAlarmThreshold(context.Context, *GetPointAlarmThresholdInput) (*GetPointAlarmThresholdOutput, error)
+	SetPointAlarmStatus(context.Context, *SetPointAlarmStatusInput) (*SetPointAlarmStatusOutput, error)
+	GetPointAlarmStatus(context.Context, *GetPointAlarmStatusInput) (*GetPointAlarmStatusOutput, error)
+	GetPointAlarmStatusStream(*GetPointAlarmStatusStreamInput, PointAlarmStatus_GetPointAlarmStatusStreamServer) error
+}
+
+func RegisterPointAlarmStatusServer(s *grpc.Server, srv PointAlarmStatusServer) {
+	s.RegisterService(&_PointAlarmStatus_serviceDesc, srv)
+}
+
+func _PointAlarmStatus_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Void)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).DeepPing(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/DeepPing",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).DeepPing(ctx, req.(*Void))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PointAlarmStatus_SetPointAlarmThreshold_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetPointAlarmThresholdInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).SetPointAlarmThreshold(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/SetPointAlarmThreshold",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).SetPointAlarmThreshold(ctx, req.(*SetPointAlarmThresholdInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PointAlarmStatus_GetPointAlarmThreshold_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPointAlarmThresholdInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).GetPointAlarmThreshold(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/GetPointAlarmThreshold",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).GetPointAlarmThreshold(ctx, req.(*GetPointAlarmThresholdInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PointAlarmStatus_SetPointAlarmStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetPointAlarmStatusInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).SetPointAlarmStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/SetPointAlarmStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).SetPointAlarmStatus(ctx, req.(*SetPointAlarmStatusInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PointAlarmStatus_GetPointAlarmStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPointAlarmStatusInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).GetPointAlarmStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/GetPointAlarmStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).GetPointAlarmStatus(ctx, req.(*GetPointAlarmStatusInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PointAlarmStatus_GetPointAlarmStatusStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(GetPointAlarmStatusStreamInput)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(PointAlarmStatusServer).GetPointAlarmStatusStream(m, &pointAlarmStatusGetPointAlarmStatusStreamServer{stream})
+}
+
+type PointAlarmStatus_GetPointAlarmStatusStreamServer interface {
+	Send(*GetPointAlarmStatusStreamOutput) error
+	grpc.ServerStream
+}
+
+type pointAlarmStatusGetPointAlarmStatusStreamServer struct {
+	grpc.ServerStream
+}
+
+func (x *pointAlarmStatusGetPointAlarmStatusStreamServer) Send(m *GetPointAlarmStatusStreamOutput) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+var _PointAlarmStatus_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "pasapi.PointAlarmStatus",
+	HandlerType: (*PointAlarmStatusServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeepPing",
+			Handler:    _PointAlarmStatus_DeepPing_Handler,
+		},
+		{
+			MethodName: "SetPointAlarmThreshold",
+			Handler:    _PointAlarmStatus_SetPointAlarmThreshold_Handler,
+		},
+		{
+			MethodName: "GetPointAlarmThreshold",
+			Handler:    _PointAlarmStatus_GetPointAlarmThreshold_Handler,
+		},
+		{
+			MethodName: "SetPointAlarmStatus",
+			Handler:    _PointAlarmStatus_SetPointAlarmStatus_Handler,
+		},
+		{
+			MethodName: "GetPointAlarmStatus",
+			Handler:    _PointAlarmStatus_GetPointAlarmStatus_Handler,
+		},
+	},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "GetPointAlarmStatusStream",
+			Handler:       _PointAlarmStatus_GetPointAlarmStatusStream_Handler,
+			ServerStreams: true,
+		},
+	},
+	Metadata: "pas/grpcapi.proto",
 }
 
 func init() { proto.RegisterFile("pas/grpcapi.proto", fileDescriptor_grpcapi_371b6938b58bee3e) }

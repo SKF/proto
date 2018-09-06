@@ -7,6 +7,11 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
+import (
+	context "golang.org/x/net/context"
+	grpc "google.golang.org/grpc"
+)
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
 var _ = fmt.Errorf
@@ -997,6 +1002,375 @@ func init() {
 	proto.RegisterType((*PrimitiveBytes)(nil), "grpcapi.PrimitiveBytes")
 	proto.RegisterType((*PrimitiveVoid)(nil), "grpcapi.PrimitiveVoid")
 	proto.RegisterEnum("grpcapi.ValueType", ValueType_name, ValueType_value)
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// HierarchyClient is the client API for Hierarchy service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type HierarchyClient interface {
+	DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error)
+	GetNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error)
+	GetNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
+	GetChildNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error)
+	GetParentNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error)
+	GetAncestors(ctx context.Context, in *GetAncestorsInput, opts ...grpc.CallOption) (*GetAncestorsOutput, error)
+	GetNodeIdByOrigin(ctx context.Context, in *Origin, opts ...grpc.CallOption) (*PrimitiveString, error)
+	SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*PrimitiveString, error)
+	DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*PrimitiveVoid, error)
+	GetEvents(ctx context.Context, in *GetEventsInput, opts ...grpc.CallOption) (*GetEventsOutput, error)
+}
+
+type hierarchyClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewHierarchyClient(cc *grpc.ClientConn) HierarchyClient {
+	return &hierarchyClient{cc}
+}
+
+func (c *hierarchyClient) DeepPing(ctx context.Context, in *PrimitiveVoid, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/DeepPing", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
+	out := new(Node)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNode", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
+	out := new(Nodes)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNodes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetChildNodes(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Nodes, error) {
+	out := new(Nodes)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetChildNodes", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetParentNode(ctx context.Context, in *PrimitiveString, opts ...grpc.CallOption) (*Node, error) {
+	out := new(Node)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetParentNode", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetAncestors(ctx context.Context, in *GetAncestorsInput, opts ...grpc.CallOption) (*GetAncestorsOutput, error) {
+	out := new(GetAncestorsOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetAncestors", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetNodeIdByOrigin(ctx context.Context, in *Origin, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetNodeIdByOrigin", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) SaveNode(ctx context.Context, in *SaveNodeInput, opts ...grpc.CallOption) (*PrimitiveString, error) {
+	out := new(PrimitiveString)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/SaveNode", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) DeleteNode(ctx context.Context, in *DeleteNodeInput, opts ...grpc.CallOption) (*PrimitiveVoid, error) {
+	out := new(PrimitiveVoid)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/DeleteNode", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *hierarchyClient) GetEvents(ctx context.Context, in *GetEventsInput, opts ...grpc.CallOption) (*GetEventsOutput, error) {
+	out := new(GetEventsOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.Hierarchy/GetEvents", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// HierarchyServer is the server API for Hierarchy service.
+type HierarchyServer interface {
+	DeepPing(context.Context, *PrimitiveVoid) (*PrimitiveString, error)
+	GetNode(context.Context, *PrimitiveString) (*Node, error)
+	GetNodes(context.Context, *PrimitiveString) (*Nodes, error)
+	GetChildNodes(context.Context, *PrimitiveString) (*Nodes, error)
+	GetParentNode(context.Context, *PrimitiveString) (*Node, error)
+	GetAncestors(context.Context, *GetAncestorsInput) (*GetAncestorsOutput, error)
+	GetNodeIdByOrigin(context.Context, *Origin) (*PrimitiveString, error)
+	SaveNode(context.Context, *SaveNodeInput) (*PrimitiveString, error)
+	DeleteNode(context.Context, *DeleteNodeInput) (*PrimitiveVoid, error)
+	GetEvents(context.Context, *GetEventsInput) (*GetEventsOutput, error)
+}
+
+func RegisterHierarchyServer(s *grpc.Server, srv HierarchyServer) {
+	s.RegisterService(&_Hierarchy_serviceDesc, srv)
+}
+
+func _Hierarchy_DeepPing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveVoid)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).DeepPing(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/DeepPing",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).DeepPing(ctx, req.(*PrimitiveVoid))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetNode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetNode",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetNode(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetNodes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetNodes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetNodes(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetChildNodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetChildNodes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetChildNodes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetChildNodes(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetParentNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrimitiveString)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetParentNode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetParentNode",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetParentNode(ctx, req.(*PrimitiveString))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetAncestors_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAncestorsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetAncestors(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetAncestors",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetAncestors(ctx, req.(*GetAncestorsInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetNodeIdByOrigin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Origin)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetNodeIdByOrigin(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetNodeIdByOrigin",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetNodeIdByOrigin(ctx, req.(*Origin))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_SaveNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SaveNodeInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).SaveNode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/SaveNode",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).SaveNode(ctx, req.(*SaveNodeInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_DeleteNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteNodeInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).DeleteNode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/DeleteNode",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).DeleteNode(ctx, req.(*DeleteNodeInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Hierarchy_GetEvents_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetEventsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HierarchyServer).GetEvents(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Hierarchy/GetEvents",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HierarchyServer).GetEvents(ctx, req.(*GetEventsInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Hierarchy_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "grpcapi.Hierarchy",
+	HandlerType: (*HierarchyServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "DeepPing",
+			Handler:    _Hierarchy_DeepPing_Handler,
+		},
+		{
+			MethodName: "GetNode",
+			Handler:    _Hierarchy_GetNode_Handler,
+		},
+		{
+			MethodName: "GetNodes",
+			Handler:    _Hierarchy_GetNodes_Handler,
+		},
+		{
+			MethodName: "GetChildNodes",
+			Handler:    _Hierarchy_GetChildNodes_Handler,
+		},
+		{
+			MethodName: "GetParentNode",
+			Handler:    _Hierarchy_GetParentNode_Handler,
+		},
+		{
+			MethodName: "GetAncestors",
+			Handler:    _Hierarchy_GetAncestors_Handler,
+		},
+		{
+			MethodName: "GetNodeIdByOrigin",
+			Handler:    _Hierarchy_GetNodeIdByOrigin_Handler,
+		},
+		{
+			MethodName: "SaveNode",
+			Handler:    _Hierarchy_SaveNode_Handler,
+		},
+		{
+			MethodName: "DeleteNode",
+			Handler:    _Hierarchy_DeleteNode_Handler,
+		},
+		{
+			MethodName: "GetEvents",
+			Handler:    _Hierarchy_GetEvents_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "hierarchy/grpcapi.proto",
 }
 
 func init() { proto.RegisterFile("hierarchy/grpcapi.proto", fileDescriptor_grpcapi_c4ae82f6008d8567) }
