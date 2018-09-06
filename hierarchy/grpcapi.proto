@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "SKF.Enlight.API.Hierarchy";
+
 package grpcapi;
 
 service Hierarchy {
