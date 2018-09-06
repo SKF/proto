@@ -19,8 +19,8 @@ commit_files() {
   git checkout $2
   git rm -rf --ignore-unmatch .
 
-  for i in $( ls $3 ); do
-    if [[ ${SERVICES} =~ (^|[[:space:]])$i($|[[:space:]]) ]]; then
+  for service in $( ls $3 ); do
+    if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
       cp -rf $3/$i .
       git add -v $i
     fi
