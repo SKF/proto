@@ -1,15 +1,12 @@
 syntax = "proto3";
+package grpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.IAM";
 
-option java_multiple_files = true;
-option java_package = "com.skf.enlight.iam.grpcapi";
-option java_outer_classname = "iam";
-
-package grpcapi;
+import "common/common.proto";
 
 service IAM {
-  rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
+  rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
   rpc CheckAuthentication (CheckAuthenticationInput) returns (User) {}
 
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
@@ -33,7 +30,7 @@ message CheckAuthenticationInput {
 
 message GetEventRecordsInput {
   int64 since = 1;
-  PrimitiveInt32 limit = 2;
+  common.PrimitiveInt32 limit = 2;
 }
 
 message GetEventRecordsOutput {
@@ -49,22 +46,3 @@ message User {
   string userStatus = 6;
   string userRoles = 7;
 }
-
-// Primitive types
-message PrimitiveString {
-  string value = 1;
-}
-
-message PrimitiveInt32 {
-  int32 value = 1;
-}
-
-message PrimitiveBool {
-  bool value = 1;
-}
-
-message PrimitiveBytes {
-  bytes value = 1;
-}
-
-message PrimitiveVoid {}

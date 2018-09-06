@@ -1,11 +1,12 @@
 syntax = "proto3";
+package reportsgrpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.Reports";
 
-package reportsgrpcapi;
+import "common/common.proto";
 
 service Reports {
-  rpc DeepPing (PrimitiveVoid) returns (DeepPingOutput) {}
+  rpc DeepPing (common.Void) returns (DeepPingOutput) {}
   rpc GetAssetHealth (GetAssetHealthInput) returns (GetAssetHealthOutput) {}
   rpc GetFunctionalLocationHealth (GetFunctionalLocationHealthInput) returns (GetFunctionalLocationHealthOutput) {}
   rpc GetComplianceLog (GetComplianceLogInput) returns (GetComplianceLogOutput) {}
@@ -17,8 +18,6 @@ service Reports {
 message DeepPingOutput {
   string value = 1;
 }
-
-message PrimitiveVoid {}
 
 // GET ASSET HEALTH
 message GetAssetHealthInput {

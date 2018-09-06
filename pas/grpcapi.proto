@@ -1,11 +1,12 @@
 syntax = "proto3";
+package pasapi;
 
 option csharp_namespace = "SKF.Enlight.API.PAS";
 
-package pasapi;
+import "common/common.proto";
 
 service PointAlarmStatus {
-  rpc DeepPing (Void) returns (DeepPingOutput) {}
+  rpc DeepPing (common.Void) returns (DeepPingOutput) {}
 
   rpc SetPointAlarmThreshold (SetPointAlarmThresholdInput) returns (SetPointAlarmThresholdOutput) {}
   rpc GetPointAlarmThreshold (GetPointAlarmThresholdInput) returns (GetPointAlarmThresholdOutput) {}
@@ -74,8 +75,6 @@ enum AlarmStatus {
   ALERT = 3;          // Latest measurement data within an alert interval.
   DANGER = 4;         // Latest measurement data within a danger interval.
 }
-
-message Void {}
 
 enum ThresholdType {
   NONE = 0;

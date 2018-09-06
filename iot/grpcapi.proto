@@ -1,21 +1,22 @@
 syntax = "proto3";
+package iotgrpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.IoT";
 
-package iotgrpcapi;
+import "common/common.proto";
 
 service IoT {
-  rpc DeepPing (PrimitiveVoid) returns (PrimitiveString) {}
+  rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
-  rpc CreateTask (InitialTaskDescription) returns (PrimitiveString) {}
-  rpc GetAllTasks (PrimitiveString) returns (TaskDescriptions) {}
-  rpc GetUncompletedTasks (PrimitiveString) returns (TaskDescriptions) {}
-  rpc SetTaskCompleted (TaskUser) returns (PrimitiveVoid) {
+  rpc CreateTask (InitialTaskDescription) returns (common.PrimitiveString) {}
+  rpc GetAllTasks (common.PrimitiveString) returns (TaskDescriptions) {}
+  rpc GetUncompletedTasks (common.PrimitiveString) returns (TaskDescriptions) {}
+  rpc SetTaskCompleted (TaskUser) returns (common.Void) {
     option deprecated = true;
   }
-  rpc DeleteTask (TaskUser) returns (PrimitiveVoid) {}
-  rpc GetUncompletedTasksByHierarchy (PrimitiveString) returns (TaskDescriptions) {}
-  rpc SetTaskStatus (SetTaskStatusInput) returns (PrimitiveVoid) {}
+  rpc DeleteTask (TaskUser) returns (common.Void) {}
+  rpc GetUncompletedTasksByHierarchy (common.PrimitiveString) returns (TaskDescriptions) {}
+  rpc SetTaskStatus (SetTaskStatusInput) returns (common.Void) {}
   rpc GetTaskStream (GetTaskStreamInput) returns (stream GetTaskStreamOutput) {}
   rpc GetTasksByStatus (GetTasksByStatusInput) returns (GetTasksByStatusOutput) {}
   rpc GetTaskByUUID (GetTaskByUUIDInput) returns (GetTaskByUUIDOutput) {}
@@ -82,16 +83,6 @@ message FunctionalLocationIds {
   repeated string id_arr = 1;
 }
 
-message PrimitiveString {
-  string value = 1;
-}
-
-message PrimitiveBool {
-  bool value = 1;
-}
-
-message PrimitiveVoid {}
-
 enum NodeDataContentType {
   DEFAULT = 0;
   DATA_POINT = 1;
@@ -154,16 +145,10 @@ message Media {
   bytes media = 3;
 }
 
-message Origin {
-  string id = 1;
-  string type = 2;
-  string provider = 3;
-}
-
 // IngestNodeData messages
 message IngestNodeDataInput {
   string node_id = 1;
-  Origin origin = 3;
+  common.Origin origin = 3;
   NodeData node_data = 2;
 }
 
@@ -173,7 +158,7 @@ message IngestNodeDataOutput {}
 // IngestNodeDataStream messages
 message IngestNodeDataStreamInput {
   string node_id = 1;
-  Origin origin = 3;
+  common.Origin origin = 3;
   repeated NodeData node_data_list = 2;
 }
 
