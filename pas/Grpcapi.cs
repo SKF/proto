@@ -280,7 +280,7 @@ namespace SKF.Enlight.API.PAS {
       nodeId_ = other.nodeId_;
       userId_ = other.userId_;
       type_ = other.type_;
-      Overall = other.overall_ != null ? other.Overall.Clone() : null;
+      overall_ = other.overall_ != null ? other.overall_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -730,7 +730,7 @@ namespace SKF.Enlight.API.PAS {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPointAlarmThresholdOutput(GetPointAlarmThresholdOutput other) : this() {
       type_ = other.type_;
-      Overall = other.overall_ != null ? other.Overall.Clone() : null;
+      overall_ = other.overall_ != null ? other.overall_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1804,10 +1804,10 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Overall(Overall other) : this() {
-      OuterHigh = other.outerHigh_ != null ? other.OuterHigh.Clone() : null;
-      InnerHigh = other.innerHigh_ != null ? other.InnerHigh.Clone() : null;
-      InnerLow = other.innerLow_ != null ? other.InnerLow.Clone() : null;
-      OuterLow = other.outerLow_ != null ? other.OuterLow.Clone() : null;
+      outerHigh_ = other.outerHigh_ != null ? other.outerHigh_.Clone() : null;
+      innerHigh_ = other.innerHigh_ != null ? other.innerHigh_.Clone() : null;
+      innerLow_ = other.innerLow_ != null ? other.innerLow_.Clone() : null;
+      outerLow_ = other.outerLow_ != null ? other.outerLow_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

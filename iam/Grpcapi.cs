@@ -494,7 +494,7 @@ namespace SKF.Enlight.API.IAM {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetEventRecordsInput(GetEventRecordsInput other) : this() {
       since_ = other.since_;
-      Limit = other.limit_ != null ? other.Limit.Clone() : null;
+      limit_ = other.limit_ != null ? other.limit_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

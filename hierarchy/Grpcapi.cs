@@ -705,12 +705,12 @@ namespace SKF.Enlight.API.Hierarchy {
       type_ = other.type_;
       criticality_ = other.criticality_;
       subType_ = other.subType_;
-      Origin = other.origin_ != null ? other.Origin.Clone() : null;
-      AssetNode = other.assetNode_ != null ? other.AssetNode.Clone() : null;
-      MeasurementPoint = other.measurementPoint_ != null ? other.MeasurementPoint.Clone() : null;
-      InspectionPoint = other.inspectionPoint_ != null ? other.InspectionPoint.Clone() : null;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
+      assetNode_ = other.assetNode_ != null ? other.assetNode_.Clone() : null;
+      measurementPoint_ = other.measurementPoint_ != null ? other.measurementPoint_.Clone() : null;
+      inspectionPoint_ = other.inspectionPoint_ != null ? other.inspectionPoint_.Clone() : null;
       childOrderNumber_ = other.childOrderNumber_;
-      Position = other.position_ != null ? other.Position.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1289,7 +1289,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetEventsInput(GetEventsInput other) : this() {
       since_ = other.since_;
-      Limit = other.limit_ != null ? other.Limit.Clone() : null;
+      limit_ = other.limit_ != null ? other.limit_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1581,9 +1581,9 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SaveNodeInput(SaveNodeInput other) : this() {
       userId_ = other.userId_;
-      Node = other.node_ != null ? other.Node.Clone() : null;
+      node_ = other.node_ != null ? other.node_.Clone() : null;
       parentId_ = other.parentId_;
-      ParentOrigin = other.parentOrigin_ != null ? other.ParentOrigin.Clone() : null;
+      parentOrigin_ = other.parentOrigin_ != null ? other.parentOrigin_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1807,7 +1807,7 @@ namespace SKF.Enlight.API.Hierarchy {
     public DeleteNodeInput(DeleteNodeInput other) : this() {
       userId_ = other.userId_;
       nodeId_ = other.nodeId_;
-      Origin = other.origin_ != null ? other.Origin.Clone() : null;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2247,7 +2247,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AncestorNode(AncestorNode other) : this() {
       id_ = other.id_;
-      Origin = other.origin_ != null ? other.Origin.Clone() : null;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
       label_ = other.label_;
       description_ = other.description_;
       type_ = other.type_;

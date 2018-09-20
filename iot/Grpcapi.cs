@@ -62,74 +62,77 @@ namespace SKF.Enlight.API.IoT {
             "EgoKAmlkGAEgASgJEiMKBHR5cGUYAiABKA4yFS5pb3RncnBjYXBpLk1lZGlh",
             "VHlwZRINCgVtZWRpYRgDIAEoDCJvChNJbmdlc3ROb2RlRGF0YUlucHV0Eg8K",
             "B25vZGVfaWQYASABKAkSHgoGb3JpZ2luGAMgASgLMg4uY29tbW9uLk9yaWdp",
-            "bhInCglub2RlX2RhdGEYAiABKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIhYK",
-            "FEluZ2VzdE5vZGVEYXRhT3V0cHV0InoKGUluZ2VzdE5vZGVEYXRhU3RyZWFt",
-            "SW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIeCgZvcmlnaW4YAyABKAsyDi5jb21t",
-            "b24uT3JpZ2luEiwKDm5vZGVfZGF0YV9saXN0GAIgAygLMhQuaW90Z3JwY2Fw",
-            "aS5Ob2RlRGF0YSIcChpJbmdlc3ROb2RlRGF0YVN0cmVhbU91dHB1dCJtChBH",
-            "ZXROb2RlRGF0YUlucHV0Eg8KB25vZGVfaWQYASABKAkSEQoJdGltZXN0YW1w",
-            "GAIgASgDEjUKDGNvbnRlbnRfdHlwZRgDIAEoDjIfLmlvdGdycGNhcGkuTm9k",
-            "ZURhdGFDb250ZW50VHlwZSJBChFHZXROb2RlRGF0YU91dHB1dBIsCg5ub2Rl",
-            "X2RhdGFfbGlzdBgBIAMoCzIULmlvdGdycGNhcGkuTm9kZURhdGEiYAoWR2V0",
-            "TGF0ZXN0Tm9kZURhdGFJbnB1dBIPCgdub2RlX2lkGAEgASgJEjUKDGNvbnRl",
-            "bnRfdHlwZRgCIAEoDjIfLmlvdGdycGNhcGkuTm9kZURhdGFDb250ZW50VHlw",
-            "ZSJCChdHZXRMYXRlc3ROb2RlRGF0YU91dHB1dBInCglub2RlX2RhdGEYASAB",
-            "KAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIhgKFkdldE5vZGVEYXRhU3RyZWFt",
-            "SW5wdXQiUwoXR2V0Tm9kZURhdGFTdHJlYW1PdXRwdXQSDwoHbm9kZV9pZBgB",
-            "IAEoCRInCglub2RlX2RhdGEYAiABKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRh",
-            "IjIKDUdldE1lZGlhSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIQCghtZWRpYV9p",
-            "ZBgCIAEoCSIyCg5HZXRNZWRpYU91dHB1dBIgCgVtZWRpYRgBIAEoCzIRLmlv",
-            "dGdycGNhcGkuTWVkaWEiKgoSR2V0VGFza1N0cmVhbUlucHV0EhQKDGhpZXJh",
-            "cmNoeV9pZBgBIAEoCSJAChNHZXRUYXNrU3RyZWFtT3V0cHV0EikKBHRhc2sY",
-            "ASABKAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbiJVChVHZXRUYXNr",
-            "c0J5U3RhdHVzSW5wdXQSFAoMaGllcmFyY2h5X2lkGAEgASgJEiYKBnN0YXR1",
-            "cxgCIAEoDjIWLmlvdGdycGNhcGkuVGFza1N0YXR1cyJIChZHZXRUYXNrc0J5",
-            "U3RhdHVzT3V0cHV0Ei4KCXRhc2tfbGlzdBgBIAMoCzIbLmlvdGdycGNhcGku",
-            "VGFza0Rlc2NyaXB0aW9uIiUKEkdldFRhc2tCeVVVSURJbnB1dBIPCgd0YXNr",
-            "X2lkGAEgASgJIkAKE0dldFRhc2tCeVVVSURPdXRwdXQSKQoEdGFzaxgBIAEo",
-            "CzIbLmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9uIicKFEdldFRhc2tCeUxv",
-            "bmdJZElucHV0Eg8KB3Rhc2tfaWQYASABKAMiQgoVR2V0VGFza0J5TG9uZ0lk",
-            "T3V0cHV0EikKBHRhc2sYASABKAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlw",
-            "dGlvbipSCgpUYXNrU3RhdHVzEgwKCE5PVF9TRU5UEAASCAoEU0VOVBABEgwK",
-            "CFJFQ0VJVkVEEAISDwoLSU5fUFJPR1JFU1MQBBINCglDT01QTEVURUQQAyqO",
-            "AQoTTm9kZURhdGFDb250ZW50VHlwZRILCgdERUZBVUxUEAASDgoKREFUQV9Q",
-            "T0lOVBABEgwKCFNQRUNUUlVNEAISDwoLVElNRV9TRVJJRVMQAxIICgROT1RF",
-            "EAQSDQoFTUVESUEQBRoCCAESDAoITUVESUFfVjIQBxIUChBRVUVTVElPTl9B",
-            "TlNXRVJTEAYqRgoJTWVkaWFUeXBlEgsKB1VOS05PV04QABINCglBVURJT19X",
-            "QVYQARIOCgpJTUFHRV9KUEVHEAISDQoJSU1BR0VfUE5HEAMypAsKA0lvVBIz",
-            "CghEZWVwUGluZxIMLmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0",
-            "cmluZyIAEksKCkNyZWF0ZVRhc2sSIi5pb3RncnBjYXBpLkluaXRpYWxUYXNr",
-            "RGVzY3JpcHRpb24aFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASRgoLR2V0",
-            "QWxsVGFza3MSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2Fw",
-            "aS5UYXNrRGVzY3JpcHRpb25zIgASTgoTR2V0VW5jb21wbGV0ZWRUYXNrcxIX",
-            "LmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaHC5pb3RncnBjYXBpLlRhc2tEZXNj",
-            "cmlwdGlvbnMiABI7ChBTZXRUYXNrQ29tcGxldGVkEhQuaW90Z3JwY2FwaS5U",
-            "YXNrVXNlchoMLmNvbW1vbi5Wb2lkIgOIAgESMgoKRGVsZXRlVGFzaxIULmlv",
-            "dGdycGNhcGkuVGFza1VzZXIaDC5jb21tb24uVm9pZCIAElkKHkdldFVuY29t",
-            "cGxldGVkVGFza3NCeUhpZXJhcmNoeRIXLmNvbW1vbi5QcmltaXRpdmVTdHJp",
-            "bmcaHC5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbnMiABI/Cg1TZXRUYXNr",
-            "U3RhdHVzEh4uaW90Z3JwY2FwaS5TZXRUYXNrU3RhdHVzSW5wdXQaDC5jb21t",
-            "b24uVm9pZCIAElQKDUdldFRhc2tTdHJlYW0SHi5pb3RncnBjYXBpLkdldFRh",
-            "c2tTdHJlYW1JbnB1dBofLmlvdGdycGNhcGkuR2V0VGFza1N0cmVhbU91dHB1",
-            "dCIAMAESWwoQR2V0VGFza3NCeVN0YXR1cxIhLmlvdGdycGNhcGkuR2V0VGFz",
-            "a3NCeVN0YXR1c0lucHV0GiIuaW90Z3JwY2FwaS5HZXRUYXNrc0J5U3RhdHVz",
-            "T3V0cHV0IgASUgoNR2V0VGFza0J5VVVJRBIeLmlvdGdycGNhcGkuR2V0VGFz",
-            "a0J5VVVJRElucHV0Gh8uaW90Z3JwY2FwaS5HZXRUYXNrQnlVVUlET3V0cHV0",
-            "IgASWAoPR2V0VGFza0J5TG9uZ0lkEiAuaW90Z3JwY2FwaS5HZXRUYXNrQnlM",
-            "b25nSWRJbnB1dBohLmlvdGdycGNhcGkuR2V0VGFza0J5TG9uZ0lkT3V0cHV0",
-            "IgASVQoOSW5nZXN0Tm9kZURhdGESHy5pb3RncnBjYXBpLkluZ2VzdE5vZGVE",
-            "YXRhSW5wdXQaIC5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhT3V0cHV0IgAS",
-            "aQoUSW5nZXN0Tm9kZURhdGFTdHJlYW0SJS5pb3RncnBjYXBpLkluZ2VzdE5v",
-            "ZGVEYXRhU3RyZWFtSW5wdXQaJi5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRh",
-            "U3RyZWFtT3V0cHV0IgAoARJeChFHZXRMYXRlc3ROb2RlRGF0YRIiLmlvdGdy",
-            "cGNhcGkuR2V0TGF0ZXN0Tm9kZURhdGFJbnB1dBojLmlvdGdycGNhcGkuR2V0",
-            "TGF0ZXN0Tm9kZURhdGFPdXRwdXQiABJMCgtHZXROb2RlRGF0YRIcLmlvdGdy",
-            "cGNhcGkuR2V0Tm9kZURhdGFJbnB1dBodLmlvdGdycGNhcGkuR2V0Tm9kZURh",
-            "dGFPdXRwdXQiABJgChFHZXROb2RlRGF0YVN0cmVhbRIiLmlvdGdycGNhcGku",
-            "R2V0Tm9kZURhdGFTdHJlYW1JbnB1dBojLmlvdGdycGNhcGkuR2V0Tm9kZURh",
-            "dGFTdHJlYW1PdXRwdXQiADABEkMKCEdldE1lZGlhEhkuaW90Z3JwY2FwaS5H",
-            "ZXRNZWRpYUlucHV0GhouaW90Z3JwY2FwaS5HZXRNZWRpYU91dHB1dCIAQhaq",
-            "AhNTS0YuRW5saWdodC5BUEkuSW9UYgZwcm90bzM="));
+            "bhInCglub2RlX2RhdGEYAiABKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIkYK",
+            "E0RlbGV0ZU5vZGVEYXRhSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIeCgZvcmln",
+            "aW4YAiABKAsyDi5jb21tb24uT3JpZ2luIhYKFEluZ2VzdE5vZGVEYXRhT3V0",
+            "cHV0InoKGUluZ2VzdE5vZGVEYXRhU3RyZWFtSW5wdXQSDwoHbm9kZV9pZBgB",
+            "IAEoCRIeCgZvcmlnaW4YAyABKAsyDi5jb21tb24uT3JpZ2luEiwKDm5vZGVf",
+            "ZGF0YV9saXN0GAIgAygLMhQuaW90Z3JwY2FwaS5Ob2RlRGF0YSIcChpJbmdl",
+            "c3ROb2RlRGF0YVN0cmVhbU91dHB1dCJtChBHZXROb2RlRGF0YUlucHV0Eg8K",
+            "B25vZGVfaWQYASABKAkSEQoJdGltZXN0YW1wGAIgASgDEjUKDGNvbnRlbnRf",
+            "dHlwZRgDIAEoDjIfLmlvdGdycGNhcGkuTm9kZURhdGFDb250ZW50VHlwZSJB",
+            "ChFHZXROb2RlRGF0YU91dHB1dBIsCg5ub2RlX2RhdGFfbGlzdBgBIAMoCzIU",
+            "LmlvdGdycGNhcGkuTm9kZURhdGEiYAoWR2V0TGF0ZXN0Tm9kZURhdGFJbnB1",
+            "dBIPCgdub2RlX2lkGAEgASgJEjUKDGNvbnRlbnRfdHlwZRgCIAEoDjIfLmlv",
+            "dGdycGNhcGkuTm9kZURhdGFDb250ZW50VHlwZSJCChdHZXRMYXRlc3ROb2Rl",
+            "RGF0YU91dHB1dBInCglub2RlX2RhdGEYASABKAsyFC5pb3RncnBjYXBpLk5v",
+            "ZGVEYXRhIhgKFkdldE5vZGVEYXRhU3RyZWFtSW5wdXQiUwoXR2V0Tm9kZURh",
+            "dGFTdHJlYW1PdXRwdXQSDwoHbm9kZV9pZBgBIAEoCRInCglub2RlX2RhdGEY",
+            "AiABKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIjIKDUdldE1lZGlhSW5wdXQS",
+            "DwoHbm9kZV9pZBgBIAEoCRIQCghtZWRpYV9pZBgCIAEoCSIyCg5HZXRNZWRp",
+            "YU91dHB1dBIgCgVtZWRpYRgBIAEoCzIRLmlvdGdycGNhcGkuTWVkaWEiKgoS",
+            "R2V0VGFza1N0cmVhbUlucHV0EhQKDGhpZXJhcmNoeV9pZBgBIAEoCSJAChNH",
+            "ZXRUYXNrU3RyZWFtT3V0cHV0EikKBHRhc2sYASABKAsyGy5pb3RncnBjYXBp",
+            "LlRhc2tEZXNjcmlwdGlvbiJVChVHZXRUYXNrc0J5U3RhdHVzSW5wdXQSFAoM",
+            "aGllcmFyY2h5X2lkGAEgASgJEiYKBnN0YXR1cxgCIAEoDjIWLmlvdGdycGNh",
+            "cGkuVGFza1N0YXR1cyJIChZHZXRUYXNrc0J5U3RhdHVzT3V0cHV0Ei4KCXRh",
+            "c2tfbGlzdBgBIAMoCzIbLmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9uIiUK",
+            "EkdldFRhc2tCeVVVSURJbnB1dBIPCgd0YXNrX2lkGAEgASgJIkAKE0dldFRh",
+            "c2tCeVVVSURPdXRwdXQSKQoEdGFzaxgBIAEoCzIbLmlvdGdycGNhcGkuVGFz",
+            "a0Rlc2NyaXB0aW9uIicKFEdldFRhc2tCeUxvbmdJZElucHV0Eg8KB3Rhc2tf",
+            "aWQYASABKAMiQgoVR2V0VGFza0J5TG9uZ0lkT3V0cHV0EikKBHRhc2sYASAB",
+            "KAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbipSCgpUYXNrU3RhdHVz",
+            "EgwKCE5PVF9TRU5UEAASCAoEU0VOVBABEgwKCFJFQ0VJVkVEEAISDwoLSU5f",
+            "UFJPR1JFU1MQBBINCglDT01QTEVURUQQAyqOAQoTTm9kZURhdGFDb250ZW50",
+            "VHlwZRILCgdERUZBVUxUEAASDgoKREFUQV9QT0lOVBABEgwKCFNQRUNUUlVN",
+            "EAISDwoLVElNRV9TRVJJRVMQAxIICgROT1RFEAQSDQoFTUVESUEQBRoCCAES",
+            "DAoITUVESUFfVjIQBxIUChBRVUVTVElPTl9BTlNXRVJTEAYqRgoJTWVkaWFU",
+            "eXBlEgsKB1VOS05PV04QABINCglBVURJT19XQVYQARIOCgpJTUFHRV9KUEVH",
+            "EAISDQoJSU1BR0VfUE5HEAMy5wsKA0lvVBIzCghEZWVwUGluZxIMLmNvbW1v",
+            "bi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEksKCkNyZWF0ZVRh",
+            "c2sSIi5pb3RncnBjYXBpLkluaXRpYWxUYXNrRGVzY3JpcHRpb24aFy5jb21t",
+            "b24uUHJpbWl0aXZlU3RyaW5nIgASRgoLR2V0QWxsVGFza3MSFy5jb21tb24u",
+            "UHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25z",
+            "IgASTgoTR2V0VW5jb21wbGV0ZWRUYXNrcxIXLmNvbW1vbi5QcmltaXRpdmVT",
+            "dHJpbmcaHC5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbnMiABI7ChBTZXRU",
+            "YXNrQ29tcGxldGVkEhQuaW90Z3JwY2FwaS5UYXNrVXNlchoMLmNvbW1vbi5W",
+            "b2lkIgOIAgESMgoKRGVsZXRlVGFzaxIULmlvdGdycGNhcGkuVGFza1VzZXIa",
+            "DC5jb21tb24uVm9pZCIAElkKHkdldFVuY29tcGxldGVkVGFza3NCeUhpZXJh",
+            "cmNoeRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaHC5pb3RncnBjYXBpLlRh",
+            "c2tEZXNjcmlwdGlvbnMiABI/Cg1TZXRUYXNrU3RhdHVzEh4uaW90Z3JwY2Fw",
+            "aS5TZXRUYXNrU3RhdHVzSW5wdXQaDC5jb21tb24uVm9pZCIAElQKDUdldFRh",
+            "c2tTdHJlYW0SHi5pb3RncnBjYXBpLkdldFRhc2tTdHJlYW1JbnB1dBofLmlv",
+            "dGdycGNhcGkuR2V0VGFza1N0cmVhbU91dHB1dCIAMAESWwoQR2V0VGFza3NC",
+            "eVN0YXR1cxIhLmlvdGdycGNhcGkuR2V0VGFza3NCeVN0YXR1c0lucHV0GiIu",
+            "aW90Z3JwY2FwaS5HZXRUYXNrc0J5U3RhdHVzT3V0cHV0IgASUgoNR2V0VGFz",
+            "a0J5VVVJRBIeLmlvdGdycGNhcGkuR2V0VGFza0J5VVVJRElucHV0Gh8uaW90",
+            "Z3JwY2FwaS5HZXRUYXNrQnlVVUlET3V0cHV0IgASWAoPR2V0VGFza0J5TG9u",
+            "Z0lkEiAuaW90Z3JwY2FwaS5HZXRUYXNrQnlMb25nSWRJbnB1dBohLmlvdGdy",
+            "cGNhcGkuR2V0VGFza0J5TG9uZ0lkT3V0cHV0IgASVQoOSW5nZXN0Tm9kZURh",
+            "dGESHy5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhSW5wdXQaIC5pb3RncnBj",
+            "YXBpLkluZ2VzdE5vZGVEYXRhT3V0cHV0IgASaQoUSW5nZXN0Tm9kZURhdGFT",
+            "dHJlYW0SJS5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhU3RyZWFtSW5wdXQa",
+            "Ji5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhU3RyZWFtT3V0cHV0IgAoARJe",
+            "ChFHZXRMYXRlc3ROb2RlRGF0YRIiLmlvdGdycGNhcGkuR2V0TGF0ZXN0Tm9k",
+            "ZURhdGFJbnB1dBojLmlvdGdycGNhcGkuR2V0TGF0ZXN0Tm9kZURhdGFPdXRw",
+            "dXQiABJMCgtHZXROb2RlRGF0YRIcLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFJ",
+            "bnB1dBodLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFPdXRwdXQiABJgChFHZXRO",
+            "b2RlRGF0YVN0cmVhbRIiLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFTdHJlYW1J",
+            "bnB1dBojLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFTdHJlYW1PdXRwdXQiADAB",
+            "EkEKDkRlbGV0ZU5vZGVEYXRhEh8uaW90Z3JwY2FwaS5EZWxldGVOb2RlRGF0",
+            "YUlucHV0GgwuY29tbW9uLlZvaWQiABJDCghHZXRNZWRpYRIZLmlvdGdycGNh",
+            "cGkuR2V0TWVkaWFJbnB1dBoaLmlvdGdycGNhcGkuR2V0TWVkaWFPdXRwdXQi",
+            "AEIWqgITU0tGLkVubGlnaHQuQVBJLklvVGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -146,6 +149,7 @@ namespace SKF.Enlight.API.IoT {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TimeSeries), global::SKF.Enlight.API.IoT.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Media), global::SKF.Enlight.API.IoT.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "Origin", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DeleteNodeDataInput), global::SKF.Enlight.API.IoT.DeleteNodeDataInput.Parser, new[]{ "NodeId", "Origin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataOutput), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "Origin", "NodeDataList" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser, null, null, null, null),
@@ -231,7 +235,7 @@ namespace SKF.Enlight.API.IoT {
       hierarchyId_ = other.hierarchyId_;
       dueDateTimestamp_ = other.dueDateTimestamp_;
       isCompleted_ = other.isCompleted_;
-      FunctionalLocationIds = other.functionalLocationIds_ != null ? other.FunctionalLocationIds.Clone() : null;
+      functionalLocationIds_ = other.functionalLocationIds_ != null ? other.functionalLocationIds_.Clone() : null;
       externalTaskId_ = other.externalTaskId_;
       status_ = other.status_;
       statusUpdatedAt_ = other.statusUpdatedAt_;
@@ -647,7 +651,7 @@ namespace SKF.Enlight.API.IoT {
       taskName_ = other.taskName_;
       hierarchyId_ = other.hierarchyId_;
       dueDateTimestamp_ = other.dueDateTimestamp_;
-      FunctionalLocationIds = other.functionalLocationIds_ != null ? other.FunctionalLocationIds.Clone() : null;
+      functionalLocationIds_ = other.functionalLocationIds_ != null ? other.functionalLocationIds_.Clone() : null;
       externalTaskId_ = other.externalTaskId_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1563,12 +1567,12 @@ namespace SKF.Enlight.API.IoT {
     public NodeData(NodeData other) : this() {
       createdAt_ = other.createdAt_;
       contentType_ = other.contentType_;
-      DataPoint = other.dataPoint_ != null ? other.DataPoint.Clone() : null;
-      Spectrum = other.spectrum_ != null ? other.Spectrum.Clone() : null;
-      TimeSeries = other.timeSeries_ != null ? other.TimeSeries.Clone() : null;
+      dataPoint_ = other.dataPoint_ != null ? other.dataPoint_.Clone() : null;
+      spectrum_ = other.spectrum_ != null ? other.spectrum_.Clone() : null;
+      timeSeries_ = other.timeSeries_ != null ? other.timeSeries_.Clone() : null;
       note_ = other.note_;
       media_ = other.media_;
-      MediaV2 = other.mediaV2_ != null ? other.MediaV2.Clone() : null;
+      mediaV2_ = other.mediaV2_ != null ? other.mediaV2_.Clone() : null;
       questionAnswers_ = other.questionAnswers_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2088,7 +2092,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DataPoint(DataPoint other) : this() {
-      Coordinate = other.coordinate_ != null ? other.Coordinate.Clone() : null;
+      coordinate_ = other.coordinate_ != null ? other.coordinate_.Clone() : null;
       xUnit_ = other.xUnit_;
       yUnit_ = other.yUnit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2878,8 +2882,8 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public IngestNodeDataInput(IngestNodeDataInput other) : this() {
       nodeId_ = other.nodeId_;
-      Origin = other.origin_ != null ? other.Origin.Clone() : null;
-      NodeData = other.nodeData_ != null ? other.NodeData.Clone() : null;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
+      nodeData_ = other.nodeData_ != null ? other.nodeData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3049,6 +3053,169 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  public sealed partial class DeleteNodeDataInput : pb::IMessage<DeleteNodeDataInput> {
+    private static readonly pb::MessageParser<DeleteNodeDataInput> _parser = new pb::MessageParser<DeleteNodeDataInput>(() => new DeleteNodeDataInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteNodeDataInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteNodeDataInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteNodeDataInput(DeleteNodeDataInput other) : this() {
+      nodeId_ = other.nodeId_;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteNodeDataInput Clone() {
+      return new DeleteNodeDataInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 2;
+    private global::SKF.Enlight.API.Common.Origin origin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Common.Origin Origin {
+      get { return origin_; }
+      set {
+        origin_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteNodeDataInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteNodeDataInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      if (!object.Equals(Origin, other.Origin)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (origin_ != null) hash ^= Origin.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Origin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (origin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Origin);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteNodeDataInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      if (other.origin_ != null) {
+        if (origin_ == null) {
+          origin_ = new global::SKF.Enlight.API.Common.Origin();
+        }
+        Origin.MergeFrom(other.Origin);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (origin_ == null) {
+              origin_ = new global::SKF.Enlight.API.Common.Origin();
+            }
+            input.ReadMessage(origin_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class IngestNodeDataOutput : pb::IMessage<IngestNodeDataOutput> {
     private static readonly pb::MessageParser<IngestNodeDataOutput> _parser = new pb::MessageParser<IngestNodeDataOutput>(() => new IngestNodeDataOutput());
     private pb::UnknownFieldSet _unknownFields;
@@ -3057,7 +3224,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3161,7 +3328,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3179,7 +3346,7 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public IngestNodeDataStreamInput(IngestNodeDataStreamInput other) : this() {
       nodeId_ = other.nodeId_;
-      Origin = other.origin_ != null ? other.Origin.Clone() : null;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
       nodeDataList_ = other.nodeDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3344,7 +3511,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[15]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3448,7 +3615,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[16]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3633,7 +3800,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[17]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3757,7 +3924,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[18]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3914,7 +4081,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[19]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3931,7 +4098,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetLatestNodeDataOutput(GetLatestNodeDataOutput other) : this() {
-      NodeData = other.nodeData_ != null ? other.NodeData.Clone() : null;
+      nodeData_ = other.nodeData_ != null ? other.nodeData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4052,7 +4219,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[20]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4153,7 +4320,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[21]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4171,7 +4338,7 @@ namespace SKF.Enlight.API.IoT {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetNodeDataStreamOutput(GetNodeDataStreamOutput other) : this() {
       nodeId_ = other.nodeId_;
-      NodeData = other.nodeData_ != null ? other.NodeData.Clone() : null;
+      nodeData_ = other.nodeData_ != null ? other.nodeData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4319,7 +4486,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[22]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4476,7 +4643,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[23]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4493,7 +4660,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetMediaOutput(GetMediaOutput other) : this() {
-      Media = other.media_ != null ? other.Media.Clone() : null;
+      media_ = other.media_ != null ? other.media_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4611,7 +4778,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[24]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4740,7 +4907,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[25]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4757,7 +4924,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTaskStreamOutput(GetTaskStreamOutput other) : this() {
-      Task = other.task_ != null ? other.Task.Clone() : null;
+      task_ = other.task_ != null ? other.task_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4875,7 +5042,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[26]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5032,7 +5199,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[27]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5153,7 +5320,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[28]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5282,7 +5449,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[29]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5299,7 +5466,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTaskByUUIDOutput(GetTaskByUUIDOutput other) : this() {
-      Task = other.task_ != null ? other.Task.Clone() : null;
+      task_ = other.task_ != null ? other.task_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5417,7 +5584,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[30]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5546,7 +5713,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[31]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5563,7 +5730,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTaskByLongIdOutput(GetTaskByLongIdOutput other) : this() {
-      Task = other.task_ != null ? other.Task.Clone() : null;
+      task_ = other.task_ != null ? other.task_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
