@@ -153,6 +153,7 @@ message IngestNodeDataInput {
   NodeData node_data = 2;
 }
 
+// DeleteNodeData message
 message DeleteNodeDataInput {
   string node_id = 1;
   common.Origin origin = 2;
