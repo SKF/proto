@@ -1298,6 +1298,9 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  /// <summary>
+  /// Task descriptions
+  /// </summary>
   public sealed partial class TaskDescriptions : pb::IMessage<TaskDescriptions> {
     private static readonly pb::MessageParser<TaskDescriptions> _parser = new pb::MessageParser<TaskDescriptions>(() => new TaskDescriptions());
     private pb::UnknownFieldSet _unknownFields;
@@ -3053,6 +3056,9 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  /// <summary>
+  /// DeleteNodeData message
+  /// </summary>
   public sealed partial class DeleteNodeDataInput : pb::IMessage<DeleteNodeDataInput> {
     private static readonly pb::MessageParser<DeleteNodeDataInput> _parser = new pb::MessageParser<DeleteNodeDataInput>(() => new DeleteNodeDataInput());
     private pb::UnknownFieldSet _unknownFields;
