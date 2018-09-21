@@ -3,10 +3,12 @@
 
 package pasapi
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import common "github.com/SKF/proto/common"
+import (
+	fmt "fmt"
+	common "github.com/SKF/proto/common"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"
@@ -41,6 +43,7 @@ var AlarmStatus_name = map[int32]string{
 	3: "ALERT",
 	4: "DANGER",
 }
+
 var AlarmStatus_value = map[string]int32{
 	"NOT_CONFIGURED": 0,
 	"NO_DATA":        1,
@@ -52,8 +55,9 @@ var AlarmStatus_value = map[string]int32{
 func (x AlarmStatus) String() string {
 	return proto.EnumName(AlarmStatus_name, int32(x))
 }
+
 func (AlarmStatus) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{0}
+	return fileDescriptor_1bf2073887d77359, []int{0}
 }
 
 type ThresholdType int32
@@ -69,6 +73,7 @@ var ThresholdType_name = map[int32]string{
 	1: "OVERALL_IN_WINDOW",
 	2: "OVERALL_OUT_OF_WINDOW",
 }
+
 var ThresholdType_value = map[string]int32{
 	"NONE":                  0,
 	"OVERALL_IN_WINDOW":     1,
@@ -78,8 +83,9 @@ var ThresholdType_value = map[string]int32{
 func (x ThresholdType) String() string {
 	return proto.EnumName(ThresholdType_name, int32(x))
 }
+
 func (ThresholdType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{1}
+	return fileDescriptor_1bf2073887d77359, []int{1}
 }
 
 // DeepPing Messages
@@ -94,16 +100,17 @@ func (m *DeepPingOutput) Reset()         { *m = DeepPingOutput{} }
 func (m *DeepPingOutput) String() string { return proto.CompactTextString(m) }
 func (*DeepPingOutput) ProtoMessage()    {}
 func (*DeepPingOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{0}
+	return fileDescriptor_1bf2073887d77359, []int{0}
 }
+
 func (m *DeepPingOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeepPingOutput.Unmarshal(m, b)
 }
 func (m *DeepPingOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeepPingOutput.Marshal(b, m, deterministic)
 }
-func (dst *DeepPingOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeepPingOutput.Merge(dst, src)
+func (m *DeepPingOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeepPingOutput.Merge(m, src)
 }
 func (m *DeepPingOutput) XXX_Size() int {
 	return xxx_messageInfo_DeepPingOutput.Size(m)
@@ -136,16 +143,17 @@ func (m *SetPointAlarmThresholdInput) Reset()         { *m = SetPointAlarmThresh
 func (m *SetPointAlarmThresholdInput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmThresholdInput) ProtoMessage()    {}
 func (*SetPointAlarmThresholdInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{1}
+	return fileDescriptor_1bf2073887d77359, []int{1}
 }
+
 func (m *SetPointAlarmThresholdInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SetPointAlarmThresholdInput.Unmarshal(m, b)
 }
 func (m *SetPointAlarmThresholdInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SetPointAlarmThresholdInput.Marshal(b, m, deterministic)
 }
-func (dst *SetPointAlarmThresholdInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SetPointAlarmThresholdInput.Merge(dst, src)
+func (m *SetPointAlarmThresholdInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SetPointAlarmThresholdInput.Merge(m, src)
 }
 func (m *SetPointAlarmThresholdInput) XXX_Size() int {
 	return xxx_messageInfo_SetPointAlarmThresholdInput.Size(m)
@@ -194,16 +202,17 @@ func (m *SetPointAlarmThresholdOutput) Reset()         { *m = SetPointAlarmThres
 func (m *SetPointAlarmThresholdOutput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmThresholdOutput) ProtoMessage()    {}
 func (*SetPointAlarmThresholdOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{2}
+	return fileDescriptor_1bf2073887d77359, []int{2}
 }
+
 func (m *SetPointAlarmThresholdOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SetPointAlarmThresholdOutput.Unmarshal(m, b)
 }
 func (m *SetPointAlarmThresholdOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SetPointAlarmThresholdOutput.Marshal(b, m, deterministic)
 }
-func (dst *SetPointAlarmThresholdOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SetPointAlarmThresholdOutput.Merge(dst, src)
+func (m *SetPointAlarmThresholdOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SetPointAlarmThresholdOutput.Merge(m, src)
 }
 func (m *SetPointAlarmThresholdOutput) XXX_Size() int {
 	return xxx_messageInfo_SetPointAlarmThresholdOutput.Size(m)
@@ -226,16 +235,17 @@ func (m *GetPointAlarmThresholdInput) Reset()         { *m = GetPointAlarmThresh
 func (m *GetPointAlarmThresholdInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmThresholdInput) ProtoMessage()    {}
 func (*GetPointAlarmThresholdInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{3}
+	return fileDescriptor_1bf2073887d77359, []int{3}
 }
+
 func (m *GetPointAlarmThresholdInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmThresholdInput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmThresholdInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmThresholdInput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmThresholdInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmThresholdInput.Merge(dst, src)
+func (m *GetPointAlarmThresholdInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmThresholdInput.Merge(m, src)
 }
 func (m *GetPointAlarmThresholdInput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmThresholdInput.Size(m)
@@ -265,16 +275,17 @@ func (m *GetPointAlarmThresholdOutput) Reset()         { *m = GetPointAlarmThres
 func (m *GetPointAlarmThresholdOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmThresholdOutput) ProtoMessage()    {}
 func (*GetPointAlarmThresholdOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{4}
+	return fileDescriptor_1bf2073887d77359, []int{4}
 }
+
 func (m *GetPointAlarmThresholdOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmThresholdOutput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmThresholdOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmThresholdOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmThresholdOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmThresholdOutput.Merge(dst, src)
+func (m *GetPointAlarmThresholdOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmThresholdOutput.Merge(m, src)
 }
 func (m *GetPointAlarmThresholdOutput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmThresholdOutput.Size(m)
@@ -312,16 +323,17 @@ func (m *SetPointAlarmStatusInput) Reset()         { *m = SetPointAlarmStatusInp
 func (m *SetPointAlarmStatusInput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmStatusInput) ProtoMessage()    {}
 func (*SetPointAlarmStatusInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{5}
+	return fileDescriptor_1bf2073887d77359, []int{5}
 }
+
 func (m *SetPointAlarmStatusInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SetPointAlarmStatusInput.Unmarshal(m, b)
 }
 func (m *SetPointAlarmStatusInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SetPointAlarmStatusInput.Marshal(b, m, deterministic)
 }
-func (dst *SetPointAlarmStatusInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SetPointAlarmStatusInput.Merge(dst, src)
+func (m *SetPointAlarmStatusInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SetPointAlarmStatusInput.Merge(m, src)
 }
 func (m *SetPointAlarmStatusInput) XXX_Size() int {
 	return xxx_messageInfo_SetPointAlarmStatusInput.Size(m)
@@ -356,16 +368,17 @@ func (m *SetPointAlarmStatusOutput) Reset()         { *m = SetPointAlarmStatusOu
 func (m *SetPointAlarmStatusOutput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmStatusOutput) ProtoMessage()    {}
 func (*SetPointAlarmStatusOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{6}
+	return fileDescriptor_1bf2073887d77359, []int{6}
 }
+
 func (m *SetPointAlarmStatusOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SetPointAlarmStatusOutput.Unmarshal(m, b)
 }
 func (m *SetPointAlarmStatusOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SetPointAlarmStatusOutput.Marshal(b, m, deterministic)
 }
-func (dst *SetPointAlarmStatusOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SetPointAlarmStatusOutput.Merge(dst, src)
+func (m *SetPointAlarmStatusOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SetPointAlarmStatusOutput.Merge(m, src)
 }
 func (m *SetPointAlarmStatusOutput) XXX_Size() int {
 	return xxx_messageInfo_SetPointAlarmStatusOutput.Size(m)
@@ -388,16 +401,17 @@ func (m *GetPointAlarmStatusInput) Reset()         { *m = GetPointAlarmStatusInp
 func (m *GetPointAlarmStatusInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusInput) ProtoMessage()    {}
 func (*GetPointAlarmStatusInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{7}
+	return fileDescriptor_1bf2073887d77359, []int{7}
 }
+
 func (m *GetPointAlarmStatusInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmStatusInput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmStatusInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmStatusInput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmStatusInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmStatusInput.Merge(dst, src)
+func (m *GetPointAlarmStatusInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmStatusInput.Merge(m, src)
 }
 func (m *GetPointAlarmStatusInput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmStatusInput.Size(m)
@@ -426,16 +440,17 @@ func (m *GetPointAlarmStatusOutput) Reset()         { *m = GetPointAlarmStatusOu
 func (m *GetPointAlarmStatusOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusOutput) ProtoMessage()    {}
 func (*GetPointAlarmStatusOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{8}
+	return fileDescriptor_1bf2073887d77359, []int{8}
 }
+
 func (m *GetPointAlarmStatusOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmStatusOutput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmStatusOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmStatusOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmStatusOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmStatusOutput.Merge(dst, src)
+func (m *GetPointAlarmStatusOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmStatusOutput.Merge(m, src)
 }
 func (m *GetPointAlarmStatusOutput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmStatusOutput.Size(m)
@@ -464,16 +479,17 @@ func (m *GetPointAlarmStatusStreamInput) Reset()         { *m = GetPointAlarmSta
 func (m *GetPointAlarmStatusStreamInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusStreamInput) ProtoMessage()    {}
 func (*GetPointAlarmStatusStreamInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{9}
+	return fileDescriptor_1bf2073887d77359, []int{9}
 }
+
 func (m *GetPointAlarmStatusStreamInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmStatusStreamInput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmStatusStreamInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmStatusStreamInput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmStatusStreamInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmStatusStreamInput.Merge(dst, src)
+func (m *GetPointAlarmStatusStreamInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmStatusStreamInput.Merge(m, src)
 }
 func (m *GetPointAlarmStatusStreamInput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmStatusStreamInput.Size(m)
@@ -496,16 +512,17 @@ func (m *GetPointAlarmStatusStreamOutput) Reset()         { *m = GetPointAlarmSt
 func (m *GetPointAlarmStatusStreamOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusStreamOutput) ProtoMessage()    {}
 func (*GetPointAlarmStatusStreamOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{10}
+	return fileDescriptor_1bf2073887d77359, []int{10}
 }
+
 func (m *GetPointAlarmStatusStreamOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetPointAlarmStatusStreamOutput.Unmarshal(m, b)
 }
 func (m *GetPointAlarmStatusStreamOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetPointAlarmStatusStreamOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetPointAlarmStatusStreamOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetPointAlarmStatusStreamOutput.Merge(dst, src)
+func (m *GetPointAlarmStatusStreamOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPointAlarmStatusStreamOutput.Merge(m, src)
 }
 func (m *GetPointAlarmStatusStreamOutput) XXX_Size() int {
 	return xxx_messageInfo_GetPointAlarmStatusStreamOutput.Size(m)
@@ -541,16 +558,17 @@ func (m *DoubleObject) Reset()         { *m = DoubleObject{} }
 func (m *DoubleObject) String() string { return proto.CompactTextString(m) }
 func (*DoubleObject) ProtoMessage()    {}
 func (*DoubleObject) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{11}
+	return fileDescriptor_1bf2073887d77359, []int{11}
 }
+
 func (m *DoubleObject) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DoubleObject.Unmarshal(m, b)
 }
 func (m *DoubleObject) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DoubleObject.Marshal(b, m, deterministic)
 }
-func (dst *DoubleObject) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DoubleObject.Merge(dst, src)
+func (m *DoubleObject) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DoubleObject.Merge(m, src)
 }
 func (m *DoubleObject) XXX_Size() int {
 	return xxx_messageInfo_DoubleObject.Size(m)
@@ -582,16 +600,17 @@ func (m *Overall) Reset()         { *m = Overall{} }
 func (m *Overall) String() string { return proto.CompactTextString(m) }
 func (*Overall) ProtoMessage()    {}
 func (*Overall) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_9bfb67938fd0b684, []int{12}
+	return fileDescriptor_1bf2073887d77359, []int{12}
 }
+
 func (m *Overall) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Overall.Unmarshal(m, b)
 }
 func (m *Overall) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Overall.Marshal(b, m, deterministic)
 }
-func (dst *Overall) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Overall.Merge(dst, src)
+func (m *Overall) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Overall.Merge(m, src)
 }
 func (m *Overall) XXX_Size() int {
 	return xxx_messageInfo_Overall.Size(m)
@@ -631,6 +650,8 @@ func (m *Overall) GetOuterLow() *DoubleObject {
 }
 
 func init() {
+	proto.RegisterEnum("pasapi.AlarmStatus", AlarmStatus_name, AlarmStatus_value)
+	proto.RegisterEnum("pasapi.ThresholdType", ThresholdType_name, ThresholdType_value)
 	proto.RegisterType((*DeepPingOutput)(nil), "pasapi.DeepPingOutput")
 	proto.RegisterType((*SetPointAlarmThresholdInput)(nil), "pasapi.SetPointAlarmThresholdInput")
 	proto.RegisterType((*SetPointAlarmThresholdOutput)(nil), "pasapi.SetPointAlarmThresholdOutput")
@@ -644,8 +665,6 @@ func init() {
 	proto.RegisterType((*GetPointAlarmStatusStreamOutput)(nil), "pasapi.GetPointAlarmStatusStreamOutput")
 	proto.RegisterType((*DoubleObject)(nil), "pasapi.DoubleObject")
 	proto.RegisterType((*Overall)(nil), "pasapi.Overall")
-	proto.RegisterEnum("pasapi.AlarmStatus", AlarmStatus_name, AlarmStatus_value)
-	proto.RegisterEnum("pasapi.ThresholdType", ThresholdType_name, ThresholdType_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -913,9 +932,9 @@ var _PointAlarmStatus_serviceDesc = grpc.ServiceDesc{
 	Metadata: "pas/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("pas/grpcapi.proto", fileDescriptor_grpcapi_9bfb67938fd0b684) }
+func init() { proto.RegisterFile("pas/grpcapi.proto", fileDescriptor_1bf2073887d77359) }
 
-var fileDescriptor_grpcapi_9bfb67938fd0b684 = []byte{
+var fileDescriptor_1bf2073887d77359 = []byte{
 	// 667 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x55, 0x5f, 0x4f, 0xda, 0x50,
 	0x14, 0xb7, 0x88, 0xa0, 0x07, 0xc7, 0xea, 0x45, 0x1d, 0xa2, 0x71, 0xac, 0x33, 0x4e, 0x7d, 0xa8,

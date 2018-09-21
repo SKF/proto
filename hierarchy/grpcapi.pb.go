@@ -3,10 +3,12 @@
 
 package grpcapi
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import common "github.com/SKF/proto/common"
+import (
+	fmt "fmt"
+	common "github.com/SKF/proto/common"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"
@@ -37,6 +39,7 @@ var ValueType_name = map[int32]string{
 	1: "SINGLE_CHOICE",
 	2: "MULTI_CHOICE",
 }
+
 var ValueType_value = map[string]int32{
 	"NUMERIC":       0,
 	"SINGLE_CHOICE": 1,
@@ -46,8 +49,9 @@ var ValueType_value = map[string]int32{
 func (x ValueType) String() string {
 	return proto.EnumName(ValueType_name, int32(x))
 }
+
 func (ValueType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{0}
+	return fileDescriptor_17d2394d36d1a269, []int{0}
 }
 
 type MeasurementPoint struct {
@@ -65,16 +69,17 @@ func (m *MeasurementPoint) Reset()         { *m = MeasurementPoint{} }
 func (m *MeasurementPoint) String() string { return proto.CompactTextString(m) }
 func (*MeasurementPoint) ProtoMessage()    {}
 func (*MeasurementPoint) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{0}
+	return fileDescriptor_17d2394d36d1a269, []int{0}
 }
+
 func (m *MeasurementPoint) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MeasurementPoint.Unmarshal(m, b)
 }
 func (m *MeasurementPoint) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_MeasurementPoint.Marshal(b, m, deterministic)
 }
-func (dst *MeasurementPoint) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MeasurementPoint.Merge(dst, src)
+func (m *MeasurementPoint) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MeasurementPoint.Merge(m, src)
 }
 func (m *MeasurementPoint) XXX_Size() int {
 	return xxx_messageInfo_MeasurementPoint.Size(m)
@@ -134,16 +139,17 @@ func (m *InspectionPoint) Reset()         { *m = InspectionPoint{} }
 func (m *InspectionPoint) String() string { return proto.CompactTextString(m) }
 func (*InspectionPoint) ProtoMessage()    {}
 func (*InspectionPoint) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{1}
+	return fileDescriptor_17d2394d36d1a269, []int{1}
 }
+
 func (m *InspectionPoint) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InspectionPoint.Unmarshal(m, b)
 }
 func (m *InspectionPoint) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InspectionPoint.Marshal(b, m, deterministic)
 }
-func (dst *InspectionPoint) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_InspectionPoint.Merge(dst, src)
+func (m *InspectionPoint) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_InspectionPoint.Merge(m, src)
 }
 func (m *InspectionPoint) XXX_Size() int {
 	return xxx_messageInfo_InspectionPoint.Size(m)
@@ -193,16 +199,17 @@ func (m *AssetNode) Reset()         { *m = AssetNode{} }
 func (m *AssetNode) String() string { return proto.CompactTextString(m) }
 func (*AssetNode) ProtoMessage()    {}
 func (*AssetNode) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{2}
+	return fileDescriptor_17d2394d36d1a269, []int{2}
 }
+
 func (m *AssetNode) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AssetNode.Unmarshal(m, b)
 }
 func (m *AssetNode) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AssetNode.Marshal(b, m, deterministic)
 }
-func (dst *AssetNode) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AssetNode.Merge(dst, src)
+func (m *AssetNode) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AssetNode.Merge(m, src)
 }
 func (m *AssetNode) XXX_Size() int {
 	return xxx_messageInfo_AssetNode.Size(m)
@@ -242,16 +249,17 @@ func (m *Node) Reset()         { *m = Node{} }
 func (m *Node) String() string { return proto.CompactTextString(m) }
 func (*Node) ProtoMessage()    {}
 func (*Node) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{3}
+	return fileDescriptor_17d2394d36d1a269, []int{3}
 }
+
 func (m *Node) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Node.Unmarshal(m, b)
 }
 func (m *Node) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Node.Marshal(b, m, deterministic)
 }
-func (dst *Node) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Node.Merge(dst, src)
+func (m *Node) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Node.Merge(m, src)
 }
 func (m *Node) XXX_Size() int {
 	return xxx_messageInfo_Node.Size(m)
@@ -358,16 +366,17 @@ func (m *Nodes) Reset()         { *m = Nodes{} }
 func (m *Nodes) String() string { return proto.CompactTextString(m) }
 func (*Nodes) ProtoMessage()    {}
 func (*Nodes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{4}
+	return fileDescriptor_17d2394d36d1a269, []int{4}
 }
+
 func (m *Nodes) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Nodes.Unmarshal(m, b)
 }
 func (m *Nodes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Nodes.Marshal(b, m, deterministic)
 }
-func (dst *Nodes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Nodes.Merge(dst, src)
+func (m *Nodes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Nodes.Merge(m, src)
 }
 func (m *Nodes) XXX_Size() int {
 	return xxx_messageInfo_Nodes.Size(m)
@@ -397,16 +406,17 @@ func (m *GetEventsInput) Reset()         { *m = GetEventsInput{} }
 func (m *GetEventsInput) String() string { return proto.CompactTextString(m) }
 func (*GetEventsInput) ProtoMessage()    {}
 func (*GetEventsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{5}
+	return fileDescriptor_17d2394d36d1a269, []int{5}
 }
+
 func (m *GetEventsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventsInput.Unmarshal(m, b)
 }
 func (m *GetEventsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetEventsInput.Marshal(b, m, deterministic)
 }
-func (dst *GetEventsInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetEventsInput.Merge(dst, src)
+func (m *GetEventsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetEventsInput.Merge(m, src)
 }
 func (m *GetEventsInput) XXX_Size() int {
 	return xxx_messageInfo_GetEventsInput.Size(m)
@@ -442,16 +452,17 @@ func (m *GetEventsOutput) Reset()         { *m = GetEventsOutput{} }
 func (m *GetEventsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetEventsOutput) ProtoMessage()    {}
 func (*GetEventsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{6}
+	return fileDescriptor_17d2394d36d1a269, []int{6}
 }
+
 func (m *GetEventsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventsOutput.Unmarshal(m, b)
 }
 func (m *GetEventsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetEventsOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetEventsOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetEventsOutput.Merge(dst, src)
+func (m *GetEventsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetEventsOutput.Merge(m, src)
 }
 func (m *GetEventsOutput) XXX_Size() int {
 	return xxx_messageInfo_GetEventsOutput.Size(m)
@@ -483,16 +494,17 @@ func (m *SaveNodeInput) Reset()         { *m = SaveNodeInput{} }
 func (m *SaveNodeInput) String() string { return proto.CompactTextString(m) }
 func (*SaveNodeInput) ProtoMessage()    {}
 func (*SaveNodeInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{7}
+	return fileDescriptor_17d2394d36d1a269, []int{7}
 }
+
 func (m *SaveNodeInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaveNodeInput.Unmarshal(m, b)
 }
 func (m *SaveNodeInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SaveNodeInput.Marshal(b, m, deterministic)
 }
-func (dst *SaveNodeInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SaveNodeInput.Merge(dst, src)
+func (m *SaveNodeInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SaveNodeInput.Merge(m, src)
 }
 func (m *SaveNodeInput) XXX_Size() int {
 	return xxx_messageInfo_SaveNodeInput.Size(m)
@@ -544,16 +556,17 @@ func (m *DeleteNodeInput) Reset()         { *m = DeleteNodeInput{} }
 func (m *DeleteNodeInput) String() string { return proto.CompactTextString(m) }
 func (*DeleteNodeInput) ProtoMessage()    {}
 func (*DeleteNodeInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{8}
+	return fileDescriptor_17d2394d36d1a269, []int{8}
 }
+
 func (m *DeleteNodeInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteNodeInput.Unmarshal(m, b)
 }
 func (m *DeleteNodeInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeleteNodeInput.Marshal(b, m, deterministic)
 }
-func (dst *DeleteNodeInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteNodeInput.Merge(dst, src)
+func (m *DeleteNodeInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteNodeInput.Merge(m, src)
 }
 func (m *DeleteNodeInput) XXX_Size() int {
 	return xxx_messageInfo_DeleteNodeInput.Size(m)
@@ -596,16 +609,17 @@ func (m *GetAncestorsInput) Reset()         { *m = GetAncestorsInput{} }
 func (m *GetAncestorsInput) String() string { return proto.CompactTextString(m) }
 func (*GetAncestorsInput) ProtoMessage()    {}
 func (*GetAncestorsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{9}
+	return fileDescriptor_17d2394d36d1a269, []int{9}
 }
+
 func (m *GetAncestorsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAncestorsInput.Unmarshal(m, b)
 }
 func (m *GetAncestorsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAncestorsInput.Marshal(b, m, deterministic)
 }
-func (dst *GetAncestorsInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAncestorsInput.Merge(dst, src)
+func (m *GetAncestorsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAncestorsInput.Merge(m, src)
 }
 func (m *GetAncestorsInput) XXX_Size() int {
 	return xxx_messageInfo_GetAncestorsInput.Size(m)
@@ -634,16 +648,17 @@ func (m *GetAncestorsOutput) Reset()         { *m = GetAncestorsOutput{} }
 func (m *GetAncestorsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetAncestorsOutput) ProtoMessage()    {}
 func (*GetAncestorsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{10}
+	return fileDescriptor_17d2394d36d1a269, []int{10}
 }
+
 func (m *GetAncestorsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAncestorsOutput.Unmarshal(m, b)
 }
 func (m *GetAncestorsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAncestorsOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetAncestorsOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAncestorsOutput.Merge(dst, src)
+func (m *GetAncestorsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAncestorsOutput.Merge(m, src)
 }
 func (m *GetAncestorsOutput) XXX_Size() int {
 	return xxx_messageInfo_GetAncestorsOutput.Size(m)
@@ -678,16 +693,17 @@ func (m *AncestorNode) Reset()         { *m = AncestorNode{} }
 func (m *AncestorNode) String() string { return proto.CompactTextString(m) }
 func (*AncestorNode) ProtoMessage()    {}
 func (*AncestorNode) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_13bef9ce6e0159f6, []int{11}
+	return fileDescriptor_17d2394d36d1a269, []int{11}
 }
+
 func (m *AncestorNode) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AncestorNode.Unmarshal(m, b)
 }
 func (m *AncestorNode) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AncestorNode.Marshal(b, m, deterministic)
 }
-func (dst *AncestorNode) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AncestorNode.Merge(dst, src)
+func (m *AncestorNode) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AncestorNode.Merge(m, src)
 }
 func (m *AncestorNode) XXX_Size() int {
 	return xxx_messageInfo_AncestorNode.Size(m)
@@ -748,6 +764,7 @@ func (m *AncestorNode) GetParentId() string {
 }
 
 func init() {
+	proto.RegisterEnum("grpcapi.ValueType", ValueType_name, ValueType_value)
 	proto.RegisterType((*MeasurementPoint)(nil), "grpcapi.MeasurementPoint")
 	proto.RegisterType((*InspectionPoint)(nil), "grpcapi.InspectionPoint")
 	proto.RegisterType((*AssetNode)(nil), "grpcapi.AssetNode")
@@ -760,7 +777,6 @@ func init() {
 	proto.RegisterType((*GetAncestorsInput)(nil), "grpcapi.GetAncestorsInput")
 	proto.RegisterType((*GetAncestorsOutput)(nil), "grpcapi.GetAncestorsOutput")
 	proto.RegisterType((*AncestorNode)(nil), "grpcapi.AncestorNode")
-	proto.RegisterEnum("grpcapi.ValueType", ValueType_name, ValueType_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -1132,9 +1148,9 @@ var _Hierarchy_serviceDesc = grpc.ServiceDesc{
 	Metadata: "hierarchy/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("hierarchy/grpcapi.proto", fileDescriptor_grpcapi_13bef9ce6e0159f6) }
+func init() { proto.RegisterFile("hierarchy/grpcapi.proto", fileDescriptor_17d2394d36d1a269) }
 
-var fileDescriptor_grpcapi_13bef9ce6e0159f6 = []byte{
+var fileDescriptor_17d2394d36d1a269 = []byte{
 	// 963 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x56, 0xdd, 0x6e, 0xe2, 0x46,
 	0x14, 0xc6, 0xfc, 0x73, 0x20, 0x40, 0xa6, 0x2d, 0xf1, 0xd2, 0xbd, 0xa0, 0xae, 0x54, 0xd1, 0x36,

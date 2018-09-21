@@ -3,10 +3,12 @@
 
 package reportsgrpcapi
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import common "github.com/SKF/proto/common"
+import (
+	fmt "fmt"
+	common "github.com/SKF/proto/common"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"
@@ -35,16 +37,17 @@ func (m *DeepPingOutput) Reset()         { *m = DeepPingOutput{} }
 func (m *DeepPingOutput) String() string { return proto.CompactTextString(m) }
 func (*DeepPingOutput) ProtoMessage()    {}
 func (*DeepPingOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{0}
+	return fileDescriptor_6c279291fdfc2520, []int{0}
 }
+
 func (m *DeepPingOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeepPingOutput.Unmarshal(m, b)
 }
 func (m *DeepPingOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeepPingOutput.Marshal(b, m, deterministic)
 }
-func (dst *DeepPingOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeepPingOutput.Merge(dst, src)
+func (m *DeepPingOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeepPingOutput.Merge(m, src)
 }
 func (m *DeepPingOutput) XXX_Size() int {
 	return xxx_messageInfo_DeepPingOutput.Size(m)
@@ -74,16 +77,17 @@ func (m *GetAssetHealthInput) Reset()         { *m = GetAssetHealthInput{} }
 func (m *GetAssetHealthInput) String() string { return proto.CompactTextString(m) }
 func (*GetAssetHealthInput) ProtoMessage()    {}
 func (*GetAssetHealthInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{1}
+	return fileDescriptor_6c279291fdfc2520, []int{1}
 }
+
 func (m *GetAssetHealthInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAssetHealthInput.Unmarshal(m, b)
 }
 func (m *GetAssetHealthInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAssetHealthInput.Marshal(b, m, deterministic)
 }
-func (dst *GetAssetHealthInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAssetHealthInput.Merge(dst, src)
+func (m *GetAssetHealthInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAssetHealthInput.Merge(m, src)
 }
 func (m *GetAssetHealthInput) XXX_Size() int {
 	return xxx_messageInfo_GetAssetHealthInput.Size(m)
@@ -112,16 +116,17 @@ func (m *GetAssetHealthOutput) Reset()         { *m = GetAssetHealthOutput{} }
 func (m *GetAssetHealthOutput) String() string { return proto.CompactTextString(m) }
 func (*GetAssetHealthOutput) ProtoMessage()    {}
 func (*GetAssetHealthOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{2}
+	return fileDescriptor_6c279291fdfc2520, []int{2}
 }
+
 func (m *GetAssetHealthOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAssetHealthOutput.Unmarshal(m, b)
 }
 func (m *GetAssetHealthOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAssetHealthOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetAssetHealthOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAssetHealthOutput.Merge(dst, src)
+func (m *GetAssetHealthOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAssetHealthOutput.Merge(m, src)
 }
 func (m *GetAssetHealthOutput) XXX_Size() int {
 	return xxx_messageInfo_GetAssetHealthOutput.Size(m)
@@ -151,16 +156,17 @@ func (m *GetFunctionalLocationHealthInput) Reset()         { *m = GetFunctionalL
 func (m *GetFunctionalLocationHealthInput) String() string { return proto.CompactTextString(m) }
 func (*GetFunctionalLocationHealthInput) ProtoMessage()    {}
 func (*GetFunctionalLocationHealthInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{3}
+	return fileDescriptor_6c279291fdfc2520, []int{3}
 }
+
 func (m *GetFunctionalLocationHealthInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetFunctionalLocationHealthInput.Unmarshal(m, b)
 }
 func (m *GetFunctionalLocationHealthInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetFunctionalLocationHealthInput.Marshal(b, m, deterministic)
 }
-func (dst *GetFunctionalLocationHealthInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetFunctionalLocationHealthInput.Merge(dst, src)
+func (m *GetFunctionalLocationHealthInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetFunctionalLocationHealthInput.Merge(m, src)
 }
 func (m *GetFunctionalLocationHealthInput) XXX_Size() int {
 	return xxx_messageInfo_GetFunctionalLocationHealthInput.Size(m)
@@ -189,16 +195,17 @@ func (m *GetFunctionalLocationHealthOutput) Reset()         { *m = GetFunctional
 func (m *GetFunctionalLocationHealthOutput) String() string { return proto.CompactTextString(m) }
 func (*GetFunctionalLocationHealthOutput) ProtoMessage()    {}
 func (*GetFunctionalLocationHealthOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{4}
+	return fileDescriptor_6c279291fdfc2520, []int{4}
 }
+
 func (m *GetFunctionalLocationHealthOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetFunctionalLocationHealthOutput.Unmarshal(m, b)
 }
 func (m *GetFunctionalLocationHealthOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetFunctionalLocationHealthOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetFunctionalLocationHealthOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetFunctionalLocationHealthOutput.Merge(dst, src)
+func (m *GetFunctionalLocationHealthOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetFunctionalLocationHealthOutput.Merge(m, src)
 }
 func (m *GetFunctionalLocationHealthOutput) XXX_Size() int {
 	return xxx_messageInfo_GetFunctionalLocationHealthOutput.Size(m)
@@ -227,16 +234,17 @@ func (m *GetComplianceLogInput) Reset()         { *m = GetComplianceLogInput{} }
 func (m *GetComplianceLogInput) String() string { return proto.CompactTextString(m) }
 func (*GetComplianceLogInput) ProtoMessage()    {}
 func (*GetComplianceLogInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{5}
+	return fileDescriptor_6c279291fdfc2520, []int{5}
 }
+
 func (m *GetComplianceLogInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetComplianceLogInput.Unmarshal(m, b)
 }
 func (m *GetComplianceLogInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetComplianceLogInput.Marshal(b, m, deterministic)
 }
-func (dst *GetComplianceLogInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetComplianceLogInput.Merge(dst, src)
+func (m *GetComplianceLogInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetComplianceLogInput.Merge(m, src)
 }
 func (m *GetComplianceLogInput) XXX_Size() int {
 	return xxx_messageInfo_GetComplianceLogInput.Size(m)
@@ -265,16 +273,17 @@ func (m *GetComplianceLogOutput) Reset()         { *m = GetComplianceLogOutput{}
 func (m *GetComplianceLogOutput) String() string { return proto.CompactTextString(m) }
 func (*GetComplianceLogOutput) ProtoMessage()    {}
 func (*GetComplianceLogOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{6}
+	return fileDescriptor_6c279291fdfc2520, []int{6}
 }
+
 func (m *GetComplianceLogOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetComplianceLogOutput.Unmarshal(m, b)
 }
 func (m *GetComplianceLogOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetComplianceLogOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetComplianceLogOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetComplianceLogOutput.Merge(dst, src)
+func (m *GetComplianceLogOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetComplianceLogOutput.Merge(m, src)
 }
 func (m *GetComplianceLogOutput) XXX_Size() int {
 	return xxx_messageInfo_GetComplianceLogOutput.Size(m)
@@ -306,16 +315,17 @@ func (m *ComplianceItem) Reset()         { *m = ComplianceItem{} }
 func (m *ComplianceItem) String() string { return proto.CompactTextString(m) }
 func (*ComplianceItem) ProtoMessage()    {}
 func (*ComplianceItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{7}
+	return fileDescriptor_6c279291fdfc2520, []int{7}
 }
+
 func (m *ComplianceItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ComplianceItem.Unmarshal(m, b)
 }
 func (m *ComplianceItem) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ComplianceItem.Marshal(b, m, deterministic)
 }
-func (dst *ComplianceItem) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ComplianceItem.Merge(dst, src)
+func (m *ComplianceItem) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ComplianceItem.Merge(m, src)
 }
 func (m *ComplianceItem) XXX_Size() int {
 	return xxx_messageInfo_ComplianceItem.Size(m)
@@ -365,16 +375,17 @@ func (m *GetReportsInput) Reset()         { *m = GetReportsInput{} }
 func (m *GetReportsInput) String() string { return proto.CompactTextString(m) }
 func (*GetReportsInput) ProtoMessage()    {}
 func (*GetReportsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{8}
+	return fileDescriptor_6c279291fdfc2520, []int{8}
 }
+
 func (m *GetReportsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetReportsInput.Unmarshal(m, b)
 }
 func (m *GetReportsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetReportsInput.Marshal(b, m, deterministic)
 }
-func (dst *GetReportsInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetReportsInput.Merge(dst, src)
+func (m *GetReportsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetReportsInput.Merge(m, src)
 }
 func (m *GetReportsInput) XXX_Size() int {
 	return xxx_messageInfo_GetReportsInput.Size(m)
@@ -403,16 +414,17 @@ func (m *GetReportsOutput) Reset()         { *m = GetReportsOutput{} }
 func (m *GetReportsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetReportsOutput) ProtoMessage()    {}
 func (*GetReportsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{9}
+	return fileDescriptor_6c279291fdfc2520, []int{9}
 }
+
 func (m *GetReportsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetReportsOutput.Unmarshal(m, b)
 }
 func (m *GetReportsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetReportsOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetReportsOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetReportsOutput.Merge(dst, src)
+func (m *GetReportsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetReportsOutput.Merge(m, src)
 }
 func (m *GetReportsOutput) XXX_Size() int {
 	return xxx_messageInfo_GetReportsOutput.Size(m)
@@ -447,16 +459,17 @@ func (m *ReportsItem) Reset()         { *m = ReportsItem{} }
 func (m *ReportsItem) String() string { return proto.CompactTextString(m) }
 func (*ReportsItem) ProtoMessage()    {}
 func (*ReportsItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{10}
+	return fileDescriptor_6c279291fdfc2520, []int{10}
 }
+
 func (m *ReportsItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ReportsItem.Unmarshal(m, b)
 }
 func (m *ReportsItem) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ReportsItem.Marshal(b, m, deterministic)
 }
-func (dst *ReportsItem) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ReportsItem.Merge(dst, src)
+func (m *ReportsItem) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ReportsItem.Merge(m, src)
 }
 func (m *ReportsItem) XXX_Size() int {
 	return xxx_messageInfo_ReportsItem.Size(m)
@@ -533,16 +546,17 @@ func (m *Asset) Reset()         { *m = Asset{} }
 func (m *Asset) String() string { return proto.CompactTextString(m) }
 func (*Asset) ProtoMessage()    {}
 func (*Asset) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{11}
+	return fileDescriptor_6c279291fdfc2520, []int{11}
 }
+
 func (m *Asset) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Asset.Unmarshal(m, b)
 }
 func (m *Asset) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Asset.Marshal(b, m, deterministic)
 }
-func (dst *Asset) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Asset.Merge(dst, src)
+func (m *Asset) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Asset.Merge(m, src)
 }
 func (m *Asset) XXX_Size() int {
 	return xxx_messageInfo_Asset.Size(m)
@@ -624,16 +638,17 @@ func (m *FaultItem) Reset()         { *m = FaultItem{} }
 func (m *FaultItem) String() string { return proto.CompactTextString(m) }
 func (*FaultItem) ProtoMessage()    {}
 func (*FaultItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{12}
+	return fileDescriptor_6c279291fdfc2520, []int{12}
 }
+
 func (m *FaultItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_FaultItem.Unmarshal(m, b)
 }
 func (m *FaultItem) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_FaultItem.Marshal(b, m, deterministic)
 }
-func (dst *FaultItem) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_FaultItem.Merge(dst, src)
+func (m *FaultItem) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_FaultItem.Merge(m, src)
 }
 func (m *FaultItem) XXX_Size() int {
 	return xxx_messageInfo_FaultItem.Size(m)
@@ -745,16 +760,17 @@ func (m *RecommendedActionItem) Reset()         { *m = RecommendedActionItem{} }
 func (m *RecommendedActionItem) String() string { return proto.CompactTextString(m) }
 func (*RecommendedActionItem) ProtoMessage()    {}
 func (*RecommendedActionItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{13}
+	return fileDescriptor_6c279291fdfc2520, []int{13}
 }
+
 func (m *RecommendedActionItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RecommendedActionItem.Unmarshal(m, b)
 }
 func (m *RecommendedActionItem) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_RecommendedActionItem.Marshal(b, m, deterministic)
 }
-func (dst *RecommendedActionItem) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RecommendedActionItem.Merge(dst, src)
+func (m *RecommendedActionItem) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RecommendedActionItem.Merge(m, src)
 }
 func (m *RecommendedActionItem) XXX_Size() int {
 	return xxx_messageInfo_RecommendedActionItem.Size(m)
@@ -827,16 +843,17 @@ func (m *GetComplianceSummaryInput) Reset()         { *m = GetComplianceSummaryI
 func (m *GetComplianceSummaryInput) String() string { return proto.CompactTextString(m) }
 func (*GetComplianceSummaryInput) ProtoMessage()    {}
 func (*GetComplianceSummaryInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{14}
+	return fileDescriptor_6c279291fdfc2520, []int{14}
 }
+
 func (m *GetComplianceSummaryInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetComplianceSummaryInput.Unmarshal(m, b)
 }
 func (m *GetComplianceSummaryInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetComplianceSummaryInput.Marshal(b, m, deterministic)
 }
-func (dst *GetComplianceSummaryInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetComplianceSummaryInput.Merge(dst, src)
+func (m *GetComplianceSummaryInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetComplianceSummaryInput.Merge(m, src)
 }
 func (m *GetComplianceSummaryInput) XXX_Size() int {
 	return xxx_messageInfo_GetComplianceSummaryInput.Size(m)
@@ -883,16 +900,17 @@ func (m *GetComplianceSummaryOutput) Reset()         { *m = GetComplianceSummary
 func (m *GetComplianceSummaryOutput) String() string { return proto.CompactTextString(m) }
 func (*GetComplianceSummaryOutput) ProtoMessage()    {}
 func (*GetComplianceSummaryOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{15}
+	return fileDescriptor_6c279291fdfc2520, []int{15}
 }
+
 func (m *GetComplianceSummaryOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetComplianceSummaryOutput.Unmarshal(m, b)
 }
 func (m *GetComplianceSummaryOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetComplianceSummaryOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetComplianceSummaryOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetComplianceSummaryOutput.Merge(dst, src)
+func (m *GetComplianceSummaryOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetComplianceSummaryOutput.Merge(m, src)
 }
 func (m *GetComplianceSummaryOutput) XXX_Size() int {
 	return xxx_messageInfo_GetComplianceSummaryOutput.Size(m)
@@ -950,16 +968,17 @@ func (m *StatusNote) Reset()         { *m = StatusNote{} }
 func (m *StatusNote) String() string { return proto.CompactTextString(m) }
 func (*StatusNote) ProtoMessage()    {}
 func (*StatusNote) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{16}
+	return fileDescriptor_6c279291fdfc2520, []int{16}
 }
+
 func (m *StatusNote) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_StatusNote.Unmarshal(m, b)
 }
 func (m *StatusNote) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_StatusNote.Marshal(b, m, deterministic)
 }
-func (dst *StatusNote) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_StatusNote.Merge(dst, src)
+func (m *StatusNote) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StatusNote.Merge(m, src)
 }
 func (m *StatusNote) XXX_Size() int {
 	return xxx_messageInfo_StatusNote.Size(m)
@@ -999,16 +1018,17 @@ func (m *System) Reset()         { *m = System{} }
 func (m *System) String() string { return proto.CompactTextString(m) }
 func (*System) ProtoMessage()    {}
 func (*System) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_c16742b3d93583ab, []int{17}
+	return fileDescriptor_6c279291fdfc2520, []int{17}
 }
+
 func (m *System) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_System.Unmarshal(m, b)
 }
 func (m *System) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_System.Marshal(b, m, deterministic)
 }
-func (dst *System) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_System.Merge(dst, src)
+func (m *System) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_System.Merge(m, src)
 }
 func (m *System) XXX_Size() int {
 	return xxx_messageInfo_System.Size(m)
@@ -1312,9 +1332,9 @@ var _Reports_serviceDesc = grpc.ServiceDesc{
 	Metadata: "reports/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("reports/grpcapi.proto", fileDescriptor_grpcapi_c16742b3d93583ab) }
+func init() { proto.RegisterFile("reports/grpcapi.proto", fileDescriptor_6c279291fdfc2520) }
 
-var fileDescriptor_grpcapi_c16742b3d93583ab = []byte{
+var fileDescriptor_6c279291fdfc2520 = []byte{
 	// 1220 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x57, 0x4d, 0x73, 0xdc, 0x44,
 	0x13, 0x7e, 0xb5, 0x9b, 0xfd, 0xea, 0xdd, 0x77, 0xe3, 0x4c, 0xec, 0x8d, 0x22, 0x07, 0xb2, 0x51,

@@ -3,10 +3,12 @@
 
 package grpcapi
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import common "github.com/SKF/proto/common"
+import (
+	fmt "fmt"
+	common "github.com/SKF/proto/common"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"
@@ -36,16 +38,17 @@ func (m *GetHierarchyRelationsInput) Reset()         { *m = GetHierarchyRelation
 func (m *GetHierarchyRelationsInput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsInput) ProtoMessage()    {}
 func (*GetHierarchyRelationsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{0}
+	return fileDescriptor_8be5c115a6825307, []int{0}
 }
+
 func (m *GetHierarchyRelationsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsInput.Unmarshal(m, b)
 }
 func (m *GetHierarchyRelationsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetHierarchyRelationsInput.Marshal(b, m, deterministic)
 }
-func (dst *GetHierarchyRelationsInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetHierarchyRelationsInput.Merge(dst, src)
+func (m *GetHierarchyRelationsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetHierarchyRelationsInput.Merge(m, src)
 }
 func (m *GetHierarchyRelationsInput) XXX_Size() int {
 	return xxx_messageInfo_GetHierarchyRelationsInput.Size(m)
@@ -74,16 +77,17 @@ func (m *GetHierarchyRelationsOutput) Reset()         { *m = GetHierarchyRelatio
 func (m *GetHierarchyRelationsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsOutput) ProtoMessage()    {}
 func (*GetHierarchyRelationsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{1}
+	return fileDescriptor_8be5c115a6825307, []int{1}
 }
+
 func (m *GetHierarchyRelationsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsOutput.Unmarshal(m, b)
 }
 func (m *GetHierarchyRelationsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetHierarchyRelationsOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetHierarchyRelationsOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetHierarchyRelationsOutput.Merge(dst, src)
+func (m *GetHierarchyRelationsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetHierarchyRelationsOutput.Merge(m, src)
 }
 func (m *GetHierarchyRelationsOutput) XXX_Size() int {
 	return xxx_messageInfo_GetHierarchyRelationsOutput.Size(m)
@@ -113,16 +117,17 @@ func (m *CheckAuthenticationInput) Reset()         { *m = CheckAuthenticationInp
 func (m *CheckAuthenticationInput) String() string { return proto.CompactTextString(m) }
 func (*CheckAuthenticationInput) ProtoMessage()    {}
 func (*CheckAuthenticationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{2}
+	return fileDescriptor_8be5c115a6825307, []int{2}
 }
+
 func (m *CheckAuthenticationInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CheckAuthenticationInput.Unmarshal(m, b)
 }
 func (m *CheckAuthenticationInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CheckAuthenticationInput.Marshal(b, m, deterministic)
 }
-func (dst *CheckAuthenticationInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CheckAuthenticationInput.Merge(dst, src)
+func (m *CheckAuthenticationInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CheckAuthenticationInput.Merge(m, src)
 }
 func (m *CheckAuthenticationInput) XXX_Size() int {
 	return xxx_messageInfo_CheckAuthenticationInput.Size(m)
@@ -159,16 +164,17 @@ func (m *GetEventRecordsInput) Reset()         { *m = GetEventRecordsInput{} }
 func (m *GetEventRecordsInput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsInput) ProtoMessage()    {}
 func (*GetEventRecordsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{3}
+	return fileDescriptor_8be5c115a6825307, []int{3}
 }
+
 func (m *GetEventRecordsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsInput.Unmarshal(m, b)
 }
 func (m *GetEventRecordsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetEventRecordsInput.Marshal(b, m, deterministic)
 }
-func (dst *GetEventRecordsInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetEventRecordsInput.Merge(dst, src)
+func (m *GetEventRecordsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetEventRecordsInput.Merge(m, src)
 }
 func (m *GetEventRecordsInput) XXX_Size() int {
 	return xxx_messageInfo_GetEventRecordsInput.Size(m)
@@ -204,16 +210,17 @@ func (m *GetEventRecordsOutput) Reset()         { *m = GetEventRecordsOutput{} }
 func (m *GetEventRecordsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsOutput) ProtoMessage()    {}
 func (*GetEventRecordsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{4}
+	return fileDescriptor_8be5c115a6825307, []int{4}
 }
+
 func (m *GetEventRecordsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsOutput.Unmarshal(m, b)
 }
 func (m *GetEventRecordsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetEventRecordsOutput.Marshal(b, m, deterministic)
 }
-func (dst *GetEventRecordsOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetEventRecordsOutput.Merge(dst, src)
+func (m *GetEventRecordsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetEventRecordsOutput.Merge(m, src)
 }
 func (m *GetEventRecordsOutput) XXX_Size() int {
 	return xxx_messageInfo_GetEventRecordsOutput.Size(m)
@@ -248,16 +255,17 @@ func (m *User) Reset()         { *m = User{} }
 func (m *User) String() string { return proto.CompactTextString(m) }
 func (*User) ProtoMessage()    {}
 func (*User) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_fcc05907c15edaec, []int{5}
+	return fileDescriptor_8be5c115a6825307, []int{5}
 }
+
 func (m *User) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_User.Unmarshal(m, b)
 }
 func (m *User) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_User.Marshal(b, m, deterministic)
 }
-func (dst *User) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_User.Merge(dst, src)
+func (m *User) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_User.Merge(m, src)
 }
 func (m *User) XXX_Size() int {
 	return xxx_messageInfo_User.Size(m)
@@ -497,9 +505,9 @@ var _IAM_serviceDesc = grpc.ServiceDesc{
 	Metadata: "iam/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_fcc05907c15edaec) }
+func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_8be5c115a6825307) }
 
-var fileDescriptor_grpcapi_fcc05907c15edaec = []byte{
+var fileDescriptor_8be5c115a6825307 = []byte{
 	// 497 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x53, 0xdd, 0x6e, 0xd3, 0x4c,
 	0x10, 0xcd, 0x4f, 0xf3, 0x37, 0x5f, 0xbf, 0x22, 0x36, 0xa5, 0x35, 0x06, 0xaa, 0x62, 0x10, 0xea,
