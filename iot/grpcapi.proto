@@ -68,6 +68,7 @@ message SetTaskStatusInput {
   int64 updated_at = 4; // ms
 }
 
+// Task descriptions
 message TaskDescriptions {
   repeated TaskDescription task_description_arr = 1;
 }
