@@ -60,6 +60,7 @@ message Node {
   InspectionPoint inspectionPoint = 10;
   int64 childOrderNumber = 11 [deprecated=true];
   common.PrimitiveInt64 position = 12;
+  string tags = 13;
 }
 
 message Nodes {
