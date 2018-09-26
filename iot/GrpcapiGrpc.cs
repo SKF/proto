@@ -26,6 +26,8 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> __Marshaller_iotgrpcapi_GetTaskByUUIDOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByLongIdInput> __Marshaller_iotgrpcapi_GetTaskByLongIdInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> __Marshaller_iotgrpcapi_GetTaskByLongIdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput> __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataInput> __Marshaller_iotgrpcapi_IngestNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Marshaller_iotgrpcapi_IngestNodeDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput> __Marshaller_iotgrpcapi_IngestNodeDataStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser.ParseFrom);
@@ -123,6 +125,13 @@ namespace SKF.Enlight.API.IoT {
         "GetTaskByLongId",
         __Marshaller_iotgrpcapi_GetTaskByLongIdInput,
         __Marshaller_iotgrpcapi_GetTaskByLongIdOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput, global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> __Method_GetTasksModifiedSinceTimestamp = new grpc::Method<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput, global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTasksModifiedSinceTimestamp",
+        __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampInput,
+        __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Method_IngestNodeData = new grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput>(
         grpc::MethodType.Unary,
@@ -238,6 +247,11 @@ namespace SKF.Enlight.API.IoT {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> GetTaskByLongId(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> GetTasksModifiedSinceTimestamp(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -486,6 +500,22 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTaskByLongId, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput GetTasksModifiedSinceTimestamp(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTasksModifiedSinceTimestamp(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput GetTasksModifiedSinceTimestamp(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTasksModifiedSinceTimestamp, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> GetTasksModifiedSinceTimestampAsync(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTasksModifiedSinceTimestampAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> GetTasksModifiedSinceTimestampAsync(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTasksModifiedSinceTimestamp, null, options, request);
+      }
       public virtual global::SKF.Enlight.API.IoT.IngestNodeDataOutput IngestNodeData(global::SKF.Enlight.API.IoT.IngestNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return IngestNodeData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -606,6 +636,7 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_GetTasksByStatus, serviceImpl.GetTasksByStatus)
           .AddMethod(__Method_GetTaskByUUID, serviceImpl.GetTaskByUUID)
           .AddMethod(__Method_GetTaskByLongId, serviceImpl.GetTaskByLongId)
+          .AddMethod(__Method_GetTasksModifiedSinceTimestamp, serviceImpl.GetTasksModifiedSinceTimestamp)
           .AddMethod(__Method_IngestNodeData, serviceImpl.IngestNodeData)
           .AddMethod(__Method_IngestNodeDataStream, serviceImpl.IngestNodeDataStream)
           .AddMethod(__Method_GetLatestNodeData, serviceImpl.GetLatestNodeData)

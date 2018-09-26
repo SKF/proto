@@ -91,48 +91,55 @@ namespace SKF.Enlight.API.IoT {
             "c2tCeVVVSURPdXRwdXQSKQoEdGFzaxgBIAEoCzIbLmlvdGdycGNhcGkuVGFz",
             "a0Rlc2NyaXB0aW9uIicKFEdldFRhc2tCeUxvbmdJZElucHV0Eg8KB3Rhc2tf",
             "aWQYASABKAMiQgoVR2V0VGFza0J5TG9uZ0lkT3V0cHV0EikKBHRhc2sYASAB",
-            "KAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbipSCgpUYXNrU3RhdHVz",
-            "EgwKCE5PVF9TRU5UEAASCAoEU0VOVBABEgwKCFJFQ0VJVkVEEAISDwoLSU5f",
-            "UFJPR1JFU1MQBBINCglDT01QTEVURUQQAyqOAQoTTm9kZURhdGFDb250ZW50",
-            "VHlwZRILCgdERUZBVUxUEAASDgoKREFUQV9QT0lOVBABEgwKCFNQRUNUUlVN",
-            "EAISDwoLVElNRV9TRVJJRVMQAxIICgROT1RFEAQSDQoFTUVESUEQBRoCCAES",
-            "DAoITUVESUFfVjIQBxIUChBRVUVTVElPTl9BTlNXRVJTEAYqRgoJTWVkaWFU",
-            "eXBlEgsKB1VOS05PV04QABINCglBVURJT19XQVYQARIOCgpJTUFHRV9KUEVH",
-            "EAISDQoJSU1BR0VfUE5HEAMy5wsKA0lvVBIzCghEZWVwUGluZxIMLmNvbW1v",
-            "bi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEksKCkNyZWF0ZVRh",
-            "c2sSIi5pb3RncnBjYXBpLkluaXRpYWxUYXNrRGVzY3JpcHRpb24aFy5jb21t",
-            "b24uUHJpbWl0aXZlU3RyaW5nIgASRgoLR2V0QWxsVGFza3MSFy5jb21tb24u",
-            "UHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25z",
-            "IgASTgoTR2V0VW5jb21wbGV0ZWRUYXNrcxIXLmNvbW1vbi5QcmltaXRpdmVT",
-            "dHJpbmcaHC5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbnMiABI7ChBTZXRU",
-            "YXNrQ29tcGxldGVkEhQuaW90Z3JwY2FwaS5UYXNrVXNlchoMLmNvbW1vbi5W",
-            "b2lkIgOIAgESMgoKRGVsZXRlVGFzaxIULmlvdGdycGNhcGkuVGFza1VzZXIa",
-            "DC5jb21tb24uVm9pZCIAElkKHkdldFVuY29tcGxldGVkVGFza3NCeUhpZXJh",
-            "cmNoeRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaHC5pb3RncnBjYXBpLlRh",
-            "c2tEZXNjcmlwdGlvbnMiABI/Cg1TZXRUYXNrU3RhdHVzEh4uaW90Z3JwY2Fw",
-            "aS5TZXRUYXNrU3RhdHVzSW5wdXQaDC5jb21tb24uVm9pZCIAElQKDUdldFRh",
-            "c2tTdHJlYW0SHi5pb3RncnBjYXBpLkdldFRhc2tTdHJlYW1JbnB1dBofLmlv",
-            "dGdycGNhcGkuR2V0VGFza1N0cmVhbU91dHB1dCIAMAESWwoQR2V0VGFza3NC",
-            "eVN0YXR1cxIhLmlvdGdycGNhcGkuR2V0VGFza3NCeVN0YXR1c0lucHV0GiIu",
-            "aW90Z3JwY2FwaS5HZXRUYXNrc0J5U3RhdHVzT3V0cHV0IgASUgoNR2V0VGFz",
-            "a0J5VVVJRBIeLmlvdGdycGNhcGkuR2V0VGFza0J5VVVJRElucHV0Gh8uaW90",
-            "Z3JwY2FwaS5HZXRUYXNrQnlVVUlET3V0cHV0IgASWAoPR2V0VGFza0J5TG9u",
-            "Z0lkEiAuaW90Z3JwY2FwaS5HZXRUYXNrQnlMb25nSWRJbnB1dBohLmlvdGdy",
-            "cGNhcGkuR2V0VGFza0J5TG9uZ0lkT3V0cHV0IgASVQoOSW5nZXN0Tm9kZURh",
-            "dGESHy5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhSW5wdXQaIC5pb3RncnBj",
-            "YXBpLkluZ2VzdE5vZGVEYXRhT3V0cHV0IgASaQoUSW5nZXN0Tm9kZURhdGFT",
-            "dHJlYW0SJS5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhU3RyZWFtSW5wdXQa",
-            "Ji5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhU3RyZWFtT3V0cHV0IgAoARJe",
-            "ChFHZXRMYXRlc3ROb2RlRGF0YRIiLmlvdGdycGNhcGkuR2V0TGF0ZXN0Tm9k",
-            "ZURhdGFJbnB1dBojLmlvdGdycGNhcGkuR2V0TGF0ZXN0Tm9kZURhdGFPdXRw",
-            "dXQiABJMCgtHZXROb2RlRGF0YRIcLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFJ",
-            "bnB1dBodLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFPdXRwdXQiABJgChFHZXRO",
-            "b2RlRGF0YVN0cmVhbRIiLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFTdHJlYW1J",
-            "bnB1dBojLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFTdHJlYW1PdXRwdXQiADAB",
-            "EkEKDkRlbGV0ZU5vZGVEYXRhEh8uaW90Z3JwY2FwaS5EZWxldGVOb2RlRGF0",
-            "YUlucHV0GgwuY29tbW9uLlZvaWQiABJDCghHZXRNZWRpYRIZLmlvdGdycGNh",
-            "cGkuR2V0TWVkaWFJbnB1dBoaLmlvdGdycGNhcGkuR2V0TWVkaWFPdXRwdXQi",
-            "AEIWqgITU0tGLkVubGlnaHQuQVBJLklvVGIGcHJvdG8z"));
+            "KAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbiJJCiNHZXRUYXNrc01v",
+            "ZGlmaWVkU2luY2VUaW1lc3RhbXBJbnB1dBIRCgl0aW1lc3RhbXAYASABKAMS",
+            "DwoHdXNlcl9pZBgCIAEoCSJWCiRHZXRUYXNrc01vZGlmaWVkU2luY2VUaW1l",
+            "c3RhbXBPdXRwdXQSLgoJdGFza19saXN0GAEgAygLMhsuaW90Z3JwY2FwaS5U",
+            "YXNrRGVzY3JpcHRpb24qUgoKVGFza1N0YXR1cxIMCghOT1RfU0VOVBAAEggK",
+            "BFNFTlQQARIMCghSRUNFSVZFRBACEg8KC0lOX1BST0dSRVNTEAQSDQoJQ09N",
+            "UExFVEVEEAMqjgEKE05vZGVEYXRhQ29udGVudFR5cGUSCwoHREVGQVVMVBAA",
+            "Eg4KCkRBVEFfUE9JTlQQARIMCghTUEVDVFJVTRACEg8KC1RJTUVfU0VSSUVT",
+            "EAMSCAoETk9URRAEEg0KBU1FRElBEAUaAggBEgwKCE1FRElBX1YyEAcSFAoQ",
+            "UVVFU1RJT05fQU5TV0VSUxAGKkYKCU1lZGlhVHlwZRILCgdVTktOT1dOEAAS",
+            "DQoJQVVESU9fV0FWEAESDgoKSU1BR0VfSlBFRxACEg0KCUlNQUdFX1BORxAD",
+            "Mu8MCgNJb1QSMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5Q",
+            "cmltaXRpdmVTdHJpbmciABJLCgpDcmVhdGVUYXNrEiIuaW90Z3JwY2FwaS5J",
+            "bml0aWFsVGFza0Rlc2NyaXB0aW9uGhcuY29tbW9uLlByaW1pdGl2ZVN0cmlu",
+            "ZyIAEkYKC0dldEFsbFRhc2tzEhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoc",
+            "LmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9ucyIAEk4KE0dldFVuY29tcGxl",
+            "dGVkVGFza3MSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2Fw",
+            "aS5UYXNrRGVzY3JpcHRpb25zIgASOwoQU2V0VGFza0NvbXBsZXRlZBIULmlv",
+            "dGdycGNhcGkuVGFza1VzZXIaDC5jb21tb24uVm9pZCIDiAIBEjIKCkRlbGV0",
+            "ZVRhc2sSFC5pb3RncnBjYXBpLlRhc2tVc2VyGgwuY29tbW9uLlZvaWQiABJZ",
+            "Ch5HZXRVbmNvbXBsZXRlZFRhc2tzQnlIaWVyYXJjaHkSFy5jb21tb24uUHJp",
+            "bWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25zIgAS",
+            "PwoNU2V0VGFza1N0YXR1cxIeLmlvdGdycGNhcGkuU2V0VGFza1N0YXR1c0lu",
+            "cHV0GgwuY29tbW9uLlZvaWQiABJUCg1HZXRUYXNrU3RyZWFtEh4uaW90Z3Jw",
+            "Y2FwaS5HZXRUYXNrU3RyZWFtSW5wdXQaHy5pb3RncnBjYXBpLkdldFRhc2tT",
+            "dHJlYW1PdXRwdXQiADABElsKEEdldFRhc2tzQnlTdGF0dXMSIS5pb3RncnBj",
+            "YXBpLkdldFRhc2tzQnlTdGF0dXNJbnB1dBoiLmlvdGdycGNhcGkuR2V0VGFz",
+            "a3NCeVN0YXR1c091dHB1dCIAElIKDUdldFRhc2tCeVVVSUQSHi5pb3RncnBj",
+            "YXBpLkdldFRhc2tCeVVVSURJbnB1dBofLmlvdGdycGNhcGkuR2V0VGFza0J5",
+            "VVVJRE91dHB1dCIAElgKD0dldFRhc2tCeUxvbmdJZBIgLmlvdGdycGNhcGku",
+            "R2V0VGFza0J5TG9uZ0lkSW5wdXQaIS5pb3RncnBjYXBpLkdldFRhc2tCeUxv",
+            "bmdJZE91dHB1dCIAEoUBCh5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1lc3Rh",
+            "bXASLy5pb3RncnBjYXBpLkdldFRhc2tzTW9kaWZpZWRTaW5jZVRpbWVzdGFt",
+            "cElucHV0GjAuaW90Z3JwY2FwaS5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1l",
+            "c3RhbXBPdXRwdXQiABJVCg5Jbmdlc3ROb2RlRGF0YRIfLmlvdGdycGNhcGku",
+            "SW5nZXN0Tm9kZURhdGFJbnB1dBogLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURh",
+            "dGFPdXRwdXQiABJpChRJbmdlc3ROb2RlRGF0YVN0cmVhbRIlLmlvdGdycGNh",
+            "cGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1JbnB1dBomLmlvdGdycGNhcGkuSW5n",
+            "ZXN0Tm9kZURhdGFTdHJlYW1PdXRwdXQiACgBEl4KEUdldExhdGVzdE5vZGVE",
+            "YXRhEiIuaW90Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0YUlucHV0GiMuaW90",
+            "Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0YU91dHB1dCIAEkwKC0dldE5vZGVE",
+            "YXRhEhwuaW90Z3JwY2FwaS5HZXROb2RlRGF0YUlucHV0Gh0uaW90Z3JwY2Fw",
+            "aS5HZXROb2RlRGF0YU91dHB1dCIAEmAKEUdldE5vZGVEYXRhU3RyZWFtEiIu",
+            "aW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0cmVhbUlucHV0GiMuaW90Z3JwY2Fw",
+            "aS5HZXROb2RlRGF0YVN0cmVhbU91dHB1dCIAMAESQQoORGVsZXRlTm9kZURh",
+            "dGESHy5pb3RncnBjYXBpLkRlbGV0ZU5vZGVEYXRhSW5wdXQaDC5jb21tb24u",
+            "Vm9pZCIAEkMKCEdldE1lZGlhEhkuaW90Z3JwY2FwaS5HZXRNZWRpYUlucHV0",
+            "GhouaW90Z3JwY2FwaS5HZXRNZWRpYU91dHB1dCIAQhaqAhNTS0YuRW5saWdo",
+            "dC5BUEkuSW9UYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -168,7 +175,9 @@ namespace SKF.Enlight.API.IoT {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput), global::SKF.Enlight.API.IoT.GetTaskByUUIDInput.Parser, new[]{ "TaskId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser, new[]{ "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser, new[]{ "Task" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser, new[]{ "Task" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser, new[]{ "Timestamp", "UserId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser, new[]{ "TaskList" }, null, null, null)
           }));
     }
     #endregion
@@ -5838,6 +5847,284 @@ namespace SKF.Enlight.API.IoT {
               task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
             }
             input.ReadMessage(task_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetTasksModifiedSinceTimestampInput : pb::IMessage<GetTasksModifiedSinceTimestampInput> {
+    private static readonly pb::MessageParser<GetTasksModifiedSinceTimestampInput> _parser = new pb::MessageParser<GetTasksModifiedSinceTimestampInput>(() => new GetTasksModifiedSinceTimestampInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetTasksModifiedSinceTimestampInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampInput(GetTasksModifiedSinceTimestampInput other) : this() {
+      timestamp_ = other.timestamp_;
+      userId_ = other.userId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampInput Clone() {
+      return new GetTasksModifiedSinceTimestampInput(this);
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 1;
+    private long timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 2;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetTasksModifiedSinceTimestampInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetTasksModifiedSinceTimestampInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Timestamp != other.Timestamp) return false;
+      if (UserId != other.UserId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Timestamp != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Timestamp);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Timestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
+      }
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetTasksModifiedSinceTimestampInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Timestamp != 0L) {
+        Timestamp = other.Timestamp;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            UserId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetTasksModifiedSinceTimestampOutput : pb::IMessage<GetTasksModifiedSinceTimestampOutput> {
+    private static readonly pb::MessageParser<GetTasksModifiedSinceTimestampOutput> _parser = new pb::MessageParser<GetTasksModifiedSinceTimestampOutput>(() => new GetTasksModifiedSinceTimestampOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetTasksModifiedSinceTimestampOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampOutput(GetTasksModifiedSinceTimestampOutput other) : this() {
+      taskList_ = other.taskList_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTasksModifiedSinceTimestampOutput Clone() {
+      return new GetTasksModifiedSinceTimestampOutput(this);
+    }
+
+    /// <summary>Field number for the "task_list" field.</summary>
+    public const int TaskListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.TaskDescription> _repeated_taskList_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.IoT.TaskDescription.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription> taskList_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription> TaskList {
+      get { return taskList_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetTasksModifiedSinceTimestampOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetTasksModifiedSinceTimestampOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!taskList_.Equals(other.taskList_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= taskList_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      taskList_.WriteTo(output, _repeated_taskList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += taskList_.CalculateSize(_repeated_taskList_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetTasksModifiedSinceTimestampOutput other) {
+      if (other == null) {
+        return;
+      }
+      taskList_.Add(other.taskList_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            taskList_.AddEntriesFrom(input, _repeated_taskList_codec);
             break;
           }
         }
