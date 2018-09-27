@@ -29,7 +29,7 @@ message SetPointAlarmThresholdInput {
   string user_id = 2;
   ThresholdType type = 3;
   Overall overall = 4;
-  Origin origin = 5;
+  common.Origin origin = 5;
 }
 message SetPointAlarmThresholdOutput {}
 
@@ -48,7 +48,7 @@ message GetPointAlarmThresholdOutput {
 message SetPointAlarmStatusInput {
   string node_id = 1;
   AlarmStatus alarm_status = 2;
-  Origin origin = 3;
+  common.Origin origin = 3;
 }
 message SetPointAlarmStatusOutput {}
 
