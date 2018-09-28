@@ -91,55 +91,55 @@ namespace SKF.Enlight.API.IoT {
             "c2tCeVVVSURPdXRwdXQSKQoEdGFzaxgBIAEoCzIbLmlvdGdycGNhcGkuVGFz",
             "a0Rlc2NyaXB0aW9uIicKFEdldFRhc2tCeUxvbmdJZElucHV0Eg8KB3Rhc2tf",
             "aWQYASABKAMiQgoVR2V0VGFza0J5TG9uZ0lkT3V0cHV0EikKBHRhc2sYASAB",
-            "KAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbiJJCiNHZXRUYXNrc01v",
+            "KAsyGy5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbiJYCiNHZXRUYXNrc01v",
             "ZGlmaWVkU2luY2VUaW1lc3RhbXBJbnB1dBIRCgl0aW1lc3RhbXAYASABKAMS",
-            "DwoHdXNlcl9pZBgCIAEoCSJWCiRHZXRUYXNrc01vZGlmaWVkU2luY2VUaW1l",
-            "c3RhbXBPdXRwdXQSLgoJdGFza19saXN0GAEgAygLMhsuaW90Z3JwY2FwaS5U",
-            "YXNrRGVzY3JpcHRpb24qUgoKVGFza1N0YXR1cxIMCghOT1RfU0VOVBAAEggK",
-            "BFNFTlQQARIMCghSRUNFSVZFRBACEg8KC0lOX1BST0dSRVNTEAQSDQoJQ09N",
-            "UExFVEVEEAMqjgEKE05vZGVEYXRhQ29udGVudFR5cGUSCwoHREVGQVVMVBAA",
-            "Eg4KCkRBVEFfUE9JTlQQARIMCghTUEVDVFJVTRACEg8KC1RJTUVfU0VSSUVT",
-            "EAMSCAoETk9URRAEEg0KBU1FRElBEAUaAggBEgwKCE1FRElBX1YyEAcSFAoQ",
-            "UVVFU1RJT05fQU5TV0VSUxAGKkYKCU1lZGlhVHlwZRILCgdVTktOT1dOEAAS",
-            "DQoJQVVESU9fV0FWEAESDgoKSU1BR0VfSlBFRxACEg0KCUlNQUdFX1BORxAD",
-            "Mu8MCgNJb1QSMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5Q",
-            "cmltaXRpdmVTdHJpbmciABJLCgpDcmVhdGVUYXNrEiIuaW90Z3JwY2FwaS5J",
-            "bml0aWFsVGFza0Rlc2NyaXB0aW9uGhcuY29tbW9uLlByaW1pdGl2ZVN0cmlu",
-            "ZyIAEkYKC0dldEFsbFRhc2tzEhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoc",
-            "LmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9ucyIAEk4KE0dldFVuY29tcGxl",
-            "dGVkVGFza3MSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2Fw",
-            "aS5UYXNrRGVzY3JpcHRpb25zIgASOwoQU2V0VGFza0NvbXBsZXRlZBIULmlv",
-            "dGdycGNhcGkuVGFza1VzZXIaDC5jb21tb24uVm9pZCIDiAIBEjIKCkRlbGV0",
-            "ZVRhc2sSFC5pb3RncnBjYXBpLlRhc2tVc2VyGgwuY29tbW9uLlZvaWQiABJZ",
-            "Ch5HZXRVbmNvbXBsZXRlZFRhc2tzQnlIaWVyYXJjaHkSFy5jb21tb24uUHJp",
-            "bWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25zIgAS",
-            "PwoNU2V0VGFza1N0YXR1cxIeLmlvdGdycGNhcGkuU2V0VGFza1N0YXR1c0lu",
-            "cHV0GgwuY29tbW9uLlZvaWQiABJUCg1HZXRUYXNrU3RyZWFtEh4uaW90Z3Jw",
-            "Y2FwaS5HZXRUYXNrU3RyZWFtSW5wdXQaHy5pb3RncnBjYXBpLkdldFRhc2tT",
-            "dHJlYW1PdXRwdXQiADABElsKEEdldFRhc2tzQnlTdGF0dXMSIS5pb3RncnBj",
-            "YXBpLkdldFRhc2tzQnlTdGF0dXNJbnB1dBoiLmlvdGdycGNhcGkuR2V0VGFz",
-            "a3NCeVN0YXR1c091dHB1dCIAElIKDUdldFRhc2tCeVVVSUQSHi5pb3RncnBj",
-            "YXBpLkdldFRhc2tCeVVVSURJbnB1dBofLmlvdGdycGNhcGkuR2V0VGFza0J5",
-            "VVVJRE91dHB1dCIAElgKD0dldFRhc2tCeUxvbmdJZBIgLmlvdGdycGNhcGku",
-            "R2V0VGFza0J5TG9uZ0lkSW5wdXQaIS5pb3RncnBjYXBpLkdldFRhc2tCeUxv",
-            "bmdJZE91dHB1dCIAEoUBCh5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1lc3Rh",
-            "bXASLy5pb3RncnBjYXBpLkdldFRhc2tzTW9kaWZpZWRTaW5jZVRpbWVzdGFt",
-            "cElucHV0GjAuaW90Z3JwY2FwaS5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1l",
-            "c3RhbXBPdXRwdXQiABJVCg5Jbmdlc3ROb2RlRGF0YRIfLmlvdGdycGNhcGku",
-            "SW5nZXN0Tm9kZURhdGFJbnB1dBogLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURh",
-            "dGFPdXRwdXQiABJpChRJbmdlc3ROb2RlRGF0YVN0cmVhbRIlLmlvdGdycGNh",
-            "cGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1JbnB1dBomLmlvdGdycGNhcGkuSW5n",
-            "ZXN0Tm9kZURhdGFTdHJlYW1PdXRwdXQiACgBEl4KEUdldExhdGVzdE5vZGVE",
-            "YXRhEiIuaW90Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0YUlucHV0GiMuaW90",
-            "Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0YU91dHB1dCIAEkwKC0dldE5vZGVE",
-            "YXRhEhwuaW90Z3JwY2FwaS5HZXROb2RlRGF0YUlucHV0Gh0uaW90Z3JwY2Fw",
-            "aS5HZXROb2RlRGF0YU91dHB1dCIAEmAKEUdldE5vZGVEYXRhU3RyZWFtEiIu",
-            "aW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0cmVhbUlucHV0GiMuaW90Z3JwY2Fw",
-            "aS5HZXROb2RlRGF0YVN0cmVhbU91dHB1dCIAMAESQQoORGVsZXRlTm9kZURh",
-            "dGESHy5pb3RncnBjYXBpLkRlbGV0ZU5vZGVEYXRhSW5wdXQaDC5jb21tb24u",
-            "Vm9pZCIAEkMKCEdldE1lZGlhEhkuaW90Z3JwY2FwaS5HZXRNZWRpYUlucHV0",
-            "GhouaW90Z3JwY2FwaS5HZXRNZWRpYU91dHB1dCIAQhaqAhNTS0YuRW5saWdo",
-            "dC5BUEkuSW9UYgZwcm90bzM="));
+            "DwoHdXNlcl9pZBgCIAEoCRINCgVsaW1pdBgDIAEoBSJWCiRHZXRUYXNrc01v",
+            "ZGlmaWVkU2luY2VUaW1lc3RhbXBPdXRwdXQSLgoJdGFza19saXN0GAEgAygL",
+            "MhsuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb24qUgoKVGFza1N0YXR1cxIM",
+            "CghOT1RfU0VOVBAAEggKBFNFTlQQARIMCghSRUNFSVZFRBACEg8KC0lOX1BS",
+            "T0dSRVNTEAQSDQoJQ09NUExFVEVEEAMqjgEKE05vZGVEYXRhQ29udGVudFR5",
+            "cGUSCwoHREVGQVVMVBAAEg4KCkRBVEFfUE9JTlQQARIMCghTUEVDVFJVTRAC",
+            "Eg8KC1RJTUVfU0VSSUVTEAMSCAoETk9URRAEEg0KBU1FRElBEAUaAggBEgwK",
+            "CE1FRElBX1YyEAcSFAoQUVVFU1RJT05fQU5TV0VSUxAGKkYKCU1lZGlhVHlw",
+            "ZRILCgdVTktOT1dOEAASDQoJQVVESU9fV0FWEAESDgoKSU1BR0VfSlBFRxAC",
+            "Eg0KCUlNQUdFX1BORxADMu8MCgNJb1QSMwoIRGVlcFBpbmcSDC5jb21tb24u",
+            "Vm9pZBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJLCgpDcmVhdGVUYXNr",
+            "EiIuaW90Z3JwY2FwaS5Jbml0aWFsVGFza0Rlc2NyaXB0aW9uGhcuY29tbW9u",
+            "LlByaW1pdGl2ZVN0cmluZyIAEkYKC0dldEFsbFRhc2tzEhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZxocLmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9ucyIA",
+            "Ek4KE0dldFVuY29tcGxldGVkVGFza3MSFy5jb21tb24uUHJpbWl0aXZlU3Ry",
+            "aW5nGhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25zIgASOwoQU2V0VGFz",
+            "a0NvbXBsZXRlZBIULmlvdGdycGNhcGkuVGFza1VzZXIaDC5jb21tb24uVm9p",
+            "ZCIDiAIBEjIKCkRlbGV0ZVRhc2sSFC5pb3RncnBjYXBpLlRhc2tVc2VyGgwu",
+            "Y29tbW9uLlZvaWQiABJZCh5HZXRVbmNvbXBsZXRlZFRhc2tzQnlIaWVyYXJj",
+            "aHkSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2FwaS5UYXNr",
+            "RGVzY3JpcHRpb25zIgASPwoNU2V0VGFza1N0YXR1cxIeLmlvdGdycGNhcGku",
+            "U2V0VGFza1N0YXR1c0lucHV0GgwuY29tbW9uLlZvaWQiABJUCg1HZXRUYXNr",
+            "U3RyZWFtEh4uaW90Z3JwY2FwaS5HZXRUYXNrU3RyZWFtSW5wdXQaHy5pb3Rn",
+            "cnBjYXBpLkdldFRhc2tTdHJlYW1PdXRwdXQiADABElsKEEdldFRhc2tzQnlT",
+            "dGF0dXMSIS5pb3RncnBjYXBpLkdldFRhc2tzQnlTdGF0dXNJbnB1dBoiLmlv",
+            "dGdycGNhcGkuR2V0VGFza3NCeVN0YXR1c091dHB1dCIAElIKDUdldFRhc2tC",
+            "eVVVSUQSHi5pb3RncnBjYXBpLkdldFRhc2tCeVVVSURJbnB1dBofLmlvdGdy",
+            "cGNhcGkuR2V0VGFza0J5VVVJRE91dHB1dCIAElgKD0dldFRhc2tCeUxvbmdJ",
+            "ZBIgLmlvdGdycGNhcGkuR2V0VGFza0J5TG9uZ0lkSW5wdXQaIS5pb3RncnBj",
+            "YXBpLkdldFRhc2tCeUxvbmdJZE91dHB1dCIAEoUBCh5HZXRUYXNrc01vZGlm",
+            "aWVkU2luY2VUaW1lc3RhbXASLy5pb3RncnBjYXBpLkdldFRhc2tzTW9kaWZp",
+            "ZWRTaW5jZVRpbWVzdGFtcElucHV0GjAuaW90Z3JwY2FwaS5HZXRUYXNrc01v",
+            "ZGlmaWVkU2luY2VUaW1lc3RhbXBPdXRwdXQiABJVCg5Jbmdlc3ROb2RlRGF0",
+            "YRIfLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFJbnB1dBogLmlvdGdycGNh",
+            "cGkuSW5nZXN0Tm9kZURhdGFPdXRwdXQiABJpChRJbmdlc3ROb2RlRGF0YVN0",
+            "cmVhbRIlLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1JbnB1dBom",
+            "LmlvdGdycGNhcGkuSW5nZXN0Tm9kZURhdGFTdHJlYW1PdXRwdXQiACgBEl4K",
+            "EUdldExhdGVzdE5vZGVEYXRhEiIuaW90Z3JwY2FwaS5HZXRMYXRlc3ROb2Rl",
+            "RGF0YUlucHV0GiMuaW90Z3JwY2FwaS5HZXRMYXRlc3ROb2RlRGF0YU91dHB1",
+            "dCIAEkwKC0dldE5vZGVEYXRhEhwuaW90Z3JwY2FwaS5HZXROb2RlRGF0YUlu",
+            "cHV0Gh0uaW90Z3JwY2FwaS5HZXROb2RlRGF0YU91dHB1dCIAEmAKEUdldE5v",
+            "ZGVEYXRhU3RyZWFtEiIuaW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0cmVhbUlu",
+            "cHV0GiMuaW90Z3JwY2FwaS5HZXROb2RlRGF0YVN0cmVhbU91dHB1dCIAMAES",
+            "QQoORGVsZXRlTm9kZURhdGESHy5pb3RncnBjYXBpLkRlbGV0ZU5vZGVEYXRh",
+            "SW5wdXQaDC5jb21tb24uVm9pZCIAEkMKCEdldE1lZGlhEhkuaW90Z3JwY2Fw",
+            "aS5HZXRNZWRpYUlucHV0GhouaW90Z3JwY2FwaS5HZXRNZWRpYU91dHB1dCIA",
+            "QhaqAhNTS0YuRW5saWdodC5BUEkuSW9UYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -176,7 +176,7 @@ namespace SKF.Enlight.API.IoT {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser, new[]{ "TaskId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser, new[]{ "Task" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser, new[]{ "Timestamp", "UserId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser, new[]{ "Timestamp", "UserId", "Limit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser, new[]{ "TaskList" }, null, null, null)
           }));
     }
@@ -5882,6 +5882,7 @@ namespace SKF.Enlight.API.IoT {
     public GetTasksModifiedSinceTimestampInput(GetTasksModifiedSinceTimestampInput other) : this() {
       timestamp_ = other.timestamp_;
       userId_ = other.userId_;
+      limit_ = other.limit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5912,6 +5913,17 @@ namespace SKF.Enlight.API.IoT {
       }
     }
 
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 3;
+    private int limit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Limit {
+      get { return limit_; }
+      set {
+        limit_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTasksModifiedSinceTimestampInput);
@@ -5927,6 +5939,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (Timestamp != other.Timestamp) return false;
       if (UserId != other.UserId) return false;
+      if (Limit != other.Limit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5935,6 +5948,7 @@ namespace SKF.Enlight.API.IoT {
       int hash = 1;
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (Limit != 0) hash ^= Limit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5956,6 +5970,10 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(18);
         output.WriteString(UserId);
       }
+      if (Limit != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Limit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5969,6 +5987,9 @@ namespace SKF.Enlight.API.IoT {
       }
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (Limit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5987,6 +6008,9 @@ namespace SKF.Enlight.API.IoT {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
+      if (other.Limit != 0) {
+        Limit = other.Limit;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6004,6 +6028,10 @@ namespace SKF.Enlight.API.IoT {
           }
           case 18: {
             UserId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Limit = input.ReadInt32();
             break;
           }
         }
