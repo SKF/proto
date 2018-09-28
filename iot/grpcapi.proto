@@ -249,6 +249,7 @@ message GetTaskByLongIdOutput {
 message GetTasksModifiedSinceTimestampInput {
   int64 timestamp = 1;
   string user_id = 2;
+  int32 limit = 3;
 }
 
 message GetTasksModifiedSinceTimestampOutput {
