@@ -111,8 +111,8 @@ message NodeData {
 }
 
 message Coordinate {
-  double x = 1;
-  double y = 2;
+  PrimitiveDouble x = 1;
+  PrimitiveDouble y = 2;
 }
 
 message DataPoint {
