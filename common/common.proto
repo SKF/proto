@@ -22,14 +22,6 @@ message PrimitiveInt64{
   int64 value = 1;
 }
 
-message PrimitiveFloat{
-  float value = 1;
-}
-
-message PrimitiveDouble{
-  double value = 1;
-}
-
 message PrimitiveBytes {
   bytes value = 1;
 }
