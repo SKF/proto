@@ -168,18 +168,18 @@ message DeleteNodeDataInput {
 
 message GetNodeDataLogInput {
   string seq_id = 1;
-  string content_type = 2;
 }
 
 message LogEvent {
-  string id = 1;
+  string aggregate_id = 1;
   string seq_id = 2;
-  int64 timestamp = 2;
+  int64 timestamp = 3;
+  NodeDataContentType content_type = 4;
 }
 
 message GetNodeDataLogOutput {
   repeated LogEvent events = 1;
-  string next_seq_id = 2;
+  bool has_next = 2;
 }
 
 message IngestNodeDataOutput {}
