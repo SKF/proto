@@ -179,6 +179,7 @@ message LogEvent {
 
 message GetNodeDataLogOutput {
   repeated LogEvent events = 1;
+  string next_seq_id = 2;
 }
 
 message IngestNodeDataOutput {}
