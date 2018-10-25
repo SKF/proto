@@ -19,7 +19,7 @@ message DeepPingOutput {
   string value = 1;
 }
 
-// GET ASSET HEALTH
+// Return asset health for the requested asset node
 message GetAssetHealthInput {
   string node_id = 1;
 }
@@ -28,7 +28,7 @@ message GetAssetHealthOutput {
   string health_status = 1;
 }
 
-// GET FL HEALTH
+// Return functional location health for requested functional location node
 message GetFunctionalLocationHealthInput {
   string node_id = 1;
 }
@@ -37,9 +37,7 @@ message GetFunctionalLocationHealthOutput {
   string health_status = 1;
 }
 
-
-//GET COMPLIANCE GetComplianceLog
-
+// Return the compliance log for the supplied hierarchy node
 message GetComplianceLogInput {
   string node_id = 1;
 }
@@ -55,8 +53,7 @@ message ComplianceItem {
   int64 created = 4;
 }
 
-// GET Reports
-
+// Return list of functional locations with their faults for the supplied list of hierarchy nodes
 message GetReportsInput {
   repeated string node_ids = 1;
 }
