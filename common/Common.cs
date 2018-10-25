@@ -28,11 +28,10 @@ namespace SKF.Enlight.API.Common {
             "GAEgASgJEgwKBHR5cGUYAiABKAkSEAoIcHJvdmlkZXIYAyABKAkiIAoPUHJp",
             "bWl0aXZlU3RyaW5nEg0KBXZhbHVlGAEgASgJIh8KDlByaW1pdGl2ZUludDMy",
             "Eg0KBXZhbHVlGAEgASgFIh8KDlByaW1pdGl2ZUludDY0Eg0KBXZhbHVlGAEg",
-            "ASgDIh8KDlByaW1pdGl2ZUZsb2F0Eg0KBXZhbHVlGAEgASgCIiAKD1ByaW1p",
-            "dGl2ZURvdWJsZRINCgV2YWx1ZRgBIAEoASIfCg5QcmltaXRpdmVCeXRlcxIN",
-            "CgV2YWx1ZRgBIAEoDCIeCg1QcmltaXRpdmVCb29sEg0KBXZhbHVlGAEgASgI",
-            "IgYKBFZvaWRCNlobZ2l0aHViLmNvbS9TS0YvcHJvdG8vY29tbW9uqgIWU0tG",
-            "LkVubGlnaHQuQVBJLkNvbW1vbmIGcHJvdG8z"));
+            "ASgDIh8KDlByaW1pdGl2ZUJ5dGVzEg0KBXZhbHVlGAEgASgMIh4KDVByaW1p",
+            "dGl2ZUJvb2wSDQoFdmFsdWUYASABKAgiBgoEVm9pZEI2WhtnaXRodWIuY29t",
+            "L1NLRi9wcm90by9jb21tb26qAhZTS0YuRW5saWdodC5BUEkuQ29tbW9uYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -40,8 +39,6 @@ namespace SKF.Enlight.API.Common {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveString), global::SKF.Enlight.API.Common.PrimitiveString.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt32), global::SKF.Enlight.API.Common.PrimitiveInt32.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt64), global::SKF.Enlight.API.Common.PrimitiveInt64.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveFloat), global::SKF.Enlight.API.Common.PrimitiveFloat.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveDouble), global::SKF.Enlight.API.Common.PrimitiveDouble.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBytes), global::SKF.Enlight.API.Common.PrimitiveBytes.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBool), global::SKF.Enlight.API.Common.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.Void), global::SKF.Enlight.API.Common.Void.Parser, null, null, null, null)
@@ -623,264 +620,6 @@ namespace SKF.Enlight.API.Common {
 
   }
 
-  public sealed partial class PrimitiveFloat : pb::IMessage<PrimitiveFloat> {
-    private static readonly pb::MessageParser<PrimitiveFloat> _parser = new pb::MessageParser<PrimitiveFloat>(() => new PrimitiveFloat());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PrimitiveFloat> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveFloat() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveFloat(PrimitiveFloat other) : this() {
-      value_ = other.value_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveFloat Clone() {
-      return new PrimitiveFloat(this);
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 1;
-    private float value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PrimitiveFloat);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PrimitiveFloat other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Value != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(Value);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Value != 0F) {
-        size += 1 + 4;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PrimitiveFloat other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Value != 0F) {
-        Value = other.Value;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 13: {
-            Value = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class PrimitiveDouble : pb::IMessage<PrimitiveDouble> {
-    private static readonly pb::MessageParser<PrimitiveDouble> _parser = new pb::MessageParser<PrimitiveDouble>(() => new PrimitiveDouble());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PrimitiveDouble> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveDouble() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveDouble(PrimitiveDouble other) : this() {
-      value_ = other.value_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrimitiveDouble Clone() {
-      return new PrimitiveDouble(this);
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 1;
-    private double value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PrimitiveDouble);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PrimitiveDouble other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Value != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Value != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(Value);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Value != 0D) {
-        size += 1 + 8;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PrimitiveDouble other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Value != 0D) {
-        Value = other.Value;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 9: {
-            Value = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class PrimitiveBytes : pb::IMessage<PrimitiveBytes> {
     private static readonly pb::MessageParser<PrimitiveBytes> _parser = new pb::MessageParser<PrimitiveBytes>(() => new PrimitiveBytes());
     private pb::UnknownFieldSet _unknownFields;
@@ -889,7 +628,7 @@ namespace SKF.Enlight.API.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1018,7 +757,7 @@ namespace SKF.Enlight.API.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1147,7 +886,7 @@ namespace SKF.Enlight.API.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Common.CommonReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

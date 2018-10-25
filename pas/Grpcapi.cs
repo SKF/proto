@@ -25,50 +25,81 @@ namespace SKF.Enlight.API.PAS {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFwYXMvZ3JwY2FwaS5wcm90bxIGcGFzYXBpGhNjb21tb24vY29tbW9uLnBy",
-            "b3RvIh8KDkRlZXBQaW5nT3V0cHV0Eg0KBXZhbHVlGAEgASgJIqYBChtTZXRQ",
-            "b2ludEFsYXJtVGhyZXNob2xkSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIPCgd1",
-            "c2VyX2lkGAIgASgJEiMKBHR5cGUYAyABKA4yFS5wYXNhcGkuVGhyZXNob2xk",
-            "VHlwZRIgCgdvdmVyYWxsGAQgASgLMg8ucGFzYXBpLk92ZXJhbGwSHgoGb3Jp",
-            "Z2luGAUgASgLMg4uY29tbW9uLk9yaWdpbiIeChxTZXRQb2ludEFsYXJtVGhy",
-            "ZXNob2xkT3V0cHV0Ii4KG0dldFBvaW50QWxhcm1UaHJlc2hvbGRJbnB1dBIP",
-            "Cgdub2RlX2lkGAEgASgJImUKHEdldFBvaW50QWxhcm1UaHJlc2hvbGRPdXRw",
-            "dXQSIwoEdHlwZRgBIAEoDjIVLnBhc2FwaS5UaHJlc2hvbGRUeXBlEiAKB292",
-            "ZXJhbGwYAiABKAsyDy5wYXNhcGkuT3ZlcmFsbCJ2ChhTZXRQb2ludEFsYXJt",
-            "U3RhdHVzSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIpCgxhbGFybV9zdGF0dXMY",
-            "AiABKA4yEy5wYXNhcGkuQWxhcm1TdGF0dXMSHgoGb3JpZ2luGAMgASgLMg4u",
-            "Y29tbW9uLk9yaWdpbiIbChlTZXRQb2ludEFsYXJtU3RhdHVzT3V0cHV0IisK",
-            "GEdldFBvaW50QWxhcm1TdGF0dXNJbnB1dBIPCgdub2RlX2lkGAEgASgJIkYK",
-            "GUdldFBvaW50QWxhcm1TdGF0dXNPdXRwdXQSKQoMYWxhcm1fc3RhdHVzGAEg",
-            "ASgOMhMucGFzYXBpLkFsYXJtU3RhdHVzIiAKHkdldFBvaW50QWxhcm1TdGF0",
-            "dXNTdHJlYW1JbnB1dCJdCh9HZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFtT3V0",
-            "cHV0Eg8KB25vZGVfaWQYASABKAkSKQoMYWxhcm1fc3RhdHVzGAIgASgOMhMu",
-            "cGFzYXBpLkFsYXJtU3RhdHVzIh0KDERvdWJsZU9iamVjdBINCgV2YWx1ZRgB",
-            "IAEoASKvAQoHT3ZlcmFsbBIoCgpvdXRlcl9oaWdoGAEgASgLMhQucGFzYXBp",
-            "LkRvdWJsZU9iamVjdBIoCgppbm5lcl9oaWdoGAIgASgLMhQucGFzYXBpLkRv",
-            "dWJsZU9iamVjdBInCglpbm5lcl9sb3cYAyABKAsyFC5wYXNhcGkuRG91Ymxl",
-            "T2JqZWN0EicKCW91dGVyX2xvdxgEIAEoCzIULnBhc2FwaS5Eb3VibGVPYmpl",
-            "Y3QqTwoLQWxhcm1TdGF0dXMSEgoOTk9UX0NPTkZJR1VSRUQQABILCgdOT19E",
-            "QVRBEAESCAoER09PRBACEgkKBUFMRVJUEAMSCgoGREFOR0VSEAQqSwoNVGhy",
-            "ZXNob2xkVHlwZRIICgROT05FEAASFQoRT1ZFUkFMTF9JTl9XSU5ET1cQARIZ",
-            "ChVPVkVSQUxMX09VVF9PRl9XSU5ET1cQAjLCBAoQUG9pbnRBbGFybVN0YXR1",
-            "cxIyCghEZWVwUGluZxIMLmNvbW1vbi5Wb2lkGhYucGFzYXBpLkRlZXBQaW5n",
-            "T3V0cHV0IgASZQoWU2V0UG9pbnRBbGFybVRocmVzaG9sZBIjLnBhc2FwaS5T",
-            "ZXRQb2ludEFsYXJtVGhyZXNob2xkSW5wdXQaJC5wYXNhcGkuU2V0UG9pbnRB",
-            "bGFybVRocmVzaG9sZE91dHB1dCIAEmUKFkdldFBvaW50QWxhcm1UaHJlc2hv",
-            "bGQSIy5wYXNhcGkuR2V0UG9pbnRBbGFybVRocmVzaG9sZElucHV0GiQucGFz",
-            "YXBpLkdldFBvaW50QWxhcm1UaHJlc2hvbGRPdXRwdXQiABJcChNTZXRQb2lu",
-            "dEFsYXJtU3RhdHVzEiAucGFzYXBpLlNldFBvaW50QWxhcm1TdGF0dXNJbnB1",
-            "dBohLnBhc2FwaS5TZXRQb2ludEFsYXJtU3RhdHVzT3V0cHV0IgASXAoTR2V0",
-            "UG9pbnRBbGFybVN0YXR1cxIgLnBhc2FwaS5HZXRQb2ludEFsYXJtU3RhdHVz",
-            "SW5wdXQaIS5wYXNhcGkuR2V0UG9pbnRBbGFybVN0YXR1c091dHB1dCIAEnAK",
-            "GUdldFBvaW50QWxhcm1TdGF0dXNTdHJlYW0SJi5wYXNhcGkuR2V0UG9pbnRB",
-            "bGFybVN0YXR1c1N0cmVhbUlucHV0GicucGFzYXBpLkdldFBvaW50QWxhcm1T",
-            "dGF0dXNTdHJlYW1PdXRwdXQiADABQhaqAhNTS0YuRW5saWdodC5BUEkuUEFT",
-            "YgZwcm90bzM="));
+            "b3RvIh8KDkRlZXBQaW5nT3V0cHV0Eg0KBXZhbHVlGAEgASgJIlwKJENhbGN1",
+            "bGF0ZUFuZFNldFBvaW50QWxhcm1TdGF0dXNJbnB1dBIPCgdub2RlX2lkGAEg",
+            "ASgJEiMKCW5vZGVfZGF0YRgCIAEoCzIQLnBhc2FwaS5Ob2RlRGF0YSKhAgoI",
+            "Tm9kZURhdGESEgoKY3JlYXRlZF9hdBgBIAEoAxIxCgxjb250ZW50X3R5cGUY",
+            "AiABKA4yGy5wYXNhcGkuTm9kZURhdGFDb250ZW50VHlwZRIlCgpkYXRhX3Bv",
+            "aW50GAMgASgLMhEucGFzYXBpLkRhdGFQb2ludBIiCghzcGVjdHJ1bRgEIAEo",
+            "CzIQLnBhc2FwaS5TcGVjdHJ1bRInCgt0aW1lX3NlcmllcxgFIAEoCzISLnBh",
+            "c2FwaS5UaW1lU2VyaWVzEgwKBG5vdGUYBiABKAkSEQoFbWVkaWEYByABKAxC",
+            "AhgBEh8KCG1lZGlhX3YyGAkgASgLMg0ucGFzYXBpLk1lZGlhEhgKEHF1ZXN0",
+            "aW9uX2Fuc3dlcnMYCCADKAkiIgoKQ29vcmRpbmF0ZRIJCgF4GAEgASgBEgkK",
+            "AXkYAiABKAEiUwoJRGF0YVBvaW50EiYKCmNvb3JkaW5hdGUYASABKAsyEi5w",
+            "YXNhcGkuQ29vcmRpbmF0ZRIOCgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMg",
+            "ASgJIn8KCFNwZWN0cnVtEicKC2Nvb3JkaW5hdGVzGAEgAygLMhIucGFzYXBp",
+            "LkNvb3JkaW5hdGUSDgoGeF91bml0GAIgASgJEg4KBnlfdW5pdBgDIAEoCRIX",
+            "Cg93aW5kb3dfZnVuY3Rpb24YBCABKAkSEQoJc3BlZWRfcnBtGAUgASgBIlUK",
+            "ClRpbWVTZXJpZXMSJwoLY29vcmRpbmF0ZXMYASADKAsyEi5wYXNhcGkuQ29v",
+            "cmRpbmF0ZRIOCgZ4X3VuaXQYAiABKAkSDgoGeV91bml0GAMgASgJIkMKBU1l",
+            "ZGlhEgoKAmlkGAEgASgJEh8KBHR5cGUYAiABKA4yES5wYXNhcGkuTWVkaWFU",
+            "eXBlEg0KBW1lZGlhGAMgASgMIqYBChtTZXRQb2ludEFsYXJtVGhyZXNob2xk",
+            "SW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIPCgd1c2VyX2lkGAIgASgJEiMKBHR5",
+            "cGUYAyABKA4yFS5wYXNhcGkuVGhyZXNob2xkVHlwZRIgCgdvdmVyYWxsGAQg",
+            "ASgLMg8ucGFzYXBpLk92ZXJhbGwSHgoGb3JpZ2luGAUgASgLMg4uY29tbW9u",
+            "Lk9yaWdpbiIeChxTZXRQb2ludEFsYXJtVGhyZXNob2xkT3V0cHV0Ii4KG0dl",
+            "dFBvaW50QWxhcm1UaHJlc2hvbGRJbnB1dBIPCgdub2RlX2lkGAEgASgJImUK",
+            "HEdldFBvaW50QWxhcm1UaHJlc2hvbGRPdXRwdXQSIwoEdHlwZRgBIAEoDjIV",
+            "LnBhc2FwaS5UaHJlc2hvbGRUeXBlEiAKB292ZXJhbGwYAiABKAsyDy5wYXNh",
+            "cGkuT3ZlcmFsbCJ2ChhTZXRQb2ludEFsYXJtU3RhdHVzSW5wdXQSDwoHbm9k",
+            "ZV9pZBgBIAEoCRIpCgxhbGFybV9zdGF0dXMYAiABKA4yEy5wYXNhcGkuQWxh",
+            "cm1TdGF0dXMSHgoGb3JpZ2luGAMgASgLMg4uY29tbW9uLk9yaWdpbiIbChlT",
+            "ZXRQb2ludEFsYXJtU3RhdHVzT3V0cHV0IisKGEdldFBvaW50QWxhcm1TdGF0",
+            "dXNJbnB1dBIPCgdub2RlX2lkGAEgASgJIkYKGUdldFBvaW50QWxhcm1TdGF0",
+            "dXNPdXRwdXQSKQoMYWxhcm1fc3RhdHVzGAEgASgOMhMucGFzYXBpLkFsYXJt",
+            "U3RhdHVzIiAKHkdldFBvaW50QWxhcm1TdGF0dXNTdHJlYW1JbnB1dCJdCh9H",
+            "ZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFtT3V0cHV0Eg8KB25vZGVfaWQYASAB",
+            "KAkSKQoMYWxhcm1fc3RhdHVzGAIgASgOMhMucGFzYXBpLkFsYXJtU3RhdHVz",
+            "Ih0KDERvdWJsZU9iamVjdBINCgV2YWx1ZRgBIAEoASKvAQoHT3ZlcmFsbBIo",
+            "CgpvdXRlcl9oaWdoGAEgASgLMhQucGFzYXBpLkRvdWJsZU9iamVjdBIoCgpp",
+            "bm5lcl9oaWdoGAIgASgLMhQucGFzYXBpLkRvdWJsZU9iamVjdBInCglpbm5l",
+            "cl9sb3cYAyABKAsyFC5wYXNhcGkuRG91YmxlT2JqZWN0EicKCW91dGVyX2xv",
+            "dxgEIAEoCzIULnBhc2FwaS5Eb3VibGVPYmplY3QqjgEKE05vZGVEYXRhQ29u",
+            "dGVudFR5cGUSCwoHREVGQVVMVBAAEg4KCkRBVEFfUE9JTlQQARIMCghTUEVD",
+            "VFJVTRACEg8KC1RJTUVfU0VSSUVTEAMSCAoETk9URRAEEg0KBU1FRElBEAUa",
+            "AggBEgwKCE1FRElBX1YyEAcSFAoQUVVFU1RJT05fQU5TV0VSUxAGKkYKCU1l",
+            "ZGlhVHlwZRILCgdVTktOT1dOEAASDQoJQVVESU9fV0FWEAESDgoKSU1BR0Vf",
+            "SlBFRxACEg0KCUlNQUdFX1BORxADKk8KC0FsYXJtU3RhdHVzEhIKDk5PVF9D",
+            "T05GSUdVUkVEEAASCwoHTk9fREFUQRABEggKBEdPT0QQAhIJCgVBTEVSVBAD",
+            "EgoKBkRBTkdFUhAEKksKDVRocmVzaG9sZFR5cGUSCAoETk9ORRAAEhUKEU9W",
+            "RVJBTExfSU5fV0lORE9XEAESGQoVT1ZFUkFMTF9PVVRfT0ZfV0lORE9XEAIy",
+            "owUKEFBvaW50QWxhcm1TdGF0dXMSMgoIRGVlcFBpbmcSDC5jb21tb24uVm9p",
+            "ZBoWLnBhc2FwaS5EZWVwUGluZ091dHB1dCIAEmUKFlNldFBvaW50QWxhcm1U",
+            "aHJlc2hvbGQSIy5wYXNhcGkuU2V0UG9pbnRBbGFybVRocmVzaG9sZElucHV0",
+            "GiQucGFzYXBpLlNldFBvaW50QWxhcm1UaHJlc2hvbGRPdXRwdXQiABJlChZH",
+            "ZXRQb2ludEFsYXJtVGhyZXNob2xkEiMucGFzYXBpLkdldFBvaW50QWxhcm1U",
+            "aHJlc2hvbGRJbnB1dBokLnBhc2FwaS5HZXRQb2ludEFsYXJtVGhyZXNob2xk",
+            "T3V0cHV0IgASXAoTU2V0UG9pbnRBbGFybVN0YXR1cxIgLnBhc2FwaS5TZXRQ",
+            "b2ludEFsYXJtU3RhdHVzSW5wdXQaIS5wYXNhcGkuU2V0UG9pbnRBbGFybVN0",
+            "YXR1c091dHB1dCIAElwKE0dldFBvaW50QWxhcm1TdGF0dXMSIC5wYXNhcGku",
+            "R2V0UG9pbnRBbGFybVN0YXR1c0lucHV0GiEucGFzYXBpLkdldFBvaW50QWxh",
+            "cm1TdGF0dXNPdXRwdXQiABJwChlHZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFt",
+            "EiYucGFzYXBpLkdldFBvaW50QWxhcm1TdGF0dXNTdHJlYW1JbnB1dBonLnBh",
+            "c2FwaS5HZXRQb2ludEFsYXJtU3RhdHVzU3RyZWFtT3V0cHV0IgAwARJfCh9D",
+            "YWxjdWxhdGVBbmRTZXRQb2ludEFsYXJtU3RhdHVzEiwucGFzYXBpLkNhbGN1",
+            "bGF0ZUFuZFNldFBvaW50QWxhcm1TdGF0dXNJbnB1dBoMLmNvbW1vbi5Wb2lk",
+            "IgBCFqoCE1NLRi5FbmxpZ2h0LkFQSS5QQVNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.AlarmStatus), typeof(global::SKF.Enlight.API.PAS.ThresholdType), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.NodeDataContentType), typeof(global::SKF.Enlight.API.PAS.MediaType), typeof(global::SKF.Enlight.API.PAS.AlarmStatus), typeof(global::SKF.Enlight.API.PAS.ThresholdType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DeepPingOutput), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.NodeData), global::SKF.Enlight.API.PAS.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Coordinate), global::SKF.Enlight.API.PAS.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DataPoint), global::SKF.Enlight.API.PAS.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Spectrum), global::SKF.Enlight.API.PAS.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.TimeSeries), global::SKF.Enlight.API.PAS.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Media), global::SKF.Enlight.API.PAS.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser, new[]{ "NodeId", "UserId", "Type", "Overall", "Origin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser, new[]{ "NodeId" }, null, null, null),
@@ -87,6 +118,24 @@ namespace SKF.Enlight.API.PAS {
 
   }
   #region Enums
+  public enum NodeDataContentType {
+    [pbr::OriginalName("DEFAULT")] Default = 0,
+    [pbr::OriginalName("DATA_POINT")] DataPoint = 1,
+    [pbr::OriginalName("SPECTRUM")] Spectrum = 2,
+    [pbr::OriginalName("TIME_SERIES")] TimeSeries = 3,
+    [pbr::OriginalName("NOTE")] Note = 4,
+    [pbr::OriginalName("MEDIA")] Media = 5,
+    [pbr::OriginalName("MEDIA_V2")] MediaV2 = 7,
+    [pbr::OriginalName("QUESTION_ANSWERS")] QuestionAnswers = 6,
+  }
+
+  public enum MediaType {
+    [pbr::OriginalName("UNKNOWN")] Unknown = 0,
+    [pbr::OriginalName("AUDIO_WAV")] AudioWav = 1,
+    [pbr::OriginalName("IMAGE_JPEG")] ImageJpeg = 2,
+    [pbr::OriginalName("IMAGE_PNG")] ImagePng = 3,
+  }
+
   public enum AlarmStatus {
     /// <summary>
     /// No threshold configured.
@@ -252,6 +301,1485 @@ namespace SKF.Enlight.API.PAS {
   }
 
   /// <summary>
+  /// CalculateAndSetPointAlarmStatusInput
+  /// </summary>
+  public sealed partial class CalculateAndSetPointAlarmStatusInput : pb::IMessage<CalculateAndSetPointAlarmStatusInput> {
+    private static readonly pb::MessageParser<CalculateAndSetPointAlarmStatusInput> _parser = new pb::MessageParser<CalculateAndSetPointAlarmStatusInput>(() => new CalculateAndSetPointAlarmStatusInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CalculateAndSetPointAlarmStatusInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CalculateAndSetPointAlarmStatusInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CalculateAndSetPointAlarmStatusInput(CalculateAndSetPointAlarmStatusInput other) : this() {
+      nodeId_ = other.nodeId_;
+      nodeData_ = other.nodeData_ != null ? other.nodeData_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CalculateAndSetPointAlarmStatusInput Clone() {
+      return new CalculateAndSetPointAlarmStatusInput(this);
+    }
+
+    /// <summary>Field number for the "node_id" field.</summary>
+    public const int NodeIdFieldNumber = 1;
+    private string nodeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NodeId {
+      get { return nodeId_; }
+      set {
+        nodeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_data" field.</summary>
+    public const int NodeDataFieldNumber = 2;
+    private global::SKF.Enlight.API.PAS.NodeData nodeData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.NodeData NodeData {
+      get { return nodeData_; }
+      set {
+        nodeData_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CalculateAndSetPointAlarmStatusInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CalculateAndSetPointAlarmStatusInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeId != other.NodeId) return false;
+      if (!object.Equals(NodeData, other.NodeData)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
+      if (nodeData_ != null) hash ^= NodeData.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (nodeData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NodeData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
+      }
+      if (nodeData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodeData);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CalculateAndSetPointAlarmStatusInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeId.Length != 0) {
+        NodeId = other.NodeId;
+      }
+      if (other.nodeData_ != null) {
+        if (nodeData_ == null) {
+          nodeData_ = new global::SKF.Enlight.API.PAS.NodeData();
+        }
+        NodeData.MergeFrom(other.NodeData);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (nodeData_ == null) {
+              nodeData_ = new global::SKF.Enlight.API.PAS.NodeData();
+            }
+            input.ReadMessage(nodeData_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NodeData : pb::IMessage<NodeData> {
+    private static readonly pb::MessageParser<NodeData> _parser = new pb::MessageParser<NodeData>(() => new NodeData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NodeData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NodeData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NodeData(NodeData other) : this() {
+      createdAt_ = other.createdAt_;
+      contentType_ = other.contentType_;
+      dataPoint_ = other.dataPoint_ != null ? other.dataPoint_.Clone() : null;
+      spectrum_ = other.spectrum_ != null ? other.spectrum_.Clone() : null;
+      timeSeries_ = other.timeSeries_ != null ? other.timeSeries_.Clone() : null;
+      note_ = other.note_;
+      media_ = other.media_;
+      mediaV2_ = other.mediaV2_ != null ? other.mediaV2_.Clone() : null;
+      questionAnswers_ = other.questionAnswers_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NodeData Clone() {
+      return new NodeData(this);
+    }
+
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 1;
+    private long createdAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "content_type" field.</summary>
+    public const int ContentTypeFieldNumber = 2;
+    private global::SKF.Enlight.API.PAS.NodeDataContentType contentType_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.NodeDataContentType ContentType {
+      get { return contentType_; }
+      set {
+        contentType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_point" field.</summary>
+    public const int DataPointFieldNumber = 3;
+    private global::SKF.Enlight.API.PAS.DataPoint dataPoint_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.DataPoint DataPoint {
+      get { return dataPoint_; }
+      set {
+        dataPoint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "spectrum" field.</summary>
+    public const int SpectrumFieldNumber = 4;
+    private global::SKF.Enlight.API.PAS.Spectrum spectrum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.Spectrum Spectrum {
+      get { return spectrum_; }
+      set {
+        spectrum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time_series" field.</summary>
+    public const int TimeSeriesFieldNumber = 5;
+    private global::SKF.Enlight.API.PAS.TimeSeries timeSeries_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.TimeSeries TimeSeries {
+      get { return timeSeries_; }
+      set {
+        timeSeries_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "note" field.</summary>
+    public const int NoteFieldNumber = 6;
+    private string note_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Note {
+      get { return note_; }
+      set {
+        note_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media" field.</summary>
+    public const int MediaFieldNumber = 7;
+    private pb::ByteString media_ = pb::ByteString.Empty;
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Media {
+      get { return media_; }
+      set {
+        media_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_v2" field.</summary>
+    public const int MediaV2FieldNumber = 9;
+    private global::SKF.Enlight.API.PAS.Media mediaV2_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.Media MediaV2 {
+      get { return mediaV2_; }
+      set {
+        mediaV2_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "question_answers" field.</summary>
+    public const int QuestionAnswersFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_questionAnswers_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> questionAnswers_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> QuestionAnswers {
+      get { return questionAnswers_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NodeData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NodeData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CreatedAt != other.CreatedAt) return false;
+      if (ContentType != other.ContentType) return false;
+      if (!object.Equals(DataPoint, other.DataPoint)) return false;
+      if (!object.Equals(Spectrum, other.Spectrum)) return false;
+      if (!object.Equals(TimeSeries, other.TimeSeries)) return false;
+      if (Note != other.Note) return false;
+      if (Media != other.Media) return false;
+      if (!object.Equals(MediaV2, other.MediaV2)) return false;
+      if(!questionAnswers_.Equals(other.questionAnswers_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CreatedAt != 0L) hash ^= CreatedAt.GetHashCode();
+      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (dataPoint_ != null) hash ^= DataPoint.GetHashCode();
+      if (spectrum_ != null) hash ^= Spectrum.GetHashCode();
+      if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
+      if (Note.Length != 0) hash ^= Note.GetHashCode();
+      if (Media.Length != 0) hash ^= Media.GetHashCode();
+      if (mediaV2_ != null) hash ^= MediaV2.GetHashCode();
+      hash ^= questionAnswers_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (CreatedAt != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(CreatedAt);
+      }
+      if (ContentType != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ContentType);
+      }
+      if (dataPoint_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DataPoint);
+      }
+      if (spectrum_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Spectrum);
+      }
+      if (timeSeries_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TimeSeries);
+      }
+      if (Note.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Note);
+      }
+      if (Media.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(Media);
+      }
+      questionAnswers_.WriteTo(output, _repeated_questionAnswers_codec);
+      if (mediaV2_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(MediaV2);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (CreatedAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedAt);
+      }
+      if (ContentType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
+      }
+      if (dataPoint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataPoint);
+      }
+      if (spectrum_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Spectrum);
+      }
+      if (timeSeries_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeSeries);
+      }
+      if (Note.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Note);
+      }
+      if (Media.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Media);
+      }
+      if (mediaV2_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MediaV2);
+      }
+      size += questionAnswers_.CalculateSize(_repeated_questionAnswers_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NodeData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CreatedAt != 0L) {
+        CreatedAt = other.CreatedAt;
+      }
+      if (other.ContentType != 0) {
+        ContentType = other.ContentType;
+      }
+      if (other.dataPoint_ != null) {
+        if (dataPoint_ == null) {
+          dataPoint_ = new global::SKF.Enlight.API.PAS.DataPoint();
+        }
+        DataPoint.MergeFrom(other.DataPoint);
+      }
+      if (other.spectrum_ != null) {
+        if (spectrum_ == null) {
+          spectrum_ = new global::SKF.Enlight.API.PAS.Spectrum();
+        }
+        Spectrum.MergeFrom(other.Spectrum);
+      }
+      if (other.timeSeries_ != null) {
+        if (timeSeries_ == null) {
+          timeSeries_ = new global::SKF.Enlight.API.PAS.TimeSeries();
+        }
+        TimeSeries.MergeFrom(other.TimeSeries);
+      }
+      if (other.Note.Length != 0) {
+        Note = other.Note;
+      }
+      if (other.Media.Length != 0) {
+        Media = other.Media;
+      }
+      if (other.mediaV2_ != null) {
+        if (mediaV2_ == null) {
+          mediaV2_ = new global::SKF.Enlight.API.PAS.Media();
+        }
+        MediaV2.MergeFrom(other.MediaV2);
+      }
+      questionAnswers_.Add(other.questionAnswers_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CreatedAt = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            contentType_ = (global::SKF.Enlight.API.PAS.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (dataPoint_ == null) {
+              dataPoint_ = new global::SKF.Enlight.API.PAS.DataPoint();
+            }
+            input.ReadMessage(dataPoint_);
+            break;
+          }
+          case 34: {
+            if (spectrum_ == null) {
+              spectrum_ = new global::SKF.Enlight.API.PAS.Spectrum();
+            }
+            input.ReadMessage(spectrum_);
+            break;
+          }
+          case 42: {
+            if (timeSeries_ == null) {
+              timeSeries_ = new global::SKF.Enlight.API.PAS.TimeSeries();
+            }
+            input.ReadMessage(timeSeries_);
+            break;
+          }
+          case 50: {
+            Note = input.ReadString();
+            break;
+          }
+          case 58: {
+            Media = input.ReadBytes();
+            break;
+          }
+          case 66: {
+            questionAnswers_.AddEntriesFrom(input, _repeated_questionAnswers_codec);
+            break;
+          }
+          case 74: {
+            if (mediaV2_ == null) {
+              mediaV2_ = new global::SKF.Enlight.API.PAS.Media();
+            }
+            input.ReadMessage(mediaV2_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Coordinate : pb::IMessage<Coordinate> {
+    private static readonly pb::MessageParser<Coordinate> _parser = new pb::MessageParser<Coordinate>(() => new Coordinate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Coordinate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Coordinate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Coordinate(Coordinate other) : this() {
+      x_ = other.x_;
+      y_ = other.y_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Coordinate Clone() {
+      return new Coordinate(this);
+    }
+
+    /// <summary>Field number for the "x" field.</summary>
+    public const int XFieldNumber = 1;
+    private double x_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double X {
+      get { return x_; }
+      set {
+        x_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "y" field.</summary>
+    public const int YFieldNumber = 2;
+    private double y_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Y {
+      get { return y_; }
+      set {
+        y_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Coordinate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Coordinate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(X, other.X)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Y, other.Y)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (X != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(X);
+      if (Y != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Y);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (X != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(X);
+      }
+      if (Y != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (X != 0D) {
+        size += 1 + 8;
+      }
+      if (Y != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Coordinate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.X != 0D) {
+        X = other.X;
+      }
+      if (other.Y != 0D) {
+        Y = other.Y;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            X = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Y = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DataPoint : pb::IMessage<DataPoint> {
+    private static readonly pb::MessageParser<DataPoint> _parser = new pb::MessageParser<DataPoint>(() => new DataPoint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DataPoint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataPoint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataPoint(DataPoint other) : this() {
+      coordinate_ = other.coordinate_ != null ? other.coordinate_.Clone() : null;
+      xUnit_ = other.xUnit_;
+      yUnit_ = other.yUnit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataPoint Clone() {
+      return new DataPoint(this);
+    }
+
+    /// <summary>Field number for the "coordinate" field.</summary>
+    public const int CoordinateFieldNumber = 1;
+    private global::SKF.Enlight.API.PAS.Coordinate coordinate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.Coordinate Coordinate {
+      get { return coordinate_; }
+      set {
+        coordinate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "x_unit" field.</summary>
+    public const int XUnitFieldNumber = 2;
+    private string xUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string XUnit {
+      get { return xUnit_; }
+      set {
+        xUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "y_unit" field.</summary>
+    public const int YUnitFieldNumber = 3;
+    private string yUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string YUnit {
+      get { return yUnit_; }
+      set {
+        yUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DataPoint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DataPoint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Coordinate, other.Coordinate)) return false;
+      if (XUnit != other.XUnit) return false;
+      if (YUnit != other.YUnit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (coordinate_ != null) hash ^= Coordinate.GetHashCode();
+      if (XUnit.Length != 0) hash ^= XUnit.GetHashCode();
+      if (YUnit.Length != 0) hash ^= YUnit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (coordinate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Coordinate);
+      }
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (coordinate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Coordinate);
+      }
+      if (XUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(YUnit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DataPoint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.coordinate_ != null) {
+        if (coordinate_ == null) {
+          coordinate_ = new global::SKF.Enlight.API.PAS.Coordinate();
+        }
+        Coordinate.MergeFrom(other.Coordinate);
+      }
+      if (other.XUnit.Length != 0) {
+        XUnit = other.XUnit;
+      }
+      if (other.YUnit.Length != 0) {
+        YUnit = other.YUnit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (coordinate_ == null) {
+              coordinate_ = new global::SKF.Enlight.API.PAS.Coordinate();
+            }
+            input.ReadMessage(coordinate_);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Spectrum : pb::IMessage<Spectrum> {
+    private static readonly pb::MessageParser<Spectrum> _parser = new pb::MessageParser<Spectrum>(() => new Spectrum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Spectrum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Spectrum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Spectrum(Spectrum other) : this() {
+      coordinates_ = other.coordinates_.Clone();
+      xUnit_ = other.xUnit_;
+      yUnit_ = other.yUnit_;
+      windowFunction_ = other.windowFunction_;
+      speedRpm_ = other.speedRpm_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Spectrum Clone() {
+      return new Spectrum(this);
+    }
+
+    /// <summary>Field number for the "coordinates" field.</summary>
+    public const int CoordinatesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.PAS.Coordinate> _repeated_coordinates_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.PAS.Coordinate.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate> Coordinates {
+      get { return coordinates_; }
+    }
+
+    /// <summary>Field number for the "x_unit" field.</summary>
+    public const int XUnitFieldNumber = 2;
+    private string xUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string XUnit {
+      get { return xUnit_; }
+      set {
+        xUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "y_unit" field.</summary>
+    public const int YUnitFieldNumber = 3;
+    private string yUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string YUnit {
+      get { return yUnit_; }
+      set {
+        yUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "window_function" field.</summary>
+    public const int WindowFunctionFieldNumber = 4;
+    private string windowFunction_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WindowFunction {
+      get { return windowFunction_; }
+      set {
+        windowFunction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "speed_rpm" field.</summary>
+    public const int SpeedRpmFieldNumber = 5;
+    private double speedRpm_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double SpeedRpm {
+      get { return speedRpm_; }
+      set {
+        speedRpm_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Spectrum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Spectrum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!coordinates_.Equals(other.coordinates_)) return false;
+      if (XUnit != other.XUnit) return false;
+      if (YUnit != other.YUnit) return false;
+      if (WindowFunction != other.WindowFunction) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SpeedRpm, other.SpeedRpm)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= coordinates_.GetHashCode();
+      if (XUnit.Length != 0) hash ^= XUnit.GetHashCode();
+      if (YUnit.Length != 0) hash ^= YUnit.GetHashCode();
+      if (WindowFunction.Length != 0) hash ^= WindowFunction.GetHashCode();
+      if (SpeedRpm != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SpeedRpm);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      coordinates_.WriteTo(output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (WindowFunction.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(WindowFunction);
+      }
+      if (SpeedRpm != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(SpeedRpm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += coordinates_.CalculateSize(_repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(YUnit);
+      }
+      if (WindowFunction.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WindowFunction);
+      }
+      if (SpeedRpm != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Spectrum other) {
+      if (other == null) {
+        return;
+      }
+      coordinates_.Add(other.coordinates_);
+      if (other.XUnit.Length != 0) {
+        XUnit = other.XUnit;
+      }
+      if (other.YUnit.Length != 0) {
+        YUnit = other.YUnit;
+      }
+      if (other.WindowFunction.Length != 0) {
+        WindowFunction = other.WindowFunction;
+      }
+      if (other.SpeedRpm != 0D) {
+        SpeedRpm = other.SpeedRpm;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+          case 34: {
+            WindowFunction = input.ReadString();
+            break;
+          }
+          case 41: {
+            SpeedRpm = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TimeSeries : pb::IMessage<TimeSeries> {
+    private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TimeSeries> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeries() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeries(TimeSeries other) : this() {
+      coordinates_ = other.coordinates_.Clone();
+      xUnit_ = other.xUnit_;
+      yUnit_ = other.yUnit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimeSeries Clone() {
+      return new TimeSeries(this);
+    }
+
+    /// <summary>Field number for the "coordinates" field.</summary>
+    public const int CoordinatesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.PAS.Coordinate> _repeated_coordinates_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.PAS.Coordinate.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.PAS.Coordinate> Coordinates {
+      get { return coordinates_; }
+    }
+
+    /// <summary>Field number for the "x_unit" field.</summary>
+    public const int XUnitFieldNumber = 2;
+    private string xUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string XUnit {
+      get { return xUnit_; }
+      set {
+        xUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "y_unit" field.</summary>
+    public const int YUnitFieldNumber = 3;
+    private string yUnit_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string YUnit {
+      get { return yUnit_; }
+      set {
+        yUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TimeSeries);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TimeSeries other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!coordinates_.Equals(other.coordinates_)) return false;
+      if (XUnit != other.XUnit) return false;
+      if (YUnit != other.YUnit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= coordinates_.GetHashCode();
+      if (XUnit.Length != 0) hash ^= XUnit.GetHashCode();
+      if (YUnit.Length != 0) hash ^= YUnit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      coordinates_.WriteTo(output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += coordinates_.CalculateSize(_repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(YUnit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TimeSeries other) {
+      if (other == null) {
+        return;
+      }
+      coordinates_.Add(other.coordinates_);
+      if (other.XUnit.Length != 0) {
+        XUnit = other.XUnit;
+      }
+      if (other.YUnit.Length != 0) {
+        YUnit = other.YUnit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Media : pb::IMessage<Media> {
+    private static readonly pb::MessageParser<Media> _parser = new pb::MessageParser<Media>(() => new Media());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Media> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media(Media other) : this() {
+      id_ = other.id_;
+      type_ = other.type_;
+      media_ = other.media_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Media Clone() {
+      return new Media(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::SKF.Enlight.API.PAS.MediaType type_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.PAS.MediaType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "media" field.</summary>
+    public const int Media_FieldNumber = 3;
+    private pb::ByteString media_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Media_ {
+      get { return media_; }
+      set {
+        media_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Media);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Media other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Type != other.Type) return false;
+      if (Media_ != other.Media_) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Media_.Length != 0) hash ^= Media_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (Media_.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Media_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Type != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (Media_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Media_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Media other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Type != 0) {
+        Type = other.Type;
+      }
+      if (other.Media_.Length != 0) {
+        Media_ = other.Media_;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            type_ = (global::SKF.Enlight.API.PAS.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Media_ = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// SetPointAlarmThreshold Messages
   /// </summary>
   public sealed partial class SetPointAlarmThresholdInput : pb::IMessage<SetPointAlarmThresholdInput> {
@@ -262,7 +1790,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -515,7 +2043,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -619,7 +2147,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -748,7 +2276,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -914,7 +2442,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1105,7 +2633,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1209,7 +2737,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1338,7 +2866,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1470,7 +2998,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1571,7 +3099,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1728,7 +3256,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1857,7 +3385,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SKF.Enlight.API.PAS.GrpcapiReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
