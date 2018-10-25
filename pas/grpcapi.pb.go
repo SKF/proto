@@ -23,6 +23,80 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
+type NodeDataContentType int32
+
+const (
+	NodeDataContentType_DEFAULT          NodeDataContentType = 0
+	NodeDataContentType_DATA_POINT       NodeDataContentType = 1
+	NodeDataContentType_SPECTRUM         NodeDataContentType = 2
+	NodeDataContentType_TIME_SERIES      NodeDataContentType = 3
+	NodeDataContentType_NOTE             NodeDataContentType = 4
+	NodeDataContentType_MEDIA            NodeDataContentType = 5 // Deprecated: Do not use.
+	NodeDataContentType_MEDIA_V2         NodeDataContentType = 7
+	NodeDataContentType_QUESTION_ANSWERS NodeDataContentType = 6
+)
+
+var NodeDataContentType_name = map[int32]string{
+	0: "DEFAULT",
+	1: "DATA_POINT",
+	2: "SPECTRUM",
+	3: "TIME_SERIES",
+	4: "NOTE",
+	5: "MEDIA",
+	7: "MEDIA_V2",
+	6: "QUESTION_ANSWERS",
+}
+
+var NodeDataContentType_value = map[string]int32{
+	"DEFAULT":          0,
+	"DATA_POINT":       1,
+	"SPECTRUM":         2,
+	"TIME_SERIES":      3,
+	"NOTE":             4,
+	"MEDIA":            5,
+	"MEDIA_V2":         7,
+	"QUESTION_ANSWERS": 6,
+}
+
+func (x NodeDataContentType) String() string {
+	return proto.EnumName(NodeDataContentType_name, int32(x))
+}
+
+func (NodeDataContentType) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{0}
+}
+
+type MediaType int32
+
+const (
+	MediaType_UNKNOWN    MediaType = 0
+	MediaType_AUDIO_WAV  MediaType = 1
+	MediaType_IMAGE_JPEG MediaType = 2
+	MediaType_IMAGE_PNG  MediaType = 3
+)
+
+var MediaType_name = map[int32]string{
+	0: "UNKNOWN",
+	1: "AUDIO_WAV",
+	2: "IMAGE_JPEG",
+	3: "IMAGE_PNG",
+}
+
+var MediaType_value = map[string]int32{
+	"UNKNOWN":    0,
+	"AUDIO_WAV":  1,
+	"IMAGE_JPEG": 2,
+	"IMAGE_PNG":  3,
+}
+
+func (x MediaType) String() string {
+	return proto.EnumName(MediaType_name, int32(x))
+}
+
+func (MediaType) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{1}
+}
+
 type AlarmStatus int32
 
 const (
@@ -54,7 +128,7 @@ func (x AlarmStatus) String() string {
 }
 
 func (AlarmStatus) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{0}
+	return fileDescriptor_1bf2073887d77359, []int{2}
 }
 
 type ThresholdType int32
@@ -82,7 +156,7 @@ func (x ThresholdType) String() string {
 }
 
 func (ThresholdType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{1}
+	return fileDescriptor_1bf2073887d77359, []int{3}
 }
 
 // DeepPing Messages
@@ -125,6 +199,441 @@ func (m *DeepPingOutput) GetValue() string {
 	return ""
 }
 
+// CalculateAndSetPointAlarmStatusInput
+type CalculateAndSetPointAlarmStatusInput struct {
+	NodeId               string    `protobuf:"bytes,1,opt,name=node_id,json=nodeId,proto3" json:"node_id,omitempty"`
+	NodeData             *NodeData `protobuf:"bytes,2,opt,name=node_data,json=nodeData,proto3" json:"node_data,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
+	XXX_unrecognized     []byte    `json:"-"`
+	XXX_sizecache        int32     `json:"-"`
+}
+
+func (m *CalculateAndSetPointAlarmStatusInput) Reset()         { *m = CalculateAndSetPointAlarmStatusInput{} }
+func (m *CalculateAndSetPointAlarmStatusInput) String() string { return proto.CompactTextString(m) }
+func (*CalculateAndSetPointAlarmStatusInput) ProtoMessage()    {}
+func (*CalculateAndSetPointAlarmStatusInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{1}
+}
+
+func (m *CalculateAndSetPointAlarmStatusInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CalculateAndSetPointAlarmStatusInput.Unmarshal(m, b)
+}
+func (m *CalculateAndSetPointAlarmStatusInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CalculateAndSetPointAlarmStatusInput.Marshal(b, m, deterministic)
+}
+func (m *CalculateAndSetPointAlarmStatusInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CalculateAndSetPointAlarmStatusInput.Merge(m, src)
+}
+func (m *CalculateAndSetPointAlarmStatusInput) XXX_Size() int {
+	return xxx_messageInfo_CalculateAndSetPointAlarmStatusInput.Size(m)
+}
+func (m *CalculateAndSetPointAlarmStatusInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_CalculateAndSetPointAlarmStatusInput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_CalculateAndSetPointAlarmStatusInput proto.InternalMessageInfo
+
+func (m *CalculateAndSetPointAlarmStatusInput) GetNodeId() string {
+	if m != nil {
+		return m.NodeId
+	}
+	return ""
+}
+
+func (m *CalculateAndSetPointAlarmStatusInput) GetNodeData() *NodeData {
+	if m != nil {
+		return m.NodeData
+	}
+	return nil
+}
+
+type NodeData struct {
+	CreatedAt            int64               `protobuf:"varint,1,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	ContentType          NodeDataContentType `protobuf:"varint,2,opt,name=content_type,json=contentType,proto3,enum=pasapi.NodeDataContentType" json:"content_type,omitempty"`
+	DataPoint            *DataPoint          `protobuf:"bytes,3,opt,name=data_point,json=dataPoint,proto3" json:"data_point,omitempty"`
+	Spectrum             *Spectrum           `protobuf:"bytes,4,opt,name=spectrum,proto3" json:"spectrum,omitempty"`
+	TimeSeries           *TimeSeries         `protobuf:"bytes,5,opt,name=time_series,json=timeSeries,proto3" json:"time_series,omitempty"`
+	Note                 string              `protobuf:"bytes,6,opt,name=note,proto3" json:"note,omitempty"`
+	Media                []byte              `protobuf:"bytes,7,opt,name=media,proto3" json:"media,omitempty"` // Deprecated: Do not use.
+	MediaV2              *Media              `protobuf:"bytes,9,opt,name=media_v2,json=mediaV2,proto3" json:"media_v2,omitempty"`
+	QuestionAnswers      []string            `protobuf:"bytes,8,rep,name=question_answers,json=questionAnswers,proto3" json:"question_answers,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
+}
+
+func (m *NodeData) Reset()         { *m = NodeData{} }
+func (m *NodeData) String() string { return proto.CompactTextString(m) }
+func (*NodeData) ProtoMessage()    {}
+func (*NodeData) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{2}
+}
+
+func (m *NodeData) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_NodeData.Unmarshal(m, b)
+}
+func (m *NodeData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_NodeData.Marshal(b, m, deterministic)
+}
+func (m *NodeData) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_NodeData.Merge(m, src)
+}
+func (m *NodeData) XXX_Size() int {
+	return xxx_messageInfo_NodeData.Size(m)
+}
+func (m *NodeData) XXX_DiscardUnknown() {
+	xxx_messageInfo_NodeData.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_NodeData proto.InternalMessageInfo
+
+func (m *NodeData) GetCreatedAt() int64 {
+	if m != nil {
+		return m.CreatedAt
+	}
+	return 0
+}
+
+func (m *NodeData) GetContentType() NodeDataContentType {
+	if m != nil {
+		return m.ContentType
+	}
+	return NodeDataContentType_DEFAULT
+}
+
+func (m *NodeData) GetDataPoint() *DataPoint {
+	if m != nil {
+		return m.DataPoint
+	}
+	return nil
+}
+
+func (m *NodeData) GetSpectrum() *Spectrum {
+	if m != nil {
+		return m.Spectrum
+	}
+	return nil
+}
+
+func (m *NodeData) GetTimeSeries() *TimeSeries {
+	if m != nil {
+		return m.TimeSeries
+	}
+	return nil
+}
+
+func (m *NodeData) GetNote() string {
+	if m != nil {
+		return m.Note
+	}
+	return ""
+}
+
+// Deprecated: Do not use.
+func (m *NodeData) GetMedia() []byte {
+	if m != nil {
+		return m.Media
+	}
+	return nil
+}
+
+func (m *NodeData) GetMediaV2() *Media {
+	if m != nil {
+		return m.MediaV2
+	}
+	return nil
+}
+
+func (m *NodeData) GetQuestionAnswers() []string {
+	if m != nil {
+		return m.QuestionAnswers
+	}
+	return nil
+}
+
+type Coordinate struct {
+	X                    float64  `protobuf:"fixed64,1,opt,name=x,proto3" json:"x,omitempty"`
+	Y                    float64  `protobuf:"fixed64,2,opt,name=y,proto3" json:"y,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Coordinate) Reset()         { *m = Coordinate{} }
+func (m *Coordinate) String() string { return proto.CompactTextString(m) }
+func (*Coordinate) ProtoMessage()    {}
+func (*Coordinate) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{3}
+}
+
+func (m *Coordinate) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Coordinate.Unmarshal(m, b)
+}
+func (m *Coordinate) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Coordinate.Marshal(b, m, deterministic)
+}
+func (m *Coordinate) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Coordinate.Merge(m, src)
+}
+func (m *Coordinate) XXX_Size() int {
+	return xxx_messageInfo_Coordinate.Size(m)
+}
+func (m *Coordinate) XXX_DiscardUnknown() {
+	xxx_messageInfo_Coordinate.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Coordinate proto.InternalMessageInfo
+
+func (m *Coordinate) GetX() float64 {
+	if m != nil {
+		return m.X
+	}
+	return 0
+}
+
+func (m *Coordinate) GetY() float64 {
+	if m != nil {
+		return m.Y
+	}
+	return 0
+}
+
+type DataPoint struct {
+	Coordinate           *Coordinate `protobuf:"bytes,1,opt,name=coordinate,proto3" json:"coordinate,omitempty"`
+	XUnit                string      `protobuf:"bytes,2,opt,name=x_unit,json=xUnit,proto3" json:"x_unit,omitempty"`
+	YUnit                string      `protobuf:"bytes,3,opt,name=y_unit,json=yUnit,proto3" json:"y_unit,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
+}
+
+func (m *DataPoint) Reset()         { *m = DataPoint{} }
+func (m *DataPoint) String() string { return proto.CompactTextString(m) }
+func (*DataPoint) ProtoMessage()    {}
+func (*DataPoint) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{4}
+}
+
+func (m *DataPoint) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DataPoint.Unmarshal(m, b)
+}
+func (m *DataPoint) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DataPoint.Marshal(b, m, deterministic)
+}
+func (m *DataPoint) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DataPoint.Merge(m, src)
+}
+func (m *DataPoint) XXX_Size() int {
+	return xxx_messageInfo_DataPoint.Size(m)
+}
+func (m *DataPoint) XXX_DiscardUnknown() {
+	xxx_messageInfo_DataPoint.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DataPoint proto.InternalMessageInfo
+
+func (m *DataPoint) GetCoordinate() *Coordinate {
+	if m != nil {
+		return m.Coordinate
+	}
+	return nil
+}
+
+func (m *DataPoint) GetXUnit() string {
+	if m != nil {
+		return m.XUnit
+	}
+	return ""
+}
+
+func (m *DataPoint) GetYUnit() string {
+	if m != nil {
+		return m.YUnit
+	}
+	return ""
+}
+
+type Spectrum struct {
+	Coordinates          []*Coordinate `protobuf:"bytes,1,rep,name=coordinates,proto3" json:"coordinates,omitempty"`
+	XUnit                string        `protobuf:"bytes,2,opt,name=x_unit,json=xUnit,proto3" json:"x_unit,omitempty"`
+	YUnit                string        `protobuf:"bytes,3,opt,name=y_unit,json=yUnit,proto3" json:"y_unit,omitempty"`
+	WindowFunction       string        `protobuf:"bytes,4,opt,name=window_function,json=windowFunction,proto3" json:"window_function,omitempty"`
+	SpeedRpm             float64       `protobuf:"fixed64,5,opt,name=speed_rpm,json=speedRpm,proto3" json:"speed_rpm,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *Spectrum) Reset()         { *m = Spectrum{} }
+func (m *Spectrum) String() string { return proto.CompactTextString(m) }
+func (*Spectrum) ProtoMessage()    {}
+func (*Spectrum) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{5}
+}
+
+func (m *Spectrum) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Spectrum.Unmarshal(m, b)
+}
+func (m *Spectrum) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Spectrum.Marshal(b, m, deterministic)
+}
+func (m *Spectrum) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Spectrum.Merge(m, src)
+}
+func (m *Spectrum) XXX_Size() int {
+	return xxx_messageInfo_Spectrum.Size(m)
+}
+func (m *Spectrum) XXX_DiscardUnknown() {
+	xxx_messageInfo_Spectrum.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Spectrum proto.InternalMessageInfo
+
+func (m *Spectrum) GetCoordinates() []*Coordinate {
+	if m != nil {
+		return m.Coordinates
+	}
+	return nil
+}
+
+func (m *Spectrum) GetXUnit() string {
+	if m != nil {
+		return m.XUnit
+	}
+	return ""
+}
+
+func (m *Spectrum) GetYUnit() string {
+	if m != nil {
+		return m.YUnit
+	}
+	return ""
+}
+
+func (m *Spectrum) GetWindowFunction() string {
+	if m != nil {
+		return m.WindowFunction
+	}
+	return ""
+}
+
+func (m *Spectrum) GetSpeedRpm() float64 {
+	if m != nil {
+		return m.SpeedRpm
+	}
+	return 0
+}
+
+type TimeSeries struct {
+	Coordinates          []*Coordinate `protobuf:"bytes,1,rep,name=coordinates,proto3" json:"coordinates,omitempty"`
+	XUnit                string        `protobuf:"bytes,2,opt,name=x_unit,json=xUnit,proto3" json:"x_unit,omitempty"`
+	YUnit                string        `protobuf:"bytes,3,opt,name=y_unit,json=yUnit,proto3" json:"y_unit,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *TimeSeries) Reset()         { *m = TimeSeries{} }
+func (m *TimeSeries) String() string { return proto.CompactTextString(m) }
+func (*TimeSeries) ProtoMessage()    {}
+func (*TimeSeries) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{6}
+}
+
+func (m *TimeSeries) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_TimeSeries.Unmarshal(m, b)
+}
+func (m *TimeSeries) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_TimeSeries.Marshal(b, m, deterministic)
+}
+func (m *TimeSeries) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_TimeSeries.Merge(m, src)
+}
+func (m *TimeSeries) XXX_Size() int {
+	return xxx_messageInfo_TimeSeries.Size(m)
+}
+func (m *TimeSeries) XXX_DiscardUnknown() {
+	xxx_messageInfo_TimeSeries.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_TimeSeries proto.InternalMessageInfo
+
+func (m *TimeSeries) GetCoordinates() []*Coordinate {
+	if m != nil {
+		return m.Coordinates
+	}
+	return nil
+}
+
+func (m *TimeSeries) GetXUnit() string {
+	if m != nil {
+		return m.XUnit
+	}
+	return ""
+}
+
+func (m *TimeSeries) GetYUnit() string {
+	if m != nil {
+		return m.YUnit
+	}
+	return ""
+}
+
+type Media struct {
+	Id                   string    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Type                 MediaType `protobuf:"varint,2,opt,name=type,proto3,enum=pasapi.MediaType" json:"type,omitempty"`
+	Media                []byte    `protobuf:"bytes,3,opt,name=media,proto3" json:"media,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
+	XXX_unrecognized     []byte    `json:"-"`
+	XXX_sizecache        int32     `json:"-"`
+}
+
+func (m *Media) Reset()         { *m = Media{} }
+func (m *Media) String() string { return proto.CompactTextString(m) }
+func (*Media) ProtoMessage()    {}
+func (*Media) Descriptor() ([]byte, []int) {
+	return fileDescriptor_1bf2073887d77359, []int{7}
+}
+
+func (m *Media) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Media.Unmarshal(m, b)
+}
+func (m *Media) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Media.Marshal(b, m, deterministic)
+}
+func (m *Media) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Media.Merge(m, src)
+}
+func (m *Media) XXX_Size() int {
+	return xxx_messageInfo_Media.Size(m)
+}
+func (m *Media) XXX_DiscardUnknown() {
+	xxx_messageInfo_Media.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Media proto.InternalMessageInfo
+
+func (m *Media) GetId() string {
+	if m != nil {
+		return m.Id
+	}
+	return ""
+}
+
+func (m *Media) GetType() MediaType {
+	if m != nil {
+		return m.Type
+	}
+	return MediaType_UNKNOWN
+}
+
+func (m *Media) GetMedia() []byte {
+	if m != nil {
+		return m.Media
+	}
+	return nil
+}
+
 // SetPointAlarmThreshold Messages
 type SetPointAlarmThresholdInput struct {
 	NodeId               string         `protobuf:"bytes,1,opt,name=node_id,json=nodeId,proto3" json:"node_id,omitempty"`
@@ -141,7 +650,7 @@ func (m *SetPointAlarmThresholdInput) Reset()         { *m = SetPointAlarmThresh
 func (m *SetPointAlarmThresholdInput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmThresholdInput) ProtoMessage()    {}
 func (*SetPointAlarmThresholdInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{1}
+	return fileDescriptor_1bf2073887d77359, []int{8}
 }
 
 func (m *SetPointAlarmThresholdInput) XXX_Unmarshal(b []byte) error {
@@ -207,7 +716,7 @@ func (m *SetPointAlarmThresholdOutput) Reset()         { *m = SetPointAlarmThres
 func (m *SetPointAlarmThresholdOutput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmThresholdOutput) ProtoMessage()    {}
 func (*SetPointAlarmThresholdOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{2}
+	return fileDescriptor_1bf2073887d77359, []int{9}
 }
 
 func (m *SetPointAlarmThresholdOutput) XXX_Unmarshal(b []byte) error {
@@ -240,7 +749,7 @@ func (m *GetPointAlarmThresholdInput) Reset()         { *m = GetPointAlarmThresh
 func (m *GetPointAlarmThresholdInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmThresholdInput) ProtoMessage()    {}
 func (*GetPointAlarmThresholdInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{3}
+	return fileDescriptor_1bf2073887d77359, []int{10}
 }
 
 func (m *GetPointAlarmThresholdInput) XXX_Unmarshal(b []byte) error {
@@ -280,7 +789,7 @@ func (m *GetPointAlarmThresholdOutput) Reset()         { *m = GetPointAlarmThres
 func (m *GetPointAlarmThresholdOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmThresholdOutput) ProtoMessage()    {}
 func (*GetPointAlarmThresholdOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{4}
+	return fileDescriptor_1bf2073887d77359, []int{11}
 }
 
 func (m *GetPointAlarmThresholdOutput) XXX_Unmarshal(b []byte) error {
@@ -329,7 +838,7 @@ func (m *SetPointAlarmStatusInput) Reset()         { *m = SetPointAlarmStatusInp
 func (m *SetPointAlarmStatusInput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmStatusInput) ProtoMessage()    {}
 func (*SetPointAlarmStatusInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{5}
+	return fileDescriptor_1bf2073887d77359, []int{12}
 }
 
 func (m *SetPointAlarmStatusInput) XXX_Unmarshal(b []byte) error {
@@ -381,7 +890,7 @@ func (m *SetPointAlarmStatusOutput) Reset()         { *m = SetPointAlarmStatusOu
 func (m *SetPointAlarmStatusOutput) String() string { return proto.CompactTextString(m) }
 func (*SetPointAlarmStatusOutput) ProtoMessage()    {}
 func (*SetPointAlarmStatusOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{6}
+	return fileDescriptor_1bf2073887d77359, []int{13}
 }
 
 func (m *SetPointAlarmStatusOutput) XXX_Unmarshal(b []byte) error {
@@ -414,7 +923,7 @@ func (m *GetPointAlarmStatusInput) Reset()         { *m = GetPointAlarmStatusInp
 func (m *GetPointAlarmStatusInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusInput) ProtoMessage()    {}
 func (*GetPointAlarmStatusInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{7}
+	return fileDescriptor_1bf2073887d77359, []int{14}
 }
 
 func (m *GetPointAlarmStatusInput) XXX_Unmarshal(b []byte) error {
@@ -453,7 +962,7 @@ func (m *GetPointAlarmStatusOutput) Reset()         { *m = GetPointAlarmStatusOu
 func (m *GetPointAlarmStatusOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusOutput) ProtoMessage()    {}
 func (*GetPointAlarmStatusOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{8}
+	return fileDescriptor_1bf2073887d77359, []int{15}
 }
 
 func (m *GetPointAlarmStatusOutput) XXX_Unmarshal(b []byte) error {
@@ -492,7 +1001,7 @@ func (m *GetPointAlarmStatusStreamInput) Reset()         { *m = GetPointAlarmSta
 func (m *GetPointAlarmStatusStreamInput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusStreamInput) ProtoMessage()    {}
 func (*GetPointAlarmStatusStreamInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{9}
+	return fileDescriptor_1bf2073887d77359, []int{16}
 }
 
 func (m *GetPointAlarmStatusStreamInput) XXX_Unmarshal(b []byte) error {
@@ -525,7 +1034,7 @@ func (m *GetPointAlarmStatusStreamOutput) Reset()         { *m = GetPointAlarmSt
 func (m *GetPointAlarmStatusStreamOutput) String() string { return proto.CompactTextString(m) }
 func (*GetPointAlarmStatusStreamOutput) ProtoMessage()    {}
 func (*GetPointAlarmStatusStreamOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{10}
+	return fileDescriptor_1bf2073887d77359, []int{17}
 }
 
 func (m *GetPointAlarmStatusStreamOutput) XXX_Unmarshal(b []byte) error {
@@ -571,7 +1080,7 @@ func (m *DoubleObject) Reset()         { *m = DoubleObject{} }
 func (m *DoubleObject) String() string { return proto.CompactTextString(m) }
 func (*DoubleObject) ProtoMessage()    {}
 func (*DoubleObject) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{11}
+	return fileDescriptor_1bf2073887d77359, []int{18}
 }
 
 func (m *DoubleObject) XXX_Unmarshal(b []byte) error {
@@ -613,7 +1122,7 @@ func (m *Overall) Reset()         { *m = Overall{} }
 func (m *Overall) String() string { return proto.CompactTextString(m) }
 func (*Overall) ProtoMessage()    {}
 func (*Overall) Descriptor() ([]byte, []int) {
-	return fileDescriptor_1bf2073887d77359, []int{12}
+	return fileDescriptor_1bf2073887d77359, []int{19}
 }
 
 func (m *Overall) XXX_Unmarshal(b []byte) error {
@@ -663,9 +1172,18 @@ func (m *Overall) GetOuterLow() *DoubleObject {
 }
 
 func init() {
+	proto.RegisterEnum("pasapi.NodeDataContentType", NodeDataContentType_name, NodeDataContentType_value)
+	proto.RegisterEnum("pasapi.MediaType", MediaType_name, MediaType_value)
 	proto.RegisterEnum("pasapi.AlarmStatus", AlarmStatus_name, AlarmStatus_value)
 	proto.RegisterEnum("pasapi.ThresholdType", ThresholdType_name, ThresholdType_value)
 	proto.RegisterType((*DeepPingOutput)(nil), "pasapi.DeepPingOutput")
+	proto.RegisterType((*CalculateAndSetPointAlarmStatusInput)(nil), "pasapi.CalculateAndSetPointAlarmStatusInput")
+	proto.RegisterType((*NodeData)(nil), "pasapi.NodeData")
+	proto.RegisterType((*Coordinate)(nil), "pasapi.Coordinate")
+	proto.RegisterType((*DataPoint)(nil), "pasapi.DataPoint")
+	proto.RegisterType((*Spectrum)(nil), "pasapi.Spectrum")
+	proto.RegisterType((*TimeSeries)(nil), "pasapi.TimeSeries")
+	proto.RegisterType((*Media)(nil), "pasapi.Media")
 	proto.RegisterType((*SetPointAlarmThresholdInput)(nil), "pasapi.SetPointAlarmThresholdInput")
 	proto.RegisterType((*SetPointAlarmThresholdOutput)(nil), "pasapi.SetPointAlarmThresholdOutput")
 	proto.RegisterType((*GetPointAlarmThresholdInput)(nil), "pasapi.GetPointAlarmThresholdInput")
@@ -683,51 +1201,87 @@ func init() {
 func init() { proto.RegisterFile("pas/grpcapi.proto", fileDescriptor_1bf2073887d77359) }
 
 var fileDescriptor_1bf2073887d77359 = []byte{
-	// 697 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x55, 0x51, 0x4e, 0xdb, 0x40,
-	0x10, 0xc5, 0x21, 0x24, 0x30, 0xa1, 0xa9, 0xd9, 0x00, 0x0d, 0x01, 0xd1, 0xd4, 0x45, 0x14, 0xf8,
-	0x08, 0x6d, 0x90, 0xf8, 0x77, 0xeb, 0xb0, 0xb5, 0x88, 0xbc, 0x91, 0x13, 0xe0, 0xa7, 0x92, 0x65,
-	0xc8, 0x2a, 0x71, 0xe5, 0x78, 0x2d, 0xc7, 0x06, 0x71, 0x8e, 0xde, 0xa2, 0xc7, 0xe8, 0x7f, 0x0f,
-	0xd0, 0xdb, 0x54, 0x5e, 0xdb, 0xd4, 0x50, 0xe3, 0x40, 0xd5, 0xaf, 0x68, 0x77, 0xde, 0x7b, 0x33,
-	0x6f, 0xb2, 0x33, 0x86, 0x15, 0xd7, 0x9c, 0x1e, 0x8e, 0x3c, 0xf7, 0xca, 0x74, 0xad, 0x96, 0xeb,
-	0x31, 0x9f, 0xa1, 0x92, 0x6b, 0x4e, 0x4d, 0xd7, 0x6a, 0xd4, 0xae, 0xd8, 0x64, 0xc2, 0x9c, 0xc3,
-	0xe8, 0x27, 0x0a, 0x4a, 0xbb, 0x50, 0x55, 0x28, 0x75, 0x7b, 0x96, 0x33, 0x22, 0x81, 0xef, 0x06,
-	0x3e, 0x5a, 0x85, 0x85, 0x6b, 0xd3, 0x0e, 0x68, 0x5d, 0x68, 0x0a, 0x7b, 0x4b, 0x7a, 0x74, 0x90,
-	0x7e, 0x0a, 0xb0, 0xd9, 0xa7, 0x7e, 0x8f, 0x59, 0x8e, 0x2f, 0xdb, 0xa6, 0x37, 0x19, 0x8c, 0x3d,
-	0x3a, 0x1d, 0x33, 0x7b, 0xa8, 0x3a, 0x21, 0xeb, 0x15, 0x94, 0x1d, 0x36, 0xa4, 0x86, 0x35, 0x8c,
-	0x79, 0xa5, 0xf0, 0xa8, 0x0e, 0xc3, 0x40, 0x30, 0xa5, 0x5e, 0x18, 0x28, 0x44, 0x81, 0xf0, 0xa8,
-	0x0e, 0xd1, 0x3e, 0x14, 0xfd, 0x5b, 0x97, 0xd6, 0xe7, 0x9b, 0xc2, 0x5e, 0xb5, 0xbd, 0xd6, 0x8a,
-	0xaa, 0x6c, 0xdd, 0xe9, 0x0e, 0x6e, 0x5d, 0xaa, 0x73, 0x08, 0xda, 0x87, 0x32, 0xbb, 0xa6, 0x9e,
-	0x69, 0xdb, 0xf5, 0x62, 0x53, 0xd8, 0xab, 0xb4, 0x5f, 0x26, 0x68, 0x12, 0x5d, 0xeb, 0x49, 0x1c,
-	0xed, 0x42, 0x89, 0x79, 0xd6, 0xc8, 0x72, 0xea, 0x0b, 0x1c, 0x59, 0x6d, 0xc5, 0x76, 0x09, 0xbf,
-	0xd5, 0xe3, 0xa8, 0xb4, 0x0d, 0x5b, 0xd9, 0x76, 0xa2, 0x2e, 0x48, 0xc7, 0xb0, 0x89, 0xff, 0xc1,
-	0xae, 0xe4, 0xc3, 0x16, 0xce, 0xd1, 0xbd, 0x73, 0x2d, 0x3c, 0xcb, 0x75, 0x21, 0xdf, 0xb5, 0xf4,
-	0x4d, 0x80, 0xfa, 0x3d, 0x3b, 0x7d, 0xdf, 0xf4, 0x83, 0xe9, 0x8c, 0xbf, 0xe6, 0x18, 0x96, 0xcd,
-	0x10, 0x6c, 0x4c, 0x39, 0x9a, 0x67, 0xa9, 0xb6, 0x6b, 0x49, 0x96, 0x94, 0x90, 0x5e, 0x31, 0xff,
-	0x1c, 0x52, 0x3d, 0x9e, 0xcf, 0xed, 0xf1, 0x26, 0x6c, 0x64, 0x14, 0x15, 0x37, 0xf8, 0x08, 0xea,
-	0xf8, 0xb9, 0x15, 0x4b, 0x7d, 0xd8, 0xc0, 0x8f, 0x29, 0xfe, 0x65, 0x47, 0x78, 0x9a, 0x1d, 0xa9,
-	0x09, 0xdb, 0x19, 0xa2, 0x7d, 0xdf, 0xa3, 0xe6, 0x84, 0xd7, 0x23, 0x79, 0xf0, 0xfa, 0x51, 0x44,
-	0x9c, 0xfc, 0x7f, 0x37, 0x59, 0xda, 0x81, 0x65, 0x85, 0x05, 0x97, 0x36, 0x25, 0x97, 0x5f, 0xe9,
-	0xd5, 0x83, 0xb1, 0x14, 0x92, 0xb1, 0xfc, 0x25, 0x40, 0x39, 0x7e, 0x0d, 0xe8, 0x08, 0x80, 0x05,
-	0x3e, 0xf5, 0x8c, 0xb1, 0x35, 0x1a, 0x73, 0x58, 0xa5, 0xbd, 0x9a, 0xe4, 0x49, 0x6b, 0xe9, 0x4b,
-	0x1c, 0xf7, 0xd9, 0x1a, 0x8d, 0x43, 0x92, 0xe5, 0x38, 0x09, 0xa9, 0x90, 0x47, 0xe2, 0x38, 0x4e,
-	0xfa, 0x00, 0xd1, 0xc1, 0xb0, 0xd9, 0x4d, 0xfc, 0x06, 0xb2, 0x39, 0x8b, 0x1c, 0xd6, 0x65, 0x37,
-	0x21, 0x25, 0x2a, 0x2e, 0xa4, 0x14, 0xf3, 0x28, 0x1c, 0xd6, 0x65, 0x37, 0x07, 0x04, 0x2a, 0xa9,
-	0xee, 0x20, 0x04, 0x55, 0x8d, 0x0c, 0x8c, 0x4f, 0x44, 0x3b, 0x51, 0xf1, 0x99, 0xde, 0x51, 0xc4,
-	0x39, 0x54, 0x81, 0xb2, 0x46, 0x0c, 0x45, 0x1e, 0xc8, 0xa2, 0x80, 0x16, 0xa1, 0x88, 0x09, 0x51,
-	0xc4, 0x02, 0x5a, 0x82, 0x05, 0xb9, 0xdb, 0xd1, 0x07, 0xe2, 0x3c, 0x02, 0x28, 0x29, 0xb2, 0x86,
-	0x3b, 0xba, 0x58, 0x3c, 0x38, 0x85, 0x17, 0xf7, 0xe6, 0x2c, 0x64, 0x68, 0x44, 0xeb, 0x88, 0x73,
-	0x68, 0x0d, 0x56, 0xc8, 0x79, 0x47, 0x97, 0xbb, 0x5d, 0x43, 0xd5, 0x8c, 0x0b, 0x55, 0x53, 0xc8,
-	0x85, 0x28, 0xa0, 0x0d, 0x58, 0x4b, 0xae, 0xc9, 0xd9, 0xc0, 0x20, 0x27, 0x49, 0xa8, 0xd0, 0xfe,
-	0x51, 0x04, 0xf1, 0xe1, 0x8b, 0x40, 0x6d, 0x58, 0x4c, 0xb6, 0x29, 0x5a, 0x4e, 0xa6, 0xe2, 0x9c,
-	0x59, 0xc3, 0xc6, 0xfa, 0x9d, 0xd9, 0x7b, 0xdb, 0x56, 0x9a, 0x43, 0x14, 0xd6, 0xb3, 0x37, 0x11,
-	0x7a, 0x9b, 0x70, 0x72, 0x16, 0x6f, 0x63, 0x27, 0x1f, 0x94, 0x4e, 0x83, 0x67, 0xa4, 0xc1, 0x4f,
-	0x49, 0x83, 0xf3, 0xd3, 0x7c, 0x81, 0x5a, 0xc6, 0xcc, 0xa3, 0x66, 0x66, 0x95, 0xa9, 0x99, 0x6f,
-	0xbc, 0xc9, 0x41, 0xa4, 0xd5, 0x71, 0x9e, 0x3a, 0x9e, 0xa9, 0x8e, 0x73, 0xd4, 0xdd, 0xcc, 0xed,
-	0x12, 0x8d, 0x39, 0xda, 0xcd, 0x51, 0x48, 0xed, 0x8a, 0xc6, 0xbb, 0x99, 0xb8, 0x24, 0xdf, 0x7b,
-	0xe1, 0xe3, 0xfa, 0xf7, 0x42, 0xad, 0x7f, 0x7a, 0xd2, 0xea, 0x38, 0xb6, 0x35, 0x1a, 0xfb, 0x2d,
-	0xb9, 0xa7, 0xb6, 0x7a, 0x72, 0xff, 0xb2, 0xc4, 0x3f, 0xce, 0x47, 0xbf, 0x03, 0x00, 0x00, 0xff,
-	0xff, 0xdd, 0x7e, 0xff, 0x80, 0xce, 0x07, 0x00, 0x00,
+	// 1277 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x57, 0xcd, 0x72, 0x9b, 0x56,
+	0x14, 0x36, 0xfa, 0xe7, 0x48, 0x96, 0xf1, 0x75, 0x9c, 0x10, 0x39, 0x4d, 0x54, 0x9a, 0x26, 0x8e,
+	0x27, 0x55, 0x52, 0xb9, 0x93, 0x65, 0x67, 0x88, 0x85, 0x29, 0x8d, 0x0d, 0xea, 0x05, 0xd9, 0x9b,
+	0xce, 0x30, 0x44, 0xdc, 0xda, 0x74, 0x24, 0xa0, 0x70, 0x15, 0xdb, 0xcb, 0xbe, 0x40, 0x37, 0x7d,
+	0x84, 0xee, 0xba, 0xee, 0x6b, 0xf4, 0x01, 0xfa, 0x36, 0x1d, 0x2e, 0x20, 0xe3, 0x54, 0x96, 0xed,
+	0x4e, 0xa7, 0x2b, 0x71, 0x7e, 0xbe, 0xef, 0xfc, 0xdc, 0x73, 0x0f, 0x08, 0xd6, 0x43, 0x27, 0x7e,
+	0x75, 0x12, 0x85, 0x63, 0x27, 0xf4, 0x7a, 0x61, 0x14, 0xd0, 0x00, 0xd5, 0x42, 0x27, 0x76, 0x42,
+	0xaf, 0xb3, 0x31, 0x0e, 0xa6, 0xd3, 0xc0, 0x7f, 0x95, 0xfe, 0xa4, 0x46, 0xe9, 0x19, 0xb4, 0x07,
+	0x84, 0x84, 0x43, 0xcf, 0x3f, 0x31, 0x66, 0x34, 0x9c, 0x51, 0x74, 0x0f, 0xaa, 0x1f, 0x9c, 0xc9,
+	0x8c, 0x88, 0x5c, 0x97, 0xdb, 0xe6, 0x71, 0x2a, 0x48, 0x3e, 0x3c, 0xdd, 0x73, 0x26, 0xe3, 0xd9,
+	0xc4, 0xa1, 0x44, 0xf6, 0x5d, 0x93, 0xd0, 0x61, 0xe0, 0xf9, 0x54, 0x9e, 0x38, 0xd1, 0xd4, 0xa4,
+	0x0e, 0x9d, 0xc5, 0x9a, 0x9f, 0xa0, 0x1f, 0x40, 0xdd, 0x0f, 0x5c, 0x62, 0x7b, 0x6e, 0x86, 0xaf,
+	0x25, 0xa2, 0xe6, 0xa2, 0x2f, 0x80, 0x67, 0x06, 0xd7, 0xa1, 0x8e, 0x58, 0xea, 0x72, 0xdb, 0xcd,
+	0xbe, 0xd0, 0x4b, 0x33, 0xeb, 0xe9, 0x81, 0x4b, 0x06, 0x0e, 0x75, 0x70, 0xc3, 0xcf, 0x9e, 0xa4,
+	0x9f, 0xcb, 0xd0, 0xc8, 0xd5, 0xe8, 0x13, 0x80, 0x71, 0x44, 0x1c, 0x4a, 0x5c, 0xdb, 0xa1, 0x8c,
+	0xb7, 0x8c, 0xf9, 0x4c, 0x23, 0x53, 0xf4, 0x35, 0xb4, 0xc6, 0x81, 0x4f, 0x89, 0x4f, 0x6d, 0x7a,
+	0x11, 0x12, 0xc6, 0xde, 0xee, 0x6f, 0x7d, 0xcc, 0xbe, 0x97, 0xfa, 0x58, 0x17, 0x21, 0xc1, 0xcd,
+	0xf1, 0xa5, 0x80, 0x5e, 0x03, 0x24, 0x59, 0xd9, 0x61, 0x52, 0x91, 0x58, 0x66, 0xb9, 0xad, 0xe7,
+	0xe8, 0x04, 0xc9, 0x4a, 0xc5, 0xbc, 0x9b, 0x3f, 0xa2, 0x97, 0xd0, 0x88, 0x43, 0x32, 0xa6, 0xd1,
+	0x6c, 0x2a, 0x56, 0xae, 0xd6, 0x62, 0x66, 0x7a, 0x3c, 0xf7, 0x40, 0xbb, 0xd0, 0xa4, 0xde, 0x94,
+	0xd8, 0x31, 0x89, 0x3c, 0x12, 0x8b, 0x55, 0x06, 0x40, 0x39, 0xc0, 0xf2, 0xa6, 0xc4, 0x64, 0x16,
+	0x0c, 0x74, 0xfe, 0x8c, 0x10, 0x54, 0xfc, 0x80, 0x12, 0xb1, 0xc6, 0xba, 0xc8, 0x9e, 0x91, 0x08,
+	0xd5, 0x29, 0x71, 0x3d, 0x47, 0xac, 0x77, 0xb9, 0xed, 0xd6, 0xdb, 0x92, 0xc8, 0xe1, 0x54, 0x81,
+	0xb6, 0xa1, 0xc1, 0x1e, 0xec, 0x0f, 0x7d, 0x91, 0x67, 0xfc, 0xab, 0x39, 0xff, 0x61, 0xa2, 0xc7,
+	0x75, 0x66, 0x3e, 0xea, 0xa3, 0x17, 0x20, 0xfc, 0x34, 0x23, 0x31, 0xf5, 0x02, 0xdf, 0x76, 0xfc,
+	0xf8, 0x8c, 0x44, 0xb1, 0xd8, 0xe8, 0x96, 0xb7, 0x79, 0xbc, 0x96, 0xeb, 0xe5, 0x54, 0x2d, 0x6d,
+	0x03, 0xec, 0x05, 0x41, 0xe4, 0x7a, 0xbe, 0x43, 0x09, 0x6a, 0x01, 0x77, 0xce, 0x7a, 0xcf, 0x61,
+	0xee, 0x3c, 0x91, 0x2e, 0x58, 0xa3, 0x39, 0xcc, 0x5d, 0x48, 0x53, 0xe0, 0xe7, 0x7d, 0x42, 0x7d,
+	0x80, 0xf1, 0x1c, 0xc6, 0x10, 0x85, 0x6a, 0x2f, 0x09, 0x71, 0xc1, 0x0b, 0x6d, 0x42, 0xed, 0xdc,
+	0x9e, 0xf9, 0x1e, 0x65, 0x9c, 0x3c, 0xae, 0x9e, 0x8f, 0x7c, 0x8f, 0x26, 0xea, 0x8b, 0x54, 0x5d,
+	0x4e, 0xd5, 0x17, 0x89, 0x5a, 0xfa, 0x83, 0x83, 0x46, 0xde, 0x67, 0xf4, 0x15, 0x34, 0x2f, 0x89,
+	0x62, 0x91, 0xeb, 0x96, 0xaf, 0x89, 0x57, 0x74, 0xbb, 0x5b, 0x40, 0xf4, 0x1c, 0xd6, 0xce, 0x3c,
+	0xdf, 0x0d, 0xce, 0xec, 0x1f, 0x66, 0xfe, 0x38, 0xe9, 0x11, 0x3b, 0x76, 0x1e, 0xb7, 0x53, 0xf5,
+	0x7e, 0xa6, 0x45, 0x5b, 0xc0, 0xc7, 0x21, 0x21, 0xae, 0x1d, 0x85, 0x53, 0x76, 0xd0, 0x1c, 0x9b,
+	0x03, 0xe2, 0xe2, 0x70, 0x2a, 0x85, 0x00, 0x97, 0x87, 0xfd, 0x7f, 0xe4, 0x2d, 0x59, 0x50, 0x65,
+	0xc7, 0x8f, 0xda, 0x50, 0x9a, 0xdf, 0xc8, 0x92, 0xe7, 0xa2, 0xcf, 0xa1, 0x52, 0xb8, 0x2a, 0xeb,
+	0x57, 0x66, 0x85, 0x5d, 0x10, 0x66, 0x4e, 0x76, 0x41, 0x3a, 0x70, 0x09, 0x6b, 0x2b, 0x1b, 0x36,
+	0xe9, 0x4f, 0x0e, 0xb6, 0xae, 0x2c, 0x00, 0xeb, 0x34, 0x22, 0xf1, 0x69, 0x30, 0x71, 0x6f, 0xd8,
+	0x01, 0x0f, 0xa0, 0x3e, 0x8b, 0x49, 0x94, 0x18, 0xd2, 0xec, 0x6b, 0x89, 0xa8, 0xb9, 0xe8, 0x45,
+	0x96, 0x4e, 0x99, 0xa5, 0xb3, 0x39, 0xbf, 0x1a, 0x39, 0x6f, 0x21, 0xa5, 0x17, 0x50, 0x0f, 0x3e,
+	0x90, 0xc8, 0x99, 0x4c, 0xb2, 0x9b, 0xb7, 0x96, 0x7b, 0x1b, 0xa9, 0x1a, 0xe7, 0x76, 0xf4, 0x0c,
+	0x6a, 0x41, 0xe4, 0x9d, 0x78, 0x7e, 0x76, 0xe5, 0xda, 0xbd, 0x6c, 0xf5, 0x19, 0x4c, 0x8b, 0x33,
+	0xab, 0xf4, 0x18, 0x1e, 0x2d, 0x2e, 0x27, 0xdd, 0x88, 0xd2, 0x1b, 0xd8, 0x52, 0xff, 0x45, 0xb9,
+	0x12, 0x85, 0x47, 0xea, 0x12, 0xde, 0x79, 0xd5, 0xdc, 0x9d, 0xaa, 0x2e, 0x2d, 0xaf, 0x5a, 0xfa,
+	0x95, 0x03, 0xf1, 0xee, 0xeb, 0xf9, 0x0d, 0xb4, 0x9c, 0xc4, 0xd9, 0x8e, 0x99, 0x77, 0x36, 0x18,
+	0x1b, 0x79, 0x94, 0x02, 0x11, 0x6e, 0x3a, 0x97, 0x42, 0xa1, 0xc7, 0xe5, 0xa5, 0x3d, 0xde, 0x82,
+	0x87, 0x0b, 0x92, 0xca, 0x1a, 0xbc, 0x0b, 0xa2, 0x7a, 0xd7, 0x8c, 0x25, 0x13, 0x1e, 0xaa, 0xd7,
+	0x31, 0xfe, 0xa3, 0x1c, 0xee, 0x76, 0xe5, 0x48, 0x5d, 0x78, 0xbc, 0x80, 0xd4, 0xa4, 0x11, 0x71,
+	0xa6, 0x2c, 0x1f, 0x29, 0x82, 0x27, 0xd7, 0x7a, 0x64, 0xc1, 0xff, 0xeb, 0x26, 0x4b, 0x4f, 0xa1,
+	0x35, 0x08, 0x66, 0xef, 0x27, 0xc4, 0x78, 0xff, 0x23, 0x19, 0x7f, 0xf4, 0x8a, 0xe6, 0xf2, 0x57,
+	0xf4, 0x5f, 0x1c, 0xd4, 0xb3, 0x69, 0x40, 0xbb, 0x00, 0xc1, 0x8c, 0x92, 0xc8, 0x3e, 0xf5, 0x4e,
+	0x4e, 0xb3, 0x1d, 0x7c, 0x6f, 0xfe, 0x4a, 0x2b, 0x70, 0x61, 0x9e, 0xf9, 0x7d, 0xe3, 0x9d, 0x9c,
+	0x26, 0x20, 0xcf, 0xf7, 0x73, 0x50, 0x69, 0x19, 0x88, 0xf9, 0x31, 0xd0, 0x97, 0x90, 0x0a, 0xf6,
+	0x24, 0x38, 0xcb, 0x66, 0x60, 0x31, 0xa6, 0xc1, 0xdc, 0x0e, 0x82, 0xb3, 0x04, 0x92, 0x26, 0x97,
+	0x40, 0x2a, 0xcb, 0x20, 0xcc, 0xed, 0x20, 0x38, 0xdb, 0xf9, 0x85, 0x83, 0x8d, 0x05, 0xef, 0x71,
+	0xd4, 0x84, 0xfa, 0x40, 0xd9, 0x97, 0x47, 0x07, 0x96, 0xb0, 0x82, 0xda, 0x00, 0x03, 0xd9, 0x92,
+	0xed, 0xa1, 0xa1, 0xe9, 0x96, 0xc0, 0xa1, 0x16, 0x34, 0xcc, 0xa1, 0xb2, 0x67, 0xe1, 0xd1, 0xa1,
+	0x50, 0x42, 0x6b, 0xd0, 0xb4, 0xb4, 0x43, 0xc5, 0x36, 0x15, 0xac, 0x29, 0xa6, 0x50, 0x46, 0x0d,
+	0xa8, 0xe8, 0x86, 0xa5, 0x08, 0x15, 0xb4, 0x0a, 0xd5, 0x43, 0x65, 0xa0, 0xc9, 0x42, 0xb5, 0x53,
+	0x6a, 0x30, 0x1c, 0x13, 0xed, 0xa3, 0xbe, 0x50, 0x47, 0xf7, 0x40, 0xf8, 0x6e, 0xa4, 0x98, 0x96,
+	0x66, 0xe8, 0xb6, 0xac, 0x9b, 0xc7, 0x0a, 0x36, 0x85, 0xda, 0xce, 0x3e, 0xf0, 0xf3, 0x65, 0x99,
+	0x64, 0x31, 0xd2, 0xdf, 0xe9, 0xc6, 0xb1, 0x2e, 0xac, 0xa0, 0x55, 0xe0, 0xe5, 0xd1, 0x40, 0x33,
+	0xec, 0x63, 0xf9, 0x48, 0xe0, 0x92, 0xa4, 0xb4, 0x43, 0x59, 0x55, 0xec, 0x6f, 0x87, 0x8a, 0x2a,
+	0x94, 0x12, 0x73, 0x2a, 0x0f, 0x75, 0x55, 0x28, 0xef, 0x18, 0xd0, 0x2c, 0x1c, 0x3b, 0x42, 0xd0,
+	0xd6, 0x0d, 0xcb, 0xde, 0x33, 0xf4, 0x7d, 0x4d, 0x1d, 0x61, 0x65, 0x20, 0xac, 0x24, 0xec, 0xba,
+	0x61, 0x27, 0x95, 0x09, 0x5c, 0x92, 0xb4, 0x6a, 0x18, 0x03, 0xa1, 0x84, 0x78, 0xa8, 0xca, 0x07,
+	0x0a, 0xb6, 0x84, 0x32, 0x02, 0xa8, 0x0d, 0x64, 0x5d, 0x55, 0xb0, 0x50, 0xd9, 0x79, 0x07, 0xab,
+	0x57, 0x16, 0x48, 0x5a, 0xa6, 0xae, 0x08, 0x2b, 0x68, 0x13, 0xd6, 0x8d, 0x23, 0x05, 0xcb, 0x07,
+	0x07, 0xb6, 0xa6, 0xdb, 0xc7, 0x9a, 0x3e, 0x30, 0x8e, 0x05, 0x0e, 0x3d, 0x84, 0xcd, 0x5c, 0x6d,
+	0x8c, 0x2c, 0xdb, 0xd8, 0xcf, 0x4d, 0xa5, 0xfe, 0x6f, 0x55, 0x10, 0x3e, 0x1e, 0x75, 0xd4, 0x87,
+	0x46, 0xfe, 0xc9, 0x88, 0x5a, 0xf9, 0x75, 0x3f, 0x0a, 0x3c, 0xb7, 0x73, 0x7f, 0x7e, 0x8a, 0x57,
+	0x3e, 0x29, 0xa5, 0x15, 0x44, 0xe0, 0xfe, 0xe2, 0x15, 0x8b, 0x3e, 0x9b, 0x7f, 0x38, 0x5d, 0xbf,
+	0x62, 0x3b, 0x4f, 0x97, 0x3b, 0x15, 0xc3, 0xa8, 0x37, 0x84, 0x51, 0x6f, 0x13, 0x46, 0x5d, 0x1e,
+	0xe6, 0x7b, 0xd8, 0x58, 0xb0, 0xcc, 0x50, 0x77, 0x61, 0x96, 0x85, 0x65, 0xd6, 0xf9, 0x74, 0x89,
+	0x47, 0x91, 0x5d, 0x5d, 0xc6, 0xae, 0xde, 0xc8, 0xae, 0x2e, 0x61, 0x0f, 0x17, 0xae, 0xcd, 0x74,
+	0x7f, 0xa1, 0x67, 0x4b, 0x18, 0x0a, 0x4b, 0xb0, 0xf3, 0xfc, 0x46, 0xbf, 0x3c, 0xde, 0x6b, 0x0e,
+	0xd9, 0xf0, 0xe4, 0x86, 0xbf, 0x0e, 0xe8, 0xe5, 0xfc, 0xb3, 0xe7, 0x16, 0xff, 0x31, 0x3a, 0x57,
+	0x86, 0x4e, 0x5a, 0x79, 0x7b, 0xff, 0xf7, 0xd2, 0x86, 0xf9, 0x6e, 0xbf, 0xa7, 0xf8, 0x13, 0xef,
+	0xe4, 0x94, 0xf6, 0xe4, 0xa1, 0xd6, 0x1b, 0xca, 0xe6, 0xfb, 0x1a, 0xfb, 0x8b, 0xb3, 0xfb, 0x77,
+	0x00, 0x00, 0x00, 0xff, 0xff, 0x00, 0x1b, 0x40, 0x94, 0x14, 0x0d, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -748,6 +1302,7 @@ type PointAlarmStatusClient interface {
 	SetPointAlarmStatus(ctx context.Context, in *SetPointAlarmStatusInput, opts ...grpc.CallOption) (*SetPointAlarmStatusOutput, error)
 	GetPointAlarmStatus(ctx context.Context, in *GetPointAlarmStatusInput, opts ...grpc.CallOption) (*GetPointAlarmStatusOutput, error)
 	GetPointAlarmStatusStream(ctx context.Context, in *GetPointAlarmStatusStreamInput, opts ...grpc.CallOption) (PointAlarmStatus_GetPointAlarmStatusStreamClient, error)
+	CalculateAndSetPointAlarmStatus(ctx context.Context, in *CalculateAndSetPointAlarmStatusInput, opts ...grpc.CallOption) (*common.Void, error)
 }
 
 type pointAlarmStatusClient struct {
@@ -835,6 +1390,15 @@ func (x *pointAlarmStatusGetPointAlarmStatusStreamClient) Recv() (*GetPointAlarm
 	return m, nil
 }
 
+func (c *pointAlarmStatusClient) CalculateAndSetPointAlarmStatus(ctx context.Context, in *CalculateAndSetPointAlarmStatusInput, opts ...grpc.CallOption) (*common.Void, error) {
+	out := new(common.Void)
+	err := c.cc.Invoke(ctx, "/pasapi.PointAlarmStatus/CalculateAndSetPointAlarmStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // PointAlarmStatusServer is the server API for PointAlarmStatus service.
 type PointAlarmStatusServer interface {
 	DeepPing(context.Context, *common.Void) (*DeepPingOutput, error)
@@ -843,6 +1407,7 @@ type PointAlarmStatusServer interface {
 	SetPointAlarmStatus(context.Context, *SetPointAlarmStatusInput) (*SetPointAlarmStatusOutput, error)
 	GetPointAlarmStatus(context.Context, *GetPointAlarmStatusInput) (*GetPointAlarmStatusOutput, error)
 	GetPointAlarmStatusStream(*GetPointAlarmStatusStreamInput, PointAlarmStatus_GetPointAlarmStatusStreamServer) error
+	CalculateAndSetPointAlarmStatus(context.Context, *CalculateAndSetPointAlarmStatusInput) (*common.Void, error)
 }
 
 func RegisterPointAlarmStatusServer(s *grpc.Server, srv PointAlarmStatusServer) {
@@ -960,6 +1525,24 @@ func (x *pointAlarmStatusGetPointAlarmStatusStreamServer) Send(m *GetPointAlarmS
 	return x.ServerStream.SendMsg(m)
 }
 
+func _PointAlarmStatus_CalculateAndSetPointAlarmStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CalculateAndSetPointAlarmStatusInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PointAlarmStatusServer).CalculateAndSetPointAlarmStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pasapi.PointAlarmStatus/CalculateAndSetPointAlarmStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PointAlarmStatusServer).CalculateAndSetPointAlarmStatus(ctx, req.(*CalculateAndSetPointAlarmStatusInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _PointAlarmStatus_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "pasapi.PointAlarmStatus",
 	HandlerType: (*PointAlarmStatusServer)(nil),
@@ -983,6 +1566,10 @@ var _PointAlarmStatus_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetPointAlarmStatus",
 			Handler:    _PointAlarmStatus_GetPointAlarmStatus_Handler,
+		},
+		{
+			MethodName: "CalculateAndSetPointAlarmStatus",
+			Handler:    _PointAlarmStatus_CalculateAndSetPointAlarmStatus_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
