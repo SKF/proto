@@ -1,3 +1,4 @@
+set -e
 mkdir -p build/go
 PROTOC=build/protoc/bin/protoc
 PLUGIN=build/bin/protoc-gen-go
