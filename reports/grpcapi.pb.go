@@ -62,7 +62,7 @@ func (m *DeepPingOutput) GetValue() string {
 	return ""
 }
 
-// GET ASSET HEALTH
+// Return asset health for the requested asset node
 type GetAssetHealthInput struct {
 	NodeId               string   `protobuf:"bytes,1,opt,name=node_id,json=nodeId,proto3" json:"node_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -141,7 +141,7 @@ func (m *GetAssetHealthOutput) GetHealthStatus() string {
 	return ""
 }
 
-// GET FL HEALTH
+// Return functional location health for requested functional location node
 type GetFunctionalLocationHealthInput struct {
 	NodeId               string   `protobuf:"bytes,1,opt,name=node_id,json=nodeId,proto3" json:"node_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -220,6 +220,7 @@ func (m *GetFunctionalLocationHealthOutput) GetHealthStatus() string {
 	return ""
 }
 
+// Return the compliance log for the supplied hierarchy node
 type GetComplianceLogInput struct {
 	NodeId               string   `protobuf:"bytes,1,opt,name=node_id,json=nodeId,proto3" json:"node_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -361,6 +362,7 @@ func (m *ComplianceItem) GetCreated() int64 {
 	return 0
 }
 
+// Return list of functional locations with their faults for the supplied list of hierarchy nodes
 type GetReportsInput struct {
 	NodeIds              []string `protobuf:"bytes,1,rep,name=node_ids,json=nodeIds,proto3" json:"node_ids,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
