@@ -239,7 +239,7 @@ namespace SKF.Enlight.API.Reports {
   }
 
   /// <summary>
-  /// GET ASSET HEALTH
+  /// Return asset health for the requested asset node
   /// </summary>
   public sealed partial class GetAssetHealthInput : pb::IMessage<GetAssetHealthInput> {
     private static readonly pb::MessageParser<GetAssetHealthInput> _parser = new pb::MessageParser<GetAssetHealthInput>(() => new GetAssetHealthInput());
@@ -500,7 +500,7 @@ namespace SKF.Enlight.API.Reports {
   }
 
   /// <summary>
-  /// GET FL HEALTH
+  /// Return functional location health for requested functional location node
   /// </summary>
   public sealed partial class GetFunctionalLocationHealthInput : pb::IMessage<GetFunctionalLocationHealthInput> {
     private static readonly pb::MessageParser<GetFunctionalLocationHealthInput> _parser = new pb::MessageParser<GetFunctionalLocationHealthInput>(() => new GetFunctionalLocationHealthInput());
@@ -760,6 +760,9 @@ namespace SKF.Enlight.API.Reports {
 
   }
 
+  /// <summary>
+  /// Return the compliance log for the supplied hierarchy node
+  /// </summary>
   public sealed partial class GetComplianceLogInput : pb::IMessage<GetComplianceLogInput> {
     private static readonly pb::MessageParser<GetComplianceLogInput> _parser = new pb::MessageParser<GetComplianceLogInput>(() => new GetComplianceLogInput());
     private pb::UnknownFieldSet _unknownFields;
@@ -1223,6 +1226,9 @@ namespace SKF.Enlight.API.Reports {
 
   }
 
+  /// <summary>
+  /// Return list of functional locations with their faults for the supplied list of hierarchy nodes
+  /// </summary>
   public sealed partial class GetReportsInput : pb::IMessage<GetReportsInput> {
     private static readonly pb::MessageParser<GetReportsInput> _parser = new pb::MessageParser<GetReportsInput>(() => new GetReportsInput());
     private pb::UnknownFieldSet _unknownFields;

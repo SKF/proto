@@ -39,8 +39,8 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataStreamInput> __Marshaller_iotgrpcapi_GetNodeDataStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput> __Marshaller_iotgrpcapi_GetNodeDataStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.DeleteNodeDataInput> __Marshaller_iotgrpcapi_DeleteNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.DeleteNodeDataInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataLogInput> __Marshaller_iotgrpcapi_GetNodeDataLogInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataLogInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataLogOutput> __Marshaller_iotgrpcapi_GetNodeDataLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataLogOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeEventLogInput> __Marshaller_iotgrpcapi_GetNodeEventLogInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeEventLogInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> __Marshaller_iotgrpcapi_GetNodeEventLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeEventLogOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaInput> __Marshaller_iotgrpcapi_GetMediaInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaOutput> __Marshaller_iotgrpcapi_GetMediaOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser.ParseFrom);
 
@@ -177,12 +177,12 @@ namespace SKF.Enlight.API.IoT {
         __Marshaller_iotgrpcapi_DeleteNodeDataInput,
         __Marshaller_common_Void);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetNodeDataLogInput, global::SKF.Enlight.API.IoT.GetNodeDataLogOutput> __Method_GetNodeDataLog = new grpc::Method<global::SKF.Enlight.API.IoT.GetNodeDataLogInput, global::SKF.Enlight.API.IoT.GetNodeDataLogOutput>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetNodeEventLogInput, global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> __Method_GetNodeEventLog = new grpc::Method<global::SKF.Enlight.API.IoT.GetNodeEventLogInput, global::SKF.Enlight.API.IoT.GetNodeEventLogOutput>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetNodeDataLog",
-        __Marshaller_iotgrpcapi_GetNodeDataLogInput,
-        __Marshaller_iotgrpcapi_GetNodeDataLogOutput);
+        "GetNodeEventLog",
+        __Marshaller_iotgrpcapi_GetNodeEventLogInput,
+        __Marshaller_iotgrpcapi_GetNodeEventLogOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetMediaInput, global::SKF.Enlight.API.IoT.GetMediaOutput> __Method_GetMedia = new grpc::Method<global::SKF.Enlight.API.IoT.GetMediaInput, global::SKF.Enlight.API.IoT.GetMediaOutput>(
         grpc::MethodType.Unary,
@@ -295,7 +295,7 @@ namespace SKF.Enlight.API.IoT {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetNodeDataLogOutput> GetNodeDataLog(global::SKF.Enlight.API.IoT.GetNodeDataLogInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> GetNodeEventLog(global::SKF.Enlight.API.IoT.GetNodeEventLogInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -610,21 +610,21 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNodeData, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IoT.GetNodeDataLogOutput GetNodeDataLog(global::SKF.Enlight.API.IoT.GetNodeDataLogInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IoT.GetNodeEventLogOutput GetNodeEventLog(global::SKF.Enlight.API.IoT.GetNodeEventLogInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetNodeDataLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetNodeEventLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IoT.GetNodeDataLogOutput GetNodeDataLog(global::SKF.Enlight.API.IoT.GetNodeDataLogInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IoT.GetNodeEventLogOutput GetNodeEventLog(global::SKF.Enlight.API.IoT.GetNodeEventLogInput request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetNodeDataLog, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetNodeEventLog, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetNodeDataLogOutput> GetNodeDataLogAsync(global::SKF.Enlight.API.IoT.GetNodeDataLogInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> GetNodeEventLogAsync(global::SKF.Enlight.API.IoT.GetNodeEventLogInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetNodeDataLogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetNodeEventLogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetNodeDataLogOutput> GetNodeDataLogAsync(global::SKF.Enlight.API.IoT.GetNodeDataLogInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> GetNodeEventLogAsync(global::SKF.Enlight.API.IoT.GetNodeEventLogInput request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetNodeDataLog, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetNodeEventLog, null, options, request);
       }
       public virtual global::SKF.Enlight.API.IoT.GetMediaOutput GetMedia(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -673,7 +673,7 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_GetNodeData, serviceImpl.GetNodeData)
           .AddMethod(__Method_GetNodeDataStream, serviceImpl.GetNodeDataStream)
           .AddMethod(__Method_DeleteNodeData, serviceImpl.DeleteNodeData)
-          .AddMethod(__Method_GetNodeDataLog, serviceImpl.GetNodeDataLog)
+          .AddMethod(__Method_GetNodeEventLog, serviceImpl.GetNodeEventLog)
           .AddMethod(__Method_GetMedia, serviceImpl.GetMedia).Build();
     }
 
