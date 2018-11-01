@@ -33,9 +33,17 @@ service IoT {
     option deprecated = true;
   }
   rpc DeleteNodeData(DeleteNodeDataInput) returns (common.Void) {}
-  rpc GetNodeDataLog(GetNodeDataLogInput) returns (GetNodeDataLogOutput) {}
+  rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
   rpc GetMedia (GetMediaInput) returns (GetMediaOutput) {}
+}
+
+enum NodeEventType {
+  UNKNOWN_EVENT = 0;
+  CREATE_TASK_EVENT = 1;
+  SET_TASK_STATUS_EVENT = 2;
+  DELETE_TASK_EVENT = 3;
+  APPEND_NODE_DATA_EVENT = 4;
 }
 
 message TaskDescription {
@@ -166,19 +174,20 @@ message DeleteNodeDataInput {
   common.Origin origin = 2;
 }
 
-message GetNodeDataLogInput {
+message GetNodeEventLogInput {
   string seq_id = 1;
 }
 
-message LogEvent {
-  string aggregate_id = 1;
+message NodeEvent {
+  string node_id = 1;
   string seq_id = 2;
   int64 timestamp = 3;
-  NodeDataContentType content_type = 4;
+  NodeEventType event_type = 4;
+  NodeDataContentType data_content_type = 5;
 }
 
-message GetNodeDataLogOutput {
-  repeated LogEvent events = 1;
+message GetNodeEventLogOutput {
+  repeated NodeEvent events = 1;
   bool has_next = 2;
 }
 
