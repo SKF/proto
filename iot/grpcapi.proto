@@ -171,7 +171,9 @@ message IngestNodeDataStreamInput {
   repeated NodeData node_data_list = 2;
 }
 
-message IngestNodeDataStreamOutput {}
+message IngestNodeDataStreamOutput {
+    bool success = 1;
+}
 
 
 // GetNodeData messages
