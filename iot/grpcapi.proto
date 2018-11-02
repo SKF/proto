@@ -23,6 +23,7 @@ service IoT {
   rpc GetTaskByLongId (GetTaskByLongIdInput) returns (GetTaskByLongIdOutput) {}
   rpc GetTasksModifiedSinceTimestamp (GetTasksModifiedSinceTimestampInput) returns (GetTasksModifiedSinceTimestampOutput) {}
 
+  rpc IngestNodesData (IngestNodesDataInput) returns (IngestNodesDataOutput) {}
   rpc IngestNodeData (IngestNodeDataInput) returns (IngestNodeDataOutput) {}
   rpc IngestNodeDataStream (stream IngestNodeDataStreamInput) returns (IngestNodeDataStreamOutput) {
     option deprecated = true;
@@ -172,6 +173,16 @@ message IngestNodeDataInput {
 message DeleteNodeDataInput {
   string node_id = 1;
   common.Origin origin = 2;
+}
+
+
+// IngestNodesData messages
+message IngestNodesDataInput {
+  repeated IngestNodeDataInput node = 1;
+}
+
+message IngestNodesDataOutput {
+      bool success = 1;
 }
 
 message GetNodeEventLogInput {
