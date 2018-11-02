@@ -1,3 +1,4 @@
+set -e
 mkdir -p build/csharp
 TOOLS=$(ls -d build/csharp_project/packages/grpc.tools/*/tools/linux_x64/)
 PROTOC=$TOOLS/protoc
