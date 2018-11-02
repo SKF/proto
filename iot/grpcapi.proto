@@ -178,7 +178,7 @@ message DeleteNodeDataInput {
 
 // IngestNodesData messages
 message IngestNodesDataInput {
-  repeated IngestNodeDataInput node = 1;
+  repeated IngestNodeDataInput nodes = 1;
 }
 
 message IngestNodesDataOutput {
