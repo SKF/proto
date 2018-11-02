@@ -28,6 +28,8 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> __Marshaller_iotgrpcapi_GetTaskByLongIdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput> __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodesDataInput> __Marshaller_iotgrpcapi_IngestNodesDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodesDataInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodesDataOutput> __Marshaller_iotgrpcapi_IngestNodesDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodesDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataInput> __Marshaller_iotgrpcapi_IngestNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Marshaller_iotgrpcapi_IngestNodeDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput> __Marshaller_iotgrpcapi_IngestNodeDataStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser.ParseFrom);
@@ -134,6 +136,13 @@ namespace SKF.Enlight.API.IoT {
         "GetTasksModifiedSinceTimestamp",
         __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampInput,
         __Marshaller_iotgrpcapi_GetTasksModifiedSinceTimestampOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.IngestNodesDataInput, global::SKF.Enlight.API.IoT.IngestNodesDataOutput> __Method_IngestNodesData = new grpc::Method<global::SKF.Enlight.API.IoT.IngestNodesDataInput, global::SKF.Enlight.API.IoT.IngestNodesDataOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IngestNodesData",
+        __Marshaller_iotgrpcapi_IngestNodesDataInput,
+        __Marshaller_iotgrpcapi_IngestNodesDataOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Method_IngestNodeData = new grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput>(
         grpc::MethodType.Unary,
@@ -261,6 +270,11 @@ namespace SKF.Enlight.API.IoT {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput> GetTasksModifiedSinceTimestamp(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.IngestNodesDataOutput> IngestNodesData(global::SKF.Enlight.API.IoT.IngestNodesDataInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -530,6 +544,22 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTasksModifiedSinceTimestamp, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.IoT.IngestNodesDataOutput IngestNodesData(global::SKF.Enlight.API.IoT.IngestNodesDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestNodesData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.IngestNodesDataOutput IngestNodesData(global::SKF.Enlight.API.IoT.IngestNodesDataInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IngestNodesData, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.IngestNodesDataOutput> IngestNodesDataAsync(global::SKF.Enlight.API.IoT.IngestNodesDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestNodesDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.IngestNodesDataOutput> IngestNodesDataAsync(global::SKF.Enlight.API.IoT.IngestNodesDataInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IngestNodesData, null, options, request);
+      }
       public virtual global::SKF.Enlight.API.IoT.IngestNodeDataOutput IngestNodeData(global::SKF.Enlight.API.IoT.IngestNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return IngestNodeData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -667,6 +697,7 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_GetTaskByUUID, serviceImpl.GetTaskByUUID)
           .AddMethod(__Method_GetTaskByLongId, serviceImpl.GetTaskByLongId)
           .AddMethod(__Method_GetTasksModifiedSinceTimestamp, serviceImpl.GetTasksModifiedSinceTimestamp)
+          .AddMethod(__Method_IngestNodesData, serviceImpl.IngestNodesData)
           .AddMethod(__Method_IngestNodeData, serviceImpl.IngestNodeData)
           .AddMethod(__Method_IngestNodeDataStream, serviceImpl.IngestNodeDataStream)
           .AddMethod(__Method_GetLatestNodeData, serviceImpl.GetLatestNodeData)
