@@ -34,46 +34,47 @@ namespace SKF.Enlight.API.Hierarchy {
             "B2JlYXJpbmcYASABKAUSEQoJbHVicmljYW50GAIgASgJEg4KBnZvbHVtZRgD",
             "IAEoBRIkCgR1bml0GAQgASgOMhYuZ3JwY2FwaS5MdWJyaWNhbnRVbml0EhAK",
             "CGludGVydmFsGAUgASgFIiAKCUFzc2V0Tm9kZRITCgtjcml0aWNhbGl0eRgB",
-            "IAEoCSKIAwoETm9kZRIKCgJpZBgBIAEoCRINCgVsYWJlbBgCIAEoCRITCgtk",
+            "IAEoCSK9AwoETm9kZRIKCgJpZBgBIAEoCRINCgVsYWJlbBgCIAEoCRITCgtk",
             "ZXNjcmlwdGlvbhgDIAEoCRIMCgR0eXBlGAQgASgJEhMKC2NyaXRpY2FsaXR5",
             "GAUgASgJEg8KB3N1YlR5cGUYBiABKAkSHgoGb3JpZ2luGAcgASgLMg4uY29t",
             "bW9uLk9yaWdpbhIlCglhc3NldE5vZGUYCCABKAsyEi5ncnBjYXBpLkFzc2V0",
             "Tm9kZRIzChBtZWFzdXJlbWVudFBvaW50GAkgASgLMhkuZ3JwY2FwaS5NZWFz",
             "dXJlbWVudFBvaW50EjEKD2luc3BlY3Rpb25Qb2ludBgKIAEoCzIYLmdycGNh",
-            "cGkuSW5zcGVjdGlvblBvaW50EhwKEGNoaWxkT3JkZXJOdW1iZXIYCyABKANC",
-            "AhgBEigKCHBvc2l0aW9uGAwgASgLMhYuY29tbW9uLlByaW1pdGl2ZUludDY0",
-            "EiUKBHRhZ3MYDSABKAsyFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIiUKBU5v",
-            "ZGVzEhwKBW5vZGVzGAEgAygLMg0uZ3JwY2FwaS5Ob2RlIkYKDkdldEV2ZW50",
-            "c0lucHV0Eg0KBXNpbmNlGAEgASgDEiUKBWxpbWl0GAIgASgLMhYuY29tbW9u",
-            "LlByaW1pdGl2ZUludDMyIiEKD0dldEV2ZW50c091dHB1dBIOCgZldmVudHMY",
-            "ASABKAwidAoNU2F2ZU5vZGVJbnB1dBIOCgZ1c2VySWQYASABKAkSGwoEbm9k",
-            "ZRgDIAEoCzINLmdycGNhcGkuTm9kZRIQCghwYXJlbnRJZBgCIAEoCRIkCgxw",
-            "YXJlbnRPcmlnaW4YBCABKAsyDi5jb21tb24uT3JpZ2luIlEKD0RlbGV0ZU5v",
-            "ZGVJbnB1dBIOCgZ1c2VySWQYASABKAkSDgoGbm9kZUlkGAIgASgJEh4KBm9y",
-            "aWdpbhgDIAEoCzIOLmNvbW1vbi5PcmlnaW4iJAoRR2V0QW5jZXN0b3JzSW5w",
-            "dXQSDwoHbm9kZV9pZBgBIAEoCSI6ChJHZXRBbmNlc3RvcnNPdXRwdXQSJAoF",
-            "bm9kZXMYASADKAsyFS5ncnBjYXBpLkFuY2VzdG9yTm9kZSKPAQoMQW5jZXN0",
-            "b3JOb2RlEgoKAmlkGAEgASgJEh4KBm9yaWdpbhgCIAEoCzIOLmNvbW1vbi5P",
-            "cmlnaW4SDQoFbGFiZWwYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkSDAoE",
-            "dHlwZRgFIAEoCRIPCgdzdWJUeXBlGAYgASgJEhAKCHBhcmVudElkGAcgASgJ",
-            "Kj0KCVZhbHVlVHlwZRILCgdOVU1FUklDEAASEQoNU0lOR0xFX0NIT0lDRRAB",
-            "EhAKDE1VTFRJX0NIT0lDRRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAA",
-            "EgkKBU9VTkNFEAESBwoDQ00zEAIy5wQKCUhpZXJhcmNoeRIzCghEZWVwUGlu",
-            "ZxIMLmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMK",
-            "B0dldE5vZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5O",
-            "b2RlIgASNQoIR2V0Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4u",
-            "Z3JwY2FwaS5Ob2RlcyIAEjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJp",
-            "bWl0aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5v",
-            "ZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgAS",
-            "SQoMR2V0QW5jZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBob",
-            "LmdycGNhcGkuR2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0Tm9kZUlkQnlP",
-            "cmlnaW4SDi5jb21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1pdGl2ZVN0cmlu",
-            "ZyIAEj0KCFNhdmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlucHV0GhcuY29t",
-            "bW9uLlByaW1pdGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUSGC5ncnBjYXBp",
-            "LkRlbGV0ZU5vZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJR2V0RXZlbnRz",
-            "EhcuZ3JwY2FwaS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRz",
-            "T3V0cHV0IgBCHKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3Rv",
-            "Mw=="));
+            "cGkuSW5zcGVjdGlvblBvaW50EjMKEGx1YnJpY2F0aW9uUG9pbnQYDiABKAsy",
+            "GS5ncnBjYXBpLkx1YnJpY2F0aW9uUG9pbnQSHAoQY2hpbGRPcmRlck51bWJl",
+            "chgLIAEoA0ICGAESKAoIcG9zaXRpb24YDCABKAsyFi5jb21tb24uUHJpbWl0",
+            "aXZlSW50NjQSJQoEdGFncxgNIAEoCzIXLmNvbW1vbi5QcmltaXRpdmVTdHJp",
+            "bmciJQoFTm9kZXMSHAoFbm9kZXMYASADKAsyDS5ncnBjYXBpLk5vZGUiRgoO",
+            "R2V0RXZlbnRzSW5wdXQSDQoFc2luY2UYASABKAMSJQoFbGltaXQYAiABKAsy",
+            "Fi5jb21tb24uUHJpbWl0aXZlSW50MzIiIQoPR2V0RXZlbnRzT3V0cHV0Eg4K",
+            "BmV2ZW50cxgBIAEoDCJ0Cg1TYXZlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEo",
+            "CRIbCgRub2RlGAMgASgLMg0uZ3JwY2FwaS5Ob2RlEhAKCHBhcmVudElkGAIg",
+            "ASgJEiQKDHBhcmVudE9yaWdpbhgEIAEoCzIOLmNvbW1vbi5PcmlnaW4iUQoP",
+            "RGVsZXRlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEoCRIOCgZub2RlSWQYAiAB",
+            "KAkSHgoGb3JpZ2luGAMgASgLMg4uY29tbW9uLk9yaWdpbiIkChFHZXRBbmNl",
+            "c3RvcnNJbnB1dBIPCgdub2RlX2lkGAEgASgJIjoKEkdldEFuY2VzdG9yc091",
+            "dHB1dBIkCgVub2RlcxgBIAMoCzIVLmdycGNhcGkuQW5jZXN0b3JOb2RlIo8B",
+            "CgxBbmNlc3Rvck5vZGUSCgoCaWQYASABKAkSHgoGb3JpZ2luGAIgASgLMg4u",
+            "Y29tbW9uLk9yaWdpbhINCgVsYWJlbBgDIAEoCRITCgtkZXNjcmlwdGlvbhgE",
+            "IAEoCRIMCgR0eXBlGAUgASgJEg8KB3N1YlR5cGUYBiABKAkSEAoIcGFyZW50",
+            "SWQYByABKAkqPQoJVmFsdWVUeXBlEgsKB05VTUVSSUMQABIRCg1TSU5HTEVf",
+            "Q0hPSUNFEAESEAoMTVVMVElfQ0hPSUNFEAIqLQoNTHVicmljYW50VW5pdBII",
+            "CgRHUkFNEAASCQoFT1VOQ0UQARIHCgNDTTMQAjLnBAoJSGllcmFyY2h5EjMK",
+            "CERlZXBQaW5nEgwuY29tbW9uLlZvaWQaFy5jb21tb24uUHJpbWl0aXZlU3Ry",
+            "aW5nIgASMwoHR2V0Tm9kZRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDS5n",
+            "cnBjYXBpLk5vZGUiABI1CghHZXROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVT",
+            "dHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOgoNR2V0Q2hpbGROb2RlcxIXLmNv",
+            "bW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOQoNR2V0",
+            "UGFyZW50Tm9kZRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDS5ncnBjYXBp",
+            "Lk5vZGUiABJJCgxHZXRBbmNlc3RvcnMSGi5ncnBjYXBpLkdldEFuY2VzdG9y",
+            "c0lucHV0GhsuZ3JwY2FwaS5HZXRBbmNlc3RvcnNPdXRwdXQiABI+ChFHZXRO",
+            "b2RlSWRCeU9yaWdpbhIOLmNvbW1vbi5PcmlnaW4aFy5jb21tb24uUHJpbWl0",
+            "aXZlU3RyaW5nIgASPQoIU2F2ZU5vZGUSFi5ncnBjYXBpLlNhdmVOb2RlSW5w",
+            "dXQaFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASNgoKRGVsZXRlTm9kZRIY",
+            "LmdycGNhcGkuRGVsZXRlTm9kZUlucHV0GgwuY29tbW9uLlZvaWQiABJACglH",
+            "ZXRFdmVudHMSFy5ncnBjYXBpLkdldEV2ZW50c0lucHV0GhguZ3JwY2FwaS5H",
+            "ZXRFdmVudHNPdXRwdXQiAEIcqgIZU0tGLkVubGlnaHQuQVBJLkhpZXJhcmNo",
+            "eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
@@ -81,7 +82,7 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "OBSOLETEValueType", "ValueType", "NumericUnit", "Answers" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Bearing", "Lubricant", "Volume", "Unit", "Interval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "ChildOrderNumber", "Position", "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "ChildOrderNumber", "Position", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null),
@@ -965,6 +966,7 @@ namespace SKF.Enlight.API.Hierarchy {
       assetNode_ = other.assetNode_ != null ? other.assetNode_.Clone() : null;
       measurementPoint_ = other.measurementPoint_ != null ? other.measurementPoint_.Clone() : null;
       inspectionPoint_ = other.inspectionPoint_ != null ? other.inspectionPoint_.Clone() : null;
+      lubricationPoint_ = other.lubricationPoint_ != null ? other.lubricationPoint_.Clone() : null;
       childOrderNumber_ = other.childOrderNumber_;
       position_ = other.position_ != null ? other.position_.Clone() : null;
       tags_ = other.tags_ != null ? other.tags_.Clone() : null;
@@ -1086,6 +1088,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "lubricationPoint" field.</summary>
+    public const int LubricationPointFieldNumber = 14;
+    private global::SKF.Enlight.API.Hierarchy.LubricationPoint lubricationPoint_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Hierarchy.LubricationPoint LubricationPoint {
+      get { return lubricationPoint_; }
+      set {
+        lubricationPoint_ = value;
+      }
+    }
+
     /// <summary>Field number for the "childOrderNumber" field.</summary>
     public const int ChildOrderNumberFieldNumber = 11;
     private long childOrderNumber_;
@@ -1143,6 +1156,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (!object.Equals(AssetNode, other.AssetNode)) return false;
       if (!object.Equals(MeasurementPoint, other.MeasurementPoint)) return false;
       if (!object.Equals(InspectionPoint, other.InspectionPoint)) return false;
+      if (!object.Equals(LubricationPoint, other.LubricationPoint)) return false;
       if (ChildOrderNumber != other.ChildOrderNumber) return false;
       if (!object.Equals(Position, other.Position)) return false;
       if (!object.Equals(Tags, other.Tags)) return false;
@@ -1162,6 +1176,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (assetNode_ != null) hash ^= AssetNode.GetHashCode();
       if (measurementPoint_ != null) hash ^= MeasurementPoint.GetHashCode();
       if (inspectionPoint_ != null) hash ^= InspectionPoint.GetHashCode();
+      if (lubricationPoint_ != null) hash ^= LubricationPoint.GetHashCode();
       if (ChildOrderNumber != 0L) hash ^= ChildOrderNumber.GetHashCode();
       if (position_ != null) hash ^= Position.GetHashCode();
       if (tags_ != null) hash ^= Tags.GetHashCode();
@@ -1230,6 +1245,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(106);
         output.WriteMessage(Tags);
       }
+      if (lubricationPoint_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(LubricationPoint);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1267,6 +1286,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (inspectionPoint_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InspectionPoint);
+      }
+      if (lubricationPoint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LubricationPoint);
       }
       if (ChildOrderNumber != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ChildOrderNumber);
@@ -1329,6 +1351,12 @@ namespace SKF.Enlight.API.Hierarchy {
           inspectionPoint_ = new global::SKF.Enlight.API.Hierarchy.InspectionPoint();
         }
         InspectionPoint.MergeFrom(other.InspectionPoint);
+      }
+      if (other.lubricationPoint_ != null) {
+        if (lubricationPoint_ == null) {
+          lubricationPoint_ = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
+        }
+        LubricationPoint.MergeFrom(other.LubricationPoint);
       }
       if (other.ChildOrderNumber != 0L) {
         ChildOrderNumber = other.ChildOrderNumber;
@@ -1424,6 +1452,13 @@ namespace SKF.Enlight.API.Hierarchy {
               tags_ = new global::SKF.Enlight.API.Common.PrimitiveString();
             }
             input.ReadMessage(tags_);
+            break;
+          }
+          case 114: {
+            if (lubricationPoint_ == null) {
+              lubricationPoint_ = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
+            }
+            input.ReadMessage(lubricationPoint_);
             break;
           }
         }
