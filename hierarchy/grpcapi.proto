@@ -43,6 +43,20 @@ message InspectionPoint {
   repeated string answers = 3;
 }
 
+message LubricationPoint {
+  int32 bearing = 1;
+  string lubricant = 2;
+  int32 volume = 3;
+  LubricantUnit unit = 4;
+  int32 interval = 5; // days
+}
+
+enum LubricantUnit {
+  GRAM = 0;
+  OUNCE = 1;
+  CM3 = 2;
+}
+
 message AssetNode {
   string criticality = 1;
 }
