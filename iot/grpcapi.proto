@@ -190,7 +190,7 @@ message GetNodeEventLogInput {
 }
 
 message NodeEvent {
-  string node_id = 1;
+  string aggregate_id = 1;
   string seq_id = 2;
   int64 timestamp = 3;
   NodeEventType event_type = 4;
