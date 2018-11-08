@@ -16,8 +16,6 @@ service IAM {
   
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
-  
-  rpc AddResourceParent (AddResourceParentInput) returns (common.Void) {}
   rpc RemoveResourceParent (RemoveResourceParentInput) returns (common.Void) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
@@ -73,11 +71,6 @@ message RemoveResourceInput {
 }
 
 message AddResourceParentInput {
-  common.Origin resource = 1;
-  common.Origin parent = 1;
-}
-
-message RemoveResourceParentInput {
   common.Origin resource = 1;
   common.Origin parent = 1;
 }
