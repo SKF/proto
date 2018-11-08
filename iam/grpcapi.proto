@@ -10,8 +10,18 @@ service IAM {
   rpc CheckAuthentication (CheckAuthenticationInput) returns (User) {}
 
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
-
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
+
+  rpc IsAuthentication (IsAuthenticationInput) returns (common.Void) {}
+  
+  rpc AddResource (AddResourceInput) returns (common.Void) {}
+  rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+  
+  rpc AddResourceParent (AddResourceParentInput) returns (common.Void) {}
+  rpc RemoveResourceParent (RemoveResourceParentInput) returns (common.Void) {}
+
+  rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
+  rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
 }
 
 // Input & output messages
@@ -45,4 +55,78 @@ message User {
   string username = 5;
   string userStatus = 6;
   string userRoles = 7;
+}
+
+message IsAuthenticationInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
+}
+
+message AddResourceInput {
+  common.Origin resource = 1;
+  common.Origin parent = 2;
+}
+
+message RemoveResourceInput {
+  common.Origin resource = 1;
+}
+
+message AddResourceParentInput {
+  common.Origin resource = 1;
+  common.Origin parent = 1;
+}
+
+message RemoveResourceParentInput {
+  common.Origin resource = 1;
+  common.Origin parent = 1;
+}
+
+message AddUserPermissionInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
+}
+
+message RemoveUserPermissionInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
+}
+
+message IsAuthenticationInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
+}
+
+message AddResourceInput {
+  common.Origin resource = 1;
+  common.Origin parent = 2;
+}
+
+message RemoveResourceInput {
+  common.Origin resource = 1;
+}
+
+message AddResourceParentInput {
+  common.Origin resource = 1;
+  common.Origin parent = 1;
+}
+
+message RemoveResourceParentInput {
+  common.Origin resource = 1;
+  common.Origin parent = 1;
+}
+
+message AddUserPermissionInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
+}
+
+message RemoveUserPermissionInput {
+  string user_id = 1;
+  string action = 2;
+  common.Origin resource = 3;
 }
