@@ -4,10 +4,10 @@
 package pasapi
 
 import (
+	context "context"
 	fmt "fmt"
 	common "github.com/SKF/proto/common"
 	proto "github.com/golang/protobuf/proto"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
 )
