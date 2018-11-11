@@ -30,57 +30,56 @@ namespace SKF.Enlight.API.Hierarchy {
             "DQoFc2hhZnQYBSABKAkSEQoJc2hhZnRTaWRlGAYgASgJInoKD0luc3BlY3Rp",
             "b25Qb2ludBIaChJPQlNPTEVURV92YWx1ZVR5cGUYASABKAkSJQoJdmFsdWVU",
             "eXBlGAQgASgOMhIuZ3JwY2FwaS5WYWx1ZVR5cGUSEwoLbnVtZXJpY1VuaXQY",
-            "AiABKAkSDwoHYW5zd2VycxgDIAMoCSJ+ChBMdWJyaWNhdGlvblBvaW50Eg8K",
-            "B2JlYXJpbmcYASABKAUSEQoJbHVicmljYW50GAIgASgJEg4KBnZvbHVtZRgD",
-            "IAEoBRIkCgR1bml0GAQgASgOMhYuZ3JwY2FwaS5MdWJyaWNhbnRVbml0EhAK",
-            "CGludGVydmFsGAUgASgFIiAKCUFzc2V0Tm9kZRITCgtjcml0aWNhbGl0eRgB",
-            "IAEoCSK9AwoETm9kZRIKCgJpZBgBIAEoCRINCgVsYWJlbBgCIAEoCRITCgtk",
-            "ZXNjcmlwdGlvbhgDIAEoCRIMCgR0eXBlGAQgASgJEhMKC2NyaXRpY2FsaXR5",
-            "GAUgASgJEg8KB3N1YlR5cGUYBiABKAkSHgoGb3JpZ2luGAcgASgLMg4uY29t",
-            "bW9uLk9yaWdpbhIlCglhc3NldE5vZGUYCCABKAsyEi5ncnBjYXBpLkFzc2V0",
-            "Tm9kZRIzChBtZWFzdXJlbWVudFBvaW50GAkgASgLMhkuZ3JwY2FwaS5NZWFz",
-            "dXJlbWVudFBvaW50EjEKD2luc3BlY3Rpb25Qb2ludBgKIAEoCzIYLmdycGNh",
-            "cGkuSW5zcGVjdGlvblBvaW50EjMKEGx1YnJpY2F0aW9uUG9pbnQYDiABKAsy",
-            "GS5ncnBjYXBpLkx1YnJpY2F0aW9uUG9pbnQSHAoQY2hpbGRPcmRlck51bWJl",
-            "chgLIAEoA0ICGAESKAoIcG9zaXRpb24YDCABKAsyFi5jb21tb24uUHJpbWl0",
-            "aXZlSW50NjQSJQoEdGFncxgNIAEoCzIXLmNvbW1vbi5QcmltaXRpdmVTdHJp",
-            "bmciJQoFTm9kZXMSHAoFbm9kZXMYASADKAsyDS5ncnBjYXBpLk5vZGUiRgoO",
-            "R2V0RXZlbnRzSW5wdXQSDQoFc2luY2UYASABKAMSJQoFbGltaXQYAiABKAsy",
-            "Fi5jb21tb24uUHJpbWl0aXZlSW50MzIiIQoPR2V0RXZlbnRzT3V0cHV0Eg4K",
-            "BmV2ZW50cxgBIAEoDCJ0Cg1TYXZlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEo",
-            "CRIbCgRub2RlGAMgASgLMg0uZ3JwY2FwaS5Ob2RlEhAKCHBhcmVudElkGAIg",
-            "ASgJEiQKDHBhcmVudE9yaWdpbhgEIAEoCzIOLmNvbW1vbi5PcmlnaW4iUQoP",
-            "RGVsZXRlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEoCRIOCgZub2RlSWQYAiAB",
-            "KAkSHgoGb3JpZ2luGAMgASgLMg4uY29tbW9uLk9yaWdpbiIkChFHZXRBbmNl",
-            "c3RvcnNJbnB1dBIPCgdub2RlX2lkGAEgASgJIjoKEkdldEFuY2VzdG9yc091",
-            "dHB1dBIkCgVub2RlcxgBIAMoCzIVLmdycGNhcGkuQW5jZXN0b3JOb2RlIo8B",
-            "CgxBbmNlc3Rvck5vZGUSCgoCaWQYASABKAkSHgoGb3JpZ2luGAIgASgLMg4u",
-            "Y29tbW9uLk9yaWdpbhINCgVsYWJlbBgDIAEoCRITCgtkZXNjcmlwdGlvbhgE",
-            "IAEoCRIMCgR0eXBlGAUgASgJEg8KB3N1YlR5cGUYBiABKAkSEAoIcGFyZW50",
-            "SWQYByABKAkqPQoJVmFsdWVUeXBlEgsKB05VTUVSSUMQABIRCg1TSU5HTEVf",
-            "Q0hPSUNFEAESEAoMTVVMVElfQ0hPSUNFEAIqLQoNTHVicmljYW50VW5pdBII",
-            "CgRHUkFNEAASCQoFT1VOQ0UQARIHCgNDTTMQAjLnBAoJSGllcmFyY2h5EjMK",
-            "CERlZXBQaW5nEgwuY29tbW9uLlZvaWQaFy5jb21tb24uUHJpbWl0aXZlU3Ry",
-            "aW5nIgASMwoHR2V0Tm9kZRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDS5n",
-            "cnBjYXBpLk5vZGUiABI1CghHZXROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVT",
-            "dHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOgoNR2V0Q2hpbGROb2RlcxIXLmNv",
-            "bW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOQoNR2V0",
-            "UGFyZW50Tm9kZRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDS5ncnBjYXBp",
-            "Lk5vZGUiABJJCgxHZXRBbmNlc3RvcnMSGi5ncnBjYXBpLkdldEFuY2VzdG9y",
-            "c0lucHV0GhsuZ3JwY2FwaS5HZXRBbmNlc3RvcnNPdXRwdXQiABI+ChFHZXRO",
-            "b2RlSWRCeU9yaWdpbhIOLmNvbW1vbi5PcmlnaW4aFy5jb21tb24uUHJpbWl0",
-            "aXZlU3RyaW5nIgASPQoIU2F2ZU5vZGUSFi5ncnBjYXBpLlNhdmVOb2RlSW5w",
-            "dXQaFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASNgoKRGVsZXRlTm9kZRIY",
-            "LmdycGNhcGkuRGVsZXRlTm9kZUlucHV0GgwuY29tbW9uLlZvaWQiABJACglH",
-            "ZXRFdmVudHMSFy5ncnBjYXBpLkdldEV2ZW50c0lucHV0GhguZ3JwY2FwaS5H",
-            "ZXRFdmVudHNPdXRwdXQiAEIcqgIZU0tGLkVubGlnaHQuQVBJLkhpZXJhcmNo",
-            "eWIGcHJvdG8z"));
+            "AiABKAkSDwoHYW5zd2VycxgDIAMoCSJtChBMdWJyaWNhdGlvblBvaW50EhEK",
+            "CWx1YnJpY2FudBgBIAEoCRIOCgZ2b2x1bWUYAiABKAUSJAoEdW5pdBgDIAEo",
+            "DjIWLmdycGNhcGkuTHVicmljYW50VW5pdBIQCghpbnRlcnZhbBgEIAEoBSIg",
+            "CglBc3NldE5vZGUSEwoLY3JpdGljYWxpdHkYASABKAkivQMKBE5vZGUSCgoC",
+            "aWQYASABKAkSDQoFbGFiZWwYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkS",
+            "DAoEdHlwZRgEIAEoCRITCgtjcml0aWNhbGl0eRgFIAEoCRIPCgdzdWJUeXBl",
+            "GAYgASgJEh4KBm9yaWdpbhgHIAEoCzIOLmNvbW1vbi5PcmlnaW4SJQoJYXNz",
+            "ZXROb2RlGAggASgLMhIuZ3JwY2FwaS5Bc3NldE5vZGUSMwoQbWVhc3VyZW1l",
+            "bnRQb2ludBgJIAEoCzIZLmdycGNhcGkuTWVhc3VyZW1lbnRQb2ludBIxCg9p",
+            "bnNwZWN0aW9uUG9pbnQYCiABKAsyGC5ncnBjYXBpLkluc3BlY3Rpb25Qb2lu",
+            "dBIzChBsdWJyaWNhdGlvblBvaW50GA4gASgLMhkuZ3JwY2FwaS5MdWJyaWNh",
+            "dGlvblBvaW50EhwKEGNoaWxkT3JkZXJOdW1iZXIYCyABKANCAhgBEigKCHBv",
+            "c2l0aW9uGAwgASgLMhYuY29tbW9uLlByaW1pdGl2ZUludDY0EiUKBHRhZ3MY",
+            "DSABKAsyFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIiUKBU5vZGVzEhwKBW5v",
+            "ZGVzGAEgAygLMg0uZ3JwY2FwaS5Ob2RlIkYKDkdldEV2ZW50c0lucHV0Eg0K",
+            "BXNpbmNlGAEgASgDEiUKBWxpbWl0GAIgASgLMhYuY29tbW9uLlByaW1pdGl2",
+            "ZUludDMyIiEKD0dldEV2ZW50c091dHB1dBIOCgZldmVudHMYASABKAwidAoN",
+            "U2F2ZU5vZGVJbnB1dBIOCgZ1c2VySWQYASABKAkSGwoEbm9kZRgDIAEoCzIN",
+            "LmdycGNhcGkuTm9kZRIQCghwYXJlbnRJZBgCIAEoCRIkCgxwYXJlbnRPcmln",
+            "aW4YBCABKAsyDi5jb21tb24uT3JpZ2luIlEKD0RlbGV0ZU5vZGVJbnB1dBIO",
+            "CgZ1c2VySWQYASABKAkSDgoGbm9kZUlkGAIgASgJEh4KBm9yaWdpbhgDIAEo",
+            "CzIOLmNvbW1vbi5PcmlnaW4iJAoRR2V0QW5jZXN0b3JzSW5wdXQSDwoHbm9k",
+            "ZV9pZBgBIAEoCSI6ChJHZXRBbmNlc3RvcnNPdXRwdXQSJAoFbm9kZXMYASAD",
+            "KAsyFS5ncnBjYXBpLkFuY2VzdG9yTm9kZSKPAQoMQW5jZXN0b3JOb2RlEgoK",
+            "AmlkGAEgASgJEh4KBm9yaWdpbhgCIAEoCzIOLmNvbW1vbi5PcmlnaW4SDQoF",
+            "bGFiZWwYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkSDAoEdHlwZRgFIAEo",
+            "CRIPCgdzdWJUeXBlGAYgASgJEhAKCHBhcmVudElkGAcgASgJKj0KCVZhbHVl",
+            "VHlwZRILCgdOVU1FUklDEAASEQoNU0lOR0xFX0NIT0lDRRABEhAKDE1VTFRJ",
+            "X0NIT0lDRRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAAEgkKBU9VTkNF",
+            "EAESBwoDQ00zEAIy5wQKCUhpZXJhcmNoeRIzCghEZWVwUGluZxIMLmNvbW1v",
+            "bi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMKB0dldE5vZGUS",
+            "Fy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASNQoI",
+            "R2V0Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3JwY2FwaS5O",
+            "b2RlcyIAEjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3Ry",
+            "aW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5vZGUSFy5jb21t",
+            "b24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASSQoMR2V0QW5j",
+            "ZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBobLmdycGNhcGku",
+            "R2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4SDi5j",
+            "b21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEj0KCFNh",
+            "dmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlucHV0GhcuY29tbW9uLlByaW1p",
+            "dGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0ZU5v",
+            "ZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJR2V0RXZlbnRzEhcuZ3JwY2Fw",
+            "aS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0IgBC",
+            "HKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "OBSOLETEValueType", "ValueType", "NumericUnit", "Answers" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Bearing", "Lubricant", "Volume", "Unit", "Interval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "ChildOrderNumber", "Position", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
@@ -583,7 +582,6 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LubricationPoint(LubricationPoint other) : this() {
-      bearing_ = other.bearing_;
       lubricant_ = other.lubricant_;
       volume_ = other.volume_;
       unit_ = other.unit_;
@@ -596,19 +594,8 @@ namespace SKF.Enlight.API.Hierarchy {
       return new LubricationPoint(this);
     }
 
-    /// <summary>Field number for the "bearing" field.</summary>
-    public const int BearingFieldNumber = 1;
-    private int bearing_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Bearing {
-      get { return bearing_; }
-      set {
-        bearing_ = value;
-      }
-    }
-
     /// <summary>Field number for the "lubricant" field.</summary>
-    public const int LubricantFieldNumber = 2;
+    public const int LubricantFieldNumber = 1;
     private string lubricant_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Lubricant {
@@ -619,7 +606,7 @@ namespace SKF.Enlight.API.Hierarchy {
     }
 
     /// <summary>Field number for the "volume" field.</summary>
-    public const int VolumeFieldNumber = 3;
+    public const int VolumeFieldNumber = 2;
     private int volume_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Volume {
@@ -630,7 +617,7 @@ namespace SKF.Enlight.API.Hierarchy {
     }
 
     /// <summary>Field number for the "unit" field.</summary>
-    public const int UnitFieldNumber = 4;
+    public const int UnitFieldNumber = 3;
     private global::SKF.Enlight.API.Hierarchy.LubricantUnit unit_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Hierarchy.LubricantUnit Unit {
@@ -641,7 +628,7 @@ namespace SKF.Enlight.API.Hierarchy {
     }
 
     /// <summary>Field number for the "interval" field.</summary>
-    public const int IntervalFieldNumber = 5;
+    public const int IntervalFieldNumber = 4;
     private int interval_;
     /// <summary>
     /// days
@@ -667,7 +654,6 @@ namespace SKF.Enlight.API.Hierarchy {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Bearing != other.Bearing) return false;
       if (Lubricant != other.Lubricant) return false;
       if (Volume != other.Volume) return false;
       if (Unit != other.Unit) return false;
@@ -678,7 +664,6 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Bearing != 0) hash ^= Bearing.GetHashCode();
       if (Lubricant.Length != 0) hash ^= Lubricant.GetHashCode();
       if (Volume != 0) hash ^= Volume.GetHashCode();
       if (Unit != 0) hash ^= Unit.GetHashCode();
@@ -696,24 +681,20 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Bearing != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Bearing);
-      }
       if (Lubricant.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Lubricant);
       }
       if (Volume != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteInt32(Volume);
       }
       if (Unit != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Unit);
       }
       if (Interval != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt32(Interval);
       }
       if (_unknownFields != null) {
@@ -724,9 +705,6 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Bearing != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Bearing);
-      }
       if (Lubricant.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Lubricant);
       }
@@ -749,9 +727,6 @@ namespace SKF.Enlight.API.Hierarchy {
     public void MergeFrom(LubricationPoint other) {
       if (other == null) {
         return;
-      }
-      if (other.Bearing != 0) {
-        Bearing = other.Bearing;
       }
       if (other.Lubricant.Length != 0) {
         Lubricant = other.Lubricant;
@@ -776,23 +751,19 @@ namespace SKF.Enlight.API.Hierarchy {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Bearing = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             Lubricant = input.ReadString();
             break;
           }
-          case 24: {
+          case 16: {
             Volume = input.ReadInt32();
             break;
           }
-          case 32: {
+          case 24: {
             unit_ = (global::SKF.Enlight.API.Hierarchy.LubricantUnit) input.ReadEnum();
             break;
           }
-          case 40: {
+          case 32: {
             Interval = input.ReadInt32();
             break;
           }
