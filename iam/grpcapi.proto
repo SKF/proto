@@ -12,7 +12,7 @@ service IAM {
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
 
-  rpc HasPermission (HasPermissionInput) returns (common.Void) {}
+  rpc IsAuthorized (IsAuthorizedInput) returns (common.Void) {}
   
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
@@ -54,7 +54,7 @@ message User {
   string userRoles = 7;
 }
 
-message HasPermissionInput {
+message IsAuthorizedInput {
   string user_id = 1;
   string action = 2;
   common.Origin resource = 3;
