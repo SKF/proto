@@ -44,11 +44,10 @@ message InspectionPoint {
 }
 
 message LubricationPoint {
-  int32 bearing = 1;
-  string lubricant = 2;
-  int32 volume = 3;
-  LubricantUnit unit = 4;
-  int32 interval = 5; // days
+  string lubricant = 1;
+  int32 volume = 2;
+  LubricantUnit unit = 3;
+  int32 interval = 4; // days
 }
 
 enum LubricantUnit {
