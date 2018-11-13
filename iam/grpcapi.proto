@@ -71,7 +71,7 @@ message RemoveResourceInput {
 
 message AddResourceParentInput {
   common.Origin resource = 1;
-  common.Origin parent = 1;
+  common.Origin parent = 2;
 }
 
 message AddUserPermissionInput {
