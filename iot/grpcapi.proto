@@ -37,6 +37,9 @@ service IoT {
   rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
   rpc GetMedia (GetMediaInput) returns (GetMediaOutput) {}
+  rpc GetFileURL (GetFileURLInput) returns (GetFileURLOutput) {}
+  rpc PutFileURL (PutFileURLInput) returns (PutFileURLOutput) {}
+
 }
 
 enum NodeEventType {
@@ -248,6 +251,24 @@ message GetNodeDataStreamOutput {
 message GetMediaInput {
   string node_id = 1;
   string media_id = 2;
+}
+
+message PutFileURLInput {
+  string media_id = 1;
+  MediaType type = 2;
+  string contentMD5 = 3;
+}
+
+message PutFileURLOutput {
+  string url = 1;
+}
+
+message GetFileURLInput {
+  string media_id = 1;
+}
+
+message GetFileURLOutput {
+  string url = 1;
 }
 
 message GetMediaOutput {
