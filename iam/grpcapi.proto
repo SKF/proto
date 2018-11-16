@@ -14,11 +14,11 @@ service IAM {
 
   rpc IsAuthorized (IsAuthorizedInput) returns (common.Void) {}
   
-  rpc AddOrigin (AddOriginInput) returns (common.Void) {}
-  rpc RemoveOrigin (RemoveOriginInput) returns (common.Void) {}
+  rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
 
-  rpc AddOriginParent (AddOriginParentInput) returns (common.Void) {}
-  rpc RemoveOriginParent (RemoveOriginParentInput) returns (common.Void) {}
+  rpc AddAuthorizationResourceParent (AddAuthorizationResourceParentInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResourceParent (RemoveAuthorizationResourceParentInput) returns (common.Void) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
@@ -63,20 +63,20 @@ message IsAuthorizedInput {
   common.Origin origin = 3;
 }
 
-message AddOriginInput {
+message AddAuthorizationResourceInput {
   common.Origin origin = 1;
 }
 
-message RemoveOriginInput {
+message RemoveAuthorizationResourceInput {
   common.Origin origin = 1;
 }
 
-message AddOriginParentInput {
+message AddAuthorizationResourceParentInput {
   common.Origin origin = 1;
   common.Origin parent = 2;
 }
 
-message RemoveOriginParentInput {
+message RemoveAuthorizationResourceParentInput {
   common.Origin origin = 1;
   common.Origin parent = 2;
 }
