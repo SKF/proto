@@ -36,35 +36,39 @@ namespace SKF.Enlight.API.IAM {
             "CRIQCgh1c2VybmFtZRgFIAEoCRISCgp1c2VyU3RhdHVzGAYgASgJEhEKCXVz",
             "ZXJSb2xlcxgHIAEoCSJWChFJc0F1dGhvcml6ZWRJbnB1dBIPCgd1c2VyX2lk",
             "GAEgASgJEg4KBmFjdGlvbhgCIAEoCRIgCghyZXNvdXJjZRgDIAEoCzIOLmNv",
-            "bW1vbi5PcmlnaW4iNAoQQWRkUmVzb3VyY2VJbnB1dBIgCghyZXNvdXJjZRgB",
-            "IAEoCzIOLmNvbW1vbi5PcmlnaW4iNwoTUmVtb3ZlUmVzb3VyY2VJbnB1dBIg",
-            "CghyZXNvdXJjZRgBIAEoCzIOLmNvbW1vbi5PcmlnaW4iWgoWQWRkUmVzb3Vy",
-            "Y2VQYXJlbnRJbnB1dBIgCghyZXNvdXJjZRgBIAEoCzIOLmNvbW1vbi5Pcmln",
-            "aW4SHgoGcGFyZW50GAIgASgLMg4uY29tbW9uLk9yaWdpbiJdChlSZW1vdmVS",
-            "ZXNvdXJjZVBhcmVudElucHV0EiAKCHJlc291cmNlGAEgASgLMg4uY29tbW9u",
-            "Lk9yaWdpbhIeCgZwYXJlbnQYAiABKAsyDi5jb21tb24uT3JpZ2luIlMKEEFk",
-            "ZFVzZXJSb2xlSW5wdXQSDwoHdXNlcl9pZBgBIAEoCRIMCgRyb2xlGAIgASgJ",
-            "EiAKCHJlc291cmNlGAMgASgLMg4uY29tbW9uLk9yaWdpbiJWChNSZW1vdmVV",
-            "c2VyUm9sZUlucHV0Eg8KB3VzZXJfaWQYASABKAkSDAoEcm9sZRgCIAEoCRIg",
-            "CghyZXNvdXJjZRgDIAEoCzIOLmNvbW1vbi5PcmlnaW4ygQYKA0lBTRIzCghE",
-            "ZWVwUGluZxIMLmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmlu",
-            "ZyIAEkkKE0NoZWNrQXV0aGVudGljYXRpb24SIS5ncnBjYXBpLkNoZWNrQXV0",
-            "aGVudGljYXRpb25JbnB1dBoNLmdycGNhcGkuVXNlciIAEmQKFUdldEhpZXJh",
-            "cmNoeVJlbGF0aW9ucxIjLmdycGNhcGkuR2V0SGllcmFyY2h5UmVsYXRpb25z",
-            "SW5wdXQaJC5ncnBjYXBpLkdldEhpZXJhcmNoeVJlbGF0aW9uc091dHB1dCIA",
-            "ElIKD0dldEV2ZW50UmVjb3JkcxIdLmdycGNhcGkuR2V0RXZlbnRSZWNvcmRz",
-            "SW5wdXQaHi5ncnBjYXBpLkdldEV2ZW50UmVjb3Jkc091dHB1dCIAEjoKDElz",
-            "QXV0aG9yaXplZBIaLmdycGNhcGkuSXNBdXRob3JpemVkSW5wdXQaDC5jb21t",
-            "b24uVm9pZCIAEjgKC0FkZFJlc291cmNlEhkuZ3JwY2FwaS5BZGRSZXNvdXJj",
-            "ZUlucHV0GgwuY29tbW9uLlZvaWQiABI+Cg5SZW1vdmVSZXNvdXJjZRIcLmdy",
-            "cGNhcGkuUmVtb3ZlUmVzb3VyY2VJbnB1dBoMLmNvbW1vbi5Wb2lkIgASRAoR",
-            "QWRkUmVzb3VyY2VQYXJlbnQSHy5ncnBjYXBpLkFkZFJlc291cmNlUGFyZW50",
-            "SW5wdXQaDC5jb21tb24uVm9pZCIAEkoKFFJlbW92ZVJlc291cmNlUGFyZW50",
-            "EiIuZ3JwY2FwaS5SZW1vdmVSZXNvdXJjZVBhcmVudElucHV0GgwuY29tbW9u",
-            "LlZvaWQiABI4CgtBZGRVc2VyUm9sZRIZLmdycGNhcGkuQWRkVXNlclJvbGVJ",
-            "bnB1dBoMLmNvbW1vbi5Wb2lkIgASPgoOUmVtb3ZlVXNlclJvbGUSHC5ncnBj",
-            "YXBpLlJlbW92ZVVzZXJSb2xlSW5wdXQaDC5jb21tb24uVm9pZCIAQhaqAhNT",
-            "S0YuRW5saWdodC5BUEkuSUFNYgZwcm90bzM="));
+            "bW1vbi5PcmlnaW4iQQodQWRkQXV0aG9yaXphdGlvblJlc291cmNlSW5wdXQS",
+            "IAoIcmVzb3VyY2UYASABKAsyDi5jb21tb24uT3JpZ2luIkQKIFJlbW92ZUF1",
+            "dGhvcml6YXRpb25SZXNvdXJjZUlucHV0EiAKCHJlc291cmNlGAEgASgLMg4u",
+            "Y29tbW9uLk9yaWdpbiJnCiNBZGRBdXRob3JpemF0aW9uUmVzb3VyY2VQYXJl",
+            "bnRJbnB1dBIgCghyZXNvdXJjZRgBIAEoCzIOLmNvbW1vbi5PcmlnaW4SHgoG",
+            "cGFyZW50GAIgASgLMg4uY29tbW9uLk9yaWdpbiJqCiZSZW1vdmVBdXRob3Jp",
+            "emF0aW9uUmVzb3VyY2VQYXJlbnRJbnB1dBIgCghyZXNvdXJjZRgBIAEoCzIO",
+            "LmNvbW1vbi5PcmlnaW4SHgoGcGFyZW50GAIgASgLMg4uY29tbW9uLk9yaWdp",
+            "biJZChZBZGRVc2VyUGVybWlzc2lvbklucHV0Eg8KB3VzZXJfaWQYASABKAkS",
+            "DAoEcm9sZRgCIAEoCRIgCghyZXNvdXJjZRgDIAEoCzIOLmNvbW1vbi5Pcmln",
+            "aW4iXAoZUmVtb3ZlVXNlclBlcm1pc3Npb25JbnB1dBIPCgd1c2VyX2lkGAEg",
+            "ASgJEgwKBHJvbGUYAiABKAkSIAoIcmVzb3VyY2UYAyABKAsyDi5jb21tb24u",
+            "T3JpZ2luMoEHCgNJQU0SMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNv",
+            "bW1vbi5QcmltaXRpdmVTdHJpbmciABJJChNDaGVja0F1dGhlbnRpY2F0aW9u",
+            "EiEuZ3JwY2FwaS5DaGVja0F1dGhlbnRpY2F0aW9uSW5wdXQaDS5ncnBjYXBp",
+            "LlVzZXIiABJkChVHZXRIaWVyYXJjaHlSZWxhdGlvbnMSIy5ncnBjYXBpLkdl",
+            "dEhpZXJhcmNoeVJlbGF0aW9uc0lucHV0GiQuZ3JwY2FwaS5HZXRIaWVyYXJj",
+            "aHlSZWxhdGlvbnNPdXRwdXQiABJSCg9HZXRFdmVudFJlY29yZHMSHS5ncnBj",
+            "YXBpLkdldEV2ZW50UmVjb3Jkc0lucHV0Gh4uZ3JwY2FwaS5HZXRFdmVudFJl",
+            "Y29yZHNPdXRwdXQiABI6CgxJc0F1dGhvcml6ZWQSGi5ncnBjYXBpLklzQXV0",
+            "aG9yaXplZElucHV0GgwuY29tbW9uLlZvaWQiABJSChhBZGRBdXRob3JpemF0",
+            "aW9uUmVzb3VyY2USJi5ncnBjYXBpLkFkZEF1dGhvcml6YXRpb25SZXNvdXJj",
+            "ZUlucHV0GgwuY29tbW9uLlZvaWQiABJYChtSZW1vdmVBdXRob3JpemF0aW9u",
+            "UmVzb3VyY2USKS5ncnBjYXBpLlJlbW92ZUF1dGhvcml6YXRpb25SZXNvdXJj",
+            "ZUlucHV0GgwuY29tbW9uLlZvaWQiABJeCh5BZGRBdXRob3JpemF0aW9uUmVz",
+            "b3VyY2VQYXJlbnQSLC5ncnBjYXBpLkFkZEF1dGhvcml6YXRpb25SZXNvdXJj",
+            "ZVBhcmVudElucHV0GgwuY29tbW9uLlZvaWQiABJkCiFSZW1vdmVBdXRob3Jp",
+            "emF0aW9uUmVzb3VyY2VQYXJlbnQSLy5ncnBjYXBpLlJlbW92ZUF1dGhvcml6",
+            "YXRpb25SZXNvdXJjZVBhcmVudElucHV0GgwuY29tbW9uLlZvaWQiABJEChFB",
+            "ZGRVc2VyUGVybWlzc2lvbhIfLmdycGNhcGkuQWRkVXNlclBlcm1pc3Npb25J",
+            "bnB1dBoMLmNvbW1vbi5Wb2lkIgASSgoUUmVtb3ZlVXNlclBlcm1pc3Npb24S",
+            "Ii5ncnBjYXBpLlJlbW92ZVVzZXJQZXJtaXNzaW9uSW5wdXQaDC5jb21tb24u",
+            "Vm9pZCIAQhaqAhNTS0YuRW5saWdodC5BUEkuSUFNYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,12 +79,12 @@ namespace SKF.Enlight.API.IAM {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetEventRecordsOutput), global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser, new[]{ "Records" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.User), global::SKF.Enlight.API.IAM.User.Parser, new[]{ "Id", "Email", "EulaAgreedDate", "ValidEula", "Username", "UserStatus", "UserRoles" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.IsAuthorizedInput), global::SKF.Enlight.API.IAM.IsAuthorizedInput.Parser, new[]{ "UserId", "Action", "Resource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddResourceInput), global::SKF.Enlight.API.IAM.AddResourceInput.Parser, new[]{ "Resource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveResourceInput), global::SKF.Enlight.API.IAM.RemoveResourceInput.Parser, new[]{ "Resource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddResourceParentInput), global::SKF.Enlight.API.IAM.AddResourceParentInput.Parser, new[]{ "Resource", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveResourceParentInput), global::SKF.Enlight.API.IAM.RemoveResourceParentInput.Parser, new[]{ "Resource", "Parent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddUserRoleInput), global::SKF.Enlight.API.IAM.AddUserRoleInput.Parser, new[]{ "UserId", "Role", "Resource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveUserRoleInput), global::SKF.Enlight.API.IAM.RemoveUserRoleInput.Parser, new[]{ "UserId", "Role", "Resource" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddAuthorizationResourceInput), global::SKF.Enlight.API.IAM.AddAuthorizationResourceInput.Parser, new[]{ "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceInput), global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceInput.Parser, new[]{ "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddAuthorizationResourceParentInput), global::SKF.Enlight.API.IAM.AddAuthorizationResourceParentInput.Parser, new[]{ "Resource", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceParentInput), global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceParentInput.Parser, new[]{ "Resource", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.AddUserPermissionInput), global::SKF.Enlight.API.IAM.AddUserPermissionInput.Parser, new[]{ "UserId", "Role", "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput), global::SKF.Enlight.API.IAM.RemoveUserPermissionInput.Parser, new[]{ "UserId", "Role", "Resource" }, null, null, null)
           }));
     }
     #endregion
@@ -1277,11 +1281,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class AddResourceInput : pb::IMessage<AddResourceInput> {
-    private static readonly pb::MessageParser<AddResourceInput> _parser = new pb::MessageParser<AddResourceInput>(() => new AddResourceInput());
+  public sealed partial class AddAuthorizationResourceInput : pb::IMessage<AddAuthorizationResourceInput> {
+    private static readonly pb::MessageParser<AddAuthorizationResourceInput> _parser = new pb::MessageParser<AddAuthorizationResourceInput>(() => new AddAuthorizationResourceInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AddResourceInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<AddAuthorizationResourceInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1294,21 +1298,21 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceInput() {
+    public AddAuthorizationResourceInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceInput(AddResourceInput other) : this() {
+    public AddAuthorizationResourceInput(AddAuthorizationResourceInput other) : this() {
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceInput Clone() {
-      return new AddResourceInput(this);
+    public AddAuthorizationResourceInput Clone() {
+      return new AddAuthorizationResourceInput(this);
     }
 
     /// <summary>Field number for the "resource" field.</summary>
@@ -1324,11 +1328,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AddResourceInput);
+      return Equals(other as AddAuthorizationResourceInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AddResourceInput other) {
+    public bool Equals(AddAuthorizationResourceInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1378,7 +1382,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AddResourceInput other) {
+    public void MergeFrom(AddAuthorizationResourceInput other) {
       if (other == null) {
         return;
       }
@@ -1412,11 +1416,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class RemoveResourceInput : pb::IMessage<RemoveResourceInput> {
-    private static readonly pb::MessageParser<RemoveResourceInput> _parser = new pb::MessageParser<RemoveResourceInput>(() => new RemoveResourceInput());
+  public sealed partial class RemoveAuthorizationResourceInput : pb::IMessage<RemoveAuthorizationResourceInput> {
+    private static readonly pb::MessageParser<RemoveAuthorizationResourceInput> _parser = new pb::MessageParser<RemoveAuthorizationResourceInput>(() => new RemoveAuthorizationResourceInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RemoveResourceInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<RemoveAuthorizationResourceInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1429,21 +1433,21 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceInput() {
+    public RemoveAuthorizationResourceInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceInput(RemoveResourceInput other) : this() {
+    public RemoveAuthorizationResourceInput(RemoveAuthorizationResourceInput other) : this() {
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceInput Clone() {
-      return new RemoveResourceInput(this);
+    public RemoveAuthorizationResourceInput Clone() {
+      return new RemoveAuthorizationResourceInput(this);
     }
 
     /// <summary>Field number for the "resource" field.</summary>
@@ -1459,11 +1463,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as RemoveResourceInput);
+      return Equals(other as RemoveAuthorizationResourceInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RemoveResourceInput other) {
+    public bool Equals(RemoveAuthorizationResourceInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1513,7 +1517,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RemoveResourceInput other) {
+    public void MergeFrom(RemoveAuthorizationResourceInput other) {
       if (other == null) {
         return;
       }
@@ -1547,11 +1551,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class AddResourceParentInput : pb::IMessage<AddResourceParentInput> {
-    private static readonly pb::MessageParser<AddResourceParentInput> _parser = new pb::MessageParser<AddResourceParentInput>(() => new AddResourceParentInput());
+  public sealed partial class AddAuthorizationResourceParentInput : pb::IMessage<AddAuthorizationResourceParentInput> {
+    private static readonly pb::MessageParser<AddAuthorizationResourceParentInput> _parser = new pb::MessageParser<AddAuthorizationResourceParentInput>(() => new AddAuthorizationResourceParentInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AddResourceParentInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<AddAuthorizationResourceParentInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1564,22 +1568,22 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceParentInput() {
+    public AddAuthorizationResourceParentInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceParentInput(AddResourceParentInput other) : this() {
+    public AddAuthorizationResourceParentInput(AddAuthorizationResourceParentInput other) : this() {
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       parent_ = other.parent_ != null ? other.parent_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddResourceParentInput Clone() {
-      return new AddResourceParentInput(this);
+    public AddAuthorizationResourceParentInput Clone() {
+      return new AddAuthorizationResourceParentInput(this);
     }
 
     /// <summary>Field number for the "resource" field.</summary>
@@ -1606,11 +1610,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AddResourceParentInput);
+      return Equals(other as AddAuthorizationResourceParentInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AddResourceParentInput other) {
+    public bool Equals(AddAuthorizationResourceParentInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1669,7 +1673,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AddResourceParentInput other) {
+    public void MergeFrom(AddAuthorizationResourceParentInput other) {
       if (other == null) {
         return;
       }
@@ -1716,11 +1720,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class RemoveResourceParentInput : pb::IMessage<RemoveResourceParentInput> {
-    private static readonly pb::MessageParser<RemoveResourceParentInput> _parser = new pb::MessageParser<RemoveResourceParentInput>(() => new RemoveResourceParentInput());
+  public sealed partial class RemoveAuthorizationResourceParentInput : pb::IMessage<RemoveAuthorizationResourceParentInput> {
+    private static readonly pb::MessageParser<RemoveAuthorizationResourceParentInput> _parser = new pb::MessageParser<RemoveAuthorizationResourceParentInput>(() => new RemoveAuthorizationResourceParentInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RemoveResourceParentInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<RemoveAuthorizationResourceParentInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1733,22 +1737,22 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceParentInput() {
+    public RemoveAuthorizationResourceParentInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceParentInput(RemoveResourceParentInput other) : this() {
+    public RemoveAuthorizationResourceParentInput(RemoveAuthorizationResourceParentInput other) : this() {
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       parent_ = other.parent_ != null ? other.parent_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveResourceParentInput Clone() {
-      return new RemoveResourceParentInput(this);
+    public RemoveAuthorizationResourceParentInput Clone() {
+      return new RemoveAuthorizationResourceParentInput(this);
     }
 
     /// <summary>Field number for the "resource" field.</summary>
@@ -1775,11 +1779,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as RemoveResourceParentInput);
+      return Equals(other as RemoveAuthorizationResourceParentInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RemoveResourceParentInput other) {
+    public bool Equals(RemoveAuthorizationResourceParentInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1838,7 +1842,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RemoveResourceParentInput other) {
+    public void MergeFrom(RemoveAuthorizationResourceParentInput other) {
       if (other == null) {
         return;
       }
@@ -1885,11 +1889,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class AddUserRoleInput : pb::IMessage<AddUserRoleInput> {
-    private static readonly pb::MessageParser<AddUserRoleInput> _parser = new pb::MessageParser<AddUserRoleInput>(() => new AddUserRoleInput());
+  public sealed partial class AddUserPermissionInput : pb::IMessage<AddUserPermissionInput> {
+    private static readonly pb::MessageParser<AddUserPermissionInput> _parser = new pb::MessageParser<AddUserPermissionInput>(() => new AddUserPermissionInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AddUserRoleInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<AddUserPermissionInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1902,14 +1906,14 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddUserRoleInput() {
+    public AddUserPermissionInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddUserRoleInput(AddUserRoleInput other) : this() {
+    public AddUserPermissionInput(AddUserPermissionInput other) : this() {
       userId_ = other.userId_;
       role_ = other.role_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -1917,8 +1921,8 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddUserRoleInput Clone() {
-      return new AddUserRoleInput(this);
+    public AddUserPermissionInput Clone() {
+      return new AddUserPermissionInput(this);
     }
 
     /// <summary>Field number for the "user_id" field.</summary>
@@ -1956,11 +1960,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AddUserRoleInput);
+      return Equals(other as AddUserPermissionInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AddUserRoleInput other) {
+    public bool Equals(AddUserPermissionInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2028,7 +2032,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AddUserRoleInput other) {
+    public void MergeFrom(AddUserPermissionInput other) {
       if (other == null) {
         return;
       }
@@ -2076,11 +2080,11 @@ namespace SKF.Enlight.API.IAM {
 
   }
 
-  public sealed partial class RemoveUserRoleInput : pb::IMessage<RemoveUserRoleInput> {
-    private static readonly pb::MessageParser<RemoveUserRoleInput> _parser = new pb::MessageParser<RemoveUserRoleInput>(() => new RemoveUserRoleInput());
+  public sealed partial class RemoveUserPermissionInput : pb::IMessage<RemoveUserPermissionInput> {
+    private static readonly pb::MessageParser<RemoveUserPermissionInput> _parser = new pb::MessageParser<RemoveUserPermissionInput>(() => new RemoveUserPermissionInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RemoveUserRoleInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<RemoveUserPermissionInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2093,14 +2097,14 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveUserRoleInput() {
+    public RemoveUserPermissionInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveUserRoleInput(RemoveUserRoleInput other) : this() {
+    public RemoveUserPermissionInput(RemoveUserPermissionInput other) : this() {
       userId_ = other.userId_;
       role_ = other.role_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -2108,8 +2112,8 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RemoveUserRoleInput Clone() {
-      return new RemoveUserRoleInput(this);
+    public RemoveUserPermissionInput Clone() {
+      return new RemoveUserPermissionInput(this);
     }
 
     /// <summary>Field number for the "user_id" field.</summary>
@@ -2147,11 +2151,11 @@ namespace SKF.Enlight.API.IAM {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as RemoveUserRoleInput);
+      return Equals(other as RemoveUserPermissionInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RemoveUserRoleInput other) {
+    public bool Equals(RemoveUserPermissionInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2219,7 +2223,7 @@ namespace SKF.Enlight.API.IAM {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RemoveUserRoleInput other) {
+    public void MergeFrom(RemoveUserPermissionInput other) {
       if (other == null) {
         return;
       }
