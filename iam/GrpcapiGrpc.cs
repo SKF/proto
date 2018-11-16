@@ -23,8 +23,10 @@ namespace SKF.Enlight.API.IAM {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.IsAuthorizedInput> __Marshaller_grpcapi_IsAuthorizedInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.IsAuthorizedInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.AddResourceInput> __Marshaller_grpcapi_AddResourceInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.AddResourceInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.RemoveResourceInput> __Marshaller_grpcapi_RemoveResourceInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.RemoveResourceInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.AddUserPermissionInput> __Marshaller_grpcapi_AddUserPermissionInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.AddUserPermissionInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.RemoveUserPermissionInput> __Marshaller_grpcapi_RemoveUserPermissionInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.RemoveUserPermissionInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.AddResourceParentInput> __Marshaller_grpcapi_AddResourceParentInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.AddResourceParentInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.RemoveResourceParentInput> __Marshaller_grpcapi_RemoveResourceParentInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.RemoveResourceParentInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.AddUserRoleInput> __Marshaller_grpcapi_AddUserRoleInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.AddUserRoleInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.RemoveUserRoleInput> __Marshaller_grpcapi_RemoveUserRoleInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.RemoveUserRoleInput.Parser.ParseFrom);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
@@ -75,18 +77,32 @@ namespace SKF.Enlight.API.IAM {
         __Marshaller_grpcapi_RemoveResourceInput,
         __Marshaller_common_Void);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IAM.AddUserPermissionInput, global::SKF.Enlight.API.Common.Void> __Method_AddUserPermission = new grpc::Method<global::SKF.Enlight.API.IAM.AddUserPermissionInput, global::SKF.Enlight.API.Common.Void>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.AddResourceParentInput, global::SKF.Enlight.API.Common.Void> __Method_AddResourceParent = new grpc::Method<global::SKF.Enlight.API.IAM.AddResourceParentInput, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "AddUserPermission",
-        __Marshaller_grpcapi_AddUserPermissionInput,
+        "AddResourceParent",
+        __Marshaller_grpcapi_AddResourceParentInput,
         __Marshaller_common_Void);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IAM.RemoveUserPermissionInput, global::SKF.Enlight.API.Common.Void> __Method_RemoveUserPermission = new grpc::Method<global::SKF.Enlight.API.IAM.RemoveUserPermissionInput, global::SKF.Enlight.API.Common.Void>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.RemoveResourceParentInput, global::SKF.Enlight.API.Common.Void> __Method_RemoveResourceParent = new grpc::Method<global::SKF.Enlight.API.IAM.RemoveResourceParentInput, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "RemoveUserPermission",
-        __Marshaller_grpcapi_RemoveUserPermissionInput,
+        "RemoveResourceParent",
+        __Marshaller_grpcapi_RemoveResourceParentInput,
+        __Marshaller_common_Void);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.AddUserRoleInput, global::SKF.Enlight.API.Common.Void> __Method_AddUserRole = new grpc::Method<global::SKF.Enlight.API.IAM.AddUserRoleInput, global::SKF.Enlight.API.Common.Void>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddUserRole",
+        __Marshaller_grpcapi_AddUserRoleInput,
+        __Marshaller_common_Void);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.RemoveUserRoleInput, global::SKF.Enlight.API.Common.Void> __Method_RemoveUserRole = new grpc::Method<global::SKF.Enlight.API.IAM.RemoveUserRoleInput, global::SKF.Enlight.API.Common.Void>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveUserRole",
+        __Marshaller_grpcapi_RemoveUserRoleInput,
         __Marshaller_common_Void);
 
     /// <summary>Service descriptor</summary>
@@ -133,12 +149,22 @@ namespace SKF.Enlight.API.IAM {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> AddUserPermission(global::SKF.Enlight.API.IAM.AddUserPermissionInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> AddResourceParent(global::SKF.Enlight.API.IAM.AddResourceParentInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> RemoveUserPermission(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> RemoveResourceParent(global::SKF.Enlight.API.IAM.RemoveResourceParentInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> AddUserRole(global::SKF.Enlight.API.IAM.AddUserRoleInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> RemoveUserRole(global::SKF.Enlight.API.IAM.RemoveUserRoleInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -280,37 +306,69 @@ namespace SKF.Enlight.API.IAM {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveResource, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Common.Void AddUserPermission(global::SKF.Enlight.API.IAM.AddUserPermissionInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void AddResourceParent(global::SKF.Enlight.API.IAM.AddResourceParentInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return AddUserPermission(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return AddResourceParent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Common.Void AddUserPermission(global::SKF.Enlight.API.IAM.AddUserPermissionInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void AddResourceParent(global::SKF.Enlight.API.IAM.AddResourceParentInput request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_AddUserPermission, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_AddResourceParent, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddUserPermissionAsync(global::SKF.Enlight.API.IAM.AddUserPermissionInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddResourceParentAsync(global::SKF.Enlight.API.IAM.AddResourceParentInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return AddUserPermissionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return AddResourceParentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddUserPermissionAsync(global::SKF.Enlight.API.IAM.AddUserPermissionInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddResourceParentAsync(global::SKF.Enlight.API.IAM.AddResourceParentInput request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_AddUserPermission, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_AddResourceParent, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Common.Void RemoveUserPermission(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void RemoveResourceParent(global::SKF.Enlight.API.IAM.RemoveResourceParentInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return RemoveUserPermission(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return RemoveResourceParent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Common.Void RemoveUserPermission(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void RemoveResourceParent(global::SKF.Enlight.API.IAM.RemoveResourceParentInput request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_RemoveUserPermission, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveResourceParent, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveUserPermissionAsync(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveResourceParentAsync(global::SKF.Enlight.API.IAM.RemoveResourceParentInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return RemoveUserPermissionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return RemoveResourceParentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveUserPermissionAsync(global::SKF.Enlight.API.IAM.RemoveUserPermissionInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveResourceParentAsync(global::SKF.Enlight.API.IAM.RemoveResourceParentInput request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_RemoveUserPermission, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveResourceParent, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Common.Void AddUserRole(global::SKF.Enlight.API.IAM.AddUserRoleInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddUserRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Common.Void AddUserRole(global::SKF.Enlight.API.IAM.AddUserRoleInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddUserRole, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddUserRoleAsync(global::SKF.Enlight.API.IAM.AddUserRoleInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddUserRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> AddUserRoleAsync(global::SKF.Enlight.API.IAM.AddUserRoleInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddUserRole, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Common.Void RemoveUserRole(global::SKF.Enlight.API.IAM.RemoveUserRoleInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveUserRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Common.Void RemoveUserRole(global::SKF.Enlight.API.IAM.RemoveUserRoleInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveUserRole, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveUserRoleAsync(global::SKF.Enlight.API.IAM.RemoveUserRoleInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveUserRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> RemoveUserRoleAsync(global::SKF.Enlight.API.IAM.RemoveUserRoleInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveUserRole, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override IAMClient NewInstance(ClientBaseConfiguration configuration)
@@ -331,8 +389,10 @@ namespace SKF.Enlight.API.IAM {
           .AddMethod(__Method_IsAuthorized, serviceImpl.IsAuthorized)
           .AddMethod(__Method_AddResource, serviceImpl.AddResource)
           .AddMethod(__Method_RemoveResource, serviceImpl.RemoveResource)
-          .AddMethod(__Method_AddUserPermission, serviceImpl.AddUserPermission)
-          .AddMethod(__Method_RemoveUserPermission, serviceImpl.RemoveUserPermission).Build();
+          .AddMethod(__Method_AddResourceParent, serviceImpl.AddResourceParent)
+          .AddMethod(__Method_RemoveResourceParent, serviceImpl.RemoveResourceParent)
+          .AddMethod(__Method_AddUserRole, serviceImpl.AddUserRole)
+          .AddMethod(__Method_RemoveUserRole, serviceImpl.RemoveUserRole).Build();
     }
 
   }
