@@ -14,14 +14,14 @@ service IAM {
 
   rpc IsAuthorized (IsAuthorizedInput) returns (common.Void) {}
   
-  rpc AddResource (AddResourceInput) returns (common.Void) {}
-  rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+  rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
 
-  rpc AddResourceParent (AddResourceParentInput) returns (common.Void) {}
-  rpc RemoveResourceParent (RemoveResourceParentInput) returns (common.Void) {}
+  rpc AddAuthorizationResourceParent (AddAuthorizationResourceParentInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResourceParent (RemoveAuthorizationResourceParentInput) returns (common.Void) {}
 
-  rpc AddUserRole (AddUserRoleInput) returns (common.Void) {}
-  rpc RemoveUserRole (RemoveUserRoleInput) returns (common.Void) {}
+  rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
+  rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
 }
 
 // Input & output messages
@@ -63,31 +63,31 @@ message IsAuthorizedInput {
   common.Origin resource = 3;
 }
 
-message AddResourceInput {
+message AddAuthorizationResourceInput {
   common.Origin resource = 1;
 }
 
-message RemoveResourceInput {
+message RemoveAuthorizationResourceInput {
   common.Origin resource = 1;
 }
 
-message AddResourceParentInput {
-  common.Origin resource = 1;
-  common.Origin parent = 2;
-}
-
-message RemoveResourceParentInput {
+message AddAuthorizationResourceParentInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
 }
 
-message AddUserRoleInput {
+message RemoveAuthorizationResourceParentInput {
+  common.Origin resource = 1;
+  common.Origin parent = 2;
+}
+
+message AddUserPermissionInput {
   string user_id = 1;
   string role = 2;
   common.Origin resource = 3;
 }
 
-message RemoveUserRoleInput {
+message RemoveUserPermissionInput {
   string user_id = 1;
   string role = 2;
   common.Origin resource = 3;
