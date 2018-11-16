@@ -14,11 +14,11 @@ service IAM {
 
   rpc IsAuthorized (IsAuthorizedInput) returns (common.Void) {}
   
-  rpc AddResource (AddResourceInput) returns (common.Void) {}
-  rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+  rpc AddOrigin (AddOriginInput) returns (common.Void) {}
+  rpc RemoveOrigin (RemoveOriginInput) returns (common.Void) {}
 
-  rpc AddResourceParent (AddResourceParentInput) returns (common.Void) {}
-  rpc RemoveResourceParent (RemoveResourceParentInput) returns (common.Void) {}
+  rpc AddOriginParent (AddOriginParentInput) returns (common.Void) {}
+  rpc RemoveOriginParent (RemoveOriginParentInput) returns (common.Void) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
@@ -60,35 +60,35 @@ message User {
 message IsAuthorizedInput {
   string user_id = 1;
   string action = 2;
-  common.Origin resource = 3;
+  common.Origin origin = 3;
 }
 
-message AddResourceInput {
-  common.Origin resource = 1;
+message AddOriginInput {
+  common.Origin origin = 1;
 }
 
-message RemoveResourceInput {
-  common.Origin resource = 1;
+message RemoveOriginInput {
+  common.Origin origin = 1;
 }
 
-message AddResourceParentInput {
-  common.Origin resource = 1;
+message AddOriginParentInput {
+  common.Origin origin = 1;
   common.Origin parent = 2;
 }
 
-message RemoveResourceParentInput {
-  common.Origin resource = 1;
+message RemoveOriginParentInput {
+  common.Origin origin = 1;
   common.Origin parent = 2;
 }
 
 message AddUserPermissionInput {
   string user_id = 1;
   string role = 2;
-  common.Origin resource = 3;
+  common.Origin origin = 3;
 }
 
 message RemoveUserPermissionInput {
   string user_id = 1;
   string role = 2;
-  common.Origin resource = 3;
+  common.Origin origin = 3;
 }
