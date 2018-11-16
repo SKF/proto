@@ -88,7 +88,12 @@ namespace SKF.Enlight.API.IoT {
             "cnBjYXBpLk5vZGVEYXRhIhgKFkdldE5vZGVEYXRhU3RyZWFtSW5wdXQiUwoX",
             "R2V0Tm9kZURhdGFTdHJlYW1PdXRwdXQSDwoHbm9kZV9pZBgBIAEoCRInCglu",
             "b2RlX2RhdGEYAiABKAsyFC5pb3RncnBjYXBpLk5vZGVEYXRhIjIKDUdldE1l",
-            "ZGlhSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIQCghtZWRpYV9pZBgCIAEoCSIy",
+            "ZGlhSW5wdXQSDwoHbm9kZV9pZBgBIAEoCRIQCghtZWRpYV9pZBgCIAEoCSJj",
+            "ChZQdXRNZWRpYVNpZ25lZFVybElucHV0EhAKCG1lZGlhX2lkGAEgASgJEiMK",
+            "BHR5cGUYAiABKA4yFS5pb3RncnBjYXBpLk1lZGlhVHlwZRISCgpjb250ZW50",
+            "TUQ1GAMgASgJIiYKF1B1dE1lZGlhU2lnbmVkVXJsT3V0cHV0EgsKA3VybBgB",
+            "IAEoCSIqChZHZXRNZWRpYVNpZ25lZFVybElucHV0EhAKCG1lZGlhX2lkGAEg",
+            "ASgJIiYKF0dldE1lZGlhU2lnbmVkVXJsT3V0cHV0EgsKA3VybBgBIAEoCSIy",
             "Cg5HZXRNZWRpYU91dHB1dBIgCgVtZWRpYRgBIAEoCzIRLmlvdGdycGNhcGku",
             "TWVkaWEiKgoSR2V0VGFza1N0cmVhbUlucHV0EhQKDGhpZXJhcmNoeV9pZBgB",
             "IAEoCSJAChNHZXRUYXNrU3RyZWFtT3V0cHV0EikKBHRhc2sYASABKAsyGy5p",
@@ -114,7 +119,7 @@ namespace SKF.Enlight.API.IoT {
             "CghTUEVDVFJVTRACEg8KC1RJTUVfU0VSSUVTEAMSCAoETk9URRAEEg0KBU1F",
             "RElBEAUaAggBEgwKCE1FRElBX1YyEAcSFAoQUVVFU1RJT05fQU5TV0VSUxAG",
             "KkYKCU1lZGlhVHlwZRILCgdVTktOT1dOEAASDQoJQVVESU9fV0FWEAESDgoK",
-            "SU1BR0VfSlBFRxACEg0KCUlNQUdFX1BORxADMqkOCgNJb1QSMwoIRGVlcFBp",
+            "SU1BR0VfSlBFRxACEg0KCUlNQUdFX1BORxADMvcPCgNJb1QSMwoIRGVlcFBp",
             "bmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJL",
             "CgpDcmVhdGVUYXNrEiIuaW90Z3JwY2FwaS5Jbml0aWFsVGFza0Rlc2NyaXB0",
             "aW9uGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEkYKC0dldEFsbFRhc2tz",
@@ -155,8 +160,12 @@ namespace SKF.Enlight.API.IoT {
             "dE5vZGVFdmVudExvZxIgLmlvdGdycGNhcGkuR2V0Tm9kZUV2ZW50TG9nSW5w",
             "dXQaIS5pb3RncnBjYXBpLkdldE5vZGVFdmVudExvZ091dHB1dCIAEkMKCEdl",
             "dE1lZGlhEhkuaW90Z3JwY2FwaS5HZXRNZWRpYUlucHV0GhouaW90Z3JwY2Fw",
-            "aS5HZXRNZWRpYU91dHB1dCIAQhaqAhNTS0YuRW5saWdodC5BUEkuSW9UYgZw",
-            "cm90bzM="));
+            "aS5HZXRNZWRpYU91dHB1dCIAEmUKGFJlcXVlc3RHZXRNZWRpYVNpZ25lZFVy",
+            "bBIiLmlvdGdycGNhcGkuR2V0TWVkaWFTaWduZWRVcmxJbnB1dBojLmlvdGdy",
+            "cGNhcGkuR2V0TWVkaWFTaWduZWRVcmxPdXRwdXQiABJlChhSZXF1ZXN0UHV0",
+            "TWVkaWFTaWduZWRVcmwSIi5pb3RncnBjYXBpLlB1dE1lZGlhU2lnbmVkVXJs",
+            "SW5wdXQaIy5pb3RncnBjYXBpLlB1dE1lZGlhU2lnbmVkVXJsT3V0cHV0IgBC",
+            "FqoCE1NLRi5FbmxpZ2h0LkFQSS5Jb1RiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.NodeEventType), typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -189,6 +198,10 @@ namespace SKF.Enlight.API.IoT {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaInput), global::SKF.Enlight.API.IoT.GetMediaInput.Parser, new[]{ "NodeId", "MediaId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput.Parser, new[]{ "MediaId", "Type", "ContentMD5" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput.Parser, new[]{ "MediaId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaOutput), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser, new[]{ "Media" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamInput), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamOutput), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null),
@@ -5452,6 +5465,578 @@ namespace SKF.Enlight.API.IoT {
 
   }
 
+  public sealed partial class PutMediaSignedUrlInput : pb::IMessage<PutMediaSignedUrlInput> {
+    private static readonly pb::MessageParser<PutMediaSignedUrlInput> _parser = new pb::MessageParser<PutMediaSignedUrlInput>(() => new PutMediaSignedUrlInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PutMediaSignedUrlInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlInput(PutMediaSignedUrlInput other) : this() {
+      mediaId_ = other.mediaId_;
+      type_ = other.type_;
+      contentMD5_ = other.contentMD5_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlInput Clone() {
+      return new PutMediaSignedUrlInput(this);
+    }
+
+    /// <summary>Field number for the "media_id" field.</summary>
+    public const int MediaIdFieldNumber = 1;
+    private string mediaId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MediaId {
+      get { return mediaId_; }
+      set {
+        mediaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::SKF.Enlight.API.IoT.MediaType type_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.IoT.MediaType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "contentMD5" field.</summary>
+    public const int ContentMD5FieldNumber = 3;
+    private string contentMD5_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ContentMD5 {
+      get { return contentMD5_; }
+      set {
+        contentMD5_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PutMediaSignedUrlInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PutMediaSignedUrlInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MediaId != other.MediaId) return false;
+      if (Type != other.Type) return false;
+      if (ContentMD5 != other.ContentMD5) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MediaId.Length != 0) hash ^= MediaId.GetHashCode();
+      if (Type != 0) hash ^= Type.GetHashCode();
+      if (ContentMD5.Length != 0) hash ^= ContentMD5.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MediaId);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (ContentMD5.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContentMD5);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MediaId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaId);
+      }
+      if (Type != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (ContentMD5.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentMD5);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PutMediaSignedUrlInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MediaId.Length != 0) {
+        MediaId = other.MediaId;
+      }
+      if (other.Type != 0) {
+        Type = other.Type;
+      }
+      if (other.ContentMD5.Length != 0) {
+        ContentMD5 = other.ContentMD5;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MediaId = input.ReadString();
+            break;
+          }
+          case 16: {
+            type_ = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            ContentMD5 = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PutMediaSignedUrlOutput : pb::IMessage<PutMediaSignedUrlOutput> {
+    private static readonly pb::MessageParser<PutMediaSignedUrlOutput> _parser = new pb::MessageParser<PutMediaSignedUrlOutput>(() => new PutMediaSignedUrlOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PutMediaSignedUrlOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlOutput(PutMediaSignedUrlOutput other) : this() {
+      url_ = other.url_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PutMediaSignedUrlOutput Clone() {
+      return new PutMediaSignedUrlOutput(this);
+    }
+
+    /// <summary>Field number for the "url" field.</summary>
+    public const int UrlFieldNumber = 1;
+    private string url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Url {
+      get { return url_; }
+      set {
+        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PutMediaSignedUrlOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PutMediaSignedUrlOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Url != other.Url) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Url.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PutMediaSignedUrlOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Url.Length != 0) {
+        Url = other.Url;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetMediaSignedUrlInput : pb::IMessage<GetMediaSignedUrlInput> {
+    private static readonly pb::MessageParser<GetMediaSignedUrlInput> _parser = new pb::MessageParser<GetMediaSignedUrlInput>(() => new GetMediaSignedUrlInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMediaSignedUrlInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlInput(GetMediaSignedUrlInput other) : this() {
+      mediaId_ = other.mediaId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlInput Clone() {
+      return new GetMediaSignedUrlInput(this);
+    }
+
+    /// <summary>Field number for the "media_id" field.</summary>
+    public const int MediaIdFieldNumber = 1;
+    private string mediaId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MediaId {
+      get { return mediaId_; }
+      set {
+        mediaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMediaSignedUrlInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMediaSignedUrlInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MediaId != other.MediaId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MediaId.Length != 0) hash ^= MediaId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MediaId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MediaId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMediaSignedUrlInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MediaId.Length != 0) {
+        MediaId = other.MediaId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MediaId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetMediaSignedUrlOutput : pb::IMessage<GetMediaSignedUrlOutput> {
+    private static readonly pb::MessageParser<GetMediaSignedUrlOutput> _parser = new pb::MessageParser<GetMediaSignedUrlOutput>(() => new GetMediaSignedUrlOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMediaSignedUrlOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlOutput(GetMediaSignedUrlOutput other) : this() {
+      url_ = other.url_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMediaSignedUrlOutput Clone() {
+      return new GetMediaSignedUrlOutput(this);
+    }
+
+    /// <summary>Field number for the "url" field.</summary>
+    public const int UrlFieldNumber = 1;
+    private string url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Url {
+      get { return url_; }
+      set {
+        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMediaSignedUrlOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMediaSignedUrlOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Url != other.Url) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Url.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMediaSignedUrlOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Url.Length != 0) {
+        Url = other.Url;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class GetMediaOutput : pb::IMessage<GetMediaOutput> {
     private static readonly pb::MessageParser<GetMediaOutput> _parser = new pb::MessageParser<GetMediaOutput>(() => new GetMediaOutput());
     private pb::UnknownFieldSet _unknownFields;
@@ -5460,7 +6045,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[29]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5595,7 +6180,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[30]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5724,7 +6309,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[31]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5859,7 +6444,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[32]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6016,7 +6601,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[33]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6137,7 +6722,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[34]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6266,7 +6851,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[35]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6401,7 +6986,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[36]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6530,7 +7115,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[37]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6665,7 +7250,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[38]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6850,7 +7435,7 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[39]; }
+      get { return global::SKF.Enlight.API.IoT.GrpcapiReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

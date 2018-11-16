@@ -45,6 +45,10 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeEventLogOutput> __Marshaller_iotgrpcapi_GetNodeEventLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeEventLogOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaInput> __Marshaller_iotgrpcapi_GetMediaInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaOutput> __Marshaller_iotgrpcapi_GetMediaOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput> __Marshaller_iotgrpcapi_GetMediaSignedUrlInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput> __Marshaller_iotgrpcapi_GetMediaSignedUrlOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput> __Marshaller_iotgrpcapi_PutMediaSignedUrlInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput> __Marshaller_iotgrpcapi_PutMediaSignedUrlOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput.Parser.ParseFrom);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
@@ -200,6 +204,20 @@ namespace SKF.Enlight.API.IoT {
         __Marshaller_iotgrpcapi_GetMediaInput,
         __Marshaller_iotgrpcapi_GetMediaOutput);
 
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput, global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput> __Method_RequestGetMediaSignedUrl = new grpc::Method<global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput, global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestGetMediaSignedUrl",
+        __Marshaller_iotgrpcapi_GetMediaSignedUrlInput,
+        __Marshaller_iotgrpcapi_GetMediaSignedUrlOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput, global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput> __Method_RequestPutMediaSignedUrl = new grpc::Method<global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput, global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestPutMediaSignedUrl",
+        __Marshaller_iotgrpcapi_PutMediaSignedUrlInput,
+        __Marshaller_iotgrpcapi_PutMediaSignedUrlOutput);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -315,6 +333,16 @@ namespace SKF.Enlight.API.IoT {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetMediaOutput> GetMedia(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput> RequestGetMediaSignedUrl(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput> RequestPutMediaSignedUrl(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -672,6 +700,38 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMedia, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput RequestGetMediaSignedUrl(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestGetMediaSignedUrl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput RequestGetMediaSignedUrl(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestGetMediaSignedUrl, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput> RequestGetMediaSignedUrlAsync(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestGetMediaSignedUrlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput> RequestGetMediaSignedUrlAsync(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestGetMediaSignedUrl, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput RequestPutMediaSignedUrl(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestPutMediaSignedUrl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput RequestPutMediaSignedUrl(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestPutMediaSignedUrl, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput> RequestPutMediaSignedUrlAsync(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestPutMediaSignedUrlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput> RequestPutMediaSignedUrlAsync(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestPutMediaSignedUrl, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override IoTClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -705,7 +765,9 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_GetNodeDataStream, serviceImpl.GetNodeDataStream)
           .AddMethod(__Method_DeleteNodeData, serviceImpl.DeleteNodeData)
           .AddMethod(__Method_GetNodeEventLog, serviceImpl.GetNodeEventLog)
-          .AddMethod(__Method_GetMedia, serviceImpl.GetMedia).Build();
+          .AddMethod(__Method_GetMedia, serviceImpl.GetMedia)
+          .AddMethod(__Method_RequestGetMediaSignedUrl, serviceImpl.RequestGetMediaSignedUrl)
+          .AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl.RequestPutMediaSignedUrl).Build();
     }
 
   }
