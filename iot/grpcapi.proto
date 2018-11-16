@@ -37,8 +37,8 @@ service IoT {
   rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
   rpc GetMedia (GetMediaInput) returns (GetMediaOutput) {}
-  rpc GetMediaSignedUrl (GetMediaSignedUrlInput) returns (GetMediaSignedUrlOutput) {}
-  rpc PutMediaSignedUrl (PutMediaSignedUrlInput) returns (PutMediaSignedUrlOutput) {}
+  rpc RequestGetMediaSignedUrl (GetMediaSignedUrlInput) returns (GetMediaSignedUrlOutput) {}
+  rpc RequestPutMediaSignedUrl (PutMediaSignedUrlInput) returns (PutMediaSignedUrlOutput) {}
 
 }
 
