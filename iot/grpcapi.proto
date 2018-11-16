@@ -37,8 +37,8 @@ service IoT {
   rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
   rpc GetMedia (GetMediaInput) returns (GetMediaOutput) {}
-  rpc GetFileURL (GetFileURLInput) returns (GetFileURLOutput) {}
-  rpc PutFileURL (PutFileURLInput) returns (PutFileURLOutput) {}
+  rpc GetMediaSignedUrl (GetMediaSignedUrlInput) returns (GetMediaSignedUrlOutput) {}
+  rpc PutMediaSignedUrl (PutMediaSignedUrlInput) returns (PutMediaSignedUrlOutput) {}
 
 }
 
@@ -253,21 +253,21 @@ message GetMediaInput {
   string media_id = 2;
 }
 
-message PutFileURLInput {
+message PutMediaSignedUrlInput {
   string media_id = 1;
   MediaType type = 2;
   string contentMD5 = 3;
 }
 
-message PutFileURLOutput {
+message PutMediaSignedUrlOutput {
   string url = 1;
 }
 
-message GetFileURLInput {
+message GetMediaSignedUrlInput {
   string media_id = 1;
 }
 
-message GetFileURLOutput {
+message GetMediaSignedUrlOutput {
   string url = 1;
 }
 
