@@ -20,8 +20,8 @@ service IAM {
   rpc AddResourceParent (AddResourceParentInput) returns (common.Void) {}
   rpc RemoveResourceParent (RemoveResourceParentInput) returns (common.Void) {}
 
-  rpc AddUserRole (AddUserRoleInput) returns (common.Void) {}
-  rpc RemoveUserRole (RemoveUserRoleInput) returns (common.Void) {}
+  rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
+  rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
 }
 
 // Input & output messages
@@ -81,13 +81,13 @@ message RemoveResourceParentInput {
   common.Origin parent = 2;
 }
 
-message AddUserRoleInput {
+message AddUserPermissionInput {
   string user_id = 1;
   string role = 2;
   common.Origin resource = 3;
 }
 
-message RemoveUserRoleInput {
+message RemoveUserPermissionInput {
   string user_id = 1;
   string role = 2;
   common.Origin resource = 3;
