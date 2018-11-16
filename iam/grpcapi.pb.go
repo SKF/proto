@@ -377,85 +377,85 @@ func (m *IsAuthorizedInput) GetResource() *common.Origin {
 	return nil
 }
 
-type AddResourceInput struct {
+type AddAuthorizationResourceInput struct {
 	Resource             *common.Origin `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
 	XXX_unrecognized     []byte         `json:"-"`
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *AddResourceInput) Reset()         { *m = AddResourceInput{} }
-func (m *AddResourceInput) String() string { return proto.CompactTextString(m) }
-func (*AddResourceInput) ProtoMessage()    {}
-func (*AddResourceInput) Descriptor() ([]byte, []int) {
+func (m *AddAuthorizationResourceInput) Reset()         { *m = AddAuthorizationResourceInput{} }
+func (m *AddAuthorizationResourceInput) String() string { return proto.CompactTextString(m) }
+func (*AddAuthorizationResourceInput) ProtoMessage()    {}
+func (*AddAuthorizationResourceInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{7}
 }
 
-func (m *AddResourceInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AddResourceInput.Unmarshal(m, b)
+func (m *AddAuthorizationResourceInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AddAuthorizationResourceInput.Unmarshal(m, b)
 }
-func (m *AddResourceInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AddResourceInput.Marshal(b, m, deterministic)
+func (m *AddAuthorizationResourceInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AddAuthorizationResourceInput.Marshal(b, m, deterministic)
 }
-func (m *AddResourceInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AddResourceInput.Merge(m, src)
+func (m *AddAuthorizationResourceInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AddAuthorizationResourceInput.Merge(m, src)
 }
-func (m *AddResourceInput) XXX_Size() int {
-	return xxx_messageInfo_AddResourceInput.Size(m)
+func (m *AddAuthorizationResourceInput) XXX_Size() int {
+	return xxx_messageInfo_AddAuthorizationResourceInput.Size(m)
 }
-func (m *AddResourceInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_AddResourceInput.DiscardUnknown(m)
+func (m *AddAuthorizationResourceInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_AddAuthorizationResourceInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_AddResourceInput proto.InternalMessageInfo
+var xxx_messageInfo_AddAuthorizationResourceInput proto.InternalMessageInfo
 
-func (m *AddResourceInput) GetResource() *common.Origin {
+func (m *AddAuthorizationResourceInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-type RemoveResourceInput struct {
+type RemoveAuthorizationResourceInput struct {
 	Resource             *common.Origin `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
 	XXX_unrecognized     []byte         `json:"-"`
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *RemoveResourceInput) Reset()         { *m = RemoveResourceInput{} }
-func (m *RemoveResourceInput) String() string { return proto.CompactTextString(m) }
-func (*RemoveResourceInput) ProtoMessage()    {}
-func (*RemoveResourceInput) Descriptor() ([]byte, []int) {
+func (m *RemoveAuthorizationResourceInput) Reset()         { *m = RemoveAuthorizationResourceInput{} }
+func (m *RemoveAuthorizationResourceInput) String() string { return proto.CompactTextString(m) }
+func (*RemoveAuthorizationResourceInput) ProtoMessage()    {}
+func (*RemoveAuthorizationResourceInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{8}
 }
 
-func (m *RemoveResourceInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RemoveResourceInput.Unmarshal(m, b)
+func (m *RemoveAuthorizationResourceInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RemoveAuthorizationResourceInput.Unmarshal(m, b)
 }
-func (m *RemoveResourceInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RemoveResourceInput.Marshal(b, m, deterministic)
+func (m *RemoveAuthorizationResourceInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RemoveAuthorizationResourceInput.Marshal(b, m, deterministic)
 }
-func (m *RemoveResourceInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RemoveResourceInput.Merge(m, src)
+func (m *RemoveAuthorizationResourceInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RemoveAuthorizationResourceInput.Merge(m, src)
 }
-func (m *RemoveResourceInput) XXX_Size() int {
-	return xxx_messageInfo_RemoveResourceInput.Size(m)
+func (m *RemoveAuthorizationResourceInput) XXX_Size() int {
+	return xxx_messageInfo_RemoveAuthorizationResourceInput.Size(m)
 }
-func (m *RemoveResourceInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_RemoveResourceInput.DiscardUnknown(m)
+func (m *RemoveAuthorizationResourceInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_RemoveAuthorizationResourceInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RemoveResourceInput proto.InternalMessageInfo
+var xxx_messageInfo_RemoveAuthorizationResourceInput proto.InternalMessageInfo
 
-func (m *RemoveResourceInput) GetResource() *common.Origin {
+func (m *RemoveAuthorizationResourceInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-type AddResourceParentInput struct {
+type AddAuthorizationResourceParentInput struct {
 	Resource             *common.Origin `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
 	Parent               *common.Origin `protobuf:"bytes,2,opt,name=parent,proto3" json:"parent,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
@@ -463,46 +463,46 @@ type AddResourceParentInput struct {
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *AddResourceParentInput) Reset()         { *m = AddResourceParentInput{} }
-func (m *AddResourceParentInput) String() string { return proto.CompactTextString(m) }
-func (*AddResourceParentInput) ProtoMessage()    {}
-func (*AddResourceParentInput) Descriptor() ([]byte, []int) {
+func (m *AddAuthorizationResourceParentInput) Reset()         { *m = AddAuthorizationResourceParentInput{} }
+func (m *AddAuthorizationResourceParentInput) String() string { return proto.CompactTextString(m) }
+func (*AddAuthorizationResourceParentInput) ProtoMessage()    {}
+func (*AddAuthorizationResourceParentInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{9}
 }
 
-func (m *AddResourceParentInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AddResourceParentInput.Unmarshal(m, b)
+func (m *AddAuthorizationResourceParentInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AddAuthorizationResourceParentInput.Unmarshal(m, b)
 }
-func (m *AddResourceParentInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AddResourceParentInput.Marshal(b, m, deterministic)
+func (m *AddAuthorizationResourceParentInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AddAuthorizationResourceParentInput.Marshal(b, m, deterministic)
 }
-func (m *AddResourceParentInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AddResourceParentInput.Merge(m, src)
+func (m *AddAuthorizationResourceParentInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AddAuthorizationResourceParentInput.Merge(m, src)
 }
-func (m *AddResourceParentInput) XXX_Size() int {
-	return xxx_messageInfo_AddResourceParentInput.Size(m)
+func (m *AddAuthorizationResourceParentInput) XXX_Size() int {
+	return xxx_messageInfo_AddAuthorizationResourceParentInput.Size(m)
 }
-func (m *AddResourceParentInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_AddResourceParentInput.DiscardUnknown(m)
+func (m *AddAuthorizationResourceParentInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_AddAuthorizationResourceParentInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_AddResourceParentInput proto.InternalMessageInfo
+var xxx_messageInfo_AddAuthorizationResourceParentInput proto.InternalMessageInfo
 
-func (m *AddResourceParentInput) GetResource() *common.Origin {
+func (m *AddAuthorizationResourceParentInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-func (m *AddResourceParentInput) GetParent() *common.Origin {
+func (m *AddAuthorizationResourceParentInput) GetParent() *common.Origin {
 	if m != nil {
 		return m.Parent
 	}
 	return nil
 }
 
-type RemoveResourceParentInput struct {
+type RemoveAuthorizationResourceParentInput struct {
 	Resource             *common.Origin `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
 	Parent               *common.Origin `protobuf:"bytes,2,opt,name=parent,proto3" json:"parent,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
@@ -510,46 +510,48 @@ type RemoveResourceParentInput struct {
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *RemoveResourceParentInput) Reset()         { *m = RemoveResourceParentInput{} }
-func (m *RemoveResourceParentInput) String() string { return proto.CompactTextString(m) }
-func (*RemoveResourceParentInput) ProtoMessage()    {}
-func (*RemoveResourceParentInput) Descriptor() ([]byte, []int) {
+func (m *RemoveAuthorizationResourceParentInput) Reset() {
+	*m = RemoveAuthorizationResourceParentInput{}
+}
+func (m *RemoveAuthorizationResourceParentInput) String() string { return proto.CompactTextString(m) }
+func (*RemoveAuthorizationResourceParentInput) ProtoMessage()    {}
+func (*RemoveAuthorizationResourceParentInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{10}
 }
 
-func (m *RemoveResourceParentInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RemoveResourceParentInput.Unmarshal(m, b)
+func (m *RemoveAuthorizationResourceParentInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RemoveAuthorizationResourceParentInput.Unmarshal(m, b)
 }
-func (m *RemoveResourceParentInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RemoveResourceParentInput.Marshal(b, m, deterministic)
+func (m *RemoveAuthorizationResourceParentInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RemoveAuthorizationResourceParentInput.Marshal(b, m, deterministic)
 }
-func (m *RemoveResourceParentInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RemoveResourceParentInput.Merge(m, src)
+func (m *RemoveAuthorizationResourceParentInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RemoveAuthorizationResourceParentInput.Merge(m, src)
 }
-func (m *RemoveResourceParentInput) XXX_Size() int {
-	return xxx_messageInfo_RemoveResourceParentInput.Size(m)
+func (m *RemoveAuthorizationResourceParentInput) XXX_Size() int {
+	return xxx_messageInfo_RemoveAuthorizationResourceParentInput.Size(m)
 }
-func (m *RemoveResourceParentInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_RemoveResourceParentInput.DiscardUnknown(m)
+func (m *RemoveAuthorizationResourceParentInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_RemoveAuthorizationResourceParentInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RemoveResourceParentInput proto.InternalMessageInfo
+var xxx_messageInfo_RemoveAuthorizationResourceParentInput proto.InternalMessageInfo
 
-func (m *RemoveResourceParentInput) GetResource() *common.Origin {
+func (m *RemoveAuthorizationResourceParentInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-func (m *RemoveResourceParentInput) GetParent() *common.Origin {
+func (m *RemoveAuthorizationResourceParentInput) GetParent() *common.Origin {
 	if m != nil {
 		return m.Parent
 	}
 	return nil
 }
 
-type AddUserRoleInput struct {
+type AddUserPermissionInput struct {
 	UserId               string         `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	Role                 string         `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
 	Resource             *common.Origin `protobuf:"bytes,3,opt,name=resource,proto3" json:"resource,omitempty"`
@@ -558,53 +560,53 @@ type AddUserRoleInput struct {
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *AddUserRoleInput) Reset()         { *m = AddUserRoleInput{} }
-func (m *AddUserRoleInput) String() string { return proto.CompactTextString(m) }
-func (*AddUserRoleInput) ProtoMessage()    {}
-func (*AddUserRoleInput) Descriptor() ([]byte, []int) {
+func (m *AddUserPermissionInput) Reset()         { *m = AddUserPermissionInput{} }
+func (m *AddUserPermissionInput) String() string { return proto.CompactTextString(m) }
+func (*AddUserPermissionInput) ProtoMessage()    {}
+func (*AddUserPermissionInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{11}
 }
 
-func (m *AddUserRoleInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AddUserRoleInput.Unmarshal(m, b)
+func (m *AddUserPermissionInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AddUserPermissionInput.Unmarshal(m, b)
 }
-func (m *AddUserRoleInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AddUserRoleInput.Marshal(b, m, deterministic)
+func (m *AddUserPermissionInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AddUserPermissionInput.Marshal(b, m, deterministic)
 }
-func (m *AddUserRoleInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AddUserRoleInput.Merge(m, src)
+func (m *AddUserPermissionInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AddUserPermissionInput.Merge(m, src)
 }
-func (m *AddUserRoleInput) XXX_Size() int {
-	return xxx_messageInfo_AddUserRoleInput.Size(m)
+func (m *AddUserPermissionInput) XXX_Size() int {
+	return xxx_messageInfo_AddUserPermissionInput.Size(m)
 }
-func (m *AddUserRoleInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_AddUserRoleInput.DiscardUnknown(m)
+func (m *AddUserPermissionInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_AddUserPermissionInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_AddUserRoleInput proto.InternalMessageInfo
+var xxx_messageInfo_AddUserPermissionInput proto.InternalMessageInfo
 
-func (m *AddUserRoleInput) GetUserId() string {
+func (m *AddUserPermissionInput) GetUserId() string {
 	if m != nil {
 		return m.UserId
 	}
 	return ""
 }
 
-func (m *AddUserRoleInput) GetRole() string {
+func (m *AddUserPermissionInput) GetRole() string {
 	if m != nil {
 		return m.Role
 	}
 	return ""
 }
 
-func (m *AddUserRoleInput) GetResource() *common.Origin {
+func (m *AddUserPermissionInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-type RemoveUserRoleInput struct {
+type RemoveUserPermissionInput struct {
 	UserId               string         `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	Role                 string         `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
 	Resource             *common.Origin `protobuf:"bytes,3,opt,name=resource,proto3" json:"resource,omitempty"`
@@ -613,46 +615,46 @@ type RemoveUserRoleInput struct {
 	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *RemoveUserRoleInput) Reset()         { *m = RemoveUserRoleInput{} }
-func (m *RemoveUserRoleInput) String() string { return proto.CompactTextString(m) }
-func (*RemoveUserRoleInput) ProtoMessage()    {}
-func (*RemoveUserRoleInput) Descriptor() ([]byte, []int) {
+func (m *RemoveUserPermissionInput) Reset()         { *m = RemoveUserPermissionInput{} }
+func (m *RemoveUserPermissionInput) String() string { return proto.CompactTextString(m) }
+func (*RemoveUserPermissionInput) ProtoMessage()    {}
+func (*RemoveUserPermissionInput) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8be5c115a6825307, []int{12}
 }
 
-func (m *RemoveUserRoleInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RemoveUserRoleInput.Unmarshal(m, b)
+func (m *RemoveUserPermissionInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RemoveUserPermissionInput.Unmarshal(m, b)
 }
-func (m *RemoveUserRoleInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RemoveUserRoleInput.Marshal(b, m, deterministic)
+func (m *RemoveUserPermissionInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RemoveUserPermissionInput.Marshal(b, m, deterministic)
 }
-func (m *RemoveUserRoleInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RemoveUserRoleInput.Merge(m, src)
+func (m *RemoveUserPermissionInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RemoveUserPermissionInput.Merge(m, src)
 }
-func (m *RemoveUserRoleInput) XXX_Size() int {
-	return xxx_messageInfo_RemoveUserRoleInput.Size(m)
+func (m *RemoveUserPermissionInput) XXX_Size() int {
+	return xxx_messageInfo_RemoveUserPermissionInput.Size(m)
 }
-func (m *RemoveUserRoleInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_RemoveUserRoleInput.DiscardUnknown(m)
+func (m *RemoveUserPermissionInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_RemoveUserPermissionInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RemoveUserRoleInput proto.InternalMessageInfo
+var xxx_messageInfo_RemoveUserPermissionInput proto.InternalMessageInfo
 
-func (m *RemoveUserRoleInput) GetUserId() string {
+func (m *RemoveUserPermissionInput) GetUserId() string {
 	if m != nil {
 		return m.UserId
 	}
 	return ""
 }
 
-func (m *RemoveUserRoleInput) GetRole() string {
+func (m *RemoveUserPermissionInput) GetRole() string {
 	if m != nil {
 		return m.Role
 	}
 	return ""
 }
 
-func (m *RemoveUserRoleInput) GetResource() *common.Origin {
+func (m *RemoveUserPermissionInput) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
@@ -667,63 +669,65 @@ func init() {
 	proto.RegisterType((*GetEventRecordsOutput)(nil), "grpcapi.GetEventRecordsOutput")
 	proto.RegisterType((*User)(nil), "grpcapi.User")
 	proto.RegisterType((*IsAuthorizedInput)(nil), "grpcapi.IsAuthorizedInput")
-	proto.RegisterType((*AddResourceInput)(nil), "grpcapi.AddResourceInput")
-	proto.RegisterType((*RemoveResourceInput)(nil), "grpcapi.RemoveResourceInput")
-	proto.RegisterType((*AddResourceParentInput)(nil), "grpcapi.AddResourceParentInput")
-	proto.RegisterType((*RemoveResourceParentInput)(nil), "grpcapi.RemoveResourceParentInput")
-	proto.RegisterType((*AddUserRoleInput)(nil), "grpcapi.AddUserRoleInput")
-	proto.RegisterType((*RemoveUserRoleInput)(nil), "grpcapi.RemoveUserRoleInput")
+	proto.RegisterType((*AddAuthorizationResourceInput)(nil), "grpcapi.AddAuthorizationResourceInput")
+	proto.RegisterType((*RemoveAuthorizationResourceInput)(nil), "grpcapi.RemoveAuthorizationResourceInput")
+	proto.RegisterType((*AddAuthorizationResourceParentInput)(nil), "grpcapi.AddAuthorizationResourceParentInput")
+	proto.RegisterType((*RemoveAuthorizationResourceParentInput)(nil), "grpcapi.RemoveAuthorizationResourceParentInput")
+	proto.RegisterType((*AddUserPermissionInput)(nil), "grpcapi.AddUserPermissionInput")
+	proto.RegisterType((*RemoveUserPermissionInput)(nil), "grpcapi.RemoveUserPermissionInput")
 }
 
 func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_8be5c115a6825307) }
 
 var fileDescriptor_8be5c115a6825307 = []byte{
-	// 718 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x55, 0xdb, 0x6e, 0xd3, 0x4c,
-	0x10, 0xce, 0xa1, 0x4d, 0xd2, 0x69, 0xff, 0xfc, 0x74, 0x53, 0x52, 0xd7, 0x94, 0x52, 0x0c, 0xaa,
-	0x2a, 0x84, 0x52, 0x91, 0x0a, 0xa9, 0xe2, 0xa2, 0x92, 0xa1, 0xa5, 0x18, 0x54, 0x1a, 0xb9, 0x2a,
-	0x17, 0xdc, 0x54, 0xc6, 0x3b, 0x4a, 0x56, 0xb5, 0x77, 0xa3, 0xf5, 0x3a, 0x12, 0xdc, 0xf1, 0x3a,
-	0x3c, 0x0b, 0x0f, 0x85, 0x7c, 0x88, 0x71, 0xe2, 0x24, 0x55, 0x91, 0xe0, 0x2a, 0x9e, 0xc3, 0xf7,
-	0xcd, 0xee, 0x37, 0x3b, 0x13, 0x58, 0x67, 0x8e, 0x7f, 0xd0, 0x97, 0x43, 0xd7, 0x19, 0xb2, 0xce,
-	0x50, 0x0a, 0x25, 0x48, 0x3d, 0x35, 0xf5, 0x96, 0x2b, 0x7c, 0x5f, 0xf0, 0x83, 0xe4, 0x27, 0x89,
-	0x1a, 0x2f, 0x41, 0x3f, 0x43, 0xf5, 0x8e, 0xa1, 0x74, 0xa4, 0x3b, 0xf8, 0x6a, 0xa3, 0xe7, 0x28,
-	0x26, 0x78, 0x60, 0xf1, 0x61, 0xa8, 0xc8, 0x26, 0xd4, 0xc3, 0x00, 0xe5, 0x35, 0xa3, 0x5a, 0x79,
-	0xb7, 0xbc, 0xbf, 0x62, 0xd7, 0x22, 0xd3, 0xa2, 0xc6, 0x11, 0x3c, 0x98, 0x09, 0xbb, 0x08, 0x55,
-	0x84, 0xdb, 0x82, 0x06, 0x17, 0x14, 0xaf, 0x19, 0x0d, 0xb4, 0xf2, 0x6e, 0x75, 0x7f, 0xc5, 0xae,
-	0x47, 0xb6, 0x45, 0x03, 0xe3, 0x23, 0x68, 0x6f, 0x06, 0xe8, 0xde, 0x98, 0xa1, 0x1a, 0x20, 0x57,
-	0xcc, 0x8d, 0x81, 0x49, 0xb9, 0x0d, 0x58, 0x56, 0xe2, 0x06, 0x79, 0x5a, 0x2c, 0x31, 0xc8, 0x36,
-	0xac, 0xf8, 0xa8, 0x06, 0x82, 0x9a, 0x92, 0x6b, 0x95, 0x38, 0xf2, 0xdb, 0x61, 0x7c, 0x86, 0x8d,
-	0x33, 0x54, 0xa7, 0x23, 0xe4, 0xca, 0x46, 0x57, 0x48, 0x1a, 0x64, 0x5c, 0x01, 0xe3, 0x2e, 0xc6,
-	0x5c, 0x55, 0x3b, 0x31, 0xc8, 0x73, 0x58, 0xf6, 0x98, 0xcf, 0x54, 0xcc, 0xb3, 0xda, 0x6d, 0x77,
-	0x52, 0x31, 0x7a, 0x32, 0xf2, 0xb2, 0x11, 0x5a, 0x5c, 0x1d, 0x76, 0xed, 0x24, 0xc9, 0x78, 0x01,
-	0xf7, 0xa7, 0xb8, 0xd3, 0xfb, 0x69, 0x50, 0x97, 0x89, 0x23, 0xa6, 0x5f, 0xb3, 0xc7, 0xa6, 0xf1,
-	0xb3, 0x0c, 0x4b, 0x57, 0x01, 0x4a, 0xd2, 0x84, 0x4a, 0xa6, 0x5a, 0x85, 0xd1, 0xe8, 0x3c, 0xe8,
-	0x3b, 0xcc, 0x4b, 0x6f, 0x90, 0x18, 0x64, 0x0f, 0x9a, 0x18, 0x7a, 0x8e, 0xd9, 0x97, 0x88, 0xf4,
-	0xc4, 0x51, 0xa8, 0x55, 0xe3, 0xf0, 0x94, 0x37, 0xd2, 0x60, 0xe4, 0x78, 0x8c, 0x9e, 0x86, 0x9e,
-	0xa3, 0x2d, 0x25, 0x1a, 0x64, 0x0e, 0xa2, 0x43, 0x23, 0xea, 0x0b, 0x77, 0x7c, 0xd4, 0x96, 0xe3,
-	0x60, 0x66, 0x93, 0x1d, 0x80, 0xe8, 0xfb, 0x52, 0x39, 0x2a, 0x0c, 0xb4, 0x5a, 0x1c, 0xcd, 0x79,
-	0x22, 0xe6, 0xc8, 0xb2, 0x85, 0x87, 0x81, 0x56, 0x4f, 0x98, 0x33, 0x87, 0x31, 0x84, 0x75, 0x2b,
-	0x88, 0x5a, 0x25, 0x24, 0xfb, 0x86, 0x74, 0xf1, 0xab, 0x20, 0x6d, 0xa8, 0x39, 0x6e, 0xd4, 0xce,
-	0xf4, 0x92, 0xa9, 0x45, 0x9e, 0x41, 0x43, 0x62, 0x20, 0x42, 0xe9, 0x26, 0xf7, 0x5b, 0xed, 0x36,
-	0xc7, 0xc2, 0x5f, 0x48, 0xd6, 0x67, 0xdc, 0xce, 0xe2, 0xc6, 0x31, 0xdc, 0x33, 0x29, 0xb5, 0x53,
-	0x33, 0x29, 0x98, 0xc7, 0x97, 0x6f, 0xc1, 0x9b, 0xd0, 0xb2, 0xd1, 0x17, 0x23, 0xfc, 0x73, 0x0a,
-	0x0f, 0xda, 0xb9, 0x23, 0xf4, 0x1c, 0x89, 0x5c, 0xdd, 0x99, 0x85, 0xec, 0x41, 0x6d, 0x18, 0x43,
-	0xd3, 0xb7, 0x36, 0x9d, 0x99, 0x46, 0x0d, 0x01, 0x5b, 0x93, 0x07, 0xfe, 0xdb, 0x05, 0x6f, 0x62,
-	0x85, 0xaf, 0xd2, 0x1e, 0xdf, 0xd2, 0x52, 0x02, 0x4b, 0x52, 0x78, 0x98, 0x36, 0x34, 0xfe, 0xbe,
-	0x53, 0x3b, 0xf9, 0xb8, 0x1d, 0xff, 0xa6, 0x5e, 0xf7, 0x7b, 0x0d, 0xaa, 0x96, 0x79, 0x4e, 0x0e,
-	0xa1, 0x71, 0x82, 0x38, 0xec, 0x31, 0xde, 0x27, 0x6b, 0xe3, 0xec, 0x4f, 0x82, 0x51, 0x7d, 0xb3,
-	0x30, 0xf3, 0x97, 0x4a, 0x32, 0xde, 0x37, 0x4a, 0xc4, 0x82, 0xd6, 0x8c, 0xdd, 0x44, 0x1e, 0x77,
-	0xc6, 0x1b, 0x75, 0xde, 0xe6, 0xd2, 0xff, 0xcb, 0x52, 0xa2, 0x7b, 0x1a, 0x25, 0x42, 0xe3, 0xd5,
-	0x51, 0x5c, 0x90, 0xe4, 0x49, 0x96, 0x39, 0x7f, 0xef, 0xea, 0x4f, 0x17, 0x27, 0x25, 0x5b, 0xc8,
-	0x28, 0x11, 0x1b, 0xfe, 0x9f, 0x5a, 0x50, 0xe4, 0x61, 0x1e, 0x5a, 0x58, 0x8b, 0xfa, 0xce, 0xbc,
-	0x70, 0xc6, 0xf9, 0x0a, 0xd6, 0xf2, 0x23, 0x4f, 0xf4, 0x0c, 0x51, 0xd8, 0x04, 0xfa, 0x84, 0xb2,
-	0x46, 0x89, 0x1c, 0xc1, 0x6a, 0x6e, 0x72, 0xc8, 0x56, 0x06, 0x9d, 0x1e, 0xe9, 0x02, 0xf2, 0x18,
-	0x9a, 0x93, 0x53, 0x40, 0xb6, 0x33, 0xf0, 0x8c, 0x79, 0x2e, 0xe0, 0x4f, 0x60, 0xbd, 0x30, 0xb3,
-	0xe4, 0xd1, 0xac, 0xfa, 0xb9, 0xf1, 0x2a, 0xb0, 0xbc, 0x87, 0x8d, 0x59, 0xb3, 0x48, 0x8c, 0x39,
-	0x67, 0x59, 0xc4, 0x95, 0x68, 0x31, 0x7e, 0xf6, 0x93, 0x5a, 0x4c, 0x0c, 0xc3, 0x7c, 0x2d, 0x32,
-	0xf0, 0xb4, 0x16, 0x0b, 0xf1, 0xaf, 0xdb, 0x3f, 0x2a, 0xad, 0xcb, 0x0f, 0x6f, 0x3b, 0xa7, 0xdc,
-	0x63, 0xfd, 0x81, 0xea, 0x98, 0x3d, 0xab, 0x63, 0x99, 0xe7, 0x5f, 0x6a, 0xf1, 0x5f, 0xfe, 0xe1,
-	0xaf, 0x00, 0x00, 0x00, 0xff, 0xff, 0x8c, 0xb3, 0xbe, 0x6e, 0x25, 0x08, 0x00, 0x00,
+	// 739 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x56, 0x6d, 0x4f, 0xd3, 0x5e,
+	0x14, 0x67, 0x1b, 0x6c, 0xe3, 0xc0, 0x9f, 0x7f, 0xb8, 0xe0, 0x28, 0x45, 0x10, 0x8a, 0x59, 0xd0,
+	0x90, 0x11, 0x47, 0x4c, 0x8c, 0xef, 0xaa, 0x20, 0x56, 0x02, 0x2c, 0x25, 0x1a, 0xe3, 0x0b, 0x49,
+	0xed, 0x3d, 0xd9, 0x6e, 0x68, 0xef, 0x9d, 0xb7, 0xb7, 0x4b, 0x30, 0xbe, 0xf1, 0xeb, 0xf8, 0x59,
+	0xfc, 0x50, 0xa6, 0x0f, 0xab, 0x73, 0xdd, 0x03, 0x24, 0xea, 0xab, 0xf5, 0x3c, 0xfd, 0xce, 0xc3,
+	0x3d, 0xe7, 0x97, 0xc1, 0x32, 0x73, 0xfc, 0x83, 0xb6, 0xec, 0xba, 0x4e, 0x97, 0x35, 0xba, 0x52,
+	0x28, 0x41, 0x2a, 0xa9, 0xa8, 0xaf, 0xb8, 0xc2, 0xf7, 0x05, 0x3f, 0x48, 0x7e, 0x12, 0xab, 0xf1,
+	0x14, 0xf4, 0x13, 0x54, 0xaf, 0x19, 0x4a, 0x47, 0xba, 0x9d, 0x1b, 0x1b, 0x3d, 0x47, 0x31, 0xc1,
+	0x03, 0x8b, 0x77, 0x43, 0x45, 0xd6, 0xa0, 0x12, 0x06, 0x28, 0xaf, 0x18, 0xd5, 0x0a, 0xdb, 0x85,
+	0xbd, 0x79, 0xbb, 0x1c, 0x89, 0x16, 0x35, 0x9e, 0xc1, 0xc6, 0xc8, 0xb0, 0x8b, 0x50, 0x45, 0x71,
+	0xeb, 0x50, 0xe5, 0x82, 0xe2, 0x15, 0xa3, 0x81, 0x56, 0xd8, 0x2e, 0xed, 0xcd, 0xdb, 0x95, 0x48,
+	0xb6, 0x68, 0x60, 0x9c, 0x83, 0xf6, 0xb2, 0x83, 0xee, 0xb5, 0x19, 0xaa, 0x0e, 0x72, 0xc5, 0xdc,
+	0x38, 0x30, 0x49, 0xb7, 0x0a, 0x73, 0x4a, 0x5c, 0x23, 0x4f, 0x93, 0x25, 0x02, 0xb9, 0x0f, 0xf3,
+	0x3e, 0xaa, 0x8e, 0xa0, 0xa6, 0xe4, 0x5a, 0x31, 0xb6, 0xfc, 0x52, 0x18, 0x1f, 0x60, 0xf5, 0x04,
+	0xd5, 0x71, 0x0f, 0xb9, 0xb2, 0xd1, 0x15, 0x92, 0x06, 0x19, 0x56, 0xc0, 0xb8, 0x8b, 0x31, 0x56,
+	0xc9, 0x4e, 0x04, 0xb2, 0x0f, 0x73, 0x1e, 0xf3, 0x99, 0x8a, 0x71, 0x16, 0x9a, 0xb5, 0x46, 0x3a,
+	0x8c, 0x96, 0x8c, 0xb4, 0xac, 0x87, 0x16, 0x57, 0x87, 0x4d, 0x3b, 0x71, 0x32, 0x9e, 0xc0, 0xbd,
+	0x21, 0xec, 0xb4, 0x3f, 0x0d, 0x2a, 0x32, 0x51, 0xc4, 0xf0, 0x8b, 0x76, 0x5f, 0x34, 0x7e, 0x14,
+	0x60, 0xf6, 0x6d, 0x80, 0x92, 0x2c, 0x41, 0x31, 0x9b, 0x5a, 0x91, 0xd1, 0xa8, 0x1e, 0xf4, 0x1d,
+	0xe6, 0xa5, 0x1d, 0x24, 0x02, 0xa9, 0xc3, 0x12, 0x86, 0x9e, 0x63, 0xb6, 0x25, 0x22, 0x3d, 0x72,
+	0x14, 0x6a, 0xa5, 0xd8, 0x3c, 0xa4, 0x8d, 0x66, 0xd0, 0x73, 0x3c, 0x46, 0x8f, 0x43, 0xcf, 0xd1,
+	0x66, 0x93, 0x19, 0x64, 0x0a, 0xa2, 0x43, 0x35, 0x7a, 0x17, 0xee, 0xf8, 0xa8, 0xcd, 0xc5, 0xc6,
+	0x4c, 0x26, 0x5b, 0x00, 0xd1, 0xf7, 0xa5, 0x72, 0x54, 0x18, 0x68, 0xe5, 0xd8, 0x3a, 0xa0, 0x89,
+	0x90, 0x23, 0xc9, 0x16, 0x1e, 0x06, 0x5a, 0x25, 0x41, 0xce, 0x14, 0x46, 0x17, 0x96, 0xad, 0x20,
+	0x7a, 0x2a, 0x21, 0xd9, 0x17, 0xa4, 0x93, 0xb7, 0x82, 0xd4, 0xa0, 0xec, 0xb8, 0xd1, 0x73, 0xa6,
+	0x4d, 0xa6, 0x12, 0x79, 0x0c, 0x55, 0x89, 0x81, 0x08, 0xa5, 0x9b, 0xf4, 0xb7, 0xd0, 0x5c, 0xea,
+	0x0f, 0xfe, 0x42, 0xb2, 0x36, 0xe3, 0x76, 0x66, 0x37, 0x4e, 0x61, 0xd3, 0xa4, 0xb4, 0x9f, 0x32,
+	0x5e, 0x0e, 0x3b, 0xb5, 0x25, 0xd9, 0x07, 0xc1, 0x0a, 0x53, 0xc0, 0xce, 0x61, 0xdb, 0x46, 0x5f,
+	0xf4, 0xf0, 0x0f, 0xe1, 0xdd, 0xc0, 0xee, 0xb8, 0xe2, 0x5a, 0x8e, 0x44, 0xae, 0xee, 0x0c, 0x49,
+	0xea, 0x50, 0xee, 0xc6, 0xa1, 0xe9, 0x4a, 0x0e, 0x7b, 0xa6, 0x56, 0xe3, 0x2b, 0xd4, 0x27, 0xb4,
+	0xf2, 0xb7, 0xb3, 0x7f, 0x86, 0x9a, 0x49, 0x69, 0xb4, 0xd8, 0x2d, 0x94, 0x3e, 0x0b, 0x82, 0xec,
+	0x66, 0xc7, 0x2e, 0x03, 0x81, 0x59, 0x29, 0x3c, 0x4c, 0x57, 0x21, 0xfe, 0xbe, 0xd3, 0x22, 0x28,
+	0x58, 0x4f, 0x1a, 0xfe, 0x97, 0x59, 0x9b, 0xdf, 0x2a, 0x50, 0xb2, 0xcc, 0x33, 0x72, 0x08, 0xd5,
+	0x23, 0xc4, 0x6e, 0x8b, 0xf1, 0x36, 0x59, 0xec, 0x7b, 0xbf, 0x13, 0x8c, 0xea, 0x6b, 0x39, 0xce,
+	0xb8, 0x54, 0x92, 0xf1, 0xb6, 0x31, 0x43, 0x2c, 0x58, 0x19, 0xc1, 0x6d, 0x64, 0xa7, 0xd1, 0x67,
+	0xe4, 0x71, 0xcc, 0xa7, 0xff, 0x97, 0xb9, 0x44, 0xdd, 0x1a, 0x33, 0x84, 0xc6, 0xd4, 0x93, 0x27,
+	0x58, 0xb2, 0x9b, 0x79, 0x8e, 0xe7, 0x6d, 0xfd, 0xe1, 0x64, 0xa7, 0x84, 0xc5, 0x8c, 0x19, 0x62,
+	0xc3, 0xff, 0x43, 0x04, 0x47, 0x36, 0x07, 0x43, 0x73, 0xb4, 0xaa, 0x6f, 0x8d, 0x33, 0x67, 0x98,
+	0xcf, 0x61, 0x71, 0x90, 0x32, 0x88, 0x9e, 0x45, 0xe4, 0x98, 0x44, 0xff, 0x6d, 0xb2, 0x71, 0x3d,
+	0xda, 0xb8, 0xfb, 0x22, 0xf5, 0x0c, 0x67, 0x22, 0x3f, 0xe4, 0x30, 0xdf, 0xc3, 0xc6, 0x84, 0xc3,
+	0x21, 0x8f, 0x32, 0xd8, 0x69, 0x4c, 0x91, 0x43, 0xfe, 0x08, 0x5b, 0x93, 0xd9, 0x80, 0xec, 0x4f,
+	0xad, 0x79, 0xe0, 0x70, 0x73, 0xf8, 0x14, 0x76, 0xa6, 0x9e, 0x3c, 0x39, 0xb8, 0x4d, 0xfd, 0x93,
+	0xb2, 0x1c, 0xc1, 0x72, 0xee, 0xb4, 0xc9, 0x83, 0xc1, 0xc2, 0x47, 0x1c, 0x60, 0x0e, 0xe5, 0x0d,
+	0xac, 0x8e, 0xba, 0x56, 0x62, 0x0c, 0x95, 0x77, 0x0b, 0xac, 0x17, 0xb5, 0xef, 0xc5, 0x95, 0xcb,
+	0xd3, 0x57, 0x8d, 0x63, 0xee, 0xb1, 0x76, 0x47, 0x35, 0xcc, 0x96, 0xd5, 0xb0, 0xcc, 0xb3, 0x4f,
+	0xe5, 0xf8, 0x2f, 0xcb, 0xe1, 0xcf, 0x00, 0x00, 0x00, 0xff, 0xff, 0x74, 0xe0, 0x99, 0x82, 0xe5,
+	0x08, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -743,12 +747,12 @@ type IAMClient interface {
 	GetHierarchyRelations(ctx context.Context, in *GetHierarchyRelationsInput, opts ...grpc.CallOption) (*GetHierarchyRelationsOutput, error)
 	GetEventRecords(ctx context.Context, in *GetEventRecordsInput, opts ...grpc.CallOption) (*GetEventRecordsOutput, error)
 	IsAuthorized(ctx context.Context, in *IsAuthorizedInput, opts ...grpc.CallOption) (*common.Void, error)
-	AddResource(ctx context.Context, in *AddResourceInput, opts ...grpc.CallOption) (*common.Void, error)
-	RemoveResource(ctx context.Context, in *RemoveResourceInput, opts ...grpc.CallOption) (*common.Void, error)
-	AddResourceParent(ctx context.Context, in *AddResourceParentInput, opts ...grpc.CallOption) (*common.Void, error)
-	RemoveResourceParent(ctx context.Context, in *RemoveResourceParentInput, opts ...grpc.CallOption) (*common.Void, error)
-	AddUserRole(ctx context.Context, in *AddUserRoleInput, opts ...grpc.CallOption) (*common.Void, error)
-	RemoveUserRole(ctx context.Context, in *RemoveUserRoleInput, opts ...grpc.CallOption) (*common.Void, error)
+	AddAuthorizationResource(ctx context.Context, in *AddAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error)
+	RemoveAuthorizationResource(ctx context.Context, in *RemoveAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error)
+	AddAuthorizationResourceParent(ctx context.Context, in *AddAuthorizationResourceParentInput, opts ...grpc.CallOption) (*common.Void, error)
+	RemoveAuthorizationResourceParent(ctx context.Context, in *RemoveAuthorizationResourceParentInput, opts ...grpc.CallOption) (*common.Void, error)
+	AddUserPermission(ctx context.Context, in *AddUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error)
+	RemoveUserPermission(ctx context.Context, in *RemoveUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error)
 }
 
 type iAMClient struct {
@@ -804,54 +808,54 @@ func (c *iAMClient) IsAuthorized(ctx context.Context, in *IsAuthorizedInput, opt
 	return out, nil
 }
 
-func (c *iAMClient) AddResource(ctx context.Context, in *AddResourceInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) AddAuthorizationResource(ctx context.Context, in *AddAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddResource", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddAuthorizationResource", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iAMClient) RemoveResource(ctx context.Context, in *RemoveResourceInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) RemoveAuthorizationResource(ctx context.Context, in *RemoveAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveResource", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveAuthorizationResource", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iAMClient) AddResourceParent(ctx context.Context, in *AddResourceParentInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) AddAuthorizationResourceParent(ctx context.Context, in *AddAuthorizationResourceParentInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddResourceParent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddAuthorizationResourceParent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iAMClient) RemoveResourceParent(ctx context.Context, in *RemoveResourceParentInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) RemoveAuthorizationResourceParent(ctx context.Context, in *RemoveAuthorizationResourceParentInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveResourceParent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveAuthorizationResourceParent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iAMClient) AddUserRole(ctx context.Context, in *AddUserRoleInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) AddUserPermission(ctx context.Context, in *AddUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddUserRole", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddUserPermission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iAMClient) RemoveUserRole(ctx context.Context, in *RemoveUserRoleInput, opts ...grpc.CallOption) (*common.Void, error) {
+func (c *iAMClient) RemoveUserPermission(ctx context.Context, in *RemoveUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
-	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveUserRole", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveUserPermission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -865,12 +869,12 @@ type IAMServer interface {
 	GetHierarchyRelations(context.Context, *GetHierarchyRelationsInput) (*GetHierarchyRelationsOutput, error)
 	GetEventRecords(context.Context, *GetEventRecordsInput) (*GetEventRecordsOutput, error)
 	IsAuthorized(context.Context, *IsAuthorizedInput) (*common.Void, error)
-	AddResource(context.Context, *AddResourceInput) (*common.Void, error)
-	RemoveResource(context.Context, *RemoveResourceInput) (*common.Void, error)
-	AddResourceParent(context.Context, *AddResourceParentInput) (*common.Void, error)
-	RemoveResourceParent(context.Context, *RemoveResourceParentInput) (*common.Void, error)
-	AddUserRole(context.Context, *AddUserRoleInput) (*common.Void, error)
-	RemoveUserRole(context.Context, *RemoveUserRoleInput) (*common.Void, error)
+	AddAuthorizationResource(context.Context, *AddAuthorizationResourceInput) (*common.Void, error)
+	RemoveAuthorizationResource(context.Context, *RemoveAuthorizationResourceInput) (*common.Void, error)
+	AddAuthorizationResourceParent(context.Context, *AddAuthorizationResourceParentInput) (*common.Void, error)
+	RemoveAuthorizationResourceParent(context.Context, *RemoveAuthorizationResourceParentInput) (*common.Void, error)
+	AddUserPermission(context.Context, *AddUserPermissionInput) (*common.Void, error)
+	RemoveUserPermission(context.Context, *RemoveUserPermissionInput) (*common.Void, error)
 }
 
 func RegisterIAMServer(s *grpc.Server, srv IAMServer) {
@@ -967,110 +971,110 @@ func _IAM_IsAuthorized_Handler(srv interface{}, ctx context.Context, dec func(in
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_AddResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddResourceInput)
+func _IAM_AddAuthorizationResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddAuthorizationResourceInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).AddResource(ctx, in)
+		return srv.(IAMServer).AddAuthorizationResource(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/AddResource",
+		FullMethod: "/grpcapi.IAM/AddAuthorizationResource",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).AddResource(ctx, req.(*AddResourceInput))
+		return srv.(IAMServer).AddAuthorizationResource(ctx, req.(*AddAuthorizationResourceInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_RemoveResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RemoveResourceInput)
+func _IAM_RemoveAuthorizationResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RemoveAuthorizationResourceInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).RemoveResource(ctx, in)
+		return srv.(IAMServer).RemoveAuthorizationResource(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/RemoveResource",
+		FullMethod: "/grpcapi.IAM/RemoveAuthorizationResource",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).RemoveResource(ctx, req.(*RemoveResourceInput))
+		return srv.(IAMServer).RemoveAuthorizationResource(ctx, req.(*RemoveAuthorizationResourceInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_AddResourceParent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddResourceParentInput)
+func _IAM_AddAuthorizationResourceParent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddAuthorizationResourceParentInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).AddResourceParent(ctx, in)
+		return srv.(IAMServer).AddAuthorizationResourceParent(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/AddResourceParent",
+		FullMethod: "/grpcapi.IAM/AddAuthorizationResourceParent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).AddResourceParent(ctx, req.(*AddResourceParentInput))
+		return srv.(IAMServer).AddAuthorizationResourceParent(ctx, req.(*AddAuthorizationResourceParentInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_RemoveResourceParent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RemoveResourceParentInput)
+func _IAM_RemoveAuthorizationResourceParent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RemoveAuthorizationResourceParentInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).RemoveResourceParent(ctx, in)
+		return srv.(IAMServer).RemoveAuthorizationResourceParent(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/RemoveResourceParent",
+		FullMethod: "/grpcapi.IAM/RemoveAuthorizationResourceParent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).RemoveResourceParent(ctx, req.(*RemoveResourceParentInput))
+		return srv.(IAMServer).RemoveAuthorizationResourceParent(ctx, req.(*RemoveAuthorizationResourceParentInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_AddUserRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddUserRoleInput)
+func _IAM_AddUserPermission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddUserPermissionInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).AddUserRole(ctx, in)
+		return srv.(IAMServer).AddUserPermission(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/AddUserRole",
+		FullMethod: "/grpcapi.IAM/AddUserPermission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).AddUserRole(ctx, req.(*AddUserRoleInput))
+		return srv.(IAMServer).AddUserPermission(ctx, req.(*AddUserPermissionInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IAM_RemoveUserRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RemoveUserRoleInput)
+func _IAM_RemoveUserPermission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RemoveUserPermissionInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IAMServer).RemoveUserRole(ctx, in)
+		return srv.(IAMServer).RemoveUserPermission(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.IAM/RemoveUserRole",
+		FullMethod: "/grpcapi.IAM/RemoveUserPermission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IAMServer).RemoveUserRole(ctx, req.(*RemoveUserRoleInput))
+		return srv.(IAMServer).RemoveUserPermission(ctx, req.(*RemoveUserPermissionInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1100,28 +1104,28 @@ var _IAM_serviceDesc = grpc.ServiceDesc{
 			Handler:    _IAM_IsAuthorized_Handler,
 		},
 		{
-			MethodName: "AddResource",
-			Handler:    _IAM_AddResource_Handler,
+			MethodName: "AddAuthorizationResource",
+			Handler:    _IAM_AddAuthorizationResource_Handler,
 		},
 		{
-			MethodName: "RemoveResource",
-			Handler:    _IAM_RemoveResource_Handler,
+			MethodName: "RemoveAuthorizationResource",
+			Handler:    _IAM_RemoveAuthorizationResource_Handler,
 		},
 		{
-			MethodName: "AddResourceParent",
-			Handler:    _IAM_AddResourceParent_Handler,
+			MethodName: "AddAuthorizationResourceParent",
+			Handler:    _IAM_AddAuthorizationResourceParent_Handler,
 		},
 		{
-			MethodName: "RemoveResourceParent",
-			Handler:    _IAM_RemoveResourceParent_Handler,
+			MethodName: "RemoveAuthorizationResourceParent",
+			Handler:    _IAM_RemoveAuthorizationResourceParent_Handler,
 		},
 		{
-			MethodName: "AddUserRole",
-			Handler:    _IAM_AddUserRole_Handler,
+			MethodName: "AddUserPermission",
+			Handler:    _IAM_AddUserPermission_Handler,
 		},
 		{
-			MethodName: "RemoveUserRole",
-			Handler:    _IAM_RemoveUserRole_Handler,
+			MethodName: "RemoveUserPermission",
+			Handler:    _IAM_RemoveUserPermission_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
