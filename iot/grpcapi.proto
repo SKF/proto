@@ -25,14 +25,8 @@ service IoT {
 
   rpc IngestNodesData (IngestNodesDataInput) returns (IngestNodesDataOutput) {}
   rpc IngestNodeData (IngestNodeDataInput) returns (IngestNodeDataOutput) {}
-  rpc IngestNodeDataStream (stream IngestNodeDataStreamInput) returns (IngestNodeDataStreamOutput) {
-    option deprecated = true;
-  }
   rpc GetLatestNodeData (GetLatestNodeDataInput) returns (GetLatestNodeDataOutput) {}
   rpc GetNodeData (GetNodeDataInput) returns (GetNodeDataOutput) {}
-  rpc GetNodeDataStream (GetNodeDataStreamInput) returns (stream GetNodeDataStreamOutput) {
-    option deprecated = true;
-  }
   rpc DeleteNodeData(DeleteNodeDataInput) returns (common.Void) {}
   rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
