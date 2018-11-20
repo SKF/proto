@@ -17,7 +17,9 @@ service IoT {
   rpc DeleteTask (TaskUser) returns (common.Void) {}
   rpc GetUncompletedTasksByHierarchy (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc SetTaskStatus (SetTaskStatusInput) returns (common.Void) {}
-  rpc GetTaskStream (GetTaskStreamInput) returns (stream GetTaskStreamOutput) {}
+  rpc GetTaskStream (GetTaskStreamInput) returns (stream GetTaskStreamOutput) {
+    option deprecated = true;
+  }
   rpc GetTasksByStatus (GetTasksByStatusInput) returns (GetTasksByStatusOutput) {}
   rpc GetTaskByUUID (GetTaskByUUIDInput) returns (GetTaskByUUIDOutput) {}
   rpc GetTaskByLongId (GetTaskByLongIdInput) returns (GetTaskByLongIdOutput) {}
@@ -25,14 +27,8 @@ service IoT {
 
   rpc IngestNodesData (IngestNodesDataInput) returns (IngestNodesDataOutput) {}
   rpc IngestNodeData (IngestNodeDataInput) returns (IngestNodeDataOutput) {}
-  rpc IngestNodeDataStream (stream IngestNodeDataStreamInput) returns (IngestNodeDataStreamOutput) {
-    option deprecated = true;
-  }
   rpc GetLatestNodeData (GetLatestNodeDataInput) returns (GetLatestNodeDataOutput) {}
   rpc GetNodeData (GetNodeDataInput) returns (GetNodeDataOutput) {}
-  rpc GetNodeDataStream (GetNodeDataStreamInput) returns (stream GetNodeDataStreamOutput) {
-    option deprecated = true;
-  }
   rpc DeleteNodeData(DeleteNodeDataInput) returns (common.Void) {}
   rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
@@ -210,12 +206,14 @@ message IngestNodeDataOutput {}
 
 // IngestNodeDataStream messages
 message IngestNodeDataStreamInput {
+  option deprecated = true;
   string node_id = 1;
   common.Origin origin = 3;
   repeated NodeData node_data_list = 2;
 }
-
-message IngestNodeDataStreamOutput {}
+message IngestNodeDataStreamOutput {
+  option deprecated = true;
+}
 
 
 // GetNodeData messages
@@ -240,9 +238,11 @@ message GetLatestNodeDataOutput {
 }
 
 // GetNodeDataStream messages
-message GetNodeDataStreamInput {}
-
+message GetNodeDataStreamInput {
+  option deprecated = true;
+}
 message GetNodeDataStreamOutput {
+  option deprecated = true;
   string node_id = 1;
   NodeData node_data = 2;
 }
@@ -276,10 +276,12 @@ message GetMediaOutput {
 }
 
 message GetTaskStreamInput {
+  option deprecated = true;
   string hierarchy_id = 1;
 }
 
 message GetTaskStreamOutput {
+  option deprecated = true;
   TaskDescription task = 1;
 }
 
