@@ -17,7 +17,6 @@ service IoT {
   rpc DeleteTask (TaskUser) returns (common.Void) {}
   rpc GetUncompletedTasksByHierarchy (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc SetTaskStatus (SetTaskStatusInput) returns (common.Void) {}
-  rpc GetTaskStream (GetTaskStreamInput) returns (stream GetTaskStreamOutput) {}
   rpc GetTasksByStatus (GetTasksByStatusInput) returns (GetTasksByStatusOutput) {}
   rpc GetTaskByUUID (GetTaskByUUIDInput) returns (GetTaskByUUIDOutput) {}
   rpc GetTaskByLongId (GetTaskByLongIdInput) returns (GetTaskByLongIdOutput) {}
@@ -249,14 +248,6 @@ message GetMediaSignedUrlOutput {
 
 message GetMediaOutput {
   Media media = 1;
-}
-
-message GetTaskStreamInput {
-  string hierarchy_id = 1;
-}
-
-message GetTaskStreamOutput {
-  TaskDescription task = 1;
 }
 
 message GetTasksByStatusInput {
