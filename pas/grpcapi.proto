@@ -13,7 +13,10 @@ service PointAlarmStatus {
 
   rpc SetPointAlarmStatus (SetPointAlarmStatusInput) returns (SetPointAlarmStatusOutput) {}
   rpc GetPointAlarmStatus (GetPointAlarmStatusInput) returns (GetPointAlarmStatusOutput) {}
-  rpc GetPointAlarmStatusStream (GetPointAlarmStatusStreamInput) returns (stream GetPointAlarmStatusStreamOutput) {}
+  rpc GetPointAlarmStatusStream (GetPointAlarmStatusStreamInput) returns (stream GetPointAlarmStatusStreamOutput) {
+    option deprecated = true;
+  }
+  rpc GetPointAlarmStatusEventLog (GetPointAlarmStatusEventLogInput) return (GetPointAlarmStatusEventLogOutput) {}
   rpc CalculateAndSetPointAlarmStatus (CalculateAndSetPointAlarmStatusInput) returns (common.Void) {}
 }
 
@@ -122,12 +125,31 @@ message GetPointAlarmStatusOutput {
 
 
 // GetPointAlarmStatusStream Messages
-message GetPointAlarmStatusStreamInput {}
+message GetPointAlarmStatusStreamInput {
+  option deprecated = true;
+}
 message GetPointAlarmStatusStreamOutput {
+  option deprecated = true;
   string node_id = 1;
   AlarmStatus alarm_status = 2;
 }
 
+message PointAlarmStatusEvent {
+  string seq_id = 1;
+  string node_id = 2;
+  int64 timestamp = 3;
+  AlarmStatus new_status = 4;
+  AlarmStatus old_status = 5;
+}
+
+message GetPointAlarmStatusEventLogInput {
+  string seq_id = 1;
+}
+
+message GetPointAlarmStatusEventLogOutput {
+  repeated PointAlarmStatusEvent events = 1;
+  bool has_next = 2;
+}
 
 enum AlarmStatus {
   NOT_CONFIGURED = 0; // No threshold configured.
