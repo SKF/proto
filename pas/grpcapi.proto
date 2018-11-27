@@ -26,11 +26,6 @@ message DeepPingOutput {
   string value = 1;
 }
 
-// CalculateAndSetPointAlarmStatusInput
-message CalculateAndSetPointAlarmStatusInput {
-  string node_id = 1;
-  NodeData node_data = 2;
-}
 message NodeData {
   int64 created_at = 1;
   NodeDataContentType content_type = 2;
@@ -138,8 +133,7 @@ message PointAlarmStatusEvent {
   string seq_id = 1;
   string node_id = 2;
   int64 timestamp = 3;
-  AlarmStatus new_status = 4;
-  AlarmStatus old_status = 5;
+  AlarmStatus status = 4;
 }
 
 message GetPointAlarmStatusEventLogInput {
@@ -149,6 +143,12 @@ message GetPointAlarmStatusEventLogInput {
 message GetPointAlarmStatusEventLogOutput {
   repeated PointAlarmStatusEvent events = 1;
   bool has_next = 2;
+}
+
+// CalculateAndSetPointAlarmStatusInput
+message CalculateAndSetPointAlarmStatusInput {
+  string node_id = 1;
+  NodeData node_data = 2;
 }
 
 enum AlarmStatus {
