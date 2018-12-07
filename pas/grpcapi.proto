@@ -142,7 +142,6 @@ message GetPointAlarmStatusEventLogInput {
 
 message GetPointAlarmStatusEventLogOutput {
   repeated PointAlarmStatusEvent events = 1;
-  bool has_next = 2;
 }
 
 // CalculateAndSetPointAlarmStatusInput
