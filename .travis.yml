@@ -52,7 +52,7 @@ jobs:
       script:
         - go get -u google.golang.org/grpc
         - go get -d -u github.com/golang/protobuf/protoc-gen-go
-        - git -C $GOPATH/src/github.com/golang/protobuf checkout 1.2.0
+        - git -C $GOPATH/src/github.com/golang/protobuf checkout v1.2.0
         - go install github.com/golang/protobuf/protoc-gen-go
         - mv $GOPATH/bin build/bin
       after_failure:
