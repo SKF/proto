@@ -13,7 +13,10 @@ service PointAlarmStatus {
 
   rpc SetPointAlarmStatus (SetPointAlarmStatusInput) returns (SetPointAlarmStatusOutput) {}
   rpc GetPointAlarmStatus (GetPointAlarmStatusInput) returns (GetPointAlarmStatusOutput) {}
-  rpc GetPointAlarmStatusStream (GetPointAlarmStatusStreamInput) returns (stream GetPointAlarmStatusStreamOutput) {}
+  rpc GetPointAlarmStatusStream (GetPointAlarmStatusStreamInput) returns (stream GetPointAlarmStatusStreamOutput) {
+    option deprecated = true;
+  }
+  rpc GetPointAlarmStatusEventLog (GetPointAlarmStatusEventLogInput) returns (GetPointAlarmStatusEventLogOutput) {}
   rpc CalculateAndSetPointAlarmStatus (CalculateAndSetPointAlarmStatusInput) returns (common.Void) {}
 }
 
@@ -23,11 +26,6 @@ message DeepPingOutput {
   string value = 1;
 }
 
-// CalculateAndSetPointAlarmStatusInput
-message CalculateAndSetPointAlarmStatusInput {
-  string node_id = 1;
-  NodeData node_data = 2;
-}
 message NodeData {
   int64 created_at = 1;
   NodeDataContentType content_type = 2;
@@ -122,12 +120,35 @@ message GetPointAlarmStatusOutput {
 
 
 // GetPointAlarmStatusStream Messages
-message GetPointAlarmStatusStreamInput {}
+message GetPointAlarmStatusStreamInput {
+  option deprecated = true;
+}
 message GetPointAlarmStatusStreamOutput {
+  option deprecated = true;
   string node_id = 1;
   AlarmStatus alarm_status = 2;
 }
 
+message PointAlarmStatusEvent {
+  string seq_id = 1;
+  string node_id = 2;
+  int64 timestamp = 3;
+  AlarmStatus status = 4;
+}
+
+message GetPointAlarmStatusEventLogInput {
+  string seq_id = 1;
+}
+
+message GetPointAlarmStatusEventLogOutput {
+  repeated PointAlarmStatusEvent events = 1;
+}
+
+// CalculateAndSetPointAlarmStatusInput
+message CalculateAndSetPointAlarmStatusInput {
+  string node_id = 1;
+  NodeData node_data = 2;
+}
 
 enum AlarmStatus {
   NOT_CONFIGURED = 0; // No threshold configured.

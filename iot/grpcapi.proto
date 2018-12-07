@@ -29,8 +29,8 @@ service IoT {
   rpc IngestNodeData (IngestNodeDataInput) returns (IngestNodeDataOutput) {}
   rpc GetLatestNodeData (GetLatestNodeDataInput) returns (GetLatestNodeDataOutput) {}
   rpc GetNodeData (GetNodeDataInput) returns (GetNodeDataOutput) {}
-  rpc DeleteNodeData(DeleteNodeDataInput) returns (common.Void) {}
-  rpc GetNodeEventLog(GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
+  rpc DeleteNodeData (DeleteNodeDataInput) returns (common.Void) {}
+  rpc GetNodeEventLog (GetNodeEventLogInput) returns (GetNodeEventLogOutput) {}
 
   rpc GetMedia (GetMediaInput) returns (GetMediaOutput) {}
   rpc RequestGetMediaSignedUrl (GetMediaSignedUrlInput) returns (GetMediaSignedUrlOutput) {}
