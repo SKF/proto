@@ -724,6 +724,36 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl.RequestPutMediaSignedUrl).Build();
     }
 
+    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, IoTBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
+      serviceBinder.AddMethod(__Method_CreateTask, serviceImpl.CreateTask);
+      serviceBinder.AddMethod(__Method_GetAllTasks, serviceImpl.GetAllTasks);
+      serviceBinder.AddMethod(__Method_GetUncompletedTasks, serviceImpl.GetUncompletedTasks);
+      serviceBinder.AddMethod(__Method_SetTaskCompleted, serviceImpl.SetTaskCompleted);
+      serviceBinder.AddMethod(__Method_DeleteTask, serviceImpl.DeleteTask);
+      serviceBinder.AddMethod(__Method_GetUncompletedTasksByHierarchy, serviceImpl.GetUncompletedTasksByHierarchy);
+      serviceBinder.AddMethod(__Method_SetTaskStatus, serviceImpl.SetTaskStatus);
+      serviceBinder.AddMethod(__Method_GetTaskStream, serviceImpl.GetTaskStream);
+      serviceBinder.AddMethod(__Method_GetTasksByStatus, serviceImpl.GetTasksByStatus);
+      serviceBinder.AddMethod(__Method_GetTaskByUUID, serviceImpl.GetTaskByUUID);
+      serviceBinder.AddMethod(__Method_GetTaskByLongId, serviceImpl.GetTaskByLongId);
+      serviceBinder.AddMethod(__Method_GetTasksModifiedSinceTimestamp, serviceImpl.GetTasksModifiedSinceTimestamp);
+      serviceBinder.AddMethod(__Method_IngestNodesData, serviceImpl.IngestNodesData);
+      serviceBinder.AddMethod(__Method_IngestNodeData, serviceImpl.IngestNodeData);
+      serviceBinder.AddMethod(__Method_GetLatestNodeData, serviceImpl.GetLatestNodeData);
+      serviceBinder.AddMethod(__Method_GetNodeData, serviceImpl.GetNodeData);
+      serviceBinder.AddMethod(__Method_DeleteNodeData, serviceImpl.DeleteNodeData);
+      serviceBinder.AddMethod(__Method_GetNodeEventLog, serviceImpl.GetNodeEventLog);
+      serviceBinder.AddMethod(__Method_GetMedia, serviceImpl.GetMedia);
+      serviceBinder.AddMethod(__Method_RequestGetMediaSignedUrl, serviceImpl.RequestGetMediaSignedUrl);
+      serviceBinder.AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl.RequestPutMediaSignedUrl);
+    }
+
   }
 }
 #endregion

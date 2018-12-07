@@ -395,6 +395,25 @@ namespace SKF.Enlight.API.IAM {
           .AddMethod(__Method_RemoveUserPermission, serviceImpl.RemoveUserPermission).Build();
     }
 
+    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, IAMBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
+      serviceBinder.AddMethod(__Method_CheckAuthentication, serviceImpl.CheckAuthentication);
+      serviceBinder.AddMethod(__Method_GetHierarchyRelations, serviceImpl.GetHierarchyRelations);
+      serviceBinder.AddMethod(__Method_GetEventRecords, serviceImpl.GetEventRecords);
+      serviceBinder.AddMethod(__Method_IsAuthorized, serviceImpl.IsAuthorized);
+      serviceBinder.AddMethod(__Method_AddAuthorizationResource, serviceImpl.AddAuthorizationResource);
+      serviceBinder.AddMethod(__Method_RemoveAuthorizationResource, serviceImpl.RemoveAuthorizationResource);
+      serviceBinder.AddMethod(__Method_AddAuthorizationResourceParent, serviceImpl.AddAuthorizationResourceParent);
+      serviceBinder.AddMethod(__Method_RemoveAuthorizationResourceParent, serviceImpl.RemoveAuthorizationResourceParent);
+      serviceBinder.AddMethod(__Method_AddUserPermission, serviceImpl.AddUserPermission);
+      serviceBinder.AddMethod(__Method_RemoveUserPermission, serviceImpl.RemoveUserPermission);
+    }
+
   }
 }
 #endregion
