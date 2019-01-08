@@ -32,7 +32,7 @@ message ConfigResponse {
   string ID = 1;
   string versionID = 2;
   string createdAtDate = 3; // RFC_3339 format
-  MeasurementPointConfig measurementConfig = 4;
+  QCMeasurementPointConfig measurementConfig = 4;
 }
 
 message LatestConfigRequest {
@@ -44,7 +44,7 @@ message ConfigsResponse {
 }
 
 message SetConfigRequest {
-  MeasurementPointConfig measurementConfig = 2;
+  QCMeasurementPointConfig measurementConfig = 2;
   repeated string targetID = 1;
 }
 
@@ -53,7 +53,7 @@ enum TargetType {
   TARGET_MEASUREMENT_POINT = 1; 
 }
 
-message MeasurementPointConfig {
+message QCMeasurementPointConfig {
   reserved 3, 4, 15, 16, 17;
   SampleRate sampleRate = 1;
   SampleAmount sampleAmount = 2;
@@ -115,13 +115,11 @@ enum ExternalSensorSensitivity {
 enum ExternalSensorICP {
   ICP_UNKNOWN = 0;
   ICP_REQUIRED_WHEN_IN_USE = 1;
-
 }
 
 enum ViewSignalType {
   VIEW_SIGNAL_UNKNOWN = 0;
   VIEW_SIGNAL_TIME_WAVEFORM_ONLY = 1;
-  
 }
 
 enum YAxisUnits {
@@ -129,25 +127,21 @@ enum YAxisUnits {
   Y_AXIS_ACCELERATION_IN_GS = 1;
   Y_AXIS_VELOCITY_IN_MM_PER_SEC = 2;
   Y_AXIS_ENVELOPED_GE_IN_GES = 3;
-
 }
 
 enum XAxisUnits {
   X_AXIS_UNKNONW = 0;
   X_AXIS_FREQUENCY_IN_HZ = 1;
-
 }
 
 enum YAxisDisplay {
   Y_AXIS_DISPLAY_UNKNOWN = 0;
   Y_AXIS_DISPLAY_LINEARLY = 1;
-
 }
 
 enum InputRange {
   RANGE_UNKNOWN = 0;
   RANGE_100_GS = 1;
-
 }
 
 enum DetectionType {
@@ -157,13 +151,11 @@ enum DetectionType {
   DETECTION_PEAK_TO_PEAK_CALCULATED_FROM_RMS = 3;
   DETECTION_TRUE_PEAK_FROM_PEAK_TO_PEAK = 4;
   DETECTION_TRUE_PEAK_TO_PEAK = 5;
-
 }
 
 enum WindowType {
   WINDOW_UNKNOWN = 0;
   WINDOW_HANNING = 1;
-
 }
 
 enum HighPassFilter {
@@ -172,7 +164,6 @@ enum HighPassFilter {
   FILTER_2_HZ = 2;
   FILTER_10_HZ = 3;
   FILTER_70_HZ = 4;
-
 }
 
 enum Temperature {
@@ -180,5 +171,4 @@ enum Temperature {
   TEMPERATURE_DEGREES_FAHRENHEIT = 1;
   TEMPERATURE_DEGREES_CELCIUS = 2;
   TEMPERATURE_DEGREES_KELVIN = 3;
-
 }
