@@ -7,8 +7,8 @@ import "common/common.proto";
 
 service ResourceConfig {
   rpc GetSpecification (SpecificationRequest) returns (SpecificationResponse) {}
-  rpc GetConfig (ConfigRequest) returns (ConfigResponse) {}
-  rpc GetLatestConfigByTargetID (LatestConfigRequest) returns (ConfigResponse) {}
+  rpc GetConfig (ConfigRequest) returns (ConfigsResponse) {}
+  rpc GetLatestConfigByTargetID (LatestConfigRequest) returns (ConfigsResponse) {}
   rpc GetAllLatestConfigs (common.Void) returns (ConfigsResponse) {}
   rpc SetConfigByTargetIDs (SetConfigRequest) returns (ConfigResponse) {}
 }
@@ -25,18 +25,19 @@ message SpecificationResponse {
 }
 
 message ConfigRequest {
-  string ID = 1;
+  repeated string configID = 1;
 }
 
 message ConfigResponse {
-  string ID = 1;
+  string configID = 1;
   string versionID = 2;
   string createdAtDate = 3; // RFC_3339 format
-  QCMeasurementPointConfig measurementConfig = 4;
+  repeated string targetID = 4;
+  QCMeasurementPointConfig measurementConfig = 5;
 }
 
 message LatestConfigRequest {
-  string targetID = 1;
+  repeated string targetID = 1;
 }
 
 message ConfigsResponse {
@@ -155,7 +156,7 @@ enum DetectionType {
 
 enum WindowType {
   WINDOW_UNKNOWN = 0;
-  WINDOW_HANNING = 1;
+    = 1;
 }
 
 enum HighPassFilter {
