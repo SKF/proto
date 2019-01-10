@@ -12,13 +12,13 @@ service IAM {
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
 
-  rpc IsAuthorized (IsAuthorizedInput) returns (common.Void) {}
+  rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   
   rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
   rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
 
-  rpc AddAuthorizationResourceParent (AddAuthorizationResourceParentInput) returns (common.Void) {}
-  rpc RemoveAuthorizationResourceParent (RemoveAuthorizationResourceParentInput) returns (common.Void) {}
+  rpc AddAuthorizationResourceRelation (AddAuthorizationResourceRelationInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResourceRelation (RemoveAuthorizationResourceRelationInput) returns (common.Void) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
@@ -63,6 +63,10 @@ message IsAuthorizedInput {
   common.Origin resource = 3;
 }
 
+message IsAuthorizedOutput {
+  bool ok = 1;
+}
+
 message AddAuthorizationResourceInput {
   common.Origin resource = 1;
 }
@@ -71,12 +75,12 @@ message RemoveAuthorizationResourceInput {
   common.Origin resource = 1;
 }
 
-message AddAuthorizationResourceParentInput {
+message AddAuthorizationResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
 }
 
-message RemoveAuthorizationResourceParentInput {
+message RemoveAuthorizationResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
 }
