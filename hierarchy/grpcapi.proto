@@ -36,11 +36,21 @@ enum ValueType {
   MULTI_CHOICE = 2;
 }
 
+enum VisualizationType {
+  VISUALIZATION_NONE = 0;
+  VISUALIZATION_CIRCULAR_GAUGE = 1;
+  VISUALIZATION_LEVEL_GAUGE = 2;
+}
+
 message InspectionPoint {
   string OBSOLETE_valueType = 1;
   ValueType valueType = 4;
   string numericUnit = 2;
   repeated string answers = 3;
+
+  VisualizationType visualizationType = 5;
+  string visualizationMinValue = 6;
+  string visualizationMaxValue = 7;
 }
 
 message LubricationPoint {
