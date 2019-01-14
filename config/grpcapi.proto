@@ -1,0 +1,175 @@
+syntax = "proto3";
+package grpcapi;
+
+option csharp_namespace = "SKF.Enlight.API.Config";
+
+import "common/common.proto";
+
+service ResourceConfig {
+  rpc GetSpecification (SpecificationRequest) returns (SpecificationResponse) {}
+  rpc GetConfig (ConfigRequest) returns (ConfigsResponse) {}
+  rpc GetLatestConfigByTargetID (LatestConfigRequest) returns (ConfigsResponse) {}
+  rpc GetAllLatestConfigs (common.Void) returns (ConfigsResponse) {}
+  rpc SetConfigByTargetIDs (SetConfigRequest) returns (ConfigResponse) {}
+}
+
+message SpecificationRequest {
+  TargetType targetType = 1;
+}
+
+message SpecificationResponse {
+  string ID = 1;
+  string versionID = 2;
+  string createdAtDate = 3; // RFC_3339 format
+  bytes specification = 4;
+}
+
+message ConfigRequest {
+  repeated string configIDs = 1;
+}
+
+message ConfigsResponse {
+  repeated ConfigResponse configs = 1;
+}
+
+message ConfigResponse {
+  string configID = 1;
+  string versionID = 2;
+  string createdAtDate = 3; // RFC_3339 format
+  repeated string targetID = 4;
+  QCMeasurementPointConfig measurementConfig = 5;
+}
+
+message LatestConfigRequest {
+  repeated string targetIDs = 1;
+}
+
+message SetConfigRequest {
+  QCMeasurementPointConfig measurementConfig = 2;
+  repeated string targetIDs = 1;
+}
+
+enum TargetType {
+  TARGET_GENERIC = 0;
+  TARGET_QUICK_COLLECT_MEASUREMENT_POINT = 1; 
+}
+
+message QCMeasurementPointConfig {
+  reserved 3, 4, 15, 16, 17;
+  SampleRate sampleRate = 1;
+  SampleAmount sampleAmount = 2;
+  EnvelopeBandSelection envelopeBandSelection = 5;
+  ExternalSensorEngineeringUnits externalSensorEngineeringUnits = 6;
+  ExternalSensorSensitivity externalSensorSensitivity = 7;
+  ExternalSensorICP externalSensorICP = 8;
+  ViewSignalType viewSignalType = 9;
+  YAxisUnits yAxisUnits = 10;
+  XAxisUnits XAxisUnits = 11;
+  YAxisDisplay yAxisDisplay = 12;
+  InputRange inputRange = 13;
+  DetectionType detectionType = 14;
+  WindowType windowType = 18;
+  HighPassFilter highPassFilter = 19;
+  Temperature temperature = 20;
+
+}
+
+enum SampleRate {
+  RATE_UNKNOWN = 0;
+  RATE_256 = 1;
+  RATE_1280 = 2;
+  RATE_2560 = 3;
+  RATE_5120 = 4;
+  RATE_12800 = 5;
+  RATE_25600 = 6;
+  RATE_51200 = 7;
+  RATE_102400 = 8;
+}
+
+enum SampleAmount {
+  AMOUNT_UNKNOWN = 0;
+  AMOUNT_256 = 1;
+  AMOUNT_512 = 2;
+  AMOUNT_1024 = 3;
+  AMOUNT_2048 = 4;
+  AMOUNT_4096 = 5;
+  AMOUNT_8192 = 6;
+}
+
+enum EnvelopeBandSelection {
+  BAND_UNKNOWN = 0;
+  BAND_1 = 1;
+  BAND_2 = 2;
+  BAND_3 = 3;
+}
+
+enum ExternalSensorEngineeringUnits {
+  UNIT_UNKNOWN = 0;
+  UNIT_ACCELERATION_EUS_GS = 1;
+}
+
+enum ExternalSensorSensitivity {
+  SENSITIVITY_UNKNOWN = 0;
+  SENSITIVITY_100_MV_PER_EU = 1;
+}
+
+enum ExternalSensorICP {
+  ICP_UNKNOWN = 0;
+  ICP_REQUIRED_WHEN_IN_USE = 1;
+}
+
+enum ViewSignalType {
+  VIEW_SIGNAL_UNKNOWN = 0;
+  VIEW_SIGNAL_SPECTRUM_ONLY = 1;
+}
+
+enum YAxisUnits {
+  Y_AXIS_UNKNOWN = 0;
+  Y_AXIS_ACCELERATION_IN_GS = 1;
+  Y_AXIS_VELOCITY_IN_MM_PER_SEC = 2;
+  Y_AXIS_ENVELOPED_GE_IN_GES = 3;
+}
+
+enum XAxisUnits {
+  X_AXIS_UNKNONW = 0;
+  X_AXIS_FREQUENCY_IN_HZ = 1;
+}
+
+enum YAxisDisplay {
+  Y_AXIS_DISPLAY_UNKNOWN = 0;
+  Y_AXIS_DISPLAY_LINEARLY = 1;
+}
+
+enum InputRange {
+  RANGE_UNKNOWN = 0;
+  RANGE_100_GS = 1;
+}
+
+enum DetectionType {
+  DETECTION_UNKNOWN = 0;
+  DETECTION_RMS = 1;
+  DETECTION_PEAK_CALCULATED_FROM_RMS = 2;
+  DETECTION_PEAK_TO_PEAK_CALCULATED_FROM_RMS = 3;
+  DETECTION_TRUE_PEAK_FROM_PEAK_TO_PEAK = 4;
+  DETECTION_TRUE_PEAK_TO_PEAK = 5;
+}
+
+enum WindowType {
+  WINDOW_UNKNOWN = 0;
+  WINDOW_HANNING  = 1;
+}
+
+enum HighPassFilter {
+  FILTER_UNKNOWN = 0;
+  FILTER_OFF = 1;
+  FILTER_2_HZ = 2;
+  FILTER_10_HZ = 3;
+  FILTER_70_HZ = 4;
+}
+
+enum Temperature {
+  TEMPERATURE_UNKNOWN = 0;
+  TEMPERATURE_DEGREES_FAHRENHEIT = 1;
+  TEMPERATURE_DEGREES_CELCIUS = 2;
+  TEMPERATURE_DEGREES_KELVIN = 3;
+}
