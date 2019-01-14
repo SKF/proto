@@ -51,7 +51,7 @@ message SetConfigRequest {
 
 enum TargetType {
   TARGET_GENERIC = 0;
-  TARGET_MEASUREMENT_POINT = 1; 
+  TARGET_QUICK_COLLECT_MEASUREMENT_POINT = 1; 
 }
 
 message QCMeasurementPointConfig {
@@ -120,7 +120,7 @@ enum ExternalSensorICP {
 
 enum ViewSignalType {
   VIEW_SIGNAL_UNKNOWN = 0;
-  VIEW_SIGNAL_TIME_WAVEFORM_ONLY = 1;
+  VIEW_SIGNAL_SPECTRUM_ONLY = 1;
 }
 
 enum YAxisUnits {
