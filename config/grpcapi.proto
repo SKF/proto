@@ -25,7 +25,11 @@ message SpecificationResponse {
 }
 
 message ConfigRequest {
-  repeated string configID = 1;
+  repeated string configIDs = 1;
+}
+
+message ConfigsResponse {
+  repeated ConfigResponse configs = 1;
 }
 
 message ConfigResponse {
@@ -38,10 +42,6 @@ message ConfigResponse {
 
 message LatestConfigRequest {
   repeated string targetID = 1;
-}
-
-message ConfigsResponse {
-  repeated ConfigResponse configs = 1;
 }
 
 message SetConfigRequest {
@@ -156,7 +156,7 @@ enum DetectionType {
 
 enum WindowType {
   WINDOW_UNKNOWN = 0;
-    = 1;
+  WINDOW_HANNING  = 1;
 }
 
 enum HighPassFilter {
