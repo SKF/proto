@@ -41,12 +41,12 @@ message ConfigResponse {
 }
 
 message LatestConfigRequest {
-  repeated string targetID = 1;
+  repeated string targetIDs = 1;
 }
 
 message SetConfigRequest {
   QCMeasurementPointConfig measurementConfig = 2;
-  repeated string targetID = 1;
+  repeated string targetIDs = 1;
 }
 
 enum TargetType {
