@@ -8,6 +8,7 @@ import "common/common.proto";
 service IAM {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
   rpc CheckAuthentication (CheckAuthenticationInput) returns (User) {}
+  rpc CheckAuthenticationByEndpoint (CheckAuthenticationByEndpointInput) returns (User) {}
 
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
@@ -36,6 +37,13 @@ message GetHierarchyRelationsOutput {
 message CheckAuthenticationInput {
   string token = 1;
   string methodArn = 2;
+}
+
+message CheckAuthenticationByEndpointInput {
+  string token = 1;
+  string endpoint = 2;
+  string method = 3;
+  string api = 4;
 }
 
 message GetEventRecordsInput {
