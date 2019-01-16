@@ -32,12 +32,16 @@ message ConfigsResponse {
   repeated ConfigResponse configs = 1;
 }
 
+message Configs {
+  QCMeasurementPointConfig configQC = 1;
+}
+
 message ConfigResponse {
   string configID = 1;
   string versionID = 2;
   string createdAtDate = 3; // RFC_3339 format
   repeated string targetID = 4;
-  QCMeasurementPointConfig measurementConfig = 5;
+  QCMeasurementPointConfig configQC = 5;
 }
 
 message LatestConfigRequest {
@@ -45,7 +49,7 @@ message LatestConfigRequest {
 }
 
 message SetConfigRequest {
-  QCMeasurementPointConfig measurementConfig = 2;
+  QCMeasurementPointConfig configQC = 2;
   repeated string targetIDs = 1;
 }
 
