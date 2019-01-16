@@ -32,6 +32,10 @@ message ConfigsResponse {
   repeated ConfigResponse configs = 1;
 }
 
+message Configs {
+  QCMeasurementPointConfig measurementConfig = 1;
+}
+
 message ConfigResponse {
   string configID = 1;
   string versionID = 2;
