@@ -36,7 +36,7 @@ func (m *GetHierarchyRelationsInput) Reset()         { *m = GetHierarchyRelation
 func (m *GetHierarchyRelationsInput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsInput) ProtoMessage()    {}
 func (*GetHierarchyRelationsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{0}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{0}
 }
 func (m *GetHierarchyRelationsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsInput.Unmarshal(m, b)
@@ -74,7 +74,7 @@ func (m *GetHierarchyRelationsOutput) Reset()         { *m = GetHierarchyRelatio
 func (m *GetHierarchyRelationsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetHierarchyRelationsOutput) ProtoMessage()    {}
 func (*GetHierarchyRelationsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{1}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{1}
 }
 func (m *GetHierarchyRelationsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetHierarchyRelationsOutput.Unmarshal(m, b)
@@ -113,7 +113,7 @@ func (m *CheckAuthenticationInput) Reset()         { *m = CheckAuthenticationInp
 func (m *CheckAuthenticationInput) String() string { return proto.CompactTextString(m) }
 func (*CheckAuthenticationInput) ProtoMessage()    {}
 func (*CheckAuthenticationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{2}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{2}
 }
 func (m *CheckAuthenticationInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CheckAuthenticationInput.Unmarshal(m, b)
@@ -161,7 +161,7 @@ func (m *CheckAuthenticationByEndpointInput) Reset()         { *m = CheckAuthent
 func (m *CheckAuthenticationByEndpointInput) String() string { return proto.CompactTextString(m) }
 func (*CheckAuthenticationByEndpointInput) ProtoMessage()    {}
 func (*CheckAuthenticationByEndpointInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{3}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{3}
 }
 func (m *CheckAuthenticationByEndpointInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CheckAuthenticationByEndpointInput.Unmarshal(m, b)
@@ -221,7 +221,7 @@ func (m *GetEventRecordsInput) Reset()         { *m = GetEventRecordsInput{} }
 func (m *GetEventRecordsInput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsInput) ProtoMessage()    {}
 func (*GetEventRecordsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{4}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{4}
 }
 func (m *GetEventRecordsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsInput.Unmarshal(m, b)
@@ -266,7 +266,7 @@ func (m *GetEventRecordsOutput) Reset()         { *m = GetEventRecordsOutput{} }
 func (m *GetEventRecordsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetEventRecordsOutput) ProtoMessage()    {}
 func (*GetEventRecordsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{5}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{5}
 }
 func (m *GetEventRecordsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetEventRecordsOutput.Unmarshal(m, b)
@@ -310,7 +310,7 @@ func (m *User) Reset()         { *m = User{} }
 func (m *User) String() string { return proto.CompactTextString(m) }
 func (*User) ProtoMessage()    {}
 func (*User) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{6}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{6}
 }
 func (m *User) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_User.Unmarshal(m, b)
@@ -392,7 +392,7 @@ func (m *IsAuthorizedInput) Reset()         { *m = IsAuthorizedInput{} }
 func (m *IsAuthorizedInput) String() string { return proto.CompactTextString(m) }
 func (*IsAuthorizedInput) ProtoMessage()    {}
 func (*IsAuthorizedInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{7}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{7}
 }
 func (m *IsAuthorizedInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_IsAuthorizedInput.Unmarshal(m, b)
@@ -444,7 +444,7 @@ func (m *IsAuthorizedOutput) Reset()         { *m = IsAuthorizedOutput{} }
 func (m *IsAuthorizedOutput) String() string { return proto.CompactTextString(m) }
 func (*IsAuthorizedOutput) ProtoMessage()    {}
 func (*IsAuthorizedOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{8}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{8}
 }
 func (m *IsAuthorizedOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_IsAuthorizedOutput.Unmarshal(m, b)
@@ -482,7 +482,7 @@ func (m *AddAuthorizationResourceInput) Reset()         { *m = AddAuthorizationR
 func (m *AddAuthorizationResourceInput) String() string { return proto.CompactTextString(m) }
 func (*AddAuthorizationResourceInput) ProtoMessage()    {}
 func (*AddAuthorizationResourceInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{9}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{9}
 }
 func (m *AddAuthorizationResourceInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddAuthorizationResourceInput.Unmarshal(m, b)
@@ -520,7 +520,7 @@ func (m *RemoveAuthorizationResourceInput) Reset()         { *m = RemoveAuthoriz
 func (m *RemoveAuthorizationResourceInput) String() string { return proto.CompactTextString(m) }
 func (*RemoveAuthorizationResourceInput) ProtoMessage()    {}
 func (*RemoveAuthorizationResourceInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{10}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{10}
 }
 func (m *RemoveAuthorizationResourceInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RemoveAuthorizationResourceInput.Unmarshal(m, b)
@@ -547,6 +547,82 @@ func (m *RemoveAuthorizationResourceInput) GetResource() *common.Origin {
 	return nil
 }
 
+type GetAuthorizationResourcesByTypeInput struct {
+	ResourceType         string   `protobuf:"bytes,1,opt,name=resource_type,json=resourceType,proto3" json:"resource_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetAuthorizationResourcesByTypeInput) Reset()         { *m = GetAuthorizationResourcesByTypeInput{} }
+func (m *GetAuthorizationResourcesByTypeInput) String() string { return proto.CompactTextString(m) }
+func (*GetAuthorizationResourcesByTypeInput) ProtoMessage()    {}
+func (*GetAuthorizationResourcesByTypeInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{11}
+}
+func (m *GetAuthorizationResourcesByTypeInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeInput.Unmarshal(m, b)
+}
+func (m *GetAuthorizationResourcesByTypeInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeInput.Marshal(b, m, deterministic)
+}
+func (dst *GetAuthorizationResourcesByTypeInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAuthorizationResourcesByTypeInput.Merge(dst, src)
+}
+func (m *GetAuthorizationResourcesByTypeInput) XXX_Size() int {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeInput.Size(m)
+}
+func (m *GetAuthorizationResourcesByTypeInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAuthorizationResourcesByTypeInput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetAuthorizationResourcesByTypeInput proto.InternalMessageInfo
+
+func (m *GetAuthorizationResourcesByTypeInput) GetResourceType() string {
+	if m != nil {
+		return m.ResourceType
+	}
+	return ""
+}
+
+type GetAuthorizationResourcesByTypeOutput struct {
+	Resources            []*common.Origin `protobuf:"bytes,1,rep,name=resources,proto3" json:"resources,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *GetAuthorizationResourcesByTypeOutput) Reset()         { *m = GetAuthorizationResourcesByTypeOutput{} }
+func (m *GetAuthorizationResourcesByTypeOutput) String() string { return proto.CompactTextString(m) }
+func (*GetAuthorizationResourcesByTypeOutput) ProtoMessage()    {}
+func (*GetAuthorizationResourcesByTypeOutput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{12}
+}
+func (m *GetAuthorizationResourcesByTypeOutput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeOutput.Unmarshal(m, b)
+}
+func (m *GetAuthorizationResourcesByTypeOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeOutput.Marshal(b, m, deterministic)
+}
+func (dst *GetAuthorizationResourcesByTypeOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAuthorizationResourcesByTypeOutput.Merge(dst, src)
+}
+func (m *GetAuthorizationResourcesByTypeOutput) XXX_Size() int {
+	return xxx_messageInfo_GetAuthorizationResourcesByTypeOutput.Size(m)
+}
+func (m *GetAuthorizationResourcesByTypeOutput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAuthorizationResourcesByTypeOutput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetAuthorizationResourcesByTypeOutput proto.InternalMessageInfo
+
+func (m *GetAuthorizationResourcesByTypeOutput) GetResources() []*common.Origin {
+	if m != nil {
+		return m.Resources
+	}
+	return nil
+}
+
 type AddAuthorizationResourceRelationInput struct {
 	Resource             *common.Origin `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
 	Parent               *common.Origin `protobuf:"bytes,2,opt,name=parent,proto3" json:"parent,omitempty"`
@@ -559,7 +635,7 @@ func (m *AddAuthorizationResourceRelationInput) Reset()         { *m = AddAuthor
 func (m *AddAuthorizationResourceRelationInput) String() string { return proto.CompactTextString(m) }
 func (*AddAuthorizationResourceRelationInput) ProtoMessage()    {}
 func (*AddAuthorizationResourceRelationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{11}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{13}
 }
 func (m *AddAuthorizationResourceRelationInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddAuthorizationResourceRelationInput.Unmarshal(m, b)
@@ -607,7 +683,7 @@ func (m *RemoveAuthorizationResourceRelationInput) Reset() {
 func (m *RemoveAuthorizationResourceRelationInput) String() string { return proto.CompactTextString(m) }
 func (*RemoveAuthorizationResourceRelationInput) ProtoMessage()    {}
 func (*RemoveAuthorizationResourceRelationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{12}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{14}
 }
 func (m *RemoveAuthorizationResourceRelationInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RemoveAuthorizationResourceRelationInput.Unmarshal(m, b)
@@ -641,6 +717,86 @@ func (m *RemoveAuthorizationResourceRelationInput) GetParent() *common.Origin {
 	return nil
 }
 
+type GetAuthorizationResourceRelationsInput struct {
+	ResourceId           string   `protobuf:"bytes,1,opt,name=resource_id,json=resourceId,proto3" json:"resource_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetAuthorizationResourceRelationsInput) Reset() {
+	*m = GetAuthorizationResourceRelationsInput{}
+}
+func (m *GetAuthorizationResourceRelationsInput) String() string { return proto.CompactTextString(m) }
+func (*GetAuthorizationResourceRelationsInput) ProtoMessage()    {}
+func (*GetAuthorizationResourceRelationsInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{15}
+}
+func (m *GetAuthorizationResourceRelationsInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsInput.Unmarshal(m, b)
+}
+func (m *GetAuthorizationResourceRelationsInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsInput.Marshal(b, m, deterministic)
+}
+func (dst *GetAuthorizationResourceRelationsInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAuthorizationResourceRelationsInput.Merge(dst, src)
+}
+func (m *GetAuthorizationResourceRelationsInput) XXX_Size() int {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsInput.Size(m)
+}
+func (m *GetAuthorizationResourceRelationsInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAuthorizationResourceRelationsInput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetAuthorizationResourceRelationsInput proto.InternalMessageInfo
+
+func (m *GetAuthorizationResourceRelationsInput) GetResourceId() string {
+	if m != nil {
+		return m.ResourceId
+	}
+	return ""
+}
+
+type GetAuthorizationResourceRelationsOutput struct {
+	Resources            []*common.Origin `protobuf:"bytes,1,rep,name=resources,proto3" json:"resources,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *GetAuthorizationResourceRelationsOutput) Reset() {
+	*m = GetAuthorizationResourceRelationsOutput{}
+}
+func (m *GetAuthorizationResourceRelationsOutput) String() string { return proto.CompactTextString(m) }
+func (*GetAuthorizationResourceRelationsOutput) ProtoMessage()    {}
+func (*GetAuthorizationResourceRelationsOutput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{16}
+}
+func (m *GetAuthorizationResourceRelationsOutput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsOutput.Unmarshal(m, b)
+}
+func (m *GetAuthorizationResourceRelationsOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsOutput.Marshal(b, m, deterministic)
+}
+func (dst *GetAuthorizationResourceRelationsOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAuthorizationResourceRelationsOutput.Merge(dst, src)
+}
+func (m *GetAuthorizationResourceRelationsOutput) XXX_Size() int {
+	return xxx_messageInfo_GetAuthorizationResourceRelationsOutput.Size(m)
+}
+func (m *GetAuthorizationResourceRelationsOutput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAuthorizationResourceRelationsOutput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetAuthorizationResourceRelationsOutput proto.InternalMessageInfo
+
+func (m *GetAuthorizationResourceRelationsOutput) GetResources() []*common.Origin {
+	if m != nil {
+		return m.Resources
+	}
+	return nil
+}
+
 type AddUserPermissionInput struct {
 	UserId               string         `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	Role                 string         `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
@@ -654,7 +810,7 @@ func (m *AddUserPermissionInput) Reset()         { *m = AddUserPermissionInput{}
 func (m *AddUserPermissionInput) String() string { return proto.CompactTextString(m) }
 func (*AddUserPermissionInput) ProtoMessage()    {}
 func (*AddUserPermissionInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{13}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{17}
 }
 func (m *AddUserPermissionInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddUserPermissionInput.Unmarshal(m, b)
@@ -708,7 +864,7 @@ func (m *RemoveUserPermissionInput) Reset()         { *m = RemoveUserPermissionI
 func (m *RemoveUserPermissionInput) String() string { return proto.CompactTextString(m) }
 func (*RemoveUserPermissionInput) ProtoMessage()    {}
 func (*RemoveUserPermissionInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_8110ef36cde56942, []int{14}
+	return fileDescriptor_grpcapi_37c55ef2fb91c80d, []int{18}
 }
 func (m *RemoveUserPermissionInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RemoveUserPermissionInput.Unmarshal(m, b)
@@ -761,8 +917,12 @@ func init() {
 	proto.RegisterType((*IsAuthorizedOutput)(nil), "grpcapi.IsAuthorizedOutput")
 	proto.RegisterType((*AddAuthorizationResourceInput)(nil), "grpcapi.AddAuthorizationResourceInput")
 	proto.RegisterType((*RemoveAuthorizationResourceInput)(nil), "grpcapi.RemoveAuthorizationResourceInput")
+	proto.RegisterType((*GetAuthorizationResourcesByTypeInput)(nil), "grpcapi.GetAuthorizationResourcesByTypeInput")
+	proto.RegisterType((*GetAuthorizationResourcesByTypeOutput)(nil), "grpcapi.GetAuthorizationResourcesByTypeOutput")
 	proto.RegisterType((*AddAuthorizationResourceRelationInput)(nil), "grpcapi.AddAuthorizationResourceRelationInput")
 	proto.RegisterType((*RemoveAuthorizationResourceRelationInput)(nil), "grpcapi.RemoveAuthorizationResourceRelationInput")
+	proto.RegisterType((*GetAuthorizationResourceRelationsInput)(nil), "grpcapi.GetAuthorizationResourceRelationsInput")
+	proto.RegisterType((*GetAuthorizationResourceRelationsOutput)(nil), "grpcapi.GetAuthorizationResourceRelationsOutput")
 	proto.RegisterType((*AddUserPermissionInput)(nil), "grpcapi.AddUserPermissionInput")
 	proto.RegisterType((*RemoveUserPermissionInput)(nil), "grpcapi.RemoveUserPermissionInput")
 }
@@ -787,8 +947,10 @@ type IAMClient interface {
 	IsAuthorized(ctx context.Context, in *IsAuthorizedInput, opts ...grpc.CallOption) (*IsAuthorizedOutput, error)
 	AddAuthorizationResource(ctx context.Context, in *AddAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error)
 	RemoveAuthorizationResource(ctx context.Context, in *RemoveAuthorizationResourceInput, opts ...grpc.CallOption) (*common.Void, error)
+	GetAuthorizationResourcesByType(ctx context.Context, in *GetAuthorizationResourcesByTypeInput, opts ...grpc.CallOption) (*GetAuthorizationResourcesByTypeOutput, error)
 	AddAuthorizationResourceRelation(ctx context.Context, in *AddAuthorizationResourceRelationInput, opts ...grpc.CallOption) (*common.Void, error)
 	RemoveAuthorizationResourceRelation(ctx context.Context, in *RemoveAuthorizationResourceRelationInput, opts ...grpc.CallOption) (*common.Void, error)
+	GetAuthorizationResourceRelations(ctx context.Context, in *GetAuthorizationResourceRelationsInput, opts ...grpc.CallOption) (*GetAuthorizationResourceRelationsOutput, error)
 	AddUserPermission(ctx context.Context, in *AddUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error)
 	RemoveUserPermission(ctx context.Context, in *RemoveUserPermissionInput, opts ...grpc.CallOption) (*common.Void, error)
 }
@@ -873,6 +1035,15 @@ func (c *iAMClient) RemoveAuthorizationResource(ctx context.Context, in *RemoveA
 	return out, nil
 }
 
+func (c *iAMClient) GetAuthorizationResourcesByType(ctx context.Context, in *GetAuthorizationResourcesByTypeInput, opts ...grpc.CallOption) (*GetAuthorizationResourcesByTypeOutput, error) {
+	out := new(GetAuthorizationResourcesByTypeOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/GetAuthorizationResourcesByType", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *iAMClient) AddAuthorizationResourceRelation(ctx context.Context, in *AddAuthorizationResourceRelationInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
 	err := c.cc.Invoke(ctx, "/grpcapi.IAM/AddAuthorizationResourceRelation", in, out, opts...)
@@ -885,6 +1056,15 @@ func (c *iAMClient) AddAuthorizationResourceRelation(ctx context.Context, in *Ad
 func (c *iAMClient) RemoveAuthorizationResourceRelation(ctx context.Context, in *RemoveAuthorizationResourceRelationInput, opts ...grpc.CallOption) (*common.Void, error) {
 	out := new(common.Void)
 	err := c.cc.Invoke(ctx, "/grpcapi.IAM/RemoveAuthorizationResourceRelation", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *iAMClient) GetAuthorizationResourceRelations(ctx context.Context, in *GetAuthorizationResourceRelationsInput, opts ...grpc.CallOption) (*GetAuthorizationResourceRelationsOutput, error) {
+	out := new(GetAuthorizationResourceRelationsOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.IAM/GetAuthorizationResourceRelations", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -919,8 +1099,10 @@ type IAMServer interface {
 	IsAuthorized(context.Context, *IsAuthorizedInput) (*IsAuthorizedOutput, error)
 	AddAuthorizationResource(context.Context, *AddAuthorizationResourceInput) (*common.Void, error)
 	RemoveAuthorizationResource(context.Context, *RemoveAuthorizationResourceInput) (*common.Void, error)
+	GetAuthorizationResourcesByType(context.Context, *GetAuthorizationResourcesByTypeInput) (*GetAuthorizationResourcesByTypeOutput, error)
 	AddAuthorizationResourceRelation(context.Context, *AddAuthorizationResourceRelationInput) (*common.Void, error)
 	RemoveAuthorizationResourceRelation(context.Context, *RemoveAuthorizationResourceRelationInput) (*common.Void, error)
+	GetAuthorizationResourceRelations(context.Context, *GetAuthorizationResourceRelationsInput) (*GetAuthorizationResourceRelationsOutput, error)
 	AddUserPermission(context.Context, *AddUserPermissionInput) (*common.Void, error)
 	RemoveUserPermission(context.Context, *RemoveUserPermissionInput) (*common.Void, error)
 }
@@ -1073,6 +1255,24 @@ func _IAM_RemoveAuthorizationResource_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _IAM_GetAuthorizationResourcesByType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAuthorizationResourcesByTypeInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).GetAuthorizationResourcesByType(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/GetAuthorizationResourcesByType",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).GetAuthorizationResourcesByType(ctx, req.(*GetAuthorizationResourcesByTypeInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _IAM_AddAuthorizationResourceRelation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AddAuthorizationResourceRelationInput)
 	if err := dec(in); err != nil {
@@ -1105,6 +1305,24 @@ func _IAM_RemoveAuthorizationResourceRelation_Handler(srv interface{}, ctx conte
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(IAMServer).RemoveAuthorizationResourceRelation(ctx, req.(*RemoveAuthorizationResourceRelationInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _IAM_GetAuthorizationResourceRelations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAuthorizationResourceRelationsInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IAMServer).GetAuthorizationResourceRelations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.IAM/GetAuthorizationResourceRelations",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IAMServer).GetAuthorizationResourceRelations(ctx, req.(*GetAuthorizationResourceRelationsInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1182,12 +1400,20 @@ var _IAM_serviceDesc = grpc.ServiceDesc{
 			Handler:    _IAM_RemoveAuthorizationResource_Handler,
 		},
 		{
+			MethodName: "GetAuthorizationResourcesByType",
+			Handler:    _IAM_GetAuthorizationResourcesByType_Handler,
+		},
+		{
 			MethodName: "AddAuthorizationResourceRelation",
 			Handler:    _IAM_AddAuthorizationResourceRelation_Handler,
 		},
 		{
 			MethodName: "RemoveAuthorizationResourceRelation",
 			Handler:    _IAM_RemoveAuthorizationResourceRelation_Handler,
+		},
+		{
+			MethodName: "GetAuthorizationResourceRelations",
+			Handler:    _IAM_GetAuthorizationResourceRelations_Handler,
 		},
 		{
 			MethodName: "AddUserPermission",
@@ -1202,60 +1428,67 @@ var _IAM_serviceDesc = grpc.ServiceDesc{
 	Metadata: "iam/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_8110ef36cde56942) }
+func init() { proto.RegisterFile("iam/grpcapi.proto", fileDescriptor_grpcapi_37c55ef2fb91c80d) }
 
-var fileDescriptor_grpcapi_8110ef36cde56942 = []byte{
-	// 822 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x56, 0x6d, 0x6f, 0xdb, 0x36,
-	0x10, 0x8e, 0xed, 0xc4, 0x76, 0xae, 0x59, 0xb6, 0x30, 0x59, 0xaa, 0x2a, 0x4b, 0x97, 0xb1, 0x5d,
-	0x90, 0xbd, 0xc0, 0x45, 0x13, 0x0c, 0xd8, 0x57, 0x75, 0xc9, 0x3a, 0xad, 0x68, 0x1b, 0x28, 0xd8,
-	0x30, 0x0c, 0x18, 0x0a, 0x55, 0x3c, 0xd8, 0x44, 0x24, 0x52, 0xa3, 0x28, 0x03, 0xdd, 0x80, 0x61,
-	0xbf, 0x67, 0xbf, 0x65, 0xff, 0x67, 0x5f, 0x07, 0x8a, 0x92, 0xea, 0x5a, 0xb6, 0x9c, 0x02, 0x5b,
-	0x3f, 0x59, 0xf7, 0xc2, 0xe7, 0xb9, 0x23, 0x8f, 0x0f, 0x0d, 0x3b, 0x3c, 0x4c, 0x1e, 0x8c, 0x55,
-	0x1a, 0x85, 0x29, 0x1f, 0xa5, 0x4a, 0x6a, 0x49, 0x06, 0xa5, 0xe9, 0xee, 0x46, 0x32, 0x49, 0xa4,
-	0x78, 0x60, 0x7f, 0x6c, 0x94, 0x7e, 0x05, 0xee, 0x63, 0xd4, 0xdf, 0x71, 0x54, 0xa1, 0x8a, 0x26,
-	0xaf, 0x02, 0x8c, 0x43, 0xcd, 0xa5, 0xc8, 0x7c, 0x91, 0xe6, 0x9a, 0xdc, 0x86, 0x41, 0x9e, 0xa1,
-	0x7a, 0xc1, 0x99, 0xd3, 0x39, 0xea, 0x9c, 0x6c, 0x06, 0x7d, 0x63, 0xfa, 0x8c, 0x7e, 0x0d, 0x07,
-	0x0b, 0x97, 0x3d, 0xcf, 0xb5, 0x59, 0x77, 0x07, 0x86, 0x42, 0x32, 0x7c, 0xc1, 0x59, 0xe6, 0x74,
-	0x8e, 0x7a, 0x27, 0x9b, 0xc1, 0xc0, 0xd8, 0x3e, 0xcb, 0xe8, 0x33, 0x70, 0xbe, 0x99, 0x60, 0x74,
-	0xed, 0xe5, 0x7a, 0x82, 0x42, 0xf3, 0xa8, 0x58, 0x68, 0xe9, 0xf6, 0x60, 0x43, 0xcb, 0x6b, 0x14,
-	0x25, 0x99, 0x35, 0xc8, 0x47, 0xb0, 0x99, 0xa0, 0x9e, 0x48, 0xe6, 0x29, 0xe1, 0x74, 0x8b, 0xc8,
-	0x6b, 0x07, 0xfd, 0xb3, 0x03, 0x74, 0x01, 0xe0, 0xa3, 0x57, 0x17, 0x82, 0xa5, 0x92, 0x0b, 0xdd,
-	0x06, 0xed, 0xc2, 0x10, 0xcb, 0xb4, 0x12, 0xb9, 0xb6, 0xc9, 0x3e, 0xf4, 0x2d, 0x8b, 0xd3, 0xb3,
-	0xad, 0x5b, 0x8b, 0x7c, 0x00, 0xbd, 0x30, 0xe5, 0xce, 0x7a, 0xe1, 0x34, 0x9f, 0xf4, 0x67, 0xd8,
-	0x7b, 0x8c, 0xfa, 0x62, 0x8a, 0x42, 0x07, 0x18, 0x49, 0xc5, 0xb2, 0x9a, 0x33, 0xe3, 0x22, 0xc2,
-	0x82, 0xb3, 0x17, 0x58, 0x83, 0x7c, 0x09, 0x1b, 0x31, 0x4f, 0xb8, 0x25, 0xbc, 0x75, 0xba, 0x3f,
-	0x2a, 0xcf, 0xe3, 0x52, 0x19, 0x2f, 0x9f, 0xa2, 0x2f, 0xf4, 0xd9, 0x69, 0x60, 0x93, 0xe8, 0x43,
-	0xf8, 0x70, 0x0e, 0xbb, 0xdc, 0x62, 0x07, 0x06, 0xca, 0x3a, 0x0a, 0xf8, 0xad, 0xa0, 0x32, 0xe9,
-	0xdf, 0x1d, 0x58, 0xff, 0x21, 0x43, 0x45, 0xb6, 0xa1, 0x5b, 0x1f, 0x5c, 0x97, 0x33, 0x53, 0x0f,
-	0x26, 0x21, 0x8f, 0xcb, 0x56, 0xad, 0x41, 0x8e, 0x61, 0x1b, 0xf3, 0x38, 0xf4, 0xc6, 0x0a, 0x91,
-	0x9d, 0x87, 0x1a, 0xcb, 0x7e, 0xe7, 0xbc, 0xe6, 0x18, 0xa6, 0x61, 0xcc, 0xd9, 0x45, 0x1e, 0x87,
-	0x65, 0xf7, 0xaf, 0x1d, 0x66, 0x27, 0xcd, 0x68, 0x88, 0x30, 0x41, 0x67, 0xc3, 0xee, 0x64, 0x65,
-	0x93, 0xbb, 0x00, 0xe6, 0xfb, 0x4a, 0x87, 0x3a, 0xcf, 0x9c, 0x7e, 0x11, 0x9d, 0xf1, 0x18, 0x64,
-	0x63, 0x05, 0x32, 0xc6, 0xcc, 0x19, 0x58, 0xe4, 0xda, 0x41, 0x53, 0xd8, 0xf1, 0x33, 0x73, 0xb8,
-	0x52, 0xf1, 0xdf, 0x90, 0xb5, 0x0f, 0xa6, 0x39, 0xb5, 0x30, 0x32, 0x03, 0x50, 0x36, 0x59, 0x5a,
-	0xe4, 0x73, 0x18, 0x2a, 0xcc, 0x64, 0xae, 0x22, 0xdb, 0xdf, 0xad, 0xd3, 0xed, 0x6a, 0xe3, 0x9f,
-	0x2b, 0x3e, 0xe6, 0x22, 0xa8, 0xe3, 0xf4, 0x3e, 0x90, 0x59, 0xc6, 0x72, 0xc3, 0xb7, 0xa1, 0x2b,
-	0xaf, 0x0b, 0xb6, 0x61, 0xd0, 0x95, 0xd7, 0xf4, 0x09, 0x1c, 0x7a, 0x8c, 0x55, 0x69, 0xc5, 0xd0,
-	0x05, 0x25, 0x82, 0xad, 0x71, 0x96, 0xb2, 0xb3, 0x82, 0xf2, 0x19, 0x1c, 0x05, 0x98, 0xc8, 0x29,
-	0xfe, 0x47, 0x78, 0xbf, 0xc3, 0xa7, 0xcb, 0x8a, 0xab, 0xee, 0xea, 0x5b, 0x83, 0x92, 0x63, 0xe8,
-	0xa7, 0xa1, 0x42, 0x51, 0x8d, 0xee, 0x7c, 0x66, 0x19, 0xa5, 0x7f, 0xc0, 0x49, 0x4b, 0x33, 0xff,
-	0x3f, 0xff, 0xaf, 0xb0, 0xef, 0x31, 0x66, 0xae, 0xc0, 0x25, 0xaa, 0x84, 0x67, 0x59, 0xcd, 0xb6,
-	0x74, 0x6c, 0x08, 0xac, 0x2b, 0x19, 0x63, 0x39, 0x34, 0xc5, 0xf7, 0x5b, 0x8d, 0x8c, 0x86, 0x3b,
-	0xb6, 0xe5, 0x77, 0xc9, 0x7a, 0xfa, 0xcf, 0x00, 0x7a, 0xbe, 0xf7, 0x94, 0x9c, 0xc1, 0xf0, 0x1c,
-	0x31, 0xbd, 0xe4, 0x62, 0x4c, 0xb6, 0xaa, 0xec, 0x1f, 0x25, 0x67, 0xee, 0xed, 0x86, 0xba, 0x5c,
-	0x69, 0xc5, 0xc5, 0x98, 0xae, 0x11, 0x1f, 0x76, 0x17, 0xe8, 0x26, 0xf9, 0x64, 0x54, 0x3d, 0x1f,
-	0xcb, 0x64, 0xda, 0x7d, 0xaf, 0x4e, 0x31, 0xdd, 0xd2, 0x35, 0xf2, 0x0b, 0x1c, 0xb6, 0x4a, 0x30,
-	0xf9, 0xa2, 0x0d, 0x74, 0x4e, 0xaa, 0x9b, 0xf0, 0xac, 0xd0, 0xc0, 0xe6, 0x63, 0x43, 0xee, 0xd5,
-	0x99, 0xcb, 0xdf, 0x30, 0xf7, 0x7e, 0x7b, 0x92, 0xbd, 0xdd, 0x74, 0x8d, 0x04, 0xf0, 0xfe, 0x9c,
-	0xd2, 0x92, 0xc3, 0xd9, 0xa5, 0x0d, 0x7d, 0x77, 0xef, 0x2e, 0x0b, 0xd7, 0x98, 0x3e, 0x6c, 0xcd,
-	0x2a, 0x09, 0x71, 0xeb, 0x15, 0x0d, 0x49, 0x73, 0x0f, 0x16, 0xc6, 0x66, 0xca, 0x73, 0x96, 0xdd,
-	0x68, 0x72, 0x5c, 0x2f, 0x6d, 0x55, 0x24, 0xf7, 0x8d, 0xd9, 0xa0, 0x6b, 0xe4, 0x27, 0x38, 0x68,
-	0xb9, 0xa8, 0xe4, 0xb3, 0x1a, 0x76, 0x95, 0x36, 0x35, 0x90, 0x5f, 0xc2, 0xd1, 0x2a, 0xfd, 0x21,
-	0xa3, 0x95, 0x55, 0xbf, 0x21, 0x15, 0x0d, 0x8e, 0x09, 0xdc, 0xbb, 0x81, 0xcc, 0x90, 0x87, 0x37,
-	0xe9, 0xa2, 0x9d, 0xe9, 0x1c, 0x76, 0x1a, 0x82, 0x42, 0x3e, 0x9e, 0x2d, 0x7f, 0xc1, 0xb5, 0x6f,
-	0xa0, 0x7c, 0x0f, 0x7b, 0x8b, 0x34, 0x82, 0xd0, 0xb9, 0x02, 0x6f, 0x80, 0xf5, 0x68, 0xff, 0xaf,
-	0xee, 0xee, 0xd5, 0x93, 0x6f, 0x47, 0x17, 0x22, 0xe6, 0xe3, 0x89, 0x1e, 0x79, 0x97, 0xfe, 0xc8,
-	0xf7, 0x9e, 0xbe, 0xec, 0x17, 0xff, 0xea, 0xce, 0xfe, 0x0d, 0x00, 0x00, 0xff, 0xff, 0x99, 0xd5,
-	0x89, 0xa7, 0x08, 0x0a, 0x00, 0x00,
+var fileDescriptor_grpcapi_37c55ef2fb91c80d = []byte{
+	// 940 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x57, 0x71, 0x4f, 0x23, 0x45,
+	0x14, 0xa7, 0x2d, 0xb4, 0xe5, 0xc1, 0xa1, 0x0c, 0xc8, 0xed, 0x2d, 0x72, 0x70, 0x03, 0x87, 0xa8,
+	0x67, 0xf1, 0x20, 0x26, 0xfe, 0x5b, 0x04, 0x71, 0x25, 0x77, 0x47, 0x16, 0x4f, 0x8d, 0x89, 0x21,
+	0x7b, 0x9d, 0x49, 0x3b, 0xa1, 0x3b, 0xb3, 0xce, 0x4e, 0x49, 0xaa, 0x89, 0x31, 0xfe, 0xa3, 0x9f,
+	0xc5, 0xcf, 0xe2, 0x87, 0x32, 0xb3, 0x33, 0xbb, 0xf4, 0xba, 0xed, 0x6e, 0xcf, 0xe8, 0xfd, 0xc5,
+	0xbe, 0x37, 0xef, 0xfd, 0xde, 0xbc, 0xdf, 0xcc, 0xfc, 0x1e, 0x85, 0x55, 0x16, 0x84, 0x87, 0x5d,
+	0x19, 0x75, 0x82, 0x88, 0xb5, 0x22, 0x29, 0x94, 0x40, 0x0d, 0x6b, 0xba, 0x6b, 0x1d, 0x11, 0x86,
+	0x82, 0x1f, 0x9a, 0x3f, 0x66, 0x15, 0x7f, 0x06, 0xee, 0x39, 0x55, 0x5f, 0x31, 0x2a, 0x03, 0xd9,
+	0xe9, 0x0d, 0x7d, 0xda, 0x0f, 0x14, 0x13, 0x3c, 0xf6, 0x78, 0x34, 0x50, 0xe8, 0x3e, 0x34, 0x06,
+	0x31, 0x95, 0xd7, 0x8c, 0x38, 0x95, 0x9d, 0xca, 0xc1, 0xa2, 0x5f, 0xd7, 0xa6, 0x47, 0xf0, 0xe7,
+	0xb0, 0x39, 0x31, 0xed, 0xc5, 0x40, 0xe9, 0xbc, 0x07, 0xd0, 0xe4, 0x82, 0xd0, 0x6b, 0x46, 0x62,
+	0xa7, 0xb2, 0x53, 0x3b, 0x58, 0xf4, 0x1b, 0xda, 0xf6, 0x48, 0x8c, 0x9f, 0x83, 0xf3, 0x45, 0x8f,
+	0x76, 0x6e, 0xda, 0x03, 0xd5, 0xa3, 0x5c, 0xb1, 0x4e, 0x92, 0x68, 0xca, 0xad, 0xc3, 0x82, 0x12,
+	0x37, 0x94, 0xdb, 0x62, 0xc6, 0x40, 0xef, 0xc3, 0x62, 0x48, 0x55, 0x4f, 0x90, 0xb6, 0xe4, 0x4e,
+	0x35, 0x59, 0xb9, 0x73, 0xe0, 0xdf, 0x2a, 0x80, 0x27, 0x00, 0x9e, 0x0c, 0xcf, 0x38, 0x89, 0x04,
+	0xe3, 0xaa, 0x08, 0xda, 0x85, 0x26, 0xb5, 0x61, 0x16, 0x39, 0xb3, 0xd1, 0x06, 0xd4, 0x4d, 0x15,
+	0xa7, 0x66, 0x5a, 0x37, 0x16, 0x7a, 0x17, 0x6a, 0x41, 0xc4, 0x9c, 0xf9, 0xc4, 0xa9, 0x3f, 0xf1,
+	0x0f, 0xb0, 0x7e, 0x4e, 0xd5, 0xd9, 0x2d, 0xe5, 0xca, 0xa7, 0x1d, 0x21, 0x49, 0x9c, 0xd5, 0x8c,
+	0x19, 0xef, 0xd0, 0xa4, 0x66, 0xcd, 0x37, 0x06, 0x7a, 0x02, 0x0b, 0x7d, 0x16, 0x32, 0x53, 0x70,
+	0xe9, 0x68, 0xa3, 0x65, 0xcf, 0xe3, 0x52, 0x6a, 0x2f, 0xbb, 0xa5, 0x1e, 0x57, 0xc7, 0x47, 0xbe,
+	0x09, 0xc2, 0x4f, 0xe1, 0xbd, 0x31, 0x6c, 0x4b, 0xb1, 0x03, 0x0d, 0x69, 0x1c, 0x09, 0xfc, 0xb2,
+	0x9f, 0x9a, 0xf8, 0xef, 0x0a, 0xcc, 0xbf, 0x8c, 0xa9, 0x44, 0x2b, 0x50, 0xcd, 0x0e, 0xae, 0xca,
+	0x88, 0xde, 0x0f, 0x0d, 0x03, 0xd6, 0xb7, 0xad, 0x1a, 0x03, 0xed, 0xc3, 0x0a, 0x1d, 0xf4, 0x83,
+	0x76, 0x57, 0x52, 0x4a, 0x4e, 0x03, 0x45, 0x6d, 0xbf, 0x63, 0x5e, 0x7d, 0x0c, 0xb7, 0x41, 0x9f,
+	0x91, 0xb3, 0x41, 0x3f, 0xb0, 0xdd, 0xdf, 0x39, 0x34, 0x93, 0xfa, 0x6a, 0xf0, 0x20, 0xa4, 0xce,
+	0x82, 0x61, 0x32, 0xb5, 0xd1, 0x43, 0x00, 0xfd, 0x7d, 0xa5, 0x02, 0x35, 0x88, 0x9d, 0x7a, 0xb2,
+	0x3a, 0xe2, 0xd1, 0xc8, 0xda, 0xf2, 0x45, 0x9f, 0xc6, 0x4e, 0xc3, 0x20, 0x67, 0x0e, 0x1c, 0xc1,
+	0xaa, 0x17, 0xeb, 0xc3, 0x15, 0x92, 0xfd, 0x4c, 0x49, 0xf1, 0xc5, 0xd4, 0xa7, 0x16, 0x74, 0xf4,
+	0x05, 0xb0, 0x4d, 0x5a, 0x0b, 0x7d, 0x04, 0x4d, 0x49, 0x63, 0x31, 0x90, 0x1d, 0xd3, 0xdf, 0xd2,
+	0xd1, 0x4a, 0x4a, 0xfc, 0x0b, 0xc9, 0xba, 0x8c, 0xfb, 0xd9, 0x3a, 0xde, 0x03, 0x34, 0x5a, 0xd1,
+	0x12, 0xbe, 0x02, 0x55, 0x71, 0x93, 0x54, 0x6b, 0xfa, 0x55, 0x71, 0x83, 0x2f, 0x60, 0xab, 0x4d,
+	0x48, 0x1a, 0x96, 0x5c, 0x3a, 0xdf, 0x22, 0x98, 0x3d, 0x8e, 0x96, 0xac, 0x94, 0x94, 0x7c, 0x0e,
+	0x3b, 0x3e, 0x0d, 0xc5, 0x2d, 0xfd, 0x8f, 0xf0, 0x2e, 0x60, 0xef, 0x9c, 0xaa, 0x89, 0x60, 0xf1,
+	0xc9, 0xf0, 0x9b, 0x61, 0x64, 0x31, 0x77, 0xe1, 0x5e, 0x9a, 0x73, 0xad, 0x86, 0x11, 0xb5, 0x6c,
+	0x2e, 0xa7, 0x4e, 0x1d, 0x89, 0x5f, 0xc2, 0xe3, 0x12, 0x30, 0x4b, 0xd1, 0x13, 0x58, 0x4c, 0x13,
+	0xcd, 0xbb, 0xcf, 0x6f, 0xf1, 0x2e, 0x00, 0xff, 0x02, 0x8f, 0xa7, 0x11, 0x98, 0xea, 0xc9, 0x1b,
+	0x37, 0x8e, 0xf6, 0xa1, 0x1e, 0x05, 0x92, 0xf2, 0xf4, 0x79, 0x8d, 0x47, 0xda, 0x55, 0xfc, 0x2b,
+	0x1c, 0x14, 0x10, 0xfe, 0xff, 0xd7, 0xf7, 0x60, 0x7f, 0x1a, 0xa7, 0x63, 0x1a, 0xbc, 0x0d, 0x4b,
+	0xd9, 0x11, 0x65, 0xd7, 0x1d, 0x52, 0x97, 0x47, 0xf0, 0x77, 0xf0, 0x41, 0x29, 0xd4, 0xbf, 0x3a,
+	0xa0, 0x9f, 0x60, 0xa3, 0x4d, 0x88, 0x96, 0x92, 0x4b, 0x2a, 0x43, 0x16, 0xc7, 0x19, 0x23, 0x53,
+	0x9f, 0x1f, 0x82, 0x79, 0x29, 0xfa, 0xd4, 0x3e, 0xbe, 0xe4, 0xfb, 0x8d, 0x9e, 0x9e, 0x82, 0x07,
+	0xe6, 0x58, 0xde, 0x66, 0xd5, 0xa3, 0x3f, 0x00, 0x6a, 0x5e, 0xfb, 0x19, 0x3a, 0x86, 0xe6, 0x29,
+	0xa5, 0xd1, 0x25, 0xe3, 0x5d, 0xb4, 0x9c, 0x46, 0x7f, 0x2b, 0x18, 0x71, 0xef, 0xe7, 0x54, 0xfa,
+	0x4a, 0x49, 0xc6, 0xbb, 0x78, 0x0e, 0x79, 0xb0, 0x36, 0x61, 0xfe, 0xa0, 0x47, 0xad, 0x74, 0x0c,
+	0x4f, 0x1b, 0x77, 0xee, 0xbd, 0x2c, 0x44, 0x77, 0x8b, 0xe7, 0xd0, 0x8f, 0xb0, 0x55, 0x38, 0xca,
+	0xd0, 0xc7, 0x45, 0xa0, 0x63, 0x23, 0x2f, 0x0f, 0x4f, 0x92, 0x59, 0x92, 0x1f, 0xda, 0x68, 0x37,
+	0x8b, 0x9c, 0xfe, 0xbf, 0x80, 0xbb, 0x57, 0x1c, 0x64, 0x6e, 0x18, 0x9e, 0x43, 0x3e, 0xbc, 0x33,
+	0x36, 0xb1, 0xd0, 0xd6, 0x68, 0x6a, 0x6e, 0x4e, 0xba, 0x0f, 0xa7, 0x2d, 0x67, 0x98, 0x1e, 0x2c,
+	0x8f, 0x2a, 0x32, 0x72, 0xb3, 0x8c, 0xdc, 0x68, 0x70, 0x37, 0x27, 0xae, 0x8d, 0x6c, 0xcf, 0x99,
+	0xa6, 0x3a, 0x68, 0x3f, 0x4b, 0x2d, 0x54, 0x76, 0xf7, 0xb5, 0xbb, 0x81, 0xe7, 0xd0, 0xf7, 0xb0,
+	0x59, 0x20, 0x26, 0xe8, 0xc3, 0x0c, 0xb6, 0x4c, 0xe3, 0x73, 0xc8, 0xbf, 0x57, 0x60, 0xbb, 0x44,
+	0x7b, 0xd1, 0x27, 0xa3, 0xf4, 0x95, 0x4a, 0xbe, 0xdb, 0x9a, 0x35, 0x3c, 0xa3, 0xec, 0x15, 0xec,
+	0x94, 0x09, 0x35, 0x6a, 0x95, 0x52, 0xf7, 0x9a, 0xa6, 0xe6, 0x1a, 0xed, 0xc1, 0xee, 0x0c, 0x7a,
+	0x8c, 0x9e, 0xce, 0x42, 0x65, 0x71, 0xa5, 0x3f, 0x2b, 0xf0, 0xa8, 0x54, 0x2f, 0xd1, 0x61, 0x29,
+	0x4b, 0x63, 0xcf, 0xe3, 0xd3, 0xd9, 0x13, 0x32, 0x62, 0x4f, 0x61, 0x35, 0x27, 0xb0, 0x68, 0x7b,
+	0x94, 0xc9, 0x09, 0x32, 0x98, 0x6b, 0xe8, 0x6b, 0x58, 0x9f, 0xa4, 0x99, 0x08, 0x8f, 0x71, 0x35,
+	0x03, 0xd6, 0xc9, 0xc6, 0x5f, 0xd5, 0xb5, 0xab, 0x8b, 0x2f, 0x5b, 0x67, 0xbc, 0xcf, 0xba, 0x3d,
+	0xd5, 0x6a, 0x5f, 0x7a, 0x2d, 0xaf, 0xfd, 0xec, 0x55, 0x3d, 0xf9, 0xb5, 0x70, 0xfc, 0x4f, 0x00,
+	0x00, 0x00, 0xff, 0xff, 0xbd, 0x43, 0x74, 0xe2, 0x60, 0x0c, 0x00, 0x00,
 }
