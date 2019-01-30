@@ -15,7 +15,7 @@ namespace SKF.Enlight.API.IAM {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationInput> __Marshaller_grpcapi_CheckAuthenticationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.User> __Marshaller_grpcapi_User = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.User.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.UserClaims> __Marshaller_grpcapi_UserClaims = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.UserClaims.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput> __Marshaller_grpcapi_CheckAuthenticationByEndpointInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput> __Marshaller_grpcapi_GetHierarchyRelationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput> __Marshaller_grpcapi_GetHierarchyRelationsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput.Parser.ParseFrom);
@@ -41,19 +41,19 @@ namespace SKF.Enlight.API.IAM {
         __Marshaller_common_Void,
         __Marshaller_common_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.User> __Method_CheckAuthentication = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.User>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims> __Method_CheckAuthentication = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckAuthentication",
         __Marshaller_grpcapi_CheckAuthenticationInput,
-        __Marshaller_grpcapi_User);
+        __Marshaller_grpcapi_UserClaims);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.User> __Method_CheckAuthenticationByEndpoint = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.User>(
+    static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.UserClaims> __Method_CheckAuthenticationByEndpoint = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.UserClaims>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckAuthenticationByEndpoint",
         __Marshaller_grpcapi_CheckAuthenticationByEndpointInput,
-        __Marshaller_grpcapi_User);
+        __Marshaller_grpcapi_UserClaims);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput, global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput> __Method_GetHierarchyRelations = new grpc::Method<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput, global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput>(
         grpc::MethodType.Unary,
@@ -146,12 +146,12 @@ namespace SKF.Enlight.API.IAM {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.User> CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.User> CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -252,35 +252,35 @@ namespace SKF.Enlight.API.IAM {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IAM.User CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IAM.UserClaims CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAuthentication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IAM.User CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IAM.UserClaims CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckAuthentication, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.User> CheckAuthenticationAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthenticationAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAuthenticationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.User> CheckAuthenticationAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthenticationAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckAuthentication, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.IAM.User CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.IAM.UserClaims CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAuthenticationByEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.IAM.User CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.IAM.UserClaims CheckAuthenticationByEndpoint(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckAuthenticationByEndpoint, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.User> CheckAuthenticationByEndpointAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthenticationByEndpointAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAuthenticationByEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.User> CheckAuthenticationByEndpointAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.UserClaims> CheckAuthenticationByEndpointAsync(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckAuthenticationByEndpoint, null, options, request);
       }
