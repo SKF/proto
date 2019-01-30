@@ -8,8 +8,8 @@ import "common/common.proto";
 service IAM {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
-  rpc CheckAuthentication (CheckAuthenticationInput) returns (User) {}
-  rpc CheckAuthenticationByEndpoint (CheckAuthenticationByEndpointInput) returns (User) {}
+  rpc CheckAuthentication (CheckAuthenticationInput) returns (UserClaims) {}
+  rpc CheckAuthenticationByEndpoint (CheckAuthenticationByEndpointInput) returns (UserClaims) {}
 
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
@@ -28,6 +28,17 @@ service IAM {
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
+}
+
+message UserClaims {
+  string id = 1;
+  string email = 2;
+  string eula_agreed_date = 3;
+  string valid_eula = 4;
+  string username = 5;
+  string user_status = 6;
+  string user_roles = 7;
+  string user_access = 8;
 }
 
 // Input & output messages
