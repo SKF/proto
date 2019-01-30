@@ -71,16 +71,6 @@ message GetEventRecordsOutput {
   bytes records = 1;
 }
 
-message User {
-  string id = 1;
-  string email = 2;
-  string eulaAgreedDate = 3;
-  string validEula = 4;
-  string username = 5;
-  string userStatus = 6;
-  string userRoles = 7;
-}
-
 message IsAuthorizedInput {
   string user_id = 1;
   string action = 2;
