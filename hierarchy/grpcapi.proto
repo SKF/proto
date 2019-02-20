@@ -28,6 +28,7 @@ message MeasurementPoint {
   string measurementType = 4;
   string shaft = 5;
   string shaftSide = 6;
+  double fixedSpeedRPM = 7;
 }
 
 enum ValueType {
