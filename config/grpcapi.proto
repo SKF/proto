@@ -123,6 +123,7 @@ enum ExternalSensorICP {
 enum ViewSignalType {
   VIEW_SIGNAL_UNKNOWN = 0;
   VIEW_SIGNAL_SPECTRUM_ONLY = 1;
+  VIEW_SIGNAL_SPECTRUM_AND_TIME = 2;
 }
 
 enum YAxisUnits {
