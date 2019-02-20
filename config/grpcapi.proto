@@ -86,8 +86,6 @@ enum SampleRate {
   RATE_5120 = 4;
   RATE_12800 = 5;
   RATE_25600 = 6;
-  RATE_51200 = 7;
-  RATE_102400 = 8;
 }
 
 enum SampleAmount {
