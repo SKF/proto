@@ -25,64 +25,65 @@ namespace SKF.Enlight.API.Hierarchy {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdoaWVyYXJjaHkvZ3JwY2FwaS5wcm90bxIHZ3JwY2FwaRoTY29tbW9uL2Nv",
-            "bW1vbi5wcm90byJvChBNZWFzdXJlbWVudFBvaW50Eg8KB2FuZ3VsYXIYASAB",
-            "KAkSDwoHYmVhcmluZxgDIAEoBRIXCg9tZWFzdXJlbWVudFR5cGUYBCABKAkS",
-            "DQoFc2hhZnQYBSABKAkSEQoJc2hhZnRTaWRlGAYgASgJIu8BCg9JbnNwZWN0",
-            "aW9uUG9pbnQSGgoST0JTT0xFVEVfdmFsdWVUeXBlGAEgASgJEiUKCXZhbHVl",
-            "VHlwZRgEIAEoDjISLmdycGNhcGkuVmFsdWVUeXBlEhMKC251bWVyaWNVbml0",
-            "GAIgASgJEg8KB2Fuc3dlcnMYAyADKAkSNQoRdmlzdWFsaXphdGlvblR5cGUY",
-            "BSABKA4yGi5ncnBjYXBpLlZpc3VhbGl6YXRpb25UeXBlEh0KFXZpc3VhbGl6",
-            "YXRpb25NaW5WYWx1ZRgGIAEoCRIdChV2aXN1YWxpemF0aW9uTWF4VmFsdWUY",
-            "ByABKAkibQoQTHVicmljYXRpb25Qb2ludBIRCglsdWJyaWNhbnQYASABKAkS",
-            "DgoGdm9sdW1lGAIgASgFEiQKBHVuaXQYAyABKA4yFi5ncnBjYXBpLkx1YnJp",
-            "Y2FudFVuaXQSEAoIaW50ZXJ2YWwYBCABKAUiIAoJQXNzZXROb2RlEhMKC2Ny",
-            "aXRpY2FsaXR5GAEgASgJIr0DCgROb2RlEgoKAmlkGAEgASgJEg0KBWxhYmVs",
-            "GAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEgwKBHR5cGUYBCABKAkSEwoL",
-            "Y3JpdGljYWxpdHkYBSABKAkSDwoHc3ViVHlwZRgGIAEoCRIeCgZvcmlnaW4Y",
-            "ByABKAsyDi5jb21tb24uT3JpZ2luEiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdy",
-            "cGNhcGkuQXNzZXROb2RlEjMKEG1lYXN1cmVtZW50UG9pbnQYCSABKAsyGS5n",
-            "cnBjYXBpLk1lYXN1cmVtZW50UG9pbnQSMQoPaW5zcGVjdGlvblBvaW50GAog",
-            "ASgLMhguZ3JwY2FwaS5JbnNwZWN0aW9uUG9pbnQSMwoQbHVicmljYXRpb25Q",
-            "b2ludBgOIAEoCzIZLmdycGNhcGkuTHVicmljYXRpb25Qb2ludBIcChBjaGls",
-            "ZE9yZGVyTnVtYmVyGAsgASgDQgIYARIoCghwb3NpdGlvbhgMIAEoCzIWLmNv",
-            "bW1vbi5QcmltaXRpdmVJbnQ2NBIlCgR0YWdzGA0gASgLMhcuY29tbW9uLlBy",
-            "aW1pdGl2ZVN0cmluZyIlCgVOb2RlcxIcCgVub2RlcxgBIAMoCzINLmdycGNh",
-            "cGkuTm9kZSJGCg5HZXRFdmVudHNJbnB1dBINCgVzaW5jZRgBIAEoAxIlCgVs",
-            "aW1pdBgCIAEoCzIWLmNvbW1vbi5QcmltaXRpdmVJbnQzMiIhCg9HZXRFdmVu",
-            "dHNPdXRwdXQSDgoGZXZlbnRzGAEgASgMInQKDVNhdmVOb2RlSW5wdXQSDgoG",
-            "dXNlcklkGAEgASgJEhsKBG5vZGUYAyABKAsyDS5ncnBjYXBpLk5vZGUSEAoI",
-            "cGFyZW50SWQYAiABKAkSJAoMcGFyZW50T3JpZ2luGAQgASgLMg4uY29tbW9u",
-            "Lk9yaWdpbiJRCg9EZWxldGVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEg4K",
-            "Bm5vZGVJZBgCIAEoCRIeCgZvcmlnaW4YAyABKAsyDi5jb21tb24uT3JpZ2lu",
-            "IiQKEUdldEFuY2VzdG9yc0lucHV0Eg8KB25vZGVfaWQYASABKAkiOgoSR2V0",
-            "QW5jZXN0b3JzT3V0cHV0EiQKBW5vZGVzGAEgAygLMhUuZ3JwY2FwaS5BbmNl",
-            "c3Rvck5vZGUijwEKDEFuY2VzdG9yTm9kZRIKCgJpZBgBIAEoCRIeCgZvcmln",
-            "aW4YAiABKAsyDi5jb21tb24uT3JpZ2luEg0KBWxhYmVsGAMgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAQgASgJEgwKBHR5cGUYBSABKAkSDwoHc3ViVHlwZRgGIAEo",
-            "CRIQCghwYXJlbnRJZBgHIAEoCSo9CglWYWx1ZVR5cGUSCwoHTlVNRVJJQxAA",
-            "EhEKDVNJTkdMRV9DSE9JQ0UQARIQCgxNVUxUSV9DSE9JQ0UQAipsChFWaXN1",
-            "YWxpemF0aW9uVHlwZRIWChJWSVNVQUxJWkFUSU9OX05PTkUQABIgChxWSVNV",
-            "QUxJWkFUSU9OX0NJUkNVTEFSX0dBVUdFEAESHQoZVklTVUFMSVpBVElPTl9M",
-            "RVZFTF9HQVVHRRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAAEgkKBU9V",
-            "TkNFEAESBwoDQ00zEAIy5wQKCUhpZXJhcmNoeRIzCghEZWVwUGluZxIMLmNv",
-            "bW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMKB0dldE5v",
-            "ZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgAS",
-            "NQoIR2V0Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3JwY2Fw",
-            "aS5Ob2RlcyIAEjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJpbWl0aXZl",
-            "U3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5vZGUSFy5j",
-            "b21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASSQoMR2V0",
-            "QW5jZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBobLmdycGNh",
-            "cGkuR2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4S",
-            "Di5jb21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEj0K",
-            "CFNhdmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlucHV0GhcuY29tbW9uLlBy",
-            "aW1pdGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0",
-            "ZU5vZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJR2V0RXZlbnRzEhcuZ3Jw",
-            "Y2FwaS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0",
-            "IgBCHKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3RvMw=="));
+            "bW1vbi5wcm90byKGAQoQTWVhc3VyZW1lbnRQb2ludBIPCgdhbmd1bGFyGAEg",
+            "ASgJEg8KB2JlYXJpbmcYAyABKAUSFwoPbWVhc3VyZW1lbnRUeXBlGAQgASgJ",
+            "Eg0KBXNoYWZ0GAUgASgJEhEKCXNoYWZ0U2lkZRgGIAEoCRIVCg1maXhlZFNw",
+            "ZWVkUlBNGAcgASgBIu8BCg9JbnNwZWN0aW9uUG9pbnQSGgoST0JTT0xFVEVf",
+            "dmFsdWVUeXBlGAEgASgJEiUKCXZhbHVlVHlwZRgEIAEoDjISLmdycGNhcGku",
+            "VmFsdWVUeXBlEhMKC251bWVyaWNVbml0GAIgASgJEg8KB2Fuc3dlcnMYAyAD",
+            "KAkSNQoRdmlzdWFsaXphdGlvblR5cGUYBSABKA4yGi5ncnBjYXBpLlZpc3Vh",
+            "bGl6YXRpb25UeXBlEh0KFXZpc3VhbGl6YXRpb25NaW5WYWx1ZRgGIAEoCRId",
+            "ChV2aXN1YWxpemF0aW9uTWF4VmFsdWUYByABKAkibQoQTHVicmljYXRpb25Q",
+            "b2ludBIRCglsdWJyaWNhbnQYASABKAkSDgoGdm9sdW1lGAIgASgFEiQKBHVu",
+            "aXQYAyABKA4yFi5ncnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwY",
+            "BCABKAUiIAoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJIr0DCgRO",
+            "b2RlEgoKAmlkGAEgASgJEg0KBWxhYmVsGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
+            "GAMgASgJEgwKBHR5cGUYBCABKAkSEwoLY3JpdGljYWxpdHkYBSABKAkSDwoH",
+            "c3ViVHlwZRgGIAEoCRIeCgZvcmlnaW4YByABKAsyDi5jb21tb24uT3JpZ2lu",
+            "EiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdycGNhcGkuQXNzZXROb2RlEjMKEG1l",
+            "YXN1cmVtZW50UG9pbnQYCSABKAsyGS5ncnBjYXBpLk1lYXN1cmVtZW50UG9p",
+            "bnQSMQoPaW5zcGVjdGlvblBvaW50GAogASgLMhguZ3JwY2FwaS5JbnNwZWN0",
+            "aW9uUG9pbnQSMwoQbHVicmljYXRpb25Qb2ludBgOIAEoCzIZLmdycGNhcGku",
+            "THVicmljYXRpb25Qb2ludBIcChBjaGlsZE9yZGVyTnVtYmVyGAsgASgDQgIY",
+            "ARIoCghwb3NpdGlvbhgMIAEoCzIWLmNvbW1vbi5QcmltaXRpdmVJbnQ2NBIl",
+            "CgR0YWdzGA0gASgLMhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIlCgVOb2Rl",
+            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJGCg5HZXRFdmVudHNJ",
+            "bnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1pdBgCIAEoCzIWLmNvbW1vbi5Q",
+            "cmltaXRpdmVJbnQzMiIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
+            "ASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEhsKBG5vZGUY",
+            "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
+            "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJRCg9EZWxldGVOb2Rl",
+            "SW5wdXQSDgoGdXNlcklkGAEgASgJEg4KBm5vZGVJZBgCIAEoCRIeCgZvcmln",
+            "aW4YAyABKAsyDi5jb21tb24uT3JpZ2luIiQKEUdldEFuY2VzdG9yc0lucHV0",
+            "Eg8KB25vZGVfaWQYASABKAkiOgoSR2V0QW5jZXN0b3JzT3V0cHV0EiQKBW5v",
+            "ZGVzGAEgAygLMhUuZ3JwY2FwaS5BbmNlc3Rvck5vZGUijwEKDEFuY2VzdG9y",
+            "Tm9kZRIKCgJpZBgBIAEoCRIeCgZvcmlnaW4YAiABKAsyDi5jb21tb24uT3Jp",
+            "Z2luEg0KBWxhYmVsGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEgwKBHR5",
+            "cGUYBSABKAkSDwoHc3ViVHlwZRgGIAEoCRIQCghwYXJlbnRJZBgHIAEoCSo9",
+            "CglWYWx1ZVR5cGUSCwoHTlVNRVJJQxAAEhEKDVNJTkdMRV9DSE9JQ0UQARIQ",
+            "CgxNVUxUSV9DSE9JQ0UQAipsChFWaXN1YWxpemF0aW9uVHlwZRIWChJWSVNV",
+            "QUxJWkFUSU9OX05PTkUQABIgChxWSVNVQUxJWkFUSU9OX0NJUkNVTEFSX0dB",
+            "VUdFEAESHQoZVklTVUFMSVpBVElPTl9MRVZFTF9HQVVHRRACKi0KDUx1YnJp",
+            "Y2FudFVuaXQSCAoER1JBTRAAEgkKBU9VTkNFEAESBwoDQ00zEAIy5wQKCUhp",
+            "ZXJhcmNoeRIzCghEZWVwUGluZxIMLmNvbW1vbi5Wb2lkGhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZyIAEjMKB0dldE5vZGUSFy5jb21tb24uUHJpbWl0aXZl",
+            "U3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASNQoIR2V0Tm9kZXMSFy5jb21tb24u",
+            "UHJpbWl0aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjoKDUdldENoaWxk",
+            "Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2Rl",
+            "cyIAEjkKDUdldFBhcmVudE5vZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5n",
+            "Gg0uZ3JwY2FwaS5Ob2RlIgASSQoMR2V0QW5jZXN0b3JzEhouZ3JwY2FwaS5H",
+            "ZXRBbmNlc3RvcnNJbnB1dBobLmdycGNhcGkuR2V0QW5jZXN0b3JzT3V0cHV0",
+            "IgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4SDi5jb21tb24uT3JpZ2luGhcuY29t",
+            "bW9uLlByaW1pdGl2ZVN0cmluZyIAEj0KCFNhdmVOb2RlEhYuZ3JwY2FwaS5T",
+            "YXZlTm9kZUlucHV0GhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjYKCkRl",
+            "bGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0ZU5vZGVJbnB1dBoMLmNvbW1vbi5W",
+            "b2lkIgASQAoJR2V0RXZlbnRzEhcuZ3JwY2FwaS5HZXRFdmVudHNJbnB1dBoY",
+            "LmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0IgBCHKoCGVNLRi5FbmxpZ2h0LkFQ",
+            "SS5IaWVyYXJjaHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "OBSOLETEValueType", "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
@@ -152,6 +153,7 @@ namespace SKF.Enlight.API.Hierarchy {
       measurementType_ = other.measurementType_;
       shaft_ = other.shaft_;
       shaftSide_ = other.shaftSide_;
+      fixedSpeedRPM_ = other.fixedSpeedRPM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -215,6 +217,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "fixedSpeedRPM" field.</summary>
+    public const int FixedSpeedRPMFieldNumber = 7;
+    private double fixedSpeedRPM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double FixedSpeedRPM {
+      get { return fixedSpeedRPM_; }
+      set {
+        fixedSpeedRPM_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MeasurementPoint);
@@ -233,6 +246,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (MeasurementType != other.MeasurementType) return false;
       if (Shaft != other.Shaft) return false;
       if (ShaftSide != other.ShaftSide) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FixedSpeedRPM, other.FixedSpeedRPM)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -244,6 +258,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (MeasurementType.Length != 0) hash ^= MeasurementType.GetHashCode();
       if (Shaft.Length != 0) hash ^= Shaft.GetHashCode();
       if (ShaftSide.Length != 0) hash ^= ShaftSide.GetHashCode();
+      if (FixedSpeedRPM != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FixedSpeedRPM);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -277,6 +292,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(50);
         output.WriteString(ShaftSide);
       }
+      if (FixedSpeedRPM != 0D) {
+        output.WriteRawTag(57);
+        output.WriteDouble(FixedSpeedRPM);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -299,6 +318,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (ShaftSide.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ShaftSide);
+      }
+      if (FixedSpeedRPM != 0D) {
+        size += 1 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -325,6 +347,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.ShaftSide.Length != 0) {
         ShaftSide = other.ShaftSide;
+      }
+      if (other.FixedSpeedRPM != 0D) {
+        FixedSpeedRPM = other.FixedSpeedRPM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -355,6 +380,10 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 50: {
             ShaftSide = input.ReadString();
+            break;
+          }
+          case 57: {
+            FixedSpeedRPM = input.ReadDouble();
             break;
           }
         }
