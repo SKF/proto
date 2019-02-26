@@ -86,6 +86,8 @@ message Node {
   int64 childOrderNumber = 11 [deprecated=true];
   common.PrimitiveInt64 position = 12;
   common.PrimitiveString tags = 13;
+  common.PrimitiveString parentID = 14;
+  repeated common.PrimitiveString childrenIDs = 15;
 }
 
 message Nodes {
