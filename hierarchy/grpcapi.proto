@@ -11,6 +11,7 @@ service Hierarchy {
   rpc GetNode (common.PrimitiveString) returns (Node) {}
   rpc GetNodes (common.PrimitiveString) returns (Nodes) {}
   rpc GetChildNodes (common.PrimitiveString) returns (Nodes) {}
+  rpc GetSubTree (GetSubTreeInput) returns (Nodes) {}
   rpc GetParentNode (common.PrimitiveString) returns (Node) {}
   rpc GetAncestors (GetAncestorsInput) returns (GetAncestorsOutput) {}
 
@@ -86,6 +87,7 @@ message Node {
   int64 childOrderNumber = 11 [deprecated=true];
   common.PrimitiveInt64 position = 12;
   common.PrimitiveString tags = 13;
+  string parentId = 15;
 }
 
 message Nodes {
@@ -113,6 +115,11 @@ message DeleteNodeInput {
   string userId = 1;
   string nodeId = 2;
   common.Origin origin = 3;
+}
+
+message GetSubTreeInput {
+  string rootId = 1;
+  int32 depth = 2;
 }
 
 message GetAncestorsInput {
