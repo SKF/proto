@@ -247,18 +247,18 @@ namespace SKF.Enlight.API.Reports {
           .AddMethod(__Method_GetComplianceSummary, serviceImpl.GetComplianceSummary).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReportsBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
-      serviceBinder.AddMethod(__Method_GetAssetHealth, serviceImpl.GetAssetHealth);
-      serviceBinder.AddMethod(__Method_GetFunctionalLocationHealth, serviceImpl.GetFunctionalLocationHealth);
-      serviceBinder.AddMethod(__Method_GetComplianceLog, serviceImpl.GetComplianceLog);
-      serviceBinder.AddMethod(__Method_GetReports, serviceImpl.GetReports);
-      serviceBinder.AddMethod(__Method_GetComplianceSummary, serviceImpl.GetComplianceSummary);
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Reports.DeepPingOutput>(serviceImpl.DeepPing));
+      serviceBinder.AddMethod(__Method_GetAssetHealth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Reports.GetAssetHealthInput, global::SKF.Enlight.API.Reports.GetAssetHealthOutput>(serviceImpl.GetAssetHealth));
+      serviceBinder.AddMethod(__Method_GetFunctionalLocationHealth, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthInput, global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthOutput>(serviceImpl.GetFunctionalLocationHealth));
+      serviceBinder.AddMethod(__Method_GetComplianceLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Reports.GetComplianceLogInput, global::SKF.Enlight.API.Reports.GetComplianceLogOutput>(serviceImpl.GetComplianceLog));
+      serviceBinder.AddMethod(__Method_GetReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Reports.GetReportsInput, global::SKF.Enlight.API.Reports.GetReportsOutput>(serviceImpl.GetReports));
+      serviceBinder.AddMethod(__Method_GetComplianceSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Reports.GetComplianceSummaryInput, global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput>(serviceImpl.GetComplianceSummary));
     }
 
   }

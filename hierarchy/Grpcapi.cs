@@ -47,9 +47,10 @@ namespace SKF.Enlight.API.Hierarchy {
             "THVicmljYXRpb25Qb2ludBIcChBjaGlsZE9yZGVyTnVtYmVyGAsgASgDQgIY",
             "ARIoCghwb3NpdGlvbhgMIAEoCzIWLmNvbW1vbi5QcmltaXRpdmVJbnQ2NBIl",
             "CgR0YWdzGA0gASgLMhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIlCgVOb2Rl",
-            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJGCg5HZXRFdmVudHNJ",
+            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJzCg5HZXRFdmVudHNJ",
             "bnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1pdBgCIAEoCzIWLmNvbW1vbi5Q",
-            "cmltaXRpdmVJbnQzMiIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
+            "cmltaXRpdmVJbnQzMhIrCgpjdXN0b21lcklkGAMgASgLMhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZyIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
             "ASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEhsKBG5vZGUY",
             "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
             "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJRCg9EZWxldGVOb2Rl",
@@ -89,7 +90,7 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "ChildOrderNumber", "Position", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.SaveNodeInput), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null),
@@ -1710,6 +1711,7 @@ namespace SKF.Enlight.API.Hierarchy {
     public GetEventsInput(GetEventsInput other) : this() {
       since_ = other.since_;
       limit_ = other.limit_ != null ? other.limit_.Clone() : null;
+      customerId_ = other.customerId_ != null ? other.customerId_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1740,6 +1742,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "customerId" field.</summary>
+    public const int CustomerIdFieldNumber = 3;
+    private global::SKF.Enlight.API.Common.PrimitiveString customerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Common.PrimitiveString CustomerId {
+      get { return customerId_; }
+      set {
+        customerId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetEventsInput);
@@ -1755,6 +1768,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (Since != other.Since) return false;
       if (!object.Equals(Limit, other.Limit)) return false;
+      if (!object.Equals(CustomerId, other.CustomerId)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1763,6 +1777,7 @@ namespace SKF.Enlight.API.Hierarchy {
       int hash = 1;
       if (Since != 0L) hash ^= Since.GetHashCode();
       if (limit_ != null) hash ^= Limit.GetHashCode();
+      if (customerId_ != null) hash ^= CustomerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1784,6 +1799,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(18);
         output.WriteMessage(Limit);
       }
+      if (customerId_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CustomerId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1797,6 +1816,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (limit_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Limit);
+      }
+      if (customerId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1818,6 +1840,12 @@ namespace SKF.Enlight.API.Hierarchy {
         }
         Limit.MergeFrom(other.Limit);
       }
+      if (other.customerId_ != null) {
+        if (customerId_ == null) {
+          customerId_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+        }
+        CustomerId.MergeFrom(other.CustomerId);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1838,6 +1866,13 @@ namespace SKF.Enlight.API.Hierarchy {
               limit_ = new global::SKF.Enlight.API.Common.PrimitiveInt32();
             }
             input.ReadMessage(limit_);
+            break;
+          }
+          case 26: {
+            if (customerId_ == null) {
+              customerId_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+            }
+            input.ReadMessage(customerId_);
             break;
           }
         }

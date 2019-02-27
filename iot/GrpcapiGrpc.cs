@@ -724,34 +724,34 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl.RequestPutMediaSignedUrl).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IoTBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
-      serviceBinder.AddMethod(__Method_CreateTask, serviceImpl.CreateTask);
-      serviceBinder.AddMethod(__Method_GetAllTasks, serviceImpl.GetAllTasks);
-      serviceBinder.AddMethod(__Method_GetUncompletedTasks, serviceImpl.GetUncompletedTasks);
-      serviceBinder.AddMethod(__Method_SetTaskCompleted, serviceImpl.SetTaskCompleted);
-      serviceBinder.AddMethod(__Method_DeleteTask, serviceImpl.DeleteTask);
-      serviceBinder.AddMethod(__Method_GetUncompletedTasksByHierarchy, serviceImpl.GetUncompletedTasksByHierarchy);
-      serviceBinder.AddMethod(__Method_SetTaskStatus, serviceImpl.SetTaskStatus);
-      serviceBinder.AddMethod(__Method_GetTaskStream, serviceImpl.GetTaskStream);
-      serviceBinder.AddMethod(__Method_GetTasksByStatus, serviceImpl.GetTasksByStatus);
-      serviceBinder.AddMethod(__Method_GetTaskByUUID, serviceImpl.GetTaskByUUID);
-      serviceBinder.AddMethod(__Method_GetTaskByLongId, serviceImpl.GetTaskByLongId);
-      serviceBinder.AddMethod(__Method_GetTasksModifiedSinceTimestamp, serviceImpl.GetTasksModifiedSinceTimestamp);
-      serviceBinder.AddMethod(__Method_IngestNodesData, serviceImpl.IngestNodesData);
-      serviceBinder.AddMethod(__Method_IngestNodeData, serviceImpl.IngestNodeData);
-      serviceBinder.AddMethod(__Method_GetLatestNodeData, serviceImpl.GetLatestNodeData);
-      serviceBinder.AddMethod(__Method_GetNodeData, serviceImpl.GetNodeData);
-      serviceBinder.AddMethod(__Method_DeleteNodeData, serviceImpl.DeleteNodeData);
-      serviceBinder.AddMethod(__Method_GetNodeEventLog, serviceImpl.GetNodeEventLog);
-      serviceBinder.AddMethod(__Method_GetMedia, serviceImpl.GetMedia);
-      serviceBinder.AddMethod(__Method_RequestGetMediaSignedUrl, serviceImpl.RequestGetMediaSignedUrl);
-      serviceBinder.AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl.RequestPutMediaSignedUrl);
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.DeepPing));
+      serviceBinder.AddMethod(__Method_CreateTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.InitialTaskDescription, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.CreateTask));
+      serviceBinder.AddMethod(__Method_GetAllTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(serviceImpl.GetAllTasks));
+      serviceBinder.AddMethod(__Method_GetUncompletedTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(serviceImpl.GetUncompletedTasks));
+      serviceBinder.AddMethod(__Method_SetTaskCompleted, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void>(serviceImpl.SetTaskCompleted));
+      serviceBinder.AddMethod(__Method_DeleteTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.TaskUser, global::SKF.Enlight.API.Common.Void>(serviceImpl.DeleteTask));
+      serviceBinder.AddMethod(__Method_GetUncompletedTasksByHierarchy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.IoT.TaskDescriptions>(serviceImpl.GetUncompletedTasksByHierarchy));
+      serviceBinder.AddMethod(__Method_SetTaskStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.SetTaskStatusInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.SetTaskStatus));
+      serviceBinder.AddMethod(__Method_GetTaskStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::SKF.Enlight.API.IoT.GetTaskStreamInput, global::SKF.Enlight.API.IoT.GetTaskStreamOutput>(serviceImpl.GetTaskStream));
+      serviceBinder.AddMethod(__Method_GetTasksByStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetTasksByStatusInput, global::SKF.Enlight.API.IoT.GetTasksByStatusOutput>(serviceImpl.GetTasksByStatus));
+      serviceBinder.AddMethod(__Method_GetTaskByUUID, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetTaskByUUIDInput, global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput>(serviceImpl.GetTaskByUUID));
+      serviceBinder.AddMethod(__Method_GetTaskByLongId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetTaskByLongIdInput, global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput>(serviceImpl.GetTaskByLongId));
+      serviceBinder.AddMethod(__Method_GetTasksModifiedSinceTimestamp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput, global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput>(serviceImpl.GetTasksModifiedSinceTimestamp));
+      serviceBinder.AddMethod(__Method_IngestNodesData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.IngestNodesDataInput, global::SKF.Enlight.API.IoT.IngestNodesDataOutput>(serviceImpl.IngestNodesData));
+      serviceBinder.AddMethod(__Method_IngestNodeData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput>(serviceImpl.IngestNodeData));
+      serviceBinder.AddMethod(__Method_GetLatestNodeData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetLatestNodeDataInput, global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput>(serviceImpl.GetLatestNodeData));
+      serviceBinder.AddMethod(__Method_GetNodeData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetNodeDataInput, global::SKF.Enlight.API.IoT.GetNodeDataOutput>(serviceImpl.GetNodeData));
+      serviceBinder.AddMethod(__Method_DeleteNodeData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.DeleteNodeDataInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.DeleteNodeData));
+      serviceBinder.AddMethod(__Method_GetNodeEventLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetNodeEventLogInput, global::SKF.Enlight.API.IoT.GetNodeEventLogOutput>(serviceImpl.GetNodeEventLog));
+      serviceBinder.AddMethod(__Method_GetMedia, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetMediaInput, global::SKF.Enlight.API.IoT.GetMediaOutput>(serviceImpl.GetMedia));
+      serviceBinder.AddMethod(__Method_RequestGetMediaSignedUrl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput, global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput>(serviceImpl.RequestGetMediaSignedUrl));
+      serviceBinder.AddMethod(__Method_RequestPutMediaSignedUrl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput, global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput>(serviceImpl.RequestPutMediaSignedUrl));
     }
 
   }

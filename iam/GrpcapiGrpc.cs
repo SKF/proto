@@ -488,26 +488,26 @@ namespace SKF.Enlight.API.IAM {
           .AddMethod(__Method_RemoveUserPermission, serviceImpl.RemoveUserPermission).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IAMBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
-      serviceBinder.AddMethod(__Method_CheckAuthentication, serviceImpl.CheckAuthentication);
-      serviceBinder.AddMethod(__Method_CheckAuthenticationByEndpoint, serviceImpl.CheckAuthenticationByEndpoint);
-      serviceBinder.AddMethod(__Method_GetHierarchyRelations, serviceImpl.GetHierarchyRelations);
-      serviceBinder.AddMethod(__Method_GetEventRecords, serviceImpl.GetEventRecords);
-      serviceBinder.AddMethod(__Method_IsAuthorized, serviceImpl.IsAuthorized);
-      serviceBinder.AddMethod(__Method_AddAuthorizationResource, serviceImpl.AddAuthorizationResource);
-      serviceBinder.AddMethod(__Method_RemoveAuthorizationResource, serviceImpl.RemoveAuthorizationResource);
-      serviceBinder.AddMethod(__Method_GetAuthorizationResourcesByType, serviceImpl.GetAuthorizationResourcesByType);
-      serviceBinder.AddMethod(__Method_AddAuthorizationResourceRelation, serviceImpl.AddAuthorizationResourceRelation);
-      serviceBinder.AddMethod(__Method_RemoveAuthorizationResourceRelation, serviceImpl.RemoveAuthorizationResourceRelation);
-      serviceBinder.AddMethod(__Method_GetAuthorizationResourceRelations, serviceImpl.GetAuthorizationResourceRelations);
-      serviceBinder.AddMethod(__Method_AddUserPermission, serviceImpl.AddUserPermission);
-      serviceBinder.AddMethod(__Method_RemoveUserPermission, serviceImpl.RemoveUserPermission);
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.DeepPing));
+      serviceBinder.AddMethod(__Method_CheckAuthentication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims>(serviceImpl.CheckAuthentication));
+      serviceBinder.AddMethod(__Method_CheckAuthenticationByEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.UserClaims>(serviceImpl.CheckAuthenticationByEndpoint));
+      serviceBinder.AddMethod(__Method_GetHierarchyRelations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput, global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput>(serviceImpl.GetHierarchyRelations));
+      serviceBinder.AddMethod(__Method_GetEventRecords, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.GetEventRecordsInput, global::SKF.Enlight.API.IAM.GetEventRecordsOutput>(serviceImpl.GetEventRecords));
+      serviceBinder.AddMethod(__Method_IsAuthorized, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.IsAuthorizedInput, global::SKF.Enlight.API.IAM.IsAuthorizedOutput>(serviceImpl.IsAuthorized));
+      serviceBinder.AddMethod(__Method_AddAuthorizationResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.AddAuthorizationResourceInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.AddAuthorizationResource));
+      serviceBinder.AddMethod(__Method_RemoveAuthorizationResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveAuthorizationResource));
+      serviceBinder.AddMethod(__Method_GetAuthorizationResourcesByType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.GetAuthorizationResourcesByTypeInput, global::SKF.Enlight.API.IAM.GetAuthorizationResourcesByTypeOutput>(serviceImpl.GetAuthorizationResourcesByType));
+      serviceBinder.AddMethod(__Method_AddAuthorizationResourceRelation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.AddAuthorizationResourceRelationInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.AddAuthorizationResourceRelation));
+      serviceBinder.AddMethod(__Method_RemoveAuthorizationResourceRelation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.RemoveAuthorizationResourceRelationInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveAuthorizationResourceRelation));
+      serviceBinder.AddMethod(__Method_GetAuthorizationResourceRelations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.GetAuthorizationResourceRelationsInput, global::SKF.Enlight.API.IAM.GetAuthorizationResourceRelationsOutput>(serviceImpl.GetAuthorizationResourceRelations));
+      serviceBinder.AddMethod(__Method_AddUserPermission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.AddUserPermissionInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.AddUserPermission));
+      serviceBinder.AddMethod(__Method_RemoveUserPermission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.RemoveUserPermissionInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveUserPermission));
     }
 
   }

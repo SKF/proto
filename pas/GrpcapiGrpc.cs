@@ -300,20 +300,20 @@ namespace SKF.Enlight.API.PAS {
           .AddMethod(__Method_CalculateAndSetPointAlarmStatus, serviceImpl.CalculateAndSetPointAlarmStatus).Build();
     }
 
-    /// <summary>Register service method implementations with a service binder. Useful when customizing the service binding logic.
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PointAlarmStatusBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl.DeepPing);
-      serviceBinder.AddMethod(__Method_SetPointAlarmThreshold, serviceImpl.SetPointAlarmThreshold);
-      serviceBinder.AddMethod(__Method_GetPointAlarmThreshold, serviceImpl.GetPointAlarmThreshold);
-      serviceBinder.AddMethod(__Method_SetPointAlarmStatus, serviceImpl.SetPointAlarmStatus);
-      serviceBinder.AddMethod(__Method_GetPointAlarmStatus, serviceImpl.GetPointAlarmStatus);
-      serviceBinder.AddMethod(__Method_GetPointAlarmStatusStream, serviceImpl.GetPointAlarmStatusStream);
-      serviceBinder.AddMethod(__Method_GetPointAlarmStatusEventLog, serviceImpl.GetPointAlarmStatusEventLog);
-      serviceBinder.AddMethod(__Method_CalculateAndSetPointAlarmStatus, serviceImpl.CalculateAndSetPointAlarmStatus);
+      serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.PAS.DeepPingOutput>(serviceImpl.DeepPing));
+      serviceBinder.AddMethod(__Method_SetPointAlarmThreshold, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput, global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput>(serviceImpl.SetPointAlarmThreshold));
+      serviceBinder.AddMethod(__Method_GetPointAlarmThreshold, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput, global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput>(serviceImpl.GetPointAlarmThreshold));
+      serviceBinder.AddMethod(__Method_SetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput, global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput>(serviceImpl.SetPointAlarmStatus));
+      serviceBinder.AddMethod(__Method_GetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput>(serviceImpl.GetPointAlarmStatus));
+      serviceBinder.AddMethod(__Method_GetPointAlarmStatusStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput>(serviceImpl.GetPointAlarmStatusStream));
+      serviceBinder.AddMethod(__Method_GetPointAlarmStatusEventLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput>(serviceImpl.GetPointAlarmStatusEventLog));
+      serviceBinder.AddMethod(__Method_CalculateAndSetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.CalculateAndSetPointAlarmStatus));
     }
 
   }
