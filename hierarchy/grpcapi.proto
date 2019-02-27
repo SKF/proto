@@ -97,6 +97,7 @@ message Nodes {
 message GetEventsInput {
   int64 since = 1;
   common.PrimitiveInt32 limit = 2;
+  common.PrimitiveString customerId = 3;
 }
 
 message GetEventsOutput {
