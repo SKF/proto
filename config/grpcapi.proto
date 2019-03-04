@@ -75,7 +75,7 @@ message QCMeasurementPointConfig {
   WindowType windowType = 18;
   HighPassFilter highPassFilter = 19;
   Temperature temperature = 20;
-
+  ExternalSensorUsage externalSensorUsage = 21;
 }
 
 enum SampleRate {
@@ -177,4 +177,9 @@ enum Temperature {
   TEMPERATURE_DEGREES_FAHRENHEIT = 1;
   TEMPERATURE_DEGREES_CELCIUS = 2;
   TEMPERATURE_DEGREES_KELVIN = 3;
+}
+
+enum ExternalSensorUsage {
+  ExternalSensorUsage_DISABLED = 0;
+  ExternalSensorUsage_ENABLED = 1;
 }
