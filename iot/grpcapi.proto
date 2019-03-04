@@ -94,7 +94,7 @@ enum TaskStatus {
   IN_PROGRESS = 4;
   COMPLETED = 3;
   MISSED = 5;
-  PARTIAL = 6;
+  PARTIAL_COLLECTED = 6;
 }
 
 message FunctionalLocationIds {
