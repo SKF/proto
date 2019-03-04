@@ -75,7 +75,7 @@ message QCMeasurementPointConfig {
   WindowType windowType = 18;
   HighPassFilter highPassFilter = 19;
   Temperature temperature = 20;
-
+  ExternalSensorUsage externalSensorUsage = 21;
 }
 
 enum SampleRate {
@@ -121,6 +121,13 @@ enum ExternalSensorICP {
   ICP_UNKNOWN = 0;
   ICP_REQUIRED_WHEN_IN_USE = 1;
 }
+
+enum ExternalSensorUsage {
+  ExternalSensorUsage_UNKNOWN = 0;
+  ExternalSensorUsage_ENABLED = 1;
+  ExternalSensorUsage_DISABLED = 2;
+}
+
 
 enum ViewSignalType {
   VIEW_SIGNAL_UNKNOWN = 0;
