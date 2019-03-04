@@ -38,7 +38,7 @@ namespace SKF.Enlight.API.Config {
             "MiEuZ3JwY2FwaS5RQ01lYXN1cmVtZW50UG9pbnRDb25maWciKAoTTGF0ZXN0",
             "Q29uZmlnUmVxdWVzdBIRCgl0YXJnZXRJRHMYASADKAkiWgoQU2V0Q29uZmln",
             "UmVxdWVzdBIzCghjb25maWdRQxgCIAEoCzIhLmdycGNhcGkuUUNNZWFzdXJl",
-            "bWVudFBvaW50Q29uZmlnEhEKCXRhcmdldElEcxgBIAMoCSKpBgoYUUNNZWFz",
+            "bWVudFBvaW50Q29uZmlnEhEKCXRhcmdldElEcxgBIAMoCSLkBgoYUUNNZWFz",
             "dXJlbWVudFBvaW50Q29uZmlnEicKCnNhbXBsZVJhdGUYASABKA4yEy5ncnBj",
             "YXBpLlNhbXBsZVJhdGUSKwoMc2FtcGxlQW1vdW50GAIgASgOMhUuZ3JwY2Fw",
             "aS5TYW1wbGVBbW91bnQSPQoVZW52ZWxvcGVCYW5kU2VsZWN0aW9uGAUgASgO",
@@ -56,56 +56,60 @@ namespace SKF.Enlight.API.Config {
             "dGlvblR5cGUSJwoKd2luZG93VHlwZRgSIAEoDjITLmdycGNhcGkuV2luZG93",
             "VHlwZRIvCg5oaWdoUGFzc0ZpbHRlchgTIAEoDjIXLmdycGNhcGkuSGlnaFBh",
             "c3NGaWx0ZXISKQoLdGVtcGVyYXR1cmUYFCABKA4yFC5ncnBjYXBpLlRlbXBl",
-            "cmF0dXJlSgQIAxAESgQIBBAFSgQIDxAQSgQIEBARSgQIERASKkwKClRhcmdl",
-            "dFR5cGUSEgoOVEFSR0VUX0dFTkVSSUMQABIqCiZUQVJHRVRfUVVJQ0tfQ09M",
-            "TEVDVF9NRUFTVVJFTUVOVF9QT0lOVBABKpoBCgpTYW1wbGVSYXRlEhAKDFJB",
-            "VEVfVU5LTk9XThAAEgwKCFJBVEVfMjU2EAESDQoJUkFURV8xMjgwEAISDQoJ",
-            "UkFURV8yNTYwEAMSDQoJUkFURV81MTIwEAQSDgoKUkFURV8xMjgwMBAFEg4K",
-            "ClJBVEVfMjU2MDAQBhIOCgpSQVRFXzUxMjAwEAcSDwoLUkFURV8xMDI0MDAQ",
-            "CCqGAQoMU2FtcGxlQW1vdW50EhIKDkFNT1VOVF9VTktOT1dOEAASDgoKQU1P",
-            "VU5UXzI1NhABEg4KCkFNT1VOVF81MTIQAhIPCgtBTU9VTlRfMTAyNBADEg8K",
-            "C0FNT1VOVF8yMDQ4EAQSDwoLQU1PVU5UXzQwOTYQBRIPCgtBTU9VTlRfODE5",
-            "MhAGKk0KFUVudmVsb3BlQmFuZFNlbGVjdGlvbhIQCgxCQU5EX1VOS05PV04Q",
-            "ABIKCgZCQU5EXzEQARIKCgZCQU5EXzIQAhIKCgZCQU5EXzMQAypQCh5FeHRl",
-            "cm5hbFNlbnNvckVuZ2luZWVyaW5nVW5pdHMSEAoMVU5JVF9VTktOT1dOEAAS",
-            "HAoYVU5JVF9BQ0NFTEVSQVRJT05fRVVTX0dTEAEqUwoZRXh0ZXJuYWxTZW5z",
-            "b3JTZW5zaXRpdml0eRIXChNTRU5TSVRJVklUWV9VTktOT1dOEAASHQoZU0VO",
-            "U0lUSVZJVFlfMTAwX01WX1BFUl9FVRABKkIKEUV4dGVybmFsU2Vuc29ySUNQ",
-            "Eg8KC0lDUF9VTktOT1dOEAASHAoYSUNQX1JFUVVJUkVEX1dIRU5fSU5fVVNF",
-            "EAEqawoOVmlld1NpZ25hbFR5cGUSFwoTVklFV19TSUdOQUxfVU5LTk9XThAA",
-            "Eh0KGVZJRVdfU0lHTkFMX1NQRUNUUlVNX09OTFkQARIhCh1WSUVXX1NJR05B",
-            "TF9TUEVDVFJVTV9BTkRfVElNRRACKoIBCgpZQXhpc1VuaXRzEhIKDllfQVhJ",
-            "U19VTktOT1dOEAASHQoZWV9BWElTX0FDQ0VMRVJBVElPTl9JTl9HUxABEiEK",
-            "HVlfQVhJU19WRUxPQ0lUWV9JTl9NTV9QRVJfU0VDEAISHgoaWV9BWElTX0VO",
-            "VkVMT1BFRF9HRV9JTl9HRVMQAyo8CgpYQXhpc1VuaXRzEhIKDlhfQVhJU19V",
-            "TktOT05XEAASGgoWWF9BWElTX0ZSRVFVRU5DWV9JTl9IWhABKkcKDFlBeGlz",
-            "RGlzcGxheRIaChZZX0FYSVNfRElTUExBWV9VTktOT1dOEAASGwoXWV9BWElT",
-            "X0RJU1BMQVlfTElORUFSTFkQASoxCgpJbnB1dFJhbmdlEhEKDVJBTkdFX1VO",
-            "S05PV04QABIQCgxSQU5HRV8xMDBfR1MQASrdAQoNRGV0ZWN0aW9uVHlwZRIV",
-            "ChFERVRFQ1RJT05fVU5LTk9XThAAEhEKDURFVEVDVElPTl9STVMQARImCiJE",
-            "RVRFQ1RJT05fUEVBS19DQUxDVUxBVEVEX0ZST01fUk1TEAISLgoqREVURUNU",
-            "SU9OX1BFQUtfVE9fUEVBS19DQUxDVUxBVEVEX0ZST01fUk1TEAMSKQolREVU",
-            "RUNUSU9OX1RSVUVfUEVBS19GUk9NX1BFQUtfVE9fUEVBSxAEEh8KG0RFVEVD",
-            "VElPTl9UUlVFX1BFQUtfVE9fUEVBSxAFKjQKCldpbmRvd1R5cGUSEgoOV0lO",
-            "RE9XX1VOS05PV04QABISCg5XSU5ET1dfSEFOTklORxABKmkKDkhpZ2hQYXNz",
-            "RmlsdGVyEhIKDkZJTFRFUl9VTktOT1dOEAASDgoKRklMVEVSX09GRhABEg8K",
-            "C0ZJTFRFUl8yX0haEAISEAoMRklMVEVSXzEwX0haEAMSEAoMRklMVEVSXzcw",
-            "X0haEAQqiwEKC1RlbXBlcmF0dXJlEhcKE1RFTVBFUkFUVVJFX1VOS05PV04Q",
-            "ABIiCh5URU1QRVJBVFVSRV9ERUdSRUVTX0ZBSFJFTkhFSVQQARIfChtURU1Q",
-            "RVJBVFVSRV9ERUdSRUVTX0NFTENJVVMQAhIeChpURU1QRVJBVFVSRV9ERUdS",
-            "RUVTX0tFTFZJThADMowDCg5SZXNvdXJjZUNvbmZpZxJTChBHZXRTcGVjaWZp",
-            "Y2F0aW9uEh0uZ3JwY2FwaS5TcGVjaWZpY2F0aW9uUmVxdWVzdBoeLmdycGNh",
-            "cGkuU3BlY2lmaWNhdGlvblJlc3BvbnNlIgASPwoJR2V0Q29uZmlnEhYuZ3Jw",
-            "Y2FwaS5Db25maWdSZXF1ZXN0GhguZ3JwY2FwaS5Db25maWdzUmVzcG9uc2Ui",
-            "ABJVChlHZXRMYXRlc3RDb25maWdCeVRhcmdldElEEhwuZ3JwY2FwaS5MYXRl",
-            "c3RDb25maWdSZXF1ZXN0GhguZ3JwY2FwaS5Db25maWdzUmVzcG9uc2UiABI/",
-            "ChNHZXRBbGxMYXRlc3RDb25maWdzEgwuY29tbW9uLlZvaWQaGC5ncnBjYXBp",
-            "LkNvbmZpZ3NSZXNwb25zZSIAEkwKFFNldENvbmZpZ0J5VGFyZ2V0SURzEhku",
-            "Z3JwY2FwaS5TZXRDb25maWdSZXF1ZXN0GhcuZ3JwY2FwaS5Db25maWdSZXNw",
-            "b25zZSIAQhmqAhZTS0YuRW5saWdodC5BUEkuQ29uZmlnYgZwcm90bzM="));
+            "cmF0dXJlEjkKE2V4dGVybmFsU2Vuc29yVXNhZ2UYFSABKA4yHC5ncnBjYXBp",
+            "LkV4dGVybmFsU2Vuc29yVXNhZ2VKBAgDEARKBAgEEAVKBAgPEBBKBAgQEBFK",
+            "BAgREBIqTAoKVGFyZ2V0VHlwZRISCg5UQVJHRVRfR0VORVJJQxAAEioKJlRB",
+            "UkdFVF9RVUlDS19DT0xMRUNUX01FQVNVUkVNRU5UX1BPSU5UEAEqmgEKClNh",
+            "bXBsZVJhdGUSEAoMUkFURV9VTktOT1dOEAASDAoIUkFURV8yNTYQARINCglS",
+            "QVRFXzEyODAQAhINCglSQVRFXzI1NjAQAxINCglSQVRFXzUxMjAQBBIOCgpS",
+            "QVRFXzEyODAwEAUSDgoKUkFURV8yNTYwMBAGEg4KClJBVEVfNTEyMDAQBxIP",
+            "CgtSQVRFXzEwMjQwMBAIKoYBCgxTYW1wbGVBbW91bnQSEgoOQU1PVU5UX1VO",
+            "S05PV04QABIOCgpBTU9VTlRfMjU2EAESDgoKQU1PVU5UXzUxMhACEg8KC0FN",
+            "T1VOVF8xMDI0EAMSDwoLQU1PVU5UXzIwNDgQBBIPCgtBTU9VTlRfNDA5NhAF",
+            "Eg8KC0FNT1VOVF84MTkyEAYqTQoVRW52ZWxvcGVCYW5kU2VsZWN0aW9uEhAK",
+            "DEJBTkRfVU5LTk9XThAAEgoKBkJBTkRfMRABEgoKBkJBTkRfMhACEgoKBkJB",
+            "TkRfMxADKlAKHkV4dGVybmFsU2Vuc29yRW5naW5lZXJpbmdVbml0cxIQCgxV",
+            "TklUX1VOS05PV04QABIcChhVTklUX0FDQ0VMRVJBVElPTl9FVVNfR1MQASpT",
+            "ChlFeHRlcm5hbFNlbnNvclNlbnNpdGl2aXR5EhcKE1NFTlNJVElWSVRZX1VO",
+            "S05PV04QABIdChlTRU5TSVRJVklUWV8xMDBfTVZfUEVSX0VVEAEqQgoRRXh0",
+            "ZXJuYWxTZW5zb3JJQ1ASDwoLSUNQX1VOS05PV04QABIcChhJQ1BfUkVRVUlS",
+            "RURfV0hFTl9JTl9VU0UQASprCg5WaWV3U2lnbmFsVHlwZRIXChNWSUVXX1NJ",
+            "R05BTF9VTktOT1dOEAASHQoZVklFV19TSUdOQUxfU1BFQ1RSVU1fT05MWRAB",
+            "EiEKHVZJRVdfU0lHTkFMX1NQRUNUUlVNX0FORF9USU1FEAIqggEKCllBeGlz",
+            "VW5pdHMSEgoOWV9BWElTX1VOS05PV04QABIdChlZX0FYSVNfQUNDRUxFUkFU",
+            "SU9OX0lOX0dTEAESIQodWV9BWElTX1ZFTE9DSVRZX0lOX01NX1BFUl9TRUMQ",
+            "AhIeChpZX0FYSVNfRU5WRUxPUEVEX0dFX0lOX0dFUxADKjwKClhBeGlzVW5p",
+            "dHMSEgoOWF9BWElTX1VOS05PTlcQABIaChZYX0FYSVNfRlJFUVVFTkNZX0lO",
+            "X0haEAEqRwoMWUF4aXNEaXNwbGF5EhoKFllfQVhJU19ESVNQTEFZX1VOS05P",
+            "V04QABIbChdZX0FYSVNfRElTUExBWV9MSU5FQVJMWRABKjEKCklucHV0UmFu",
+            "Z2USEQoNUkFOR0VfVU5LTk9XThAAEhAKDFJBTkdFXzEwMF9HUxABKt0BCg1E",
+            "ZXRlY3Rpb25UeXBlEhUKEURFVEVDVElPTl9VTktOT1dOEAASEQoNREVURUNU",
+            "SU9OX1JNUxABEiYKIkRFVEVDVElPTl9QRUFLX0NBTENVTEFURURfRlJPTV9S",
+            "TVMQAhIuCipERVRFQ1RJT05fUEVBS19UT19QRUFLX0NBTENVTEFURURfRlJP",
+            "TV9STVMQAxIpCiVERVRFQ1RJT05fVFJVRV9QRUFLX0ZST01fUEVBS19UT19Q",
+            "RUFLEAQSHwobREVURUNUSU9OX1RSVUVfUEVBS19UT19QRUFLEAUqNAoKV2lu",
+            "ZG93VHlwZRISCg5XSU5ET1dfVU5LTk9XThAAEhIKDldJTkRPV19IQU5OSU5H",
+            "EAEqaQoOSGlnaFBhc3NGaWx0ZXISEgoORklMVEVSX1VOS05PV04QABIOCgpG",
+            "SUxURVJfT0ZGEAESDwoLRklMVEVSXzJfSFoQAhIQCgxGSUxURVJfMTBfSFoQ",
+            "AxIQCgxGSUxURVJfNzBfSFoQBCqLAQoLVGVtcGVyYXR1cmUSFwoTVEVNUEVS",
+            "QVRVUkVfVU5LTk9XThAAEiIKHlRFTVBFUkFUVVJFX0RFR1JFRVNfRkFIUkVO",
+            "SEVJVBABEh8KG1RFTVBFUkFUVVJFX0RFR1JFRVNfQ0VMQ0lVUxACEh4KGlRF",
+            "TVBFUkFUVVJFX0RFR1JFRVNfS0VMVklOEAMqWAoTRXh0ZXJuYWxTZW5zb3JV",
+            "c2FnZRIgChxFeHRlcm5hbFNlbnNvclVzYWdlX0RJU0FCTEVEEAASHwobRXh0",
+            "ZXJuYWxTZW5zb3JVc2FnZV9FTkFCTEVEEAEyjAMKDlJlc291cmNlQ29uZmln",
+            "ElMKEEdldFNwZWNpZmljYXRpb24SHS5ncnBjYXBpLlNwZWNpZmljYXRpb25S",
+            "ZXF1ZXN0Gh4uZ3JwY2FwaS5TcGVjaWZpY2F0aW9uUmVzcG9uc2UiABI/CglH",
+            "ZXRDb25maWcSFi5ncnBjYXBpLkNvbmZpZ1JlcXVlc3QaGC5ncnBjYXBpLkNv",
+            "bmZpZ3NSZXNwb25zZSIAElUKGUdldExhdGVzdENvbmZpZ0J5VGFyZ2V0SUQS",
+            "HC5ncnBjYXBpLkxhdGVzdENvbmZpZ1JlcXVlc3QaGC5ncnBjYXBpLkNvbmZp",
+            "Z3NSZXNwb25zZSIAEj8KE0dldEFsbExhdGVzdENvbmZpZ3MSDC5jb21tb24u",
+            "Vm9pZBoYLmdycGNhcGkuQ29uZmlnc1Jlc3BvbnNlIgASTAoUU2V0Q29uZmln",
+            "QnlUYXJnZXRJRHMSGS5ncnBjYXBpLlNldENvbmZpZ1JlcXVlc3QaFy5ncnBj",
+            "YXBpLkNvbmZpZ1Jlc3BvbnNlIgBCGaoCFlNLRi5FbmxpZ2h0LkFQSS5Db25m",
+            "aWdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Config.TargetType), typeof(global::SKF.Enlight.API.Config.SampleRate), typeof(global::SKF.Enlight.API.Config.SampleAmount), typeof(global::SKF.Enlight.API.Config.EnvelopeBandSelection), typeof(global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits), typeof(global::SKF.Enlight.API.Config.ExternalSensorSensitivity), typeof(global::SKF.Enlight.API.Config.ExternalSensorICP), typeof(global::SKF.Enlight.API.Config.ViewSignalType), typeof(global::SKF.Enlight.API.Config.YAxisUnits), typeof(global::SKF.Enlight.API.Config.XAxisUnits), typeof(global::SKF.Enlight.API.Config.YAxisDisplay), typeof(global::SKF.Enlight.API.Config.InputRange), typeof(global::SKF.Enlight.API.Config.DetectionType), typeof(global::SKF.Enlight.API.Config.WindowType), typeof(global::SKF.Enlight.API.Config.HighPassFilter), typeof(global::SKF.Enlight.API.Config.Temperature), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Config.TargetType), typeof(global::SKF.Enlight.API.Config.SampleRate), typeof(global::SKF.Enlight.API.Config.SampleAmount), typeof(global::SKF.Enlight.API.Config.EnvelopeBandSelection), typeof(global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits), typeof(global::SKF.Enlight.API.Config.ExternalSensorSensitivity), typeof(global::SKF.Enlight.API.Config.ExternalSensorICP), typeof(global::SKF.Enlight.API.Config.ViewSignalType), typeof(global::SKF.Enlight.API.Config.YAxisUnits), typeof(global::SKF.Enlight.API.Config.XAxisUnits), typeof(global::SKF.Enlight.API.Config.YAxisDisplay), typeof(global::SKF.Enlight.API.Config.InputRange), typeof(global::SKF.Enlight.API.Config.DetectionType), typeof(global::SKF.Enlight.API.Config.WindowType), typeof(global::SKF.Enlight.API.Config.HighPassFilter), typeof(global::SKF.Enlight.API.Config.Temperature), typeof(global::SKF.Enlight.API.Config.ExternalSensorUsage), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationRequest), global::SKF.Enlight.API.Config.SpecificationRequest.Parser, new[]{ "TargetType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationResponse), global::SKF.Enlight.API.Config.SpecificationResponse.Parser, new[]{ "ID", "VersionID", "CreatedAtDate", "Specification" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigRequest), global::SKF.Enlight.API.Config.ConfigRequest.Parser, new[]{ "ConfigIDs" }, null, null, null),
@@ -114,7 +118,7 @@ namespace SKF.Enlight.API.Config {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigResponse), global::SKF.Enlight.API.Config.ConfigResponse.Parser, new[]{ "ConfigID", "VersionID", "CreatedAtDate", "TargetID", "ConfigQC" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.LatestConfigRequest), global::SKF.Enlight.API.Config.LatestConfigRequest.Parser, new[]{ "TargetIDs" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SetConfigRequest), global::SKF.Enlight.API.Config.SetConfigRequest.Parser, new[]{ "ConfigQC", "TargetIDs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.QCMeasurementPointConfig), global::SKF.Enlight.API.Config.QCMeasurementPointConfig.Parser, new[]{ "SampleRate", "SampleAmount", "EnvelopeBandSelection", "ExternalSensorEngineeringUnits", "ExternalSensorSensitivity", "ExternalSensorICP", "ViewSignalType", "YAxisUnits", "XAxisUnits", "YAxisDisplay", "InputRange", "DetectionType", "WindowType", "HighPassFilter", "Temperature" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.QCMeasurementPointConfig), global::SKF.Enlight.API.Config.QCMeasurementPointConfig.Parser, new[]{ "SampleRate", "SampleAmount", "EnvelopeBandSelection", "ExternalSensorEngineeringUnits", "ExternalSensorSensitivity", "ExternalSensorICP", "ViewSignalType", "YAxisUnits", "XAxisUnits", "YAxisDisplay", "InputRange", "DetectionType", "WindowType", "HighPassFilter", "Temperature", "ExternalSensorUsage" }, null, null, null)
           }));
     }
     #endregion
@@ -225,6 +229,11 @@ namespace SKF.Enlight.API.Config {
     [pbr::OriginalName("TEMPERATURE_DEGREES_FAHRENHEIT")] DegreesFahrenheit = 1,
     [pbr::OriginalName("TEMPERATURE_DEGREES_CELCIUS")] DegreesCelcius = 2,
     [pbr::OriginalName("TEMPERATURE_DEGREES_KELVIN")] DegreesKelvin = 3,
+  }
+
+  public enum ExternalSensorUsage {
+    [pbr::OriginalName("ExternalSensorUsage_DISABLED")] Disabled = 0,
+    [pbr::OriginalName("ExternalSensorUsage_ENABLED")] Enabled = 1,
   }
 
   #endregion
@@ -1510,6 +1519,7 @@ namespace SKF.Enlight.API.Config {
       windowType_ = other.windowType_;
       highPassFilter_ = other.highPassFilter_;
       temperature_ = other.temperature_;
+      externalSensorUsage_ = other.externalSensorUsage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1683,6 +1693,17 @@ namespace SKF.Enlight.API.Config {
       }
     }
 
+    /// <summary>Field number for the "externalSensorUsage" field.</summary>
+    public const int ExternalSensorUsageFieldNumber = 21;
+    private global::SKF.Enlight.API.Config.ExternalSensorUsage externalSensorUsage_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Config.ExternalSensorUsage ExternalSensorUsage {
+      get { return externalSensorUsage_; }
+      set {
+        externalSensorUsage_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as QCMeasurementPointConfig);
@@ -1711,6 +1732,7 @@ namespace SKF.Enlight.API.Config {
       if (WindowType != other.WindowType) return false;
       if (HighPassFilter != other.HighPassFilter) return false;
       if (Temperature != other.Temperature) return false;
+      if (ExternalSensorUsage != other.ExternalSensorUsage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1732,6 +1754,7 @@ namespace SKF.Enlight.API.Config {
       if (WindowType != 0) hash ^= WindowType.GetHashCode();
       if (HighPassFilter != 0) hash ^= HighPassFilter.GetHashCode();
       if (Temperature != 0) hash ^= Temperature.GetHashCode();
+      if (ExternalSensorUsage != 0) hash ^= ExternalSensorUsage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1805,6 +1828,10 @@ namespace SKF.Enlight.API.Config {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) Temperature);
       }
+      if (ExternalSensorUsage != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteEnum((int) ExternalSensorUsage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1857,6 +1884,9 @@ namespace SKF.Enlight.API.Config {
       }
       if (Temperature != 0) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Temperature);
+      }
+      if (ExternalSensorUsage != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ExternalSensorUsage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1913,6 +1943,9 @@ namespace SKF.Enlight.API.Config {
       }
       if (other.Temperature != 0) {
         Temperature = other.Temperature;
+      }
+      if (other.ExternalSensorUsage != 0) {
+        ExternalSensorUsage = other.ExternalSensorUsage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1983,6 +2016,10 @@ namespace SKF.Enlight.API.Config {
           }
           case 160: {
             temperature_ = (global::SKF.Enlight.API.Config.Temperature) input.ReadEnum();
+            break;
+          }
+          case 168: {
+            externalSensorUsage_ = (global::SKF.Enlight.API.Config.ExternalSensorUsage) input.ReadEnum();
             break;
           }
         }
