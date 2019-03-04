@@ -179,11 +179,11 @@ message Overall {
 }
 
 message Inspection {
-  repeated InspectionChoice choices = 0;
+  repeated InspectionChoice choices = 1;
 }
 
 message InspectionChoice {
-  string answer = 0;
-  string instruction = 1;
-  AlarmStatus status = 2;
+  string answer = 1;
+  string instruction = 2;
+  AlarmStatus status = 3;
 }
