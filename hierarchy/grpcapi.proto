@@ -23,6 +23,16 @@ service Hierarchy {
   rpc GetEvents (GetEventsInput) returns (GetEventsOutput) {}
 }
 
+enum CollectionInterval {
+  enum Unit {
+    MONTHS = 0; // Month should be default
+    DAYS = 1;
+    WEEKS = 2;
+  }
+  Unit unit = 0;
+  int32 value = 1;
+}
+
 message MeasurementPoint {
   string angular = 1;
   int32 bearing = 3;
@@ -30,6 +40,7 @@ message MeasurementPoint {
   string shaft = 5;
   string shaftSide = 6;
   double fixedSpeedRPM = 7;
+  CollectionInterval collectionInterval = 8;
 }
 
 enum ValueType {
@@ -45,14 +56,14 @@ enum VisualizationType {
 }
 
 message InspectionPoint {
-  string OBSOLETE_valueType = 1;
+  reserved 1;
   ValueType valueType = 4;
   string numericUnit = 2;
   repeated string answers = 3;
-
   VisualizationType visualizationType = 5;
   string visualizationMinValue = 6;
   string visualizationMaxValue = 7;
+  CollectionInterval collectionInterval = 8;
 }
 
 message LubricationPoint {
@@ -60,6 +71,7 @@ message LubricationPoint {
   int32 volume = 2;
   LubricantUnit unit = 3;
   int32 interval = 4; // days
+  CollectionInterval collectionInterval = 5;
 }
 
 enum LubricantUnit {
@@ -73,6 +85,7 @@ message AssetNode {
 }
 
 message Node {
+  reserved 11;
   string id = 1;
   string label = 2;
   string description = 3;
@@ -84,7 +97,6 @@ message Node {
   MeasurementPoint measurementPoint = 9;
   InspectionPoint inspectionPoint = 10;
   LubricationPoint lubricationPoint = 14;
-  int64 childOrderNumber = 11 [deprecated=true];
   common.PrimitiveInt64 position = 12;
   common.PrimitiveString tags = 13;
   string parentId = 15;
