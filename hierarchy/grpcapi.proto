@@ -23,14 +23,14 @@ service Hierarchy {
   rpc GetEvents (GetEventsInput) returns (GetEventsOutput) {}
 }
 
-enum CollectionInterval {
+message CollectionInterval {
   enum Unit {
     MONTHS = 0; // Month should be default
     DAYS = 1;
     WEEKS = 2;
   }
-  Unit unit = 0;
-  int32 value = 1;
+  Unit unit = 1;
+  int32 value = 2;
 }
 
 message MeasurementPoint {
