@@ -25,73 +25,79 @@ namespace SKF.Enlight.API.Hierarchy {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdoaWVyYXJjaHkvZ3JwY2FwaS5wcm90bxIHZ3JwY2FwaRoTY29tbW9uL2Nv",
-            "bW1vbi5wcm90byKGAQoQTWVhc3VyZW1lbnRQb2ludBIPCgdhbmd1bGFyGAEg",
-            "ASgJEg8KB2JlYXJpbmcYAyABKAUSFwoPbWVhc3VyZW1lbnRUeXBlGAQgASgJ",
-            "Eg0KBXNoYWZ0GAUgASgJEhEKCXNoYWZ0U2lkZRgGIAEoCRIVCg1maXhlZFNw",
-            "ZWVkUlBNGAcgASgBIu8BCg9JbnNwZWN0aW9uUG9pbnQSGgoST0JTT0xFVEVf",
-            "dmFsdWVUeXBlGAEgASgJEiUKCXZhbHVlVHlwZRgEIAEoDjISLmdycGNhcGku",
-            "VmFsdWVUeXBlEhMKC251bWVyaWNVbml0GAIgASgJEg8KB2Fuc3dlcnMYAyAD",
-            "KAkSNQoRdmlzdWFsaXphdGlvblR5cGUYBSABKA4yGi5ncnBjYXBpLlZpc3Vh",
-            "bGl6YXRpb25UeXBlEh0KFXZpc3VhbGl6YXRpb25NaW5WYWx1ZRgGIAEoCRId",
-            "ChV2aXN1YWxpemF0aW9uTWF4VmFsdWUYByABKAkibQoQTHVicmljYXRpb25Q",
-            "b2ludBIRCglsdWJyaWNhbnQYASABKAkSDgoGdm9sdW1lGAIgASgFEiQKBHVu",
-            "aXQYAyABKA4yFi5ncnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwY",
-            "BCABKAUiIAoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJIs8DCgRO",
-            "b2RlEgoKAmlkGAEgASgJEg0KBWxhYmVsGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAMgASgJEgwKBHR5cGUYBCABKAkSEwoLY3JpdGljYWxpdHkYBSABKAkSDwoH",
-            "c3ViVHlwZRgGIAEoCRIeCgZvcmlnaW4YByABKAsyDi5jb21tb24uT3JpZ2lu",
-            "EiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdycGNhcGkuQXNzZXROb2RlEjMKEG1l",
-            "YXN1cmVtZW50UG9pbnQYCSABKAsyGS5ncnBjYXBpLk1lYXN1cmVtZW50UG9p",
-            "bnQSMQoPaW5zcGVjdGlvblBvaW50GAogASgLMhguZ3JwY2FwaS5JbnNwZWN0",
-            "aW9uUG9pbnQSMwoQbHVicmljYXRpb25Qb2ludBgOIAEoCzIZLmdycGNhcGku",
-            "THVicmljYXRpb25Qb2ludBIcChBjaGlsZE9yZGVyTnVtYmVyGAsgASgDQgIY",
-            "ARIoCghwb3NpdGlvbhgMIAEoCzIWLmNvbW1vbi5QcmltaXRpdmVJbnQ2NBIl",
-            "CgR0YWdzGA0gASgLMhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxIQCghwYXJl",
-            "bnRJZBgPIAEoCSIlCgVOb2RlcxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGku",
-            "Tm9kZSJzCg5HZXRFdmVudHNJbnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1p",
-            "dBgCIAEoCzIWLmNvbW1vbi5QcmltaXRpdmVJbnQzMhIrCgpjdXN0b21lcklk",
-            "GAMgASgLMhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIhCg9HZXRFdmVudHNP",
-            "dXRwdXQSDgoGZXZlbnRzGAEgASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNl",
-            "cklkGAEgASgJEhsKBG5vZGUYAyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFy",
-            "ZW50SWQYAiABKAkSJAoMcGFyZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9y",
-            "aWdpbiJRCg9EZWxldGVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEg4KBm5v",
-            "ZGVJZBgCIAEoCRIeCgZvcmlnaW4YAyABKAsyDi5jb21tb24uT3JpZ2luIjAK",
-            "D0dldFN1YlRyZWVJbnB1dBIOCgZyb290SWQYASABKAkSDQoFZGVwdGgYAiAB",
-            "KAUiJAoRR2V0QW5jZXN0b3JzSW5wdXQSDwoHbm9kZV9pZBgBIAEoCSI6ChJH",
-            "ZXRBbmNlc3RvcnNPdXRwdXQSJAoFbm9kZXMYASADKAsyFS5ncnBjYXBpLkFu",
-            "Y2VzdG9yTm9kZSKPAQoMQW5jZXN0b3JOb2RlEgoKAmlkGAEgASgJEh4KBm9y",
-            "aWdpbhgCIAEoCzIOLmNvbW1vbi5PcmlnaW4SDQoFbGFiZWwYAyABKAkSEwoL",
-            "ZGVzY3JpcHRpb24YBCABKAkSDAoEdHlwZRgFIAEoCRIPCgdzdWJUeXBlGAYg",
-            "ASgJEhAKCHBhcmVudElkGAcgASgJKj0KCVZhbHVlVHlwZRILCgdOVU1FUklD",
-            "EAASEQoNU0lOR0xFX0NIT0lDRRABEhAKDE1VTFRJX0NIT0lDRRACKmwKEVZp",
-            "c3VhbGl6YXRpb25UeXBlEhYKElZJU1VBTElaQVRJT05fTk9ORRAAEiAKHFZJ",
-            "U1VBTElaQVRJT05fQ0lSQ1VMQVJfR0FVR0UQARIdChlWSVNVQUxJWkFUSU9O",
-            "X0xFVkVMX0dBVUdFEAIqLQoNTHVicmljYW50VW5pdBIICgRHUkFNEAASCQoF",
-            "T1VOQ0UQARIHCgNDTTMQAjKhBQoJSGllcmFyY2h5EjMKCERlZXBQaW5nEgwu",
-            "Y29tbW9uLlZvaWQaFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASMwoHR2V0",
-            "Tm9kZRIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUi",
-            "ABI1CghHZXROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBj",
-            "YXBpLk5vZGVzIgASOgoNR2V0Q2hpbGROb2RlcxIXLmNvbW1vbi5QcmltaXRp",
-            "dmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOAoKR2V0U3ViVHJlZRIYLmdy",
-            "cGNhcGkuR2V0U3ViVHJlZUlucHV0Gg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdl",
-            "dFBhcmVudE5vZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2Fw",
-            "aS5Ob2RlIgASSQoMR2V0QW5jZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3Rv",
-            "cnNJbnB1dBobLmdycGNhcGkuR2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0",
-            "Tm9kZUlkQnlPcmlnaW4SDi5jb21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1p",
-            "dGl2ZVN0cmluZyIAEj0KCFNhdmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlu",
-            "cHV0GhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUS",
-            "GC5ncnBjYXBpLkRlbGV0ZU5vZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJ",
-            "R2V0RXZlbnRzEhcuZ3JwY2FwaS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGku",
-            "R2V0RXZlbnRzT3V0cHV0IgBCHKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJj",
-            "aHliBnByb3RvMw=="));
+            "bW1vbi5wcm90byJ8ChJDb2xsZWN0aW9uSW50ZXJ2YWwSLgoEdW5pdBgBIAEo",
+            "DjIgLmdycGNhcGkuQ29sbGVjdGlvbkludGVydmFsLlVuaXQSDQoFdmFsdWUY",
+            "AiABKAUiJwoEVW5pdBIKCgZNT05USFMQABIICgREQVlTEAESCQoFV0VFS1MQ",
+            "AiK/AQoQTWVhc3VyZW1lbnRQb2ludBIPCgdhbmd1bGFyGAEgASgJEg8KB2Jl",
+            "YXJpbmcYAyABKAUSFwoPbWVhc3VyZW1lbnRUeXBlGAQgASgJEg0KBXNoYWZ0",
+            "GAUgASgJEhEKCXNoYWZ0U2lkZRgGIAEoCRIVCg1maXhlZFNwZWVkUlBNGAcg",
+            "ASgBEjcKEmNvbGxlY3Rpb25JbnRlcnZhbBgIIAEoCzIbLmdycGNhcGkuQ29s",
+            "bGVjdGlvbkludGVydmFsIpICCg9JbnNwZWN0aW9uUG9pbnQSJQoJdmFsdWVU",
+            "eXBlGAQgASgOMhIuZ3JwY2FwaS5WYWx1ZVR5cGUSEwoLbnVtZXJpY1VuaXQY",
+            "AiABKAkSDwoHYW5zd2VycxgDIAMoCRI1ChF2aXN1YWxpemF0aW9uVHlwZRgF",
+            "IAEoDjIaLmdycGNhcGkuVmlzdWFsaXphdGlvblR5cGUSHQoVdmlzdWFsaXph",
+            "dGlvbk1pblZhbHVlGAYgASgJEh0KFXZpc3VhbGl6YXRpb25NYXhWYWx1ZRgH",
+            "IAEoCRI3ChJjb2xsZWN0aW9uSW50ZXJ2YWwYCCABKAsyGy5ncnBjYXBpLkNv",
+            "bGxlY3Rpb25JbnRlcnZhbEoECAEQAiKmAQoQTHVicmljYXRpb25Qb2ludBIR",
+            "CglsdWJyaWNhbnQYASABKAkSDgoGdm9sdW1lGAIgASgFEiQKBHVuaXQYAyAB",
+            "KA4yFi5ncnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwYBCABKAUS",
+            "NwoSY29sbGVjdGlvbkludGVydmFsGAUgASgLMhsuZ3JwY2FwaS5Db2xsZWN0",
+            "aW9uSW50ZXJ2YWwiIAoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJ",
+            "IrcDCgROb2RlEgoKAmlkGAEgASgJEg0KBWxhYmVsGAIgASgJEhMKC2Rlc2Ny",
+            "aXB0aW9uGAMgASgJEgwKBHR5cGUYBCABKAkSEwoLY3JpdGljYWxpdHkYBSAB",
+            "KAkSDwoHc3ViVHlwZRgGIAEoCRIeCgZvcmlnaW4YByABKAsyDi5jb21tb24u",
+            "T3JpZ2luEiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdycGNhcGkuQXNzZXROb2Rl",
+            "EjMKEG1lYXN1cmVtZW50UG9pbnQYCSABKAsyGS5ncnBjYXBpLk1lYXN1cmVt",
+            "ZW50UG9pbnQSMQoPaW5zcGVjdGlvblBvaW50GAogASgLMhguZ3JwY2FwaS5J",
+            "bnNwZWN0aW9uUG9pbnQSMwoQbHVicmljYXRpb25Qb2ludBgOIAEoCzIZLmdy",
+            "cGNhcGkuTHVicmljYXRpb25Qb2ludBIoCghwb3NpdGlvbhgMIAEoCzIWLmNv",
+            "bW1vbi5QcmltaXRpdmVJbnQ2NBIlCgR0YWdzGA0gASgLMhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZxIQCghwYXJlbnRJZBgPIAEoCUoECAsQDCIlCgVOb2Rl",
+            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJzCg5HZXRFdmVudHNJ",
+            "bnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1pdBgCIAEoCzIWLmNvbW1vbi5Q",
+            "cmltaXRpdmVJbnQzMhIrCgpjdXN0b21lcklkGAMgASgLMhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZyIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
+            "ASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEhsKBG5vZGUY",
+            "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
+            "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJRCg9EZWxldGVOb2Rl",
+            "SW5wdXQSDgoGdXNlcklkGAEgASgJEg4KBm5vZGVJZBgCIAEoCRIeCgZvcmln",
+            "aW4YAyABKAsyDi5jb21tb24uT3JpZ2luIjAKD0dldFN1YlRyZWVJbnB1dBIO",
+            "CgZyb290SWQYASABKAkSDQoFZGVwdGgYAiABKAUiJAoRR2V0QW5jZXN0b3Jz",
+            "SW5wdXQSDwoHbm9kZV9pZBgBIAEoCSI6ChJHZXRBbmNlc3RvcnNPdXRwdXQS",
+            "JAoFbm9kZXMYASADKAsyFS5ncnBjYXBpLkFuY2VzdG9yTm9kZSKPAQoMQW5j",
+            "ZXN0b3JOb2RlEgoKAmlkGAEgASgJEh4KBm9yaWdpbhgCIAEoCzIOLmNvbW1v",
+            "bi5PcmlnaW4SDQoFbGFiZWwYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkS",
+            "DAoEdHlwZRgFIAEoCRIPCgdzdWJUeXBlGAYgASgJEhAKCHBhcmVudElkGAcg",
+            "ASgJKj0KCVZhbHVlVHlwZRILCgdOVU1FUklDEAASEQoNU0lOR0xFX0NIT0lD",
+            "RRABEhAKDE1VTFRJX0NIT0lDRRACKmwKEVZpc3VhbGl6YXRpb25UeXBlEhYK",
+            "ElZJU1VBTElaQVRJT05fTk9ORRAAEiAKHFZJU1VBTElaQVRJT05fQ0lSQ1VM",
+            "QVJfR0FVR0UQARIdChlWSVNVQUxJWkFUSU9OX0xFVkVMX0dBVUdFEAIqLQoN",
+            "THVicmljYW50VW5pdBIICgRHUkFNEAASCQoFT1VOQ0UQARIHCgNDTTMQAjKh",
+            "BQoJSGllcmFyY2h5EjMKCERlZXBQaW5nEgwuY29tbW9uLlZvaWQaFy5jb21t",
+            "b24uUHJpbWl0aXZlU3RyaW5nIgASMwoHR2V0Tm9kZRIXLmNvbW1vbi5Qcmlt",
+            "aXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUiABI1CghHZXROb2RlcxIXLmNv",
+            "bW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOgoNR2V0",
+            "Q2hpbGROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBp",
+            "Lk5vZGVzIgASOAoKR2V0U3ViVHJlZRIYLmdycGNhcGkuR2V0U3ViVHJlZUlu",
+            "cHV0Gg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5vZGUSFy5jb21t",
+            "b24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASSQoMR2V0QW5j",
+            "ZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBobLmdycGNhcGku",
+            "R2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4SDi5j",
+            "b21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEj0KCFNh",
+            "dmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlucHV0GhcuY29tbW9uLlByaW1p",
+            "dGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0ZU5v",
+            "ZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJR2V0RXZlbnRzEhcuZ3JwY2Fw",
+            "aS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0IgBC",
+            "HKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "OBSOLETEValueType", "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval), global::SKF.Enlight.API.Hierarchy.CollectionInterval.Parser, new[]{ "Unit", "Value" }, null, new[]{ typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "ChildOrderNumber", "Position", "Tags", "ParentId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null),
@@ -128,6 +134,179 @@ namespace SKF.Enlight.API.Hierarchy {
   #endregion
 
   #region Messages
+  public sealed partial class CollectionInterval : pb::IMessage<CollectionInterval> {
+    private static readonly pb::MessageParser<CollectionInterval> _parser = new pb::MessageParser<CollectionInterval>(() => new CollectionInterval());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CollectionInterval> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CollectionInterval() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CollectionInterval(CollectionInterval other) : this() {
+      unit_ = other.unit_;
+      value_ = other.value_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CollectionInterval Clone() {
+      return new CollectionInterval(this);
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 1;
+    private global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit unit_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit Unit {
+      get { return unit_; }
+      set {
+        unit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private int value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CollectionInterval);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CollectionInterval other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Unit != other.Unit) return false;
+      if (Value != other.Value) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Unit != 0) hash ^= Unit.GetHashCode();
+      if (Value != 0) hash ^= Value.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Unit != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Unit);
+      }
+      if (Value != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Unit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+      }
+      if (Value != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Value);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CollectionInterval other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Unit != 0) {
+        Unit = other.Unit;
+      }
+      if (other.Value != 0) {
+        Value = other.Value;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            unit_ = (global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Value = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CollectionInterval message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Unit {
+        /// <summary>
+        /// Month should be default
+        /// </summary>
+        [pbr::OriginalName("MONTHS")] Months = 0,
+        [pbr::OriginalName("DAYS")] Days = 1,
+        [pbr::OriginalName("WEEKS")] Weeks = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
   public sealed partial class MeasurementPoint : pb::IMessage<MeasurementPoint> {
     private static readonly pb::MessageParser<MeasurementPoint> _parser = new pb::MessageParser<MeasurementPoint>(() => new MeasurementPoint());
     private pb::UnknownFieldSet _unknownFields;
@@ -136,7 +315,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[0]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -159,6 +338,7 @@ namespace SKF.Enlight.API.Hierarchy {
       shaft_ = other.shaft_;
       shaftSide_ = other.shaftSide_;
       fixedSpeedRPM_ = other.fixedSpeedRPM_;
+      collectionInterval_ = other.collectionInterval_ != null ? other.collectionInterval_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -233,6 +413,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "collectionInterval" field.</summary>
+    public const int CollectionIntervalFieldNumber = 8;
+    private global::SKF.Enlight.API.Hierarchy.CollectionInterval collectionInterval_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Hierarchy.CollectionInterval CollectionInterval {
+      get { return collectionInterval_; }
+      set {
+        collectionInterval_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MeasurementPoint);
@@ -252,6 +443,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Shaft != other.Shaft) return false;
       if (ShaftSide != other.ShaftSide) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FixedSpeedRPM, other.FixedSpeedRPM)) return false;
+      if (!object.Equals(CollectionInterval, other.CollectionInterval)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -264,6 +456,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Shaft.Length != 0) hash ^= Shaft.GetHashCode();
       if (ShaftSide.Length != 0) hash ^= ShaftSide.GetHashCode();
       if (FixedSpeedRPM != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FixedSpeedRPM);
+      if (collectionInterval_ != null) hash ^= CollectionInterval.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -301,6 +494,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(57);
         output.WriteDouble(FixedSpeedRPM);
       }
+      if (collectionInterval_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CollectionInterval);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -326,6 +523,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (FixedSpeedRPM != 0D) {
         size += 1 + 8;
+      }
+      if (collectionInterval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollectionInterval);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -355,6 +555,12 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.FixedSpeedRPM != 0D) {
         FixedSpeedRPM = other.FixedSpeedRPM;
+      }
+      if (other.collectionInterval_ != null) {
+        if (collectionInterval_ == null) {
+          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+        }
+        CollectionInterval.MergeFrom(other.CollectionInterval);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -391,6 +597,13 @@ namespace SKF.Enlight.API.Hierarchy {
             FixedSpeedRPM = input.ReadDouble();
             break;
           }
+          case 66: {
+            if (collectionInterval_ == null) {
+              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+            }
+            input.ReadMessage(collectionInterval_);
+            break;
+          }
         }
       }
     }
@@ -405,7 +618,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -422,30 +635,19 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectionPoint(InspectionPoint other) : this() {
-      oBSOLETEValueType_ = other.oBSOLETEValueType_;
       valueType_ = other.valueType_;
       numericUnit_ = other.numericUnit_;
       answers_ = other.answers_.Clone();
       visualizationType_ = other.visualizationType_;
       visualizationMinValue_ = other.visualizationMinValue_;
       visualizationMaxValue_ = other.visualizationMaxValue_;
+      collectionInterval_ = other.collectionInterval_ != null ? other.collectionInterval_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InspectionPoint Clone() {
       return new InspectionPoint(this);
-    }
-
-    /// <summary>Field number for the "OBSOLETE_valueType" field.</summary>
-    public const int OBSOLETEValueTypeFieldNumber = 1;
-    private string oBSOLETEValueType_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string OBSOLETEValueType {
-      get { return oBSOLETEValueType_; }
-      set {
-        oBSOLETEValueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "valueType" field.</summary>
@@ -513,6 +715,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "collectionInterval" field.</summary>
+    public const int CollectionIntervalFieldNumber = 8;
+    private global::SKF.Enlight.API.Hierarchy.CollectionInterval collectionInterval_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Hierarchy.CollectionInterval CollectionInterval {
+      get { return collectionInterval_; }
+      set {
+        collectionInterval_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as InspectionPoint);
@@ -526,26 +739,26 @@ namespace SKF.Enlight.API.Hierarchy {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OBSOLETEValueType != other.OBSOLETEValueType) return false;
       if (ValueType != other.ValueType) return false;
       if (NumericUnit != other.NumericUnit) return false;
       if(!answers_.Equals(other.answers_)) return false;
       if (VisualizationType != other.VisualizationType) return false;
       if (VisualizationMinValue != other.VisualizationMinValue) return false;
       if (VisualizationMaxValue != other.VisualizationMaxValue) return false;
+      if (!object.Equals(CollectionInterval, other.CollectionInterval)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (OBSOLETEValueType.Length != 0) hash ^= OBSOLETEValueType.GetHashCode();
       if (ValueType != 0) hash ^= ValueType.GetHashCode();
       if (NumericUnit.Length != 0) hash ^= NumericUnit.GetHashCode();
       hash ^= answers_.GetHashCode();
       if (VisualizationType != 0) hash ^= VisualizationType.GetHashCode();
       if (VisualizationMinValue.Length != 0) hash ^= VisualizationMinValue.GetHashCode();
       if (VisualizationMaxValue.Length != 0) hash ^= VisualizationMaxValue.GetHashCode();
+      if (collectionInterval_ != null) hash ^= CollectionInterval.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -559,10 +772,6 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (OBSOLETEValueType.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(OBSOLETEValueType);
-      }
       if (NumericUnit.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(NumericUnit);
@@ -584,6 +793,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(58);
         output.WriteString(VisualizationMaxValue);
       }
+      if (collectionInterval_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CollectionInterval);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -592,9 +805,6 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (OBSOLETEValueType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OBSOLETEValueType);
-      }
       if (ValueType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ValueType);
       }
@@ -611,6 +821,9 @@ namespace SKF.Enlight.API.Hierarchy {
       if (VisualizationMaxValue.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(VisualizationMaxValue);
       }
+      if (collectionInterval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollectionInterval);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -621,9 +834,6 @@ namespace SKF.Enlight.API.Hierarchy {
     public void MergeFrom(InspectionPoint other) {
       if (other == null) {
         return;
-      }
-      if (other.OBSOLETEValueType.Length != 0) {
-        OBSOLETEValueType = other.OBSOLETEValueType;
       }
       if (other.ValueType != 0) {
         ValueType = other.ValueType;
@@ -641,6 +851,12 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.VisualizationMaxValue.Length != 0) {
         VisualizationMaxValue = other.VisualizationMaxValue;
       }
+      if (other.collectionInterval_ != null) {
+        if (collectionInterval_ == null) {
+          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+        }
+        CollectionInterval.MergeFrom(other.CollectionInterval);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -652,10 +868,6 @@ namespace SKF.Enlight.API.Hierarchy {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            OBSOLETEValueType = input.ReadString();
-            break;
-          }
           case 18: {
             NumericUnit = input.ReadString();
             break;
@@ -680,6 +892,13 @@ namespace SKF.Enlight.API.Hierarchy {
             VisualizationMaxValue = input.ReadString();
             break;
           }
+          case 66: {
+            if (collectionInterval_ == null) {
+              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+            }
+            input.ReadMessage(collectionInterval_);
+            break;
+          }
         }
       }
     }
@@ -694,7 +913,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -715,6 +934,7 @@ namespace SKF.Enlight.API.Hierarchy {
       volume_ = other.volume_;
       unit_ = other.unit_;
       interval_ = other.interval_;
+      collectionInterval_ = other.collectionInterval_ != null ? other.collectionInterval_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -770,6 +990,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "collectionInterval" field.</summary>
+    public const int CollectionIntervalFieldNumber = 5;
+    private global::SKF.Enlight.API.Hierarchy.CollectionInterval collectionInterval_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Hierarchy.CollectionInterval CollectionInterval {
+      get { return collectionInterval_; }
+      set {
+        collectionInterval_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LubricationPoint);
@@ -787,6 +1018,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Volume != other.Volume) return false;
       if (Unit != other.Unit) return false;
       if (Interval != other.Interval) return false;
+      if (!object.Equals(CollectionInterval, other.CollectionInterval)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -797,6 +1029,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Volume != 0) hash ^= Volume.GetHashCode();
       if (Unit != 0) hash ^= Unit.GetHashCode();
       if (Interval != 0) hash ^= Interval.GetHashCode();
+      if (collectionInterval_ != null) hash ^= CollectionInterval.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -826,6 +1059,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(32);
         output.WriteInt32(Interval);
       }
+      if (collectionInterval_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CollectionInterval);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -845,6 +1082,9 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (Interval != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Interval);
+      }
+      if (collectionInterval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollectionInterval);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -868,6 +1108,12 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.Interval != 0) {
         Interval = other.Interval;
+      }
+      if (other.collectionInterval_ != null) {
+        if (collectionInterval_ == null) {
+          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+        }
+        CollectionInterval.MergeFrom(other.CollectionInterval);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -896,6 +1142,13 @@ namespace SKF.Enlight.API.Hierarchy {
             Interval = input.ReadInt32();
             break;
           }
+          case 42: {
+            if (collectionInterval_ == null) {
+              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+            }
+            input.ReadMessage(collectionInterval_);
+            break;
+          }
         }
       }
     }
@@ -910,7 +1163,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1039,7 +1292,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1067,7 +1320,6 @@ namespace SKF.Enlight.API.Hierarchy {
       measurementPoint_ = other.measurementPoint_ != null ? other.measurementPoint_.Clone() : null;
       inspectionPoint_ = other.inspectionPoint_ != null ? other.inspectionPoint_.Clone() : null;
       lubricationPoint_ = other.lubricationPoint_ != null ? other.lubricationPoint_.Clone() : null;
-      childOrderNumber_ = other.childOrderNumber_;
       position_ = other.position_ != null ? other.position_.Clone() : null;
       tags_ = other.tags_ != null ? other.tags_.Clone() : null;
       parentId_ = other.parentId_;
@@ -1200,18 +1452,6 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
-    /// <summary>Field number for the "childOrderNumber" field.</summary>
-    public const int ChildOrderNumberFieldNumber = 11;
-    private long childOrderNumber_;
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long ChildOrderNumber {
-      get { return childOrderNumber_; }
-      set {
-        childOrderNumber_ = value;
-      }
-    }
-
     /// <summary>Field number for the "position" field.</summary>
     public const int PositionFieldNumber = 12;
     private global::SKF.Enlight.API.Common.PrimitiveInt64 position_;
@@ -1269,7 +1509,6 @@ namespace SKF.Enlight.API.Hierarchy {
       if (!object.Equals(MeasurementPoint, other.MeasurementPoint)) return false;
       if (!object.Equals(InspectionPoint, other.InspectionPoint)) return false;
       if (!object.Equals(LubricationPoint, other.LubricationPoint)) return false;
-      if (ChildOrderNumber != other.ChildOrderNumber) return false;
       if (!object.Equals(Position, other.Position)) return false;
       if (!object.Equals(Tags, other.Tags)) return false;
       if (ParentId != other.ParentId) return false;
@@ -1290,7 +1529,6 @@ namespace SKF.Enlight.API.Hierarchy {
       if (measurementPoint_ != null) hash ^= MeasurementPoint.GetHashCode();
       if (inspectionPoint_ != null) hash ^= InspectionPoint.GetHashCode();
       if (lubricationPoint_ != null) hash ^= LubricationPoint.GetHashCode();
-      if (ChildOrderNumber != 0L) hash ^= ChildOrderNumber.GetHashCode();
       if (position_ != null) hash ^= Position.GetHashCode();
       if (tags_ != null) hash ^= Tags.GetHashCode();
       if (ParentId.Length != 0) hash ^= ParentId.GetHashCode();
@@ -1346,10 +1584,6 @@ namespace SKF.Enlight.API.Hierarchy {
       if (inspectionPoint_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(InspectionPoint);
-      }
-      if (ChildOrderNumber != 0L) {
-        output.WriteRawTag(88);
-        output.WriteInt64(ChildOrderNumber);
       }
       if (position_ != null) {
         output.WriteRawTag(98);
@@ -1407,9 +1641,6 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (lubricationPoint_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LubricationPoint);
-      }
-      if (ChildOrderNumber != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ChildOrderNumber);
       }
       if (position_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
@@ -1478,9 +1709,6 @@ namespace SKF.Enlight.API.Hierarchy {
           lubricationPoint_ = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
         }
         LubricationPoint.MergeFrom(other.LubricationPoint);
-      }
-      if (other.ChildOrderNumber != 0L) {
-        ChildOrderNumber = other.ChildOrderNumber;
       }
       if (other.position_ != null) {
         if (position_ == null) {
@@ -1560,10 +1788,6 @@ namespace SKF.Enlight.API.Hierarchy {
             input.ReadMessage(inspectionPoint_);
             break;
           }
-          case 88: {
-            ChildOrderNumber = input.ReadInt64();
-            break;
-          }
           case 98: {
             if (position_ == null) {
               position_ = new global::SKF.Enlight.API.Common.PrimitiveInt64();
@@ -1603,7 +1827,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1724,7 +1948,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1921,7 +2145,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2050,7 +2274,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2275,7 +2499,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2466,7 +2690,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2623,7 +2847,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2752,7 +2976,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2873,7 +3097,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
