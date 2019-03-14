@@ -132,6 +132,7 @@ message DeleteNodeInput {
 message GetSubTreeInput {
   string rootId = 1;
   int32 depth = 2;
+  repeated string nodeTypes = 3;
 }
 
 message GetAncestorsInput {
