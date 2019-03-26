@@ -14,7 +14,6 @@ namespace SKF.Enlight.API.IAM {
 
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetUsersOutput> __Marshaller_grpcapi_GetUsersOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetUsersOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationInput> __Marshaller_grpcapi_CheckAuthenticationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.UserClaims> __Marshaller_grpcapi_UserClaims = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.UserClaims.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput> __Marshaller_grpcapi_CheckAuthenticationByEndpointInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser.ParseFrom);
@@ -41,13 +40,6 @@ namespace SKF.Enlight.API.IAM {
         "DeepPing",
         __Marshaller_common_Void,
         __Marshaller_common_PrimitiveString);
-
-    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.IAM.GetUsersOutput> __Method_GetUsers = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.IAM.GetUsersOutput>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetUsers",
-        __Marshaller_common_Void,
-        __Marshaller_grpcapi_GetUsersOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims> __Method_CheckAuthentication = new grpc::Method<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims>(
         grpc::MethodType.Unary,
@@ -150,11 +142,6 @@ namespace SKF.Enlight.API.IAM {
     public abstract partial class IAMBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IAM.GetUsersOutput> GetUsers(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -264,22 +251,6 @@ namespace SKF.Enlight.API.IAM {
       public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
-      }
-      public virtual global::SKF.Enlight.API.IAM.GetUsersOutput GetUsers(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::SKF.Enlight.API.IAM.GetUsersOutput GetUsers(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetUsers, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.GetUsersOutput> GetUsersAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IAM.GetUsersOutput> GetUsersAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetUsers, null, options, request);
       }
       public virtual global::SKF.Enlight.API.IAM.UserClaims CheckAuthentication(global::SKF.Enlight.API.IAM.CheckAuthenticationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -502,7 +473,6 @@ namespace SKF.Enlight.API.IAM {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DeepPing, serviceImpl.DeepPing)
-          .AddMethod(__Method_GetUsers, serviceImpl.GetUsers)
           .AddMethod(__Method_CheckAuthentication, serviceImpl.CheckAuthentication)
           .AddMethod(__Method_CheckAuthenticationByEndpoint, serviceImpl.CheckAuthenticationByEndpoint)
           .AddMethod(__Method_GetHierarchyRelations, serviceImpl.GetHierarchyRelations)
@@ -525,7 +495,6 @@ namespace SKF.Enlight.API.IAM {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IAMBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.DeepPing));
-      serviceBinder.AddMethod(__Method_GetUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.IAM.GetUsersOutput>(serviceImpl.GetUsers));
       serviceBinder.AddMethod(__Method_CheckAuthentication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.CheckAuthenticationInput, global::SKF.Enlight.API.IAM.UserClaims>(serviceImpl.CheckAuthentication));
       serviceBinder.AddMethod(__Method_CheckAuthenticationByEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput, global::SKF.Enlight.API.IAM.UserClaims>(serviceImpl.CheckAuthenticationByEndpoint));
       serviceBinder.AddMethod(__Method_GetHierarchyRelations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput, global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput>(serviceImpl.GetHierarchyRelations));
