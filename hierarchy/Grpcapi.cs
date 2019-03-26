@@ -61,34 +61,35 @@ namespace SKF.Enlight.API.Hierarchy {
             "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
             "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJRCg9EZWxldGVOb2Rl",
             "SW5wdXQSDgoGdXNlcklkGAEgASgJEg4KBm5vZGVJZBgCIAEoCRIeCgZvcmln",
-            "aW4YAyABKAsyDi5jb21tb24uT3JpZ2luIjAKD0dldFN1YlRyZWVJbnB1dBIO",
-            "CgZyb290SWQYASABKAkSDQoFZGVwdGgYAiABKAUiJAoRR2V0QW5jZXN0b3Jz",
-            "SW5wdXQSDwoHbm9kZV9pZBgBIAEoCSI6ChJHZXRBbmNlc3RvcnNPdXRwdXQS",
-            "JAoFbm9kZXMYASADKAsyFS5ncnBjYXBpLkFuY2VzdG9yTm9kZSKPAQoMQW5j",
-            "ZXN0b3JOb2RlEgoKAmlkGAEgASgJEh4KBm9yaWdpbhgCIAEoCzIOLmNvbW1v",
-            "bi5PcmlnaW4SDQoFbGFiZWwYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkS",
-            "DAoEdHlwZRgFIAEoCRIPCgdzdWJUeXBlGAYgASgJEhAKCHBhcmVudElkGAcg",
-            "ASgJKj0KCVZhbHVlVHlwZRILCgdOVU1FUklDEAASEQoNU0lOR0xFX0NIT0lD",
-            "RRABEhAKDE1VTFRJX0NIT0lDRRACKmwKEVZpc3VhbGl6YXRpb25UeXBlEhYK",
-            "ElZJU1VBTElaQVRJT05fTk9ORRAAEiAKHFZJU1VBTElaQVRJT05fQ0lSQ1VM",
-            "QVJfR0FVR0UQARIdChlWSVNVQUxJWkFUSU9OX0xFVkVMX0dBVUdFEAIqLQoN",
-            "THVicmljYW50VW5pdBIICgRHUkFNEAASCQoFT1VOQ0UQARIHCgNDTTMQAjKh",
-            "BQoJSGllcmFyY2h5EjMKCERlZXBQaW5nEgwuY29tbW9uLlZvaWQaFy5jb21t",
-            "b24uUHJpbWl0aXZlU3RyaW5nIgASMwoHR2V0Tm9kZRIXLmNvbW1vbi5Qcmlt",
-            "aXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUiABI1CghHZXROb2RlcxIXLmNv",
-            "bW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgASOgoNR2V0",
-            "Q2hpbGROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBp",
-            "Lk5vZGVzIgASOAoKR2V0U3ViVHJlZRIYLmdycGNhcGkuR2V0U3ViVHJlZUlu",
-            "cHV0Gg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5vZGUSFy5jb21t",
-            "b24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASSQoMR2V0QW5j",
-            "ZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBobLmdycGNhcGku",
-            "R2V0QW5jZXN0b3JzT3V0cHV0IgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4SDi5j",
-            "b21tb24uT3JpZ2luGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEj0KCFNh",
-            "dmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlucHV0GhcuY29tbW9uLlByaW1p",
-            "dGl2ZVN0cmluZyIAEjYKCkRlbGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0ZU5v",
-            "ZGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASQAoJR2V0RXZlbnRzEhcuZ3JwY2Fw",
-            "aS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0IgBC",
-            "HKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3RvMw=="));
+            "aW4YAyABKAsyDi5jb21tb24uT3JpZ2luIkMKD0dldFN1YlRyZWVJbnB1dBIO",
+            "CgZyb290SWQYASABKAkSDQoFZGVwdGgYAiABKAUSEQoJbm9kZVR5cGVzGAMg",
+            "AygJIiQKEUdldEFuY2VzdG9yc0lucHV0Eg8KB25vZGVfaWQYASABKAkiOgoS",
+            "R2V0QW5jZXN0b3JzT3V0cHV0EiQKBW5vZGVzGAEgAygLMhUuZ3JwY2FwaS5B",
+            "bmNlc3Rvck5vZGUijwEKDEFuY2VzdG9yTm9kZRIKCgJpZBgBIAEoCRIeCgZv",
+            "cmlnaW4YAiABKAsyDi5jb21tb24uT3JpZ2luEg0KBWxhYmVsGAMgASgJEhMK",
+            "C2Rlc2NyaXB0aW9uGAQgASgJEgwKBHR5cGUYBSABKAkSDwoHc3ViVHlwZRgG",
+            "IAEoCRIQCghwYXJlbnRJZBgHIAEoCSo9CglWYWx1ZVR5cGUSCwoHTlVNRVJJ",
+            "QxAAEhEKDVNJTkdMRV9DSE9JQ0UQARIQCgxNVUxUSV9DSE9JQ0UQAipsChFW",
+            "aXN1YWxpemF0aW9uVHlwZRIWChJWSVNVQUxJWkFUSU9OX05PTkUQABIgChxW",
+            "SVNVQUxJWkFUSU9OX0NJUkNVTEFSX0dBVUdFEAESHQoZVklTVUFMSVpBVElP",
+            "Tl9MRVZFTF9HQVVHRRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAAEgkK",
+            "BU9VTkNFEAESBwoDQ00zEAIyoQUKCUhpZXJhcmNoeRIzCghEZWVwUGluZxIM",
+            "LmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMKB0dl",
+            "dE5vZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2Rl",
+            "IgASNQoIR2V0Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3Jw",
+            "Y2FwaS5Ob2RlcyIAEjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJpbWl0",
+            "aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjgKCkdldFN1YlRyZWUSGC5n",
+            "cnBjYXBpLkdldFN1YlRyZWVJbnB1dBoOLmdycGNhcGkuTm9kZXMiABI5Cg1H",
+            "ZXRQYXJlbnROb2RlEhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoNLmdycGNh",
+            "cGkuTm9kZSIAEkkKDEdldEFuY2VzdG9ycxIaLmdycGNhcGkuR2V0QW5jZXN0",
+            "b3JzSW5wdXQaGy5ncnBjYXBpLkdldEFuY2VzdG9yc091dHB1dCIAEj4KEUdl",
+            "dE5vZGVJZEJ5T3JpZ2luEg4uY29tbW9uLk9yaWdpbhoXLmNvbW1vbi5Qcmlt",
+            "aXRpdmVTdHJpbmciABI9CghTYXZlTm9kZRIWLmdycGNhcGkuU2F2ZU5vZGVJ",
+            "bnB1dBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABI2CgpEZWxldGVOb2Rl",
+            "EhguZ3JwY2FwaS5EZWxldGVOb2RlSW5wdXQaDC5jb21tb24uVm9pZCIAEkAK",
+            "CUdldEV2ZW50cxIXLmdycGNhcGkuR2V0RXZlbnRzSW5wdXQaGC5ncnBjYXBp",
+            "LkdldEV2ZW50c091dHB1dCIAQhyqAhlTS0YuRW5saWdodC5BUEkuSGllcmFy",
+            "Y2h5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
@@ -103,7 +104,7 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.SaveNodeInput), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetSubTreeInput), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser, new[]{ "RootId", "Depth" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetSubTreeInput), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser, new[]{ "RootId", "Depth", "NodeTypes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser, new[]{ "NodeId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser, new[]{ "Nodes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AncestorNode), global::SKF.Enlight.API.Hierarchy.AncestorNode.Parser, new[]{ "Id", "Origin", "Label", "Description", "Type", "SubType", "ParentId" }, null, null, null)
@@ -2709,6 +2710,7 @@ namespace SKF.Enlight.API.Hierarchy {
     public GetSubTreeInput(GetSubTreeInput other) : this() {
       rootId_ = other.rootId_;
       depth_ = other.depth_;
+      nodeTypes_ = other.nodeTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2739,6 +2741,16 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "nodeTypes" field.</summary>
+    public const int NodeTypesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_nodeTypes_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> nodeTypes_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NodeTypes {
+      get { return nodeTypes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetSubTreeInput);
@@ -2754,6 +2766,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (RootId != other.RootId) return false;
       if (Depth != other.Depth) return false;
+      if(!nodeTypes_.Equals(other.nodeTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2762,6 +2775,7 @@ namespace SKF.Enlight.API.Hierarchy {
       int hash = 1;
       if (RootId.Length != 0) hash ^= RootId.GetHashCode();
       if (Depth != 0) hash ^= Depth.GetHashCode();
+      hash ^= nodeTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2783,6 +2797,7 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(16);
         output.WriteInt32(Depth);
       }
+      nodeTypes_.WriteTo(output, _repeated_nodeTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2797,6 +2812,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Depth != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Depth);
       }
+      size += nodeTypes_.CalculateSize(_repeated_nodeTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2814,6 +2830,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.Depth != 0) {
         Depth = other.Depth;
       }
+      nodeTypes_.Add(other.nodeTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2831,6 +2848,10 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 16: {
             Depth = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            nodeTypes_.AddEntriesFrom(input, _repeated_nodeTypes_codec);
             break;
           }
         }
