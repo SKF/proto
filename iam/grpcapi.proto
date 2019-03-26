@@ -7,7 +7,6 @@ import "common/common.proto";
 
 service IAM {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
-  rpc GetUsers (common.Void) returns (GetUsersOutput) {}
 
   rpc CheckAuthentication (CheckAuthenticationInput) returns (UserClaims) {}
   rpc CheckAuthenticationByEndpoint (CheckAuthenticationByEndpointInput) returns (UserClaims) {}
@@ -42,16 +41,7 @@ message UserClaims {
   string user_access = 8;
 }
 
-message User {
-  string id = 1;
-  string username = 2;
-}
-
 // Input & output messages
-message GetUsersOutput {
-  repeated User user = 1;
-}
-
 message GetHierarchyRelationsInput {
   string user_id = 1;
 }
