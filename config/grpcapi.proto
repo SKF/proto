@@ -180,6 +180,7 @@ enum Temperature {
 }
 
 enum ExternalSensorUsage {
-  ExternalSensorUsage_DISABLED = 0;
+  ExternalSensorUsage_UNKNOWN = 0;
   ExternalSensorUsage_ENABLED = 1;
+  ExternalSensorUsage_DISABLED = 2;
 }
