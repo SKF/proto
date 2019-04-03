@@ -82,6 +82,7 @@ enum LubricantUnit {
 
 message AssetNode {
   string criticality = 1;
+  string assettype = 2;
 }
 
 message Node {
