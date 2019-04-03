@@ -42,54 +42,54 @@ namespace SKF.Enlight.API.Hierarchy {
             "CglsdWJyaWNhbnQYASABKAkSDgoGdm9sdW1lGAIgASgFEiQKBHVuaXQYAyAB",
             "KA4yFi5ncnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwYBCABKAUS",
             "NwoSY29sbGVjdGlvbkludGVydmFsGAUgASgLMhsuZ3JwY2FwaS5Db2xsZWN0",
-            "aW9uSW50ZXJ2YWwiIAoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJ",
-            "IrcDCgROb2RlEgoKAmlkGAEgASgJEg0KBWxhYmVsGAIgASgJEhMKC2Rlc2Ny",
-            "aXB0aW9uGAMgASgJEgwKBHR5cGUYBCABKAkSEwoLY3JpdGljYWxpdHkYBSAB",
-            "KAkSDwoHc3ViVHlwZRgGIAEoCRIeCgZvcmlnaW4YByABKAsyDi5jb21tb24u",
-            "T3JpZ2luEiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdycGNhcGkuQXNzZXROb2Rl",
-            "EjMKEG1lYXN1cmVtZW50UG9pbnQYCSABKAsyGS5ncnBjYXBpLk1lYXN1cmVt",
-            "ZW50UG9pbnQSMQoPaW5zcGVjdGlvblBvaW50GAogASgLMhguZ3JwY2FwaS5J",
-            "bnNwZWN0aW9uUG9pbnQSMwoQbHVicmljYXRpb25Qb2ludBgOIAEoCzIZLmdy",
-            "cGNhcGkuTHVicmljYXRpb25Qb2ludBIoCghwb3NpdGlvbhgMIAEoCzIWLmNv",
-            "bW1vbi5QcmltaXRpdmVJbnQ2NBIlCgR0YWdzGA0gASgLMhcuY29tbW9uLlBy",
-            "aW1pdGl2ZVN0cmluZxIQCghwYXJlbnRJZBgPIAEoCUoECAsQDCIlCgVOb2Rl",
-            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJzCg5HZXRFdmVudHNJ",
-            "bnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1pdBgCIAEoCzIWLmNvbW1vbi5Q",
-            "cmltaXRpdmVJbnQzMhIrCgpjdXN0b21lcklkGAMgASgLMhcuY29tbW9uLlBy",
-            "aW1pdGl2ZVN0cmluZyIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
-            "ASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEhsKBG5vZGUY",
-            "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
-            "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJRCg9EZWxldGVOb2Rl",
-            "SW5wdXQSDgoGdXNlcklkGAEgASgJEg4KBm5vZGVJZBgCIAEoCRIeCgZvcmln",
-            "aW4YAyABKAsyDi5jb21tb24uT3JpZ2luIkMKD0dldFN1YlRyZWVJbnB1dBIO",
-            "CgZyb290SWQYASABKAkSDQoFZGVwdGgYAiABKAUSEQoJbm9kZVR5cGVzGAMg",
-            "AygJIiQKEUdldEFuY2VzdG9yc0lucHV0Eg8KB25vZGVfaWQYASABKAkiOgoS",
-            "R2V0QW5jZXN0b3JzT3V0cHV0EiQKBW5vZGVzGAEgAygLMhUuZ3JwY2FwaS5B",
-            "bmNlc3Rvck5vZGUijwEKDEFuY2VzdG9yTm9kZRIKCgJpZBgBIAEoCRIeCgZv",
-            "cmlnaW4YAiABKAsyDi5jb21tb24uT3JpZ2luEg0KBWxhYmVsGAMgASgJEhMK",
-            "C2Rlc2NyaXB0aW9uGAQgASgJEgwKBHR5cGUYBSABKAkSDwoHc3ViVHlwZRgG",
-            "IAEoCRIQCghwYXJlbnRJZBgHIAEoCSo9CglWYWx1ZVR5cGUSCwoHTlVNRVJJ",
-            "QxAAEhEKDVNJTkdMRV9DSE9JQ0UQARIQCgxNVUxUSV9DSE9JQ0UQAipsChFW",
-            "aXN1YWxpemF0aW9uVHlwZRIWChJWSVNVQUxJWkFUSU9OX05PTkUQABIgChxW",
-            "SVNVQUxJWkFUSU9OX0NJUkNVTEFSX0dBVUdFEAESHQoZVklTVUFMSVpBVElP",
-            "Tl9MRVZFTF9HQVVHRRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAAEgkK",
-            "BU9VTkNFEAESBwoDQ00zEAIyoQUKCUhpZXJhcmNoeRIzCghEZWVwUGluZxIM",
-            "LmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMKB0dl",
-            "dE5vZGUSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2Rl",
-            "IgASNQoIR2V0Tm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3Jw",
-            "Y2FwaS5Ob2RlcyIAEjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJpbWl0",
-            "aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIAEjgKCkdldFN1YlRyZWUSGC5n",
-            "cnBjYXBpLkdldFN1YlRyZWVJbnB1dBoOLmdycGNhcGkuTm9kZXMiABI5Cg1H",
-            "ZXRQYXJlbnROb2RlEhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoNLmdycGNh",
-            "cGkuTm9kZSIAEkkKDEdldEFuY2VzdG9ycxIaLmdycGNhcGkuR2V0QW5jZXN0",
-            "b3JzSW5wdXQaGy5ncnBjYXBpLkdldEFuY2VzdG9yc091dHB1dCIAEj4KEUdl",
-            "dE5vZGVJZEJ5T3JpZ2luEg4uY29tbW9uLk9yaWdpbhoXLmNvbW1vbi5Qcmlt",
-            "aXRpdmVTdHJpbmciABI9CghTYXZlTm9kZRIWLmdycGNhcGkuU2F2ZU5vZGVJ",
-            "bnB1dBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABI2CgpEZWxldGVOb2Rl",
-            "EhguZ3JwY2FwaS5EZWxldGVOb2RlSW5wdXQaDC5jb21tb24uVm9pZCIAEkAK",
-            "CUdldEV2ZW50cxIXLmdycGNhcGkuR2V0RXZlbnRzSW5wdXQaGC5ncnBjYXBp",
-            "LkdldEV2ZW50c091dHB1dCIAQhyqAhlTS0YuRW5saWdodC5BUEkuSGllcmFy",
-            "Y2h5YgZwcm90bzM="));
+            "aW9uSW50ZXJ2YWwiMwoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJ",
+            "EhEKCWFzc2V0dHlwZRgCIAEoCSK3AwoETm9kZRIKCgJpZBgBIAEoCRINCgVs",
+            "YWJlbBgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIMCgR0eXBlGAQgASgJ",
+            "EhMKC2NyaXRpY2FsaXR5GAUgASgJEg8KB3N1YlR5cGUYBiABKAkSHgoGb3Jp",
+            "Z2luGAcgASgLMg4uY29tbW9uLk9yaWdpbhIlCglhc3NldE5vZGUYCCABKAsy",
+            "Ei5ncnBjYXBpLkFzc2V0Tm9kZRIzChBtZWFzdXJlbWVudFBvaW50GAkgASgL",
+            "MhkuZ3JwY2FwaS5NZWFzdXJlbWVudFBvaW50EjEKD2luc3BlY3Rpb25Qb2lu",
+            "dBgKIAEoCzIYLmdycGNhcGkuSW5zcGVjdGlvblBvaW50EjMKEGx1YnJpY2F0",
+            "aW9uUG9pbnQYDiABKAsyGS5ncnBjYXBpLkx1YnJpY2F0aW9uUG9pbnQSKAoI",
+            "cG9zaXRpb24YDCABKAsyFi5jb21tb24uUHJpbWl0aXZlSW50NjQSJQoEdGFn",
+            "cxgNIAEoCzIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcSEAoIcGFyZW50SWQY",
+            "DyABKAlKBAgLEAwiJQoFTm9kZXMSHAoFbm9kZXMYASADKAsyDS5ncnBjYXBp",
+            "Lk5vZGUicwoOR2V0RXZlbnRzSW5wdXQSDQoFc2luY2UYASABKAMSJQoFbGlt",
+            "aXQYAiABKAsyFi5jb21tb24uUHJpbWl0aXZlSW50MzISKwoKY3VzdG9tZXJJ",
+            "ZBgDIAEoCzIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciIQoPR2V0RXZlbnRz",
+            "T3V0cHV0Eg4KBmV2ZW50cxgBIAEoDCJ0Cg1TYXZlTm9kZUlucHV0Eg4KBnVz",
+            "ZXJJZBgBIAEoCRIbCgRub2RlGAMgASgLMg0uZ3JwY2FwaS5Ob2RlEhAKCHBh",
+            "cmVudElkGAIgASgJEiQKDHBhcmVudE9yaWdpbhgEIAEoCzIOLmNvbW1vbi5P",
+            "cmlnaW4iUQoPRGVsZXRlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEoCRIOCgZu",
+            "b2RlSWQYAiABKAkSHgoGb3JpZ2luGAMgASgLMg4uY29tbW9uLk9yaWdpbiJD",
+            "Cg9HZXRTdWJUcmVlSW5wdXQSDgoGcm9vdElkGAEgASgJEg0KBWRlcHRoGAIg",
+            "ASgFEhEKCW5vZGVUeXBlcxgDIAMoCSIkChFHZXRBbmNlc3RvcnNJbnB1dBIP",
+            "Cgdub2RlX2lkGAEgASgJIjoKEkdldEFuY2VzdG9yc091dHB1dBIkCgVub2Rl",
+            "cxgBIAMoCzIVLmdycGNhcGkuQW5jZXN0b3JOb2RlIo8BCgxBbmNlc3Rvck5v",
+            "ZGUSCgoCaWQYASABKAkSHgoGb3JpZ2luGAIgASgLMg4uY29tbW9uLk9yaWdp",
+            "bhINCgVsYWJlbBgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIMCgR0eXBl",
+            "GAUgASgJEg8KB3N1YlR5cGUYBiABKAkSEAoIcGFyZW50SWQYByABKAkqPQoJ",
+            "VmFsdWVUeXBlEgsKB05VTUVSSUMQABIRCg1TSU5HTEVfQ0hPSUNFEAESEAoM",
+            "TVVMVElfQ0hPSUNFEAIqbAoRVmlzdWFsaXphdGlvblR5cGUSFgoSVklTVUFM",
+            "SVpBVElPTl9OT05FEAASIAocVklTVUFMSVpBVElPTl9DSVJDVUxBUl9HQVVH",
+            "RRABEh0KGVZJU1VBTElaQVRJT05fTEVWRUxfR0FVR0UQAiotCg1MdWJyaWNh",
+            "bnRVbml0EggKBEdSQU0QABIJCgVPVU5DRRABEgcKA0NNMxACMqEFCglIaWVy",
+            "YXJjaHkSMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5Qcmlt",
+            "aXRpdmVTdHJpbmciABIzCgdHZXROb2RlEhcuY29tbW9uLlByaW1pdGl2ZVN0",
+            "cmluZxoNLmdycGNhcGkuTm9kZSIAEjUKCEdldE5vZGVzEhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZxoOLmdycGNhcGkuTm9kZXMiABI6Cg1HZXRDaGlsZE5v",
+            "ZGVzEhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoOLmdycGNhcGkuTm9kZXMi",
+            "ABI4CgpHZXRTdWJUcmVlEhguZ3JwY2FwaS5HZXRTdWJUcmVlSW5wdXQaDi5n",
+            "cnBjYXBpLk5vZGVzIgASOQoNR2V0UGFyZW50Tm9kZRIXLmNvbW1vbi5Qcmlt",
+            "aXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUiABJJCgxHZXRBbmNlc3RvcnMS",
+            "Gi5ncnBjYXBpLkdldEFuY2VzdG9yc0lucHV0GhsuZ3JwY2FwaS5HZXRBbmNl",
+            "c3RvcnNPdXRwdXQiABI+ChFHZXROb2RlSWRCeU9yaWdpbhIOLmNvbW1vbi5P",
+            "cmlnaW4aFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASPQoIU2F2ZU5vZGUS",
+            "Fi5ncnBjYXBpLlNhdmVOb2RlSW5wdXQaFy5jb21tb24uUHJpbWl0aXZlU3Ry",
+            "aW5nIgASNgoKRGVsZXRlTm9kZRIYLmdycGNhcGkuRGVsZXRlTm9kZUlucHV0",
+            "GgwuY29tbW9uLlZvaWQiABJACglHZXRFdmVudHMSFy5ncnBjYXBpLkdldEV2",
+            "ZW50c0lucHV0GhguZ3JwY2FwaS5HZXRFdmVudHNPdXRwdXQiAEIcqgIZU0tG",
+            "LkVubGlnaHQuQVBJLkhpZXJhcmNoeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +97,7 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Assettype" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
@@ -1182,6 +1182,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AssetNode(AssetNode other) : this() {
       criticality_ = other.criticality_;
+      assettype_ = other.assettype_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1201,6 +1202,17 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "assettype" field.</summary>
+    public const int AssettypeFieldNumber = 2;
+    private string assettype_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Assettype {
+      get { return assettype_; }
+      set {
+        assettype_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AssetNode);
@@ -1215,6 +1227,7 @@ namespace SKF.Enlight.API.Hierarchy {
         return true;
       }
       if (Criticality != other.Criticality) return false;
+      if (Assettype != other.Assettype) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1222,6 +1235,7 @@ namespace SKF.Enlight.API.Hierarchy {
     public override int GetHashCode() {
       int hash = 1;
       if (Criticality.Length != 0) hash ^= Criticality.GetHashCode();
+      if (Assettype.Length != 0) hash ^= Assettype.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1239,6 +1253,10 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(10);
         output.WriteString(Criticality);
       }
+      if (Assettype.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Assettype);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1249,6 +1267,9 @@ namespace SKF.Enlight.API.Hierarchy {
       int size = 0;
       if (Criticality.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Criticality);
+      }
+      if (Assettype.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Assettype);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1264,6 +1285,9 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.Criticality.Length != 0) {
         Criticality = other.Criticality;
       }
+      if (other.Assettype.Length != 0) {
+        Assettype = other.Assettype;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1277,6 +1301,10 @@ namespace SKF.Enlight.API.Hierarchy {
             break;
           case 10: {
             Criticality = input.ReadString();
+            break;
+          }
+          case 18: {
+            Assettype = input.ReadString();
             break;
           }
         }
