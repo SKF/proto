@@ -43,7 +43,7 @@ namespace SKF.Enlight.API.Hierarchy {
             "KA4yFi5ncnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwYBCABKAUS",
             "NwoSY29sbGVjdGlvbkludGVydmFsGAUgASgLMhsuZ3JwY2FwaS5Db2xsZWN0",
             "aW9uSW50ZXJ2YWwiMwoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJ",
-            "EhEKCWFzc2V0dHlwZRgCIAEoCSK3AwoETm9kZRIKCgJpZBgBIAEoCRINCgVs",
+            "EhEKCWFzc2V0VHlwZRgCIAEoCSK3AwoETm9kZRIKCgJpZBgBIAEoCRINCgVs",
             "YWJlbBgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIMCgR0eXBlGAQgASgJ",
             "EhMKC2NyaXRpY2FsaXR5GAUgASgJEg8KB3N1YlR5cGUYBiABKAkSHgoGb3Jp",
             "Z2luGAcgASgLMg4uY29tbW9uLk9yaWdpbhIlCglhc3NldE5vZGUYCCABKAsy",
@@ -97,7 +97,7 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Assettype" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "AssetType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
@@ -1182,7 +1182,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AssetNode(AssetNode other) : this() {
       criticality_ = other.criticality_;
-      assettype_ = other.assettype_;
+      assetType_ = other.assetType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1202,14 +1202,14 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
-    /// <summary>Field number for the "assettype" field.</summary>
-    public const int AssettypeFieldNumber = 2;
-    private string assettype_ = "";
+    /// <summary>Field number for the "assetType" field.</summary>
+    public const int AssetTypeFieldNumber = 2;
+    private string assetType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Assettype {
-      get { return assettype_; }
+    public string AssetType {
+      get { return assetType_; }
       set {
-        assettype_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        assetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1227,7 +1227,7 @@ namespace SKF.Enlight.API.Hierarchy {
         return true;
       }
       if (Criticality != other.Criticality) return false;
-      if (Assettype != other.Assettype) return false;
+      if (AssetType != other.AssetType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1235,7 +1235,7 @@ namespace SKF.Enlight.API.Hierarchy {
     public override int GetHashCode() {
       int hash = 1;
       if (Criticality.Length != 0) hash ^= Criticality.GetHashCode();
-      if (Assettype.Length != 0) hash ^= Assettype.GetHashCode();
+      if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1253,9 +1253,9 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(10);
         output.WriteString(Criticality);
       }
-      if (Assettype.Length != 0) {
+      if (AssetType.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Assettype);
+        output.WriteString(AssetType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1268,8 +1268,8 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Criticality.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Criticality);
       }
-      if (Assettype.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Assettype);
+      if (AssetType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1285,8 +1285,8 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.Criticality.Length != 0) {
         Criticality = other.Criticality;
       }
-      if (other.Assettype.Length != 0) {
-        Assettype = other.Assettype;
+      if (other.AssetType.Length != 0) {
+        AssetType = other.AssetType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1304,7 +1304,7 @@ namespace SKF.Enlight.API.Hierarchy {
             break;
           }
           case 18: {
-            Assettype = input.ReadString();
+            AssetType = input.ReadString();
             break;
           }
         }
