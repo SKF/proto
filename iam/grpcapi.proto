@@ -21,6 +21,9 @@ service IAM {
 
   rpc GetAuthorizationResourcesByType (GetAuthorizationResourcesByTypeInput) returns (GetAuthorizationResourcesByTypeOutput) {}
 
+  rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
+  rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
+
   rpc AddAuthorizationResourceRelation (AddAuthorizationResourceRelationInput) returns (common.Void) {}
   rpc RemoveAuthorizationResourceRelation (RemoveAuthorizationResourceRelationInput) returns (common.Void) {}
 
@@ -93,8 +96,25 @@ message GetAuthorizationResourcesByTypeInput {
   string resource_type = 1;
 }
 
+message GetResourcesByOriginAndTypeInput {
+  string origin_id = 1;
+  string resource_type = 2;
+}
+
+message GetUserIDsWithAccessToResourceInput {
+  string user_id = 1;
+}
+
 message GetAuthorizationResourcesByTypeOutput {
   repeated common.Origin resources = 1;
+}
+
+message GetResourcesByOriginAndTypeOutput {
+  repeated common.Origin resources = 1;
+}
+
+message GetUserIDsWithAccessToResourceOutput {
+  repeated string user_ids = 1;
 }
 
 message AddAuthorizationResourceRelationInput {
