@@ -102,7 +102,7 @@ message GetResourcesByOriginAndTypeInput {
 }
 
 message GetUserIDsWithAccessToResourceInput {
-  string user_id = 1;
+  string origin_id = 1;
 }
 
 message GetAuthorizationResourcesByTypeOutput {
