@@ -124,6 +124,7 @@ message NodeData {
   Media media_v2 = 9;
   repeated string question_answers = 8;
   string tags = 10;
+  string tenant_id = 11;
 }
 
 message Coordinate {
