@@ -85,6 +85,25 @@ message AssetNode {
   string assetType = 2;
 }
 
+enum IndustrySegment {
+  AGRICULTURE = 0;
+  CONSTRUCTION = 1;
+  FOOD_AND_BEVERAGE = 2;
+  HYDROCARBON_PROCESSING = 3;
+  MACHINE_TOOL = 4;
+  MARINE = 5;
+  METAL = 6;
+  MINING = 7;
+  OIL_AND_GAS = 8;
+  POWER_GENERATION = 9;
+  PULP_AND_PAPER = 10;
+  RENEWABLE = 11;
+}
+
+message IndustrySegmentPointer {
+  IndustrySegment industrySegment = 1;
+}
+
 message Node {
   reserved 11;
   string id = 1;
@@ -93,6 +112,7 @@ message Node {
   string type = 4;
   string criticality = 5;
   string subType = 6;
+  IndustrySegmentPointer industrySegment = 16;
   common.Origin origin = 7;
   AssetNode assetNode = 8;
   MeasurementPoint measurementPoint = 9;
