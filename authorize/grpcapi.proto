@@ -5,7 +5,7 @@ option csharp_namespace = "SKF.Enlight.API.Authorize";
 
 import "common/common.proto";
 
-service IAM {
+service Authorize {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
