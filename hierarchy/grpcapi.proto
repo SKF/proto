@@ -14,6 +14,7 @@ service Hierarchy {
   rpc GetSubTree (GetSubTreeInput) returns (Nodes) {}
   rpc GetParentNode (common.PrimitiveString) returns (Node) {}
   rpc GetAncestors (GetAncestorsInput) returns (GetAncestorsOutput) {}
+  rpc GetCompany (common.PrimitiveString) returns (Node) {}
 
   rpc GetNodeIdByOrigin (common.Origin) returns (common.PrimitiveString) {}
 
