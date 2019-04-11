@@ -5,7 +5,7 @@ language: minimal
 
 env:
   global:
-    - SERVICES="hierarchy iam iot pas reports config"
+    - SERVICES="hierarchy iam iot pas reports config authorize"
 
 stages:
   - install
