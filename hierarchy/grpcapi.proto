@@ -86,22 +86,19 @@ message AssetNode {
 }
 
 enum IndustrySegment {
-  AGRICULTURE = 0;
-  CONSTRUCTION = 1;
-  FOOD_AND_BEVERAGE = 2;
-  HYDROCARBON_PROCESSING = 3;
-  MACHINE_TOOL = 4;
-  MARINE = 5;
-  METAL = 6;
-  MINING = 7;
-  OIL_AND_GAS = 8;
-  POWER_GENERATION = 9;
-  PULP_AND_PAPER = 10;
-  RENEWABLE = 11;
-}
-
-message IndustrySegmentPointer {
-  IndustrySegment industrySegment = 1;
+  UNDEFINED = 0;
+  AGRICULTURE = 1;
+  CONSTRUCTION = 2;
+  FOOD_AND_BEVERAGE = 3;
+  HYDROCARBON_PROCESSING = 4;
+  MACHINE_TOOL = 5;
+  MARINE = 6;
+  METAL = 7;
+  MINING = 8;
+  OIL_AND_GAS = 9;
+  POWER_GENERATION = 10;
+  PULP_AND_PAPER = 11;
+  RENEWABLE = 12;
 }
 
 message Node {
@@ -112,7 +109,7 @@ message Node {
   string type = 4;
   string criticality = 5;
   string subType = 6;
-  IndustrySegmentPointer industrySegment = 16;
+  IndustrySegment industrySegment = 16;
   common.Origin origin = 7;
   AssetNode assetNode = 8;
   MeasurementPoint measurementPoint = 9;
