@@ -12,6 +12,10 @@ service Authorize {
 
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+
+  rpc AddResources (AddResourcesInput) returns (common.Void) {}
+  rpc RemoveResources (RemoveResourcesInput) returns (common.Void) {}
+
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
 
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
@@ -19,6 +23,10 @@ service Authorize {
 
   rpc AddResourceRelation (AddResourceRelationInput) returns (common.Void) {}
   rpc RemoveResourceRelation (RemoveResourceRelationInput) returns (common.Void) {}
+
+  rpc AddResourceRelations (AddResourceRelationsInput) returns (common.Void) {}
+  rpc RemoveResourceRelations (RemoveResourceRelationsInput) returns (common.Void) {}
+
   rpc GetResourceRelations (GetResourceRelationsInput) returns (GetResourceRelationsOutput) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
@@ -41,6 +49,14 @@ message AddResourceInput {
 
 message RemoveResourceInput {
   common.Origin resource = 1;
+}
+
+message AddResourcesInput {
+  repeated common.Origin resource = 1;
+}
+
+message RemoveResourcesInput {
+  repeated common.Origin resource = 1;
 }
 
 message GetResourcesByTypeInput {
@@ -76,6 +92,14 @@ message AddResourceRelationInput {
 message RemoveResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
+}
+
+message AddResourceRelationsInput {
+  repeated AddResourceRelationInput relation = 1;
+}
+
+message RemoveResourceRelationsInput {
+  repeated RemoveResourceRelationInput relation = 1;
 }
 
 message GetResourceRelationsInput {
