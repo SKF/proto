@@ -9,6 +9,7 @@ service Authorize {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
+  rpc IsAuthorizedByEndpoint (IsAuthorizedByEndpointInput) returns (IsAuthorizedByEndpointOutput) {}
 
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
@@ -40,6 +41,18 @@ message IsAuthorizedInput {
 }
 
 message IsAuthorizedOutput {
+  bool ok = 1;
+}
+
+message IsAuthorizedByEndpointInput {
+  string api = 1;
+  string method = 2;
+  string endpoint = 3;
+  string user_id = 4;
+  common.Origin resource = 5;
+}
+
+message IsAuthorizedByEndpointInput {
   bool ok = 1;
 }
 
