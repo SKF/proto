@@ -13,6 +13,9 @@ service Authorize {
   rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
   rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
 
+  rpc AddAuthorizationResources (AddAuthorizationResourcesInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResources (RemoveAuthorizationResourcesInput) returns (common.Void) {}
+
   rpc GetAuthorizationResourcesByType (GetAuthorizationResourcesByTypeInput) returns (GetAuthorizationResourcesByTypeOutput) {}
 
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
@@ -20,6 +23,9 @@ service Authorize {
 
   rpc AddAuthorizationResourceRelation (AddAuthorizationResourceRelationInput) returns (common.Void) {}
   rpc RemoveAuthorizationResourceRelation (RemoveAuthorizationResourceRelationInput) returns (common.Void) {}
+
+  rpc AddAuthorizationResourceRelations (AddAuthorizationResourceRelationsInput) returns (common.Void) {}
+  rpc RemoveAuthorizationResourceRelations (RemoveAuthorizationResourceRelationsInput) returns (common.Void) {}
 
   rpc GetAuthorizationResourceRelations (GetAuthorizationResourceRelationsInput) returns (GetAuthorizationResourceRelationsOutput) {}
 
@@ -43,6 +49,14 @@ message AddAuthorizationResourceInput {
 
 message RemoveAuthorizationResourceInput {
   common.Origin resource = 1;
+}
+
+message AddAuthorizationResourcesInput {
+  repeated common.Origin resource = 1;
+}
+
+message RemoveAuthorizationResourcesInput {
+  repeated common.Origin resource = 1;
 }
 
 message GetAuthorizationResourcesByTypeInput {
@@ -78,6 +92,14 @@ message AddAuthorizationResourceRelationInput {
 message RemoveAuthorizationResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
+}
+
+message AddAuthorizationResourceRelationsInput {
+  repeated AddAuthorizationResourceRelationInput relation = 1;
+}
+
+message RemoveAuthorizationResourceRelationsInput {
+  repeated RemoveAuthorizationResourceRelationInput relation = 1;
 }
 
 message GetAuthorizationResourceRelationsInput {
