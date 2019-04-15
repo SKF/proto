@@ -49,7 +49,6 @@ message IsAuthorizedByEndpointInput {
   string method = 2;
   string endpoint = 3;
   string user_id = 4;
-  common.Origin resource = 5;
 }
 
 message IsAuthorizedByEndpointOutput {
