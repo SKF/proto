@@ -52,7 +52,7 @@ message IsAuthorizedByEndpointInput {
   common.Origin resource = 5;
 }
 
-message IsAuthorizedByEndpointInput {
+message IsAuthorizedByEndpointOutput {
   bool ok = 1;
 }
 
