@@ -10,18 +10,16 @@ service Authorize {
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
 
-  rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
-  rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
-
-  rpc GetAuthorizationResourcesByType (GetAuthorizationResourcesByTypeInput) returns (GetAuthorizationResourcesByTypeOutput) {}
+  rpc AddResource (AddResourceInput) returns (common.Void) {}
+  rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+  rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
 
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
   rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
 
-  rpc AddAuthorizationResourceRelation (AddAuthorizationResourceRelationInput) returns (common.Void) {}
-  rpc RemoveAuthorizationResourceRelation (RemoveAuthorizationResourceRelationInput) returns (common.Void) {}
-
-  rpc GetAuthorizationResourceRelations (GetAuthorizationResourceRelationsInput) returns (GetAuthorizationResourceRelationsOutput) {}
+  rpc AddResourceRelation (AddResourceRelationInput) returns (common.Void) {}
+  rpc RemoveResourceRelation (RemoveResourceRelationInput) returns (common.Void) {}
+  rpc GetResourceRelations (GetResourceRelationsInput) returns (GetResourceRelationsOutput) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
@@ -37,15 +35,15 @@ message IsAuthorizedOutput {
   bool ok = 1;
 }
 
-message AddAuthorizationResourceInput {
+message AddResourceInput {
   common.Origin resource = 1;
 }
 
-message RemoveAuthorizationResourceInput {
+message RemoveResourceInput {
   common.Origin resource = 1;
 }
 
-message GetAuthorizationResourcesByTypeInput {
+message GetResourcesByTypeInput {
   string resource_type = 1;
 }
 
@@ -58,7 +56,7 @@ message GetUserIDsWithAccessToResourceInput {
   string origin_id = 1;
 }
 
-message GetAuthorizationResourcesByTypeOutput {
+message GetResourcesByTypeOutput {
   repeated common.Origin resources = 1;
 }
 
@@ -70,21 +68,21 @@ message GetUserIDsWithAccessToResourceOutput {
   repeated string user_ids = 1;
 }
 
-message AddAuthorizationResourceRelationInput {
+message AddResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
 }
 
-message RemoveAuthorizationResourceRelationInput {
+message RemoveResourceRelationInput {
   common.Origin resource = 1;
   common.Origin parent = 2;
 }
 
-message GetAuthorizationResourceRelationsInput {
+message GetResourceRelationsInput {
   string resource_id = 1;
 }
 
-message GetAuthorizationResourceRelationsOutput {
+message GetResourceRelationsOutput {
   repeated common.Origin resources = 1;
 }
 
