@@ -359,7 +359,7 @@ namespace SKF.Enlight.API.Config {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            targetType_ = (global::SKF.Enlight.API.Config.TargetType) input.ReadEnum();
+            TargetType = (global::SKF.Enlight.API.Config.TargetType) input.ReadEnum();
             break;
           }
         }
@@ -933,7 +933,7 @@ namespace SKF.Enlight.API.Config {
       }
       if (other.configQC_ != null) {
         if (configQC_ == null) {
-          configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+          ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
         }
         ConfigQC.MergeFrom(other.ConfigQC);
       }
@@ -950,9 +950,9 @@ namespace SKF.Enlight.API.Config {
             break;
           case 10: {
             if (configQC_ == null) {
-              configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+              ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
             }
-            input.ReadMessage(configQC_);
+            input.ReadMessage(ConfigQC);
             break;
           }
         }
@@ -1159,7 +1159,7 @@ namespace SKF.Enlight.API.Config {
       targetID_.Add(other.targetID_);
       if (other.configQC_ != null) {
         if (configQC_ == null) {
-          configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+          ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
         }
         ConfigQC.MergeFrom(other.ConfigQC);
       }
@@ -1192,9 +1192,9 @@ namespace SKF.Enlight.API.Config {
           }
           case 42: {
             if (configQC_ == null) {
-              configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+              ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
             }
-            input.ReadMessage(configQC_);
+            input.ReadMessage(ConfigQC);
             break;
           }
         }
@@ -1446,7 +1446,7 @@ namespace SKF.Enlight.API.Config {
       }
       if (other.configQC_ != null) {
         if (configQC_ == null) {
-          configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+          ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
         }
         ConfigQC.MergeFrom(other.ConfigQC);
       }
@@ -1468,9 +1468,9 @@ namespace SKF.Enlight.API.Config {
           }
           case 18: {
             if (configQC_ == null) {
-              configQC_ = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
+              ConfigQC = new global::SKF.Enlight.API.Config.QCMeasurementPointConfig();
             }
-            input.ReadMessage(configQC_);
+            input.ReadMessage(ConfigQC);
             break;
           }
         }
@@ -1959,67 +1959,67 @@ namespace SKF.Enlight.API.Config {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            sampleRate_ = (global::SKF.Enlight.API.Config.SampleRate) input.ReadEnum();
+            SampleRate = (global::SKF.Enlight.API.Config.SampleRate) input.ReadEnum();
             break;
           }
           case 16: {
-            sampleAmount_ = (global::SKF.Enlight.API.Config.SampleAmount) input.ReadEnum();
+            SampleAmount = (global::SKF.Enlight.API.Config.SampleAmount) input.ReadEnum();
             break;
           }
           case 40: {
-            envelopeBandSelection_ = (global::SKF.Enlight.API.Config.EnvelopeBandSelection) input.ReadEnum();
+            EnvelopeBandSelection = (global::SKF.Enlight.API.Config.EnvelopeBandSelection) input.ReadEnum();
             break;
           }
           case 48: {
-            externalSensorEngineeringUnits_ = (global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits) input.ReadEnum();
+            ExternalSensorEngineeringUnits = (global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits) input.ReadEnum();
             break;
           }
           case 56: {
-            externalSensorSensitivity_ = (global::SKF.Enlight.API.Config.ExternalSensorSensitivity) input.ReadEnum();
+            ExternalSensorSensitivity = (global::SKF.Enlight.API.Config.ExternalSensorSensitivity) input.ReadEnum();
             break;
           }
           case 64: {
-            externalSensorICP_ = (global::SKF.Enlight.API.Config.ExternalSensorICP) input.ReadEnum();
+            ExternalSensorICP = (global::SKF.Enlight.API.Config.ExternalSensorICP) input.ReadEnum();
             break;
           }
           case 72: {
-            viewSignalType_ = (global::SKF.Enlight.API.Config.ViewSignalType) input.ReadEnum();
+            ViewSignalType = (global::SKF.Enlight.API.Config.ViewSignalType) input.ReadEnum();
             break;
           }
           case 80: {
-            yAxisUnits_ = (global::SKF.Enlight.API.Config.YAxisUnits) input.ReadEnum();
+            YAxisUnits = (global::SKF.Enlight.API.Config.YAxisUnits) input.ReadEnum();
             break;
           }
           case 88: {
-            xAxisUnits_ = (global::SKF.Enlight.API.Config.XAxisUnits) input.ReadEnum();
+            XAxisUnits = (global::SKF.Enlight.API.Config.XAxisUnits) input.ReadEnum();
             break;
           }
           case 96: {
-            yAxisDisplay_ = (global::SKF.Enlight.API.Config.YAxisDisplay) input.ReadEnum();
+            YAxisDisplay = (global::SKF.Enlight.API.Config.YAxisDisplay) input.ReadEnum();
             break;
           }
           case 104: {
-            inputRange_ = (global::SKF.Enlight.API.Config.InputRange) input.ReadEnum();
+            InputRange = (global::SKF.Enlight.API.Config.InputRange) input.ReadEnum();
             break;
           }
           case 112: {
-            detectionType_ = (global::SKF.Enlight.API.Config.DetectionType) input.ReadEnum();
+            DetectionType = (global::SKF.Enlight.API.Config.DetectionType) input.ReadEnum();
             break;
           }
           case 144: {
-            windowType_ = (global::SKF.Enlight.API.Config.WindowType) input.ReadEnum();
+            WindowType = (global::SKF.Enlight.API.Config.WindowType) input.ReadEnum();
             break;
           }
           case 152: {
-            highPassFilter_ = (global::SKF.Enlight.API.Config.HighPassFilter) input.ReadEnum();
+            HighPassFilter = (global::SKF.Enlight.API.Config.HighPassFilter) input.ReadEnum();
             break;
           }
           case 160: {
-            temperature_ = (global::SKF.Enlight.API.Config.Temperature) input.ReadEnum();
+            Temperature = (global::SKF.Enlight.API.Config.Temperature) input.ReadEnum();
             break;
           }
           case 168: {
-            externalSensorUsage_ = (global::SKF.Enlight.API.Config.ExternalSensorUsage) input.ReadEnum();
+            ExternalSensorUsage = (global::SKF.Enlight.API.Config.ExternalSensorUsage) input.ReadEnum();
             break;
           }
         }

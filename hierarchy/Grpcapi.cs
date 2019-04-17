@@ -282,7 +282,7 @@ namespace SKF.Enlight.API.Hierarchy {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            unit_ = (global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) input.ReadEnum();
+            Unit = (global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) input.ReadEnum();
             break;
           }
           case 16: {
@@ -562,7 +562,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.collectionInterval_ != null) {
         if (collectionInterval_ == null) {
-          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+          CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
         }
         CollectionInterval.MergeFrom(other.CollectionInterval);
       }
@@ -603,9 +603,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 66: {
             if (collectionInterval_ == null) {
-              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+              CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
             }
-            input.ReadMessage(collectionInterval_);
+            input.ReadMessage(CollectionInterval);
             break;
           }
         }
@@ -857,7 +857,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.collectionInterval_ != null) {
         if (collectionInterval_ == null) {
-          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+          CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
         }
         CollectionInterval.MergeFrom(other.CollectionInterval);
       }
@@ -881,11 +881,11 @@ namespace SKF.Enlight.API.Hierarchy {
             break;
           }
           case 32: {
-            valueType_ = (global::SKF.Enlight.API.Hierarchy.ValueType) input.ReadEnum();
+            ValueType = (global::SKF.Enlight.API.Hierarchy.ValueType) input.ReadEnum();
             break;
           }
           case 40: {
-            visualizationType_ = (global::SKF.Enlight.API.Hierarchy.VisualizationType) input.ReadEnum();
+            VisualizationType = (global::SKF.Enlight.API.Hierarchy.VisualizationType) input.ReadEnum();
             break;
           }
           case 50: {
@@ -898,9 +898,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 66: {
             if (collectionInterval_ == null) {
-              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+              CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
             }
-            input.ReadMessage(collectionInterval_);
+            input.ReadMessage(CollectionInterval);
             break;
           }
         }
@@ -1115,7 +1115,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.collectionInterval_ != null) {
         if (collectionInterval_ == null) {
-          collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+          CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
         }
         CollectionInterval.MergeFrom(other.CollectionInterval);
       }
@@ -1139,7 +1139,7 @@ namespace SKF.Enlight.API.Hierarchy {
             break;
           }
           case 24: {
-            unit_ = (global::SKF.Enlight.API.Hierarchy.LubricantUnit) input.ReadEnum();
+            Unit = (global::SKF.Enlight.API.Hierarchy.LubricantUnit) input.ReadEnum();
             break;
           }
           case 32: {
@@ -1148,9 +1148,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 42: {
             if (collectionInterval_ == null) {
-              collectionInterval_ = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
+              CollectionInterval = new global::SKF.Enlight.API.Hierarchy.CollectionInterval();
             }
-            input.ReadMessage(collectionInterval_);
+            input.ReadMessage(CollectionInterval);
             break;
           }
         }
@@ -1735,49 +1735,49 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.industrySegment_ != null) {
         if (industrySegment_ == null) {
-          industrySegment_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+          IndustrySegment = new global::SKF.Enlight.API.Common.PrimitiveString();
         }
         IndustrySegment.MergeFrom(other.IndustrySegment);
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
       if (other.assetNode_ != null) {
         if (assetNode_ == null) {
-          assetNode_ = new global::SKF.Enlight.API.Hierarchy.AssetNode();
+          AssetNode = new global::SKF.Enlight.API.Hierarchy.AssetNode();
         }
         AssetNode.MergeFrom(other.AssetNode);
       }
       if (other.measurementPoint_ != null) {
         if (measurementPoint_ == null) {
-          measurementPoint_ = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
+          MeasurementPoint = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
         }
         MeasurementPoint.MergeFrom(other.MeasurementPoint);
       }
       if (other.inspectionPoint_ != null) {
         if (inspectionPoint_ == null) {
-          inspectionPoint_ = new global::SKF.Enlight.API.Hierarchy.InspectionPoint();
+          InspectionPoint = new global::SKF.Enlight.API.Hierarchy.InspectionPoint();
         }
         InspectionPoint.MergeFrom(other.InspectionPoint);
       }
       if (other.lubricationPoint_ != null) {
         if (lubricationPoint_ == null) {
-          lubricationPoint_ = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
+          LubricationPoint = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
         }
         LubricationPoint.MergeFrom(other.LubricationPoint);
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::SKF.Enlight.API.Common.PrimitiveInt64();
+          Position = new global::SKF.Enlight.API.Common.PrimitiveInt64();
         }
         Position.MergeFrom(other.Position);
       }
       if (other.tags_ != null) {
         if (tags_ == null) {
-          tags_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+          Tags = new global::SKF.Enlight.API.Common.PrimitiveString();
         }
         Tags.MergeFrom(other.Tags);
       }
@@ -1821,51 +1821,51 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 58: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
           case 66: {
             if (assetNode_ == null) {
-              assetNode_ = new global::SKF.Enlight.API.Hierarchy.AssetNode();
+              AssetNode = new global::SKF.Enlight.API.Hierarchy.AssetNode();
             }
-            input.ReadMessage(assetNode_);
+            input.ReadMessage(AssetNode);
             break;
           }
           case 74: {
             if (measurementPoint_ == null) {
-              measurementPoint_ = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
+              MeasurementPoint = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
             }
-            input.ReadMessage(measurementPoint_);
+            input.ReadMessage(MeasurementPoint);
             break;
           }
           case 82: {
             if (inspectionPoint_ == null) {
-              inspectionPoint_ = new global::SKF.Enlight.API.Hierarchy.InspectionPoint();
+              InspectionPoint = new global::SKF.Enlight.API.Hierarchy.InspectionPoint();
             }
-            input.ReadMessage(inspectionPoint_);
+            input.ReadMessage(InspectionPoint);
             break;
           }
           case 98: {
             if (position_ == null) {
-              position_ = new global::SKF.Enlight.API.Common.PrimitiveInt64();
+              Position = new global::SKF.Enlight.API.Common.PrimitiveInt64();
             }
-            input.ReadMessage(position_);
+            input.ReadMessage(Position);
             break;
           }
           case 106: {
             if (tags_ == null) {
-              tags_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+              Tags = new global::SKF.Enlight.API.Common.PrimitiveString();
             }
-            input.ReadMessage(tags_);
+            input.ReadMessage(Tags);
             break;
           }
           case 114: {
             if (lubricationPoint_ == null) {
-              lubricationPoint_ = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
+              LubricationPoint = new global::SKF.Enlight.API.Hierarchy.LubricationPoint();
             }
-            input.ReadMessage(lubricationPoint_);
+            input.ReadMessage(LubricationPoint);
             break;
           }
           case 122: {
@@ -1874,9 +1874,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 130: {
             if (industrySegment_ == null) {
-              industrySegment_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+              IndustrySegment = new global::SKF.Enlight.API.Common.PrimitiveString();
             }
-            input.ReadMessage(industrySegment_);
+            input.ReadMessage(IndustrySegment);
             break;
           }
         }
@@ -2158,13 +2158,13 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.limit_ != null) {
         if (limit_ == null) {
-          limit_ = new global::SKF.Enlight.API.Common.PrimitiveInt32();
+          Limit = new global::SKF.Enlight.API.Common.PrimitiveInt32();
         }
         Limit.MergeFrom(other.Limit);
       }
       if (other.customerId_ != null) {
         if (customerId_ == null) {
-          customerId_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+          CustomerId = new global::SKF.Enlight.API.Common.PrimitiveString();
         }
         CustomerId.MergeFrom(other.CustomerId);
       }
@@ -2185,16 +2185,16 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 18: {
             if (limit_ == null) {
-              limit_ = new global::SKF.Enlight.API.Common.PrimitiveInt32();
+              Limit = new global::SKF.Enlight.API.Common.PrimitiveInt32();
             }
-            input.ReadMessage(limit_);
+            input.ReadMessage(Limit);
             break;
           }
           case 26: {
             if (customerId_ == null) {
-              customerId_ = new global::SKF.Enlight.API.Common.PrimitiveString();
+              CustomerId = new global::SKF.Enlight.API.Common.PrimitiveString();
             }
-            input.ReadMessage(customerId_);
+            input.ReadMessage(CustomerId);
             break;
           }
         }
@@ -2505,7 +2505,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.node_ != null) {
         if (node_ == null) {
-          node_ = new global::SKF.Enlight.API.Hierarchy.Node();
+          Node = new global::SKF.Enlight.API.Hierarchy.Node();
         }
         Node.MergeFrom(other.Node);
       }
@@ -2514,7 +2514,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.parentOrigin_ != null) {
         if (parentOrigin_ == null) {
-          parentOrigin_ = new global::SKF.Enlight.API.Common.Origin();
+          ParentOrigin = new global::SKF.Enlight.API.Common.Origin();
         }
         ParentOrigin.MergeFrom(other.ParentOrigin);
       }
@@ -2539,16 +2539,16 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 26: {
             if (node_ == null) {
-              node_ = new global::SKF.Enlight.API.Hierarchy.Node();
+              Node = new global::SKF.Enlight.API.Hierarchy.Node();
             }
-            input.ReadMessage(node_);
+            input.ReadMessage(Node);
             break;
           }
           case 34: {
             if (parentOrigin_ == null) {
-              parentOrigin_ = new global::SKF.Enlight.API.Common.Origin();
+              ParentOrigin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(parentOrigin_);
+            input.ReadMessage(ParentOrigin);
             break;
           }
         }
@@ -2712,7 +2712,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -2737,9 +2737,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
         }
@@ -3411,7 +3411,7 @@ namespace SKF.Enlight.API.Hierarchy {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -3447,9 +3447,9 @@ namespace SKF.Enlight.API.Hierarchy {
           }
           case 18: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
           case 26: {

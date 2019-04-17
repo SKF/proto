@@ -594,7 +594,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.functionalLocationIds_ != null) {
         if (functionalLocationIds_ == null) {
-          functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+          FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
         }
         FunctionalLocationIds.MergeFrom(other.FunctionalLocationIds);
       }
@@ -647,13 +647,13 @@ namespace SKF.Enlight.API.IoT {
           }
           case 58: {
             if (functionalLocationIds_ == null) {
-              functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+              FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
             }
-            input.ReadMessage(functionalLocationIds_);
+            input.ReadMessage(FunctionalLocationIds);
             break;
           }
           case 64: {
-            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
           case 74: {
@@ -919,7 +919,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.functionalLocationIds_ != null) {
         if (functionalLocationIds_ == null) {
-          functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+          FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
         }
         FunctionalLocationIds.MergeFrom(other.FunctionalLocationIds);
       }
@@ -958,9 +958,9 @@ namespace SKF.Enlight.API.IoT {
           }
           case 42: {
             if (functionalLocationIds_ == null) {
-              functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+              FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
             }
-            input.ReadMessage(functionalLocationIds_);
+            input.ReadMessage(FunctionalLocationIds);
             break;
           }
           case 50: {
@@ -968,7 +968,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 56: {
-            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
         }
@@ -1333,7 +1333,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
           case 26: {
@@ -1913,19 +1913,19 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.dataPoint_ != null) {
         if (dataPoint_ == null) {
-          dataPoint_ = new global::SKF.Enlight.API.IoT.DataPoint();
+          DataPoint = new global::SKF.Enlight.API.IoT.DataPoint();
         }
         DataPoint.MergeFrom(other.DataPoint);
       }
       if (other.spectrum_ != null) {
         if (spectrum_ == null) {
-          spectrum_ = new global::SKF.Enlight.API.IoT.Spectrum();
+          Spectrum = new global::SKF.Enlight.API.IoT.Spectrum();
         }
         Spectrum.MergeFrom(other.Spectrum);
       }
       if (other.timeSeries_ != null) {
         if (timeSeries_ == null) {
-          timeSeries_ = new global::SKF.Enlight.API.IoT.TimeSeries();
+          TimeSeries = new global::SKF.Enlight.API.IoT.TimeSeries();
         }
         TimeSeries.MergeFrom(other.TimeSeries);
       }
@@ -1937,7 +1937,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.mediaV2_ != null) {
         if (mediaV2_ == null) {
-          mediaV2_ = new global::SKF.Enlight.API.IoT.Media();
+          MediaV2 = new global::SKF.Enlight.API.IoT.Media();
         }
         MediaV2.MergeFrom(other.MediaV2);
       }
@@ -1964,28 +1964,28 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
           case 26: {
             if (dataPoint_ == null) {
-              dataPoint_ = new global::SKF.Enlight.API.IoT.DataPoint();
+              DataPoint = new global::SKF.Enlight.API.IoT.DataPoint();
             }
-            input.ReadMessage(dataPoint_);
+            input.ReadMessage(DataPoint);
             break;
           }
           case 34: {
             if (spectrum_ == null) {
-              spectrum_ = new global::SKF.Enlight.API.IoT.Spectrum();
+              Spectrum = new global::SKF.Enlight.API.IoT.Spectrum();
             }
-            input.ReadMessage(spectrum_);
+            input.ReadMessage(Spectrum);
             break;
           }
           case 42: {
             if (timeSeries_ == null) {
-              timeSeries_ = new global::SKF.Enlight.API.IoT.TimeSeries();
+              TimeSeries = new global::SKF.Enlight.API.IoT.TimeSeries();
             }
-            input.ReadMessage(timeSeries_);
+            input.ReadMessage(TimeSeries);
             break;
           }
           case 50: {
@@ -2002,9 +2002,9 @@ namespace SKF.Enlight.API.IoT {
           }
           case 74: {
             if (mediaV2_ == null) {
-              mediaV2_ = new global::SKF.Enlight.API.IoT.Media();
+              MediaV2 = new global::SKF.Enlight.API.IoT.Media();
             }
-            input.ReadMessage(mediaV2_);
+            input.ReadMessage(MediaV2);
             break;
           }
           case 82: {
@@ -2327,7 +2327,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.coordinate_ != null) {
         if (coordinate_ == null) {
-          coordinate_ = new global::SKF.Enlight.API.IoT.Coordinate();
+          Coordinate = new global::SKF.Enlight.API.IoT.Coordinate();
         }
         Coordinate.MergeFrom(other.Coordinate);
       }
@@ -2350,9 +2350,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (coordinate_ == null) {
-              coordinate_ = new global::SKF.Enlight.API.IoT.Coordinate();
+              Coordinate = new global::SKF.Enlight.API.IoT.Coordinate();
             }
-            input.ReadMessage(coordinate_);
+            input.ReadMessage(Coordinate);
             break;
           }
           case 18: {
@@ -2951,7 +2951,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            type_ = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -3119,13 +3119,13 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+          NodeData = new global::SKF.Enlight.API.IoT.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -3146,16 +3146,16 @@ namespace SKF.Enlight.API.IoT {
           }
           case 18: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+              NodeData = new global::SKF.Enlight.API.IoT.NodeData();
             }
-            input.ReadMessage(nodeData_);
+            input.ReadMessage(NodeData);
             break;
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
         }
@@ -3298,7 +3298,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -3319,9 +3319,9 @@ namespace SKF.Enlight.API.IoT {
           }
           case 18: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
         }
@@ -3940,11 +3940,11 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 32: {
-            eventType_ = (global::SKF.Enlight.API.IoT.NodeEventType) input.ReadEnum();
+            EventType = (global::SKF.Enlight.API.IoT.NodeEventType) input.ReadEnum();
             break;
           }
           case 40: {
-            dataContentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            DataContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
         }
@@ -4353,7 +4353,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -4379,9 +4379,9 @@ namespace SKF.Enlight.API.IoT {
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
         }
@@ -4671,7 +4671,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 24: {
-            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
         }
@@ -4952,7 +4952,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
         }
@@ -5068,7 +5068,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+          NodeData = new global::SKF.Enlight.API.IoT.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -5085,9 +5085,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+              NodeData = new global::SKF.Enlight.API.IoT.NodeData();
             }
-            input.ReadMessage(nodeData_);
+            input.ReadMessage(NodeData);
             break;
           }
         }
@@ -5333,7 +5333,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+          NodeData = new global::SKF.Enlight.API.IoT.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -5354,9 +5354,9 @@ namespace SKF.Enlight.API.IoT {
           }
           case 18: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
+              NodeData = new global::SKF.Enlight.API.IoT.NodeData();
             }
-            input.ReadMessage(nodeData_);
+            input.ReadMessage(NodeData);
             break;
           }
         }
@@ -5697,7 +5697,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            type_ = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -6204,7 +6204,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.media_ != null) {
         if (media_ == null) {
-          media_ = new global::SKF.Enlight.API.IoT.Media();
+          Media = new global::SKF.Enlight.API.IoT.Media();
         }
         Media.MergeFrom(other.Media);
       }
@@ -6221,9 +6221,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (media_ == null) {
-              media_ = new global::SKF.Enlight.API.IoT.Media();
+              Media = new global::SKF.Enlight.API.IoT.Media();
             }
-            input.ReadMessage(media_);
+            input.ReadMessage(Media);
             break;
           }
         }
@@ -6470,7 +6470,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.task_ != null) {
         if (task_ == null) {
-          task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+          Task = new global::SKF.Enlight.API.IoT.TaskDescription();
         }
         Task.MergeFrom(other.Task);
       }
@@ -6487,9 +6487,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (task_ == null) {
-              task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+              Task = new global::SKF.Enlight.API.IoT.TaskDescription();
             }
-            input.ReadMessage(task_);
+            input.ReadMessage(Task);
             break;
           }
         }
@@ -6646,7 +6646,7 @@ namespace SKF.Enlight.API.IoT {
             break;
           }
           case 16: {
-            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
         }
@@ -7012,7 +7012,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.task_ != null) {
         if (task_ == null) {
-          task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+          Task = new global::SKF.Enlight.API.IoT.TaskDescription();
         }
         Task.MergeFrom(other.Task);
       }
@@ -7029,9 +7029,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (task_ == null) {
-              task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+              Task = new global::SKF.Enlight.API.IoT.TaskDescription();
             }
-            input.ReadMessage(task_);
+            input.ReadMessage(Task);
             break;
           }
         }
@@ -7276,7 +7276,7 @@ namespace SKF.Enlight.API.IoT {
       }
       if (other.task_ != null) {
         if (task_ == null) {
-          task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+          Task = new global::SKF.Enlight.API.IoT.TaskDescription();
         }
         Task.MergeFrom(other.Task);
       }
@@ -7293,9 +7293,9 @@ namespace SKF.Enlight.API.IoT {
             break;
           case 10: {
             if (task_ == null) {
-              task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
+              Task = new global::SKF.Enlight.API.IoT.TaskDescription();
             }
-            input.ReadMessage(task_);
+            input.ReadMessage(Task);
             break;
           }
         }

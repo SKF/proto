@@ -277,7 +277,7 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -302,9 +302,9 @@ namespace SKF.Enlight.API.Authorize {
           }
           case 26: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
         }
@@ -891,7 +891,7 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -908,9 +908,9 @@ namespace SKF.Enlight.API.Authorize {
             break;
           case 10: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
         }
@@ -1026,7 +1026,7 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -1043,9 +1043,9 @@ namespace SKF.Enlight.API.Authorize {
             break;
           case 10: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
         }
@@ -2202,13 +2202,13 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
       if (other.parent_ != null) {
         if (parent_ == null) {
-          parent_ = new global::SKF.Enlight.API.Common.Origin();
+          Parent = new global::SKF.Enlight.API.Common.Origin();
         }
         Parent.MergeFrom(other.Parent);
       }
@@ -2225,16 +2225,16 @@ namespace SKF.Enlight.API.Authorize {
             break;
           case 10: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 18: {
             if (parent_ == null) {
-              parent_ = new global::SKF.Enlight.API.Common.Origin();
+              Parent = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(parent_);
+            input.ReadMessage(Parent);
             break;
           }
         }
@@ -2371,13 +2371,13 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
       if (other.parent_ != null) {
         if (parent_ == null) {
-          parent_ = new global::SKF.Enlight.API.Common.Origin();
+          Parent = new global::SKF.Enlight.API.Common.Origin();
         }
         Parent.MergeFrom(other.Parent);
       }
@@ -2394,16 +2394,16 @@ namespace SKF.Enlight.API.Authorize {
             break;
           case 10: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
           case 18: {
             if (parent_ == null) {
-              parent_ = new global::SKF.Enlight.API.Common.Origin();
+              Parent = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(parent_);
+            input.ReadMessage(Parent);
             break;
           }
         }
@@ -3059,7 +3059,7 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -3084,9 +3084,9 @@ namespace SKF.Enlight.API.Authorize {
           }
           case 26: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
         }
@@ -3250,7 +3250,7 @@ namespace SKF.Enlight.API.Authorize {
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
-          resource_ = new global::SKF.Enlight.API.Common.Origin();
+          Resource = new global::SKF.Enlight.API.Common.Origin();
         }
         Resource.MergeFrom(other.Resource);
       }
@@ -3275,9 +3275,9 @@ namespace SKF.Enlight.API.Authorize {
           }
           case 26: {
             if (resource_ == null) {
-              resource_ = new global::SKF.Enlight.API.Common.Origin();
+              Resource = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(resource_);
+            input.ReadMessage(Resource);
             break;
           }
         }

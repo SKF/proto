@@ -596,19 +596,19 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.dataPoint_ != null) {
         if (dataPoint_ == null) {
-          dataPoint_ = new global::SKF.Enlight.API.PAS.DataPoint();
+          DataPoint = new global::SKF.Enlight.API.PAS.DataPoint();
         }
         DataPoint.MergeFrom(other.DataPoint);
       }
       if (other.spectrum_ != null) {
         if (spectrum_ == null) {
-          spectrum_ = new global::SKF.Enlight.API.PAS.Spectrum();
+          Spectrum = new global::SKF.Enlight.API.PAS.Spectrum();
         }
         Spectrum.MergeFrom(other.Spectrum);
       }
       if (other.timeSeries_ != null) {
         if (timeSeries_ == null) {
-          timeSeries_ = new global::SKF.Enlight.API.PAS.TimeSeries();
+          TimeSeries = new global::SKF.Enlight.API.PAS.TimeSeries();
         }
         TimeSeries.MergeFrom(other.TimeSeries);
       }
@@ -620,7 +620,7 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.mediaV2_ != null) {
         if (mediaV2_ == null) {
-          mediaV2_ = new global::SKF.Enlight.API.PAS.Media();
+          MediaV2 = new global::SKF.Enlight.API.PAS.Media();
         }
         MediaV2.MergeFrom(other.MediaV2);
       }
@@ -641,28 +641,28 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 16: {
-            contentType_ = (global::SKF.Enlight.API.PAS.NodeDataContentType) input.ReadEnum();
+            ContentType = (global::SKF.Enlight.API.PAS.NodeDataContentType) input.ReadEnum();
             break;
           }
           case 26: {
             if (dataPoint_ == null) {
-              dataPoint_ = new global::SKF.Enlight.API.PAS.DataPoint();
+              DataPoint = new global::SKF.Enlight.API.PAS.DataPoint();
             }
-            input.ReadMessage(dataPoint_);
+            input.ReadMessage(DataPoint);
             break;
           }
           case 34: {
             if (spectrum_ == null) {
-              spectrum_ = new global::SKF.Enlight.API.PAS.Spectrum();
+              Spectrum = new global::SKF.Enlight.API.PAS.Spectrum();
             }
-            input.ReadMessage(spectrum_);
+            input.ReadMessage(Spectrum);
             break;
           }
           case 42: {
             if (timeSeries_ == null) {
-              timeSeries_ = new global::SKF.Enlight.API.PAS.TimeSeries();
+              TimeSeries = new global::SKF.Enlight.API.PAS.TimeSeries();
             }
-            input.ReadMessage(timeSeries_);
+            input.ReadMessage(TimeSeries);
             break;
           }
           case 50: {
@@ -679,9 +679,9 @@ namespace SKF.Enlight.API.PAS {
           }
           case 74: {
             if (mediaV2_ == null) {
-              mediaV2_ = new global::SKF.Enlight.API.PAS.Media();
+              MediaV2 = new global::SKF.Enlight.API.PAS.Media();
             }
-            input.ReadMessage(mediaV2_);
+            input.ReadMessage(MediaV2);
             break;
           }
         }
@@ -996,7 +996,7 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.coordinate_ != null) {
         if (coordinate_ == null) {
-          coordinate_ = new global::SKF.Enlight.API.PAS.Coordinate();
+          Coordinate = new global::SKF.Enlight.API.PAS.Coordinate();
         }
         Coordinate.MergeFrom(other.Coordinate);
       }
@@ -1019,9 +1019,9 @@ namespace SKF.Enlight.API.PAS {
             break;
           case 10: {
             if (coordinate_ == null) {
-              coordinate_ = new global::SKF.Enlight.API.PAS.Coordinate();
+              Coordinate = new global::SKF.Enlight.API.PAS.Coordinate();
             }
-            input.ReadMessage(coordinate_);
+            input.ReadMessage(Coordinate);
             break;
           }
           case 18: {
@@ -1620,7 +1620,7 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 16: {
-            type_ = (global::SKF.Enlight.API.PAS.MediaType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.PAS.MediaType) input.ReadEnum();
             break;
           }
           case 26: {
@@ -1857,19 +1857,19 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.overall_ != null) {
         if (overall_ == null) {
-          overall_ = new global::SKF.Enlight.API.PAS.Overall();
+          Overall = new global::SKF.Enlight.API.PAS.Overall();
         }
         Overall.MergeFrom(other.Overall);
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
       if (other.inspection_ != null) {
         if (inspection_ == null) {
-          inspection_ = new global::SKF.Enlight.API.PAS.Inspection();
+          Inspection = new global::SKF.Enlight.API.PAS.Inspection();
         }
         Inspection.MergeFrom(other.Inspection);
       }
@@ -1893,28 +1893,28 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 24: {
-            type_ = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
             break;
           }
           case 34: {
             if (overall_ == null) {
-              overall_ = new global::SKF.Enlight.API.PAS.Overall();
+              Overall = new global::SKF.Enlight.API.PAS.Overall();
             }
-            input.ReadMessage(overall_);
+            input.ReadMessage(Overall);
             break;
           }
           case 42: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
           case 50: {
             if (inspection_ == null) {
-              inspection_ = new global::SKF.Enlight.API.PAS.Inspection();
+              Inspection = new global::SKF.Enlight.API.PAS.Inspection();
             }
-            input.ReadMessage(inspection_);
+            input.ReadMessage(Inspection);
             break;
           }
         }
@@ -2308,13 +2308,13 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.overall_ != null) {
         if (overall_ == null) {
-          overall_ = new global::SKF.Enlight.API.PAS.Overall();
+          Overall = new global::SKF.Enlight.API.PAS.Overall();
         }
         Overall.MergeFrom(other.Overall);
       }
       if (other.inspection_ != null) {
         if (inspection_ == null) {
-          inspection_ = new global::SKF.Enlight.API.PAS.Inspection();
+          Inspection = new global::SKF.Enlight.API.PAS.Inspection();
         }
         Inspection.MergeFrom(other.Inspection);
       }
@@ -2330,21 +2330,21 @@ namespace SKF.Enlight.API.PAS {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
             break;
           }
           case 18: {
             if (overall_ == null) {
-              overall_ = new global::SKF.Enlight.API.PAS.Overall();
+              Overall = new global::SKF.Enlight.API.PAS.Overall();
             }
-            input.ReadMessage(overall_);
+            input.ReadMessage(Overall);
             break;
           }
           case 26: {
             if (inspection_ == null) {
-              inspection_ = new global::SKF.Enlight.API.PAS.Inspection();
+              Inspection = new global::SKF.Enlight.API.PAS.Inspection();
             }
-            input.ReadMessage(inspection_);
+            input.ReadMessage(Inspection);
             break;
           }
         }
@@ -2511,7 +2511,7 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.API.Common.Origin();
+          Origin = new global::SKF.Enlight.API.Common.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -2531,14 +2531,14 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 16: {
-            alarmStatus_ = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            AlarmStatus = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
             break;
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.API.Common.Origin();
+              Origin = new global::SKF.Enlight.API.Common.Origin();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
         }
@@ -2900,7 +2900,7 @@ namespace SKF.Enlight.API.PAS {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            alarmStatus_ = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            AlarmStatus = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
             break;
           }
         }
@@ -3163,7 +3163,7 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 16: {
-            alarmStatus_ = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            AlarmStatus = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
             break;
           }
         }
@@ -3376,7 +3376,7 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 32: {
-            status_ = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
             break;
           }
         }
@@ -3769,7 +3769,7 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.API.PAS.NodeData();
+          NodeData = new global::SKF.Enlight.API.PAS.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -3790,9 +3790,9 @@ namespace SKF.Enlight.API.PAS {
           }
           case 18: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.API.PAS.NodeData();
+              NodeData = new global::SKF.Enlight.API.PAS.NodeData();
             }
-            input.ReadMessage(nodeData_);
+            input.ReadMessage(NodeData);
             break;
           }
         }
@@ -4100,25 +4100,25 @@ namespace SKF.Enlight.API.PAS {
       }
       if (other.outerHigh_ != null) {
         if (outerHigh_ == null) {
-          outerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+          OuterHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
         }
         OuterHigh.MergeFrom(other.OuterHigh);
       }
       if (other.innerHigh_ != null) {
         if (innerHigh_ == null) {
-          innerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+          InnerHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
         }
         InnerHigh.MergeFrom(other.InnerHigh);
       }
       if (other.innerLow_ != null) {
         if (innerLow_ == null) {
-          innerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+          InnerLow = new global::SKF.Enlight.API.PAS.DoubleObject();
         }
         InnerLow.MergeFrom(other.InnerLow);
       }
       if (other.outerLow_ != null) {
         if (outerLow_ == null) {
-          outerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+          OuterLow = new global::SKF.Enlight.API.PAS.DoubleObject();
         }
         OuterLow.MergeFrom(other.OuterLow);
       }
@@ -4135,30 +4135,30 @@ namespace SKF.Enlight.API.PAS {
             break;
           case 10: {
             if (outerHigh_ == null) {
-              outerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+              OuterHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
             }
-            input.ReadMessage(outerHigh_);
+            input.ReadMessage(OuterHigh);
             break;
           }
           case 18: {
             if (innerHigh_ == null) {
-              innerHigh_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+              InnerHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
             }
-            input.ReadMessage(innerHigh_);
+            input.ReadMessage(InnerHigh);
             break;
           }
           case 26: {
             if (innerLow_ == null) {
-              innerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+              InnerLow = new global::SKF.Enlight.API.PAS.DoubleObject();
             }
-            input.ReadMessage(innerLow_);
+            input.ReadMessage(InnerLow);
             break;
           }
           case 34: {
             if (outerLow_ == null) {
-              outerLow_ = new global::SKF.Enlight.API.PAS.DoubleObject();
+              OuterLow = new global::SKF.Enlight.API.PAS.DoubleObject();
             }
-            input.ReadMessage(outerLow_);
+            input.ReadMessage(OuterLow);
             break;
           }
         }
@@ -4464,7 +4464,7 @@ namespace SKF.Enlight.API.PAS {
             break;
           }
           case 24: {
-            status_ = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            Status = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
             break;
           }
         }
