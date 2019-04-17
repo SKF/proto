@@ -13,24 +13,6 @@ service IAM {
 
   rpc GetHierarchyRelations (GetHierarchyRelationsInput) returns (GetHierarchyRelationsOutput) {}
   rpc GetEventRecords (GetEventRecordsInput) returns (GetEventRecordsOutput) {}
-
-  rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
-
-  rpc AddAuthorizationResource (AddAuthorizationResourceInput) returns (common.Void) {}
-  rpc RemoveAuthorizationResource (RemoveAuthorizationResourceInput) returns (common.Void) {}
-
-  rpc GetAuthorizationResourcesByType (GetAuthorizationResourcesByTypeInput) returns (GetAuthorizationResourcesByTypeOutput) {}
-
-  rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
-  rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
-
-  rpc AddAuthorizationResourceRelation (AddAuthorizationResourceRelationInput) returns (common.Void) {}
-  rpc RemoveAuthorizationResourceRelation (RemoveAuthorizationResourceRelationInput) returns (common.Void) {}
-
-  rpc GetAuthorizationResourceRelations (GetAuthorizationResourceRelationsInput) returns (GetAuthorizationResourceRelationsOutput) {}
-
-  rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
-  rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
 }
 
 message UserClaims {
@@ -72,77 +54,4 @@ message GetEventRecordsInput {
 
 message GetEventRecordsOutput {
   bytes records = 1;
-}
-
-message IsAuthorizedInput {
-  string user_id = 1;
-  string action = 2;
-  common.Origin resource = 3;
-}
-
-message IsAuthorizedOutput {
-  bool ok = 1;
-}
-
-message AddAuthorizationResourceInput {
-  common.Origin resource = 1;
-}
-
-message RemoveAuthorizationResourceInput {
-  common.Origin resource = 1;
-}
-
-message GetAuthorizationResourcesByTypeInput {
-  string resource_type = 1;
-}
-
-message GetResourcesByOriginAndTypeInput {
-  string origin_id = 1;
-  string resource_type = 2;
-}
-
-message GetUserIDsWithAccessToResourceInput {
-  string origin_id = 1;
-}
-
-message GetAuthorizationResourcesByTypeOutput {
-  repeated common.Origin resources = 1;
-}
-
-message GetResourcesByOriginAndTypeOutput {
-  repeated common.Origin resources = 1;
-}
-
-message GetUserIDsWithAccessToResourceOutput {
-  repeated string user_ids = 1;
-}
-
-message AddAuthorizationResourceRelationInput {
-  common.Origin resource = 1;
-  common.Origin parent = 2;
-}
-
-message RemoveAuthorizationResourceRelationInput {
-  common.Origin resource = 1;
-  common.Origin parent = 2;
-}
-
-message GetAuthorizationResourceRelationsInput {
-  string resource_id = 1;
-}
-
-message GetAuthorizationResourceRelationsOutput {
-  repeated common.Origin resources = 1;
-}
-
-message AddUserPermissionInput {
-  string user_id = 1;
-  string role = 2;
-  common.Origin resource = 3;
-}
-
-message RemoveUserPermissionInput {
-  string user_id = 1;
-  string role = 2;
-  common.Origin resource = 3;
 }
