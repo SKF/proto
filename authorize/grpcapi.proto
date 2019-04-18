@@ -137,8 +137,8 @@ message RemoveUserPermissionInput {
 
 message Action {
   string name = 1;
-	string type = 2;
-	map<string, string> data = 3;
+  string type = 2;
+  map<string, string> data = 3;
 }
 
 message GetActionsByUserRoleInput {
