@@ -58,8 +58,8 @@ message TaskDescription {
   TaskStatus status = 8;
   int64 status_updated_at = 10; // ms
   int64 long_id = 11;
-  string nodeType = 12;
-  repeated string nodeids = 13;
+  string node_type = 12;
+  repeated string node_ids = 13;
 }
 
 message InitialTaskDescription {
@@ -70,8 +70,8 @@ message InitialTaskDescription {
   FunctionalLocationIds functional_location_ids = 5;
   string external_task_id = 6;
   TaskStatus status = 7;
-  string nodeType = 8;
-  repeated string nodeids = 9;
+  string node_type = 8;
+  repeated string node_ids = 9;
 }
 
 message TaskUser {
