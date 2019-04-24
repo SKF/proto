@@ -20,6 +20,7 @@ service Hierarchy {
 
   rpc SaveNode (SaveNodeInput) returns (common.PrimitiveString) {}
   rpc DeleteNode (DeleteNodeInput) returns (common.Void) {}
+  rpc CopyNode (CopyNodeInput) returns (common.PrimitiveString) {}
 
   rpc GetEvents (GetEventsInput) returns (GetEventsOutput) {}
 }
@@ -124,6 +125,12 @@ message SaveNodeInput {
   Node node = 3;
   string parentId = 2;
   common.Origin parentOrigin = 4;
+}
+
+message CopyNodeInput {
+  string userId = 1;
+  string srcNodeId = 2;
+  string dstParentNodeId = 3;
 }
 
 message DeleteNodeInput {
