@@ -29,7 +29,6 @@ service Authorize {
 
   rpc AddResourceRelations (AddResourceRelationsInput) returns (common.Void) {}
   rpc RemoveResourceRelations (RemoveResourceRelationsInput) returns (common.Void) {}
-  rpc GetResourceRelations (GetResourceRelationsInput) returns (GetResourceRelationsOutput) {}
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
@@ -115,23 +114,15 @@ message RemoveResourceRelationsInput {
   repeated RemoveResourceRelationInput relation = 1;
 }
 
-message GetResourceRelationsInput {
-  string resource_id = 1;
-}
-
-message GetResourceRelationsOutput {
-  repeated common.Origin resources = 1;
-}
-
 message AddUserPermissionInput {
   string user_id = 1;
-  string role = 2;
+  string action = 2;
   common.Origin resource = 3;
 }
 
 message RemoveUserPermissionInput {
   string user_id = 1;
-  string role = 2;
+  string action = 2;
   common.Origin resource = 3;
 }
 
