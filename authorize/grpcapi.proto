@@ -32,8 +32,8 @@ service Authorize {
 
   rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
   rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
-  rpc AddObjectPermission (AddObjectPermissionInput) returns (common.Void) {}
-  rpc RemoveObjectPermission (RemoveObjectPermissionInput) returns (common.Void) {}
+  rpc AddResourcePermission (AddResourcePermissionInput) returns (common.Void) {}
+  rpc RemoveResourcePermission (RemoveResourcePermissionInput) returns (common.Void) {}
 }
 
 message IsAuthorizedInput {
@@ -128,13 +128,13 @@ message RemoveUserPermissionInput {
   common.Origin resource = 3;
 }
 
-message AddObjectPermissionInput {
+message AddResourcePermissionInput {
   common.Origin parent = 1;
   string action = 2;
   common.Origin resource = 3;
 }
 
-message RemoveObjectPermissionInput {
+message RemoveResourcePermissionInput {
   common.Origin parent = 1;
   string action = 2;
   common.Origin resource = 3;
