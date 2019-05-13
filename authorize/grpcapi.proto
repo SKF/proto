@@ -52,7 +52,7 @@ message IsAuthorizedOutput {
 }
 
 message IsAuthorizedOutItem {
-  string user_id = 1;
+  string resource_id = 1;
   bool ok = 2;
 }
 
