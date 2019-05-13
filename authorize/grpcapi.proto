@@ -57,7 +57,7 @@ message IsAuthorizedOutItem {
 }
 
 message IsAuthorizedBulkOutput {
-  repeated IsAuthorizedOutItem = 1;
+  repeated IsAuthorizedOutItem responses = 1;
 }
 
 message IsAuthorizedByEndpointInput {
