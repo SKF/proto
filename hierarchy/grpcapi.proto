@@ -15,6 +15,7 @@ service Hierarchy {
   rpc GetParentNode (common.PrimitiveString) returns (Node) {}
   rpc GetAncestors (GetAncestorsInput) returns (GetAncestorsOutput) {}
   rpc GetCompany (common.PrimitiveString) returns (Node) {}
+  rpc GetAssetTaxonomy (common.Void) returns (AssetTypes) {}
 
   rpc GetNodeIdByOrigin (common.Origin) returns (common.PrimitiveString) {}
 
@@ -23,6 +24,18 @@ service Hierarchy {
   rpc CopyNode (CopyNodeInput) returns (common.PrimitiveString) {}
 
   rpc GetEvents (GetEventsInput) returns (GetEventsOutput) {}
+}
+
+message AssetTypes {
+  message Class {
+    message Type {
+      string name = 1;
+      repeated string sequences = 2;
+    }
+    string name = 1;
+    repeated Type types = 2;
+  }
+  repeated Class classes = 1;
 }
 
 message CollectionInterval {
