@@ -27,85 +27,95 @@ namespace SKF.Enlight.API.Authorize {
             "ChdhdXRob3JpemUvZ3JwY2FwaS5wcm90bxIHZ3JwY2FwaRoTY29tbW9uL2Nv",
             "bW1vbi5wcm90byJWChFJc0F1dGhvcml6ZWRJbnB1dBIPCgd1c2VyX2lkGAEg",
             "ASgJEg4KBmFjdGlvbhgCIAEoCRIgCghyZXNvdXJjZRgDIAEoCzIOLmNvbW1v",
-            "bi5PcmlnaW4iIAoSSXNBdXRob3JpemVkT3V0cHV0EgoKAm9rGAEgASgIIl0K",
-            "G0lzQXV0aG9yaXplZEJ5RW5kcG9pbnRJbnB1dBILCgNhcGkYASABKAkSDgoG",
-            "bWV0aG9kGAIgASgJEhAKCGVuZHBvaW50GAMgASgJEg8KB3VzZXJfaWQYBCAB",
-            "KAkiKgocSXNBdXRob3JpemVkQnlFbmRwb2ludE91dHB1dBIKCgJvaxgBIAEo",
-            "CCI0ChBBZGRSZXNvdXJjZUlucHV0EiAKCHJlc291cmNlGAEgASgLMg4uY29t",
-            "bW9uLk9yaWdpbiI3ChNSZW1vdmVSZXNvdXJjZUlucHV0EiAKCHJlc291cmNl",
-            "GAEgASgLMg4uY29tbW9uLk9yaWdpbiI1ChFBZGRSZXNvdXJjZXNJbnB1dBIg",
-            "CghyZXNvdXJjZRgBIAMoCzIOLmNvbW1vbi5PcmlnaW4iOAoUUmVtb3ZlUmVz",
-            "b3VyY2VzSW5wdXQSIAoIcmVzb3VyY2UYASADKAsyDi5jb21tb24uT3JpZ2lu",
-            "IjAKF0dldFJlc291cmNlc0J5VHlwZUlucHV0EhUKDXJlc291cmNlX3R5cGUY",
-            "ASABKAkiTAogR2V0UmVzb3VyY2VzQnlPcmlnaW5BbmRUeXBlSW5wdXQSEQoJ",
-            "b3JpZ2luX2lkGAEgASgJEhUKDXJlc291cmNlX3R5cGUYAiABKAkiOAojR2V0",
-            "VXNlcklEc1dpdGhBY2Nlc3NUb1Jlc291cmNlSW5wdXQSEQoJb3JpZ2luX2lk",
-            "GAEgASgJIj0KGEdldFJlc291cmNlc0J5VHlwZU91dHB1dBIhCglyZXNvdXJj",
-            "ZXMYASADKAsyDi5jb21tb24uT3JpZ2luIkYKIUdldFJlc291cmNlc0J5T3Jp",
-            "Z2luQW5kVHlwZU91dHB1dBIhCglyZXNvdXJjZXMYASADKAsyDi5jb21tb24u",
-            "T3JpZ2luIjgKJEdldFVzZXJJRHNXaXRoQWNjZXNzVG9SZXNvdXJjZU91dHB1",
-            "dBIQCgh1c2VyX2lkcxgBIAMoCSJcChhBZGRSZXNvdXJjZVJlbGF0aW9uSW5w",
-            "dXQSIAoIcmVzb3VyY2UYASABKAsyDi5jb21tb24uT3JpZ2luEh4KBnBhcmVu",
-            "dBgCIAEoCzIOLmNvbW1vbi5PcmlnaW4iXwobUmVtb3ZlUmVzb3VyY2VSZWxh",
-            "dGlvbklucHV0EiAKCHJlc291cmNlGAEgASgLMg4uY29tbW9uLk9yaWdpbhIe",
-            "CgZwYXJlbnQYAiABKAsyDi5jb21tb24uT3JpZ2luIlAKGUFkZFJlc291cmNl",
-            "UmVsYXRpb25zSW5wdXQSMwoIcmVsYXRpb24YASADKAsyIS5ncnBjYXBpLkFk",
-            "ZFJlc291cmNlUmVsYXRpb25JbnB1dCJWChxSZW1vdmVSZXNvdXJjZVJlbGF0",
-            "aW9uc0lucHV0EjYKCHJlbGF0aW9uGAEgAygLMiQuZ3JwY2FwaS5SZW1vdmVS",
-            "ZXNvdXJjZVJlbGF0aW9uSW5wdXQiWwoWQWRkVXNlclBlcm1pc3Npb25JbnB1",
-            "dBIPCgd1c2VyX2lkGAEgASgJEg4KBmFjdGlvbhgCIAEoCRIgCghyZXNvdXJj",
-            "ZRgDIAEoCzIOLmNvbW1vbi5PcmlnaW4iXgoZUmVtb3ZlVXNlclBlcm1pc3Np",
-            "b25JbnB1dBIPCgd1c2VyX2lkGAEgASgJEg4KBmFjdGlvbhgCIAEoCRIgCghy",
-            "ZXNvdXJjZRgDIAEoCzIOLmNvbW1vbi5PcmlnaW4iegoGQWN0aW9uEgwKBG5h",
-            "bWUYASABKAkSDAoEdHlwZRgCIAEoCRInCgRkYXRhGAMgAygLMhkuZ3JwY2Fw",
-            "aS5BY3Rpb24uRGF0YUVudHJ5GisKCURhdGFFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIi4KGUdldEFjdGlvbnNCeVVzZXJSb2xlSW5w",
-            "dXQSEQoJdXNlcl9yb2xlGAEgASgJIj4KGkdldEFjdGlvbnNCeVVzZXJSb2xl",
-            "T3V0cHV0EiAKB2FjdGlvbnMYASADKAsyDy5ncnBjYXBpLkFjdGlvbiJHCg5B",
-            "Y3Rpb25SZXNvdXJjZRITCgthY3Rpb25fbmFtZRgBIAEoCRIgCghyZXNvdXJj",
-            "ZRgCIAEoCzIOLmNvbW1vbi5PcmlnaW4iNAohR2V0UmVzb3VyY2VzQW5kQWN0",
-            "aW9uc0J5VXNlcklucHV0Eg8KB3VzZXJfaWQYASABKAkiSwoiR2V0UmVzb3Vy",
-            "Y2VzQW5kQWN0aW9uc0J5VXNlck91dHB1dBIlCgRkYXRhGAEgAygLMhcuZ3Jw",
-            "Y2FwaS5BY3Rpb25SZXNvdXJjZTLqCwoJQXV0aG9yaXplEjMKCERlZXBQaW5n",
-            "EgwuY29tbW9uLlZvaWQaFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASSQoM",
-            "SXNBdXRob3JpemVkEhouZ3JwY2FwaS5Jc0F1dGhvcml6ZWRJbnB1dBobLmdy",
-            "cGNhcGkuSXNBdXRob3JpemVkT3V0cHV0IgASZwoWSXNBdXRob3JpemVkQnlF",
-            "bmRwb2ludBIkLmdycGNhcGkuSXNBdXRob3JpemVkQnlFbmRwb2ludElucHV0",
-            "GiUuZ3JwY2FwaS5Jc0F1dGhvcml6ZWRCeUVuZHBvaW50T3V0cHV0IgASOAoL",
-            "QWRkUmVzb3VyY2USGS5ncnBjYXBpLkFkZFJlc291cmNlSW5wdXQaDC5jb21t",
-            "b24uVm9pZCIAEj4KDlJlbW92ZVJlc291cmNlEhwuZ3JwY2FwaS5SZW1vdmVS",
-            "ZXNvdXJjZUlucHV0GgwuY29tbW9uLlZvaWQiABI6CgxBZGRSZXNvdXJjZXMS",
-            "Gi5ncnBjYXBpLkFkZFJlc291cmNlc0lucHV0GgwuY29tbW9uLlZvaWQiABJA",
-            "Cg9SZW1vdmVSZXNvdXJjZXMSHS5ncnBjYXBpLlJlbW92ZVJlc291cmNlc0lu",
-            "cHV0GgwuY29tbW9uLlZvaWQiABJbChJHZXRSZXNvdXJjZXNCeVR5cGUSIC5n",
-            "cnBjYXBpLkdldFJlc291cmNlc0J5VHlwZUlucHV0GiEuZ3JwY2FwaS5HZXRS",
-            "ZXNvdXJjZXNCeVR5cGVPdXRwdXQiABJhChRHZXRBY3Rpb25zQnlVc2VyUm9s",
-            "ZRIiLmdycGNhcGkuR2V0QWN0aW9uc0J5VXNlclJvbGVJbnB1dBojLmdycGNh",
-            "cGkuR2V0QWN0aW9uc0J5VXNlclJvbGVPdXRwdXQiABJ5ChxHZXRSZXNvdXJj",
-            "ZXNBbmRBY3Rpb25zQnlVc2VyEiouZ3JwY2FwaS5HZXRSZXNvdXJjZXNBbmRB",
-            "Y3Rpb25zQnlVc2VySW5wdXQaKy5ncnBjYXBpLkdldFJlc291cmNlc0FuZEFj",
-            "dGlvbnNCeVVzZXJPdXRwdXQiABJ2ChtHZXRSZXNvdXJjZXNCeU9yaWdpbkFu",
-            "ZFR5cGUSKS5ncnBjYXBpLkdldFJlc291cmNlc0J5T3JpZ2luQW5kVHlwZUlu",
-            "cHV0GiouZ3JwY2FwaS5HZXRSZXNvdXJjZXNCeU9yaWdpbkFuZFR5cGVPdXRw",
-            "dXQiABJ/Ch5HZXRVc2VySURzV2l0aEFjY2Vzc1RvUmVzb3VyY2USLC5ncnBj",
-            "YXBpLkdldFVzZXJJRHNXaXRoQWNjZXNzVG9SZXNvdXJjZUlucHV0Gi0uZ3Jw",
-            "Y2FwaS5HZXRVc2VySURzV2l0aEFjY2Vzc1RvUmVzb3VyY2VPdXRwdXQiABJI",
-            "ChNBZGRSZXNvdXJjZVJlbGF0aW9uEiEuZ3JwY2FwaS5BZGRSZXNvdXJjZVJl",
-            "bGF0aW9uSW5wdXQaDC5jb21tb24uVm9pZCIAEk4KFlJlbW92ZVJlc291cmNl",
-            "UmVsYXRpb24SJC5ncnBjYXBpLlJlbW92ZVJlc291cmNlUmVsYXRpb25JbnB1",
-            "dBoMLmNvbW1vbi5Wb2lkIgASSgoUQWRkUmVzb3VyY2VSZWxhdGlvbnMSIi5n",
-            "cnBjYXBpLkFkZFJlc291cmNlUmVsYXRpb25zSW5wdXQaDC5jb21tb24uVm9p",
-            "ZCIAElAKF1JlbW92ZVJlc291cmNlUmVsYXRpb25zEiUuZ3JwY2FwaS5SZW1v",
-            "dmVSZXNvdXJjZVJlbGF0aW9uc0lucHV0GgwuY29tbW9uLlZvaWQiABJEChFB",
-            "ZGRVc2VyUGVybWlzc2lvbhIfLmdycGNhcGkuQWRkVXNlclBlcm1pc3Npb25J",
-            "bnB1dBoMLmNvbW1vbi5Wb2lkIgASSgoUUmVtb3ZlVXNlclBlcm1pc3Npb24S",
-            "Ii5ncnBjYXBpLlJlbW92ZVVzZXJQZXJtaXNzaW9uSW5wdXQaDC5jb21tb24u",
-            "Vm9pZCIAQhyqAhlTS0YuRW5saWdodC5BUEkuQXV0aG9yaXplYgZwcm90bzM="));
+            "bi5PcmlnaW4iWwoVSXNBdXRob3JpemVkQnVsa0lucHV0Eg8KB3VzZXJfaWQY",
+            "ASABKAkSDgoGYWN0aW9uGAIgASgJEiEKCXJlc291cmNlcxgDIAMoCzIOLmNv",
+            "bW1vbi5PcmlnaW4iIAoSSXNBdXRob3JpemVkT3V0cHV0EgoKAm9rGAEgASgI",
+            "IjYKE0lzQXV0aG9yaXplZE91dEl0ZW0SEwoLcmVzb3VyY2VfaWQYASABKAkS",
+            "CgoCb2sYAiABKAgiSQoWSXNBdXRob3JpemVkQnVsa091dHB1dBIvCglyZXNw",
+            "b25zZXMYASADKAsyHC5ncnBjYXBpLklzQXV0aG9yaXplZE91dEl0ZW0iXQob",
+            "SXNBdXRob3JpemVkQnlFbmRwb2ludElucHV0EgsKA2FwaRgBIAEoCRIOCgZt",
+            "ZXRob2QYAiABKAkSEAoIZW5kcG9pbnQYAyABKAkSDwoHdXNlcl9pZBgEIAEo",
+            "CSIqChxJc0F1dGhvcml6ZWRCeUVuZHBvaW50T3V0cHV0EgoKAm9rGAEgASgI",
+            "IjQKEEFkZFJlc291cmNlSW5wdXQSIAoIcmVzb3VyY2UYASABKAsyDi5jb21t",
+            "b24uT3JpZ2luIjcKE1JlbW92ZVJlc291cmNlSW5wdXQSIAoIcmVzb3VyY2UY",
+            "ASABKAsyDi5jb21tb24uT3JpZ2luIjUKEUFkZFJlc291cmNlc0lucHV0EiAK",
+            "CHJlc291cmNlGAEgAygLMg4uY29tbW9uLk9yaWdpbiI4ChRSZW1vdmVSZXNv",
+            "dXJjZXNJbnB1dBIgCghyZXNvdXJjZRgBIAMoCzIOLmNvbW1vbi5PcmlnaW4i",
+            "MAoXR2V0UmVzb3VyY2VzQnlUeXBlSW5wdXQSFQoNcmVzb3VyY2VfdHlwZRgB",
+            "IAEoCSJMCiBHZXRSZXNvdXJjZXNCeU9yaWdpbkFuZFR5cGVJbnB1dBIRCglv",
+            "cmlnaW5faWQYASABKAkSFQoNcmVzb3VyY2VfdHlwZRgCIAEoCSI4CiNHZXRV",
+            "c2VySURzV2l0aEFjY2Vzc1RvUmVzb3VyY2VJbnB1dBIRCglvcmlnaW5faWQY",
+            "ASABKAkiPQoYR2V0UmVzb3VyY2VzQnlUeXBlT3V0cHV0EiEKCXJlc291cmNl",
+            "cxgBIAMoCzIOLmNvbW1vbi5PcmlnaW4iRgohR2V0UmVzb3VyY2VzQnlPcmln",
+            "aW5BbmRUeXBlT3V0cHV0EiEKCXJlc291cmNlcxgBIAMoCzIOLmNvbW1vbi5P",
+            "cmlnaW4iOAokR2V0VXNlcklEc1dpdGhBY2Nlc3NUb1Jlc291cmNlT3V0cHV0",
+            "EhAKCHVzZXJfaWRzGAEgAygJIlwKGEFkZFJlc291cmNlUmVsYXRpb25JbnB1",
+            "dBIgCghyZXNvdXJjZRgBIAEoCzIOLmNvbW1vbi5PcmlnaW4SHgoGcGFyZW50",
+            "GAIgASgLMg4uY29tbW9uLk9yaWdpbiJfChtSZW1vdmVSZXNvdXJjZVJlbGF0",
+            "aW9uSW5wdXQSIAoIcmVzb3VyY2UYASABKAsyDi5jb21tb24uT3JpZ2luEh4K",
+            "BnBhcmVudBgCIAEoCzIOLmNvbW1vbi5PcmlnaW4iUAoZQWRkUmVzb3VyY2VS",
+            "ZWxhdGlvbnNJbnB1dBIzCghyZWxhdGlvbhgBIAMoCzIhLmdycGNhcGkuQWRk",
+            "UmVzb3VyY2VSZWxhdGlvbklucHV0IlYKHFJlbW92ZVJlc291cmNlUmVsYXRp",
+            "b25zSW5wdXQSNgoIcmVsYXRpb24YASADKAsyJC5ncnBjYXBpLlJlbW92ZVJl",
+            "c291cmNlUmVsYXRpb25JbnB1dCJbChZBZGRVc2VyUGVybWlzc2lvbklucHV0",
+            "Eg8KB3VzZXJfaWQYASABKAkSDgoGYWN0aW9uGAIgASgJEiAKCHJlc291cmNl",
+            "GAMgASgLMg4uY29tbW9uLk9yaWdpbiJeChlSZW1vdmVVc2VyUGVybWlzc2lv",
+            "bklucHV0Eg8KB3VzZXJfaWQYASABKAkSDgoGYWN0aW9uGAIgASgJEiAKCHJl",
+            "c291cmNlGAMgASgLMg4uY29tbW9uLk9yaWdpbiJ6CgZBY3Rpb24SDAoEbmFt",
+            "ZRgBIAEoCRIMCgR0eXBlGAIgASgJEicKBGRhdGEYAyADKAsyGS5ncnBjYXBp",
+            "LkFjdGlvbi5EYXRhRW50cnkaKwoJRGF0YUVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEiLgoZR2V0QWN0aW9uc0J5VXNlclJvbGVJbnB1",
+            "dBIRCgl1c2VyX3JvbGUYASABKAkiPgoaR2V0QWN0aW9uc0J5VXNlclJvbGVP",
+            "dXRwdXQSIAoHYWN0aW9ucxgBIAMoCzIPLmdycGNhcGkuQWN0aW9uIkcKDkFj",
+            "dGlvblJlc291cmNlEhMKC2FjdGlvbl9uYW1lGAEgASgJEiAKCHJlc291cmNl",
+            "GAIgASgLMg4uY29tbW9uLk9yaWdpbiI0CiFHZXRSZXNvdXJjZXNBbmRBY3Rp",
+            "b25zQnlVc2VySW5wdXQSDwoHdXNlcl9pZBgBIAEoCSJLCiJHZXRSZXNvdXJj",
+            "ZXNBbmRBY3Rpb25zQnlVc2VyT3V0cHV0EiUKBGRhdGEYASADKAsyFy5ncnBj",
+            "YXBpLkFjdGlvblJlc291cmNlMsEMCglBdXRob3JpemUSMwoIRGVlcFBpbmcS",
+            "DC5jb21tb24uVm9pZBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJJCgxJ",
+            "c0F1dGhvcml6ZWQSGi5ncnBjYXBpLklzQXV0aG9yaXplZElucHV0GhsuZ3Jw",
+            "Y2FwaS5Jc0F1dGhvcml6ZWRPdXRwdXQiABJVChBJc0F1dGhvcml6ZWRCdWxr",
+            "Eh4uZ3JwY2FwaS5Jc0F1dGhvcml6ZWRCdWxrSW5wdXQaHy5ncnBjYXBpLklz",
+            "QXV0aG9yaXplZEJ1bGtPdXRwdXQiABJnChZJc0F1dGhvcml6ZWRCeUVuZHBv",
+            "aW50EiQuZ3JwY2FwaS5Jc0F1dGhvcml6ZWRCeUVuZHBvaW50SW5wdXQaJS5n",
+            "cnBjYXBpLklzQXV0aG9yaXplZEJ5RW5kcG9pbnRPdXRwdXQiABI4CgtBZGRS",
+            "ZXNvdXJjZRIZLmdycGNhcGkuQWRkUmVzb3VyY2VJbnB1dBoMLmNvbW1vbi5W",
+            "b2lkIgASPgoOUmVtb3ZlUmVzb3VyY2USHC5ncnBjYXBpLlJlbW92ZVJlc291",
+            "cmNlSW5wdXQaDC5jb21tb24uVm9pZCIAEjoKDEFkZFJlc291cmNlcxIaLmdy",
+            "cGNhcGkuQWRkUmVzb3VyY2VzSW5wdXQaDC5jb21tb24uVm9pZCIAEkAKD1Jl",
+            "bW92ZVJlc291cmNlcxIdLmdycGNhcGkuUmVtb3ZlUmVzb3VyY2VzSW5wdXQa",
+            "DC5jb21tb24uVm9pZCIAElsKEkdldFJlc291cmNlc0J5VHlwZRIgLmdycGNh",
+            "cGkuR2V0UmVzb3VyY2VzQnlUeXBlSW5wdXQaIS5ncnBjYXBpLkdldFJlc291",
+            "cmNlc0J5VHlwZU91dHB1dCIAEmEKFEdldEFjdGlvbnNCeVVzZXJSb2xlEiIu",
+            "Z3JwY2FwaS5HZXRBY3Rpb25zQnlVc2VyUm9sZUlucHV0GiMuZ3JwY2FwaS5H",
+            "ZXRBY3Rpb25zQnlVc2VyUm9sZU91dHB1dCIAEnkKHEdldFJlc291cmNlc0Fu",
+            "ZEFjdGlvbnNCeVVzZXISKi5ncnBjYXBpLkdldFJlc291cmNlc0FuZEFjdGlv",
+            "bnNCeVVzZXJJbnB1dBorLmdycGNhcGkuR2V0UmVzb3VyY2VzQW5kQWN0aW9u",
+            "c0J5VXNlck91dHB1dCIAEnYKG0dldFJlc291cmNlc0J5T3JpZ2luQW5kVHlw",
+            "ZRIpLmdycGNhcGkuR2V0UmVzb3VyY2VzQnlPcmlnaW5BbmRUeXBlSW5wdXQa",
+            "Ki5ncnBjYXBpLkdldFJlc291cmNlc0J5T3JpZ2luQW5kVHlwZU91dHB1dCIA",
+            "En8KHkdldFVzZXJJRHNXaXRoQWNjZXNzVG9SZXNvdXJjZRIsLmdycGNhcGku",
+            "R2V0VXNlcklEc1dpdGhBY2Nlc3NUb1Jlc291cmNlSW5wdXQaLS5ncnBjYXBp",
+            "LkdldFVzZXJJRHNXaXRoQWNjZXNzVG9SZXNvdXJjZU91dHB1dCIAEkgKE0Fk",
+            "ZFJlc291cmNlUmVsYXRpb24SIS5ncnBjYXBpLkFkZFJlc291cmNlUmVsYXRp",
+            "b25JbnB1dBoMLmNvbW1vbi5Wb2lkIgASTgoWUmVtb3ZlUmVzb3VyY2VSZWxh",
+            "dGlvbhIkLmdycGNhcGkuUmVtb3ZlUmVzb3VyY2VSZWxhdGlvbklucHV0Ggwu",
+            "Y29tbW9uLlZvaWQiABJKChRBZGRSZXNvdXJjZVJlbGF0aW9ucxIiLmdycGNh",
+            "cGkuQWRkUmVzb3VyY2VSZWxhdGlvbnNJbnB1dBoMLmNvbW1vbi5Wb2lkIgAS",
+            "UAoXUmVtb3ZlUmVzb3VyY2VSZWxhdGlvbnMSJS5ncnBjYXBpLlJlbW92ZVJl",
+            "c291cmNlUmVsYXRpb25zSW5wdXQaDC5jb21tb24uVm9pZCIAEkQKEUFkZFVz",
+            "ZXJQZXJtaXNzaW9uEh8uZ3JwY2FwaS5BZGRVc2VyUGVybWlzc2lvbklucHV0",
+            "GgwuY29tbW9uLlZvaWQiABJKChRSZW1vdmVVc2VyUGVybWlzc2lvbhIiLmdy",
+            "cGNhcGkuUmVtb3ZlVXNlclBlcm1pc3Npb25JbnB1dBoMLmNvbW1vbi5Wb2lk",
+            "IgBCHKoCGVNLRi5FbmxpZ2h0LkFQSS5BdXRob3JpemViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedInput), global::SKF.Enlight.API.Authorize.IsAuthorizedInput.Parser, new[]{ "UserId", "Action", "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput.Parser, new[]{ "UserId", "Action", "Resources" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedOutput), global::SKF.Enlight.API.Authorize.IsAuthorizedOutput.Parser, new[]{ "Ok" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem), global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem.Parser, new[]{ "ResourceId", "Ok" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput.Parser, new[]{ "Responses" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput), global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput.Parser, new[]{ "Api", "Method", "Endpoint", "UserId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput), global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput.Parser, new[]{ "Ok" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Authorize.AddResourceInput), global::SKF.Enlight.API.Authorize.AddResourceInput.Parser, new[]{ "Resource" }, null, null, null),
@@ -327,6 +337,183 @@ namespace SKF.Enlight.API.Authorize {
 
   }
 
+  public sealed partial class IsAuthorizedBulkInput : pb::IMessage<IsAuthorizedBulkInput> {
+    private static readonly pb::MessageParser<IsAuthorizedBulkInput> _parser = new pb::MessageParser<IsAuthorizedBulkInput>(() => new IsAuthorizedBulkInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IsAuthorizedBulkInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkInput(IsAuthorizedBulkInput other) : this() {
+      userId_ = other.userId_;
+      action_ = other.action_;
+      resources_ = other.resources_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkInput Clone() {
+      return new IsAuthorizedBulkInput(this);
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "action" field.</summary>
+    public const int ActionFieldNumber = 2;
+    private string action_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Action {
+      get { return action_; }
+      set {
+        action_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resources" field.</summary>
+    public const int ResourcesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Common.Origin> _repeated_resources_codec
+        = pb::FieldCodec.ForMessage(26, global::SKF.Enlight.API.Common.Origin.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Common.Origin> resources_ = new pbc::RepeatedField<global::SKF.Enlight.API.Common.Origin>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.Common.Origin> Resources {
+      get { return resources_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IsAuthorizedBulkInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IsAuthorizedBulkInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      if (Action != other.Action) return false;
+      if(!resources_.Equals(other.resources_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (Action.Length != 0) hash ^= Action.GetHashCode();
+      hash ^= resources_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (Action.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Action);
+      }
+      resources_.WriteTo(output, _repeated_resources_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (Action.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Action);
+      }
+      size += resources_.CalculateSize(_repeated_resources_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IsAuthorizedBulkInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      if (other.Action.Length != 0) {
+        Action = other.Action;
+      }
+      resources_.Add(other.resources_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Action = input.ReadString();
+            break;
+          }
+          case 26: {
+            resources_.AddEntriesFrom(input, _repeated_resources_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class IsAuthorizedOutput : pb::IMessage<IsAuthorizedOutput> {
     private static readonly pb::MessageParser<IsAuthorizedOutput> _parser = new pb::MessageParser<IsAuthorizedOutput>(() => new IsAuthorizedOutput());
     private pb::UnknownFieldSet _unknownFields;
@@ -335,7 +522,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -456,6 +643,284 @@ namespace SKF.Enlight.API.Authorize {
 
   }
 
+  public sealed partial class IsAuthorizedOutItem : pb::IMessage<IsAuthorizedOutItem> {
+    private static readonly pb::MessageParser<IsAuthorizedOutItem> _parser = new pb::MessageParser<IsAuthorizedOutItem>(() => new IsAuthorizedOutItem());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IsAuthorizedOutItem> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedOutItem() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedOutItem(IsAuthorizedOutItem other) : this() {
+      resourceId_ = other.resourceId_;
+      ok_ = other.ok_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedOutItem Clone() {
+      return new IsAuthorizedOutItem(this);
+    }
+
+    /// <summary>Field number for the "resource_id" field.</summary>
+    public const int ResourceIdFieldNumber = 1;
+    private string resourceId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResourceId {
+      get { return resourceId_; }
+      set {
+        resourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ok" field.</summary>
+    public const int OkFieldNumber = 2;
+    private bool ok_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ok {
+      get { return ok_; }
+      set {
+        ok_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IsAuthorizedOutItem);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IsAuthorizedOutItem other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ResourceId != other.ResourceId) return false;
+      if (Ok != other.Ok) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ResourceId.Length != 0) hash ^= ResourceId.GetHashCode();
+      if (Ok != false) hash ^= Ok.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ResourceId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceId);
+      }
+      if (Ok != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Ok);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ResourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceId);
+      }
+      if (Ok != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IsAuthorizedOutItem other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ResourceId.Length != 0) {
+        ResourceId = other.ResourceId;
+      }
+      if (other.Ok != false) {
+        Ok = other.Ok;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ResourceId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Ok = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class IsAuthorizedBulkOutput : pb::IMessage<IsAuthorizedBulkOutput> {
+    private static readonly pb::MessageParser<IsAuthorizedBulkOutput> _parser = new pb::MessageParser<IsAuthorizedBulkOutput>(() => new IsAuthorizedBulkOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IsAuthorizedBulkOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkOutput(IsAuthorizedBulkOutput other) : this() {
+      responses_ = other.responses_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsAuthorizedBulkOutput Clone() {
+      return new IsAuthorizedBulkOutput(this);
+    }
+
+    /// <summary>Field number for the "responses" field.</summary>
+    public const int ResponsesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem> _repeated_responses_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem> responses_ = new pbc::RepeatedField<global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.Authorize.IsAuthorizedOutItem> Responses {
+      get { return responses_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IsAuthorizedBulkOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IsAuthorizedBulkOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!responses_.Equals(other.responses_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= responses_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      responses_.WriteTo(output, _repeated_responses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += responses_.CalculateSize(_repeated_responses_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IsAuthorizedBulkOutput other) {
+      if (other == null) {
+        return;
+      }
+      responses_.Add(other.responses_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            responses_.AddEntriesFrom(input, _repeated_responses_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class IsAuthorizedByEndpointInput : pb::IMessage<IsAuthorizedByEndpointInput> {
     private static readonly pb::MessageParser<IsAuthorizedByEndpointInput> _parser = new pb::MessageParser<IsAuthorizedByEndpointInput>(() => new IsAuthorizedByEndpointInput());
     private pb::UnknownFieldSet _unknownFields;
@@ -464,7 +929,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -677,7 +1142,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -806,7 +1271,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -941,7 +1406,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1076,7 +1541,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1197,7 +1662,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1318,7 +1783,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1447,7 +1912,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1604,7 +2069,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1733,7 +2198,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1854,7 +2319,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1975,7 +2440,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2096,7 +2561,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2265,7 +2730,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[15]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2434,7 +2899,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[16]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2555,7 +3020,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[17]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2676,7 +3141,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[18]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2867,7 +3332,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[19]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3058,7 +3523,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[20]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3235,7 +3700,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[21]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3364,7 +3829,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[22]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3485,7 +3950,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[23]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3648,7 +4113,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[24]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3777,7 +4242,7 @@ namespace SKF.Enlight.API.Authorize {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[25]; }
+      get { return global::SKF.Enlight.API.Authorize.GrpcapiReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

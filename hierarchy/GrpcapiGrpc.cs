@@ -19,6 +19,7 @@ namespace SKF.Enlight.API.Hierarchy {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetSubTreeInput> __Marshaller_grpcapi_GetSubTreeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput> __Marshaller_grpcapi_GetAncestorsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> __Marshaller_grpcapi_GetAncestorsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.AssetTypes> __Marshaller_grpcapi_AssetTypes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.AssetTypes.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Origin> __Marshaller_common_Origin = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Origin.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.SaveNodeInput> __Marshaller_grpcapi_SaveNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput> __Marshaller_grpcapi_DeleteNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser.ParseFrom);
@@ -81,6 +82,13 @@ namespace SKF.Enlight.API.Hierarchy {
         "GetCompany",
         __Marshaller_common_PrimitiveString,
         __Marshaller_grpcapi_Node);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Hierarchy.AssetTypes> __Method_GetAssetTaxonomy = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Hierarchy.AssetTypes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAssetTaxonomy",
+        __Marshaller_common_Void,
+        __Marshaller_grpcapi_AssetTypes);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Origin, global::SKF.Enlight.API.Common.PrimitiveString> __Method_GetNodeIdByOrigin = new grpc::Method<global::SKF.Enlight.API.Common.Origin, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
@@ -162,6 +170,11 @@ namespace SKF.Enlight.API.Hierarchy {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Node> GetCompany(global::SKF.Enlight.API.Common.PrimitiveString request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.AssetTypes> GetAssetTaxonomy(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -344,6 +357,22 @@ namespace SKF.Enlight.API.Hierarchy {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCompany, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.Hierarchy.AssetTypes GetAssetTaxonomy(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAssetTaxonomy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.AssetTypes GetAssetTaxonomy(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAssetTaxonomy, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.AssetTypes> GetAssetTaxonomyAsync(global::SKF.Enlight.API.Common.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAssetTaxonomyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.AssetTypes> GetAssetTaxonomyAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAssetTaxonomy, null, options, request);
+      }
       public virtual global::SKF.Enlight.API.Common.PrimitiveString GetNodeIdByOrigin(global::SKF.Enlight.API.Common.Origin request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodeIdByOrigin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -444,6 +473,7 @@ namespace SKF.Enlight.API.Hierarchy {
           .AddMethod(__Method_GetParentNode, serviceImpl.GetParentNode)
           .AddMethod(__Method_GetAncestors, serviceImpl.GetAncestors)
           .AddMethod(__Method_GetCompany, serviceImpl.GetCompany)
+          .AddMethod(__Method_GetAssetTaxonomy, serviceImpl.GetAssetTaxonomy)
           .AddMethod(__Method_GetNodeIdByOrigin, serviceImpl.GetNodeIdByOrigin)
           .AddMethod(__Method_SaveNode, serviceImpl.SaveNode)
           .AddMethod(__Method_DeleteNode, serviceImpl.DeleteNode)
@@ -465,6 +495,7 @@ namespace SKF.Enlight.API.Hierarchy {
       serviceBinder.AddMethod(__Method_GetParentNode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node>(serviceImpl.GetParentNode));
       serviceBinder.AddMethod(__Method_GetAncestors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput, global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput>(serviceImpl.GetAncestors));
       serviceBinder.AddMethod(__Method_GetCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node>(serviceImpl.GetCompany));
+      serviceBinder.AddMethod(__Method_GetAssetTaxonomy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Hierarchy.AssetTypes>(serviceImpl.GetAssetTaxonomy));
       serviceBinder.AddMethod(__Method_GetNodeIdByOrigin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Origin, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.GetNodeIdByOrigin));
       serviceBinder.AddMethod(__Method_SaveNode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Hierarchy.SaveNodeInput, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.SaveNode));
       serviceBinder.AddMethod(__Method_DeleteNode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.DeleteNode));
