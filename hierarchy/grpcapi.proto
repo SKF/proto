@@ -29,11 +29,18 @@ service Hierarchy {
 message AssetTypes {
   message Class {
     message Type {
+      message Sequence {
+        string name = 1;
+        string code = 2;
+      }
       string name = 1;
-      repeated string sequences = 2;
+      repeated string OBSOLETE_sequences = 2;
+      string code = 3;
+      repeated Sequence sequences = 4;
     }
     string name = 1;
     repeated Type types = 2;
+    string code = 3;
   }
   repeated Class classes = 1;
 }
