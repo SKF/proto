@@ -14,6 +14,7 @@ service Authorize {
 
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
+  rpc GetResource (GetResourceInput) returns (GetResourceOutput) {}
 
   rpc AddResources (AddResourcesInput) returns (common.Void) {}
   rpc RemoveResources (RemoveResourcesInput) returns (common.Void) {}
@@ -49,6 +50,14 @@ message IsAuthorizedBulkInput {
 
 message IsAuthorizedOutput {
   bool ok = 1;
+}
+
+message GetResourceOutput {
+  common.Origin resource = 1;
+}
+
+message GetResourceInput {
+  string id = 1;
 }
 
 message IsAuthorizedOutItem {
