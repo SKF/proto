@@ -32,8 +32,8 @@ service Authorize {
   rpc AddResourceRelations (AddResourceRelationsInput) returns (common.Void) {}
   rpc RemoveResourceRelations (RemoveResourceRelationsInput) returns (common.Void) {}
 
-  rpc AddUserPermission (AddUserPermissionInput) returns (common.Void) {}
-  rpc RemoveUserPermission (RemoveUserPermissionInput) returns (common.Void) {}
+  rpc ApplyUserAction (ApplyUserActionInput) returns (common.Void) {}
+  rpc RemoveUserAction (RemoveUserActionInput) returns (common.Void) {}
 }
 
 message IsAuthorizedInput {
@@ -139,13 +139,13 @@ message RemoveResourceRelationsInput {
   repeated RemoveResourceRelationInput relation = 1;
 }
 
-message AddUserPermissionInput {
+message ApplyUserActionInput {
   string user_id = 1;
   string action = 2;
   common.Origin resource = 3;
 }
 
-message RemoveUserPermissionInput {
+message RemoveUserActionInput {
   string user_id = 1;
   string action = 2;
   common.Origin resource = 3;
