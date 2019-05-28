@@ -207,6 +207,7 @@ namespace SKF.Enlight.API.IoT {
     }
 
     /// <summary>Base class for server-side implementations of IoT</summary>
+    [grpc::BindServiceMethod(typeof(IoT), "BindService")]
     public abstract partial class IoTBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)

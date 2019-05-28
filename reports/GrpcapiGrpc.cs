@@ -74,6 +74,7 @@ namespace SKF.Enlight.API.Reports {
     }
 
     /// <summary>Base class for server-side implementations of Reports</summary>
+    [grpc::BindServiceMethod(typeof(Reports), "BindService")]
     public abstract partial class ReportsBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Reports.DeepPingOutput> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)

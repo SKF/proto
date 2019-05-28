@@ -63,6 +63,7 @@ namespace SKF.Enlight.API.Config {
     }
 
     /// <summary>Base class for server-side implementations of ResourceConfig</summary>
+    [grpc::BindServiceMethod(typeof(ResourceConfig), "BindService")]
     public abstract partial class ResourceConfigBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Config.SpecificationResponse> GetSpecification(global::SKF.Enlight.API.Config.SpecificationRequest request, grpc::ServerCallContext context)

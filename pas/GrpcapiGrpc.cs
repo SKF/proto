@@ -91,6 +91,7 @@ namespace SKF.Enlight.API.PAS {
     }
 
     /// <summary>Base class for server-side implementations of PointAlarmStatus</summary>
+    [grpc::BindServiceMethod(typeof(PointAlarmStatus), "BindService")]
     public abstract partial class PointAlarmStatusBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.PAS.DeepPingOutput> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)

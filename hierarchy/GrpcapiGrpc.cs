@@ -132,6 +132,7 @@ namespace SKF.Enlight.API.Hierarchy {
     }
 
     /// <summary>Base class for server-side implementations of Hierarchy</summary>
+    [grpc::BindServiceMethod(typeof(Hierarchy), "BindService")]
     public abstract partial class HierarchyBase
     {
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.PrimitiveString> DeepPing(global::SKF.Enlight.API.Common.Void request, grpc::ServerCallContext context)
