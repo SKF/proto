@@ -57,7 +57,8 @@ message GetResourceOutput {
 }
 
 message GetResourceInput {
-  common.Origin resource = 1;
+  string id = 1;
+  string origin_type = 2;
 }
 
 message IsAuthorizedOutItem {
