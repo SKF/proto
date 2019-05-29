@@ -58,6 +58,7 @@ message GetResourceOutput {
 
 message GetResourceInput {
   string id = 1;
+  string origin_type = 2;
 }
 
 message IsAuthorizedOutItem {
