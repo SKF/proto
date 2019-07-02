@@ -49,61 +49,68 @@ namespace SKF.Enlight.API.Hierarchy {
             "aWNhbnQYASABKAkSDgoGdm9sdW1lGAIgASgFEiQKBHVuaXQYAyABKA4yFi5n",
             "cnBjYXBpLkx1YnJpY2FudFVuaXQSEAoIaW50ZXJ2YWwYBCABKAUSNwoSY29s",
             "bGVjdGlvbkludGVydmFsGAUgASgLMhsuZ3JwY2FwaS5Db2xsZWN0aW9uSW50",
-            "ZXJ2YWwiTwoJQXNzZXROb2RlEhMKC2NyaXRpY2FsaXR5GAEgASgJEgwKBHR5",
-            "cGUYAiABKAkSDQoFY2xhc3MYAyABKAkSEAoIc2VxdWVuY2UYBCABKAki6QMK",
-            "BE5vZGUSCgoCaWQYASABKAkSDQoFbGFiZWwYAiABKAkSEwoLZGVzY3JpcHRp",
-            "b24YAyABKAkSDAoEdHlwZRgEIAEoCRITCgtjcml0aWNhbGl0eRgFIAEoCRIP",
-            "CgdzdWJUeXBlGAYgASgJEjAKD2luZHVzdHJ5U2VnbWVudBgQIAEoCzIXLmNv",
-            "bW1vbi5QcmltaXRpdmVTdHJpbmcSHgoGb3JpZ2luGAcgASgLMg4uY29tbW9u",
-            "Lk9yaWdpbhIlCglhc3NldE5vZGUYCCABKAsyEi5ncnBjYXBpLkFzc2V0Tm9k",
-            "ZRIzChBtZWFzdXJlbWVudFBvaW50GAkgASgLMhkuZ3JwY2FwaS5NZWFzdXJl",
-            "bWVudFBvaW50EjEKD2luc3BlY3Rpb25Qb2ludBgKIAEoCzIYLmdycGNhcGku",
-            "SW5zcGVjdGlvblBvaW50EjMKEGx1YnJpY2F0aW9uUG9pbnQYDiABKAsyGS5n",
-            "cnBjYXBpLkx1YnJpY2F0aW9uUG9pbnQSKAoIcG9zaXRpb24YDCABKAsyFi5j",
-            "b21tb24uUHJpbWl0aXZlSW50NjQSJQoEdGFncxgNIAEoCzIXLmNvbW1vbi5Q",
-            "cmltaXRpdmVTdHJpbmcSEAoIcGFyZW50SWQYDyABKAlKBAgLEAwiJQoFTm9k",
-            "ZXMSHAoFbm9kZXMYASADKAsyDS5ncnBjYXBpLk5vZGUicwoOR2V0RXZlbnRz",
-            "SW5wdXQSDQoFc2luY2UYASABKAMSJQoFbGltaXQYAiABKAsyFi5jb21tb24u",
-            "UHJpbWl0aXZlSW50MzISKwoKY3VzdG9tZXJJZBgDIAEoCzIXLmNvbW1vbi5Q",
-            "cmltaXRpdmVTdHJpbmciIQoPR2V0RXZlbnRzT3V0cHV0Eg4KBmV2ZW50cxgB",
-            "IAEoDCJ0Cg1TYXZlTm9kZUlucHV0Eg4KBnVzZXJJZBgBIAEoCRIbCgRub2Rl",
-            "GAMgASgLMg0uZ3JwY2FwaS5Ob2RlEhAKCHBhcmVudElkGAIgASgJEiQKDHBh",
-            "cmVudE9yaWdpbhgEIAEoCzIOLmNvbW1vbi5PcmlnaW4iSwoNQ29weU5vZGVJ",
-            "bnB1dBIOCgZ1c2VySWQYASABKAkSEQoJc3JjTm9kZUlkGAIgASgJEhcKD2Rz",
-            "dFBhcmVudE5vZGVJZBgDIAEoCSJRCg9EZWxldGVOb2RlSW5wdXQSDgoGdXNl",
-            "cklkGAEgASgJEg4KBm5vZGVJZBgCIAEoCRIeCgZvcmlnaW4YAyABKAsyDi5j",
-            "b21tb24uT3JpZ2luIkMKD0dldFN1YlRyZWVJbnB1dBIOCgZyb290SWQYASAB",
-            "KAkSDQoFZGVwdGgYAiABKAUSEQoJbm9kZVR5cGVzGAMgAygJIiQKEUdldEFu",
-            "Y2VzdG9yc0lucHV0Eg8KB25vZGVfaWQYASABKAkiOgoSR2V0QW5jZXN0b3Jz",
-            "T3V0cHV0EiQKBW5vZGVzGAEgAygLMhUuZ3JwY2FwaS5BbmNlc3Rvck5vZGUi",
-            "jwEKDEFuY2VzdG9yTm9kZRIKCgJpZBgBIAEoCRIeCgZvcmlnaW4YAiABKAsy",
-            "Di5jb21tb24uT3JpZ2luEg0KBWxhYmVsGAMgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAQgASgJEgwKBHR5cGUYBSABKAkSDwoHc3ViVHlwZRgGIAEoCRIQCghwYXJl",
-            "bnRJZBgHIAEoCSo9CglWYWx1ZVR5cGUSCwoHTlVNRVJJQxAAEhEKDVNJTkdM",
-            "RV9DSE9JQ0UQARIQCgxNVUxUSV9DSE9JQ0UQAipsChFWaXN1YWxpemF0aW9u",
-            "VHlwZRIWChJWSVNVQUxJWkFUSU9OX05PTkUQABIgChxWSVNVQUxJWkFUSU9O",
-            "X0NJUkNVTEFSX0dBVUdFEAESHQoZVklTVUFMSVpBVElPTl9MRVZFTF9HQVVH",
-            "RRACKi0KDUx1YnJpY2FudFVuaXQSCAoER1JBTRAAEgkKBU9VTkNFEAESBwoD",
-            "Q00zEAIy0QYKCUhpZXJhcmNoeRIzCghEZWVwUGluZxIMLmNvbW1vbi5Wb2lk",
-            "GhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjMKB0dldE5vZGUSFy5jb21t",
-            "b24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASNQoIR2V0Tm9k",
-            "ZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4uZ3JwY2FwaS5Ob2RlcyIA",
-            "EjoKDUdldENoaWxkTm9kZXMSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg4u",
-            "Z3JwY2FwaS5Ob2RlcyIAEjgKCkdldFN1YlRyZWUSGC5ncnBjYXBpLkdldFN1",
-            "YlRyZWVJbnB1dBoOLmdycGNhcGkuTm9kZXMiABI5Cg1HZXRQYXJlbnROb2Rl",
-            "EhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxoNLmdycGNhcGkuTm9kZSIAEkkK",
-            "DEdldEFuY2VzdG9ycxIaLmdycGNhcGkuR2V0QW5jZXN0b3JzSW5wdXQaGy5n",
-            "cnBjYXBpLkdldEFuY2VzdG9yc091dHB1dCIAEjYKCkdldENvbXBhbnkSFy5j",
-            "b21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASNwoQR2V0",
-            "QXNzZXRUYXhvbm9teRIMLmNvbW1vbi5Wb2lkGhMuZ3JwY2FwaS5Bc3NldFR5",
-            "cGVzIgASPgoRR2V0Tm9kZUlkQnlPcmlnaW4SDi5jb21tb24uT3JpZ2luGhcu",
-            "Y29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEj0KCFNhdmVOb2RlEhYuZ3JwY2Fw",
-            "aS5TYXZlTm9kZUlucHV0GhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEjYK",
-            "CkRlbGV0ZU5vZGUSGC5ncnBjYXBpLkRlbGV0ZU5vZGVJbnB1dBoMLmNvbW1v",
-            "bi5Wb2lkIgASPQoIQ29weU5vZGUSFi5ncnBjYXBpLkNvcHlOb2RlSW5wdXQa",
-            "Fy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASQAoJR2V0RXZlbnRzEhcuZ3Jw",
-            "Y2FwaS5HZXRFdmVudHNJbnB1dBoYLmdycGNhcGkuR2V0RXZlbnRzT3V0cHV0",
-            "IgBCHKoCGVNLRi5FbmxpZ2h0LkFQSS5IaWVyYXJjaHliBnByb3RvMw=="));
+            "ZXJ2YWwidgoHQmVhcmluZxIVCg1iZWFyaW5nTnVtYmVyGAEgASgFEhMKC2Rl",
+            "c2lnbmF0aW9uGAIgASgJEhQKDG1hbnVmYWN0dXJlchgDIAEoCRITCgtzaWRl",
+            "T2ZTaGFmdBgEIAEoCRIUCgxzZXJpYWxOdW1iZXIYBSABKAkiZAoFU2hhZnQS",
+            "EwoLc2hhZnROdW1iZXIYASABKAUSDQoFc3BlZWQYAiABKAkSEwoLZGVzY3Jp",
+            "cHRpb24YAyABKAkSIgoIYmVhcmluZ3MYBCADKAsyEC5ncnBjYXBpLkJlYXJp",
+            "bmciqgEKCUFzc2V0Tm9kZRITCgtjcml0aWNhbGl0eRgBIAEoCRIMCgR0eXBl",
+            "GAIgASgJEg0KBWNsYXNzGAMgASgJEhAKCHNlcXVlbmNlGAQgASgJEhQKDG1h",
+            "bnVmYWN0dXJlchgFIAEoCRINCgVtb2RlbBgGIAEoCRIUCgxzZXJpYWxOdW1i",
+            "ZXIYByABKAkSHgoGc2hhZnRzGAggAygLMg4uZ3JwY2FwaS5TaGFmdCLpAwoE",
+            "Tm9kZRIKCgJpZBgBIAEoCRINCgVsYWJlbBgCIAEoCRITCgtkZXNjcmlwdGlv",
+            "bhgDIAEoCRIMCgR0eXBlGAQgASgJEhMKC2NyaXRpY2FsaXR5GAUgASgJEg8K",
+            "B3N1YlR5cGUYBiABKAkSMAoPaW5kdXN0cnlTZWdtZW50GBAgASgLMhcuY29t",
+            "bW9uLlByaW1pdGl2ZVN0cmluZxIeCgZvcmlnaW4YByABKAsyDi5jb21tb24u",
+            "T3JpZ2luEiUKCWFzc2V0Tm9kZRgIIAEoCzISLmdycGNhcGkuQXNzZXROb2Rl",
+            "EjMKEG1lYXN1cmVtZW50UG9pbnQYCSABKAsyGS5ncnBjYXBpLk1lYXN1cmVt",
+            "ZW50UG9pbnQSMQoPaW5zcGVjdGlvblBvaW50GAogASgLMhguZ3JwY2FwaS5J",
+            "bnNwZWN0aW9uUG9pbnQSMwoQbHVicmljYXRpb25Qb2ludBgOIAEoCzIZLmdy",
+            "cGNhcGkuTHVicmljYXRpb25Qb2ludBIoCghwb3NpdGlvbhgMIAEoCzIWLmNv",
+            "bW1vbi5QcmltaXRpdmVJbnQ2NBIlCgR0YWdzGA0gASgLMhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZxIQCghwYXJlbnRJZBgPIAEoCUoECAsQDCIlCgVOb2Rl",
+            "cxIcCgVub2RlcxgBIAMoCzINLmdycGNhcGkuTm9kZSJzCg5HZXRFdmVudHNJ",
+            "bnB1dBINCgVzaW5jZRgBIAEoAxIlCgVsaW1pdBgCIAEoCzIWLmNvbW1vbi5Q",
+            "cmltaXRpdmVJbnQzMhIrCgpjdXN0b21lcklkGAMgASgLMhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZyIhCg9HZXRFdmVudHNPdXRwdXQSDgoGZXZlbnRzGAEg",
+            "ASgMInQKDVNhdmVOb2RlSW5wdXQSDgoGdXNlcklkGAEgASgJEhsKBG5vZGUY",
+            "AyABKAsyDS5ncnBjYXBpLk5vZGUSEAoIcGFyZW50SWQYAiABKAkSJAoMcGFy",
+            "ZW50T3JpZ2luGAQgASgLMg4uY29tbW9uLk9yaWdpbiJLCg1Db3B5Tm9kZUlu",
+            "cHV0Eg4KBnVzZXJJZBgBIAEoCRIRCglzcmNOb2RlSWQYAiABKAkSFwoPZHN0",
+            "UGFyZW50Tm9kZUlkGAMgASgJIlEKD0RlbGV0ZU5vZGVJbnB1dBIOCgZ1c2Vy",
+            "SWQYASABKAkSDgoGbm9kZUlkGAIgASgJEh4KBm9yaWdpbhgDIAEoCzIOLmNv",
+            "bW1vbi5PcmlnaW4iQwoPR2V0U3ViVHJlZUlucHV0Eg4KBnJvb3RJZBgBIAEo",
+            "CRINCgVkZXB0aBgCIAEoBRIRCglub2RlVHlwZXMYAyADKAkiJAoRR2V0QW5j",
+            "ZXN0b3JzSW5wdXQSDwoHbm9kZV9pZBgBIAEoCSI6ChJHZXRBbmNlc3RvcnNP",
+            "dXRwdXQSJAoFbm9kZXMYASADKAsyFS5ncnBjYXBpLkFuY2VzdG9yTm9kZSKP",
+            "AQoMQW5jZXN0b3JOb2RlEgoKAmlkGAEgASgJEh4KBm9yaWdpbhgCIAEoCzIO",
+            "LmNvbW1vbi5PcmlnaW4SDQoFbGFiZWwYAyABKAkSEwoLZGVzY3JpcHRpb24Y",
+            "BCABKAkSDAoEdHlwZRgFIAEoCRIPCgdzdWJUeXBlGAYgASgJEhAKCHBhcmVu",
+            "dElkGAcgASgJKj0KCVZhbHVlVHlwZRILCgdOVU1FUklDEAASEQoNU0lOR0xF",
+            "X0NIT0lDRRABEhAKDE1VTFRJX0NIT0lDRRACKmwKEVZpc3VhbGl6YXRpb25U",
+            "eXBlEhYKElZJU1VBTElaQVRJT05fTk9ORRAAEiAKHFZJU1VBTElaQVRJT05f",
+            "Q0lSQ1VMQVJfR0FVR0UQARIdChlWSVNVQUxJWkFUSU9OX0xFVkVMX0dBVUdF",
+            "EAIqLQoNTHVicmljYW50VW5pdBIICgRHUkFNEAASCQoFT1VOQ0UQARIHCgND",
+            "TTMQAjLRBgoJSGllcmFyY2h5EjMKCERlZXBQaW5nEgwuY29tbW9uLlZvaWQa",
+            "Fy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASMwoHR2V0Tm9kZRIXLmNvbW1v",
+            "bi5QcmltaXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUiABI1CghHZXROb2Rl",
+            "cxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDi5ncnBjYXBpLk5vZGVzIgAS",
+            "OgoNR2V0Q2hpbGROb2RlcxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaDi5n",
+            "cnBjYXBpLk5vZGVzIgASOAoKR2V0U3ViVHJlZRIYLmdycGNhcGkuR2V0U3Vi",
+            "VHJlZUlucHV0Gg4uZ3JwY2FwaS5Ob2RlcyIAEjkKDUdldFBhcmVudE5vZGUS",
+            "Fy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGg0uZ3JwY2FwaS5Ob2RlIgASSQoM",
+            "R2V0QW5jZXN0b3JzEhouZ3JwY2FwaS5HZXRBbmNlc3RvcnNJbnB1dBobLmdy",
+            "cGNhcGkuR2V0QW5jZXN0b3JzT3V0cHV0IgASNgoKR2V0Q29tcGFueRIXLmNv",
+            "bW1vbi5QcmltaXRpdmVTdHJpbmcaDS5ncnBjYXBpLk5vZGUiABI3ChBHZXRB",
+            "c3NldFRheG9ub215EgwuY29tbW9uLlZvaWQaEy5ncnBjYXBpLkFzc2V0VHlw",
+            "ZXMiABI+ChFHZXROb2RlSWRCeU9yaWdpbhIOLmNvbW1vbi5PcmlnaW4aFy5j",
+            "b21tb24uUHJpbWl0aXZlU3RyaW5nIgASPQoIU2F2ZU5vZGUSFi5ncnBjYXBp",
+            "LlNhdmVOb2RlSW5wdXQaFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nIgASNgoK",
+            "RGVsZXRlTm9kZRIYLmdycGNhcGkuRGVsZXRlTm9kZUlucHV0GgwuY29tbW9u",
+            "LlZvaWQiABI9CghDb3B5Tm9kZRIWLmdycGNhcGkuQ29weU5vZGVJbnB1dBoX",
+            "LmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJACglHZXRFdmVudHMSFy5ncnBj",
+            "YXBpLkdldEV2ZW50c0lucHV0GhguZ3JwY2FwaS5HZXRFdmVudHNPdXRwdXQi",
+            "AEIcqgIZU0tGLkVubGlnaHQuQVBJLkhpZXJhcmNoeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
@@ -112,7 +119,9 @@ namespace SKF.Enlight.API.Hierarchy {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Type", "Class", "Sequence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Bearing), global::SKF.Enlight.API.Hierarchy.Bearing.Parser, new[]{ "BearingNumber", "Designation", "Manufacturer", "SideOfShaft", "SerialNumber" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Shaft), global::SKF.Enlight.API.Hierarchy.Shaft.Parser, new[]{ "ShaftNumber", "Speed", "Description", "Bearings" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Type", "Class", "Sequence", "Manufacturer", "Model", "SerialNumber", "Shafts" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "IndustrySegment", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
@@ -1845,6 +1854,452 @@ namespace SKF.Enlight.API.Hierarchy {
 
   }
 
+  public sealed partial class Bearing : pb::IMessage<Bearing> {
+    private static readonly pb::MessageParser<Bearing> _parser = new pb::MessageParser<Bearing>(() => new Bearing());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Bearing> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Bearing() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Bearing(Bearing other) : this() {
+      bearingNumber_ = other.bearingNumber_;
+      designation_ = other.designation_;
+      manufacturer_ = other.manufacturer_;
+      sideOfShaft_ = other.sideOfShaft_;
+      serialNumber_ = other.serialNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Bearing Clone() {
+      return new Bearing(this);
+    }
+
+    /// <summary>Field number for the "bearingNumber" field.</summary>
+    public const int BearingNumberFieldNumber = 1;
+    private int bearingNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BearingNumber {
+      get { return bearingNumber_; }
+      set {
+        bearingNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "designation" field.</summary>
+    public const int DesignationFieldNumber = 2;
+    private string designation_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Designation {
+      get { return designation_; }
+      set {
+        designation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "manufacturer" field.</summary>
+    public const int ManufacturerFieldNumber = 3;
+    private string manufacturer_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Manufacturer {
+      get { return manufacturer_; }
+      set {
+        manufacturer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sideOfShaft" field.</summary>
+    public const int SideOfShaftFieldNumber = 4;
+    private string sideOfShaft_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SideOfShaft {
+      get { return sideOfShaft_; }
+      set {
+        sideOfShaft_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "serialNumber" field.</summary>
+    public const int SerialNumberFieldNumber = 5;
+    private string serialNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SerialNumber {
+      get { return serialNumber_; }
+      set {
+        serialNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Bearing);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Bearing other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BearingNumber != other.BearingNumber) return false;
+      if (Designation != other.Designation) return false;
+      if (Manufacturer != other.Manufacturer) return false;
+      if (SideOfShaft != other.SideOfShaft) return false;
+      if (SerialNumber != other.SerialNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (BearingNumber != 0) hash ^= BearingNumber.GetHashCode();
+      if (Designation.Length != 0) hash ^= Designation.GetHashCode();
+      if (Manufacturer.Length != 0) hash ^= Manufacturer.GetHashCode();
+      if (SideOfShaft.Length != 0) hash ^= SideOfShaft.GetHashCode();
+      if (SerialNumber.Length != 0) hash ^= SerialNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (BearingNumber != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(BearingNumber);
+      }
+      if (Designation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Designation);
+      }
+      if (Manufacturer.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Manufacturer);
+      }
+      if (SideOfShaft.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SideOfShaft);
+      }
+      if (SerialNumber.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SerialNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (BearingNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BearingNumber);
+      }
+      if (Designation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Designation);
+      }
+      if (Manufacturer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Manufacturer);
+      }
+      if (SideOfShaft.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SideOfShaft);
+      }
+      if (SerialNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SerialNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Bearing other) {
+      if (other == null) {
+        return;
+      }
+      if (other.BearingNumber != 0) {
+        BearingNumber = other.BearingNumber;
+      }
+      if (other.Designation.Length != 0) {
+        Designation = other.Designation;
+      }
+      if (other.Manufacturer.Length != 0) {
+        Manufacturer = other.Manufacturer;
+      }
+      if (other.SideOfShaft.Length != 0) {
+        SideOfShaft = other.SideOfShaft;
+      }
+      if (other.SerialNumber.Length != 0) {
+        SerialNumber = other.SerialNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            BearingNumber = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Designation = input.ReadString();
+            break;
+          }
+          case 26: {
+            Manufacturer = input.ReadString();
+            break;
+          }
+          case 34: {
+            SideOfShaft = input.ReadString();
+            break;
+          }
+          case 42: {
+            SerialNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Shaft : pb::IMessage<Shaft> {
+    private static readonly pb::MessageParser<Shaft> _parser = new pb::MessageParser<Shaft>(() => new Shaft());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Shaft> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Shaft() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Shaft(Shaft other) : this() {
+      shaftNumber_ = other.shaftNumber_;
+      speed_ = other.speed_;
+      description_ = other.description_;
+      bearings_ = other.bearings_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Shaft Clone() {
+      return new Shaft(this);
+    }
+
+    /// <summary>Field number for the "shaftNumber" field.</summary>
+    public const int ShaftNumberFieldNumber = 1;
+    private int shaftNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ShaftNumber {
+      get { return shaftNumber_; }
+      set {
+        shaftNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speed" field.</summary>
+    public const int SpeedFieldNumber = 2;
+    private string speed_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Speed {
+      get { return speed_; }
+      set {
+        speed_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bearings" field.</summary>
+    public const int BearingsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Hierarchy.Bearing> _repeated_bearings_codec
+        = pb::FieldCodec.ForMessage(34, global::SKF.Enlight.API.Hierarchy.Bearing.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Bearing> bearings_ = new pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Bearing>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Bearing> Bearings {
+      get { return bearings_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Shaft);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Shaft other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ShaftNumber != other.ShaftNumber) return false;
+      if (Speed != other.Speed) return false;
+      if (Description != other.Description) return false;
+      if(!bearings_.Equals(other.bearings_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ShaftNumber != 0) hash ^= ShaftNumber.GetHashCode();
+      if (Speed.Length != 0) hash ^= Speed.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= bearings_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ShaftNumber != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ShaftNumber);
+      }
+      if (Speed.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Speed);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      bearings_.WriteTo(output, _repeated_bearings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ShaftNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ShaftNumber);
+      }
+      if (Speed.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Speed);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += bearings_.CalculateSize(_repeated_bearings_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Shaft other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ShaftNumber != 0) {
+        ShaftNumber = other.ShaftNumber;
+      }
+      if (other.Speed.Length != 0) {
+        Speed = other.Speed;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      bearings_.Add(other.bearings_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ShaftNumber = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Speed = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            bearings_.AddEntriesFrom(input, _repeated_bearings_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class AssetNode : pb::IMessage<AssetNode> {
     private static readonly pb::MessageParser<AssetNode> _parser = new pb::MessageParser<AssetNode>(() => new AssetNode());
     private pb::UnknownFieldSet _unknownFields;
@@ -1853,7 +2308,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1874,6 +2329,10 @@ namespace SKF.Enlight.API.Hierarchy {
       type_ = other.type_;
       class_ = other.class_;
       sequence_ = other.sequence_;
+      manufacturer_ = other.manufacturer_;
+      model_ = other.model_;
+      serialNumber_ = other.serialNumber_;
+      shafts_ = other.shafts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1926,6 +2385,49 @@ namespace SKF.Enlight.API.Hierarchy {
       }
     }
 
+    /// <summary>Field number for the "manufacturer" field.</summary>
+    public const int ManufacturerFieldNumber = 5;
+    private string manufacturer_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Manufacturer {
+      get { return manufacturer_; }
+      set {
+        manufacturer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 6;
+    private string model_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "serialNumber" field.</summary>
+    public const int SerialNumberFieldNumber = 7;
+    private string serialNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SerialNumber {
+      get { return serialNumber_; }
+      set {
+        serialNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shafts" field.</summary>
+    public const int ShaftsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Hierarchy.Shaft> _repeated_shafts_codec
+        = pb::FieldCodec.ForMessage(66, global::SKF.Enlight.API.Hierarchy.Shaft.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Shaft> shafts_ = new pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Shaft>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Shaft> Shafts {
+      get { return shafts_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AssetNode);
@@ -1943,6 +2445,10 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Type != other.Type) return false;
       if (Class != other.Class) return false;
       if (Sequence != other.Sequence) return false;
+      if (Manufacturer != other.Manufacturer) return false;
+      if (Model != other.Model) return false;
+      if (SerialNumber != other.SerialNumber) return false;
+      if(!shafts_.Equals(other.shafts_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1953,6 +2459,10 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Class.Length != 0) hash ^= Class.GetHashCode();
       if (Sequence.Length != 0) hash ^= Sequence.GetHashCode();
+      if (Manufacturer.Length != 0) hash ^= Manufacturer.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (SerialNumber.Length != 0) hash ^= SerialNumber.GetHashCode();
+      hash ^= shafts_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1982,6 +2492,19 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(34);
         output.WriteString(Sequence);
       }
+      if (Manufacturer.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Manufacturer);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Model);
+      }
+      if (SerialNumber.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SerialNumber);
+      }
+      shafts_.WriteTo(output, _repeated_shafts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2002,6 +2525,16 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Sequence.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sequence);
       }
+      if (Manufacturer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Manufacturer);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (SerialNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SerialNumber);
+      }
+      size += shafts_.CalculateSize(_repeated_shafts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2025,6 +2558,16 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.Sequence.Length != 0) {
         Sequence = other.Sequence;
       }
+      if (other.Manufacturer.Length != 0) {
+        Manufacturer = other.Manufacturer;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.SerialNumber.Length != 0) {
+        SerialNumber = other.SerialNumber;
+      }
+      shafts_.Add(other.shafts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2052,6 +2595,22 @@ namespace SKF.Enlight.API.Hierarchy {
             Sequence = input.ReadString();
             break;
           }
+          case 42: {
+            Manufacturer = input.ReadString();
+            break;
+          }
+          case 50: {
+            Model = input.ReadString();
+            break;
+          }
+          case 58: {
+            SerialNumber = input.ReadString();
+            break;
+          }
+          case 66: {
+            shafts_.AddEntriesFrom(input, _repeated_shafts_codec);
+            break;
+          }
         }
       }
     }
@@ -2066,7 +2625,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2635,7 +3194,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2756,7 +3315,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2953,7 +3512,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3082,7 +3641,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3307,7 +3866,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3492,7 +4051,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3683,7 +4242,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3860,7 +4419,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3989,7 +4548,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[15]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4110,7 +4669,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[16]; }
+      get { return global::SKF.Enlight.API.Hierarchy.GrpcapiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
