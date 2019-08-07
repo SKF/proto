@@ -90,6 +90,7 @@ jobs:
       language: csharp
       sudo: required
       dist: bionic
+      dotnet: 2.2
       mono: none
       before_install:
         - tree build
@@ -108,6 +109,7 @@ jobs:
       language: csharp
       sudo: required
       dist: bionic
+      dotnet: 2.2
       mono: none
       script: bash scripts/build_csharp.sh
       after_success: # TODO import generated code
@@ -124,6 +126,7 @@ jobs:
       language: csharp
       sudo: required
       dist: bionic
+      dotnet: 2.2
       mono: none
       deploy:
         provider: script
@@ -139,6 +142,7 @@ jobs:
       language: csharp
       sudo: required
       dist: bionic
+      dotnet: 2.2
       mono: none
       script: true # TODO
       after_failure:
