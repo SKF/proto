@@ -88,8 +88,8 @@ jobs:
     - stage: install
       name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
       language: csharp
+      dist: xenial
       mono: none
-      dotnet: 2.2.6
       before_install:
         - tree build
         - rm -rf build
@@ -105,8 +105,8 @@ jobs:
     - stage: build
       name: "C#: Generate sources and build .NET nupkg"
       language: csharp
+      dist: xenial
       mono: none
-      dotnet: 2.2.6
       script: bash scripts/build_csharp.sh
       after_success: # TODO import generated code
         - dotnet build --configuration Release --no-restore --verbosity n
@@ -120,8 +120,8 @@ jobs:
     - stage: deploy
       name: "C#: Deploy generated sources back to repo"
       language: csharp
+      dist: xenial
       mono: none
-      dotnet: 2.2.6
       deploy:
         provider: script
         script: bash scripts/upload_to_github.sh csharp csharp build/csharp
@@ -134,8 +134,8 @@ jobs:
     - stage: deploy
       name: "C#: Deploy nupkg to NuGet"
       language: csharp
+      dist: xenial
       mono: none
-      dotnet: 2.2.6
       script: true # TODO
       after_failure:
         - tree build
