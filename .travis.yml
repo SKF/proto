@@ -88,7 +88,6 @@ jobs:
     - stage: install
       name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
       language: csharp
-      sudo: required
       dist: bionic
       dotnet: 2.2
       mono: none
@@ -107,7 +106,6 @@ jobs:
     - stage: build
       name: "C#: Generate sources and build .NET nupkg"
       language: csharp
-      sudo: required
       dist: bionic
       dotnet: 2.2
       mono: none
@@ -124,7 +122,6 @@ jobs:
     - stage: deploy
       name: "C#: Deploy generated sources back to repo"
       language: csharp
-      sudo: required
       dist: bionic
       dotnet: 2.2
       mono: none
@@ -140,7 +137,6 @@ jobs:
     - stage: deploy
       name: "C#: Deploy nupkg to NuGet"
       language: csharp
-      sudo: required
       dist: bionic
       dotnet: 2.2
       mono: none
