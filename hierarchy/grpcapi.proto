@@ -102,19 +102,11 @@ enum LubricantUnit {
   CM3 = 2;
 }
 
-message Bearing {
-  int32 bearingNumber = 1;
-  string designation = 2;
-  string manufacturer = 3;
-  string sideOfShaft = 4;
-  string serialNumber = 5;
-}
-
-message Shaft {
-  int32 shaftNumber = 1;
-  string speed = 2;
-  string description = 3;
-  repeated Bearing bearings = 4;
+message Component {
+  string id = 1;
+  string type = 2;
+  string props = 3;
+  repeated Component subComponents = 4;
 }
 
 message AssetNode {
@@ -125,7 +117,7 @@ message AssetNode {
   string manufacturer = 5;
   string model = 6;
   string serialNumber = 7;
-  repeated Shaft shafts = 8;
+  repeated Component components = 9;
 }
 
 message Node {
