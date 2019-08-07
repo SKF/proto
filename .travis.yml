@@ -106,7 +106,7 @@ jobs:
       name: "C#: Generate sources and build .NET nupkg"
       language: csharp
       mono: none
-      dotnet: 2.3
+      dotnet: 2.0
       script: bash scripts/build_csharp.sh
       after_success: # TODO import generated code
         - dotnet build --configuration Release --no-restore --verbosity n
@@ -121,7 +121,7 @@ jobs:
       name: "C#: Deploy generated sources back to repo"
       language: csharp
       mono: none
-      dotnet: 2.3
+      dotnet: 2.0
       deploy:
         provider: script
         script: bash scripts/upload_to_github.sh csharp csharp build/csharp
@@ -135,7 +135,7 @@ jobs:
       name: "C#: Deploy nupkg to NuGet"
       language: csharp
       mono: none
-      dotnet: 2.3
+      dotnet: 2.0
       script: true # TODO
       after_failure:
         - tree build
