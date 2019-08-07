@@ -89,7 +89,7 @@ jobs:
       name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
       language: csharp
       sudo: required
-      dist: xenial
+      dist: bionic
       mono: none
       before_install:
         - tree build
@@ -107,7 +107,7 @@ jobs:
       name: "C#: Generate sources and build .NET nupkg"
       language: csharp
       sudo: required
-      dist: xenial
+      dist: bionic
       mono: none
       script: bash scripts/build_csharp.sh
       after_success: # TODO import generated code
@@ -123,7 +123,7 @@ jobs:
       name: "C#: Deploy generated sources back to repo"
       language: csharp
       sudo: required
-      dist: xenial
+      dist: bionic
       mono: none
       deploy:
         provider: script
@@ -138,7 +138,7 @@ jobs:
       name: "C#: Deploy nupkg to NuGet"
       language: csharp
       sudo: required
-      dist: xenial
+      dist: bionic
       mono: none
       script: true # TODO
       after_failure:
