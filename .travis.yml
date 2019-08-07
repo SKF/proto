@@ -89,7 +89,7 @@ jobs:
       name: "C#: Clean out and fetch protoc & gRPC protoc plugin"
       language: csharp
       mono: none
-      dotnet: 2.0
+      dotnet: 2.3
       before_install:
         - tree build
         - rm -rf build
