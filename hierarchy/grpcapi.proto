@@ -63,6 +63,8 @@ message MeasurementPoint {
   string shaftSide = 6;
   double fixedSpeedRPM = 7;
   CollectionInterval collectionInterval = 8;
+  string locationId = 9;
+  string dadType = 10;
 }
 
 enum ValueType {
