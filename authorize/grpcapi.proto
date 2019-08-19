@@ -102,12 +102,12 @@ message GetResourcesByTypeInput {
 }
 
 message GetResourcesByOriginAndTypeInput {
-  string origin_id = 1;
+  common.Origin resource = 1;
   string resource_type = 2;
 }
 
 message GetUserIDsWithAccessToResourceInput {
-  string origin_id = 1;
+  common.Origin resource = 1;
 }
 
 message GetResourcesByTypeOutput {
