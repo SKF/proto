@@ -34,6 +34,12 @@ service Authorize {
 
   rpc ApplyUserAction (ApplyUserActionInput) returns (common.Void) {}
   rpc RemoveUserAction (RemoveUserActionInput) returns (common.Void) {}
+
+  rpc AddAction (AddActionInput) returns (common.Void) {}
+  rpc RemoveAction (RemoveActionInput) returns (common.Void) {}
+  rpc GetAction (GetActionInput) returns (GetActionOutput) {}
+  rpc GetAllActions (common.Void) returns (GetAllActionsOutput) {}
+
 }
 
 message IsAuthorizedInput {
@@ -177,4 +183,24 @@ message GetResourcesAndActionsByUserInput {
 
 message GetResourcesAndActionsByUserOutput {
   repeated ActionResource data = 1;
+}
+
+message AddActionInput {
+  Action action = 1;
+}
+
+message RemoveActionInput {
+  string name = 1;
+}
+
+message GetActionInput {
+  string name = 1;
+}
+
+message GetActionOutput {
+  Action action = 1;
+}
+
+message GetAllActionsOutput {
+  repeated Action actions = 1;
 }
