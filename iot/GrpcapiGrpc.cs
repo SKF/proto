@@ -327,7 +327,7 @@ namespace SKF.Enlight.API.IoT {
     {
       /// <summary>Creates a new client for IoT</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public IoTClient(grpc::Channel channel) : base(channel)
+      public IoTClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IoT that uses a custom <c>CallInvoker</c>.</summary>

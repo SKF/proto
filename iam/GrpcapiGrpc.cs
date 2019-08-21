@@ -99,7 +99,7 @@ namespace SKF.Enlight.API.IAM {
     {
       /// <summary>Creates a new client for IAM</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public IAMClient(grpc::Channel channel) : base(channel)
+      public IAMClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IAM that uses a custom <c>CallInvoker</c>.</summary>

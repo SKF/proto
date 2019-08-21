@@ -98,7 +98,7 @@ namespace SKF.Enlight.API.Config {
     {
       /// <summary>Creates a new client for ResourceConfig</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ResourceConfigClient(grpc::Channel channel) : base(channel)
+      public ResourceConfigClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ResourceConfig that uses a custom <c>CallInvoker</c>.</summary>

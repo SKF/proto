@@ -114,7 +114,7 @@ namespace SKF.Enlight.API.Reports {
     {
       /// <summary>Creates a new client for Reports</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ReportsClient(grpc::Channel channel) : base(channel)
+      public ReportsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Reports that uses a custom <c>CallInvoker</c>.</summary>
