@@ -21,9 +21,7 @@ service Authorize {
 
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
 
-  rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {
-    option deprecated = true;
-  }
+  rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
   rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
@@ -193,12 +191,10 @@ message Action {
 }
 
 message GetActionsByUserRoleInput {
-  option deprecated = true;
   string user_role = 1;
 }
 
 message GetActionsByUserRoleOutput {
-  option deprecated = true;
   repeated Action actions = 1;
 }
 
