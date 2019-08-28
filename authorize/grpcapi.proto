@@ -21,7 +21,9 @@ service Authorize {
 
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
 
-  rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
+  rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {
+    option deprecated = true;
+  }
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
   rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
@@ -33,13 +35,42 @@ service Authorize {
   rpc RemoveResourceRelations (RemoveResourceRelationsInput) returns (common.Void) {}
 
   rpc ApplyUserAction (ApplyUserActionInput) returns (common.Void) {}
+  rpc GetUserActions (GetUserActionsInput) returns (GetUserActionsOutput) {}
   rpc RemoveUserAction (RemoveUserActionInput) returns (common.Void) {}
+
+  rpc AddUserRole (AddUserRoleInput) returns (common.Void) {}
+  rpc GetUserRole (GetUserRoleInput) returns (GetUserRoleOutput) {}
+  rpc RemoveUserRole (RemoveUserRoleInput) returns (common.Void) {}
 
   rpc AddAction (AddActionInput) returns (common.Void) {}
   rpc RemoveAction (RemoveActionInput) returns (common.Void) {}
   rpc GetAction (GetActionInput) returns (GetActionOutput) {}
   rpc GetAllActions (common.Void) returns (GetAllActionsOutput) {}
 
+}
+
+message GetUserActionsInput {
+  string user_id = 1;
+}
+
+message GetUserActionsOutput {
+  repeated Action actions = 1;
+}
+
+message AddUserRoleInput {
+  string role_name = 1;
+}
+
+message GetUserRoleInput {
+  string role_name = 1;
+}
+
+message GetUserRoleOutput {
+  repeated Action actions = 1;
+}
+
+message RemoveUserRoleInput {
+  string role_name = 1;
 }
 
 message IsAuthorizedInput {
@@ -165,10 +196,12 @@ message Action {
 }
 
 message GetActionsByUserRoleInput {
+  option deprecated = true;
   string user_role = 1;
 }
 
 message GetActionsByUserRoleOutput {
+  option deprecated = true;
   repeated Action actions = 1;
 }
 
