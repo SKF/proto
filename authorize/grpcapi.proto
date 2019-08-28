@@ -38,8 +38,8 @@ service Authorize {
   rpc GetUserActions (GetUserActionsInput) returns (GetUserActionsOutput) {}
   rpc RemoveUserAction (RemoveUserActionInput) returns (common.Void) {}
 
-  rpc AddUserRole (AddUserRoleInput) returns (common.Void) {}
-  rpc GetUserRole (GetUserRoleInput) returns (GetUserRoleOutput) {}
+  rpc AddUserRole (UserRole) returns (common.Void) {}
+  rpc GetUserRole (GetUserRoleInput) returns (UserRole) {}
   rpc RemoveUserRole (RemoveUserRoleInput) returns (common.Void) {}
 
   rpc AddAction (AddActionInput) returns (common.Void) {}
@@ -47,6 +47,11 @@ service Authorize {
   rpc GetAction (GetActionInput) returns (GetActionOutput) {}
   rpc GetAllActions (common.Void) returns (GetAllActionsOutput) {}
 
+}
+
+message UserRole {
+  string name = 1;
+  repeated string actions = 2;
 }
 
 message GetUserActionsInput {
@@ -57,16 +62,8 @@ message GetUserActionsOutput {
   repeated Action actions = 1;
 }
 
-message AddUserRoleInput {
-  string role_name = 1;
-}
-
 message GetUserRoleInput {
   string role_name = 1;
-}
-
-message GetUserRoleOutput {
-  repeated Action actions = 1;
 }
 
 message RemoveUserRoleInput {
