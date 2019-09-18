@@ -19,6 +19,7 @@ service Authorize {
   rpc AddResources (AddResourcesInput) returns (common.Void) {}
   rpc RemoveResources (RemoveResourcesInput) returns (common.Void) {}
 
+  rpc GetResourcesByUserAction(GetResourcesByUserActionInput) returns (GetResourcesByUserActionOutput) {}
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
 
   rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
@@ -127,6 +128,16 @@ message AddResourcesInput {
 
 message RemoveResourcesInput {
   repeated common.Origin resource = 1;
+}
+
+message GetResourcesByUserActionInput {
+  string user_id = 1;
+  string action = 2;
+  string resource_type = 3;
+}
+
+message GetResourcesByUserActionOutput {
+  repeated common.Origin resources = 1;
 }
 
 message GetResourcesByTypeInput {
