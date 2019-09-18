@@ -133,7 +133,7 @@ message RemoveResourcesInput {
 message GetResourcesByUserActionInput {
   string user_id = 1;
   string action = 2;
-  string type = 3;
+  string resource_type = 3;
 }
 
 message GetResourcesByUserActionOutput {
