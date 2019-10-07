@@ -14,6 +14,7 @@ namespace SKF.Enlight.API.Authorize {
 
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.LogClientStateInput> __Marshaller_grpcapi_LogClientStateInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.LogClientStateInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedInput> __Marshaller_grpcapi_IsAuthorizedInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedOutput> __Marshaller_grpcapi_IsAuthorizedOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput> __Marshaller_grpcapi_IsAuthorizedBulkInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput.Parser.ParseFrom);
@@ -63,6 +64,13 @@ namespace SKF.Enlight.API.Authorize {
         "DeepPing",
         __Marshaller_common_Void,
         __Marshaller_common_PrimitiveString);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Authorize.LogClientStateInput, global::SKF.Enlight.API.Common.Void> __Method_LogClientState = new grpc::Method<global::SKF.Enlight.API.Authorize.LogClientStateInput, global::SKF.Enlight.API.Common.Void>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LogClientState",
+        __Marshaller_grpcapi_LogClientStateInput,
+        __Marshaller_common_Void);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedInput, global::SKF.Enlight.API.Authorize.IsAuthorizedOutput> __Method_IsAuthorized = new grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedInput, global::SKF.Enlight.API.Authorize.IsAuthorizedOutput>(
         grpc::MethodType.Unary,
@@ -282,6 +290,11 @@ namespace SKF.Enlight.API.Authorize {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> LogClientState(global::SKF.Enlight.API.Authorize.LogClientStateInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.IsAuthorizedOutput> IsAuthorized(global::SKF.Enlight.API.Authorize.IsAuthorizedInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -467,6 +480,22 @@ namespace SKF.Enlight.API.Authorize {
       public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Common.Void request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Common.Void LogClientState(global::SKF.Enlight.API.Authorize.LogClientStateInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LogClientState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Common.Void LogClientState(global::SKF.Enlight.API.Authorize.LogClientStateInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LogClientState, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> LogClientStateAsync(global::SKF.Enlight.API.Authorize.LogClientStateInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LogClientStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> LogClientStateAsync(global::SKF.Enlight.API.Authorize.LogClientStateInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LogClientState, null, options, request);
       }
       public virtual global::SKF.Enlight.API.Authorize.IsAuthorizedOutput IsAuthorized(global::SKF.Enlight.API.Authorize.IsAuthorizedInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -945,6 +974,7 @@ namespace SKF.Enlight.API.Authorize {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DeepPing, serviceImpl.DeepPing)
+          .AddMethod(__Method_LogClientState, serviceImpl.LogClientState)
           .AddMethod(__Method_IsAuthorized, serviceImpl.IsAuthorized)
           .AddMethod(__Method_IsAuthorizedBulk, serviceImpl.IsAuthorizedBulk)
           .AddMethod(__Method_IsAuthorizedByEndpoint, serviceImpl.IsAuthorizedByEndpoint)
@@ -983,6 +1013,7 @@ namespace SKF.Enlight.API.Authorize {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AuthorizeBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.DeepPing));
+      serviceBinder.AddMethod(__Method_LogClientState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.LogClientStateInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.LogClientState));
       serviceBinder.AddMethod(__Method_IsAuthorized, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedInput, global::SKF.Enlight.API.Authorize.IsAuthorizedOutput>(serviceImpl.IsAuthorized));
       serviceBinder.AddMethod(__Method_IsAuthorizedBulk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput, global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput>(serviceImpl.IsAuthorizedBulk));
       serviceBinder.AddMethod(__Method_IsAuthorizedByEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput, global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput>(serviceImpl.IsAuthorizedByEndpoint));
