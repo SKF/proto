@@ -256,6 +256,6 @@ message GetAllActionsOutput {
 }
 
 message LogClientStateInput {
-  string status = 1;
+  string state = 1;
   string hostname = 2;
 }
