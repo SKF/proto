@@ -7,6 +7,7 @@ import "common/common.proto";
 
 service Authorize {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
+  rpc LogClientState (LogClientStateInput) returns (common.Void) {}
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   rpc IsAuthorizedBulk (IsAuthorizedBulkInput) returns (IsAuthorizedBulkOutput) {}
@@ -252,4 +253,9 @@ message GetActionOutput {
 
 message GetAllActionsOutput {
   repeated Action actions = 1;
+}
+
+message LogClientStateInput {
+  string state = 1;
+  string hostname = 2;
 }
