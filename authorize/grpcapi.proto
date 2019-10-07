@@ -7,6 +7,8 @@ import "common/common.proto";
 
 service Authorize {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
+  rpc Hello (common.Void) returns (common.Void) {}
+  rpc GoodBye (common.Void) returns (common.Void) {}
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   rpc IsAuthorizedBulk (IsAuthorizedBulkInput) returns (IsAuthorizedBulkOutput) {}
