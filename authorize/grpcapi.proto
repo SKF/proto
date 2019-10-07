@@ -252,10 +252,10 @@ message GetActionOutput {
 }
 
 message GetAllActionsOutput {
-     repeated Action actions = 1;
+  repeated Action actions = 1;
 }
 
 message LogClientStateInput {
-    string status = 1;
-    string hostname = 2;
+  string status = 1;
+  string hostname = 2;
 }
