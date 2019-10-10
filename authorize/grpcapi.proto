@@ -22,8 +22,8 @@ service Authorize {
 
   rpc GetResourcesByUserAction(GetResourcesByUserActionInput) returns (GetResourcesByUserActionOutput) {}
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
-  rpc GetResourceParents (GetResourcesInput) returns (GetResourcesOutput) {}
-  rpc GetResourceChildren (GetResourcesInput) returns (GetResourcesOutput) {}
+  rpc GetResourceParents (GetResourceParentsInput) returns (GetResourcesOutput) {}
+  rpc GetResourceChildren (GetResourceChildrenInput) returns (GetResourcesOutput) {}
 
   rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
@@ -98,9 +98,14 @@ message GetResourceInput {
   string origin_type = 2;
 }
 
-message GetResourcesInput {
+message GetResourceParentsInput {
   common.Origin resource = 1;
-  string origin_type = 2;	
+  string parent_origin_type = 2;	
+}
+
+message GetResourceChildrenInput {
+  common.Origin resource = 1;
+  string child_origin_type = 2;	
 }
 
 message GetResourcesOutput {
