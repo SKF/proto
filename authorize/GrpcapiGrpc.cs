@@ -31,6 +31,9 @@ namespace SKF.Enlight.API.Authorize {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourcesByUserActionOutput> __Marshaller_grpcapi_GetResourcesByUserActionOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourcesByUserActionOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourcesByTypeInput> __Marshaller_grpcapi_GetResourcesByTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourcesByTypeInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourcesByTypeOutput> __Marshaller_grpcapi_GetResourcesByTypeOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourcesByTypeOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourceParentsInput> __Marshaller_grpcapi_GetResourceParentsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourceParentsInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourcesOutput> __Marshaller_grpcapi_GetResourcesOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourcesOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourceChildrenInput> __Marshaller_grpcapi_GetResourceChildrenInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourceChildrenInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput> __Marshaller_grpcapi_GetActionsByUserRoleInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput> __Marshaller_grpcapi_GetActionsByUserRoleOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.GetResourcesAndActionsByUserInput> __Marshaller_grpcapi_GetResourcesAndActionsByUserInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.GetResourcesAndActionsByUserInput.Parser.ParseFrom);
@@ -141,6 +144,20 @@ namespace SKF.Enlight.API.Authorize {
         "GetResourcesByType",
         __Marshaller_grpcapi_GetResourcesByTypeInput,
         __Marshaller_grpcapi_GetResourcesByTypeOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Authorize.GetResourceParentsInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput> __Method_GetResourceParents = new grpc::Method<global::SKF.Enlight.API.Authorize.GetResourceParentsInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceParents",
+        __Marshaller_grpcapi_GetResourceParentsInput,
+        __Marshaller_grpcapi_GetResourcesOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Authorize.GetResourceChildrenInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput> __Method_GetResourceChildren = new grpc::Method<global::SKF.Enlight.API.Authorize.GetResourceChildrenInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceChildren",
+        __Marshaller_grpcapi_GetResourceChildrenInput,
+        __Marshaller_grpcapi_GetResourcesOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput, global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput> __Method_GetActionsByUserRole = new grpc::Method<global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput, global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput>(
         grpc::MethodType.Unary,
@@ -341,6 +358,16 @@ namespace SKF.Enlight.API.Authorize {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.GetResourcesByTypeOutput> GetResourcesByType(global::SKF.Enlight.API.Authorize.GetResourcesByTypeInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceParents(global::SKF.Enlight.API.Authorize.GetResourceParentsInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceChildren(global::SKF.Enlight.API.Authorize.GetResourceChildrenInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -656,6 +683,38 @@ namespace SKF.Enlight.API.Authorize {
       public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.GetResourcesByTypeOutput> GetResourcesByTypeAsync(global::SKF.Enlight.API.Authorize.GetResourcesByTypeInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetResourcesByType, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Authorize.GetResourcesOutput GetResourceParents(global::SKF.Enlight.API.Authorize.GetResourceParentsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceParents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Authorize.GetResourcesOutput GetResourceParents(global::SKF.Enlight.API.Authorize.GetResourceParentsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceParents, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceParentsAsync(global::SKF.Enlight.API.Authorize.GetResourceParentsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceParentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceParentsAsync(global::SKF.Enlight.API.Authorize.GetResourceParentsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceParents, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Authorize.GetResourcesOutput GetResourceChildren(global::SKF.Enlight.API.Authorize.GetResourceChildrenInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceChildren(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Authorize.GetResourcesOutput GetResourceChildren(global::SKF.Enlight.API.Authorize.GetResourceChildrenInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceChildren, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceChildrenAsync(global::SKF.Enlight.API.Authorize.GetResourceChildrenInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceChildrenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.GetResourcesOutput> GetResourceChildrenAsync(global::SKF.Enlight.API.Authorize.GetResourceChildrenInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceChildren, null, options, request);
       }
       public virtual global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput GetActionsByUserRole(global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -985,6 +1044,8 @@ namespace SKF.Enlight.API.Authorize {
           .AddMethod(__Method_RemoveResources, serviceImpl.RemoveResources)
           .AddMethod(__Method_GetResourcesByUserAction, serviceImpl.GetResourcesByUserAction)
           .AddMethod(__Method_GetResourcesByType, serviceImpl.GetResourcesByType)
+          .AddMethod(__Method_GetResourceParents, serviceImpl.GetResourceParents)
+          .AddMethod(__Method_GetResourceChildren, serviceImpl.GetResourceChildren)
           .AddMethod(__Method_GetActionsByUserRole, serviceImpl.GetActionsByUserRole)
           .AddMethod(__Method_GetResourcesAndActionsByUser, serviceImpl.GetResourcesAndActionsByUser)
           .AddMethod(__Method_GetResourcesByOriginAndType, serviceImpl.GetResourcesByOriginAndType)
@@ -1024,6 +1085,8 @@ namespace SKF.Enlight.API.Authorize {
       serviceBinder.AddMethod(__Method_RemoveResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.RemoveResourcesInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveResources));
       serviceBinder.AddMethod(__Method_GetResourcesByUserAction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourcesByUserActionInput, global::SKF.Enlight.API.Authorize.GetResourcesByUserActionOutput>(serviceImpl.GetResourcesByUserAction));
       serviceBinder.AddMethod(__Method_GetResourcesByType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourcesByTypeInput, global::SKF.Enlight.API.Authorize.GetResourcesByTypeOutput>(serviceImpl.GetResourcesByType));
+      serviceBinder.AddMethod(__Method_GetResourceParents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourceParentsInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput>(serviceImpl.GetResourceParents));
+      serviceBinder.AddMethod(__Method_GetResourceChildren, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourceChildrenInput, global::SKF.Enlight.API.Authorize.GetResourcesOutput>(serviceImpl.GetResourceChildren));
       serviceBinder.AddMethod(__Method_GetActionsByUserRole, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetActionsByUserRoleInput, global::SKF.Enlight.API.Authorize.GetActionsByUserRoleOutput>(serviceImpl.GetActionsByUserRole));
       serviceBinder.AddMethod(__Method_GetResourcesAndActionsByUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourcesAndActionsByUserInput, global::SKF.Enlight.API.Authorize.GetResourcesAndActionsByUserOutput>(serviceImpl.GetResourcesAndActionsByUser));
       serviceBinder.AddMethod(__Method_GetResourcesByOriginAndType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.GetResourcesByOriginAndTypeInput, global::SKF.Enlight.API.Authorize.GetResourcesByOriginAndTypeOutput>(serviceImpl.GetResourcesByOriginAndType));
