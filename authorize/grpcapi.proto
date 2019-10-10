@@ -22,6 +22,8 @@ service Authorize {
 
   rpc GetResourcesByUserAction(GetResourcesByUserActionInput) returns (GetResourcesByUserActionOutput) {}
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
+  rpc GetResourceParents (GetResourceParentsInput) returns (GetResourcesOutput) {}
+  rpc GetResourceChildren (GetResourceChildrenInput) returns (GetResourcesOutput) {}
 
   rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
@@ -94,6 +96,20 @@ message GetResourceOutput {
 message GetResourceInput {
   string id = 1;
   string origin_type = 2;
+}
+
+message GetResourceParentsInput {
+  common.Origin resource = 1;
+  string parent_origin_type = 2;	
+}
+
+message GetResourceChildrenInput {
+  common.Origin resource = 1;
+  string child_origin_type = 2;	
+}
+
+message GetResourcesOutput {
+  repeated common.Origin resources = 1;
 }
 
 message IsAuthorizedOutItem {
