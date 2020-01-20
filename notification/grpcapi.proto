@@ -1,0 +1,75 @@
+syntax = "proto3";
+package grpcapi;
+
+option csharp_namespace = "SKF.Enlight.API.Notification";
+
+import "common/common.proto";
+
+service Authorize {
+  rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
+
+  rpc SendNotification (SendNotificationInput) returns (SendNotificationOutput) {}
+  
+  rpc SetUserPreferences (SetUserPreferencesInput) returns (common.Void) {}
+  rpc GetUserPreferences (GetUserPreferencesInput) returns (GetUserPreferencesOutput) {}
+  
+  rpc GetUserNotifications (GetUserNotificationsInput) returns (GetUserNotificationsOutput) {}
+}
+
+enum NotificationType {
+  MAIL = 0;
+}
+
+message Notification {
+  string id = 1;
+  NotificationType type = 2;
+  common.Origin resource = 3;
+  string header = 4;
+  string body = 5;
+  string created_by = 6;
+}
+
+message SendNotificationInput {
+  NotificationType type = 1;
+  common.Origin resource = 2;
+  string header = 3;
+  string body = 4;
+  string created_by = 5;
+}
+
+message SendNotificationOutput {
+  string id = 1;
+}
+
+message GetUserNotificationsInput {
+  string user_id = 1;
+  string limit = 2;
+}
+
+message GetUserNotificationsOutput {
+  repeated Notification notifications = 1;
+}
+
+message UserPreferenceSchedule {
+  NotificationType type = 1;
+  string time_of_day = 2;
+  string notification_interval = 3;
+}
+
+message UserPreference {
+  string user_id = 1;
+  NotificationType type = 2;
+  UserPreferenceSchedule schedule = 3;
+}
+
+message SetUserPreferencesInput {
+  repeated UserPreference preferences = 1;
+}
+
+message GetUserPreferencesInput {
+  string user_id = 1;
+}
+
+message GetUserPreferencesOutput {
+  repeated UserPreference preferences = 1;
+}
