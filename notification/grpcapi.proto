@@ -5,7 +5,7 @@ option csharp_namespace = "SKF.Enlight.API.Notification";
 
 import "common/common.proto";
 
-service Authorize {
+service Notification {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
   rpc SendNotification (SendNotificationInput) returns (SendNotificationOutput) {}
