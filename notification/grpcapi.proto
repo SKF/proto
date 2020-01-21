@@ -20,7 +20,7 @@ enum NotificationType {
   MAIL = 0;
 }
 
-message Notification {
+message NotificationMessage {
   string id = 1;
   NotificationType type = 2;
   common.Origin resource = 3;
@@ -47,7 +47,7 @@ message GetUserNotificationsInput {
 }
 
 message GetUserNotificationsOutput {
-  repeated Notification notifications = 1;
+  repeated NotificationMessage notifications = 1;
 }
 
 message UserPreferenceSchedule {
