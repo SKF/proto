@@ -34,7 +34,7 @@ namespace SKF.Enlight.API.Notification {
             "cmlnaW4SDgoGaGVhZGVyGAMgASgJEgwKBGJvZHkYBCABKAkSEgoKY3JlYXRl",
             "ZF9ieRgFIAEoCSIkChZTZW5kTm90aWZpY2F0aW9uT3V0cHV0EgoKAmlkGAEg",
             "ASgJIjsKGUdldFVzZXJOb3RpZmljYXRpb25zSW5wdXQSDwoHdXNlcl9pZBgB",
-            "IAEoCRINCgVsaW1pdBgCIAEoCSJRChpHZXRVc2VyTm90aWZpY2F0aW9uc091",
+            "IAEoCRINCgVsaW1pdBgCIAEoBSJRChpHZXRVc2VyTm90aWZpY2F0aW9uc091",
             "dHB1dBIzCg1ub3RpZmljYXRpb25zGAEgAygLMhwuZ3JwY2FwaS5Ob3RpZmlj",
             "YXRpb25NZXNzYWdlInUKFlVzZXJQcmVmZXJlbmNlU2NoZWR1bGUSJwoEdHlw",
             "ZRgBIAEoDjIZLmdycGNhcGkuTm90aWZpY2F0aW9uVHlwZRITCgt0aW1lX29m",
@@ -782,12 +782,12 @@ namespace SKF.Enlight.API.Notification {
 
     /// <summary>Field number for the "limit" field.</summary>
     public const int LimitFieldNumber = 2;
-    private string limit_ = "";
+    private int limit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Limit {
+    public int Limit {
       get { return limit_; }
       set {
-        limit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        limit_ = value;
       }
     }
 
@@ -813,7 +813,7 @@ namespace SKF.Enlight.API.Notification {
     public override int GetHashCode() {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (Limit.Length != 0) hash ^= Limit.GetHashCode();
+      if (Limit != 0) hash ^= Limit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -831,9 +831,9 @@ namespace SKF.Enlight.API.Notification {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (Limit.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Limit);
+      if (Limit != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Limit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -846,8 +846,8 @@ namespace SKF.Enlight.API.Notification {
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (Limit.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Limit);
+      if (Limit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -863,7 +863,7 @@ namespace SKF.Enlight.API.Notification {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.Limit.Length != 0) {
+      if (other.Limit != 0) {
         Limit = other.Limit;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -881,8 +881,8 @@ namespace SKF.Enlight.API.Notification {
             UserId = input.ReadString();
             break;
           }
-          case 18: {
-            Limit = input.ReadString();
+          case 16: {
+            Limit = input.ReadInt32();
             break;
           }
         }
