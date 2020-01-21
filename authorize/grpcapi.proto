@@ -7,6 +7,7 @@ import "common/common.proto";
 
 service Authorize {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
+  rpc LogClientState (LogClientStateInput) returns (common.Void) {}
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   rpc IsAuthorizedBulk (IsAuthorizedBulkInput) returns (IsAuthorizedBulkOutput) {}
@@ -21,11 +22,13 @@ service Authorize {
 
   rpc GetResourcesByUserAction(GetResourcesByUserActionInput) returns (GetResourcesByUserActionOutput) {}
   rpc GetResourcesByType (GetResourcesByTypeInput) returns (GetResourcesByTypeOutput) {}
+  rpc GetResourceParents (GetResourceParentsInput) returns (GetResourcesOutput) {}
+  rpc GetResourceChildren (GetResourceChildrenInput) returns (GetResourcesOutput) {}
 
   rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
-  rpc GetResourcesByOriginAndTypeAndDepth (GetResourcesByOriginAndTypeAndDepthInput) returns (GetResourcesByOriginAndTypeAndDepthOutput) {}
+  rpc GetResourcesWithActionsAccess(GetResourcesWithActionsAccessInput) returns (GetResourcesWithActionsAccessOutput) {}
   rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
 
   rpc AddResourceRelation (AddResourceRelationInput) returns (common.Void) {}
@@ -95,6 +98,20 @@ message GetResourceInput {
   string origin_type = 2;
 }
 
+message GetResourceParentsInput {
+  common.Origin resource = 1;
+  string parent_origin_type = 2;	
+}
+
+message GetResourceChildrenInput {
+  common.Origin resource = 1;
+  string child_origin_type = 2;	
+}
+
+message GetResourcesOutput {
+  repeated common.Origin resources = 1;
+}
+
 message IsAuthorizedOutItem {
   string resource_id = 1;
   bool ok = 2;
@@ -131,6 +148,16 @@ message RemoveResourcesInput {
   repeated common.Origin resource = 1;
 }
 
+message GetResourcesWithActionsAccessInput {
+  repeated string actions = 1;
+  string resource_type = 2;
+  common.Origin resource = 3;
+}
+
+message GetResourcesWithActionsAccessOutput {
+  repeated common.Origin resources = 1;
+}
+
 message GetResourcesByUserActionInput {
   string user_id = 1;
   string action = 2;
@@ -148,11 +175,6 @@ message GetResourcesByTypeInput {
 message GetResourcesByOriginAndTypeInput {
   common.Origin resource = 1;
   string resource_type = 2;
-}
-
-message GetResourcesByOriginAndTypeAndDepthInput {
-  common.Origin resource = 1;
-  string resource_type = 2;
   int32 depth = 3;
 }
 
@@ -165,10 +187,6 @@ message GetResourcesByTypeOutput {
 }
 
 message GetResourcesByOriginAndTypeOutput {
-  repeated common.Origin resources = 1;
-}
-
-message GetResourcesByOriginAndTypeAndDepthOutput {
   repeated common.Origin resources = 1;
 }
 
@@ -251,4 +269,9 @@ message GetActionOutput {
 
 message GetAllActionsOutput {
   repeated Action actions = 1;
+}
+
+message LogClientStateInput {
+  string state = 1;
+  string hostname = 2;
 }
