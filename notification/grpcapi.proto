@@ -43,7 +43,7 @@ message SendNotificationOutput {
 
 message GetUserNotificationsInput {
   string user_id = 1;
-  string limit = 2;
+  int32 limit = 2;
 }
 
 message GetUserNotificationsOutput {
