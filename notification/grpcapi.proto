@@ -8,7 +8,11 @@ import "common/common.proto";
 service Notification {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
 
-  rpc SendNotification (SendNotificationInput) returns (SendNotificationOutput) {}
+  rpc SetNotificationType (SetNotificationTypeInput) returns (common.Void) {}
+  rpc GetNotificationType (GetNotificationTypeInput) returns (GetNotificationTypeOutput) {}
+
+  rpc InitiateNotification (InitiateNotificationInput) returns (InitiateNotificationOutput) {}
+  rpc GetInitiatedNotification (GetInitiatedNotificationInput) returns (GetInitiatedNotificationOutput) {}
   
   rpc SetUserPreferences (SetUserPreferencesInput) returns (common.Void) {}
   rpc GetUserPreferences (GetUserPreferencesInput) returns (GetUserPreferencesOutput) {}
@@ -16,12 +20,37 @@ service Notification {
   rpc GetUserNotifications (GetUserNotificationsInput) returns (GetUserNotificationsOutput) {}
 }
 
-enum NotificationType {
+enum DeliveryChannel {
   MAIL = 0;
 }
 
-message NotificationMessage {
-  string id = 1;
+enum DeliveryScheduleType {
+  IMMEDIATE = 0;
+  DAILY     = 1;
+}
+
+enum SendState {
+  NEW = 0;
+  SENT_OK = 1;
+  ERROR = 2;
+}
+
+message DeliverySchedule {
+  DeliveryScheduleType default_delivery_schedule = 1;
+  int32 MinimumSecondsBetweenNotifications = 2;
+  int32 DailyDeliveryTimeHour = 3;
+  int32 DailyDeliveryTimeMinute = 4;
+}
+
+message NotificationType {
+  string name = 1;
+  string qualifying_action = 2;
+  DeliveryChannel default_delivery_channel = 3;
+  DeliverySchedule default_delivery_schedule = 4;
+}
+
+message InitiatedNotification {
+  string external_id = 1;
   NotificationType type = 2;
   common.Origin resource = 3;
   string header = 4;
@@ -29,17 +58,44 @@ message NotificationMessage {
   string created_by = 6;
 }
 
-message SendNotificationInput {
+
+message SetNotificationTypeInput {
+  NotificationType notification_type = 1;
+}
+message GetNotificationTypeInput {
+  string name = 1;
+}
+message GetNotificationTypeOutput {
+  NotificationType notification_type = 1;
+}
+
+
+message InitiateNotificationInput {
   NotificationType type = 1;
   common.Origin resource = 2;
   string header = 3;
   string body = 4;
   string created_by = 5;
 }
-
-message SendNotificationOutput {
-  string id = 1;
+message InitiateNotificationOutput {
+  string external_id = 1;
 }
+message GetInitiatedNotificationInput {
+  string external_id = 1;
+}
+message GetInitiatedNotificationOutput {
+  InitiatedNotification initiated_notification = 1;
+}
+
+
+message UserNotification {
+  string external_id = 1;
+  InitiatedNotification initiated_notification = 2;
+  UserPreference user_preference = 3;
+  SendState send_state = 4;
+  int64 scheduled_time = 5;
+}
+
 
 message GetUserNotificationsInput {
   string user_id = 1;
@@ -47,19 +103,20 @@ message GetUserNotificationsInput {
 }
 
 message GetUserNotificationsOutput {
-  repeated NotificationMessage notifications = 1;
+  repeated UserNotification notifications = 1;
 }
 
 message UserPreferenceSchedule {
-  NotificationType type = 1;
+  DeliveryChannel type = 1;
   string time_of_day = 2;
   string notification_interval = 3;
 }
 
 message UserPreference {
   string user_id = 1;
-  NotificationType type = 2;
-  UserPreferenceSchedule schedule = 3;
+  string notification_type_ext_id = 2;
+  DeliveryChannel delivery_channel = 3;
+  DeliverySchedule delivery_schedule = 4;
 }
 
 message SetUserPreferencesInput {
