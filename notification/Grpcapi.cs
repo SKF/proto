@@ -25,48 +25,88 @@ namespace SKF.Enlight.API.Notification {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpub3RpZmljYXRpb24vZ3JwY2FwaS5wcm90bxIHZ3JwY2FwaRoTY29tbW9u",
-            "L2NvbW1vbi5wcm90byKeAQoTTm90aWZpY2F0aW9uTWVzc2FnZRIKCgJpZBgB",
-            "IAEoCRInCgR0eXBlGAIgASgOMhkuZ3JwY2FwaS5Ob3RpZmljYXRpb25UeXBl",
-            "EiAKCHJlc291cmNlGAMgASgLMg4uY29tbW9uLk9yaWdpbhIOCgZoZWFkZXIY",
-            "BCABKAkSDAoEYm9keRgFIAEoCRISCgpjcmVhdGVkX2J5GAYgASgJIpQBChVT",
-            "ZW5kTm90aWZpY2F0aW9uSW5wdXQSJwoEdHlwZRgBIAEoDjIZLmdycGNhcGku",
-            "Tm90aWZpY2F0aW9uVHlwZRIgCghyZXNvdXJjZRgCIAEoCzIOLmNvbW1vbi5P",
-            "cmlnaW4SDgoGaGVhZGVyGAMgASgJEgwKBGJvZHkYBCABKAkSEgoKY3JlYXRl",
-            "ZF9ieRgFIAEoCSIkChZTZW5kTm90aWZpY2F0aW9uT3V0cHV0EgoKAmlkGAEg",
-            "ASgJIjsKGUdldFVzZXJOb3RpZmljYXRpb25zSW5wdXQSDwoHdXNlcl9pZBgB",
-            "IAEoCRINCgVsaW1pdBgCIAEoBSJRChpHZXRVc2VyTm90aWZpY2F0aW9uc091",
-            "dHB1dBIzCg1ub3RpZmljYXRpb25zGAEgAygLMhwuZ3JwY2FwaS5Ob3RpZmlj",
-            "YXRpb25NZXNzYWdlInUKFlVzZXJQcmVmZXJlbmNlU2NoZWR1bGUSJwoEdHlw",
-            "ZRgBIAEoDjIZLmdycGNhcGkuTm90aWZpY2F0aW9uVHlwZRITCgt0aW1lX29m",
-            "X2RheRgCIAEoCRIdChVub3RpZmljYXRpb25faW50ZXJ2YWwYAyABKAkifQoO",
-            "VXNlclByZWZlcmVuY2USDwoHdXNlcl9pZBgBIAEoCRInCgR0eXBlGAIgASgO",
-            "MhkuZ3JwY2FwaS5Ob3RpZmljYXRpb25UeXBlEjEKCHNjaGVkdWxlGAMgASgL",
-            "Mh8uZ3JwY2FwaS5Vc2VyUHJlZmVyZW5jZVNjaGVkdWxlIkcKF1NldFVzZXJQ",
-            "cmVmZXJlbmNlc0lucHV0EiwKC3ByZWZlcmVuY2VzGAEgAygLMhcuZ3JwY2Fw",
-            "aS5Vc2VyUHJlZmVyZW5jZSIqChdHZXRVc2VyUHJlZmVyZW5jZXNJbnB1dBIP",
-            "Cgd1c2VyX2lkGAEgASgJIkgKGEdldFVzZXJQcmVmZXJlbmNlc091dHB1dBIs",
-            "CgtwcmVmZXJlbmNlcxgBIAMoCzIXLmdycGNhcGkuVXNlclByZWZlcmVuY2Uq",
-            "HAoQTm90aWZpY2F0aW9uVHlwZRIICgRNQUlMEAAyogMKDE5vdGlmaWNhdGlv",
-            "bhIzCghEZWVwUGluZxIMLmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2",
-            "ZVN0cmluZyIAElUKEFNlbmROb3RpZmljYXRpb24SHi5ncnBjYXBpLlNlbmRO",
-            "b3RpZmljYXRpb25JbnB1dBofLmdycGNhcGkuU2VuZE5vdGlmaWNhdGlvbk91",
-            "dHB1dCIAEkYKElNldFVzZXJQcmVmZXJlbmNlcxIgLmdycGNhcGkuU2V0VXNl",
-            "clByZWZlcmVuY2VzSW5wdXQaDC5jb21tb24uVm9pZCIAElsKEkdldFVzZXJQ",
-            "cmVmZXJlbmNlcxIgLmdycGNhcGkuR2V0VXNlclByZWZlcmVuY2VzSW5wdXQa",
-            "IS5ncnBjYXBpLkdldFVzZXJQcmVmZXJlbmNlc091dHB1dCIAEmEKFEdldFVz",
-            "ZXJOb3RpZmljYXRpb25zEiIuZ3JwY2FwaS5HZXRVc2VyTm90aWZpY2F0aW9u",
-            "c0lucHV0GiMuZ3JwY2FwaS5HZXRVc2VyTm90aWZpY2F0aW9uc091dHB1dCIA",
-            "Qh+qAhxTS0YuRW5saWdodC5BUEkuTm90aWZpY2F0aW9uYgZwcm90bzM="));
+            "L2NvbW1vbi5wcm90byLAAQoQRGVsaXZlcnlTY2hlZHVsZRJAChlkZWZhdWx0",
+            "X2RlbGl2ZXJ5X3NjaGVkdWxlGAEgASgOMh0uZ3JwY2FwaS5EZWxpdmVyeVNj",
+            "aGVkdWxlVHlwZRIqCiJNaW5pbXVtU2Vjb25kc0JldHdlZW5Ob3RpZmljYXRp",
+            "b25zGAIgASgFEh0KFURhaWx5RGVsaXZlcnlUaW1lSG91chgDIAEoBRIfChdE",
+            "YWlseURlbGl2ZXJ5VGltZU1pbnV0ZRgEIAEoBSK1AQoQTm90aWZpY2F0aW9u",
+            "VHlwZRIMCgRuYW1lGAEgASgJEhkKEXF1YWxpZnlpbmdfYWN0aW9uGAIgASgJ",
+            "EjoKGGRlZmF1bHRfZGVsaXZlcnlfY2hhbm5lbBgDIAEoDjIYLmdycGNhcGku",
+            "RGVsaXZlcnlDaGFubmVsEjwKGWRlZmF1bHRfZGVsaXZlcnlfc2NoZWR1bGUY",
+            "BCABKAsyGS5ncnBjYXBpLkRlbGl2ZXJ5U2NoZWR1bGUiqQEKFUluaXRpYXRl",
+            "ZE5vdGlmaWNhdGlvbhITCgtleHRlcm5hbF9pZBgBIAEoCRInCgR0eXBlGAIg",
+            "ASgLMhkuZ3JwY2FwaS5Ob3RpZmljYXRpb25UeXBlEiAKCHJlc291cmNlGAMg",
+            "ASgLMg4uY29tbW9uLk9yaWdpbhIOCgZoZWFkZXIYBCABKAkSDAoEYm9keRgF",
+            "IAEoCRISCgpjcmVhdGVkX2J5GAYgASgJIlAKGFNldE5vdGlmaWNhdGlvblR5",
+            "cGVJbnB1dBI0ChFub3RpZmljYXRpb25fdHlwZRgBIAEoCzIZLmdycGNhcGku",
+            "Tm90aWZpY2F0aW9uVHlwZSIoChhHZXROb3RpZmljYXRpb25UeXBlSW5wdXQS",
+            "DAoEbmFtZRgBIAEoCSJRChlHZXROb3RpZmljYXRpb25UeXBlT3V0cHV0EjQK",
+            "EW5vdGlmaWNhdGlvbl90eXBlGAEgASgLMhkuZ3JwY2FwaS5Ob3RpZmljYXRp",
+            "b25UeXBlIpgBChlJbml0aWF0ZU5vdGlmaWNhdGlvbklucHV0EicKBHR5cGUY",
+            "ASABKAsyGS5ncnBjYXBpLk5vdGlmaWNhdGlvblR5cGUSIAoIcmVzb3VyY2UY",
+            "AiABKAsyDi5jb21tb24uT3JpZ2luEg4KBmhlYWRlchgDIAEoCRIMCgRib2R5",
+            "GAQgASgJEhIKCmNyZWF0ZWRfYnkYBSABKAkiMQoaSW5pdGlhdGVOb3RpZmlj",
+            "YXRpb25PdXRwdXQSEwoLZXh0ZXJuYWxfaWQYASABKAkiNAodR2V0SW5pdGlh",
+            "dGVkTm90aWZpY2F0aW9uSW5wdXQSEwoLZXh0ZXJuYWxfaWQYASABKAkiYAoe",
+            "R2V0SW5pdGlhdGVkTm90aWZpY2F0aW9uT3V0cHV0Ej4KFmluaXRpYXRlZF9u",
+            "b3RpZmljYXRpb24YASABKAsyHi5ncnBjYXBpLkluaXRpYXRlZE5vdGlmaWNh",
+            "dGlvbiLZAQoQVXNlck5vdGlmaWNhdGlvbhITCgtleHRlcm5hbF9pZBgBIAEo",
+            "CRI+ChZpbml0aWF0ZWRfbm90aWZpY2F0aW9uGAIgASgLMh4uZ3JwY2FwaS5J",
+            "bml0aWF0ZWROb3RpZmljYXRpb24SMAoPdXNlcl9wcmVmZXJlbmNlGAMgASgL",
+            "MhcuZ3JwY2FwaS5Vc2VyUHJlZmVyZW5jZRImCgpzZW5kX3N0YXRlGAQgASgO",
+            "MhIuZ3JwY2FwaS5TZW5kU3RhdGUSFgoOc2NoZWR1bGVkX3RpbWUYBSABKAMi",
+            "OwoZR2V0VXNlck5vdGlmaWNhdGlvbnNJbnB1dBIPCgd1c2VyX2lkGAEgASgJ",
+            "Eg0KBWxpbWl0GAIgASgFIk4KGkdldFVzZXJOb3RpZmljYXRpb25zT3V0cHV0",
+            "EjAKDW5vdGlmaWNhdGlvbnMYASADKAsyGS5ncnBjYXBpLlVzZXJOb3RpZmlj",
+            "YXRpb24idAoWVXNlclByZWZlcmVuY2VTY2hlZHVsZRImCgR0eXBlGAEgASgO",
+            "MhguZ3JwY2FwaS5EZWxpdmVyeUNoYW5uZWwSEwoLdGltZV9vZl9kYXkYAiAB",
+            "KAkSHQoVbm90aWZpY2F0aW9uX2ludGVydmFsGAMgASgJIq0BCg5Vc2VyUHJl",
+            "ZmVyZW5jZRIPCgd1c2VyX2lkGAEgASgJEiAKGG5vdGlmaWNhdGlvbl90eXBl",
+            "X2V4dF9pZBgCIAEoCRIyChBkZWxpdmVyeV9jaGFubmVsGAMgASgOMhguZ3Jw",
+            "Y2FwaS5EZWxpdmVyeUNoYW5uZWwSNAoRZGVsaXZlcnlfc2NoZWR1bGUYBCAB",
+            "KAsyGS5ncnBjYXBpLkRlbGl2ZXJ5U2NoZWR1bGUiRwoXU2V0VXNlclByZWZl",
+            "cmVuY2VzSW5wdXQSLAoLcHJlZmVyZW5jZXMYASADKAsyFy5ncnBjYXBpLlVz",
+            "ZXJQcmVmZXJlbmNlIioKF0dldFVzZXJQcmVmZXJlbmNlc0lucHV0Eg8KB3Vz",
+            "ZXJfaWQYASABKAkiSAoYR2V0VXNlclByZWZlcmVuY2VzT3V0cHV0EiwKC3By",
+            "ZWZlcmVuY2VzGAEgAygLMhcuZ3JwY2FwaS5Vc2VyUHJlZmVyZW5jZSobCg9E",
+            "ZWxpdmVyeUNoYW5uZWwSCAoETUFJTBAAKjAKFERlbGl2ZXJ5U2NoZWR1bGVU",
+            "eXBlEg0KCUlNTUVESUFURRAAEgkKBURBSUxZEAEqLAoJU2VuZFN0YXRlEgcK",
+            "A05FVxAAEgsKB1NFTlRfT0sQARIJCgVFUlJPUhACMscFCgxOb3RpZmljYXRp",
+            "b24SMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5QcmltaXRp",
+            "dmVTdHJpbmciABJIChNTZXROb3RpZmljYXRpb25UeXBlEiEuZ3JwY2FwaS5T",
+            "ZXROb3RpZmljYXRpb25UeXBlSW5wdXQaDC5jb21tb24uVm9pZCIAEl4KE0dl",
+            "dE5vdGlmaWNhdGlvblR5cGUSIS5ncnBjYXBpLkdldE5vdGlmaWNhdGlvblR5",
+            "cGVJbnB1dBoiLmdycGNhcGkuR2V0Tm90aWZpY2F0aW9uVHlwZU91dHB1dCIA",
+            "EmEKFEluaXRpYXRlTm90aWZpY2F0aW9uEiIuZ3JwY2FwaS5Jbml0aWF0ZU5v",
+            "dGlmaWNhdGlvbklucHV0GiMuZ3JwY2FwaS5Jbml0aWF0ZU5vdGlmaWNhdGlv",
+            "bk91dHB1dCIAEm0KGEdldEluaXRpYXRlZE5vdGlmaWNhdGlvbhImLmdycGNh",
+            "cGkuR2V0SW5pdGlhdGVkTm90aWZpY2F0aW9uSW5wdXQaJy5ncnBjYXBpLkdl",
+            "dEluaXRpYXRlZE5vdGlmaWNhdGlvbk91dHB1dCIAEkYKElNldFVzZXJQcmVm",
+            "ZXJlbmNlcxIgLmdycGNhcGkuU2V0VXNlclByZWZlcmVuY2VzSW5wdXQaDC5j",
+            "b21tb24uVm9pZCIAElsKEkdldFVzZXJQcmVmZXJlbmNlcxIgLmdycGNhcGku",
+            "R2V0VXNlclByZWZlcmVuY2VzSW5wdXQaIS5ncnBjYXBpLkdldFVzZXJQcmVm",
+            "ZXJlbmNlc091dHB1dCIAEmEKFEdldFVzZXJOb3RpZmljYXRpb25zEiIuZ3Jw",
+            "Y2FwaS5HZXRVc2VyTm90aWZpY2F0aW9uc0lucHV0GiMuZ3JwY2FwaS5HZXRV",
+            "c2VyTm90aWZpY2F0aW9uc091dHB1dCIAQh+qAhxTS0YuRW5saWdodC5BUEku",
+            "Tm90aWZpY2F0aW9uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Notification.NotificationType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.NotificationMessage), global::SKF.Enlight.API.Notification.NotificationMessage.Parser, new[]{ "Id", "Type", "Resource", "Header", "Body", "CreatedBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.SendNotificationInput), global::SKF.Enlight.API.Notification.SendNotificationInput.Parser, new[]{ "Type", "Resource", "Header", "Body", "CreatedBy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.SendNotificationOutput), global::SKF.Enlight.API.Notification.SendNotificationOutput.Parser, new[]{ "Id" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Notification.DeliveryChannel), typeof(global::SKF.Enlight.API.Notification.DeliveryScheduleType), typeof(global::SKF.Enlight.API.Notification.SendState), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.DeliverySchedule), global::SKF.Enlight.API.Notification.DeliverySchedule.Parser, new[]{ "DefaultDeliverySchedule", "MinimumSecondsBetweenNotifications", "DailyDeliveryTimeHour", "DailyDeliveryTimeMinute" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.NotificationType), global::SKF.Enlight.API.Notification.NotificationType.Parser, new[]{ "Name", "QualifyingAction", "DefaultDeliveryChannel", "DefaultDeliverySchedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.InitiatedNotification), global::SKF.Enlight.API.Notification.InitiatedNotification.Parser, new[]{ "ExternalId", "Type", "Resource", "Header", "Body", "CreatedBy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.SetNotificationTypeInput), global::SKF.Enlight.API.Notification.SetNotificationTypeInput.Parser, new[]{ "NotificationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetNotificationTypeInput), global::SKF.Enlight.API.Notification.GetNotificationTypeInput.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetNotificationTypeOutput), global::SKF.Enlight.API.Notification.GetNotificationTypeOutput.Parser, new[]{ "NotificationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.InitiateNotificationInput), global::SKF.Enlight.API.Notification.InitiateNotificationInput.Parser, new[]{ "Type", "Resource", "Header", "Body", "CreatedBy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.InitiateNotificationOutput), global::SKF.Enlight.API.Notification.InitiateNotificationOutput.Parser, new[]{ "ExternalId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput), global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput.Parser, new[]{ "ExternalId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput), global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput.Parser, new[]{ "InitiatedNotification" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.UserNotification), global::SKF.Enlight.API.Notification.UserNotification.Parser, new[]{ "ExternalId", "InitiatedNotification", "UserPreference", "SendState", "ScheduledTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserNotificationsInput), global::SKF.Enlight.API.Notification.GetUserNotificationsInput.Parser, new[]{ "UserId", "Limit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserNotificationsOutput), global::SKF.Enlight.API.Notification.GetUserNotificationsOutput.Parser, new[]{ "Notifications" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.UserPreferenceSchedule), global::SKF.Enlight.API.Notification.UserPreferenceSchedule.Parser, new[]{ "Type", "TimeOfDay", "NotificationInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.UserPreference), global::SKF.Enlight.API.Notification.UserPreference.Parser, new[]{ "UserId", "Type", "Schedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.UserPreference), global::SKF.Enlight.API.Notification.UserPreference.Parser, new[]{ "UserId", "NotificationTypeExtId", "DeliveryChannel", "DeliverySchedule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.SetUserPreferencesInput), global::SKF.Enlight.API.Notification.SetUserPreferencesInput.Parser, new[]{ "Preferences" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserPreferencesInput), global::SKF.Enlight.API.Notification.GetUserPreferencesInput.Parser, new[]{ "UserId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserPreferencesOutput), global::SKF.Enlight.API.Notification.GetUserPreferencesOutput.Parser, new[]{ "Preferences" }, null, null, null)
@@ -76,18 +116,29 @@ namespace SKF.Enlight.API.Notification {
 
   }
   #region Enums
-  public enum NotificationType {
+  public enum DeliveryChannel {
     [pbr::OriginalName("MAIL")] Mail = 0,
+  }
+
+  public enum DeliveryScheduleType {
+    [pbr::OriginalName("IMMEDIATE")] Immediate = 0,
+    [pbr::OriginalName("DAILY")] Daily = 1,
+  }
+
+  public enum SendState {
+    [pbr::OriginalName("NEW")] New = 0,
+    [pbr::OriginalName("SENT_OK")] SentOk = 1,
+    [pbr::OriginalName("ERROR")] Error = 2,
   }
 
   #endregion
 
   #region Messages
-  public sealed partial class NotificationMessage : pb::IMessage<NotificationMessage> {
-    private static readonly pb::MessageParser<NotificationMessage> _parser = new pb::MessageParser<NotificationMessage>(() => new NotificationMessage());
+  public sealed partial class DeliverySchedule : pb::IMessage<DeliverySchedule> {
+    private static readonly pb::MessageParser<DeliverySchedule> _parser = new pb::MessageParser<DeliverySchedule>(() => new DeliverySchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<NotificationMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeliverySchedule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -100,16 +151,448 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NotificationMessage() {
+    public DeliverySchedule() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NotificationMessage(NotificationMessage other) : this() {
-      id_ = other.id_;
-      type_ = other.type_;
+    public DeliverySchedule(DeliverySchedule other) : this() {
+      defaultDeliverySchedule_ = other.defaultDeliverySchedule_;
+      minimumSecondsBetweenNotifications_ = other.minimumSecondsBetweenNotifications_;
+      dailyDeliveryTimeHour_ = other.dailyDeliveryTimeHour_;
+      dailyDeliveryTimeMinute_ = other.dailyDeliveryTimeMinute_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeliverySchedule Clone() {
+      return new DeliverySchedule(this);
+    }
+
+    /// <summary>Field number for the "default_delivery_schedule" field.</summary>
+    public const int DefaultDeliveryScheduleFieldNumber = 1;
+    private global::SKF.Enlight.API.Notification.DeliveryScheduleType defaultDeliverySchedule_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.DeliveryScheduleType DefaultDeliverySchedule {
+      get { return defaultDeliverySchedule_; }
+      set {
+        defaultDeliverySchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MinimumSecondsBetweenNotifications" field.</summary>
+    public const int MinimumSecondsBetweenNotificationsFieldNumber = 2;
+    private int minimumSecondsBetweenNotifications_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MinimumSecondsBetweenNotifications {
+      get { return minimumSecondsBetweenNotifications_; }
+      set {
+        minimumSecondsBetweenNotifications_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DailyDeliveryTimeHour" field.</summary>
+    public const int DailyDeliveryTimeHourFieldNumber = 3;
+    private int dailyDeliveryTimeHour_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DailyDeliveryTimeHour {
+      get { return dailyDeliveryTimeHour_; }
+      set {
+        dailyDeliveryTimeHour_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DailyDeliveryTimeMinute" field.</summary>
+    public const int DailyDeliveryTimeMinuteFieldNumber = 4;
+    private int dailyDeliveryTimeMinute_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DailyDeliveryTimeMinute {
+      get { return dailyDeliveryTimeMinute_; }
+      set {
+        dailyDeliveryTimeMinute_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeliverySchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeliverySchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DefaultDeliverySchedule != other.DefaultDeliverySchedule) return false;
+      if (MinimumSecondsBetweenNotifications != other.MinimumSecondsBetweenNotifications) return false;
+      if (DailyDeliveryTimeHour != other.DailyDeliveryTimeHour) return false;
+      if (DailyDeliveryTimeMinute != other.DailyDeliveryTimeMinute) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DefaultDeliverySchedule != 0) hash ^= DefaultDeliverySchedule.GetHashCode();
+      if (MinimumSecondsBetweenNotifications != 0) hash ^= MinimumSecondsBetweenNotifications.GetHashCode();
+      if (DailyDeliveryTimeHour != 0) hash ^= DailyDeliveryTimeHour.GetHashCode();
+      if (DailyDeliveryTimeMinute != 0) hash ^= DailyDeliveryTimeMinute.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DefaultDeliverySchedule != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DefaultDeliverySchedule);
+      }
+      if (MinimumSecondsBetweenNotifications != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MinimumSecondsBetweenNotifications);
+      }
+      if (DailyDeliveryTimeHour != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DailyDeliveryTimeHour);
+      }
+      if (DailyDeliveryTimeMinute != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DailyDeliveryTimeMinute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DefaultDeliverySchedule != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultDeliverySchedule);
+      }
+      if (MinimumSecondsBetweenNotifications != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinimumSecondsBetweenNotifications);
+      }
+      if (DailyDeliveryTimeHour != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DailyDeliveryTimeHour);
+      }
+      if (DailyDeliveryTimeMinute != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DailyDeliveryTimeMinute);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeliverySchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DefaultDeliverySchedule != 0) {
+        DefaultDeliverySchedule = other.DefaultDeliverySchedule;
+      }
+      if (other.MinimumSecondsBetweenNotifications != 0) {
+        MinimumSecondsBetweenNotifications = other.MinimumSecondsBetweenNotifications;
+      }
+      if (other.DailyDeliveryTimeHour != 0) {
+        DailyDeliveryTimeHour = other.DailyDeliveryTimeHour;
+      }
+      if (other.DailyDeliveryTimeMinute != 0) {
+        DailyDeliveryTimeMinute = other.DailyDeliveryTimeMinute;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DefaultDeliverySchedule = (global::SKF.Enlight.API.Notification.DeliveryScheduleType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            MinimumSecondsBetweenNotifications = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            DailyDeliveryTimeHour = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            DailyDeliveryTimeMinute = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NotificationType : pb::IMessage<NotificationType> {
+    private static readonly pb::MessageParser<NotificationType> _parser = new pb::MessageParser<NotificationType>(() => new NotificationType());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NotificationType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NotificationType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NotificationType(NotificationType other) : this() {
+      name_ = other.name_;
+      qualifyingAction_ = other.qualifyingAction_;
+      defaultDeliveryChannel_ = other.defaultDeliveryChannel_;
+      defaultDeliverySchedule_ = other.defaultDeliverySchedule_ != null ? other.defaultDeliverySchedule_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NotificationType Clone() {
+      return new NotificationType(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "qualifying_action" field.</summary>
+    public const int QualifyingActionFieldNumber = 2;
+    private string qualifyingAction_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string QualifyingAction {
+      get { return qualifyingAction_; }
+      set {
+        qualifyingAction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "default_delivery_channel" field.</summary>
+    public const int DefaultDeliveryChannelFieldNumber = 3;
+    private global::SKF.Enlight.API.Notification.DeliveryChannel defaultDeliveryChannel_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.DeliveryChannel DefaultDeliveryChannel {
+      get { return defaultDeliveryChannel_; }
+      set {
+        defaultDeliveryChannel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_delivery_schedule" field.</summary>
+    public const int DefaultDeliveryScheduleFieldNumber = 4;
+    private global::SKF.Enlight.API.Notification.DeliverySchedule defaultDeliverySchedule_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.DeliverySchedule DefaultDeliverySchedule {
+      get { return defaultDeliverySchedule_; }
+      set {
+        defaultDeliverySchedule_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NotificationType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NotificationType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (QualifyingAction != other.QualifyingAction) return false;
+      if (DefaultDeliveryChannel != other.DefaultDeliveryChannel) return false;
+      if (!object.Equals(DefaultDeliverySchedule, other.DefaultDeliverySchedule)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (QualifyingAction.Length != 0) hash ^= QualifyingAction.GetHashCode();
+      if (DefaultDeliveryChannel != 0) hash ^= DefaultDeliveryChannel.GetHashCode();
+      if (defaultDeliverySchedule_ != null) hash ^= DefaultDeliverySchedule.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (QualifyingAction.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(QualifyingAction);
+      }
+      if (DefaultDeliveryChannel != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DefaultDeliveryChannel);
+      }
+      if (defaultDeliverySchedule_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DefaultDeliverySchedule);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (QualifyingAction.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QualifyingAction);
+      }
+      if (DefaultDeliveryChannel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultDeliveryChannel);
+      }
+      if (defaultDeliverySchedule_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultDeliverySchedule);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NotificationType other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.QualifyingAction.Length != 0) {
+        QualifyingAction = other.QualifyingAction;
+      }
+      if (other.DefaultDeliveryChannel != 0) {
+        DefaultDeliveryChannel = other.DefaultDeliveryChannel;
+      }
+      if (other.defaultDeliverySchedule_ != null) {
+        if (defaultDeliverySchedule_ == null) {
+          DefaultDeliverySchedule = new global::SKF.Enlight.API.Notification.DeliverySchedule();
+        }
+        DefaultDeliverySchedule.MergeFrom(other.DefaultDeliverySchedule);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            QualifyingAction = input.ReadString();
+            break;
+          }
+          case 24: {
+            DefaultDeliveryChannel = (global::SKF.Enlight.API.Notification.DeliveryChannel) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (defaultDeliverySchedule_ == null) {
+              DefaultDeliverySchedule = new global::SKF.Enlight.API.Notification.DeliverySchedule();
+            }
+            input.ReadMessage(DefaultDeliverySchedule);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InitiatedNotification : pb::IMessage<InitiatedNotification> {
+    private static readonly pb::MessageParser<InitiatedNotification> _parser = new pb::MessageParser<InitiatedNotification>(() => new InitiatedNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InitiatedNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InitiatedNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InitiatedNotification(InitiatedNotification other) : this() {
+      externalId_ = other.externalId_;
+      type_ = other.type_ != null ? other.type_.Clone() : null;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       header_ = other.header_;
       body_ = other.body_;
@@ -118,24 +601,24 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NotificationMessage Clone() {
-      return new NotificationMessage(this);
+    public InitiatedNotification Clone() {
+      return new InitiatedNotification(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
+    /// <summary>Field number for the "external_id" field.</summary>
+    public const int ExternalIdFieldNumber = 1;
+    private string externalId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
+    public string ExternalId {
+      get { return externalId_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::SKF.Enlight.API.Notification.NotificationType type_ = 0;
+    private global::SKF.Enlight.API.Notification.NotificationType type_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Notification.NotificationType Type {
       get { return type_; }
@@ -190,19 +673,19 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as NotificationMessage);
+      return Equals(other as InitiatedNotification);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(NotificationMessage other) {
+    public bool Equals(InitiatedNotification other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
-      if (Type != other.Type) return false;
+      if (ExternalId != other.ExternalId) return false;
+      if (!object.Equals(Type, other.Type)) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
       if (Header != other.Header) return false;
       if (Body != other.Body) return false;
@@ -213,8 +696,8 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
+      if (type_ != null) hash ^= Type.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (Header.Length != 0) hash ^= Header.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
@@ -232,13 +715,13 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
+      if (ExternalId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Id);
+        output.WriteString(ExternalId);
       }
-      if (Type != 0) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
+      if (type_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Type);
       }
       if (resource_ != null) {
         output.WriteRawTag(26);
@@ -264,11 +747,11 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (ExternalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
       }
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (type_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Type);
       }
       if (resource_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resource);
@@ -289,15 +772,18 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(NotificationMessage other) {
+    public void MergeFrom(InitiatedNotification other) {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
+      if (other.ExternalId.Length != 0) {
+        ExternalId = other.ExternalId;
       }
-      if (other.Type != 0) {
-        Type = other.Type;
+      if (other.type_ != null) {
+        if (type_ == null) {
+          Type = new global::SKF.Enlight.API.Notification.NotificationType();
+        }
+        Type.MergeFrom(other.Type);
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
@@ -326,11 +812,14 @@ namespace SKF.Enlight.API.Notification {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id = input.ReadString();
+            ExternalId = input.ReadString();
             break;
           }
-          case 16: {
-            Type = (global::SKF.Enlight.API.Notification.NotificationType) input.ReadEnum();
+          case 18: {
+            if (type_ == null) {
+              Type = new global::SKF.Enlight.API.Notification.NotificationType();
+            }
+            input.ReadMessage(Type);
             break;
           }
           case 26: {
@@ -358,15 +847,15 @@ namespace SKF.Enlight.API.Notification {
 
   }
 
-  public sealed partial class SendNotificationInput : pb::IMessage<SendNotificationInput> {
-    private static readonly pb::MessageParser<SendNotificationInput> _parser = new pb::MessageParser<SendNotificationInput>(() => new SendNotificationInput());
+  public sealed partial class SetNotificationTypeInput : pb::IMessage<SetNotificationTypeInput> {
+    private static readonly pb::MessageParser<SetNotificationTypeInput> _parser = new pb::MessageParser<SetNotificationTypeInput>(() => new SetNotificationTypeInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendNotificationInput> Parser { get { return _parser; } }
+    public static pb::MessageParser<SetNotificationTypeInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -375,15 +864,414 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationInput() {
+    public SetNotificationTypeInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationInput(SendNotificationInput other) : this() {
-      type_ = other.type_;
+    public SetNotificationTypeInput(SetNotificationTypeInput other) : this() {
+      notificationType_ = other.notificationType_ != null ? other.notificationType_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetNotificationTypeInput Clone() {
+      return new SetNotificationTypeInput(this);
+    }
+
+    /// <summary>Field number for the "notification_type" field.</summary>
+    public const int NotificationTypeFieldNumber = 1;
+    private global::SKF.Enlight.API.Notification.NotificationType notificationType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.NotificationType NotificationType {
+      get { return notificationType_; }
+      set {
+        notificationType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetNotificationTypeInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetNotificationTypeInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NotificationType, other.NotificationType)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (notificationType_ != null) hash ^= NotificationType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (notificationType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NotificationType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (notificationType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotificationType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetNotificationTypeInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.notificationType_ != null) {
+        if (notificationType_ == null) {
+          NotificationType = new global::SKF.Enlight.API.Notification.NotificationType();
+        }
+        NotificationType.MergeFrom(other.NotificationType);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (notificationType_ == null) {
+              NotificationType = new global::SKF.Enlight.API.Notification.NotificationType();
+            }
+            input.ReadMessage(NotificationType);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetNotificationTypeInput : pb::IMessage<GetNotificationTypeInput> {
+    private static readonly pb::MessageParser<GetNotificationTypeInput> _parser = new pb::MessageParser<GetNotificationTypeInput>(() => new GetNotificationTypeInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetNotificationTypeInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeInput(GetNotificationTypeInput other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeInput Clone() {
+      return new GetNotificationTypeInput(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetNotificationTypeInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetNotificationTypeInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetNotificationTypeInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetNotificationTypeOutput : pb::IMessage<GetNotificationTypeOutput> {
+    private static readonly pb::MessageParser<GetNotificationTypeOutput> _parser = new pb::MessageParser<GetNotificationTypeOutput>(() => new GetNotificationTypeOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetNotificationTypeOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeOutput(GetNotificationTypeOutput other) : this() {
+      notificationType_ = other.notificationType_ != null ? other.notificationType_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetNotificationTypeOutput Clone() {
+      return new GetNotificationTypeOutput(this);
+    }
+
+    /// <summary>Field number for the "notification_type" field.</summary>
+    public const int NotificationTypeFieldNumber = 1;
+    private global::SKF.Enlight.API.Notification.NotificationType notificationType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.NotificationType NotificationType {
+      get { return notificationType_; }
+      set {
+        notificationType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetNotificationTypeOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetNotificationTypeOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NotificationType, other.NotificationType)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (notificationType_ != null) hash ^= NotificationType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (notificationType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NotificationType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (notificationType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotificationType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetNotificationTypeOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.notificationType_ != null) {
+        if (notificationType_ == null) {
+          NotificationType = new global::SKF.Enlight.API.Notification.NotificationType();
+        }
+        NotificationType.MergeFrom(other.NotificationType);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (notificationType_ == null) {
+              NotificationType = new global::SKF.Enlight.API.Notification.NotificationType();
+            }
+            input.ReadMessage(NotificationType);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InitiateNotificationInput : pb::IMessage<InitiateNotificationInput> {
+    private static readonly pb::MessageParser<InitiateNotificationInput> _parser = new pb::MessageParser<InitiateNotificationInput>(() => new InitiateNotificationInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InitiateNotificationInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InitiateNotificationInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InitiateNotificationInput(InitiateNotificationInput other) : this() {
+      type_ = other.type_ != null ? other.type_.Clone() : null;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       header_ = other.header_;
       body_ = other.body_;
@@ -392,13 +1280,13 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationInput Clone() {
-      return new SendNotificationInput(this);
+    public InitiateNotificationInput Clone() {
+      return new InitiateNotificationInput(this);
     }
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::SKF.Enlight.API.Notification.NotificationType type_ = 0;
+    private global::SKF.Enlight.API.Notification.NotificationType type_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Notification.NotificationType Type {
       get { return type_; }
@@ -453,18 +1341,18 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendNotificationInput);
+      return Equals(other as InitiateNotificationInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendNotificationInput other) {
+    public bool Equals(InitiateNotificationInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
+      if (!object.Equals(Type, other.Type)) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
       if (Header != other.Header) return false;
       if (Body != other.Body) return false;
@@ -475,7 +1363,7 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (type_ != null) hash ^= Type.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (Header.Length != 0) hash ^= Header.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
@@ -493,9 +1381,9 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
+      if (type_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Type);
       }
       if (resource_ != null) {
         output.WriteRawTag(18);
@@ -521,8 +1409,8 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (type_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Type);
       }
       if (resource_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resource);
@@ -543,12 +1431,15 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendNotificationInput other) {
+    public void MergeFrom(InitiateNotificationInput other) {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
-        Type = other.Type;
+      if (other.type_ != null) {
+        if (type_ == null) {
+          Type = new global::SKF.Enlight.API.Notification.NotificationType();
+        }
+        Type.MergeFrom(other.Type);
       }
       if (other.resource_ != null) {
         if (resource_ == null) {
@@ -576,8 +1467,11 @@ namespace SKF.Enlight.API.Notification {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Type = (global::SKF.Enlight.API.Notification.NotificationType) input.ReadEnum();
+          case 10: {
+            if (type_ == null) {
+              Type = new global::SKF.Enlight.API.Notification.NotificationType();
+            }
+            input.ReadMessage(Type);
             break;
           }
           case 18: {
@@ -605,15 +1499,15 @@ namespace SKF.Enlight.API.Notification {
 
   }
 
-  public sealed partial class SendNotificationOutput : pb::IMessage<SendNotificationOutput> {
-    private static readonly pb::MessageParser<SendNotificationOutput> _parser = new pb::MessageParser<SendNotificationOutput>(() => new SendNotificationOutput());
+  public sealed partial class InitiateNotificationOutput : pb::IMessage<InitiateNotificationOutput> {
+    private static readonly pb::MessageParser<InitiateNotificationOutput> _parser = new pb::MessageParser<InitiateNotificationOutput>(() => new InitiateNotificationOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendNotificationOutput> Parser { get { return _parser; } }
+    public static pb::MessageParser<InitiateNotificationOutput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -622,55 +1516,55 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationOutput() {
+    public InitiateNotificationOutput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationOutput(SendNotificationOutput other) : this() {
-      id_ = other.id_;
+    public InitiateNotificationOutput(InitiateNotificationOutput other) : this() {
+      externalId_ = other.externalId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendNotificationOutput Clone() {
-      return new SendNotificationOutput(this);
+    public InitiateNotificationOutput Clone() {
+      return new InitiateNotificationOutput(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
+    /// <summary>Field number for the "external_id" field.</summary>
+    public const int ExternalIdFieldNumber = 1;
+    private string externalId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
+    public string ExternalId {
+      get { return externalId_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendNotificationOutput);
+      return Equals(other as InitiateNotificationOutput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendNotificationOutput other) {
+    public bool Equals(InitiateNotificationOutput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
+      if (ExternalId != other.ExternalId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -684,9 +1578,9 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
+      if (ExternalId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Id);
+        output.WriteString(ExternalId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -696,8 +1590,8 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (ExternalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -706,12 +1600,12 @@ namespace SKF.Enlight.API.Notification {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendNotificationOutput other) {
+    public void MergeFrom(InitiateNotificationOutput other) {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
+      if (other.ExternalId.Length != 0) {
+        ExternalId = other.ExternalId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -725,7 +1619,524 @@ namespace SKF.Enlight.API.Notification {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id = input.ReadString();
+            ExternalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetInitiatedNotificationInput : pb::IMessage<GetInitiatedNotificationInput> {
+    private static readonly pb::MessageParser<GetInitiatedNotificationInput> _parser = new pb::MessageParser<GetInitiatedNotificationInput>(() => new GetInitiatedNotificationInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetInitiatedNotificationInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationInput(GetInitiatedNotificationInput other) : this() {
+      externalId_ = other.externalId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationInput Clone() {
+      return new GetInitiatedNotificationInput(this);
+    }
+
+    /// <summary>Field number for the "external_id" field.</summary>
+    public const int ExternalIdFieldNumber = 1;
+    private string externalId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExternalId {
+      get { return externalId_; }
+      set {
+        externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetInitiatedNotificationInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetInitiatedNotificationInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ExternalId != other.ExternalId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExternalId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ExternalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetInitiatedNotificationInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ExternalId.Length != 0) {
+        ExternalId = other.ExternalId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ExternalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetInitiatedNotificationOutput : pb::IMessage<GetInitiatedNotificationOutput> {
+    private static readonly pb::MessageParser<GetInitiatedNotificationOutput> _parser = new pb::MessageParser<GetInitiatedNotificationOutput>(() => new GetInitiatedNotificationOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetInitiatedNotificationOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationOutput(GetInitiatedNotificationOutput other) : this() {
+      initiatedNotification_ = other.initiatedNotification_ != null ? other.initiatedNotification_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInitiatedNotificationOutput Clone() {
+      return new GetInitiatedNotificationOutput(this);
+    }
+
+    /// <summary>Field number for the "initiated_notification" field.</summary>
+    public const int InitiatedNotificationFieldNumber = 1;
+    private global::SKF.Enlight.API.Notification.InitiatedNotification initiatedNotification_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.InitiatedNotification InitiatedNotification {
+      get { return initiatedNotification_; }
+      set {
+        initiatedNotification_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetInitiatedNotificationOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetInitiatedNotificationOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InitiatedNotification, other.InitiatedNotification)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (initiatedNotification_ != null) hash ^= InitiatedNotification.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (initiatedNotification_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InitiatedNotification);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (initiatedNotification_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InitiatedNotification);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetInitiatedNotificationOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.initiatedNotification_ != null) {
+        if (initiatedNotification_ == null) {
+          InitiatedNotification = new global::SKF.Enlight.API.Notification.InitiatedNotification();
+        }
+        InitiatedNotification.MergeFrom(other.InitiatedNotification);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (initiatedNotification_ == null) {
+              InitiatedNotification = new global::SKF.Enlight.API.Notification.InitiatedNotification();
+            }
+            input.ReadMessage(InitiatedNotification);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UserNotification : pb::IMessage<UserNotification> {
+    private static readonly pb::MessageParser<UserNotification> _parser = new pb::MessageParser<UserNotification>(() => new UserNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UserNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserNotification(UserNotification other) : this() {
+      externalId_ = other.externalId_;
+      initiatedNotification_ = other.initiatedNotification_ != null ? other.initiatedNotification_.Clone() : null;
+      userPreference_ = other.userPreference_ != null ? other.userPreference_.Clone() : null;
+      sendState_ = other.sendState_;
+      scheduledTime_ = other.scheduledTime_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserNotification Clone() {
+      return new UserNotification(this);
+    }
+
+    /// <summary>Field number for the "external_id" field.</summary>
+    public const int ExternalIdFieldNumber = 1;
+    private string externalId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExternalId {
+      get { return externalId_; }
+      set {
+        externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "initiated_notification" field.</summary>
+    public const int InitiatedNotificationFieldNumber = 2;
+    private global::SKF.Enlight.API.Notification.InitiatedNotification initiatedNotification_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.InitiatedNotification InitiatedNotification {
+      get { return initiatedNotification_; }
+      set {
+        initiatedNotification_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_preference" field.</summary>
+    public const int UserPreferenceFieldNumber = 3;
+    private global::SKF.Enlight.API.Notification.UserPreference userPreference_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.UserPreference UserPreference {
+      get { return userPreference_; }
+      set {
+        userPreference_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "send_state" field.</summary>
+    public const int SendStateFieldNumber = 4;
+    private global::SKF.Enlight.API.Notification.SendState sendState_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.SendState SendState {
+      get { return sendState_; }
+      set {
+        sendState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_time" field.</summary>
+    public const int ScheduledTimeFieldNumber = 5;
+    private long scheduledTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ScheduledTime {
+      get { return scheduledTime_; }
+      set {
+        scheduledTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UserNotification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UserNotification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ExternalId != other.ExternalId) return false;
+      if (!object.Equals(InitiatedNotification, other.InitiatedNotification)) return false;
+      if (!object.Equals(UserPreference, other.UserPreference)) return false;
+      if (SendState != other.SendState) return false;
+      if (ScheduledTime != other.ScheduledTime) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
+      if (initiatedNotification_ != null) hash ^= InitiatedNotification.GetHashCode();
+      if (userPreference_ != null) hash ^= UserPreference.GetHashCode();
+      if (SendState != 0) hash ^= SendState.GetHashCode();
+      if (ScheduledTime != 0L) hash ^= ScheduledTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExternalId);
+      }
+      if (initiatedNotification_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InitiatedNotification);
+      }
+      if (userPreference_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UserPreference);
+      }
+      if (SendState != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SendState);
+      }
+      if (ScheduledTime != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ScheduledTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ExternalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
+      }
+      if (initiatedNotification_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InitiatedNotification);
+      }
+      if (userPreference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserPreference);
+      }
+      if (SendState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SendState);
+      }
+      if (ScheduledTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ScheduledTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UserNotification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ExternalId.Length != 0) {
+        ExternalId = other.ExternalId;
+      }
+      if (other.initiatedNotification_ != null) {
+        if (initiatedNotification_ == null) {
+          InitiatedNotification = new global::SKF.Enlight.API.Notification.InitiatedNotification();
+        }
+        InitiatedNotification.MergeFrom(other.InitiatedNotification);
+      }
+      if (other.userPreference_ != null) {
+        if (userPreference_ == null) {
+          UserPreference = new global::SKF.Enlight.API.Notification.UserPreference();
+        }
+        UserPreference.MergeFrom(other.UserPreference);
+      }
+      if (other.SendState != 0) {
+        SendState = other.SendState;
+      }
+      if (other.ScheduledTime != 0L) {
+        ScheduledTime = other.ScheduledTime;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ExternalId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (initiatedNotification_ == null) {
+              InitiatedNotification = new global::SKF.Enlight.API.Notification.InitiatedNotification();
+            }
+            input.ReadMessage(InitiatedNotification);
+            break;
+          }
+          case 26: {
+            if (userPreference_ == null) {
+              UserPreference = new global::SKF.Enlight.API.Notification.UserPreference();
+            }
+            input.ReadMessage(UserPreference);
+            break;
+          }
+          case 32: {
+            SendState = (global::SKF.Enlight.API.Notification.SendState) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            ScheduledTime = input.ReadInt64();
             break;
           }
         }
@@ -742,7 +2153,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -899,7 +2310,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -927,11 +2338,11 @@ namespace SKF.Enlight.API.Notification {
 
     /// <summary>Field number for the "notifications" field.</summary>
     public const int NotificationsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Notification.NotificationMessage> _repeated_notifications_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.Notification.NotificationMessage.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Notification.NotificationMessage> notifications_ = new pbc::RepeatedField<global::SKF.Enlight.API.Notification.NotificationMessage>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Notification.UserNotification> _repeated_notifications_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.Notification.UserNotification.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Notification.UserNotification> notifications_ = new pbc::RepeatedField<global::SKF.Enlight.API.Notification.UserNotification>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.API.Notification.NotificationMessage> Notifications {
+    public pbc::RepeatedField<global::SKF.Enlight.API.Notification.UserNotification> Notifications {
       get { return notifications_; }
     }
 
@@ -1020,7 +2431,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1050,9 +2461,9 @@ namespace SKF.Enlight.API.Notification {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::SKF.Enlight.API.Notification.NotificationType type_ = 0;
+    private global::SKF.Enlight.API.Notification.DeliveryChannel type_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.API.Notification.NotificationType Type {
+    public global::SKF.Enlight.API.Notification.DeliveryChannel Type {
       get { return type_; }
       set {
         type_ = value;
@@ -1180,7 +2591,7 @@ namespace SKF.Enlight.API.Notification {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::SKF.Enlight.API.Notification.NotificationType) input.ReadEnum();
+            Type = (global::SKF.Enlight.API.Notification.DeliveryChannel) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1205,7 +2616,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1223,8 +2634,9 @@ namespace SKF.Enlight.API.Notification {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UserPreference(UserPreference other) : this() {
       userId_ = other.userId_;
-      type_ = other.type_;
-      schedule_ = other.schedule_ != null ? other.schedule_.Clone() : null;
+      notificationTypeExtId_ = other.notificationTypeExtId_;
+      deliveryChannel_ = other.deliveryChannel_;
+      deliverySchedule_ = other.deliverySchedule_ != null ? other.deliverySchedule_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1244,25 +2656,36 @@ namespace SKF.Enlight.API.Notification {
       }
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 2;
-    private global::SKF.Enlight.API.Notification.NotificationType type_ = 0;
+    /// <summary>Field number for the "notification_type_ext_id" field.</summary>
+    public const int NotificationTypeExtIdFieldNumber = 2;
+    private string notificationTypeExtId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.API.Notification.NotificationType Type {
-      get { return type_; }
+    public string NotificationTypeExtId {
+      get { return notificationTypeExtId_; }
       set {
-        type_ = value;
+        notificationTypeExtId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "schedule" field.</summary>
-    public const int ScheduleFieldNumber = 3;
-    private global::SKF.Enlight.API.Notification.UserPreferenceSchedule schedule_;
+    /// <summary>Field number for the "delivery_channel" field.</summary>
+    public const int DeliveryChannelFieldNumber = 3;
+    private global::SKF.Enlight.API.Notification.DeliveryChannel deliveryChannel_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.API.Notification.UserPreferenceSchedule Schedule {
-      get { return schedule_; }
+    public global::SKF.Enlight.API.Notification.DeliveryChannel DeliveryChannel {
+      get { return deliveryChannel_; }
       set {
-        schedule_ = value;
+        deliveryChannel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delivery_schedule" field.</summary>
+    public const int DeliveryScheduleFieldNumber = 4;
+    private global::SKF.Enlight.API.Notification.DeliverySchedule deliverySchedule_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.DeliverySchedule DeliverySchedule {
+      get { return deliverySchedule_; }
+      set {
+        deliverySchedule_ = value;
       }
     }
 
@@ -1280,8 +2703,9 @@ namespace SKF.Enlight.API.Notification {
         return true;
       }
       if (UserId != other.UserId) return false;
-      if (Type != other.Type) return false;
-      if (!object.Equals(Schedule, other.Schedule)) return false;
+      if (NotificationTypeExtId != other.NotificationTypeExtId) return false;
+      if (DeliveryChannel != other.DeliveryChannel) return false;
+      if (!object.Equals(DeliverySchedule, other.DeliverySchedule)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1289,8 +2713,9 @@ namespace SKF.Enlight.API.Notification {
     public override int GetHashCode() {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
-      if (schedule_ != null) hash ^= Schedule.GetHashCode();
+      if (NotificationTypeExtId.Length != 0) hash ^= NotificationTypeExtId.GetHashCode();
+      if (DeliveryChannel != 0) hash ^= DeliveryChannel.GetHashCode();
+      if (deliverySchedule_ != null) hash ^= DeliverySchedule.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1308,13 +2733,17 @@ namespace SKF.Enlight.API.Notification {
         output.WriteRawTag(10);
         output.WriteString(UserId);
       }
-      if (Type != 0) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Type);
+      if (NotificationTypeExtId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NotificationTypeExtId);
       }
-      if (schedule_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Schedule);
+      if (DeliveryChannel != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DeliveryChannel);
+      }
+      if (deliverySchedule_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeliverySchedule);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1327,11 +2756,14 @@ namespace SKF.Enlight.API.Notification {
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (NotificationTypeExtId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationTypeExtId);
       }
-      if (schedule_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Schedule);
+      if (DeliveryChannel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeliveryChannel);
+      }
+      if (deliverySchedule_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeliverySchedule);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1347,14 +2779,17 @@ namespace SKF.Enlight.API.Notification {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.Type != 0) {
-        Type = other.Type;
+      if (other.NotificationTypeExtId.Length != 0) {
+        NotificationTypeExtId = other.NotificationTypeExtId;
       }
-      if (other.schedule_ != null) {
-        if (schedule_ == null) {
-          Schedule = new global::SKF.Enlight.API.Notification.UserPreferenceSchedule();
+      if (other.DeliveryChannel != 0) {
+        DeliveryChannel = other.DeliveryChannel;
+      }
+      if (other.deliverySchedule_ != null) {
+        if (deliverySchedule_ == null) {
+          DeliverySchedule = new global::SKF.Enlight.API.Notification.DeliverySchedule();
         }
-        Schedule.MergeFrom(other.Schedule);
+        DeliverySchedule.MergeFrom(other.DeliverySchedule);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1371,15 +2806,19 @@ namespace SKF.Enlight.API.Notification {
             UserId = input.ReadString();
             break;
           }
-          case 16: {
-            Type = (global::SKF.Enlight.API.Notification.NotificationType) input.ReadEnum();
+          case 18: {
+            NotificationTypeExtId = input.ReadString();
             break;
           }
-          case 26: {
-            if (schedule_ == null) {
-              Schedule = new global::SKF.Enlight.API.Notification.UserPreferenceSchedule();
+          case 24: {
+            DeliveryChannel = (global::SKF.Enlight.API.Notification.DeliveryChannel) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (deliverySchedule_ == null) {
+              DeliverySchedule = new global::SKF.Enlight.API.Notification.DeliverySchedule();
             }
-            input.ReadMessage(Schedule);
+            input.ReadMessage(DeliverySchedule);
             break;
           }
         }
@@ -1396,7 +2835,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1517,7 +2956,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1646,7 +3085,7 @@ namespace SKF.Enlight.API.Notification {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

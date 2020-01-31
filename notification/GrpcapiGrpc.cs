@@ -14,8 +14,13 @@ namespace SKF.Enlight.API.Notification {
 
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SendNotificationInput> __Marshaller_grpcapi_SendNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SendNotificationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SendNotificationOutput> __Marshaller_grpcapi_SendNotificationOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SendNotificationOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetNotificationTypeInput> __Marshaller_grpcapi_SetNotificationTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SetNotificationTypeInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeInput> __Marshaller_grpcapi_GetNotificationTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetNotificationTypeInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> __Marshaller_grpcapi_GetNotificationTypeOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetNotificationTypeOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationInput> __Marshaller_grpcapi_InitiateNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.InitiateNotificationInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> __Marshaller_grpcapi_InitiateNotificationOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.InitiateNotificationOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput> __Marshaller_grpcapi_GetInitiatedNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> __Marshaller_grpcapi_GetInitiatedNotificationOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetUserPreferencesInput> __Marshaller_grpcapi_SetUserPreferencesInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SetUserPreferencesInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesInput> __Marshaller_grpcapi_GetUserPreferencesInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserPreferencesInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesOutput> __Marshaller_grpcapi_GetUserPreferencesOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserPreferencesOutput.Parser.ParseFrom);
@@ -29,12 +34,33 @@ namespace SKF.Enlight.API.Notification {
         __Marshaller_common_Void,
         __Marshaller_common_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Notification.SendNotificationInput, global::SKF.Enlight.API.Notification.SendNotificationOutput> __Method_SendNotification = new grpc::Method<global::SKF.Enlight.API.Notification.SendNotificationInput, global::SKF.Enlight.API.Notification.SendNotificationOutput>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Notification.SetNotificationTypeInput, global::SKF.Enlight.API.Common.Void> __Method_SetNotificationType = new grpc::Method<global::SKF.Enlight.API.Notification.SetNotificationTypeInput, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendNotification",
-        __Marshaller_grpcapi_SendNotificationInput,
-        __Marshaller_grpcapi_SendNotificationOutput);
+        "SetNotificationType",
+        __Marshaller_grpcapi_SetNotificationTypeInput,
+        __Marshaller_common_Void);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Notification.GetNotificationTypeInput, global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> __Method_GetNotificationType = new grpc::Method<global::SKF.Enlight.API.Notification.GetNotificationTypeInput, global::SKF.Enlight.API.Notification.GetNotificationTypeOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNotificationType",
+        __Marshaller_grpcapi_GetNotificationTypeInput,
+        __Marshaller_grpcapi_GetNotificationTypeOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Notification.InitiateNotificationInput, global::SKF.Enlight.API.Notification.InitiateNotificationOutput> __Method_InitiateNotification = new grpc::Method<global::SKF.Enlight.API.Notification.InitiateNotificationInput, global::SKF.Enlight.API.Notification.InitiateNotificationOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InitiateNotification",
+        __Marshaller_grpcapi_InitiateNotificationInput,
+        __Marshaller_grpcapi_InitiateNotificationOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput, global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> __Method_GetInitiatedNotification = new grpc::Method<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput, global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetInitiatedNotification",
+        __Marshaller_grpcapi_GetInitiatedNotificationInput,
+        __Marshaller_grpcapi_GetInitiatedNotificationOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Notification.SetUserPreferencesInput, global::SKF.Enlight.API.Common.Void> __Method_SetUserPreferences = new grpc::Method<global::SKF.Enlight.API.Notification.SetUserPreferencesInput, global::SKF.Enlight.API.Common.Void>(
         grpc::MethodType.Unary,
@@ -72,7 +98,22 @@ namespace SKF.Enlight.API.Notification {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Notification.SendNotificationOutput> SendNotification(global::SKF.Enlight.API.Notification.SendNotificationInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> SetNotificationType(global::SKF.Enlight.API.Notification.SetNotificationTypeInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> GetNotificationType(global::SKF.Enlight.API.Notification.GetNotificationTypeInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> InitiateNotification(global::SKF.Enlight.API.Notification.InitiateNotificationInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> GetInitiatedNotification(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -133,21 +174,69 @@ namespace SKF.Enlight.API.Notification {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Notification.SendNotificationOutput SendNotification(global::SKF.Enlight.API.Notification.SendNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Common.Void SetNotificationType(global::SKF.Enlight.API.Notification.SetNotificationTypeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendNotification(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SetNotificationType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Notification.SendNotificationOutput SendNotification(global::SKF.Enlight.API.Notification.SendNotificationInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Common.Void SetNotificationType(global::SKF.Enlight.API.Notification.SetNotificationTypeInput request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendNotification, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_SetNotificationType, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.SendNotificationOutput> SendNotificationAsync(global::SKF.Enlight.API.Notification.SendNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetNotificationTypeAsync(global::SKF.Enlight.API.Notification.SetNotificationTypeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendNotificationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SetNotificationTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.SendNotificationOutput> SendNotificationAsync(global::SKF.Enlight.API.Notification.SendNotificationInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> SetNotificationTypeAsync(global::SKF.Enlight.API.Notification.SetNotificationTypeInput request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendNotification, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_SetNotificationType, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Notification.GetNotificationTypeOutput GetNotificationType(global::SKF.Enlight.API.Notification.GetNotificationTypeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNotificationType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Notification.GetNotificationTypeOutput GetNotificationType(global::SKF.Enlight.API.Notification.GetNotificationTypeInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNotificationType, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> GetNotificationTypeAsync(global::SKF.Enlight.API.Notification.GetNotificationTypeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNotificationTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> GetNotificationTypeAsync(global::SKF.Enlight.API.Notification.GetNotificationTypeInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNotificationType, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Notification.InitiateNotificationOutput InitiateNotification(global::SKF.Enlight.API.Notification.InitiateNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitiateNotification(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Notification.InitiateNotificationOutput InitiateNotification(global::SKF.Enlight.API.Notification.InitiateNotificationInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InitiateNotification, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> InitiateNotificationAsync(global::SKF.Enlight.API.Notification.InitiateNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitiateNotificationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> InitiateNotificationAsync(global::SKF.Enlight.API.Notification.InitiateNotificationInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InitiateNotification, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput GetInitiatedNotification(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInitiatedNotification(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput GetInitiatedNotification(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetInitiatedNotification, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> GetInitiatedNotificationAsync(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInitiatedNotificationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> GetInitiatedNotificationAsync(global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetInitiatedNotification, null, options, request);
       }
       public virtual global::SKF.Enlight.API.Common.Void SetUserPreferences(global::SKF.Enlight.API.Notification.SetUserPreferencesInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -210,7 +299,10 @@ namespace SKF.Enlight.API.Notification {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DeepPing, serviceImpl.DeepPing)
-          .AddMethod(__Method_SendNotification, serviceImpl.SendNotification)
+          .AddMethod(__Method_SetNotificationType, serviceImpl.SetNotificationType)
+          .AddMethod(__Method_GetNotificationType, serviceImpl.GetNotificationType)
+          .AddMethod(__Method_InitiateNotification, serviceImpl.InitiateNotification)
+          .AddMethod(__Method_GetInitiatedNotification, serviceImpl.GetInitiatedNotification)
           .AddMethod(__Method_SetUserPreferences, serviceImpl.SetUserPreferences)
           .AddMethod(__Method_GetUserPreferences, serviceImpl.GetUserPreferences)
           .AddMethod(__Method_GetUserNotifications, serviceImpl.GetUserNotifications).Build();
@@ -223,7 +315,10 @@ namespace SKF.Enlight.API.Notification {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NotificationBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DeepPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(serviceImpl.DeepPing));
-      serviceBinder.AddMethod(__Method_SendNotification, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.SendNotificationInput, global::SKF.Enlight.API.Notification.SendNotificationOutput>(serviceImpl.SendNotification));
+      serviceBinder.AddMethod(__Method_SetNotificationType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.SetNotificationTypeInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.SetNotificationType));
+      serviceBinder.AddMethod(__Method_GetNotificationType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.GetNotificationTypeInput, global::SKF.Enlight.API.Notification.GetNotificationTypeOutput>(serviceImpl.GetNotificationType));
+      serviceBinder.AddMethod(__Method_InitiateNotification, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.InitiateNotificationInput, global::SKF.Enlight.API.Notification.InitiateNotificationOutput>(serviceImpl.InitiateNotification));
+      serviceBinder.AddMethod(__Method_GetInitiatedNotification, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput, global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput>(serviceImpl.GetInitiatedNotification));
       serviceBinder.AddMethod(__Method_SetUserPreferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.SetUserPreferencesInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.SetUserPreferences));
       serviceBinder.AddMethod(__Method_GetUserPreferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.GetUserPreferencesInput, global::SKF.Enlight.API.Notification.GetUserPreferencesOutput>(serviceImpl.GetUserPreferences));
       serviceBinder.AddMethod(__Method_GetUserNotifications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.GetUserNotificationsInput, global::SKF.Enlight.API.Notification.GetUserNotificationsOutput>(serviceImpl.GetUserNotifications));
