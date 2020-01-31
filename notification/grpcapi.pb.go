@@ -24,210 +24,643 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type NotificationType int32
+type DeliveryChannel int32
 
 const (
-	NotificationType_MAIL NotificationType = 0
+	DeliveryChannel_MAIL DeliveryChannel = 0
 )
 
-var NotificationType_name = map[int32]string{
+var DeliveryChannel_name = map[int32]string{
 	0: "MAIL",
 }
-var NotificationType_value = map[string]int32{
+var DeliveryChannel_value = map[string]int32{
 	"MAIL": 0,
 }
 
-func (x NotificationType) String() string {
-	return proto.EnumName(NotificationType_name, int32(x))
+func (x DeliveryChannel) String() string {
+	return proto.EnumName(DeliveryChannel_name, int32(x))
 }
-func (NotificationType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{0}
-}
-
-type NotificationMessage struct {
-	Id                   string           `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Type                 NotificationType `protobuf:"varint,2,opt,name=type,proto3,enum=grpcapi.NotificationType" json:"type,omitempty"`
-	Resource             *common.Origin   `protobuf:"bytes,3,opt,name=resource,proto3" json:"resource,omitempty"`
-	Header               string           `protobuf:"bytes,4,opt,name=header,proto3" json:"header,omitempty"`
-	Body                 string           `protobuf:"bytes,5,opt,name=body,proto3" json:"body,omitempty"`
-	CreatedBy            string           `protobuf:"bytes,6,opt,name=created_by,json=createdBy,proto3" json:"created_by,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+func (DeliveryChannel) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{0}
 }
 
-func (m *NotificationMessage) Reset()         { *m = NotificationMessage{} }
-func (m *NotificationMessage) String() string { return proto.CompactTextString(m) }
-func (*NotificationMessage) ProtoMessage()    {}
-func (*NotificationMessage) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{0}
+type DeliveryScheduleType int32
+
+const (
+	DeliveryScheduleType_IMMEDIATE DeliveryScheduleType = 0
+	DeliveryScheduleType_DAILY     DeliveryScheduleType = 1
+)
+
+var DeliveryScheduleType_name = map[int32]string{
+	0: "IMMEDIATE",
+	1: "DAILY",
 }
-func (m *NotificationMessage) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_NotificationMessage.Unmarshal(m, b)
-}
-func (m *NotificationMessage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_NotificationMessage.Marshal(b, m, deterministic)
-}
-func (dst *NotificationMessage) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_NotificationMessage.Merge(dst, src)
-}
-func (m *NotificationMessage) XXX_Size() int {
-	return xxx_messageInfo_NotificationMessage.Size(m)
-}
-func (m *NotificationMessage) XXX_DiscardUnknown() {
-	xxx_messageInfo_NotificationMessage.DiscardUnknown(m)
+var DeliveryScheduleType_value = map[string]int32{
+	"IMMEDIATE": 0,
+	"DAILY":     1,
 }
 
-var xxx_messageInfo_NotificationMessage proto.InternalMessageInfo
+func (x DeliveryScheduleType) String() string {
+	return proto.EnumName(DeliveryScheduleType_name, int32(x))
+}
+func (DeliveryScheduleType) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{1}
+}
 
-func (m *NotificationMessage) GetId() string {
+type SendState int32
+
+const (
+	SendState_NEW     SendState = 0
+	SendState_SENT_OK SendState = 1
+	SendState_ERROR   SendState = 2
+)
+
+var SendState_name = map[int32]string{
+	0: "NEW",
+	1: "SENT_OK",
+	2: "ERROR",
+}
+var SendState_value = map[string]int32{
+	"NEW":     0,
+	"SENT_OK": 1,
+	"ERROR":   2,
+}
+
+func (x SendState) String() string {
+	return proto.EnumName(SendState_name, int32(x))
+}
+func (SendState) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{2}
+}
+
+type DeliverySchedule struct {
+	DefaultDeliverySchedule            DeliveryScheduleType `protobuf:"varint,1,opt,name=default_delivery_schedule,json=defaultDeliverySchedule,proto3,enum=grpcapi.DeliveryScheduleType" json:"default_delivery_schedule,omitempty"`
+	MinimumSecondsBetweenNotifications int32                `protobuf:"varint,2,opt,name=MinimumSecondsBetweenNotifications,proto3" json:"MinimumSecondsBetweenNotifications,omitempty"`
+	DailyDeliveryTimeHour              int32                `protobuf:"varint,3,opt,name=DailyDeliveryTimeHour,proto3" json:"DailyDeliveryTimeHour,omitempty"`
+	DailyDeliveryTimeMinute            int32                `protobuf:"varint,4,opt,name=DailyDeliveryTimeMinute,proto3" json:"DailyDeliveryTimeMinute,omitempty"`
+	XXX_NoUnkeyedLiteral               struct{}             `json:"-"`
+	XXX_unrecognized                   []byte               `json:"-"`
+	XXX_sizecache                      int32                `json:"-"`
+}
+
+func (m *DeliverySchedule) Reset()         { *m = DeliverySchedule{} }
+func (m *DeliverySchedule) String() string { return proto.CompactTextString(m) }
+func (*DeliverySchedule) ProtoMessage()    {}
+func (*DeliverySchedule) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{0}
+}
+func (m *DeliverySchedule) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DeliverySchedule.Unmarshal(m, b)
+}
+func (m *DeliverySchedule) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DeliverySchedule.Marshal(b, m, deterministic)
+}
+func (dst *DeliverySchedule) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeliverySchedule.Merge(dst, src)
+}
+func (m *DeliverySchedule) XXX_Size() int {
+	return xxx_messageInfo_DeliverySchedule.Size(m)
+}
+func (m *DeliverySchedule) XXX_DiscardUnknown() {
+	xxx_messageInfo_DeliverySchedule.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DeliverySchedule proto.InternalMessageInfo
+
+func (m *DeliverySchedule) GetDefaultDeliverySchedule() DeliveryScheduleType {
 	if m != nil {
-		return m.Id
+		return m.DefaultDeliverySchedule
+	}
+	return DeliveryScheduleType_IMMEDIATE
+}
+
+func (m *DeliverySchedule) GetMinimumSecondsBetweenNotifications() int32 {
+	if m != nil {
+		return m.MinimumSecondsBetweenNotifications
+	}
+	return 0
+}
+
+func (m *DeliverySchedule) GetDailyDeliveryTimeHour() int32 {
+	if m != nil {
+		return m.DailyDeliveryTimeHour
+	}
+	return 0
+}
+
+func (m *DeliverySchedule) GetDailyDeliveryTimeMinute() int32 {
+	if m != nil {
+		return m.DailyDeliveryTimeMinute
+	}
+	return 0
+}
+
+type NotificationType struct {
+	Name                    string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	QualifyingAction        string            `protobuf:"bytes,2,opt,name=qualifying_action,json=qualifyingAction,proto3" json:"qualifying_action,omitempty"`
+	DefaultDeliveryChannel  DeliveryChannel   `protobuf:"varint,3,opt,name=default_delivery_channel,json=defaultDeliveryChannel,proto3,enum=grpcapi.DeliveryChannel" json:"default_delivery_channel,omitempty"`
+	DefaultDeliverySchedule *DeliverySchedule `protobuf:"bytes,4,opt,name=default_delivery_schedule,json=defaultDeliverySchedule,proto3" json:"default_delivery_schedule,omitempty"`
+	XXX_NoUnkeyedLiteral    struct{}          `json:"-"`
+	XXX_unrecognized        []byte            `json:"-"`
+	XXX_sizecache           int32             `json:"-"`
+}
+
+func (m *NotificationType) Reset()         { *m = NotificationType{} }
+func (m *NotificationType) String() string { return proto.CompactTextString(m) }
+func (*NotificationType) ProtoMessage()    {}
+func (*NotificationType) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{1}
+}
+func (m *NotificationType) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_NotificationType.Unmarshal(m, b)
+}
+func (m *NotificationType) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_NotificationType.Marshal(b, m, deterministic)
+}
+func (dst *NotificationType) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_NotificationType.Merge(dst, src)
+}
+func (m *NotificationType) XXX_Size() int {
+	return xxx_messageInfo_NotificationType.Size(m)
+}
+func (m *NotificationType) XXX_DiscardUnknown() {
+	xxx_messageInfo_NotificationType.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_NotificationType proto.InternalMessageInfo
+
+func (m *NotificationType) GetName() string {
+	if m != nil {
+		return m.Name
 	}
 	return ""
 }
 
-func (m *NotificationMessage) GetType() NotificationType {
+func (m *NotificationType) GetQualifyingAction() string {
+	if m != nil {
+		return m.QualifyingAction
+	}
+	return ""
+}
+
+func (m *NotificationType) GetDefaultDeliveryChannel() DeliveryChannel {
+	if m != nil {
+		return m.DefaultDeliveryChannel
+	}
+	return DeliveryChannel_MAIL
+}
+
+func (m *NotificationType) GetDefaultDeliverySchedule() *DeliverySchedule {
+	if m != nil {
+		return m.DefaultDeliverySchedule
+	}
+	return nil
+}
+
+type InitiatedNotification struct {
+	ExternalId           string            `protobuf:"bytes,1,opt,name=external_id,json=externalId,proto3" json:"external_id,omitempty"`
+	Type                 *NotificationType `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
+	Resource             *common.Origin    `protobuf:"bytes,3,opt,name=resource,proto3" json:"resource,omitempty"`
+	Header               string            `protobuf:"bytes,4,opt,name=header,proto3" json:"header,omitempty"`
+	Body                 string            `protobuf:"bytes,5,opt,name=body,proto3" json:"body,omitempty"`
+	CreatedBy            string            `protobuf:"bytes,6,opt,name=created_by,json=createdBy,proto3" json:"created_by,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *InitiatedNotification) Reset()         { *m = InitiatedNotification{} }
+func (m *InitiatedNotification) String() string { return proto.CompactTextString(m) }
+func (*InitiatedNotification) ProtoMessage()    {}
+func (*InitiatedNotification) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{2}
+}
+func (m *InitiatedNotification) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_InitiatedNotification.Unmarshal(m, b)
+}
+func (m *InitiatedNotification) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_InitiatedNotification.Marshal(b, m, deterministic)
+}
+func (dst *InitiatedNotification) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_InitiatedNotification.Merge(dst, src)
+}
+func (m *InitiatedNotification) XXX_Size() int {
+	return xxx_messageInfo_InitiatedNotification.Size(m)
+}
+func (m *InitiatedNotification) XXX_DiscardUnknown() {
+	xxx_messageInfo_InitiatedNotification.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_InitiatedNotification proto.InternalMessageInfo
+
+func (m *InitiatedNotification) GetExternalId() string {
+	if m != nil {
+		return m.ExternalId
+	}
+	return ""
+}
+
+func (m *InitiatedNotification) GetType() *NotificationType {
 	if m != nil {
 		return m.Type
 	}
-	return NotificationType_MAIL
+	return nil
 }
 
-func (m *NotificationMessage) GetResource() *common.Origin {
+func (m *InitiatedNotification) GetResource() *common.Origin {
 	if m != nil {
 		return m.Resource
 	}
 	return nil
 }
 
-func (m *NotificationMessage) GetHeader() string {
+func (m *InitiatedNotification) GetHeader() string {
 	if m != nil {
 		return m.Header
 	}
 	return ""
 }
 
-func (m *NotificationMessage) GetBody() string {
+func (m *InitiatedNotification) GetBody() string {
 	if m != nil {
 		return m.Body
 	}
 	return ""
 }
 
-func (m *NotificationMessage) GetCreatedBy() string {
+func (m *InitiatedNotification) GetCreatedBy() string {
 	if m != nil {
 		return m.CreatedBy
 	}
 	return ""
 }
 
-type SendNotificationInput struct {
-	Type                 NotificationType `protobuf:"varint,1,opt,name=type,proto3,enum=grpcapi.NotificationType" json:"type,omitempty"`
-	Resource             *common.Origin   `protobuf:"bytes,2,opt,name=resource,proto3" json:"resource,omitempty"`
-	Header               string           `protobuf:"bytes,3,opt,name=header,proto3" json:"header,omitempty"`
-	Body                 string           `protobuf:"bytes,4,opt,name=body,proto3" json:"body,omitempty"`
-	CreatedBy            string           `protobuf:"bytes,5,opt,name=created_by,json=createdBy,proto3" json:"created_by,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+type SetNotificationTypeInput struct {
+	NotificationType     *NotificationType `protobuf:"bytes,1,opt,name=notification_type,json=notificationType,proto3" json:"notification_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
 }
 
-func (m *SendNotificationInput) Reset()         { *m = SendNotificationInput{} }
-func (m *SendNotificationInput) String() string { return proto.CompactTextString(m) }
-func (*SendNotificationInput) ProtoMessage()    {}
-func (*SendNotificationInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{1}
+func (m *SetNotificationTypeInput) Reset()         { *m = SetNotificationTypeInput{} }
+func (m *SetNotificationTypeInput) String() string { return proto.CompactTextString(m) }
+func (*SetNotificationTypeInput) ProtoMessage()    {}
+func (*SetNotificationTypeInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{3}
 }
-func (m *SendNotificationInput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SendNotificationInput.Unmarshal(m, b)
+func (m *SetNotificationTypeInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SetNotificationTypeInput.Unmarshal(m, b)
 }
-func (m *SendNotificationInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SendNotificationInput.Marshal(b, m, deterministic)
+func (m *SetNotificationTypeInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SetNotificationTypeInput.Marshal(b, m, deterministic)
 }
-func (dst *SendNotificationInput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SendNotificationInput.Merge(dst, src)
+func (dst *SetNotificationTypeInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SetNotificationTypeInput.Merge(dst, src)
 }
-func (m *SendNotificationInput) XXX_Size() int {
-	return xxx_messageInfo_SendNotificationInput.Size(m)
+func (m *SetNotificationTypeInput) XXX_Size() int {
+	return xxx_messageInfo_SetNotificationTypeInput.Size(m)
 }
-func (m *SendNotificationInput) XXX_DiscardUnknown() {
-	xxx_messageInfo_SendNotificationInput.DiscardUnknown(m)
+func (m *SetNotificationTypeInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_SetNotificationTypeInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_SendNotificationInput proto.InternalMessageInfo
+var xxx_messageInfo_SetNotificationTypeInput proto.InternalMessageInfo
 
-func (m *SendNotificationInput) GetType() NotificationType {
+func (m *SetNotificationTypeInput) GetNotificationType() *NotificationType {
 	if m != nil {
-		return m.Type
-	}
-	return NotificationType_MAIL
-}
-
-func (m *SendNotificationInput) GetResource() *common.Origin {
-	if m != nil {
-		return m.Resource
+		return m.NotificationType
 	}
 	return nil
 }
 
-func (m *SendNotificationInput) GetHeader() string {
-	if m != nil {
-		return m.Header
-	}
-	return ""
-}
-
-func (m *SendNotificationInput) GetBody() string {
-	if m != nil {
-		return m.Body
-	}
-	return ""
-}
-
-func (m *SendNotificationInput) GetCreatedBy() string {
-	if m != nil {
-		return m.CreatedBy
-	}
-	return ""
-}
-
-type SendNotificationOutput struct {
-	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+type GetNotificationTypeInput struct {
+	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *SendNotificationOutput) Reset()         { *m = SendNotificationOutput{} }
-func (m *SendNotificationOutput) String() string { return proto.CompactTextString(m) }
-func (*SendNotificationOutput) ProtoMessage()    {}
-func (*SendNotificationOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{2}
+func (m *GetNotificationTypeInput) Reset()         { *m = GetNotificationTypeInput{} }
+func (m *GetNotificationTypeInput) String() string { return proto.CompactTextString(m) }
+func (*GetNotificationTypeInput) ProtoMessage()    {}
+func (*GetNotificationTypeInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{4}
 }
-func (m *SendNotificationOutput) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SendNotificationOutput.Unmarshal(m, b)
+func (m *GetNotificationTypeInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetNotificationTypeInput.Unmarshal(m, b)
 }
-func (m *SendNotificationOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SendNotificationOutput.Marshal(b, m, deterministic)
+func (m *GetNotificationTypeInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetNotificationTypeInput.Marshal(b, m, deterministic)
 }
-func (dst *SendNotificationOutput) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SendNotificationOutput.Merge(dst, src)
+func (dst *GetNotificationTypeInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetNotificationTypeInput.Merge(dst, src)
 }
-func (m *SendNotificationOutput) XXX_Size() int {
-	return xxx_messageInfo_SendNotificationOutput.Size(m)
+func (m *GetNotificationTypeInput) XXX_Size() int {
+	return xxx_messageInfo_GetNotificationTypeInput.Size(m)
 }
-func (m *SendNotificationOutput) XXX_DiscardUnknown() {
-	xxx_messageInfo_SendNotificationOutput.DiscardUnknown(m)
+func (m *GetNotificationTypeInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetNotificationTypeInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_SendNotificationOutput proto.InternalMessageInfo
+var xxx_messageInfo_GetNotificationTypeInput proto.InternalMessageInfo
 
-func (m *SendNotificationOutput) GetId() string {
+func (m *GetNotificationTypeInput) GetName() string {
 	if m != nil {
-		return m.Id
+		return m.Name
 	}
 	return ""
+}
+
+type GetNotificationTypeOutput struct {
+	NotificationType     *NotificationType `protobuf:"bytes,1,opt,name=notification_type,json=notificationType,proto3" json:"notification_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *GetNotificationTypeOutput) Reset()         { *m = GetNotificationTypeOutput{} }
+func (m *GetNotificationTypeOutput) String() string { return proto.CompactTextString(m) }
+func (*GetNotificationTypeOutput) ProtoMessage()    {}
+func (*GetNotificationTypeOutput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{5}
+}
+func (m *GetNotificationTypeOutput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetNotificationTypeOutput.Unmarshal(m, b)
+}
+func (m *GetNotificationTypeOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetNotificationTypeOutput.Marshal(b, m, deterministic)
+}
+func (dst *GetNotificationTypeOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetNotificationTypeOutput.Merge(dst, src)
+}
+func (m *GetNotificationTypeOutput) XXX_Size() int {
+	return xxx_messageInfo_GetNotificationTypeOutput.Size(m)
+}
+func (m *GetNotificationTypeOutput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetNotificationTypeOutput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetNotificationTypeOutput proto.InternalMessageInfo
+
+func (m *GetNotificationTypeOutput) GetNotificationType() *NotificationType {
+	if m != nil {
+		return m.NotificationType
+	}
+	return nil
+}
+
+type InitiateNotificationInput struct {
+	Type                 *NotificationType `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
+	Resource             *common.Origin    `protobuf:"bytes,2,opt,name=resource,proto3" json:"resource,omitempty"`
+	Header               string            `protobuf:"bytes,3,opt,name=header,proto3" json:"header,omitempty"`
+	Body                 string            `protobuf:"bytes,4,opt,name=body,proto3" json:"body,omitempty"`
+	CreatedBy            string            `protobuf:"bytes,5,opt,name=created_by,json=createdBy,proto3" json:"created_by,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *InitiateNotificationInput) Reset()         { *m = InitiateNotificationInput{} }
+func (m *InitiateNotificationInput) String() string { return proto.CompactTextString(m) }
+func (*InitiateNotificationInput) ProtoMessage()    {}
+func (*InitiateNotificationInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{6}
+}
+func (m *InitiateNotificationInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_InitiateNotificationInput.Unmarshal(m, b)
+}
+func (m *InitiateNotificationInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_InitiateNotificationInput.Marshal(b, m, deterministic)
+}
+func (dst *InitiateNotificationInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_InitiateNotificationInput.Merge(dst, src)
+}
+func (m *InitiateNotificationInput) XXX_Size() int {
+	return xxx_messageInfo_InitiateNotificationInput.Size(m)
+}
+func (m *InitiateNotificationInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_InitiateNotificationInput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_InitiateNotificationInput proto.InternalMessageInfo
+
+func (m *InitiateNotificationInput) GetType() *NotificationType {
+	if m != nil {
+		return m.Type
+	}
+	return nil
+}
+
+func (m *InitiateNotificationInput) GetResource() *common.Origin {
+	if m != nil {
+		return m.Resource
+	}
+	return nil
+}
+
+func (m *InitiateNotificationInput) GetHeader() string {
+	if m != nil {
+		return m.Header
+	}
+	return ""
+}
+
+func (m *InitiateNotificationInput) GetBody() string {
+	if m != nil {
+		return m.Body
+	}
+	return ""
+}
+
+func (m *InitiateNotificationInput) GetCreatedBy() string {
+	if m != nil {
+		return m.CreatedBy
+	}
+	return ""
+}
+
+type InitiateNotificationOutput struct {
+	ExternalId           string   `protobuf:"bytes,1,opt,name=external_id,json=externalId,proto3" json:"external_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *InitiateNotificationOutput) Reset()         { *m = InitiateNotificationOutput{} }
+func (m *InitiateNotificationOutput) String() string { return proto.CompactTextString(m) }
+func (*InitiateNotificationOutput) ProtoMessage()    {}
+func (*InitiateNotificationOutput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{7}
+}
+func (m *InitiateNotificationOutput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_InitiateNotificationOutput.Unmarshal(m, b)
+}
+func (m *InitiateNotificationOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_InitiateNotificationOutput.Marshal(b, m, deterministic)
+}
+func (dst *InitiateNotificationOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_InitiateNotificationOutput.Merge(dst, src)
+}
+func (m *InitiateNotificationOutput) XXX_Size() int {
+	return xxx_messageInfo_InitiateNotificationOutput.Size(m)
+}
+func (m *InitiateNotificationOutput) XXX_DiscardUnknown() {
+	xxx_messageInfo_InitiateNotificationOutput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_InitiateNotificationOutput proto.InternalMessageInfo
+
+func (m *InitiateNotificationOutput) GetExternalId() string {
+	if m != nil {
+		return m.ExternalId
+	}
+	return ""
+}
+
+type GetInitiatedNotificationInput struct {
+	ExternalId           string   `protobuf:"bytes,1,opt,name=external_id,json=externalId,proto3" json:"external_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetInitiatedNotificationInput) Reset()         { *m = GetInitiatedNotificationInput{} }
+func (m *GetInitiatedNotificationInput) String() string { return proto.CompactTextString(m) }
+func (*GetInitiatedNotificationInput) ProtoMessage()    {}
+func (*GetInitiatedNotificationInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{8}
+}
+func (m *GetInitiatedNotificationInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetInitiatedNotificationInput.Unmarshal(m, b)
+}
+func (m *GetInitiatedNotificationInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetInitiatedNotificationInput.Marshal(b, m, deterministic)
+}
+func (dst *GetInitiatedNotificationInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetInitiatedNotificationInput.Merge(dst, src)
+}
+func (m *GetInitiatedNotificationInput) XXX_Size() int {
+	return xxx_messageInfo_GetInitiatedNotificationInput.Size(m)
+}
+func (m *GetInitiatedNotificationInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetInitiatedNotificationInput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetInitiatedNotificationInput proto.InternalMessageInfo
+
+func (m *GetInitiatedNotificationInput) GetExternalId() string {
+	if m != nil {
+		return m.ExternalId
+	}
+	return ""
+}
+
+type GetInitiatedNotificationOutput struct {
+	InitiatedNotification *InitiatedNotification `protobuf:"bytes,1,opt,name=initiated_notification,json=initiatedNotification,proto3" json:"initiated_notification,omitempty"`
+	XXX_NoUnkeyedLiteral  struct{}               `json:"-"`
+	XXX_unrecognized      []byte                 `json:"-"`
+	XXX_sizecache         int32                  `json:"-"`
+}
+
+func (m *GetInitiatedNotificationOutput) Reset()         { *m = GetInitiatedNotificationOutput{} }
+func (m *GetInitiatedNotificationOutput) String() string { return proto.CompactTextString(m) }
+func (*GetInitiatedNotificationOutput) ProtoMessage()    {}
+func (*GetInitiatedNotificationOutput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{9}
+}
+func (m *GetInitiatedNotificationOutput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetInitiatedNotificationOutput.Unmarshal(m, b)
+}
+func (m *GetInitiatedNotificationOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetInitiatedNotificationOutput.Marshal(b, m, deterministic)
+}
+func (dst *GetInitiatedNotificationOutput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetInitiatedNotificationOutput.Merge(dst, src)
+}
+func (m *GetInitiatedNotificationOutput) XXX_Size() int {
+	return xxx_messageInfo_GetInitiatedNotificationOutput.Size(m)
+}
+func (m *GetInitiatedNotificationOutput) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetInitiatedNotificationOutput.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetInitiatedNotificationOutput proto.InternalMessageInfo
+
+func (m *GetInitiatedNotificationOutput) GetInitiatedNotification() *InitiatedNotification {
+	if m != nil {
+		return m.InitiatedNotification
+	}
+	return nil
+}
+
+type UserNotification struct {
+	ExternalId            string                 `protobuf:"bytes,1,opt,name=external_id,json=externalId,proto3" json:"external_id,omitempty"`
+	InitiatedNotification *InitiatedNotification `protobuf:"bytes,2,opt,name=initiated_notification,json=initiatedNotification,proto3" json:"initiated_notification,omitempty"`
+	UserPreference        *UserPreference        `protobuf:"bytes,3,opt,name=user_preference,json=userPreference,proto3" json:"user_preference,omitempty"`
+	SendState             SendState              `protobuf:"varint,4,opt,name=send_state,json=sendState,proto3,enum=grpcapi.SendState" json:"send_state,omitempty"`
+	ScheduledTime         int64                  `protobuf:"varint,5,opt,name=scheduled_time,json=scheduledTime,proto3" json:"scheduled_time,omitempty"`
+	XXX_NoUnkeyedLiteral  struct{}               `json:"-"`
+	XXX_unrecognized      []byte                 `json:"-"`
+	XXX_sizecache         int32                  `json:"-"`
+}
+
+func (m *UserNotification) Reset()         { *m = UserNotification{} }
+func (m *UserNotification) String() string { return proto.CompactTextString(m) }
+func (*UserNotification) ProtoMessage()    {}
+func (*UserNotification) Descriptor() ([]byte, []int) {
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{10}
+}
+func (m *UserNotification) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_UserNotification.Unmarshal(m, b)
+}
+func (m *UserNotification) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_UserNotification.Marshal(b, m, deterministic)
+}
+func (dst *UserNotification) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UserNotification.Merge(dst, src)
+}
+func (m *UserNotification) XXX_Size() int {
+	return xxx_messageInfo_UserNotification.Size(m)
+}
+func (m *UserNotification) XXX_DiscardUnknown() {
+	xxx_messageInfo_UserNotification.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_UserNotification proto.InternalMessageInfo
+
+func (m *UserNotification) GetExternalId() string {
+	if m != nil {
+		return m.ExternalId
+	}
+	return ""
+}
+
+func (m *UserNotification) GetInitiatedNotification() *InitiatedNotification {
+	if m != nil {
+		return m.InitiatedNotification
+	}
+	return nil
+}
+
+func (m *UserNotification) GetUserPreference() *UserPreference {
+	if m != nil {
+		return m.UserPreference
+	}
+	return nil
+}
+
+func (m *UserNotification) GetSendState() SendState {
+	if m != nil {
+		return m.SendState
+	}
+	return SendState_NEW
+}
+
+func (m *UserNotification) GetScheduledTime() int64 {
+	if m != nil {
+		return m.ScheduledTime
+	}
+	return 0
 }
 
 type GetUserNotificationsInput struct {
@@ -242,7 +675,7 @@ func (m *GetUserNotificationsInput) Reset()         { *m = GetUserNotificationsI
 func (m *GetUserNotificationsInput) String() string { return proto.CompactTextString(m) }
 func (*GetUserNotificationsInput) ProtoMessage()    {}
 func (*GetUserNotificationsInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{3}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{11}
 }
 func (m *GetUserNotificationsInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserNotificationsInput.Unmarshal(m, b)
@@ -277,17 +710,17 @@ func (m *GetUserNotificationsInput) GetLimit() int32 {
 }
 
 type GetUserNotificationsOutput struct {
-	Notifications        []*NotificationMessage `protobuf:"bytes,1,rep,name=notifications,proto3" json:"notifications,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
-	XXX_unrecognized     []byte                 `json:"-"`
-	XXX_sizecache        int32                  `json:"-"`
+	Notifications        []*UserNotification `protobuf:"bytes,1,rep,name=notifications,proto3" json:"notifications,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
 }
 
 func (m *GetUserNotificationsOutput) Reset()         { *m = GetUserNotificationsOutput{} }
 func (m *GetUserNotificationsOutput) String() string { return proto.CompactTextString(m) }
 func (*GetUserNotificationsOutput) ProtoMessage()    {}
 func (*GetUserNotificationsOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{4}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{12}
 }
 func (m *GetUserNotificationsOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserNotificationsOutput.Unmarshal(m, b)
@@ -307,7 +740,7 @@ func (m *GetUserNotificationsOutput) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetUserNotificationsOutput proto.InternalMessageInfo
 
-func (m *GetUserNotificationsOutput) GetNotifications() []*NotificationMessage {
+func (m *GetUserNotificationsOutput) GetNotifications() []*UserNotification {
 	if m != nil {
 		return m.Notifications
 	}
@@ -315,19 +748,19 @@ func (m *GetUserNotificationsOutput) GetNotifications() []*NotificationMessage {
 }
 
 type UserPreferenceSchedule struct {
-	Type                 NotificationType `protobuf:"varint,1,opt,name=type,proto3,enum=grpcapi.NotificationType" json:"type,omitempty"`
-	TimeOfDay            string           `protobuf:"bytes,2,opt,name=time_of_day,json=timeOfDay,proto3" json:"time_of_day,omitempty"`
-	NotificationInterval string           `protobuf:"bytes,3,opt,name=notification_interval,json=notificationInterval,proto3" json:"notification_interval,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	Type                 DeliveryChannel `protobuf:"varint,1,opt,name=type,proto3,enum=grpcapi.DeliveryChannel" json:"type,omitempty"`
+	TimeOfDay            string          `protobuf:"bytes,2,opt,name=time_of_day,json=timeOfDay,proto3" json:"time_of_day,omitempty"`
+	NotificationInterval string          `protobuf:"bytes,3,opt,name=notification_interval,json=notificationInterval,proto3" json:"notification_interval,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
 }
 
 func (m *UserPreferenceSchedule) Reset()         { *m = UserPreferenceSchedule{} }
 func (m *UserPreferenceSchedule) String() string { return proto.CompactTextString(m) }
 func (*UserPreferenceSchedule) ProtoMessage()    {}
 func (*UserPreferenceSchedule) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{5}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{13}
 }
 func (m *UserPreferenceSchedule) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UserPreferenceSchedule.Unmarshal(m, b)
@@ -347,11 +780,11 @@ func (m *UserPreferenceSchedule) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_UserPreferenceSchedule proto.InternalMessageInfo
 
-func (m *UserPreferenceSchedule) GetType() NotificationType {
+func (m *UserPreferenceSchedule) GetType() DeliveryChannel {
 	if m != nil {
 		return m.Type
 	}
-	return NotificationType_MAIL
+	return DeliveryChannel_MAIL
 }
 
 func (m *UserPreferenceSchedule) GetTimeOfDay() string {
@@ -369,19 +802,20 @@ func (m *UserPreferenceSchedule) GetNotificationInterval() string {
 }
 
 type UserPreference struct {
-	UserId               string                  `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	Type                 NotificationType        `protobuf:"varint,2,opt,name=type,proto3,enum=grpcapi.NotificationType" json:"type,omitempty"`
-	Schedule             *UserPreferenceSchedule `protobuf:"bytes,3,opt,name=schedule,proto3" json:"schedule,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	UserId                string            `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	NotificationTypeExtId string            `protobuf:"bytes,2,opt,name=notification_type_ext_id,json=notificationTypeExtId,proto3" json:"notification_type_ext_id,omitempty"`
+	DeliveryChannel       DeliveryChannel   `protobuf:"varint,3,opt,name=delivery_channel,json=deliveryChannel,proto3,enum=grpcapi.DeliveryChannel" json:"delivery_channel,omitempty"`
+	DeliverySchedule      *DeliverySchedule `protobuf:"bytes,4,opt,name=delivery_schedule,json=deliverySchedule,proto3" json:"delivery_schedule,omitempty"`
+	XXX_NoUnkeyedLiteral  struct{}          `json:"-"`
+	XXX_unrecognized      []byte            `json:"-"`
+	XXX_sizecache         int32             `json:"-"`
 }
 
 func (m *UserPreference) Reset()         { *m = UserPreference{} }
 func (m *UserPreference) String() string { return proto.CompactTextString(m) }
 func (*UserPreference) ProtoMessage()    {}
 func (*UserPreference) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{6}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{14}
 }
 func (m *UserPreference) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UserPreference.Unmarshal(m, b)
@@ -408,16 +842,23 @@ func (m *UserPreference) GetUserId() string {
 	return ""
 }
 
-func (m *UserPreference) GetType() NotificationType {
+func (m *UserPreference) GetNotificationTypeExtId() string {
 	if m != nil {
-		return m.Type
+		return m.NotificationTypeExtId
 	}
-	return NotificationType_MAIL
+	return ""
 }
 
-func (m *UserPreference) GetSchedule() *UserPreferenceSchedule {
+func (m *UserPreference) GetDeliveryChannel() DeliveryChannel {
 	if m != nil {
-		return m.Schedule
+		return m.DeliveryChannel
+	}
+	return DeliveryChannel_MAIL
+}
+
+func (m *UserPreference) GetDeliverySchedule() *DeliverySchedule {
+	if m != nil {
+		return m.DeliverySchedule
 	}
 	return nil
 }
@@ -433,7 +874,7 @@ func (m *SetUserPreferencesInput) Reset()         { *m = SetUserPreferencesInput
 func (m *SetUserPreferencesInput) String() string { return proto.CompactTextString(m) }
 func (*SetUserPreferencesInput) ProtoMessage()    {}
 func (*SetUserPreferencesInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{7}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{15}
 }
 func (m *SetUserPreferencesInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SetUserPreferencesInput.Unmarshal(m, b)
@@ -471,7 +912,7 @@ func (m *GetUserPreferencesInput) Reset()         { *m = GetUserPreferencesInput
 func (m *GetUserPreferencesInput) String() string { return proto.CompactTextString(m) }
 func (*GetUserPreferencesInput) ProtoMessage()    {}
 func (*GetUserPreferencesInput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{8}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{16}
 }
 func (m *GetUserPreferencesInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserPreferencesInput.Unmarshal(m, b)
@@ -509,7 +950,7 @@ func (m *GetUserPreferencesOutput) Reset()         { *m = GetUserPreferencesOutp
 func (m *GetUserPreferencesOutput) String() string { return proto.CompactTextString(m) }
 func (*GetUserPreferencesOutput) ProtoMessage()    {}
 func (*GetUserPreferencesOutput) Descriptor() ([]byte, []int) {
-	return fileDescriptor_grpcapi_35a1c87c78baa0ce, []int{9}
+	return fileDescriptor_grpcapi_10482ff305ea43c2, []int{17}
 }
 func (m *GetUserPreferencesOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserPreferencesOutput.Unmarshal(m, b)
@@ -537,9 +978,17 @@ func (m *GetUserPreferencesOutput) GetPreferences() []*UserPreference {
 }
 
 func init() {
-	proto.RegisterType((*NotificationMessage)(nil), "grpcapi.NotificationMessage")
-	proto.RegisterType((*SendNotificationInput)(nil), "grpcapi.SendNotificationInput")
-	proto.RegisterType((*SendNotificationOutput)(nil), "grpcapi.SendNotificationOutput")
+	proto.RegisterType((*DeliverySchedule)(nil), "grpcapi.DeliverySchedule")
+	proto.RegisterType((*NotificationType)(nil), "grpcapi.NotificationType")
+	proto.RegisterType((*InitiatedNotification)(nil), "grpcapi.InitiatedNotification")
+	proto.RegisterType((*SetNotificationTypeInput)(nil), "grpcapi.SetNotificationTypeInput")
+	proto.RegisterType((*GetNotificationTypeInput)(nil), "grpcapi.GetNotificationTypeInput")
+	proto.RegisterType((*GetNotificationTypeOutput)(nil), "grpcapi.GetNotificationTypeOutput")
+	proto.RegisterType((*InitiateNotificationInput)(nil), "grpcapi.InitiateNotificationInput")
+	proto.RegisterType((*InitiateNotificationOutput)(nil), "grpcapi.InitiateNotificationOutput")
+	proto.RegisterType((*GetInitiatedNotificationInput)(nil), "grpcapi.GetInitiatedNotificationInput")
+	proto.RegisterType((*GetInitiatedNotificationOutput)(nil), "grpcapi.GetInitiatedNotificationOutput")
+	proto.RegisterType((*UserNotification)(nil), "grpcapi.UserNotification")
 	proto.RegisterType((*GetUserNotificationsInput)(nil), "grpcapi.GetUserNotificationsInput")
 	proto.RegisterType((*GetUserNotificationsOutput)(nil), "grpcapi.GetUserNotificationsOutput")
 	proto.RegisterType((*UserPreferenceSchedule)(nil), "grpcapi.UserPreferenceSchedule")
@@ -547,7 +996,9 @@ func init() {
 	proto.RegisterType((*SetUserPreferencesInput)(nil), "grpcapi.SetUserPreferencesInput")
 	proto.RegisterType((*GetUserPreferencesInput)(nil), "grpcapi.GetUserPreferencesInput")
 	proto.RegisterType((*GetUserPreferencesOutput)(nil), "grpcapi.GetUserPreferencesOutput")
-	proto.RegisterEnum("grpcapi.NotificationType", NotificationType_name, NotificationType_value)
+	proto.RegisterEnum("grpcapi.DeliveryChannel", DeliveryChannel_name, DeliveryChannel_value)
+	proto.RegisterEnum("grpcapi.DeliveryScheduleType", DeliveryScheduleType_name, DeliveryScheduleType_value)
+	proto.RegisterEnum("grpcapi.SendState", SendState_name, SendState_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -563,7 +1014,10 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type NotificationClient interface {
 	DeepPing(ctx context.Context, in *common.Void, opts ...grpc.CallOption) (*common.PrimitiveString, error)
-	SendNotification(ctx context.Context, in *SendNotificationInput, opts ...grpc.CallOption) (*SendNotificationOutput, error)
+	SetNotificationType(ctx context.Context, in *SetNotificationTypeInput, opts ...grpc.CallOption) (*common.Void, error)
+	GetNotificationType(ctx context.Context, in *GetNotificationTypeInput, opts ...grpc.CallOption) (*GetNotificationTypeOutput, error)
+	InitiateNotification(ctx context.Context, in *InitiateNotificationInput, opts ...grpc.CallOption) (*InitiateNotificationOutput, error)
+	GetInitiatedNotification(ctx context.Context, in *GetInitiatedNotificationInput, opts ...grpc.CallOption) (*GetInitiatedNotificationOutput, error)
 	SetUserPreferences(ctx context.Context, in *SetUserPreferencesInput, opts ...grpc.CallOption) (*common.Void, error)
 	GetUserPreferences(ctx context.Context, in *GetUserPreferencesInput, opts ...grpc.CallOption) (*GetUserPreferencesOutput, error)
 	GetUserNotifications(ctx context.Context, in *GetUserNotificationsInput, opts ...grpc.CallOption) (*GetUserNotificationsOutput, error)
@@ -586,9 +1040,36 @@ func (c *notificationClient) DeepPing(ctx context.Context, in *common.Void, opts
 	return out, nil
 }
 
-func (c *notificationClient) SendNotification(ctx context.Context, in *SendNotificationInput, opts ...grpc.CallOption) (*SendNotificationOutput, error) {
-	out := new(SendNotificationOutput)
-	err := c.cc.Invoke(ctx, "/grpcapi.Notification/SendNotification", in, out, opts...)
+func (c *notificationClient) SetNotificationType(ctx context.Context, in *SetNotificationTypeInput, opts ...grpc.CallOption) (*common.Void, error) {
+	out := new(common.Void)
+	err := c.cc.Invoke(ctx, "/grpcapi.Notification/SetNotificationType", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationClient) GetNotificationType(ctx context.Context, in *GetNotificationTypeInput, opts ...grpc.CallOption) (*GetNotificationTypeOutput, error) {
+	out := new(GetNotificationTypeOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.Notification/GetNotificationType", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationClient) InitiateNotification(ctx context.Context, in *InitiateNotificationInput, opts ...grpc.CallOption) (*InitiateNotificationOutput, error) {
+	out := new(InitiateNotificationOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.Notification/InitiateNotification", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationClient) GetInitiatedNotification(ctx context.Context, in *GetInitiatedNotificationInput, opts ...grpc.CallOption) (*GetInitiatedNotificationOutput, error) {
+	out := new(GetInitiatedNotificationOutput)
+	err := c.cc.Invoke(ctx, "/grpcapi.Notification/GetInitiatedNotification", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -625,7 +1106,10 @@ func (c *notificationClient) GetUserNotifications(ctx context.Context, in *GetUs
 // NotificationServer is the server API for Notification service.
 type NotificationServer interface {
 	DeepPing(context.Context, *common.Void) (*common.PrimitiveString, error)
-	SendNotification(context.Context, *SendNotificationInput) (*SendNotificationOutput, error)
+	SetNotificationType(context.Context, *SetNotificationTypeInput) (*common.Void, error)
+	GetNotificationType(context.Context, *GetNotificationTypeInput) (*GetNotificationTypeOutput, error)
+	InitiateNotification(context.Context, *InitiateNotificationInput) (*InitiateNotificationOutput, error)
+	GetInitiatedNotification(context.Context, *GetInitiatedNotificationInput) (*GetInitiatedNotificationOutput, error)
 	SetUserPreferences(context.Context, *SetUserPreferencesInput) (*common.Void, error)
 	GetUserPreferences(context.Context, *GetUserPreferencesInput) (*GetUserPreferencesOutput, error)
 	GetUserNotifications(context.Context, *GetUserNotificationsInput) (*GetUserNotificationsOutput, error)
@@ -653,20 +1137,74 @@ func _Notification_DeepPing_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Notification_SendNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SendNotificationInput)
+func _Notification_SetNotificationType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetNotificationTypeInput)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(NotificationServer).SendNotification(ctx, in)
+		return srv.(NotificationServer).SetNotificationType(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/grpcapi.Notification/SendNotification",
+		FullMethod: "/grpcapi.Notification/SetNotificationType",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NotificationServer).SendNotification(ctx, req.(*SendNotificationInput))
+		return srv.(NotificationServer).SetNotificationType(ctx, req.(*SetNotificationTypeInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Notification_GetNotificationType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetNotificationTypeInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServer).GetNotificationType(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Notification/GetNotificationType",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServer).GetNotificationType(ctx, req.(*GetNotificationTypeInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Notification_InitiateNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(InitiateNotificationInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServer).InitiateNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Notification/InitiateNotification",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServer).InitiateNotification(ctx, req.(*InitiateNotificationInput))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Notification_GetInitiatedNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetInitiatedNotificationInput)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServer).GetInitiatedNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/grpcapi.Notification/GetInitiatedNotification",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServer).GetInitiatedNotification(ctx, req.(*GetInitiatedNotificationInput))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -734,8 +1272,20 @@ var _Notification_serviceDesc = grpc.ServiceDesc{
 			Handler:    _Notification_DeepPing_Handler,
 		},
 		{
-			MethodName: "SendNotification",
-			Handler:    _Notification_SendNotification_Handler,
+			MethodName: "SetNotificationType",
+			Handler:    _Notification_SetNotificationType_Handler,
+		},
+		{
+			MethodName: "GetNotificationType",
+			Handler:    _Notification_GetNotificationType_Handler,
+		},
+		{
+			MethodName: "InitiateNotification",
+			Handler:    _Notification_InitiateNotification_Handler,
+		},
+		{
+			MethodName: "GetInitiatedNotification",
+			Handler:    _Notification_GetInitiatedNotification_Handler,
 		},
 		{
 			MethodName: "SetUserPreferences",
@@ -754,47 +1304,78 @@ var _Notification_serviceDesc = grpc.ServiceDesc{
 	Metadata: "notification/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("notification/grpcapi.proto", fileDescriptor_grpcapi_35a1c87c78baa0ce) }
+func init() { proto.RegisterFile("notification/grpcapi.proto", fileDescriptor_grpcapi_10482ff305ea43c2) }
 
-var fileDescriptor_grpcapi_35a1c87c78baa0ce = []byte{
-	// 618 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x55, 0xcd, 0x4e, 0xdb, 0x40,
-	0x10, 0x8e, 0xf3, 0x47, 0x32, 0xa1, 0x11, 0x5a, 0x7e, 0x62, 0x2c, 0x0a, 0xe9, 0xf6, 0x12, 0x21,
-	0x35, 0x48, 0xe1, 0x54, 0xf5, 0x04, 0xa2, 0xa0, 0xb4, 0xa5, 0x44, 0x0e, 0xf4, 0xd2, 0x43, 0x6a,
-	0xec, 0x49, 0x58, 0x29, 0x59, 0x5b, 0xeb, 0x0d, 0x92, 0x1f, 0xa4, 0xb7, 0x9e, 0x7a, 0xec, 0x3b,
-	0xf4, 0x09, 0xfa, 0x52, 0x55, 0xec, 0x8d, 0x71, 0x8c, 0x8d, 0x4a, 0x4f, 0xc9, 0xfc, 0x7c, 0x33,
-	0xdf, 0xfc, 0xad, 0xc1, 0xe0, 0xae, 0x64, 0x63, 0x66, 0x5b, 0x92, 0xb9, 0xfc, 0x68, 0x22, 0x3c,
-	0xdb, 0xf2, 0x58, 0xd7, 0x13, 0xae, 0x74, 0xc9, 0x9a, 0x12, 0x8d, 0x4d, 0xdb, 0x9d, 0xcd, 0x5c,
-	0x7e, 0x14, 0xfd, 0x44, 0x56, 0xfa, 0x47, 0x83, 0xcd, 0xcf, 0x09, 0xf0, 0x25, 0xfa, 0xbe, 0x35,
-	0x41, 0xd2, 0x84, 0x22, 0x73, 0x74, 0xad, 0xad, 0x75, 0xea, 0x66, 0x91, 0x39, 0xe4, 0x0d, 0x94,
-	0x65, 0xe0, 0xa1, 0x5e, 0x6c, 0x6b, 0x9d, 0x66, 0x6f, 0xb7, 0xbb, 0xcc, 0x91, 0xc4, 0x5e, 0x07,
-	0x1e, 0x9a, 0xa1, 0x1b, 0x39, 0x84, 0x9a, 0x40, 0xdf, 0x9d, 0x0b, 0x1b, 0xf5, 0x52, 0x5b, 0xeb,
-	0x34, 0x7a, 0xcd, 0xae, 0xca, 0x7b, 0x25, 0xd8, 0x84, 0x71, 0x33, 0xb6, 0x93, 0x1d, 0xa8, 0xde,
-	0xa1, 0xe5, 0xa0, 0xd0, 0xcb, 0x61, 0x3a, 0x25, 0x11, 0x02, 0xe5, 0x5b, 0xd7, 0x09, 0xf4, 0x4a,
-	0xa8, 0x0d, 0xff, 0x93, 0x97, 0x00, 0xb6, 0x40, 0x4b, 0xa2, 0x33, 0xba, 0x0d, 0xf4, 0x6a, 0x68,
-	0xa9, 0x2b, 0xcd, 0x69, 0x40, 0x7f, 0x6b, 0xb0, 0x3d, 0x44, 0xee, 0x24, 0x59, 0xf5, 0xb9, 0x37,
-	0x97, 0x31, 0x7f, 0xed, 0xf9, 0xfc, 0x8b, 0xff, 0xcc, 0xbf, 0x94, 0xc9, 0xbf, 0x9c, 0xcb, 0xbf,
-	0x92, 0xe6, 0xdf, 0x81, 0x9d, 0x34, 0xfd, 0xab, 0xb9, 0x5c, 0xf0, 0x4f, 0xcd, 0x83, 0x7e, 0x80,
-	0xdd, 0x0b, 0x94, 0x37, 0x3e, 0x8a, 0xa4, 0xb3, 0x1f, 0x15, 0xdb, 0x82, 0xb5, 0xb9, 0x8f, 0x62,
-	0x14, 0x23, 0xaa, 0x0b, 0xb1, 0xef, 0x90, 0x2d, 0xa8, 0x4c, 0xd9, 0x8c, 0xc9, 0xb0, 0xa6, 0x8a,
-	0x19, 0x09, 0xf4, 0x1b, 0x18, 0x59, 0xb1, 0x54, 0xe6, 0x53, 0x78, 0x91, 0xdc, 0x2e, 0x5f, 0xd7,
-	0xda, 0xa5, 0x4e, 0xa3, 0xb7, 0x97, 0xd9, 0x42, 0xb5, 0x3e, 0xe6, 0x2a, 0x84, 0xfe, 0xd0, 0x60,
-	0x67, 0x11, 0x7f, 0x20, 0x70, 0x8c, 0x02, 0xb9, 0x8d, 0x43, 0xfb, 0x0e, 0x9d, 0xf9, 0x14, 0x9f,
-	0x3b, 0x98, 0x7d, 0x68, 0x48, 0x36, 0xc3, 0x91, 0x3b, 0x1e, 0x39, 0x56, 0x10, 0xd6, 0x51, 0x37,
-	0xeb, 0x0b, 0xd5, 0xd5, 0xf8, 0xcc, 0x0a, 0xc8, 0x31, 0x6c, 0x27, 0x53, 0x8f, 0x18, 0x97, 0x28,
-	0xee, 0xad, 0xa9, 0x9a, 0xcd, 0x16, 0x5f, 0xd9, 0x8c, 0xc8, 0x46, 0xbf, 0x6b, 0xd0, 0x5c, 0xa5,
-	0x97, 0xdf, 0xc2, 0x67, 0x1e, 0xc2, 0x3b, 0xa8, 0xf9, 0xaa, 0x54, 0x75, 0x08, 0x07, 0x31, 0x24,
-	0xbb, 0x23, 0x66, 0x0c, 0xa0, 0xd7, 0xd0, 0x1a, 0x46, 0x83, 0x79, 0x70, 0x53, 0x23, 0x7e, 0x0b,
-	0x0d, 0xef, 0x41, 0xa7, 0x66, 0xd2, 0xca, 0x09, 0x6d, 0x26, 0x7d, 0x69, 0x0f, 0x5a, 0x17, 0x39,
-	0x51, 0xf3, 0xaa, 0xa6, 0x37, 0xa0, 0x3f, 0xc6, 0xa8, 0x05, 0xf9, 0x7f, 0x2a, 0x87, 0x7b, 0xb0,
-	0x91, 0xee, 0x1b, 0xa9, 0x41, 0xf9, 0xf2, 0xa4, 0xff, 0x69, 0xa3, 0xd0, 0xfb, 0x59, 0x82, 0xf5,
-	0xa4, 0x99, 0x1c, 0x43, 0xed, 0x0c, 0xd1, 0x1b, 0x30, 0x3e, 0x21, 0xeb, 0xcb, 0x7b, 0xfc, 0xe2,
-	0x32, 0xc7, 0x68, 0x2d, 0xa5, 0x81, 0x58, 0xac, 0x34, 0xbb, 0xc7, 0xa1, 0x14, 0x8c, 0x4f, 0x68,
-	0x81, 0xdc, 0xc0, 0x46, 0xfa, 0xa6, 0xc8, 0x7e, 0xcc, 0x2e, 0xf3, 0xb5, 0x30, 0x0e, 0x72, 0xed,
-	0x51, 0xcd, 0xb4, 0x40, 0xce, 0x81, 0x3c, 0x9e, 0x0d, 0x69, 0x27, 0x80, 0x99, 0x2d, 0x36, 0x56,
-	0x78, 0xd3, 0x02, 0xf9, 0x0a, 0xe4, 0xe2, 0xa9, 0x38, 0x39, 0xa3, 0x32, 0x5e, 0x3d, 0xe1, 0x11,
-	0x93, 0xb4, 0x60, 0x2b, 0xeb, 0xb2, 0x09, 0x4d, 0x83, 0x1f, 0x3f, 0x22, 0xc6, 0xeb, 0x27, 0x7d,
-	0x96, 0x29, 0x4e, 0x0f, 0x7e, 0x15, 0xf7, 0x86, 0x1f, 0xcf, 0xbb, 0xef, 0xf9, 0x94, 0x4d, 0xee,
-	0x64, 0xf7, 0x64, 0xd0, 0x5f, 0xb9, 0x85, 0xdb, 0x6a, 0xf8, 0xa1, 0x39, 0xfe, 0x1b, 0x00, 0x00,
-	0xff, 0xff, 0x71, 0xc6, 0xbb, 0x6b, 0xa4, 0x06, 0x00, 0x00,
+var fileDescriptor_grpcapi_10482ff305ea43c2 = []byte{
+	// 1109 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x57, 0xdd, 0x6e, 0xe3, 0xc4,
+	0x17, 0x8f, 0xd3, 0xa6, 0x6d, 0x4e, 0xb6, 0xa9, 0x3b, 0xfd, 0x88, 0x9b, 0xff, 0xbf, 0xdd, 0xee,
+	0x20, 0x60, 0x55, 0x96, 0x2c, 0xa4, 0x48, 0xc0, 0x05, 0x62, 0xdb, 0x4d, 0xda, 0x0d, 0xbb, 0xfd,
+	0x90, 0x93, 0x82, 0x56, 0x08, 0x2c, 0x37, 0x9e, 0xa4, 0x23, 0x39, 0xe3, 0x60, 0x8f, 0xbb, 0xf5,
+	0xb3, 0x70, 0xcf, 0x05, 0x12, 0x0f, 0xc1, 0x15, 0x6f, 0xc1, 0x2b, 0xf0, 0x06, 0x08, 0xf9, 0xb3,
+	0xfe, 0x4c, 0xb7, 0x0b, 0x57, 0xf1, 0xcc, 0x39, 0x73, 0xe6, 0x9c, 0xdf, 0xf9, 0xf8, 0x4d, 0xa0,
+	0xc9, 0x0c, 0x4e, 0x47, 0x74, 0xa8, 0x72, 0x6a, 0xb0, 0xa7, 0x63, 0x73, 0x3a, 0x54, 0xa7, 0xb4,
+	0x35, 0x35, 0x0d, 0x6e, 0xa0, 0xc5, 0x60, 0xd9, 0x5c, 0x1b, 0x1a, 0x93, 0x89, 0xc1, 0x9e, 0xfa,
+	0x3f, 0xbe, 0x14, 0xff, 0x56, 0x06, 0xb1, 0x43, 0x74, 0x7a, 0x4d, 0x4c, 0xa7, 0x3f, 0xbc, 0x22,
+	0x9a, 0xad, 0x13, 0xf4, 0x1a, 0xb6, 0x34, 0x32, 0x52, 0x6d, 0x9d, 0x2b, 0x5a, 0x20, 0x53, 0xac,
+	0x40, 0x28, 0x09, 0xbb, 0xc2, 0xe3, 0x7a, 0x7b, 0xbb, 0x15, 0xde, 0x92, 0x3e, 0x3d, 0x70, 0xa6,
+	0x44, 0x6e, 0x04, 0xe7, 0x33, 0xa6, 0x4f, 0x01, 0x9f, 0x50, 0x46, 0x27, 0xf6, 0xa4, 0x4f, 0x86,
+	0x06, 0xd3, 0xac, 0x43, 0xc2, 0xdf, 0x10, 0xc2, 0x4e, 0x63, 0x01, 0x58, 0x52, 0x79, 0x57, 0x78,
+	0x5c, 0x91, 0xdf, 0x42, 0x13, 0x7d, 0x06, 0x1b, 0x1d, 0x95, 0xea, 0x4e, 0x78, 0xd1, 0x80, 0x4e,
+	0xc8, 0x0b, 0xc3, 0x36, 0xa5, 0x39, 0xcf, 0x44, 0xbe, 0x10, 0x7d, 0x01, 0x8d, 0x8c, 0xe0, 0x84,
+	0x32, 0x9b, 0x13, 0x69, 0xde, 0x3b, 0x57, 0x24, 0xc6, 0x7f, 0x0b, 0x20, 0xc6, 0x3d, 0x70, 0xa3,
+	0x45, 0x08, 0xe6, 0x99, 0x3a, 0xf1, 0xa1, 0xa9, 0xca, 0xde, 0x37, 0xfa, 0x08, 0x56, 0x7f, 0xb2,
+	0x55, 0x9d, 0x8e, 0x1c, 0xca, 0xc6, 0x8a, 0x3a, 0x74, 0x95, 0xbd, 0xb8, 0xaa, 0xb2, 0x78, 0x2b,
+	0x38, 0xf0, 0xf6, 0x91, 0x0c, 0x52, 0x06, 0xf0, 0xe1, 0x95, 0xca, 0x18, 0xd1, 0xbd, 0x40, 0xea,
+	0x6d, 0x29, 0x83, 0xf7, 0x73, 0x5f, 0x2e, 0x6f, 0xa6, 0xa0, 0x0e, 0xf6, 0xd1, 0xc5, 0xac, 0x24,
+	0xba, 0x51, 0xd6, 0xda, 0x5b, 0x85, 0x49, 0x2c, 0x4c, 0x20, 0xfe, 0x53, 0x80, 0x8d, 0x1e, 0xa3,
+	0x9c, 0xaa, 0x9c, 0x68, 0x71, 0x24, 0xd0, 0x43, 0xa8, 0x91, 0x1b, 0x4e, 0x4c, 0xa6, 0xea, 0x0a,
+	0xd5, 0x02, 0x30, 0x20, 0xdc, 0xea, 0x69, 0xe8, 0x63, 0x98, 0xe7, 0xce, 0x94, 0x78, 0x28, 0xc4,
+	0x2f, 0x4f, 0xe3, 0x29, 0x7b, 0x6a, 0x68, 0x0f, 0x96, 0x4c, 0x62, 0x19, 0xb6, 0x39, 0x24, 0x1e,
+	0x08, 0xb5, 0x76, 0xbd, 0x15, 0xd4, 0xee, 0x99, 0x49, 0xc7, 0x94, 0xc9, 0x91, 0x1c, 0x6d, 0xc2,
+	0xc2, 0x15, 0x51, 0x35, 0x62, 0x7a, 0x91, 0x55, 0xe5, 0x60, 0xe5, 0x66, 0xe6, 0xd2, 0xd0, 0x1c,
+	0xa9, 0xe2, 0x67, 0xc6, 0xfd, 0x46, 0xdb, 0x00, 0x43, 0x93, 0xb8, 0xee, 0x2b, 0x97, 0x8e, 0xb4,
+	0xe0, 0x49, 0xaa, 0xc1, 0xce, 0xa1, 0x83, 0x2f, 0x41, 0xea, 0x13, 0x9e, 0xf6, 0xa9, 0xc7, 0xa6,
+	0x36, 0x47, 0x47, 0xb0, 0x1a, 0xef, 0x34, 0xc5, 0x0b, 0x47, 0xb8, 0x2b, 0x1c, 0x91, 0xa5, 0x76,
+	0x70, 0x0b, 0xa4, 0xe3, 0xa2, 0x3b, 0x72, 0x8a, 0x09, 0x0f, 0x61, 0x2b, 0x47, 0xff, 0xcc, 0xe6,
+	0xff, 0xa5, 0x53, 0xbf, 0x0b, 0xb0, 0x15, 0x66, 0x36, 0xae, 0xee, 0xbb, 0x15, 0x26, 0x4f, 0xb8,
+	0x7f, 0xf2, 0xca, 0x6f, 0x9d, 0xbc, 0xb9, 0xdc, 0xe4, 0xcd, 0x17, 0x26, 0xaf, 0x92, 0x4e, 0xde,
+	0x57, 0xd0, 0xcc, 0x0b, 0x21, 0x40, 0xea, 0xae, 0x0a, 0xc5, 0xcf, 0x60, 0xfb, 0x98, 0xf0, 0xdc,
+	0xf2, 0xf6, 0x51, 0xb8, 0xd3, 0xc2, 0x1b, 0xd8, 0x29, 0xb2, 0x10, 0x38, 0x71, 0x01, 0x9b, 0x34,
+	0x14, 0x2b, 0xf1, 0x24, 0x04, 0xd0, 0xee, 0x44, 0xd0, 0xe6, 0x5a, 0x91, 0x37, 0x68, 0xde, 0x36,
+	0xfe, 0xa5, 0x0c, 0xe2, 0x85, 0x45, 0xcc, 0xfb, 0xb5, 0x64, 0xb1, 0x33, 0xe5, 0x7f, 0xe1, 0x0c,
+	0x7a, 0x06, 0x2b, 0xb6, 0x45, 0x4c, 0x65, 0x6a, 0x92, 0x11, 0x31, 0x09, 0x8b, 0x3a, 0xb8, 0x11,
+	0xd9, 0x73, 0x7d, 0x3d, 0x8f, 0xc4, 0x72, 0xdd, 0x4e, 0xac, 0xd1, 0xa7, 0x00, 0x16, 0x61, 0x9a,
+	0x62, 0x71, 0x35, 0x18, 0xca, 0xf5, 0x36, 0x8a, 0x0e, 0xf7, 0x09, 0xd3, 0xfa, 0xae, 0x44, 0xae,
+	0x5a, 0xe1, 0x27, 0x7a, 0x1f, 0xea, 0xe1, 0x7c, 0xd3, 0x14, 0x4e, 0x27, 0xc4, 0x2b, 0x8f, 0x39,
+	0x79, 0x39, 0xda, 0x75, 0xe7, 0x38, 0xfe, 0xc6, 0xeb, 0xa5, 0x34, 0x54, 0x96, 0x9f, 0xdf, 0x06,
+	0x2c, 0x7a, 0x8e, 0x47, 0x60, 0x2d, 0xb8, 0xcb, 0x9e, 0x86, 0xd6, 0xa1, 0xa2, 0xd3, 0x09, 0xe5,
+	0x01, 0x35, 0xf9, 0x0b, 0xfc, 0x03, 0x34, 0xf3, 0x6c, 0x05, 0x99, 0xfe, 0x1a, 0x96, 0x59, 0x82,
+	0xd6, 0x84, 0xdd, 0xb9, 0x44, 0xef, 0xa4, 0x0f, 0xca, 0x49, 0x7d, 0xfc, 0xb3, 0x00, 0x9b, 0x49,
+	0x9c, 0x22, 0x1e, 0x7d, 0x12, 0x6b, 0xc7, 0x59, 0xec, 0xe0, 0x77, 0xe3, 0x0e, 0xd4, 0x5c, 0x40,
+	0x14, 0x63, 0xa4, 0x68, 0xaa, 0x13, 0xd0, 0x50, 0xd5, 0xdd, 0x3a, 0x1b, 0x75, 0x54, 0x07, 0xed,
+	0xc3, 0x46, 0x62, 0x84, 0x50, 0xc6, 0x89, 0x79, 0xad, 0xea, 0x41, 0x43, 0xae, 0xb3, 0x44, 0x23,
+	0xf8, 0x32, 0xfc, 0x97, 0x00, 0xf5, 0xa4, 0x77, 0xc5, 0xf0, 0x7d, 0x0e, 0x52, 0x66, 0x46, 0x29,
+	0xe4, 0x86, 0xbb, 0x9a, 0xbe, 0x37, 0x1b, 0xe9, 0x79, 0xd4, 0xbd, 0xe1, 0x3d, 0x0d, 0x3d, 0x07,
+	0xf1, 0xde, 0x8c, 0xb8, 0xa2, 0xa5, 0xa8, 0xf0, 0x08, 0x56, 0xdf, 0x81, 0x02, 0xa3, 0x8b, 0x23,
+	0xee, 0x1b, 0x40, 0xa3, 0xef, 0xa7, 0xfb, 0x36, 0xe6, 0xa0, 0x70, 0xbe, 0x84, 0xda, 0x6d, 0xb1,
+	0x87, 0x99, 0x2e, 0xac, 0xf6, 0xb8, 0x2e, 0x6e, 0x43, 0xe3, 0xb8, 0xc0, 0x6a, 0x11, 0x9e, 0xf8,
+	0xc2, 0x23, 0x90, 0xd4, 0x99, 0xa0, 0xec, 0xde, 0xdd, 0x95, 0xbd, 0xff, 0xc1, 0x4a, 0xfa, 0x19,
+	0xb1, 0x04, 0xf3, 0x27, 0x07, 0xbd, 0x57, 0x62, 0x69, 0xef, 0x13, 0x58, 0xcf, 0x7b, 0xeb, 0xa1,
+	0x65, 0xa8, 0xf6, 0x4e, 0x4e, 0xba, 0x9d, 0xde, 0xc1, 0xa0, 0x2b, 0x96, 0x50, 0x15, 0x2a, 0x9d,
+	0x83, 0xde, 0xab, 0xd7, 0xa2, 0xb0, 0xf7, 0x04, 0xaa, 0x51, 0xa7, 0xa2, 0x45, 0x98, 0x3b, 0xed,
+	0x7e, 0x27, 0x96, 0x50, 0x0d, 0x16, 0xfb, 0xdd, 0xd3, 0x81, 0x72, 0xf6, 0x52, 0x14, 0x5c, 0xed,
+	0xae, 0x2c, 0x9f, 0xc9, 0x62, 0xb9, 0xfd, 0x47, 0x05, 0x1e, 0x24, 0xa6, 0xc8, 0x3e, 0x2c, 0x75,
+	0x08, 0x99, 0x9e, 0x53, 0x36, 0x46, 0x0f, 0x42, 0xf6, 0xf8, 0xd6, 0xa0, 0x5a, 0xb3, 0x11, 0xae,
+	0xce, 0x4d, 0xb7, 0x0f, 0xe9, 0x35, 0xe9, 0x73, 0x93, 0xb2, 0x31, 0x2e, 0xa1, 0x17, 0xb0, 0x96,
+	0x43, 0xdf, 0xe8, 0x51, 0x6c, 0x76, 0xe4, 0x13, 0x6f, 0x33, 0x71, 0x05, 0x2e, 0xa1, 0x1f, 0x61,
+	0xed, 0x78, 0xa6, 0xa5, 0x22, 0x0a, 0x6f, 0xe2, 0x59, 0x2a, 0x7e, 0x96, 0x70, 0x09, 0xa9, 0xb0,
+	0x9e, 0xc7, 0x55, 0x08, 0x67, 0x66, 0x6e, 0x86, 0x87, 0x9a, 0xef, 0xcd, 0xd4, 0x89, 0xae, 0x98,
+	0x78, 0x65, 0x92, 0xff, 0x5c, 0xfb, 0x20, 0xee, 0x64, 0x31, 0xe5, 0x35, 0x3f, 0xbc, 0x53, 0x2f,
+	0xba, 0xee, 0x08, 0x50, 0xb6, 0x3f, 0xd0, 0x6e, 0x1c, 0xfa, 0xbc, 0x32, 0xcf, 0x20, 0xff, 0x3d,
+	0xa0, 0xe3, 0x59, 0x76, 0x0a, 0xda, 0xa5, 0xf9, 0x68, 0x86, 0x46, 0x1c, 0xf6, 0xbc, 0x99, 0x8d,
+	0x70, 0xfa, 0x70, 0x96, 0x1e, 0x62, 0xb0, 0x17, 0x8f, 0x7d, 0x5c, 0x3a, 0x7c, 0xf8, 0x6b, 0xf9,
+	0xff, 0xfd, 0x97, 0x47, 0xad, 0x2e, 0xd3, 0xe9, 0xf8, 0x8a, 0xb7, 0x0e, 0xce, 0x7b, 0x89, 0x77,
+	0xd2, 0xe5, 0x82, 0xf7, 0xe7, 0x6b, 0xff, 0x9f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x87, 0x97, 0xd8,
+	0x3d, 0xb8, 0x0d, 0x00, 0x00,
 }
