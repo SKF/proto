@@ -4,7 +4,6 @@ package grpcapi;
 option csharp_namespace = "SKF.Enlight.API.Notification";
 
 import "common/common.proto";
-import "google/protobuf/timestamp.proto";
 
 service Notification {
   rpc DeepPing (common.Void) returns (common.PrimitiveString) {}
@@ -94,7 +93,7 @@ message UserNotification {
   InitiatedNotification initiated_notification = 2;
   UserPreference user_preference = 3;
   SendState send_state = 4;
-  google.protobuf.Timestamp scheduled_time = 5;
+  int64 scheduled_time = 5;
 }
 
 
