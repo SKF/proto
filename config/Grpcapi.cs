@@ -109,16 +109,16 @@ namespace SKF.Enlight.API.Config {
             "aWdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Config.TargetType), typeof(global::SKF.Enlight.API.Config.SampleRate), typeof(global::SKF.Enlight.API.Config.SampleAmount), typeof(global::SKF.Enlight.API.Config.EnvelopeBandSelection), typeof(global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits), typeof(global::SKF.Enlight.API.Config.ExternalSensorSensitivity), typeof(global::SKF.Enlight.API.Config.ExternalSensorICP), typeof(global::SKF.Enlight.API.Config.ViewSignalType), typeof(global::SKF.Enlight.API.Config.YAxisUnits), typeof(global::SKF.Enlight.API.Config.XAxisUnits), typeof(global::SKF.Enlight.API.Config.YAxisDisplay), typeof(global::SKF.Enlight.API.Config.InputRange), typeof(global::SKF.Enlight.API.Config.DetectionType), typeof(global::SKF.Enlight.API.Config.WindowType), typeof(global::SKF.Enlight.API.Config.HighPassFilter), typeof(global::SKF.Enlight.API.Config.Temperature), typeof(global::SKF.Enlight.API.Config.ExternalSensorUsage), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationRequest), global::SKF.Enlight.API.Config.SpecificationRequest.Parser, new[]{ "TargetType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationResponse), global::SKF.Enlight.API.Config.SpecificationResponse.Parser, new[]{ "ID", "VersionID", "CreatedAtDate", "Specification" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigRequest), global::SKF.Enlight.API.Config.ConfigRequest.Parser, new[]{ "ConfigIDs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigsResponse), global::SKF.Enlight.API.Config.ConfigsResponse.Parser, new[]{ "Configs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.Configs), global::SKF.Enlight.API.Config.Configs.Parser, new[]{ "ConfigQC" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigResponse), global::SKF.Enlight.API.Config.ConfigResponse.Parser, new[]{ "ConfigID", "VersionID", "CreatedAtDate", "TargetID", "ConfigQC" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.LatestConfigRequest), global::SKF.Enlight.API.Config.LatestConfigRequest.Parser, new[]{ "TargetIDs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SetConfigRequest), global::SKF.Enlight.API.Config.SetConfigRequest.Parser, new[]{ "ConfigQC", "TargetIDs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.QCMeasurementPointConfig), global::SKF.Enlight.API.Config.QCMeasurementPointConfig.Parser, new[]{ "SampleRate", "SampleAmount", "EnvelopeBandSelection", "ExternalSensorEngineeringUnits", "ExternalSensorSensitivity", "ExternalSensorICP", "ViewSignalType", "YAxisUnits", "XAxisUnits", "YAxisDisplay", "InputRange", "DetectionType", "WindowType", "HighPassFilter", "Temperature", "ExternalSensorUsage" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Config.TargetType), typeof(global::SKF.Enlight.API.Config.SampleRate), typeof(global::SKF.Enlight.API.Config.SampleAmount), typeof(global::SKF.Enlight.API.Config.EnvelopeBandSelection), typeof(global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits), typeof(global::SKF.Enlight.API.Config.ExternalSensorSensitivity), typeof(global::SKF.Enlight.API.Config.ExternalSensorICP), typeof(global::SKF.Enlight.API.Config.ViewSignalType), typeof(global::SKF.Enlight.API.Config.YAxisUnits), typeof(global::SKF.Enlight.API.Config.XAxisUnits), typeof(global::SKF.Enlight.API.Config.YAxisDisplay), typeof(global::SKF.Enlight.API.Config.InputRange), typeof(global::SKF.Enlight.API.Config.DetectionType), typeof(global::SKF.Enlight.API.Config.WindowType), typeof(global::SKF.Enlight.API.Config.HighPassFilter), typeof(global::SKF.Enlight.API.Config.Temperature), typeof(global::SKF.Enlight.API.Config.ExternalSensorUsage), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationRequest), global::SKF.Enlight.API.Config.SpecificationRequest.Parser, new[]{ "TargetType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SpecificationResponse), global::SKF.Enlight.API.Config.SpecificationResponse.Parser, new[]{ "ID", "VersionID", "CreatedAtDate", "Specification" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigRequest), global::SKF.Enlight.API.Config.ConfigRequest.Parser, new[]{ "ConfigIDs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigsResponse), global::SKF.Enlight.API.Config.ConfigsResponse.Parser, new[]{ "Configs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.Configs), global::SKF.Enlight.API.Config.Configs.Parser, new[]{ "ConfigQC" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.ConfigResponse), global::SKF.Enlight.API.Config.ConfigResponse.Parser, new[]{ "ConfigID", "VersionID", "CreatedAtDate", "TargetID", "ConfigQC" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.LatestConfigRequest), global::SKF.Enlight.API.Config.LatestConfigRequest.Parser, new[]{ "TargetIDs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.SetConfigRequest), global::SKF.Enlight.API.Config.SetConfigRequest.Parser, new[]{ "ConfigQC", "TargetIDs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Config.QCMeasurementPointConfig), global::SKF.Enlight.API.Config.QCMeasurementPointConfig.Parser, new[]{ "SampleRate", "SampleAmount", "EnvelopeBandSelection", "ExternalSensorEngineeringUnits", "ExternalSensorSensitivity", "ExternalSensorICP", "ViewSignalType", "YAxisUnits", "XAxisUnits", "YAxisDisplay", "InputRange", "DetectionType", "WindowType", "HighPassFilter", "Temperature", "ExternalSensorUsage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -275,7 +275,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "targetType" field.</summary>
     public const int TargetTypeFieldNumber = 1;
-    private global::SKF.Enlight.API.Config.TargetType targetType_ = 0;
+    private global::SKF.Enlight.API.Config.TargetType targetType_ = global::SKF.Enlight.API.Config.TargetType.TargetGeneric;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.TargetType TargetType {
       get { return targetType_; }
@@ -304,7 +304,7 @@ namespace SKF.Enlight.API.Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetType != 0) hash ^= TargetType.GetHashCode();
+      if (TargetType != global::SKF.Enlight.API.Config.TargetType.TargetGeneric) hash ^= TargetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -318,7 +318,7 @@ namespace SKF.Enlight.API.Config {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TargetType != 0) {
+      if (TargetType != global::SKF.Enlight.API.Config.TargetType.TargetGeneric) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TargetType);
       }
@@ -330,7 +330,7 @@ namespace SKF.Enlight.API.Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TargetType != 0) {
+      if (TargetType != global::SKF.Enlight.API.Config.TargetType.TargetGeneric) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetType);
       }
       if (_unknownFields != null) {
@@ -344,7 +344,7 @@ namespace SKF.Enlight.API.Config {
       if (other == null) {
         return;
       }
-      if (other.TargetType != 0) {
+      if (other.TargetType != global::SKF.Enlight.API.Config.TargetType.TargetGeneric) {
         TargetType = other.TargetType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1530,7 +1530,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "sampleRate" field.</summary>
     public const int SampleRateFieldNumber = 1;
-    private global::SKF.Enlight.API.Config.SampleRate sampleRate_ = 0;
+    private global::SKF.Enlight.API.Config.SampleRate sampleRate_ = global::SKF.Enlight.API.Config.SampleRate.RateUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.SampleRate SampleRate {
       get { return sampleRate_; }
@@ -1541,7 +1541,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "sampleAmount" field.</summary>
     public const int SampleAmountFieldNumber = 2;
-    private global::SKF.Enlight.API.Config.SampleAmount sampleAmount_ = 0;
+    private global::SKF.Enlight.API.Config.SampleAmount sampleAmount_ = global::SKF.Enlight.API.Config.SampleAmount.AmountUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.SampleAmount SampleAmount {
       get { return sampleAmount_; }
@@ -1552,7 +1552,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "envelopeBandSelection" field.</summary>
     public const int EnvelopeBandSelectionFieldNumber = 5;
-    private global::SKF.Enlight.API.Config.EnvelopeBandSelection envelopeBandSelection_ = 0;
+    private global::SKF.Enlight.API.Config.EnvelopeBandSelection envelopeBandSelection_ = global::SKF.Enlight.API.Config.EnvelopeBandSelection.BandUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.EnvelopeBandSelection EnvelopeBandSelection {
       get { return envelopeBandSelection_; }
@@ -1563,7 +1563,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "externalSensorEngineeringUnits" field.</summary>
     public const int ExternalSensorEngineeringUnitsFieldNumber = 6;
-    private global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits externalSensorEngineeringUnits_ = 0;
+    private global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits externalSensorEngineeringUnits_ = global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits.UnitUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits ExternalSensorEngineeringUnits {
       get { return externalSensorEngineeringUnits_; }
@@ -1574,7 +1574,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "externalSensorSensitivity" field.</summary>
     public const int ExternalSensorSensitivityFieldNumber = 7;
-    private global::SKF.Enlight.API.Config.ExternalSensorSensitivity externalSensorSensitivity_ = 0;
+    private global::SKF.Enlight.API.Config.ExternalSensorSensitivity externalSensorSensitivity_ = global::SKF.Enlight.API.Config.ExternalSensorSensitivity.SensitivityUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.ExternalSensorSensitivity ExternalSensorSensitivity {
       get { return externalSensorSensitivity_; }
@@ -1585,7 +1585,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "externalSensorICP" field.</summary>
     public const int ExternalSensorICPFieldNumber = 8;
-    private global::SKF.Enlight.API.Config.ExternalSensorICP externalSensorICP_ = 0;
+    private global::SKF.Enlight.API.Config.ExternalSensorICP externalSensorICP_ = global::SKF.Enlight.API.Config.ExternalSensorICP.IcpUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.ExternalSensorICP ExternalSensorICP {
       get { return externalSensorICP_; }
@@ -1596,7 +1596,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "viewSignalType" field.</summary>
     public const int ViewSignalTypeFieldNumber = 9;
-    private global::SKF.Enlight.API.Config.ViewSignalType viewSignalType_ = 0;
+    private global::SKF.Enlight.API.Config.ViewSignalType viewSignalType_ = global::SKF.Enlight.API.Config.ViewSignalType.ViewSignalUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.ViewSignalType ViewSignalType {
       get { return viewSignalType_; }
@@ -1607,7 +1607,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "yAxisUnits" field.</summary>
     public const int YAxisUnitsFieldNumber = 10;
-    private global::SKF.Enlight.API.Config.YAxisUnits yAxisUnits_ = 0;
+    private global::SKF.Enlight.API.Config.YAxisUnits yAxisUnits_ = global::SKF.Enlight.API.Config.YAxisUnits.YAxisUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.YAxisUnits YAxisUnits {
       get { return yAxisUnits_; }
@@ -1618,7 +1618,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "XAxisUnits" field.</summary>
     public const int XAxisUnitsFieldNumber = 11;
-    private global::SKF.Enlight.API.Config.XAxisUnits xAxisUnits_ = 0;
+    private global::SKF.Enlight.API.Config.XAxisUnits xAxisUnits_ = global::SKF.Enlight.API.Config.XAxisUnits.XAxisUnknonw;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.XAxisUnits XAxisUnits {
       get { return xAxisUnits_; }
@@ -1629,7 +1629,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "yAxisDisplay" field.</summary>
     public const int YAxisDisplayFieldNumber = 12;
-    private global::SKF.Enlight.API.Config.YAxisDisplay yAxisDisplay_ = 0;
+    private global::SKF.Enlight.API.Config.YAxisDisplay yAxisDisplay_ = global::SKF.Enlight.API.Config.YAxisDisplay.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.YAxisDisplay YAxisDisplay {
       get { return yAxisDisplay_; }
@@ -1640,7 +1640,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "inputRange" field.</summary>
     public const int InputRangeFieldNumber = 13;
-    private global::SKF.Enlight.API.Config.InputRange inputRange_ = 0;
+    private global::SKF.Enlight.API.Config.InputRange inputRange_ = global::SKF.Enlight.API.Config.InputRange.RangeUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.InputRange InputRange {
       get { return inputRange_; }
@@ -1651,7 +1651,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "detectionType" field.</summary>
     public const int DetectionTypeFieldNumber = 14;
-    private global::SKF.Enlight.API.Config.DetectionType detectionType_ = 0;
+    private global::SKF.Enlight.API.Config.DetectionType detectionType_ = global::SKF.Enlight.API.Config.DetectionType.DetectionUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.DetectionType DetectionType {
       get { return detectionType_; }
@@ -1662,7 +1662,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "windowType" field.</summary>
     public const int WindowTypeFieldNumber = 18;
-    private global::SKF.Enlight.API.Config.WindowType windowType_ = 0;
+    private global::SKF.Enlight.API.Config.WindowType windowType_ = global::SKF.Enlight.API.Config.WindowType.WindowUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.WindowType WindowType {
       get { return windowType_; }
@@ -1673,7 +1673,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "highPassFilter" field.</summary>
     public const int HighPassFilterFieldNumber = 19;
-    private global::SKF.Enlight.API.Config.HighPassFilter highPassFilter_ = 0;
+    private global::SKF.Enlight.API.Config.HighPassFilter highPassFilter_ = global::SKF.Enlight.API.Config.HighPassFilter.FilterUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.HighPassFilter HighPassFilter {
       get { return highPassFilter_; }
@@ -1684,7 +1684,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "temperature" field.</summary>
     public const int TemperatureFieldNumber = 20;
-    private global::SKF.Enlight.API.Config.Temperature temperature_ = 0;
+    private global::SKF.Enlight.API.Config.Temperature temperature_ = global::SKF.Enlight.API.Config.Temperature.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.Temperature Temperature {
       get { return temperature_; }
@@ -1695,7 +1695,7 @@ namespace SKF.Enlight.API.Config {
 
     /// <summary>Field number for the "externalSensorUsage" field.</summary>
     public const int ExternalSensorUsageFieldNumber = 21;
-    private global::SKF.Enlight.API.Config.ExternalSensorUsage externalSensorUsage_ = 0;
+    private global::SKF.Enlight.API.Config.ExternalSensorUsage externalSensorUsage_ = global::SKF.Enlight.API.Config.ExternalSensorUsage.Disabled;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Config.ExternalSensorUsage ExternalSensorUsage {
       get { return externalSensorUsage_; }
@@ -1739,22 +1739,22 @@ namespace SKF.Enlight.API.Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (SampleRate != 0) hash ^= SampleRate.GetHashCode();
-      if (SampleAmount != 0) hash ^= SampleAmount.GetHashCode();
-      if (EnvelopeBandSelection != 0) hash ^= EnvelopeBandSelection.GetHashCode();
-      if (ExternalSensorEngineeringUnits != 0) hash ^= ExternalSensorEngineeringUnits.GetHashCode();
-      if (ExternalSensorSensitivity != 0) hash ^= ExternalSensorSensitivity.GetHashCode();
-      if (ExternalSensorICP != 0) hash ^= ExternalSensorICP.GetHashCode();
-      if (ViewSignalType != 0) hash ^= ViewSignalType.GetHashCode();
-      if (YAxisUnits != 0) hash ^= YAxisUnits.GetHashCode();
-      if (XAxisUnits != 0) hash ^= XAxisUnits.GetHashCode();
-      if (YAxisDisplay != 0) hash ^= YAxisDisplay.GetHashCode();
-      if (InputRange != 0) hash ^= InputRange.GetHashCode();
-      if (DetectionType != 0) hash ^= DetectionType.GetHashCode();
-      if (WindowType != 0) hash ^= WindowType.GetHashCode();
-      if (HighPassFilter != 0) hash ^= HighPassFilter.GetHashCode();
-      if (Temperature != 0) hash ^= Temperature.GetHashCode();
-      if (ExternalSensorUsage != 0) hash ^= ExternalSensorUsage.GetHashCode();
+      if (SampleRate != global::SKF.Enlight.API.Config.SampleRate.RateUnknown) hash ^= SampleRate.GetHashCode();
+      if (SampleAmount != global::SKF.Enlight.API.Config.SampleAmount.AmountUnknown) hash ^= SampleAmount.GetHashCode();
+      if (EnvelopeBandSelection != global::SKF.Enlight.API.Config.EnvelopeBandSelection.BandUnknown) hash ^= EnvelopeBandSelection.GetHashCode();
+      if (ExternalSensorEngineeringUnits != global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits.UnitUnknown) hash ^= ExternalSensorEngineeringUnits.GetHashCode();
+      if (ExternalSensorSensitivity != global::SKF.Enlight.API.Config.ExternalSensorSensitivity.SensitivityUnknown) hash ^= ExternalSensorSensitivity.GetHashCode();
+      if (ExternalSensorICP != global::SKF.Enlight.API.Config.ExternalSensorICP.IcpUnknown) hash ^= ExternalSensorICP.GetHashCode();
+      if (ViewSignalType != global::SKF.Enlight.API.Config.ViewSignalType.ViewSignalUnknown) hash ^= ViewSignalType.GetHashCode();
+      if (YAxisUnits != global::SKF.Enlight.API.Config.YAxisUnits.YAxisUnknown) hash ^= YAxisUnits.GetHashCode();
+      if (XAxisUnits != global::SKF.Enlight.API.Config.XAxisUnits.XAxisUnknonw) hash ^= XAxisUnits.GetHashCode();
+      if (YAxisDisplay != global::SKF.Enlight.API.Config.YAxisDisplay.Unknown) hash ^= YAxisDisplay.GetHashCode();
+      if (InputRange != global::SKF.Enlight.API.Config.InputRange.RangeUnknown) hash ^= InputRange.GetHashCode();
+      if (DetectionType != global::SKF.Enlight.API.Config.DetectionType.DetectionUnknown) hash ^= DetectionType.GetHashCode();
+      if (WindowType != global::SKF.Enlight.API.Config.WindowType.WindowUnknown) hash ^= WindowType.GetHashCode();
+      if (HighPassFilter != global::SKF.Enlight.API.Config.HighPassFilter.FilterUnknown) hash ^= HighPassFilter.GetHashCode();
+      if (Temperature != global::SKF.Enlight.API.Config.Temperature.Unknown) hash ^= Temperature.GetHashCode();
+      if (ExternalSensorUsage != global::SKF.Enlight.API.Config.ExternalSensorUsage.Disabled) hash ^= ExternalSensorUsage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1768,67 +1768,67 @@ namespace SKF.Enlight.API.Config {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (SampleRate != 0) {
+      if (SampleRate != global::SKF.Enlight.API.Config.SampleRate.RateUnknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) SampleRate);
       }
-      if (SampleAmount != 0) {
+      if (SampleAmount != global::SKF.Enlight.API.Config.SampleAmount.AmountUnknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) SampleAmount);
       }
-      if (EnvelopeBandSelection != 0) {
+      if (EnvelopeBandSelection != global::SKF.Enlight.API.Config.EnvelopeBandSelection.BandUnknown) {
         output.WriteRawTag(40);
         output.WriteEnum((int) EnvelopeBandSelection);
       }
-      if (ExternalSensorEngineeringUnits != 0) {
+      if (ExternalSensorEngineeringUnits != global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits.UnitUnknown) {
         output.WriteRawTag(48);
         output.WriteEnum((int) ExternalSensorEngineeringUnits);
       }
-      if (ExternalSensorSensitivity != 0) {
+      if (ExternalSensorSensitivity != global::SKF.Enlight.API.Config.ExternalSensorSensitivity.SensitivityUnknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) ExternalSensorSensitivity);
       }
-      if (ExternalSensorICP != 0) {
+      if (ExternalSensorICP != global::SKF.Enlight.API.Config.ExternalSensorICP.IcpUnknown) {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExternalSensorICP);
       }
-      if (ViewSignalType != 0) {
+      if (ViewSignalType != global::SKF.Enlight.API.Config.ViewSignalType.ViewSignalUnknown) {
         output.WriteRawTag(72);
         output.WriteEnum((int) ViewSignalType);
       }
-      if (YAxisUnits != 0) {
+      if (YAxisUnits != global::SKF.Enlight.API.Config.YAxisUnits.YAxisUnknown) {
         output.WriteRawTag(80);
         output.WriteEnum((int) YAxisUnits);
       }
-      if (XAxisUnits != 0) {
+      if (XAxisUnits != global::SKF.Enlight.API.Config.XAxisUnits.XAxisUnknonw) {
         output.WriteRawTag(88);
         output.WriteEnum((int) XAxisUnits);
       }
-      if (YAxisDisplay != 0) {
+      if (YAxisDisplay != global::SKF.Enlight.API.Config.YAxisDisplay.Unknown) {
         output.WriteRawTag(96);
         output.WriteEnum((int) YAxisDisplay);
       }
-      if (InputRange != 0) {
+      if (InputRange != global::SKF.Enlight.API.Config.InputRange.RangeUnknown) {
         output.WriteRawTag(104);
         output.WriteEnum((int) InputRange);
       }
-      if (DetectionType != 0) {
+      if (DetectionType != global::SKF.Enlight.API.Config.DetectionType.DetectionUnknown) {
         output.WriteRawTag(112);
         output.WriteEnum((int) DetectionType);
       }
-      if (WindowType != 0) {
+      if (WindowType != global::SKF.Enlight.API.Config.WindowType.WindowUnknown) {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) WindowType);
       }
-      if (HighPassFilter != 0) {
+      if (HighPassFilter != global::SKF.Enlight.API.Config.HighPassFilter.FilterUnknown) {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) HighPassFilter);
       }
-      if (Temperature != 0) {
+      if (Temperature != global::SKF.Enlight.API.Config.Temperature.Unknown) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) Temperature);
       }
-      if (ExternalSensorUsage != 0) {
+      if (ExternalSensorUsage != global::SKF.Enlight.API.Config.ExternalSensorUsage.Disabled) {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) ExternalSensorUsage);
       }
@@ -1840,52 +1840,52 @@ namespace SKF.Enlight.API.Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (SampleRate != 0) {
+      if (SampleRate != global::SKF.Enlight.API.Config.SampleRate.RateUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleRate);
       }
-      if (SampleAmount != 0) {
+      if (SampleAmount != global::SKF.Enlight.API.Config.SampleAmount.AmountUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleAmount);
       }
-      if (EnvelopeBandSelection != 0) {
+      if (EnvelopeBandSelection != global::SKF.Enlight.API.Config.EnvelopeBandSelection.BandUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnvelopeBandSelection);
       }
-      if (ExternalSensorEngineeringUnits != 0) {
+      if (ExternalSensorEngineeringUnits != global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits.UnitUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExternalSensorEngineeringUnits);
       }
-      if (ExternalSensorSensitivity != 0) {
+      if (ExternalSensorSensitivity != global::SKF.Enlight.API.Config.ExternalSensorSensitivity.SensitivityUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExternalSensorSensitivity);
       }
-      if (ExternalSensorICP != 0) {
+      if (ExternalSensorICP != global::SKF.Enlight.API.Config.ExternalSensorICP.IcpUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExternalSensorICP);
       }
-      if (ViewSignalType != 0) {
+      if (ViewSignalType != global::SKF.Enlight.API.Config.ViewSignalType.ViewSignalUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ViewSignalType);
       }
-      if (YAxisUnits != 0) {
+      if (YAxisUnits != global::SKF.Enlight.API.Config.YAxisUnits.YAxisUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) YAxisUnits);
       }
-      if (XAxisUnits != 0) {
+      if (XAxisUnits != global::SKF.Enlight.API.Config.XAxisUnits.XAxisUnknonw) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) XAxisUnits);
       }
-      if (YAxisDisplay != 0) {
+      if (YAxisDisplay != global::SKF.Enlight.API.Config.YAxisDisplay.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) YAxisDisplay);
       }
-      if (InputRange != 0) {
+      if (InputRange != global::SKF.Enlight.API.Config.InputRange.RangeUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputRange);
       }
-      if (DetectionType != 0) {
+      if (DetectionType != global::SKF.Enlight.API.Config.DetectionType.DetectionUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DetectionType);
       }
-      if (WindowType != 0) {
+      if (WindowType != global::SKF.Enlight.API.Config.WindowType.WindowUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) WindowType);
       }
-      if (HighPassFilter != 0) {
+      if (HighPassFilter != global::SKF.Enlight.API.Config.HighPassFilter.FilterUnknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) HighPassFilter);
       }
-      if (Temperature != 0) {
+      if (Temperature != global::SKF.Enlight.API.Config.Temperature.Unknown) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Temperature);
       }
-      if (ExternalSensorUsage != 0) {
+      if (ExternalSensorUsage != global::SKF.Enlight.API.Config.ExternalSensorUsage.Disabled) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ExternalSensorUsage);
       }
       if (_unknownFields != null) {
@@ -1899,52 +1899,52 @@ namespace SKF.Enlight.API.Config {
       if (other == null) {
         return;
       }
-      if (other.SampleRate != 0) {
+      if (other.SampleRate != global::SKF.Enlight.API.Config.SampleRate.RateUnknown) {
         SampleRate = other.SampleRate;
       }
-      if (other.SampleAmount != 0) {
+      if (other.SampleAmount != global::SKF.Enlight.API.Config.SampleAmount.AmountUnknown) {
         SampleAmount = other.SampleAmount;
       }
-      if (other.EnvelopeBandSelection != 0) {
+      if (other.EnvelopeBandSelection != global::SKF.Enlight.API.Config.EnvelopeBandSelection.BandUnknown) {
         EnvelopeBandSelection = other.EnvelopeBandSelection;
       }
-      if (other.ExternalSensorEngineeringUnits != 0) {
+      if (other.ExternalSensorEngineeringUnits != global::SKF.Enlight.API.Config.ExternalSensorEngineeringUnits.UnitUnknown) {
         ExternalSensorEngineeringUnits = other.ExternalSensorEngineeringUnits;
       }
-      if (other.ExternalSensorSensitivity != 0) {
+      if (other.ExternalSensorSensitivity != global::SKF.Enlight.API.Config.ExternalSensorSensitivity.SensitivityUnknown) {
         ExternalSensorSensitivity = other.ExternalSensorSensitivity;
       }
-      if (other.ExternalSensorICP != 0) {
+      if (other.ExternalSensorICP != global::SKF.Enlight.API.Config.ExternalSensorICP.IcpUnknown) {
         ExternalSensorICP = other.ExternalSensorICP;
       }
-      if (other.ViewSignalType != 0) {
+      if (other.ViewSignalType != global::SKF.Enlight.API.Config.ViewSignalType.ViewSignalUnknown) {
         ViewSignalType = other.ViewSignalType;
       }
-      if (other.YAxisUnits != 0) {
+      if (other.YAxisUnits != global::SKF.Enlight.API.Config.YAxisUnits.YAxisUnknown) {
         YAxisUnits = other.YAxisUnits;
       }
-      if (other.XAxisUnits != 0) {
+      if (other.XAxisUnits != global::SKF.Enlight.API.Config.XAxisUnits.XAxisUnknonw) {
         XAxisUnits = other.XAxisUnits;
       }
-      if (other.YAxisDisplay != 0) {
+      if (other.YAxisDisplay != global::SKF.Enlight.API.Config.YAxisDisplay.Unknown) {
         YAxisDisplay = other.YAxisDisplay;
       }
-      if (other.InputRange != 0) {
+      if (other.InputRange != global::SKF.Enlight.API.Config.InputRange.RangeUnknown) {
         InputRange = other.InputRange;
       }
-      if (other.DetectionType != 0) {
+      if (other.DetectionType != global::SKF.Enlight.API.Config.DetectionType.DetectionUnknown) {
         DetectionType = other.DetectionType;
       }
-      if (other.WindowType != 0) {
+      if (other.WindowType != global::SKF.Enlight.API.Config.WindowType.WindowUnknown) {
         WindowType = other.WindowType;
       }
-      if (other.HighPassFilter != 0) {
+      if (other.HighPassFilter != global::SKF.Enlight.API.Config.HighPassFilter.FilterUnknown) {
         HighPassFilter = other.HighPassFilter;
       }
-      if (other.Temperature != 0) {
+      if (other.Temperature != global::SKF.Enlight.API.Config.Temperature.Unknown) {
         Temperature = other.Temperature;
       }
-      if (other.ExternalSensorUsage != 0) {
+      if (other.ExternalSensorUsage != global::SKF.Enlight.API.Config.ExternalSensorUsage.Disabled) {
         ExternalSensorUsage = other.ExternalSensorUsage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

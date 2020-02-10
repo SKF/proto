@@ -34,14 +34,14 @@ namespace SKF.Enlight.API.Common {
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.Origin), global::SKF.Enlight.API.Common.Origin.Parser, new[]{ "Id", "Type", "Provider" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveString), global::SKF.Enlight.API.Common.PrimitiveString.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt32), global::SKF.Enlight.API.Common.PrimitiveInt32.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt64), global::SKF.Enlight.API.Common.PrimitiveInt64.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBytes), global::SKF.Enlight.API.Common.PrimitiveBytes.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBool), global::SKF.Enlight.API.Common.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.Void), global::SKF.Enlight.API.Common.Void.Parser, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.Origin), global::SKF.Enlight.API.Common.Origin.Parser, new[]{ "Id", "Type", "Provider" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveString), global::SKF.Enlight.API.Common.PrimitiveString.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt32), global::SKF.Enlight.API.Common.PrimitiveInt32.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveInt64), global::SKF.Enlight.API.Common.PrimitiveInt64.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBytes), global::SKF.Enlight.API.Common.PrimitiveBytes.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.PrimitiveBool), global::SKF.Enlight.API.Common.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Common.Void), global::SKF.Enlight.API.Common.Void.Parser, null, null, null, null, null)
           }));
     }
     #endregion

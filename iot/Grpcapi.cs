@@ -168,52 +168,52 @@ namespace SKF.Enlight.API.IoT {
             "U0tGLkVubGlnaHQuQVBJLklvVGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.NodeEventType), typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescription), global::SKF.Enlight.API.IoT.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "ExternalTaskId", "Status", "StatusUpdatedAt", "LongId", "Nodes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.InitialTaskDescription), global::SKF.Enlight.API.IoT.InitialTaskDescription.Parser, new[]{ "UserId", "TaskName", "HierarchyId", "DueDateTimestamp", "FunctionalLocationIds", "ExternalTaskId", "Status", "Nodes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Node), global::SKF.Enlight.API.IoT.Node.Parser, new[]{ "NodeId", "NodeType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskUser), global::SKF.Enlight.API.IoT.TaskUser.Parser, new[]{ "UserId", "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.SetTaskStatusInput), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser, new[]{ "TaskId", "UserId", "Status", "UpdatedAt" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescriptions), global::SKF.Enlight.API.IoT.TaskDescriptions.Parser, new[]{ "TaskDescriptionArr" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.FunctionalLocationIds), global::SKF.Enlight.API.IoT.FunctionalLocationIds.Parser, new[]{ "IdArr" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeData), global::SKF.Enlight.API.IoT.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers", "Tags", "TenantId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Coordinate), global::SKF.Enlight.API.IoT.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DataPoint), global::SKF.Enlight.API.IoT.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Spectrum), global::SKF.Enlight.API.IoT.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TimeSeries), global::SKF.Enlight.API.IoT.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Media), global::SKF.Enlight.API.IoT.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "Origin", "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DeleteNodeDataInput), global::SKF.Enlight.API.IoT.DeleteNodeDataInput.Parser, new[]{ "NodeId", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodesDataInput), global::SKF.Enlight.API.IoT.IngestNodesDataInput.Parser, new[]{ "Nodes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodesDataOutput), global::SKF.Enlight.API.IoT.IngestNodesDataOutput.Parser, new[]{ "Success" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeEventLogInput), global::SKF.Enlight.API.IoT.GetNodeEventLogInput.Parser, new[]{ "SeqId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeEvent), global::SKF.Enlight.API.IoT.NodeEvent.Parser, new[]{ "AggregateId", "SeqId", "Timestamp", "EventType", "DataContentType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeEventLogOutput), global::SKF.Enlight.API.IoT.GetNodeEventLogOutput.Parser, new[]{ "Events", "HasNext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataOutput), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "Origin", "NodeDataList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataInput), global::SKF.Enlight.API.IoT.GetNodeDataInput.Parser, new[]{ "NodeId", "Timestamp", "ContentType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataOutput), global::SKF.Enlight.API.IoT.GetNodeDataOutput.Parser, new[]{ "NodeDataList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput), global::SKF.Enlight.API.IoT.GetLatestNodeDataInput.Parser, new[]{ "NodeId", "ContentType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput), global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput.Parser, new[]{ "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaInput), global::SKF.Enlight.API.IoT.GetMediaInput.Parser, new[]{ "NodeId", "MediaId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput.Parser, new[]{ "MediaId", "Type", "ContentMD5" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput.Parser, new[]{ "MediaId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaOutput), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser, new[]{ "Media" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamInput), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamOutput), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksByStatusInput), global::SKF.Enlight.API.IoT.GetTasksByStatusInput.Parser, new[]{ "HierarchyId", "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksByStatusOutput), global::SKF.Enlight.API.IoT.GetTasksByStatusOutput.Parser, new[]{ "TaskList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput), global::SKF.Enlight.API.IoT.GetTaskByUUIDInput.Parser, new[]{ "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser, new[]{ "Task" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser, new[]{ "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser, new[]{ "Task" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser, new[]{ "Timestamp", "UserId", "Limit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser, new[]{ "TaskList" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.NodeEventType), typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescription), global::SKF.Enlight.API.IoT.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "ExternalTaskId", "Status", "StatusUpdatedAt", "LongId", "Nodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.InitialTaskDescription), global::SKF.Enlight.API.IoT.InitialTaskDescription.Parser, new[]{ "UserId", "TaskName", "HierarchyId", "DueDateTimestamp", "FunctionalLocationIds", "ExternalTaskId", "Status", "Nodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Node), global::SKF.Enlight.API.IoT.Node.Parser, new[]{ "NodeId", "NodeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskUser), global::SKF.Enlight.API.IoT.TaskUser.Parser, new[]{ "UserId", "TaskId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.SetTaskStatusInput), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser, new[]{ "TaskId", "UserId", "Status", "UpdatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescriptions), global::SKF.Enlight.API.IoT.TaskDescriptions.Parser, new[]{ "TaskDescriptionArr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.FunctionalLocationIds), global::SKF.Enlight.API.IoT.FunctionalLocationIds.Parser, new[]{ "IdArr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeData), global::SKF.Enlight.API.IoT.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers", "Tags", "TenantId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Coordinate), global::SKF.Enlight.API.IoT.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DataPoint), global::SKF.Enlight.API.IoT.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Spectrum), global::SKF.Enlight.API.IoT.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TimeSeries), global::SKF.Enlight.API.IoT.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Media), global::SKF.Enlight.API.IoT.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "Origin", "NodeData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DeleteNodeDataInput), global::SKF.Enlight.API.IoT.DeleteNodeDataInput.Parser, new[]{ "NodeId", "Origin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodesDataInput), global::SKF.Enlight.API.IoT.IngestNodesDataInput.Parser, new[]{ "Nodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodesDataOutput), global::SKF.Enlight.API.IoT.IngestNodesDataOutput.Parser, new[]{ "Success" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeEventLogInput), global::SKF.Enlight.API.IoT.GetNodeEventLogInput.Parser, new[]{ "SeqId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeEvent), global::SKF.Enlight.API.IoT.NodeEvent.Parser, new[]{ "AggregateId", "SeqId", "Timestamp", "EventType", "DataContentType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeEventLogOutput), global::SKF.Enlight.API.IoT.GetNodeEventLogOutput.Parser, new[]{ "Events", "HasNext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataOutput), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "Origin", "NodeDataList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataInput), global::SKF.Enlight.API.IoT.GetNodeDataInput.Parser, new[]{ "NodeId", "Timestamp", "ContentType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataOutput), global::SKF.Enlight.API.IoT.GetNodeDataOutput.Parser, new[]{ "NodeDataList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput), global::SKF.Enlight.API.IoT.GetLatestNodeDataInput.Parser, new[]{ "NodeId", "ContentType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput), global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput.Parser, new[]{ "NodeData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaInput), global::SKF.Enlight.API.IoT.GetMediaInput.Parser, new[]{ "NodeId", "MediaId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlInput.Parser, new[]{ "MediaId", "Type", "ContentMD5" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.PutMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlInput.Parser, new[]{ "MediaId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput), global::SKF.Enlight.API.IoT.GetMediaSignedUrlOutput.Parser, new[]{ "Url" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetMediaOutput), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser, new[]{ "Media" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamInput), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamOutput), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksByStatusInput), global::SKF.Enlight.API.IoT.GetTasksByStatusInput.Parser, new[]{ "HierarchyId", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksByStatusOutput), global::SKF.Enlight.API.IoT.GetTasksByStatusOutput.Parser, new[]{ "TaskList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput), global::SKF.Enlight.API.IoT.GetTaskByUUIDInput.Parser, new[]{ "TaskId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser, new[]{ "Task" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser, new[]{ "TaskId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser, new[]{ "Task" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampInput.Parser, new[]{ "Timestamp", "UserId", "Limit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput), global::SKF.Enlight.API.IoT.GetTasksModifiedSinceTimestampOutput.Parser, new[]{ "TaskList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -394,7 +394,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
-    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = global::SKF.Enlight.API.IoT.TaskStatus.NotSent;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
@@ -477,7 +477,7 @@ namespace SKF.Enlight.API.IoT {
       if (IsCompleted != false) hash ^= IsCompleted.GetHashCode();
       if (functionalLocationIds_ != null) hash ^= FunctionalLocationIds.GetHashCode();
       if (ExternalTaskId.Length != 0) hash ^= ExternalTaskId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) hash ^= Status.GetHashCode();
       if (StatusUpdatedAt != 0L) hash ^= StatusUpdatedAt.GetHashCode();
       if (LongId != 0L) hash ^= LongId.GetHashCode();
       hash ^= nodes_.GetHashCode();
@@ -522,7 +522,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(58);
         output.WriteMessage(FunctionalLocationIds);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
@@ -571,7 +571,7 @@ namespace SKF.Enlight.API.IoT {
       if (ExternalTaskId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalTaskId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (StatusUpdatedAt != 0L) {
@@ -619,7 +619,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.ExternalTaskId.Length != 0) {
         ExternalTaskId = other.ExternalTaskId;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         Status = other.Status;
       }
       if (other.StatusUpdatedAt != 0L) {
@@ -806,7 +806,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 7;
-    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = global::SKF.Enlight.API.IoT.TaskStatus.NotSent;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
@@ -858,7 +858,7 @@ namespace SKF.Enlight.API.IoT {
       if (DueDateTimestamp != 0L) hash ^= DueDateTimestamp.GetHashCode();
       if (functionalLocationIds_ != null) hash ^= FunctionalLocationIds.GetHashCode();
       if (ExternalTaskId.Length != 0) hash ^= ExternalTaskId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) hash ^= Status.GetHashCode();
       hash ^= nodes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -897,7 +897,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(50);
         output.WriteString(ExternalTaskId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
@@ -928,7 +928,7 @@ namespace SKF.Enlight.API.IoT {
       if (ExternalTaskId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalTaskId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       size += nodes_.CalculateSize(_repeated_nodes_codec);
@@ -964,7 +964,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.ExternalTaskId.Length != 0) {
         ExternalTaskId = other.ExternalTaskId;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         Status = other.Status;
       }
       nodes_.Add(other.nodes_);
@@ -1395,7 +1395,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = global::SKF.Enlight.API.IoT.TaskStatus.NotSent;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
@@ -1443,7 +1443,7 @@ namespace SKF.Enlight.API.IoT {
       int hash = 1;
       if (TaskId.Length != 0) hash ^= TaskId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) hash ^= Status.GetHashCode();
       if (UpdatedAt != 0L) hash ^= UpdatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1462,7 +1462,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(10);
         output.WriteString(TaskId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
@@ -1488,7 +1488,7 @@ namespace SKF.Enlight.API.IoT {
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (UpdatedAt != 0L) {
@@ -1511,7 +1511,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         Status = other.Status;
       }
       if (other.UpdatedAt != 0L) {
@@ -1852,7 +1852,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = global::SKF.Enlight.API.IoT.NodeDataContentType.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
       get { return contentType_; }
@@ -1991,7 +1991,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (CreatedAt != 0L) hash ^= CreatedAt.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) hash ^= ContentType.GetHashCode();
       if (dataPoint_ != null) hash ^= DataPoint.GetHashCode();
       if (spectrum_ != null) hash ^= Spectrum.GetHashCode();
       if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
@@ -2018,7 +2018,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(8);
         output.WriteInt64(CreatedAt);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ContentType);
       }
@@ -2066,7 +2066,7 @@ namespace SKF.Enlight.API.IoT {
       if (CreatedAt != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedAt);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (dataPoint_ != null) {
@@ -2108,7 +2108,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.CreatedAt != 0L) {
         CreatedAt = other.CreatedAt;
       }
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         ContentType = other.ContentType;
       }
       if (other.dataPoint_ != null) {
@@ -3028,7 +3028,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.MediaType type_ = 0;
+    private global::SKF.Enlight.API.IoT.MediaType type_ = global::SKF.Enlight.API.IoT.MediaType.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.MediaType Type {
       get { return type_; }
@@ -3071,7 +3071,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) hash ^= Type.GetHashCode();
       if (Media_.Length != 0) hash ^= Media_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3090,7 +3090,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -3109,7 +3109,7 @@ namespace SKF.Enlight.API.IoT {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Media_.Length != 0) {
@@ -3129,7 +3129,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         Type = other.Type;
       }
       if (other.Media_.Length != 0) {
@@ -3985,7 +3985,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "event_type" field.</summary>
     public const int EventTypeFieldNumber = 4;
-    private global::SKF.Enlight.API.IoT.NodeEventType eventType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeEventType eventType_ = global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.NodeEventType EventType {
       get { return eventType_; }
@@ -3996,7 +3996,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "data_content_type" field.</summary>
     public const int DataContentTypeFieldNumber = 5;
-    private global::SKF.Enlight.API.IoT.NodeDataContentType dataContentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType dataContentType_ = global::SKF.Enlight.API.IoT.NodeDataContentType.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.NodeDataContentType DataContentType {
       get { return dataContentType_; }
@@ -4032,8 +4032,8 @@ namespace SKF.Enlight.API.IoT {
       if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (SeqId.Length != 0) hash ^= SeqId.GetHashCode();
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
-      if (EventType != 0) hash ^= EventType.GetHashCode();
-      if (DataContentType != 0) hash ^= DataContentType.GetHashCode();
+      if (EventType != global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent) hash ^= EventType.GetHashCode();
+      if (DataContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) hash ^= DataContentType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4059,11 +4059,11 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(24);
         output.WriteInt64(Timestamp);
       }
-      if (EventType != 0) {
+      if (EventType != global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent) {
         output.WriteRawTag(32);
         output.WriteEnum((int) EventType);
       }
-      if (DataContentType != 0) {
+      if (DataContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         output.WriteRawTag(40);
         output.WriteEnum((int) DataContentType);
       }
@@ -4084,10 +4084,10 @@ namespace SKF.Enlight.API.IoT {
       if (Timestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
       }
-      if (EventType != 0) {
+      if (EventType != global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
       }
-      if (DataContentType != 0) {
+      if (DataContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataContentType);
       }
       if (_unknownFields != null) {
@@ -4110,10 +4110,10 @@ namespace SKF.Enlight.API.IoT {
       if (other.Timestamp != 0L) {
         Timestamp = other.Timestamp;
       }
-      if (other.EventType != 0) {
+      if (other.EventType != global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent) {
         EventType = other.EventType;
       }
-      if (other.DataContentType != 0) {
+      if (other.DataContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         DataContentType = other.DataContentType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4755,7 +4755,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 3;
-    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = global::SKF.Enlight.API.IoT.NodeDataContentType.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
       get { return contentType_; }
@@ -4788,7 +4788,7 @@ namespace SKF.Enlight.API.IoT {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) hash ^= ContentType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4810,7 +4810,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(16);
         output.WriteInt64(Timestamp);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ContentType);
       }
@@ -4828,7 +4828,7 @@ namespace SKF.Enlight.API.IoT {
       if (Timestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (_unknownFields != null) {
@@ -4848,7 +4848,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.Timestamp != 0L) {
         Timestamp = other.Timestamp;
       }
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         ContentType = other.ContentType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5052,7 +5052,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = global::SKF.Enlight.API.IoT.NodeDataContentType.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
       get { return contentType_; }
@@ -5083,7 +5083,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) hash ^= ContentType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5101,7 +5101,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ContentType);
       }
@@ -5116,7 +5116,7 @@ namespace SKF.Enlight.API.IoT {
       if (NodeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (_unknownFields != null) {
@@ -5133,7 +5133,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.NodeId.Length != 0) {
         NodeId = other.NodeId;
       }
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
         ContentType = other.ContentType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5774,7 +5774,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.MediaType type_ = 0;
+    private global::SKF.Enlight.API.IoT.MediaType type_ = global::SKF.Enlight.API.IoT.MediaType.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.MediaType Type {
       get { return type_; }
@@ -5817,7 +5817,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (MediaId.Length != 0) hash ^= MediaId.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) hash ^= Type.GetHashCode();
       if (ContentMD5.Length != 0) hash ^= ContentMD5.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5836,7 +5836,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(10);
         output.WriteString(MediaId);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -5855,7 +5855,7 @@ namespace SKF.Enlight.API.IoT {
       if (MediaId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaId);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (ContentMD5.Length != 0) {
@@ -5875,7 +5875,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.MediaId.Length != 0) {
         MediaId = other.MediaId;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
         Type = other.Type;
       }
       if (other.ContentMD5.Length != 0) {
@@ -6746,7 +6746,7 @@ namespace SKF.Enlight.API.IoT {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
-    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = global::SKF.Enlight.API.IoT.TaskStatus.NotSent;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
@@ -6777,7 +6777,7 @@ namespace SKF.Enlight.API.IoT {
     public override int GetHashCode() {
       int hash = 1;
       if (HierarchyId.Length != 0) hash ^= HierarchyId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6795,7 +6795,7 @@ namespace SKF.Enlight.API.IoT {
         output.WriteRawTag(10);
         output.WriteString(HierarchyId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
@@ -6810,7 +6810,7 @@ namespace SKF.Enlight.API.IoT {
       if (HierarchyId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HierarchyId);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -6827,7 +6827,7 @@ namespace SKF.Enlight.API.IoT {
       if (other.HierarchyId.Length != 0) {
         HierarchyId = other.HierarchyId;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

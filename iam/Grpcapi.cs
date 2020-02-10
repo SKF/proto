@@ -50,14 +50,14 @@ namespace SKF.Enlight.API.IAM {
             "bGlnaHQuQVBJLklBTWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.UserClaims), global::SKF.Enlight.API.IAM.UserClaims.Parser, new[]{ "Id", "Email", "EulaAgreedDate", "ValidEula", "Username", "UserStatus", "UserRoles", "UserAccess" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput), global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser, new[]{ "UserId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput), global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput.Parser, new[]{ "NodeIds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.CheckAuthenticationInput), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser, new[]{ "Token", "MethodArn" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput), global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser, new[]{ "Token", "Endpoint", "Method", "Api" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetEventRecordsInput), global::SKF.Enlight.API.IAM.GetEventRecordsInput.Parser, new[]{ "Since", "Limit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetEventRecordsOutput), global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser, new[]{ "Records" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.UserClaims), global::SKF.Enlight.API.IAM.UserClaims.Parser, new[]{ "Id", "Email", "EulaAgreedDate", "ValidEula", "Username", "UserStatus", "UserRoles", "UserAccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput), global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput), global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput.Parser, new[]{ "NodeIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.CheckAuthenticationInput), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser, new[]{ "Token", "MethodArn" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput), global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser, new[]{ "Token", "Endpoint", "Method", "Api" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetEventRecordsInput), global::SKF.Enlight.API.IAM.GetEventRecordsInput.Parser, new[]{ "Since", "Limit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IAM.GetEventRecordsOutput), global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser, new[]{ "Records" }, null, null, null, null)
           }));
     }
     #endregion

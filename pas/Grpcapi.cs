@@ -105,32 +105,32 @@ namespace SKF.Enlight.API.PAS {
             "FqoCE1NLRi5FbmxpZ2h0LkFQSS5QQVNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.NodeDataContentType), typeof(global::SKF.Enlight.API.PAS.MediaType), typeof(global::SKF.Enlight.API.PAS.AlarmStatus), typeof(global::SKF.Enlight.API.PAS.ThresholdType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DeepPingOutput), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.NodeData), global::SKF.Enlight.API.PAS.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Coordinate), global::SKF.Enlight.API.PAS.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DataPoint), global::SKF.Enlight.API.PAS.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Spectrum), global::SKF.Enlight.API.PAS.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.TimeSeries), global::SKF.Enlight.API.PAS.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Media), global::SKF.Enlight.API.PAS.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser, new[]{ "NodeId", "UserId", "Type", "Overall", "Origin", "Inspection" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser, new[]{ "NodeId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput.Parser, new[]{ "Type", "Overall", "Inspection" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput.Parser, new[]{ "NodeId", "AlarmStatus", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser, new[]{ "NodeId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser, new[]{ "AlarmStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.PointAlarmStatusEvent), global::SKF.Enlight.API.PAS.PointAlarmStatusEvent.Parser, new[]{ "SeqId", "NodeId", "Timestamp", "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput.Parser, new[]{ "SeqId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput.Parser, new[]{ "Events" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DoubleObject), global::SKF.Enlight.API.PAS.DoubleObject.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Overall), global::SKF.Enlight.API.PAS.Overall.Parser, new[]{ "OuterHigh", "InnerHigh", "InnerLow", "OuterLow" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Inspection), global::SKF.Enlight.API.PAS.Inspection.Parser, new[]{ "Choices" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.InspectionChoice), global::SKF.Enlight.API.PAS.InspectionChoice.Parser, new[]{ "Answer", "Instruction", "Status" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.PAS.NodeDataContentType), typeof(global::SKF.Enlight.API.PAS.MediaType), typeof(global::SKF.Enlight.API.PAS.AlarmStatus), typeof(global::SKF.Enlight.API.PAS.ThresholdType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DeepPingOutput), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.NodeData), global::SKF.Enlight.API.PAS.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "MediaV2", "QuestionAnswers" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Coordinate), global::SKF.Enlight.API.PAS.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DataPoint), global::SKF.Enlight.API.PAS.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Spectrum), global::SKF.Enlight.API.PAS.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.TimeSeries), global::SKF.Enlight.API.PAS.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Media), global::SKF.Enlight.API.PAS.Media.Parser, new[]{ "Id", "Type", "Media_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser, new[]{ "NodeId", "UserId", "Type", "Overall", "Origin", "Inspection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser, new[]{ "NodeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput.Parser, new[]{ "Type", "Overall", "Inspection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput.Parser, new[]{ "NodeId", "AlarmStatus", "Origin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser, new[]{ "NodeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser, new[]{ "AlarmStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput.Parser, new[]{ "NodeId", "AlarmStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.PointAlarmStatusEvent), global::SKF.Enlight.API.PAS.PointAlarmStatusEvent.Parser, new[]{ "SeqId", "NodeId", "Timestamp", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput.Parser, new[]{ "SeqId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput.Parser, new[]{ "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput), global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.DoubleObject), global::SKF.Enlight.API.PAS.DoubleObject.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Overall), global::SKF.Enlight.API.PAS.Overall.Parser, new[]{ "OuterHigh", "InnerHigh", "InnerLow", "OuterLow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.Inspection), global::SKF.Enlight.API.PAS.Inspection.Parser, new[]{ "Choices" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.PAS.InspectionChoice), global::SKF.Enlight.API.PAS.InspectionChoice.Parser, new[]{ "Answer", "Instruction", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -375,7 +375,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 2;
-    private global::SKF.Enlight.API.PAS.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.PAS.NodeDataContentType contentType_ = global::SKF.Enlight.API.PAS.NodeDataContentType.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.NodeDataContentType ContentType {
       get { return contentType_; }
@@ -490,7 +490,7 @@ namespace SKF.Enlight.API.PAS {
     public override int GetHashCode() {
       int hash = 1;
       if (CreatedAt != 0L) hash ^= CreatedAt.GetHashCode();
-      if (ContentType != 0) hash ^= ContentType.GetHashCode();
+      if (ContentType != global::SKF.Enlight.API.PAS.NodeDataContentType.Default) hash ^= ContentType.GetHashCode();
       if (dataPoint_ != null) hash ^= DataPoint.GetHashCode();
       if (spectrum_ != null) hash ^= Spectrum.GetHashCode();
       if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
@@ -515,7 +515,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(8);
         output.WriteInt64(CreatedAt);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.PAS.NodeDataContentType.Default) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ContentType);
       }
@@ -555,7 +555,7 @@ namespace SKF.Enlight.API.PAS {
       if (CreatedAt != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedAt);
       }
-      if (ContentType != 0) {
+      if (ContentType != global::SKF.Enlight.API.PAS.NodeDataContentType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
       }
       if (dataPoint_ != null) {
@@ -591,7 +591,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.CreatedAt != 0L) {
         CreatedAt = other.CreatedAt;
       }
-      if (other.ContentType != 0) {
+      if (other.ContentType != global::SKF.Enlight.API.PAS.NodeDataContentType.Default) {
         ContentType = other.ContentType;
       }
       if (other.dataPoint_ != null) {
@@ -1497,7 +1497,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 2;
-    private global::SKF.Enlight.API.PAS.MediaType type_ = 0;
+    private global::SKF.Enlight.API.PAS.MediaType type_ = global::SKF.Enlight.API.PAS.MediaType.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.MediaType Type {
       get { return type_; }
@@ -1540,7 +1540,7 @@ namespace SKF.Enlight.API.PAS {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::SKF.Enlight.API.PAS.MediaType.Unknown) hash ^= Type.GetHashCode();
       if (Media_.Length != 0) hash ^= Media_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1559,7 +1559,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.MediaType.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -1578,7 +1578,7 @@ namespace SKF.Enlight.API.PAS {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.MediaType.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Media_.Length != 0) {
@@ -1598,7 +1598,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::SKF.Enlight.API.PAS.MediaType.Unknown) {
         Type = other.Type;
       }
       if (other.Media_.Length != 0) {
@@ -1699,7 +1699,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 3;
-    private global::SKF.Enlight.API.PAS.ThresholdType type_ = 0;
+    private global::SKF.Enlight.API.PAS.ThresholdType type_ = global::SKF.Enlight.API.PAS.ThresholdType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.ThresholdType Type {
       get { return type_; }
@@ -1768,7 +1768,7 @@ namespace SKF.Enlight.API.PAS {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) hash ^= Type.GetHashCode();
       if (overall_ != null) hash ^= Overall.GetHashCode();
       if (origin_ != null) hash ^= Origin.GetHashCode();
       if (inspection_ != null) hash ^= Inspection.GetHashCode();
@@ -1793,7 +1793,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(18);
         output.WriteString(UserId);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
@@ -1823,7 +1823,7 @@ namespace SKF.Enlight.API.PAS {
       if (UserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (overall_ != null) {
@@ -1852,7 +1852,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         Type = other.Type;
       }
       if (other.overall_ != null) {
@@ -2194,7 +2194,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::SKF.Enlight.API.PAS.ThresholdType type_ = 0;
+    private global::SKF.Enlight.API.PAS.ThresholdType type_ = global::SKF.Enlight.API.PAS.ThresholdType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.ThresholdType Type {
       get { return type_; }
@@ -2247,7 +2247,7 @@ namespace SKF.Enlight.API.PAS {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) hash ^= Type.GetHashCode();
       if (overall_ != null) hash ^= Overall.GetHashCode();
       if (inspection_ != null) hash ^= Inspection.GetHashCode();
       if (_unknownFields != null) {
@@ -2263,7 +2263,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -2283,7 +2283,7 @@ namespace SKF.Enlight.API.PAS {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (overall_ != null) {
@@ -2303,7 +2303,7 @@ namespace SKF.Enlight.API.PAS {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         Type = other.Type;
       }
       if (other.overall_ != null) {
@@ -2405,7 +2405,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "alarm_status" field.</summary>
     public const int AlarmStatusFieldNumber = 2;
-    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = 0;
+    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.AlarmStatus AlarmStatus {
       get { return alarmStatus_; }
@@ -2448,7 +2448,7 @@ namespace SKF.Enlight.API.PAS {
     public override int GetHashCode() {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
-      if (AlarmStatus != 0) hash ^= AlarmStatus.GetHashCode();
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) hash ^= AlarmStatus.GetHashCode();
       if (origin_ != null) hash ^= Origin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2467,7 +2467,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
       }
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AlarmStatus);
       }
@@ -2486,7 +2486,7 @@ namespace SKF.Enlight.API.PAS {
       if (NodeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
       }
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AlarmStatus);
       }
       if (origin_ != null) {
@@ -2506,7 +2506,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.NodeId.Length != 0) {
         NodeId = other.NodeId;
       }
-      if (other.AlarmStatus != 0) {
+      if (other.AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         AlarmStatus = other.AlarmStatus;
       }
       if (other.origin_ != null) {
@@ -2816,7 +2816,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "alarm_status" field.</summary>
     public const int AlarmStatusFieldNumber = 1;
-    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = 0;
+    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.AlarmStatus AlarmStatus {
       get { return alarmStatus_; }
@@ -2845,7 +2845,7 @@ namespace SKF.Enlight.API.PAS {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AlarmStatus != 0) hash ^= AlarmStatus.GetHashCode();
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) hash ^= AlarmStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2859,7 +2859,7 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(8);
         output.WriteEnum((int) AlarmStatus);
       }
@@ -2871,7 +2871,7 @@ namespace SKF.Enlight.API.PAS {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AlarmStatus);
       }
       if (_unknownFields != null) {
@@ -2885,7 +2885,7 @@ namespace SKF.Enlight.API.PAS {
       if (other == null) {
         return;
       }
-      if (other.AlarmStatus != 0) {
+      if (other.AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         AlarmStatus = other.AlarmStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3063,7 +3063,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "alarm_status" field.</summary>
     public const int AlarmStatusFieldNumber = 2;
-    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = 0;
+    private global::SKF.Enlight.API.PAS.AlarmStatus alarmStatus_ = global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.AlarmStatus AlarmStatus {
       get { return alarmStatus_; }
@@ -3094,7 +3094,7 @@ namespace SKF.Enlight.API.PAS {
     public override int GetHashCode() {
       int hash = 1;
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
-      if (AlarmStatus != 0) hash ^= AlarmStatus.GetHashCode();
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) hash ^= AlarmStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3112,7 +3112,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
       }
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AlarmStatus);
       }
@@ -3127,7 +3127,7 @@ namespace SKF.Enlight.API.PAS {
       if (NodeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeId);
       }
-      if (AlarmStatus != 0) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AlarmStatus);
       }
       if (_unknownFields != null) {
@@ -3144,7 +3144,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.NodeId.Length != 0) {
         NodeId = other.NodeId;
       }
-      if (other.AlarmStatus != 0) {
+      if (other.AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         AlarmStatus = other.AlarmStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3244,7 +3244,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 4;
-    private global::SKF.Enlight.API.PAS.AlarmStatus status_ = 0;
+    private global::SKF.Enlight.API.PAS.AlarmStatus status_ = global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.AlarmStatus Status {
       get { return status_; }
@@ -3279,7 +3279,7 @@ namespace SKF.Enlight.API.PAS {
       if (SeqId.Length != 0) hash ^= SeqId.GetHashCode();
       if (NodeId.Length != 0) hash ^= NodeId.GetHashCode();
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3305,7 +3305,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(24);
         output.WriteInt64(Timestamp);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
@@ -3326,7 +3326,7 @@ namespace SKF.Enlight.API.PAS {
       if (Timestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -3349,7 +3349,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.Timestamp != 0L) {
         Timestamp = other.Timestamp;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4348,7 +4348,7 @@ namespace SKF.Enlight.API.PAS {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 3;
-    private global::SKF.Enlight.API.PAS.AlarmStatus status_ = 0;
+    private global::SKF.Enlight.API.PAS.AlarmStatus status_ = global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.PAS.AlarmStatus Status {
       get { return status_; }
@@ -4381,7 +4381,7 @@ namespace SKF.Enlight.API.PAS {
       int hash = 1;
       if (Answer.Length != 0) hash ^= Answer.GetHashCode();
       if (Instruction.Length != 0) hash ^= Instruction.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4403,7 +4403,7 @@ namespace SKF.Enlight.API.PAS {
         output.WriteRawTag(18);
         output.WriteString(Instruction);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -4421,7 +4421,7 @@ namespace SKF.Enlight.API.PAS {
       if (Instruction.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Instruction);
       }
-      if (Status != 0) {
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -4441,7 +4441,7 @@ namespace SKF.Enlight.API.PAS {
       if (other.Instruction.Length != 0) {
         Instruction = other.Instruction;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

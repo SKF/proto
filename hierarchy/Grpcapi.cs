@@ -112,25 +112,25 @@ namespace SKF.Enlight.API.Hierarchy {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes), global::SKF.Enlight.API.Hierarchy.AssetTypes.Parser, new[]{ "Classes" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Parser, new[]{ "Name", "Types_", "Code" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Parser, new[]{ "Name", "OBSOLETESequences", "Code", "Sequences" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Types.Sequence), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Types.Sequence.Parser, new[]{ "Name", "Code" }, null, null, null)})})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval), global::SKF.Enlight.API.Hierarchy.CollectionInterval.Parser, new[]{ "Unit", "Value" }, null, new[]{ typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval", "LocationId", "DadType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Component), global::SKF.Enlight.API.Hierarchy.Component.Parser, new[]{ "Id", "Type", "Props", "SubComponents" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Type", "Class", "Sequence", "Manufacturer", "Model", "SerialNumber", "Components" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "IndustrySegment", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.SaveNodeInput), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.CopyNodeInput), global::SKF.Enlight.API.Hierarchy.CopyNodeInput.Parser, new[]{ "UserId", "SrcNodeId", "DstParentNodeId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetSubTreeInput), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser, new[]{ "RootId", "Depth", "NodeTypes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser, new[]{ "NodeId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser, new[]{ "Nodes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AncestorNode), global::SKF.Enlight.API.Hierarchy.AncestorNode.Parser, new[]{ "Id", "Origin", "Label", "Description", "Type", "SubType", "ParentId" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Hierarchy.ValueType), typeof(global::SKF.Enlight.API.Hierarchy.VisualizationType), typeof(global::SKF.Enlight.API.Hierarchy.LubricantUnit), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes), global::SKF.Enlight.API.Hierarchy.AssetTypes.Parser, new[]{ "Classes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Parser, new[]{ "Name", "Types_", "Code" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Parser, new[]{ "Name", "OBSOLETESequences", "Code", "Sequences" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Types.Sequence), global::SKF.Enlight.API.Hierarchy.AssetTypes.Types.Class.Types.Type.Types.Sequence.Parser, new[]{ "Name", "Code" }, null, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval), global::SKF.Enlight.API.Hierarchy.CollectionInterval.Parser, new[]{ "Unit", "Value" }, null, new[]{ typeof(global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide", "FixedSpeedRPM", "CollectionInterval", "LocationId", "DadType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.InspectionPoint), global::SKF.Enlight.API.Hierarchy.InspectionPoint.Parser, new[]{ "ValueType", "NumericUnit", "Answers", "VisualizationType", "VisualizationMinValue", "VisualizationMaxValue", "CollectionInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.LubricationPoint), global::SKF.Enlight.API.Hierarchy.LubricationPoint.Parser, new[]{ "Lubricant", "Volume", "Unit", "Interval", "CollectionInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Component), global::SKF.Enlight.API.Hierarchy.Component.Parser, new[]{ "Id", "Type", "Props", "SubComponents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality", "Type", "Class", "Sequence", "Manufacturer", "Model", "SerialNumber", "Components" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "IndustrySegment", "Origin", "AssetNode", "MeasurementPoint", "InspectionPoint", "LubricationPoint", "Position", "Tags", "ParentId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsInput), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser, new[]{ "Since", "Limit", "CustomerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetEventsOutput), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser, new[]{ "Events" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.SaveNodeInput), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.CopyNodeInput), global::SKF.Enlight.API.Hierarchy.CopyNodeInput.Parser, new[]{ "UserId", "SrcNodeId", "DstParentNodeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetSubTreeInput), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser, new[]{ "RootId", "Depth", "NodeTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser, new[]{ "NodeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser, new[]{ "Nodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AncestorNode), global::SKF.Enlight.API.Hierarchy.AncestorNode.Parser, new[]{ "Id", "Origin", "Label", "Description", "Type", "SubType", "ParentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -868,7 +868,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     /// <summary>Field number for the "unit" field.</summary>
     public const int UnitFieldNumber = 1;
-    private global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit unit_ = 0;
+    private global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit unit_ = global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit.Months;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit Unit {
       get { return unit_; }
@@ -909,7 +909,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Unit != 0) hash ^= Unit.GetHashCode();
+      if (Unit != global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit.Months) hash ^= Unit.GetHashCode();
       if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -924,7 +924,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Unit != 0) {
+      if (Unit != global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit.Months) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Unit);
       }
@@ -940,7 +940,7 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Unit != 0) {
+      if (Unit != global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit.Months) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
       }
       if (Value != 0) {
@@ -957,7 +957,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other == null) {
         return;
       }
-      if (other.Unit != 0) {
+      if (other.Unit != global::SKF.Enlight.API.Hierarchy.CollectionInterval.Types.Unit.Months) {
         Unit = other.Unit;
       }
       if (other.Value != 0) {
@@ -1405,7 +1405,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     /// <summary>Field number for the "valueType" field.</summary>
     public const int ValueTypeFieldNumber = 4;
-    private global::SKF.Enlight.API.Hierarchy.ValueType valueType_ = 0;
+    private global::SKF.Enlight.API.Hierarchy.ValueType valueType_ = global::SKF.Enlight.API.Hierarchy.ValueType.Numeric;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Hierarchy.ValueType ValueType {
       get { return valueType_; }
@@ -1437,7 +1437,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     /// <summary>Field number for the "visualizationType" field.</summary>
     public const int VisualizationTypeFieldNumber = 5;
-    private global::SKF.Enlight.API.Hierarchy.VisualizationType visualizationType_ = 0;
+    private global::SKF.Enlight.API.Hierarchy.VisualizationType visualizationType_ = global::SKF.Enlight.API.Hierarchy.VisualizationType.VisualizationNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Hierarchy.VisualizationType VisualizationType {
       get { return visualizationType_; }
@@ -1505,10 +1505,10 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ValueType != 0) hash ^= ValueType.GetHashCode();
+      if (ValueType != global::SKF.Enlight.API.Hierarchy.ValueType.Numeric) hash ^= ValueType.GetHashCode();
       if (NumericUnit.Length != 0) hash ^= NumericUnit.GetHashCode();
       hash ^= answers_.GetHashCode();
-      if (VisualizationType != 0) hash ^= VisualizationType.GetHashCode();
+      if (VisualizationType != global::SKF.Enlight.API.Hierarchy.VisualizationType.VisualizationNone) hash ^= VisualizationType.GetHashCode();
       if (VisualizationMinValue.Length != 0) hash ^= VisualizationMinValue.GetHashCode();
       if (VisualizationMaxValue.Length != 0) hash ^= VisualizationMaxValue.GetHashCode();
       if (collectionInterval_ != null) hash ^= CollectionInterval.GetHashCode();
@@ -1530,11 +1530,11 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteString(NumericUnit);
       }
       answers_.WriteTo(output, _repeated_answers_codec);
-      if (ValueType != 0) {
+      if (ValueType != global::SKF.Enlight.API.Hierarchy.ValueType.Numeric) {
         output.WriteRawTag(32);
         output.WriteEnum((int) ValueType);
       }
-      if (VisualizationType != 0) {
+      if (VisualizationType != global::SKF.Enlight.API.Hierarchy.VisualizationType.VisualizationNone) {
         output.WriteRawTag(40);
         output.WriteEnum((int) VisualizationType);
       }
@@ -1558,14 +1558,14 @@ namespace SKF.Enlight.API.Hierarchy {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ValueType != 0) {
+      if (ValueType != global::SKF.Enlight.API.Hierarchy.ValueType.Numeric) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ValueType);
       }
       if (NumericUnit.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NumericUnit);
       }
       size += answers_.CalculateSize(_repeated_answers_codec);
-      if (VisualizationType != 0) {
+      if (VisualizationType != global::SKF.Enlight.API.Hierarchy.VisualizationType.VisualizationNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VisualizationType);
       }
       if (VisualizationMinValue.Length != 0) {
@@ -1588,14 +1588,14 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other == null) {
         return;
       }
-      if (other.ValueType != 0) {
+      if (other.ValueType != global::SKF.Enlight.API.Hierarchy.ValueType.Numeric) {
         ValueType = other.ValueType;
       }
       if (other.NumericUnit.Length != 0) {
         NumericUnit = other.NumericUnit;
       }
       answers_.Add(other.answers_);
-      if (other.VisualizationType != 0) {
+      if (other.VisualizationType != global::SKF.Enlight.API.Hierarchy.VisualizationType.VisualizationNone) {
         VisualizationType = other.VisualizationType;
       }
       if (other.VisualizationMinValue.Length != 0) {
@@ -1720,7 +1720,7 @@ namespace SKF.Enlight.API.Hierarchy {
 
     /// <summary>Field number for the "unit" field.</summary>
     public const int UnitFieldNumber = 3;
-    private global::SKF.Enlight.API.Hierarchy.LubricantUnit unit_ = 0;
+    private global::SKF.Enlight.API.Hierarchy.LubricantUnit unit_ = global::SKF.Enlight.API.Hierarchy.LubricantUnit.Gram;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::SKF.Enlight.API.Hierarchy.LubricantUnit Unit {
       get { return unit_; }
@@ -1780,7 +1780,7 @@ namespace SKF.Enlight.API.Hierarchy {
       int hash = 1;
       if (Lubricant.Length != 0) hash ^= Lubricant.GetHashCode();
       if (Volume != 0) hash ^= Volume.GetHashCode();
-      if (Unit != 0) hash ^= Unit.GetHashCode();
+      if (Unit != global::SKF.Enlight.API.Hierarchy.LubricantUnit.Gram) hash ^= Unit.GetHashCode();
       if (Interval != 0) hash ^= Interval.GetHashCode();
       if (collectionInterval_ != null) hash ^= CollectionInterval.GetHashCode();
       if (_unknownFields != null) {
@@ -1804,7 +1804,7 @@ namespace SKF.Enlight.API.Hierarchy {
         output.WriteRawTag(16);
         output.WriteInt32(Volume);
       }
-      if (Unit != 0) {
+      if (Unit != global::SKF.Enlight.API.Hierarchy.LubricantUnit.Gram) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Unit);
       }
@@ -1830,7 +1830,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (Volume != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Volume);
       }
-      if (Unit != 0) {
+      if (Unit != global::SKF.Enlight.API.Hierarchy.LubricantUnit.Gram) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
       }
       if (Interval != 0) {
@@ -1856,7 +1856,7 @@ namespace SKF.Enlight.API.Hierarchy {
       if (other.Volume != 0) {
         Volume = other.Volume;
       }
-      if (other.Unit != 0) {
+      if (other.Unit != global::SKF.Enlight.API.Hierarchy.LubricantUnit.Gram) {
         Unit = other.Unit;
       }
       if (other.Interval != 0) {
