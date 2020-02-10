@@ -10,14 +10,18 @@ service Notification {
 
   rpc SetNotificationType (SetNotificationTypeInput) returns (common.Void) {}
   rpc GetNotificationType (GetNotificationTypeInput) returns (GetNotificationTypeOutput) {}
+  rpc RemoveNotificationType (RemoveNotificationTypeInput) returns (common.Void) {}
 
   rpc InitiateNotification (InitiateNotificationInput) returns (InitiateNotificationOutput) {}
   rpc GetInitiatedNotification (GetInitiatedNotificationInput) returns (GetInitiatedNotificationOutput) {}
-  
+  rpc RemoveInitiatedNotification (RemoveInitiatedNotificationInput) returns (common.Void) {}
+
   rpc SetUserPreferences (SetUserPreferencesInput) returns (common.Void) {}
   rpc GetUserPreferences (GetUserPreferencesInput) returns (GetUserPreferencesOutput) {}
-  
+  rpc RemoveUserPreferences (RemoveUserPreferencesInput) returns (common.Void) {}
+
   rpc GetUserNotifications (GetUserNotificationsInput) returns (GetUserNotificationsOutput) {}
+  rpc RemoveUserNotifications (RemoveUserNotificationsInput) returns (common.Void) {}
 }
 
 enum DeliveryChannel {
@@ -68,6 +72,9 @@ message GetNotificationTypeInput {
 message GetNotificationTypeOutput {
   NotificationType notification_type = 1;
 }
+message RemoveNotificationTypeInput {
+  string name = 1;
+}
 
 
 message InitiateNotificationInput {
@@ -86,6 +93,9 @@ message GetInitiatedNotificationInput {
 message GetInitiatedNotificationOutput {
   InitiatedNotification initiated_notification = 1;
 }
+message RemoveInitiatedNotificationInput {
+  string external_id = 1;
+}
 
 
 message UserNotification {
@@ -101,9 +111,12 @@ message GetUserNotificationsInput {
   string user_id = 1;
   int32 limit = 2;
 }
-
 message GetUserNotificationsOutput {
   repeated UserNotification notifications = 1;
+}
+message RemoveUserNotificationsInput {
+  string user_id = 1;
+  string initiated_notification_external_id = 2;
 }
 
 message UserPreferenceSchedule {
@@ -122,11 +135,13 @@ message UserPreference {
 message SetUserPreferencesInput {
   repeated UserPreference preferences = 1;
 }
-
 message GetUserPreferencesInput {
   string user_id = 1;
 }
-
 message GetUserPreferencesOutput {
   repeated UserPreference preferences = 1;
+}
+message RemoveUserPreferencesInput {
+  string user_id = 1;
+  string notification_type_ext_id = 2;
 }
