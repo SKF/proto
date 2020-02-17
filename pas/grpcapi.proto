@@ -13,9 +13,6 @@ service PointAlarmStatus {
 
   rpc SetPointAlarmStatus (SetPointAlarmStatusInput) returns (SetPointAlarmStatusOutput) {}
   rpc GetPointAlarmStatus (GetPointAlarmStatusInput) returns (GetPointAlarmStatusOutput) {}
-  rpc GetPointAlarmStatusStream (GetPointAlarmStatusStreamInput) returns (stream GetPointAlarmStatusStreamOutput) {
-    option deprecated = true;
-  }
   rpc GetPointAlarmStatusEventLog (GetPointAlarmStatusEventLogInput) returns (GetPointAlarmStatusEventLogOutput) {}
   rpc CalculateAndSetPointAlarmStatus (CalculateAndSetPointAlarmStatusInput) returns (common.Void) {}
 }
@@ -118,17 +115,6 @@ message GetPointAlarmStatusInput {
 }
 message GetPointAlarmStatusOutput {
   AlarmStatus alarm_status = 1;
-}
-
-
-// GetPointAlarmStatusStream Messages
-message GetPointAlarmStatusStreamInput {
-  option deprecated = true;
-}
-message GetPointAlarmStatusStreamOutput {
-  option deprecated = true;
-  string node_id = 1;
-  AlarmStatus alarm_status = 2;
 }
 
 message PointAlarmStatusEvent {
