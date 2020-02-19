@@ -11,15 +11,9 @@ service IoT {
   rpc CreateTask (InitialTaskDescription) returns (common.PrimitiveString) {}
   rpc GetAllTasks (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc GetUncompletedTasks (common.PrimitiveString) returns (TaskDescriptions) {}
-  rpc SetTaskCompleted (TaskUser) returns (common.Void) {
-    option deprecated = true;
-  }
   rpc DeleteTask (TaskUser) returns (common.Void) {}
   rpc GetUncompletedTasksByHierarchy (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc SetTaskStatus (SetTaskStatusInput) returns (common.Void) {}
-  rpc GetTaskStream (GetTaskStreamInput) returns (stream GetTaskStreamOutput) {
-    option deprecated = true;
-  }
   rpc GetTasksByStatus (GetTasksByStatusInput) returns (GetTasksByStatusOutput) {}
   rpc GetTaskByUUID (GetTaskByUUIDInput) returns (GetTaskByUUIDOutput) {}
   rpc GetTaskByLongId (GetTaskByLongIdInput) returns (GetTaskByLongIdOutput) {}
@@ -216,18 +210,6 @@ message GetNodeEventLogOutput {
 message IngestNodeDataOutput {}
 
 
-// IngestNodeDataStream messages
-message IngestNodeDataStreamInput {
-  option deprecated = true;
-  string node_id = 1;
-  common.Origin origin = 3;
-  repeated NodeData node_data_list = 2;
-}
-message IngestNodeDataStreamOutput {
-  option deprecated = true;
-}
-
-
 // GetNodeData messages
 message GetNodeDataInput {
   string node_id = 1;
@@ -247,16 +229,6 @@ message GetLatestNodeDataInput {
 
 message GetLatestNodeDataOutput {
   NodeData node_data = 1;
-}
-
-// GetNodeDataStream messages
-message GetNodeDataStreamInput {
-  option deprecated = true;
-}
-message GetNodeDataStreamOutput {
-  option deprecated = true;
-  string node_id = 1;
-  NodeData node_data = 2;
 }
 
 // GetMedia messages
@@ -285,16 +257,6 @@ message GetMediaSignedUrlOutput {
 
 message GetMediaOutput {
   Media media = 1;
-}
-
-message GetTaskStreamInput {
-  option deprecated = true;
-  string hierarchy_id = 1;
-}
-
-message GetTaskStreamOutput {
-  option deprecated = true;
-  TaskDescription task = 1;
 }
 
 message GetTasksByStatusInput {
