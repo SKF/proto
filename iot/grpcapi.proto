@@ -109,7 +109,6 @@ enum NodeDataContentType {
   SPECTRUM = 2;
   TIME_SERIES = 3;
   NOTE = 4;
-  MEDIA = 5 [deprecated=true];
   MEDIA_V2 = 7;
   QUESTION_ANSWERS = 6;
 }
@@ -122,7 +121,6 @@ message NodeData {
   Spectrum spectrum = 4;
   TimeSeries time_series = 5;
   string note = 6;
-  bytes media = 7 [deprecated=true];
   Media media_v2 = 9;
   repeated string question_answers = 8;
   string tags = 10;
