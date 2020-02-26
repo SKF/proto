@@ -22,8 +22,6 @@ namespace SKF.Enlight.API.PAS {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput> __Marshaller_pasapi_SetPointAlarmStatusOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput> __Marshaller_pasapi_GetPointAlarmStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput> __Marshaller_pasapi_GetPointAlarmStatusOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput> __Marshaller_pasapi_GetPointAlarmStatusStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> __Marshaller_pasapi_GetPointAlarmStatusStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput> __Marshaller_pasapi_GetPointAlarmStatusEventLogInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput> __Marshaller_pasapi_GetPointAlarmStatusEventLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput> __Marshaller_pasapi_CalculateAndSetPointAlarmStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser.ParseFrom);
@@ -62,13 +60,6 @@ namespace SKF.Enlight.API.PAS {
         "GetPointAlarmStatus",
         __Marshaller_pasapi_GetPointAlarmStatusInput,
         __Marshaller_pasapi_GetPointAlarmStatusOutput);
-
-    static readonly grpc::Method<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> __Method_GetPointAlarmStatusStream = new grpc::Method<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput>(
-        grpc::MethodType.ServerStreaming,
-        __ServiceName,
-        "GetPointAlarmStatusStream",
-        __Marshaller_pasapi_GetPointAlarmStatusStreamInput,
-        __Marshaller_pasapi_GetPointAlarmStatusStreamOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput> __Method_GetPointAlarmStatusEventLog = new grpc::Method<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput>(
         grpc::MethodType.Unary,
@@ -115,11 +106,6 @@ namespace SKF.Enlight.API.PAS {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput> GetPointAlarmStatus(global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task GetPointAlarmStatusStream(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput request, grpc::IServerStreamWriter<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -239,14 +225,6 @@ namespace SKF.Enlight.API.PAS {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPointAlarmStatus, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> GetPointAlarmStatusStream(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetPointAlarmStatusStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput> GetPointAlarmStatusStream(global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncServerStreamingCall(__Method_GetPointAlarmStatusStream, null, options, request);
-      }
       public virtual global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput GetPointAlarmStatusEventLog(global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPointAlarmStatusEventLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,7 +274,6 @@ namespace SKF.Enlight.API.PAS {
           .AddMethod(__Method_GetPointAlarmThreshold, serviceImpl.GetPointAlarmThreshold)
           .AddMethod(__Method_SetPointAlarmStatus, serviceImpl.SetPointAlarmStatus)
           .AddMethod(__Method_GetPointAlarmStatus, serviceImpl.GetPointAlarmStatus)
-          .AddMethod(__Method_GetPointAlarmStatusStream, serviceImpl.GetPointAlarmStatusStream)
           .AddMethod(__Method_GetPointAlarmStatusEventLog, serviceImpl.GetPointAlarmStatusEventLog)
           .AddMethod(__Method_CalculateAndSetPointAlarmStatus, serviceImpl.CalculateAndSetPointAlarmStatus).Build();
     }
@@ -312,7 +289,6 @@ namespace SKF.Enlight.API.PAS {
       serviceBinder.AddMethod(__Method_GetPointAlarmThreshold, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput, global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput>(serviceImpl.GetPointAlarmThreshold));
       serviceBinder.AddMethod(__Method_SetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput, global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput>(serviceImpl.SetPointAlarmStatus));
       serviceBinder.AddMethod(__Method_GetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput>(serviceImpl.GetPointAlarmStatus));
-      serviceBinder.AddMethod(__Method_GetPointAlarmStatusStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusStreamOutput>(serviceImpl.GetPointAlarmStatusStream));
       serviceBinder.AddMethod(__Method_GetPointAlarmStatusEventLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput>(serviceImpl.GetPointAlarmStatusEventLog));
       serviceBinder.AddMethod(__Method_CalculateAndSetPointAlarmStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.CalculateAndSetPointAlarmStatus));
     }
