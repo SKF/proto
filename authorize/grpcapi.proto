@@ -27,6 +27,7 @@ service Authorize {
 
   rpc GetActionsByUserRole (GetActionsByUserRoleInput) returns (GetActionsByUserRoleOutput) {}
   rpc GetResourcesAndActionsByUser (GetResourcesAndActionsByUserInput) returns (GetResourcesAndActionsByUserOutput) {}
+  rpc GetResourcesAndActionsByUserAndResource (GetResourcesAndActionsByUserAndResourceInput) returns (GetResourcesAndActionsByUserAndResourceOutput) {}
   rpc GetResourcesByOriginAndType (GetResourcesByOriginAndTypeInput) returns (GetResourcesByOriginAndTypeOutput) {}
   rpc GetResourcesWithActionsAccess(GetResourcesWithActionsAccessInput) returns (GetResourcesWithActionsAccessOutput) {}
   rpc GetUserIDsWithAccessToResource (GetUserIDsWithAccessToResourceInput) returns (GetUserIDsWithAccessToResourceOutput) {}
@@ -248,6 +249,15 @@ message GetResourcesAndActionsByUserInput {
 }
 
 message GetResourcesAndActionsByUserOutput {
+  repeated ActionResource data = 1;
+}
+
+message GetResourcesAndActionsByUserAndResourceInput {
+  string user_id = 1;
+  common.Origin resource = 2;
+}
+
+message GetResourcesAndActionsByUserAndResourceOutput {
   repeated ActionResource data = 1;
 }
 
