@@ -105,6 +105,7 @@ enum LubricantUnit {
 }
 
 message Component {
+  option deprecated = true;
   string id = 1;
   string type = 2;
   string props = 3;
@@ -119,7 +120,7 @@ message AssetNode {
   string manufacturer = 5;
   string model = 6;
   string serialNumber = 7;
-  repeated Component components = 9;
+  repeated Component components = 9 [deprecated=true];
 }
 
 message Node {
