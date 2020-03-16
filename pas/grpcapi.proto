@@ -83,7 +83,6 @@ message SetPointAlarmThresholdInput {
   Overall overall = 4;
   common.Origin origin = 5;
   Inspection inspection = 6;
-  string unit = 7;
 }
 message SetPointAlarmThresholdOutput {}
 
