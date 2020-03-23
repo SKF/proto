@@ -101,12 +101,12 @@ message GetResourceInput {
 
 message GetResourceParentsInput {
   common.Origin resource = 1;
-  string parent_origin_type = 2;	
+  string parent_origin_type = 2;
 }
 
 message GetResourceChildrenInput {
   common.Origin resource = 1;
-  string child_origin_type = 2;	
+  string child_origin_type = 2;
 }
 
 message GetResourcesOutput {
@@ -114,8 +114,9 @@ message GetResourcesOutput {
 }
 
 message IsAuthorizedOutItem {
-  string resource_id = 1;
+  string resource_id = 1 [deprecated=true];
   bool ok = 2;
+  common.Origin resource = 3;
 }
 
 message IsAuthorizedBulkOutput {
