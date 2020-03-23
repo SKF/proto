@@ -19,8 +19,6 @@ namespace SKF.Enlight.API.Authorize {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedOutput> __Marshaller_grpcapi_IsAuthorizedOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput> __Marshaller_grpcapi_IsAuthorizedBulkInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput> __Marshaller_grpcapi_IsAuthorizedBulkOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput> __Marshaller_grpcapi_IsAuthorizedBulkWithOriginInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput> __Marshaller_grpcapi_IsAuthorizedBulkWithOriginOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput> __Marshaller_grpcapi_IsAuthorizedByEndpointInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput> __Marshaller_grpcapi_IsAuthorizedByEndpointOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Authorize.AddResourceInput> __Marshaller_grpcapi_AddResourceInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Authorize.AddResourceInput.Parser.ParseFrom);
@@ -92,13 +90,6 @@ namespace SKF.Enlight.API.Authorize {
         "IsAuthorizedBulk",
         __Marshaller_grpcapi_IsAuthorizedBulkInput,
         __Marshaller_grpcapi_IsAuthorizedBulkOutput);
-
-    static readonly grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput, global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput> __Method_IsAuthorizedBulkWithOrigin = new grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput, global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "IsAuthorizedBulkWithOrigin",
-        __Marshaller_grpcapi_IsAuthorizedBulkWithOriginInput,
-        __Marshaller_grpcapi_IsAuthorizedBulkWithOriginOutput);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput, global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput> __Method_IsAuthorizedByEndpoint = new grpc::Method<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput, global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput>(
         grpc::MethodType.Unary,
@@ -336,11 +327,6 @@ namespace SKF.Enlight.API.Authorize {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput> IsAuthorizedBulk(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput> IsAuthorizedBulkWithOrigin(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -583,22 +569,6 @@ namespace SKF.Enlight.API.Authorize {
       public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput> IsAuthorizedBulkAsync(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_IsAuthorizedBulk, null, options, request);
-      }
-      public virtual global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput IsAuthorizedBulkWithOrigin(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return IsAuthorizedBulkWithOrigin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput IsAuthorizedBulkWithOrigin(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_IsAuthorizedBulkWithOrigin, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput> IsAuthorizedBulkWithOriginAsync(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return IsAuthorizedBulkWithOriginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput> IsAuthorizedBulkWithOriginAsync(global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_IsAuthorizedBulkWithOrigin, null, options, request);
       }
       public virtual global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput IsAuthorizedByEndpoint(global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1096,7 +1066,6 @@ namespace SKF.Enlight.API.Authorize {
           .AddMethod(__Method_LogClientState, serviceImpl.LogClientState)
           .AddMethod(__Method_IsAuthorized, serviceImpl.IsAuthorized)
           .AddMethod(__Method_IsAuthorizedBulk, serviceImpl.IsAuthorizedBulk)
-          .AddMethod(__Method_IsAuthorizedBulkWithOrigin, serviceImpl.IsAuthorizedBulkWithOrigin)
           .AddMethod(__Method_IsAuthorizedByEndpoint, serviceImpl.IsAuthorizedByEndpoint)
           .AddMethod(__Method_AddResource, serviceImpl.AddResource)
           .AddMethod(__Method_RemoveResource, serviceImpl.RemoveResource)
@@ -1139,7 +1108,6 @@ namespace SKF.Enlight.API.Authorize {
       serviceBinder.AddMethod(__Method_LogClientState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.LogClientStateInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.LogClientState));
       serviceBinder.AddMethod(__Method_IsAuthorized, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedInput, global::SKF.Enlight.API.Authorize.IsAuthorizedOutput>(serviceImpl.IsAuthorized));
       serviceBinder.AddMethod(__Method_IsAuthorizedBulk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkInput, global::SKF.Enlight.API.Authorize.IsAuthorizedBulkOutput>(serviceImpl.IsAuthorizedBulk));
-      serviceBinder.AddMethod(__Method_IsAuthorizedBulkWithOrigin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginInput, global::SKF.Enlight.API.Authorize.IsAuthorizedBulkWithOriginOutput>(serviceImpl.IsAuthorizedBulkWithOrigin));
       serviceBinder.AddMethod(__Method_IsAuthorizedByEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointInput, global::SKF.Enlight.API.Authorize.IsAuthorizedByEndpointOutput>(serviceImpl.IsAuthorizedByEndpoint));
       serviceBinder.AddMethod(__Method_AddResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.AddResourceInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.AddResource));
       serviceBinder.AddMethod(__Method_RemoveResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Authorize.RemoveResourceInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveResource));
