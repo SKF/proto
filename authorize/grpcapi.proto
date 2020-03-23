@@ -11,7 +11,6 @@ service Authorize {
 
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   rpc IsAuthorizedBulk (IsAuthorizedBulkInput) returns (IsAuthorizedBulkOutput) {}
-  rpc IsAuthorizedBulkWithOrigin (IsAuthorizedBulkWithOriginInput ) returns (IsAuthorizedBulkWithOriginOutput) {}
   rpc IsAuthorizedByEndpoint (IsAuthorizedByEndpointInput) returns (IsAuthorizedByEndpointOutput) {}
 
   rpc AddResource (AddResourceInput) returns (common.Void) {}
@@ -82,13 +81,6 @@ message IsAuthorizedInput {
 }
 
 message IsAuthorizedBulkInput {
-  option deprecated = true;
-  string user_id = 1;
-  string action = 2;
-  repeated common.Origin resources = 3;
-}
-
-message IsAuthorizedBulkWithOriginInput {
   string user_id = 1;
   string action = 2;
   repeated common.Origin resources = 3;
@@ -109,12 +101,12 @@ message GetResourceInput {
 
 message GetResourceParentsInput {
   common.Origin resource = 1;
-  string parent_origin_type = 2;
+  string parent_origin_type = 2;	
 }
 
 message GetResourceChildrenInput {
   common.Origin resource = 1;
-  string child_origin_type = 2;
+  string child_origin_type = 2;	
 }
 
 message GetResourcesOutput {
@@ -128,15 +120,6 @@ message IsAuthorizedOutItem {
 
 message IsAuthorizedBulkOutput {
   repeated IsAuthorizedOutItem responses = 1;
-}
-
-message IsAuthorizedBulkWithOriginOutput {
-  repeated IsAuthorizedBulkWithOriginOutputItem responses = 1;
-}
-
-message IsAuthorizedBulkWithOriginOutputItem {
-  bool ok = 1;
-  common.Origin resource = 2;
 }
 
 message IsAuthorizedByEndpointInput {
