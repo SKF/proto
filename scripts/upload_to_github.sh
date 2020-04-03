@@ -29,6 +29,11 @@ commit_files() {
     fi
   done
 
+  if [ -f "$3/go.mod" ]; then
+    cp $3/go.{mod,sum} .
+    git add go.{mod,sum}
+  fi
+
   git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
   git tag "${TRAVIS_TAG}-$1"
 }

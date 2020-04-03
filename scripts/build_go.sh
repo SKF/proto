@@ -18,3 +18,13 @@ for SERVICE in $SERVICES; do
     --plugin $PLUGIN \
     $SERVICE/*.proto;
 done
+
+if [ -n "${TRAVIS_TAG}" ]; then
+  MAJOR_VERSION=$(echo ${TRAVIS_TAG} | awk -F. '{ print $1 }')
+  
+  pushd build/go
+  go mod init github.com/SKF/proto/${MAJOR_VERSION}
+  find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
+  go mod tidy
+  popd
+fi

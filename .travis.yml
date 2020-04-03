@@ -39,7 +39,7 @@ jobs:
     - stage: install
       name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
       language: go
-      go: "1.10"
+      go: "1.14"
       before_install:
         - tree build
         - rm -rf build
@@ -62,7 +62,7 @@ jobs:
     - stage: build
       name: "Go: Generate sources"
       language: go
-      go: "1.10"
+      go: "1.14"
       script: bash scripts/build_go.sh
       after_failure:
         - ls -l $PROTOC
@@ -73,7 +73,7 @@ jobs:
     - stage: deploy
       name: "Go: Deploy generated sources back to repo"
       language: go
-      go: "1.10"
+      go: "1.14"
       deploy:
         provider: script
         script: bash scripts/upload_to_github.sh go go1 build/go
