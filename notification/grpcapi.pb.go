@@ -6,7 +6,7 @@ package grpcapi
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import common "github.com/SKF/proto/common"
+import common "github.com/SKF/proto/v2/common"
 
 import (
 	context "golang.org/x/net/context"
@@ -1608,7 +1608,9 @@ var _Notification_serviceDesc = grpc.ServiceDesc{
 	Metadata: "notification/grpcapi.proto",
 }
 
-func init() { proto.RegisterFile("notification/grpcapi.proto", fileDescriptor_grpcapi_d613b046dda8ae0e) }
+func init() {
+	proto.RegisterFile("notification/grpcapi.proto", fileDescriptor_grpcapi_d613b046dda8ae0e)
+}
 
 var fileDescriptor_grpcapi_d613b046dda8ae0e = []byte{
 	// 1219 bytes of a gzipped FileDescriptorProto
