@@ -73,6 +73,7 @@ enum MediaType {
   AUDIO_WAV = 1;
   IMAGE_JPEG = 2;
   IMAGE_PNG = 3;
+  AUDIO_MP4 = 4;
 }
 
 // SetPointAlarmThreshold Messages
