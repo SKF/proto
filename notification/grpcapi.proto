@@ -45,7 +45,7 @@ message DeliverySchedule {
   int32 DailyDeliveryTimeHour = 3;
   int32 DailyDeliveryTimeMinute = 4;
 }
-
+test
 message NotificationType {
   string name = 1;
   string qualifying_action = 2;
