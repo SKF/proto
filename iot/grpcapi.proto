@@ -125,6 +125,7 @@ message NodeData {
   repeated string question_answers = 8;
   string tags = 10;
   string tenant_id = 11;
+  string measurement_id = 12;
 }
 
 message Coordinate {
