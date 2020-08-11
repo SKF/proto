@@ -38,6 +38,7 @@ service Authorize {
   rpc AddResourceRelations (AddResourceRelationsInput) returns (common.Void) {}
   rpc RemoveResourceRelations (RemoveResourceRelationsInput) returns (common.Void) {}
 
+  rpc ApplyRolesForUserOnResources(ApplyRolesForUserOnResourcesInput) returns (common.Void) {}
   rpc ApplyUserAction (ApplyUserActionInput) returns (common.Void) {}
   rpc GetUserActions (GetUserActionsInput) returns (GetUserActionsOutput) {}
   rpc RemoveUserAction (RemoveUserActionInput) returns (common.Void) {}
@@ -56,6 +57,12 @@ service Authorize {
 message UserRole {
   string name = 1;
   repeated string actions = 2;
+}
+
+message ApplyRolesForUserOnResourcesInput {
+  string user_id = 1;
+  repeated string roles = 2;
+  repeated common.Origin resources = 3;
 }
 
 message GetUserActionsInput {
