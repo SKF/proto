@@ -22,15 +22,18 @@ service Notification {
 
   rpc GetUserNotifications (GetUserNotificationsInput) returns (GetUserNotificationsOutput) {}
   rpc RemoveUserNotifications (RemoveUserNotificationsInput) returns (common.Void) {}
+
+  rpc UpdateUserNotificationStatus (UpdateUserNotificationStatusInput) returns (common.Void) {}
 }
 
 enum DeliveryChannel {
   MAIL = 0;
+  POPUP = 1;
 }
 
 enum DeliveryScheduleType {
   IMMEDIATE = 0;
-  DAILY     = 1;
+  DAILY = 1;
 }
 
 enum SendState {
@@ -144,4 +147,9 @@ message GetUserPreferencesOutput {
 message RemoveUserPreferencesInput {
   string user_id = 1;
   string notification_type_ext_id = 2;
+}
+
+message UpdateUserNotificationStatusInput {
+  string notification_id = 1;
+  SendState send_state = 2;
 }
