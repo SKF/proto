@@ -30,6 +30,7 @@ namespace SKF.Enlight.API.Notification {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsInput> __Marshaller_grpcapi_GetUserNotificationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserNotificationsInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsOutput> __Marshaller_grpcapi_GetUserNotificationsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserNotificationsOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput> __Marshaller_grpcapi_RemoveUserNotificationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput> __Marshaller_grpcapi_UpdateUserNotificationStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput.Parser.ParseFrom);
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
@@ -115,6 +116,13 @@ namespace SKF.Enlight.API.Notification {
         __Marshaller_grpcapi_RemoveUserNotificationsInput,
         __Marshaller_common_Void);
 
+    static readonly grpc::Method<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput, global::SKF.Enlight.API.Common.Void> __Method_UpdateUserNotificationStatus = new grpc::Method<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput, global::SKF.Enlight.API.Common.Void>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUserNotificationStatus",
+        __Marshaller_grpcapi_UpdateUserNotificationStatusInput,
+        __Marshaller_common_Void);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -181,6 +189,11 @@ namespace SKF.Enlight.API.Notification {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> RemoveUserNotifications(global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Common.Void> UpdateUserNotificationStatus(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -402,6 +415,22 @@ namespace SKF.Enlight.API.Notification {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveUserNotifications, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.Common.Void UpdateUserNotificationStatus(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserNotificationStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Common.Void UpdateUserNotificationStatus(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserNotificationStatus, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> UpdateUserNotificationStatusAsync(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserNotificationStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Common.Void> UpdateUserNotificationStatusAsync(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserNotificationStatus, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override NotificationClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -425,7 +454,8 @@ namespace SKF.Enlight.API.Notification {
           .AddMethod(__Method_GetUserPreferences, serviceImpl.GetUserPreferences)
           .AddMethod(__Method_RemoveUserPreferences, serviceImpl.RemoveUserPreferences)
           .AddMethod(__Method_GetUserNotifications, serviceImpl.GetUserNotifications)
-          .AddMethod(__Method_RemoveUserNotifications, serviceImpl.RemoveUserNotifications).Build();
+          .AddMethod(__Method_RemoveUserNotifications, serviceImpl.RemoveUserNotifications)
+          .AddMethod(__Method_UpdateUserNotificationStatus, serviceImpl.UpdateUserNotificationStatus).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -446,6 +476,7 @@ namespace SKF.Enlight.API.Notification {
       serviceBinder.AddMethod(__Method_RemoveUserPreferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveUserPreferences));
       serviceBinder.AddMethod(__Method_GetUserNotifications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.GetUserNotificationsInput, global::SKF.Enlight.API.Notification.GetUserNotificationsOutput>(serviceImpl.GetUserNotifications));
       serviceBinder.AddMethod(__Method_RemoveUserNotifications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.RemoveUserNotifications));
+      serviceBinder.AddMethod(__Method_UpdateUserNotificationStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput, global::SKF.Enlight.API.Common.Void>(serviceImpl.UpdateUserNotificationStatus));
     }
 
   }

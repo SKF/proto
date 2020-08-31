@@ -75,33 +75,38 @@ namespace SKF.Enlight.API.Notification {
             "Y2VzT3V0cHV0EiwKC3ByZWZlcmVuY2VzGAEgAygLMhcuZ3JwY2FwaS5Vc2Vy",
             "UHJlZmVyZW5jZSJPChpSZW1vdmVVc2VyUHJlZmVyZW5jZXNJbnB1dBIPCgd1",
             "c2VyX2lkGAEgASgJEiAKGG5vdGlmaWNhdGlvbl90eXBlX2V4dF9pZBgCIAEo",
-            "CSobCg9EZWxpdmVyeUNoYW5uZWwSCAoETUFJTBAAKjAKFERlbGl2ZXJ5U2No",
-            "ZWR1bGVUeXBlEg0KCUlNTUVESUFURRAAEgkKBURBSUxZEAEqLAoJU2VuZFN0",
-            "YXRlEgcKA05FVxAAEgsKB1NFTlRfT0sQARIJCgVFUlJPUhACMpEICgxOb3Rp",
-            "ZmljYXRpb24SMwoIRGVlcFBpbmcSDC5jb21tb24uVm9pZBoXLmNvbW1vbi5Q",
-            "cmltaXRpdmVTdHJpbmciABJIChNTZXROb3RpZmljYXRpb25UeXBlEiEuZ3Jw",
-            "Y2FwaS5TZXROb3RpZmljYXRpb25UeXBlSW5wdXQaDC5jb21tb24uVm9pZCIA",
-            "El4KE0dldE5vdGlmaWNhdGlvblR5cGUSIS5ncnBjYXBpLkdldE5vdGlmaWNh",
-            "dGlvblR5cGVJbnB1dBoiLmdycGNhcGkuR2V0Tm90aWZpY2F0aW9uVHlwZU91",
-            "dHB1dCIAEk4KFlJlbW92ZU5vdGlmaWNhdGlvblR5cGUSJC5ncnBjYXBpLlJl",
-            "bW92ZU5vdGlmaWNhdGlvblR5cGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASYQoU",
-            "SW5pdGlhdGVOb3RpZmljYXRpb24SIi5ncnBjYXBpLkluaXRpYXRlTm90aWZp",
-            "Y2F0aW9uSW5wdXQaIy5ncnBjYXBpLkluaXRpYXRlTm90aWZpY2F0aW9uT3V0",
-            "cHV0IgASbQoYR2V0SW5pdGlhdGVkTm90aWZpY2F0aW9uEiYuZ3JwY2FwaS5H",
-            "ZXRJbml0aWF0ZWROb3RpZmljYXRpb25JbnB1dBonLmdycGNhcGkuR2V0SW5p",
-            "dGlhdGVkTm90aWZpY2F0aW9uT3V0cHV0IgASWAobUmVtb3ZlSW5pdGlhdGVk",
-            "Tm90aWZpY2F0aW9uEikuZ3JwY2FwaS5SZW1vdmVJbml0aWF0ZWROb3RpZmlj",
-            "YXRpb25JbnB1dBoMLmNvbW1vbi5Wb2lkIgASRgoSU2V0VXNlclByZWZlcmVu",
-            "Y2VzEiAuZ3JwY2FwaS5TZXRVc2VyUHJlZmVyZW5jZXNJbnB1dBoMLmNvbW1v",
-            "bi5Wb2lkIgASWwoSR2V0VXNlclByZWZlcmVuY2VzEiAuZ3JwY2FwaS5HZXRV",
-            "c2VyUHJlZmVyZW5jZXNJbnB1dBohLmdycGNhcGkuR2V0VXNlclByZWZlcmVu",
-            "Y2VzT3V0cHV0IgASTAoVUmVtb3ZlVXNlclByZWZlcmVuY2VzEiMuZ3JwY2Fw",
-            "aS5SZW1vdmVVc2VyUHJlZmVyZW5jZXNJbnB1dBoMLmNvbW1vbi5Wb2lkIgAS",
-            "YQoUR2V0VXNlck5vdGlmaWNhdGlvbnMSIi5ncnBjYXBpLkdldFVzZXJOb3Rp",
-            "ZmljYXRpb25zSW5wdXQaIy5ncnBjYXBpLkdldFVzZXJOb3RpZmljYXRpb25z",
-            "T3V0cHV0IgASUAoXUmVtb3ZlVXNlck5vdGlmaWNhdGlvbnMSJS5ncnBjYXBp",
-            "LlJlbW92ZVVzZXJOb3RpZmljYXRpb25zSW5wdXQaDC5jb21tb24uVm9pZCIA",
-            "Qh+qAhxTS0YuRW5saWdodC5BUEkuTm90aWZpY2F0aW9uYgZwcm90bzM="));
+            "CSJkCiFVcGRhdGVVc2VyTm90aWZpY2F0aW9uU3RhdHVzSW5wdXQSFwoPbm90",
+            "aWZpY2F0aW9uX2lkGAEgASgJEiYKCnNlbmRfc3RhdGUYAiABKA4yEi5ncnBj",
+            "YXBpLlNlbmRTdGF0ZSomCg9EZWxpdmVyeUNoYW5uZWwSCAoETUFJTBAAEgkK",
+            "BVBPUFVQEAEqMAoURGVsaXZlcnlTY2hlZHVsZVR5cGUSDQoJSU1NRURJQVRF",
+            "EAASCQoFREFJTFkQASosCglTZW5kU3RhdGUSBwoDTkVXEAASCwoHU0VOVF9P",
+            "SxABEgkKBUVSUk9SEAIy7QgKDE5vdGlmaWNhdGlvbhIzCghEZWVwUGluZxIM",
+            "LmNvbW1vbi5Wb2lkGhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZyIAEkgKE1Nl",
+            "dE5vdGlmaWNhdGlvblR5cGUSIS5ncnBjYXBpLlNldE5vdGlmaWNhdGlvblR5",
+            "cGVJbnB1dBoMLmNvbW1vbi5Wb2lkIgASXgoTR2V0Tm90aWZpY2F0aW9uVHlw",
+            "ZRIhLmdycGNhcGkuR2V0Tm90aWZpY2F0aW9uVHlwZUlucHV0GiIuZ3JwY2Fw",
+            "aS5HZXROb3RpZmljYXRpb25UeXBlT3V0cHV0IgASTgoWUmVtb3ZlTm90aWZp",
+            "Y2F0aW9uVHlwZRIkLmdycGNhcGkuUmVtb3ZlTm90aWZpY2F0aW9uVHlwZUlu",
+            "cHV0GgwuY29tbW9uLlZvaWQiABJhChRJbml0aWF0ZU5vdGlmaWNhdGlvbhIi",
+            "LmdycGNhcGkuSW5pdGlhdGVOb3RpZmljYXRpb25JbnB1dBojLmdycGNhcGku",
+            "SW5pdGlhdGVOb3RpZmljYXRpb25PdXRwdXQiABJtChhHZXRJbml0aWF0ZWRO",
+            "b3RpZmljYXRpb24SJi5ncnBjYXBpLkdldEluaXRpYXRlZE5vdGlmaWNhdGlv",
+            "bklucHV0GicuZ3JwY2FwaS5HZXRJbml0aWF0ZWROb3RpZmljYXRpb25PdXRw",
+            "dXQiABJYChtSZW1vdmVJbml0aWF0ZWROb3RpZmljYXRpb24SKS5ncnBjYXBp",
+            "LlJlbW92ZUluaXRpYXRlZE5vdGlmaWNhdGlvbklucHV0GgwuY29tbW9uLlZv",
+            "aWQiABJGChJTZXRVc2VyUHJlZmVyZW5jZXMSIC5ncnBjYXBpLlNldFVzZXJQ",
+            "cmVmZXJlbmNlc0lucHV0GgwuY29tbW9uLlZvaWQiABJbChJHZXRVc2VyUHJl",
+            "ZmVyZW5jZXMSIC5ncnBjYXBpLkdldFVzZXJQcmVmZXJlbmNlc0lucHV0GiEu",
+            "Z3JwY2FwaS5HZXRVc2VyUHJlZmVyZW5jZXNPdXRwdXQiABJMChVSZW1vdmVV",
+            "c2VyUHJlZmVyZW5jZXMSIy5ncnBjYXBpLlJlbW92ZVVzZXJQcmVmZXJlbmNl",
+            "c0lucHV0GgwuY29tbW9uLlZvaWQiABJhChRHZXRVc2VyTm90aWZpY2F0aW9u",
+            "cxIiLmdycGNhcGkuR2V0VXNlck5vdGlmaWNhdGlvbnNJbnB1dBojLmdycGNh",
+            "cGkuR2V0VXNlck5vdGlmaWNhdGlvbnNPdXRwdXQiABJQChdSZW1vdmVVc2Vy",
+            "Tm90aWZpY2F0aW9ucxIlLmdycGNhcGkuUmVtb3ZlVXNlck5vdGlmaWNhdGlv",
+            "bnNJbnB1dBoMLmNvbW1vbi5Wb2lkIgASWgocVXBkYXRlVXNlck5vdGlmaWNh",
+            "dGlvblN0YXR1cxIqLmdycGNhcGkuVXBkYXRlVXNlck5vdGlmaWNhdGlvblN0",
+            "YXR1c0lucHV0GgwuY29tbW9uLlZvaWQiAEIfqgIcU0tGLkVubGlnaHQuQVBJ",
+            "Lk5vdGlmaWNhdGlvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.Notification.DeliveryChannel), typeof(global::SKF.Enlight.API.Notification.DeliveryScheduleType), typeof(global::SKF.Enlight.API.Notification.SendState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,7 +131,8 @@ namespace SKF.Enlight.API.Notification {
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.SetUserPreferencesInput), global::SKF.Enlight.API.Notification.SetUserPreferencesInput.Parser, new[]{ "Preferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserPreferencesInput), global::SKF.Enlight.API.Notification.GetUserPreferencesInput.Parser, new[]{ "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.GetUserPreferencesOutput), global::SKF.Enlight.API.Notification.GetUserPreferencesOutput.Parser, new[]{ "Preferences" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput), global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput.Parser, new[]{ "UserId", "NotificationTypeExtId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput), global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput.Parser, new[]{ "UserId", "NotificationTypeExtId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput), global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput.Parser, new[]{ "NotificationId", "SendState" }, null, null, null, null)
           }));
     }
     #endregion
@@ -135,6 +141,7 @@ namespace SKF.Enlight.API.Notification {
   #region Enums
   public enum DeliveryChannel {
     [pbr::OriginalName("MAIL")] Mail = 0,
+    [pbr::OriginalName("POPUP")] Popup = 1,
   }
 
   public enum DeliveryScheduleType {
@@ -3779,6 +3786,163 @@ namespace SKF.Enlight.API.Notification {
           }
           case 18: {
             NotificationTypeExtId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateUserNotificationStatusInput : pb::IMessage<UpdateUserNotificationStatusInput> {
+    private static readonly pb::MessageParser<UpdateUserNotificationStatusInput> _parser = new pb::MessageParser<UpdateUserNotificationStatusInput>(() => new UpdateUserNotificationStatusInput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateUserNotificationStatusInput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::SKF.Enlight.API.Notification.GrpcapiReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateUserNotificationStatusInput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateUserNotificationStatusInput(UpdateUserNotificationStatusInput other) : this() {
+      notificationId_ = other.notificationId_;
+      sendState_ = other.sendState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateUserNotificationStatusInput Clone() {
+      return new UpdateUserNotificationStatusInput(this);
+    }
+
+    /// <summary>Field number for the "notification_id" field.</summary>
+    public const int NotificationIdFieldNumber = 1;
+    private string notificationId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationId {
+      get { return notificationId_; }
+      set {
+        notificationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "send_state" field.</summary>
+    public const int SendStateFieldNumber = 2;
+    private global::SKF.Enlight.API.Notification.SendState sendState_ = global::SKF.Enlight.API.Notification.SendState.New;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::SKF.Enlight.API.Notification.SendState SendState {
+      get { return sendState_; }
+      set {
+        sendState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateUserNotificationStatusInput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateUserNotificationStatusInput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NotificationId != other.NotificationId) return false;
+      if (SendState != other.SendState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NotificationId.Length != 0) hash ^= NotificationId.GetHashCode();
+      if (SendState != global::SKF.Enlight.API.Notification.SendState.New) hash ^= SendState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NotificationId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NotificationId);
+      }
+      if (SendState != global::SKF.Enlight.API.Notification.SendState.New) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SendState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (NotificationId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationId);
+      }
+      if (SendState != global::SKF.Enlight.API.Notification.SendState.New) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SendState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateUserNotificationStatusInput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NotificationId.Length != 0) {
+        NotificationId = other.NotificationId;
+      }
+      if (other.SendState != global::SKF.Enlight.API.Notification.SendState.New) {
+        SendState = other.SendState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NotificationId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SendState = (global::SKF.Enlight.API.Notification.SendState) input.ReadEnum();
             break;
           }
         }
