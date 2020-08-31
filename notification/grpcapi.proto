@@ -23,9 +23,7 @@ service Notification {
   rpc GetUserNotifications (GetUserNotificationsInput) returns (GetUserNotificationsOutput) {}
   rpc RemoveUserNotifications (RemoveUserNotificationsInput) returns (common.Void) {}
 
-  rpc UpdateUserNotificationStatus (RemoveUserNotificationsInput) returns (common.Void) {}
-
-
+  rpc UpdateUserNotificationStatus (UpdateUserNotificationStatusInput) returns (common.Void) {}
 }
 
 enum DeliveryChannel {
