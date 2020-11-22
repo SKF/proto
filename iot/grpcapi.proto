@@ -111,6 +111,7 @@ enum NodeDataContentType {
   NOTE = 4;
   MEDIA_V2 = 7;
   QUESTION_ANSWERS = 6;
+  MISSING_VALUE = 8;
 }
 
 message NodeData {
