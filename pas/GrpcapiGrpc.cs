@@ -12,19 +12,49 @@ namespace SKF.Enlight.API.PAS {
   {
     static readonly string __ServiceName = "pasapi.PointAlarmStatus";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.DeepPingOutput> __Marshaller_pasapi_DeepPingOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.DeepPingOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput> __Marshaller_pasapi_SetPointAlarmThresholdInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput> __Marshaller_pasapi_SetPointAlarmThresholdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput> __Marshaller_pasapi_GetPointAlarmThresholdInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput> __Marshaller_pasapi_GetPointAlarmThresholdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput> __Marshaller_pasapi_SetPointAlarmStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput> __Marshaller_pasapi_SetPointAlarmStatusOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput> __Marshaller_pasapi_GetPointAlarmStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput> __Marshaller_pasapi_GetPointAlarmStatusOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput> __Marshaller_pasapi_GetPointAlarmStatusEventLogInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput> __Marshaller_pasapi_GetPointAlarmStatusEventLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput> __Marshaller_pasapi_CalculateAndSetPointAlarmStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.DeepPingOutput> __Marshaller_pasapi_DeepPingOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.DeepPingOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput> __Marshaller_pasapi_SetPointAlarmThresholdInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.SetPointAlarmThresholdInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput> __Marshaller_pasapi_SetPointAlarmThresholdOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.SetPointAlarmThresholdOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput> __Marshaller_pasapi_GetPointAlarmThresholdInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmThresholdInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput> __Marshaller_pasapi_GetPointAlarmThresholdOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmThresholdOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput> __Marshaller_pasapi_SetPointAlarmStatusInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.SetPointAlarmStatusInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput> __Marshaller_pasapi_SetPointAlarmStatusOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.SetPointAlarmStatusOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput> __Marshaller_pasapi_GetPointAlarmStatusInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmStatusInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput> __Marshaller_pasapi_GetPointAlarmStatusOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmStatusOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput> __Marshaller_pasapi_GetPointAlarmStatusEventLogInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput> __Marshaller_pasapi_GetPointAlarmStatusEventLogOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.GetPointAlarmStatusEventLogOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput> __Marshaller_pasapi_CalculateAndSetPointAlarmStatusInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.PAS.CalculateAndSetPointAlarmStatusInput.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.PAS.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.PAS.DeepPingOutput>(
         grpc::MethodType.Unary,

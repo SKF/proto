@@ -12,15 +12,45 @@ namespace SKF.Enlight.API.IAM {
   {
     static readonly string __ServiceName = "grpcapi.IAM";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationInput> __Marshaller_grpcapi_CheckAuthenticationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.UserClaims> __Marshaller_grpcapi_UserClaims = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.UserClaims.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput> __Marshaller_grpcapi_CheckAuthenticationByEndpointInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput> __Marshaller_grpcapi_GetHierarchyRelationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput> __Marshaller_grpcapi_GetHierarchyRelationsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsInput> __Marshaller_grpcapi_GetEventRecordsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetEventRecordsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsOutput> __Marshaller_grpcapi_GetEventRecordsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.PrimitiveString.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationInput> __Marshaller_grpcapi_CheckAuthenticationInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.CheckAuthenticationInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.UserClaims> __Marshaller_grpcapi_UserClaims = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.UserClaims.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput> __Marshaller_grpcapi_CheckAuthenticationByEndpointInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.CheckAuthenticationByEndpointInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput> __Marshaller_grpcapi_GetHierarchyRelationsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.GetHierarchyRelationsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput> __Marshaller_grpcapi_GetHierarchyRelationsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.GetHierarchyRelationsOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsInput> __Marshaller_grpcapi_GetEventRecordsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.GetEventRecordsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IAM.GetEventRecordsOutput> __Marshaller_grpcapi_GetEventRecordsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.IAM.GetEventRecordsOutput.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,

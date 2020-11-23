@@ -12,20 +12,50 @@ namespace SKF.Enlight.API.Hierarchy {
   {
     static readonly string __ServiceName = "grpcapi.Hierarchy";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Node> __Marshaller_grpcapi_Node = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Node.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Nodes> __Marshaller_grpcapi_Nodes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Nodes.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetSubTreeInput> __Marshaller_grpcapi_GetSubTreeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput> __Marshaller_grpcapi_GetAncestorsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> __Marshaller_grpcapi_GetAncestorsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.AssetTypes> __Marshaller_grpcapi_AssetTypes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.AssetTypes.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Origin> __Marshaller_common_Origin = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Origin.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.SaveNodeInput> __Marshaller_grpcapi_SaveNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput> __Marshaller_grpcapi_DeleteNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.CopyNodeInput> __Marshaller_grpcapi_CopyNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.CopyNodeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsInput> __Marshaller_grpcapi_GetEventsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> __Marshaller_grpcapi_GetEventsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.PrimitiveString.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Node> __Marshaller_grpcapi_Node = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.Node.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Nodes> __Marshaller_grpcapi_Nodes = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.Nodes.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetSubTreeInput> __Marshaller_grpcapi_GetSubTreeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.GetSubTreeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput> __Marshaller_grpcapi_GetAncestorsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> __Marshaller_grpcapi_GetAncestorsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.AssetTypes> __Marshaller_grpcapi_AssetTypes = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.AssetTypes.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Origin> __Marshaller_common_Origin = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Origin.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.SaveNodeInput> __Marshaller_grpcapi_SaveNodeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput> __Marshaller_grpcapi_DeleteNodeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.CopyNodeInput> __Marshaller_grpcapi_CopyNodeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.CopyNodeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsInput> __Marshaller_grpcapi_GetEventsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> __Marshaller_grpcapi_GetEventsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,

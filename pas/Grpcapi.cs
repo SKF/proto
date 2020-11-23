@@ -183,7 +183,11 @@ namespace SKF.Enlight.API.PAS {
   /// <summary>
   /// DeepPing Messages
   /// </summary>
-  public sealed partial class DeepPingOutput : pb::IMessage<DeepPingOutput> {
+  public sealed partial class DeepPingOutput : pb::IMessage<DeepPingOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeepPingOutput> _parser = new pb::MessageParser<DeepPingOutput>(() => new DeepPingOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -262,6 +266,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Value.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Value);
@@ -269,7 +276,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Value.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -296,6 +317,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -308,11 +332,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class NodeData : pb::IMessage<NodeData> {
+  public sealed partial class NodeData : pb::IMessage<NodeData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NodeData> _parser = new pb::MessageParser<NodeData>(() => new NodeData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -488,6 +535,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CreatedAt != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(CreatedAt);
@@ -520,7 +570,46 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CreatedAt != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(CreatedAt);
+      }
+      if (ContentType != global::SKF.Enlight.API.PAS.NodeDataContentType.Default) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ContentType);
+      }
+      if (dataPoint_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DataPoint);
+      }
+      if (spectrum_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Spectrum);
+      }
+      if (timeSeries_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TimeSeries);
+      }
+      if (Note.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Note);
+      }
+      questionAnswers_.WriteTo(ref output, _repeated_questionAnswers_codec);
+      if (mediaV2_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(MediaV2);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -597,6 +686,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -649,11 +741,74 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CreatedAt = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            ContentType = (global::SKF.Enlight.API.PAS.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (dataPoint_ == null) {
+              DataPoint = new global::SKF.Enlight.API.PAS.DataPoint();
+            }
+            input.ReadMessage(DataPoint);
+            break;
+          }
+          case 34: {
+            if (spectrum_ == null) {
+              Spectrum = new global::SKF.Enlight.API.PAS.Spectrum();
+            }
+            input.ReadMessage(Spectrum);
+            break;
+          }
+          case 42: {
+            if (timeSeries_ == null) {
+              TimeSeries = new global::SKF.Enlight.API.PAS.TimeSeries();
+            }
+            input.ReadMessage(TimeSeries);
+            break;
+          }
+          case 50: {
+            Note = input.ReadString();
+            break;
+          }
+          case 66: {
+            questionAnswers_.AddEntriesFrom(ref input, _repeated_questionAnswers_codec);
+            break;
+          }
+          case 74: {
+            if (mediaV2_ == null) {
+              MediaV2 = new global::SKF.Enlight.API.PAS.Media();
+            }
+            input.ReadMessage(MediaV2);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Coordinate : pb::IMessage<Coordinate> {
+  public sealed partial class Coordinate : pb::IMessage<Coordinate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Coordinate> _parser = new pb::MessageParser<Coordinate>(() => new Coordinate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -746,6 +901,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0D) {
         output.WriteRawTag(9);
         output.WriteDouble(X);
@@ -757,7 +915,25 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(X);
+      }
+      if (Y != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -790,6 +966,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -806,11 +985,38 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            X = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Y = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DataPoint : pb::IMessage<DataPoint> {
+  public sealed partial class DataPoint : pb::IMessage<DataPoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DataPoint> _parser = new pb::MessageParser<DataPoint>(() => new DataPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -917,6 +1123,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (coordinate_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Coordinate);
@@ -932,7 +1141,29 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (coordinate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Coordinate);
+      }
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -974,6 +1205,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -997,11 +1231,45 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (coordinate_ == null) {
+              Coordinate = new global::SKF.Enlight.API.PAS.Coordinate();
+            }
+            input.ReadMessage(Coordinate);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Spectrum : pb::IMessage<Spectrum> {
+  public sealed partial class Spectrum : pb::IMessage<Spectrum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Spectrum> _parser = new pb::MessageParser<Spectrum>(() => new Spectrum());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1135,6 +1403,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       coordinates_.WriteTo(output, _repeated_coordinates_codec);
       if (XUnit.Length != 0) {
         output.WriteRawTag(18);
@@ -1155,7 +1426,34 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      coordinates_.WriteTo(ref output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (WindowFunction.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(WindowFunction);
+      }
+      if (SpeedRpm != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(SpeedRpm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1202,6 +1500,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1230,11 +1531,50 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(ref input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+          case 34: {
+            WindowFunction = input.ReadString();
+            break;
+          }
+          case 41: {
+            SpeedRpm = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class TimeSeries : pb::IMessage<TimeSeries> {
+  public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1340,6 +1680,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       coordinates_.WriteTo(output, _repeated_coordinates_codec);
       if (XUnit.Length != 0) {
         output.WriteRawTag(18);
@@ -1352,7 +1695,26 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      coordinates_.WriteTo(ref output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1387,6 +1749,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1407,11 +1772,42 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(ref input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Media : pb::IMessage<Media> {
+  public sealed partial class Media : pb::IMessage<Media>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Media> _parser = new pb::MessageParser<Media>(() => new Media());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1518,6 +1914,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -1533,7 +1932,29 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Type != global::SKF.Enlight.API.PAS.MediaType.Unknown) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (Media_.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Media_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1572,6 +1993,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1592,14 +2016,45 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::SKF.Enlight.API.PAS.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Media_ = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// SetPointAlarmThreshold Messages
   /// </summary>
-  public sealed partial class SetPointAlarmThresholdInput : pb::IMessage<SetPointAlarmThresholdInput> {
+  public sealed partial class SetPointAlarmThresholdInput : pb::IMessage<SetPointAlarmThresholdInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetPointAlarmThresholdInput> _parser = new pb::MessageParser<SetPointAlarmThresholdInput>(() => new SetPointAlarmThresholdInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1748,6 +2203,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -1775,7 +2233,41 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
+      }
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Type);
+      }
+      if (overall_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Overall);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Origin);
+      }
+      if (inspection_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Inspection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1841,6 +2333,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1882,11 +2377,63 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Type = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (overall_ == null) {
+              Overall = new global::SKF.Enlight.API.PAS.Overall();
+            }
+            input.ReadMessage(Overall);
+            break;
+          }
+          case 42: {
+            if (origin_ == null) {
+              Origin = new global::SKF.Enlight.API.Common.Origin();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+          case 50: {
+            if (inspection_ == null) {
+              Inspection = new global::SKF.Enlight.API.PAS.Inspection();
+            }
+            input.ReadMessage(Inspection);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SetPointAlarmThresholdOutput : pb::IMessage<SetPointAlarmThresholdOutput> {
+  public sealed partial class SetPointAlarmThresholdOutput : pb::IMessage<SetPointAlarmThresholdOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetPointAlarmThresholdOutput> _parser = new pb::MessageParser<SetPointAlarmThresholdOutput>(() => new SetPointAlarmThresholdOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1951,10 +2498,23 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1975,6 +2535,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1983,14 +2546,33 @@ namespace SKF.Enlight.API.PAS {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// GetPointAlarmThreshold Messages
   /// </summary>
-  public sealed partial class GetPointAlarmThresholdInput : pb::IMessage<GetPointAlarmThresholdInput> {
+  public sealed partial class GetPointAlarmThresholdInput : pb::IMessage<GetPointAlarmThresholdInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmThresholdInput> _parser = new pb::MessageParser<GetPointAlarmThresholdInput>(() => new GetPointAlarmThresholdInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2069,6 +2651,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -2076,7 +2661,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2103,6 +2702,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2115,11 +2717,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetPointAlarmThresholdOutput : pb::IMessage<GetPointAlarmThresholdOutput> {
+  public sealed partial class GetPointAlarmThresholdOutput : pb::IMessage<GetPointAlarmThresholdOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmThresholdOutput> _parser = new pb::MessageParser<GetPointAlarmThresholdOutput>(() => new GetPointAlarmThresholdOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2226,6 +2851,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
@@ -2241,7 +2869,29 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::SKF.Enlight.API.PAS.ThresholdType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (overall_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Overall);
+      }
+      if (inspection_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Inspection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2286,6 +2936,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2312,14 +2965,51 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::SKF.Enlight.API.PAS.ThresholdType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (overall_ == null) {
+              Overall = new global::SKF.Enlight.API.PAS.Overall();
+            }
+            input.ReadMessage(Overall);
+            break;
+          }
+          case 26: {
+            if (inspection_ == null) {
+              Inspection = new global::SKF.Enlight.API.PAS.Inspection();
+            }
+            input.ReadMessage(Inspection);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// SetPointAlarmStatus Messages
   /// </summary>
-  public sealed partial class SetPointAlarmStatusInput : pb::IMessage<SetPointAlarmStatusInput> {
+  public sealed partial class SetPointAlarmStatusInput : pb::IMessage<SetPointAlarmStatusInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetPointAlarmStatusInput> _parser = new pb::MessageParser<SetPointAlarmStatusInput>(() => new SetPointAlarmStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2426,6 +3116,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -2441,7 +3134,29 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) AlarmStatus);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Origin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2483,6 +3198,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2506,11 +3224,45 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 16: {
+            AlarmStatus = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (origin_ == null) {
+              Origin = new global::SKF.Enlight.API.Common.Origin();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SetPointAlarmStatusOutput : pb::IMessage<SetPointAlarmStatusOutput> {
+  public sealed partial class SetPointAlarmStatusOutput : pb::IMessage<SetPointAlarmStatusOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetPointAlarmStatusOutput> _parser = new pb::MessageParser<SetPointAlarmStatusOutput>(() => new SetPointAlarmStatusOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2575,10 +3327,23 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2599,6 +3364,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2607,14 +3375,33 @@ namespace SKF.Enlight.API.PAS {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// GetPointAlarmStatus Messages
   /// </summary>
-  public sealed partial class GetPointAlarmStatusInput : pb::IMessage<GetPointAlarmStatusInput> {
+  public sealed partial class GetPointAlarmStatusInput : pb::IMessage<GetPointAlarmStatusInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmStatusInput> _parser = new pb::MessageParser<GetPointAlarmStatusInput>(() => new GetPointAlarmStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2693,6 +3480,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -2700,7 +3490,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2727,6 +3531,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2739,11 +3546,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetPointAlarmStatusOutput : pb::IMessage<GetPointAlarmStatusOutput> {
+  public sealed partial class GetPointAlarmStatusOutput : pb::IMessage<GetPointAlarmStatusOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmStatusOutput> _parser = new pb::MessageParser<GetPointAlarmStatusOutput>(() => new GetPointAlarmStatusOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2822,6 +3652,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
         output.WriteRawTag(8);
         output.WriteEnum((int) AlarmStatus);
@@ -2829,7 +3662,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AlarmStatus != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) AlarmStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2856,6 +3703,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2868,11 +3718,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AlarmStatus = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class PointAlarmStatusEvent : pb::IMessage<PointAlarmStatusEvent> {
+  public sealed partial class PointAlarmStatusEvent : pb::IMessage<PointAlarmStatusEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PointAlarmStatusEvent> _parser = new pb::MessageParser<PointAlarmStatusEvent>(() => new PointAlarmStatusEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2993,6 +3866,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SeqId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(SeqId);
@@ -3012,7 +3888,33 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SeqId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SeqId);
+      }
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NodeId);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Timestamp);
+      }
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3057,6 +3959,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3081,11 +3986,46 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SeqId = input.ReadString();
+            break;
+          }
+          case 18: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Status = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetPointAlarmStatusEventLogInput : pb::IMessage<GetPointAlarmStatusEventLogInput> {
+  public sealed partial class GetPointAlarmStatusEventLogInput : pb::IMessage<GetPointAlarmStatusEventLogInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmStatusEventLogInput> _parser = new pb::MessageParser<GetPointAlarmStatusEventLogInput>(() => new GetPointAlarmStatusEventLogInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3164,6 +4104,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SeqId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(SeqId);
@@ -3171,7 +4114,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SeqId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SeqId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3198,6 +4155,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3210,11 +4170,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SeqId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetPointAlarmStatusEventLogOutput : pb::IMessage<GetPointAlarmStatusEventLogOutput> {
+  public sealed partial class GetPointAlarmStatusEventLogOutput : pb::IMessage<GetPointAlarmStatusEventLogOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPointAlarmStatusEventLogOutput> _parser = new pb::MessageParser<GetPointAlarmStatusEventLogOutput>(() => new GetPointAlarmStatusEventLogOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3292,11 +4275,25 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       events_.WriteTo(output, _repeated_events_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      events_.WriteTo(ref output, _repeated_events_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3319,6 +4316,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3331,14 +4331,37 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            events_.AddEntriesFrom(ref input, _repeated_events_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// CalculateAndSetPointAlarmStatusInput
   /// </summary>
-  public sealed partial class CalculateAndSetPointAlarmStatusInput : pb::IMessage<CalculateAndSetPointAlarmStatusInput> {
+  public sealed partial class CalculateAndSetPointAlarmStatusInput : pb::IMessage<CalculateAndSetPointAlarmStatusInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CalculateAndSetPointAlarmStatusInput> _parser = new pb::MessageParser<CalculateAndSetPointAlarmStatusInput>(() => new CalculateAndSetPointAlarmStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3431,6 +4454,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -3442,7 +4468,25 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (nodeData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NodeData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3478,6 +4522,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3497,11 +4544,41 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (nodeData_ == null) {
+              NodeData = new global::SKF.Enlight.API.PAS.NodeData();
+            }
+            input.ReadMessage(NodeData);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DoubleObject : pb::IMessage<DoubleObject> {
+  public sealed partial class DoubleObject : pb::IMessage<DoubleObject>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DoubleObject> _parser = new pb::MessageParser<DoubleObject>(() => new DoubleObject());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3580,6 +4657,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Value != 0D) {
         output.WriteRawTag(9);
         output.WriteDouble(Value);
@@ -3587,7 +4667,21 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Value != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3614,6 +4708,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3626,11 +4723,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            Value = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Overall : pb::IMessage<Overall> {
+  public sealed partial class Overall : pb::IMessage<Overall>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Overall> _parser = new pb::MessageParser<Overall>(() => new Overall());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3765,6 +4885,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (outerHigh_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(OuterHigh);
@@ -3788,7 +4911,37 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (outerHigh_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OuterHigh);
+      }
+      if (innerHigh_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InnerHigh);
+      }
+      if (innerLow_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InnerLow);
+      }
+      if (outerLow_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(OuterLow);
+      }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Unit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3851,6 +5004,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3891,11 +5047,62 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (outerHigh_ == null) {
+              OuterHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(OuterHigh);
+            break;
+          }
+          case 18: {
+            if (innerHigh_ == null) {
+              InnerHigh = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(InnerHigh);
+            break;
+          }
+          case 26: {
+            if (innerLow_ == null) {
+              InnerLow = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(InnerLow);
+            break;
+          }
+          case 34: {
+            if (outerLow_ == null) {
+              OuterLow = new global::SKF.Enlight.API.PAS.DoubleObject();
+            }
+            input.ReadMessage(OuterLow);
+            break;
+          }
+          case 42: {
+            Unit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Inspection : pb::IMessage<Inspection> {
+  public sealed partial class Inspection : pb::IMessage<Inspection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Inspection> _parser = new pb::MessageParser<Inspection>(() => new Inspection());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3973,11 +5180,25 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       choices_.WriteTo(output, _repeated_choices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      choices_.WriteTo(ref output, _repeated_choices_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4000,6 +5221,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4012,11 +5236,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            choices_.AddEntriesFrom(ref input, _repeated_choices_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class InspectionChoice : pb::IMessage<InspectionChoice> {
+  public sealed partial class InspectionChoice : pb::IMessage<InspectionChoice>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectionChoice> _parser = new pb::MessageParser<InspectionChoice>(() => new InspectionChoice());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4123,6 +5370,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Answer.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Answer);
@@ -4138,7 +5388,29 @@ namespace SKF.Enlight.API.PAS {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Answer.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Answer);
+      }
+      if (Instruction.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Instruction);
+      }
+      if (Status != global::SKF.Enlight.API.PAS.AlarmStatus.NotConfigured) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4177,6 +5449,9 @@ namespace SKF.Enlight.API.PAS {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4197,7 +5472,34 @@ namespace SKF.Enlight.API.PAS {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Answer = input.ReadString();
+            break;
+          }
+          case 18: {
+            Instruction = input.ReadString();
+            break;
+          }
+          case 24: {
+            Status = (global::SKF.Enlight.API.PAS.AlarmStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

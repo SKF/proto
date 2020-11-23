@@ -12,18 +12,48 @@ namespace SKF.Enlight.API.Reports {
   {
     static readonly string __ServiceName = "reportsgrpcapi.Reports";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.DeepPingOutput> __Marshaller_reportsgrpcapi_DeepPingOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.DeepPingOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthInput> __Marshaller_reportsgrpcapi_GetAssetHealthInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetAssetHealthInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthOutput> __Marshaller_reportsgrpcapi_GetAssetHealthOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetAssetHealthOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthInput> __Marshaller_reportsgrpcapi_GetFunctionalLocationHealthInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthOutput> __Marshaller_reportsgrpcapi_GetFunctionalLocationHealthOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceLogInput> __Marshaller_reportsgrpcapi_GetComplianceLogInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceLogInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceLogOutput> __Marshaller_reportsgrpcapi_GetComplianceLogOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceLogOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetReportsInput> __Marshaller_reportsgrpcapi_GetReportsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetReportsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetReportsOutput> __Marshaller_reportsgrpcapi_GetReportsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetReportsOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryInput> __Marshaller_reportsgrpcapi_GetComplianceSummaryInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceSummaryInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput> __Marshaller_reportsgrpcapi_GetComplianceSummaryOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.DeepPingOutput> __Marshaller_reportsgrpcapi_DeepPingOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.DeepPingOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthInput> __Marshaller_reportsgrpcapi_GetAssetHealthInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetAssetHealthInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetAssetHealthOutput> __Marshaller_reportsgrpcapi_GetAssetHealthOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetAssetHealthOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthInput> __Marshaller_reportsgrpcapi_GetFunctionalLocationHealthInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthOutput> __Marshaller_reportsgrpcapi_GetFunctionalLocationHealthOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetFunctionalLocationHealthOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceLogInput> __Marshaller_reportsgrpcapi_GetComplianceLogInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetComplianceLogInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceLogOutput> __Marshaller_reportsgrpcapi_GetComplianceLogOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetComplianceLogOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetReportsInput> __Marshaller_reportsgrpcapi_GetReportsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetReportsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetReportsOutput> __Marshaller_reportsgrpcapi_GetReportsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetReportsOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryInput> __Marshaller_reportsgrpcapi_GetComplianceSummaryInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetComplianceSummaryInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput> __Marshaller_reportsgrpcapi_GetComplianceSummaryOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Reports.GetComplianceSummaryOutput.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Reports.DeepPingOutput> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Reports.DeepPingOutput>(
         grpc::MethodType.Unary,

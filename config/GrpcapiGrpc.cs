@@ -12,14 +12,44 @@ namespace SKF.Enlight.API.Config {
   {
     static readonly string __ServiceName = "grpcapi.ResourceConfig";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SpecificationRequest> __Marshaller_grpcapi_SpecificationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.SpecificationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SpecificationResponse> __Marshaller_grpcapi_SpecificationResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.SpecificationResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigRequest> __Marshaller_grpcapi_ConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.ConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigsResponse> __Marshaller_grpcapi_ConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.ConfigsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.LatestConfigRequest> __Marshaller_grpcapi_LatestConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.LatestConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SetConfigRequest> __Marshaller_grpcapi_SetConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.SetConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigResponse> __Marshaller_grpcapi_ConfigResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Config.ConfigResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SpecificationRequest> __Marshaller_grpcapi_SpecificationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.SpecificationRequest.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SpecificationResponse> __Marshaller_grpcapi_SpecificationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.SpecificationResponse.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigRequest> __Marshaller_grpcapi_ConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.ConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigsResponse> __Marshaller_grpcapi_ConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.ConfigsResponse.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.LatestConfigRequest> __Marshaller_grpcapi_LatestConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.LatestConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.SetConfigRequest> __Marshaller_grpcapi_SetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.SetConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Config.ConfigResponse> __Marshaller_grpcapi_ConfigResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Config.ConfigResponse.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Config.SpecificationRequest, global::SKF.Enlight.API.Config.SpecificationResponse> __Method_GetSpecification = new grpc::Method<global::SKF.Enlight.API.Config.SpecificationRequest, global::SKF.Enlight.API.Config.SpecificationResponse>(
         grpc::MethodType.Unary,

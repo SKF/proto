@@ -110,49 +110,50 @@ namespace SKF.Enlight.API.IoT {
             "REVfREFUQV9FVkVOVBAEKncKClRhc2tTdGF0dXMSDAoITk9UX1NFTlQQABII",
             "CgRTRU5UEAESDAoIUkVDRUlWRUQQAhINCglDT01QTEVURUQQAxIPCgtJTl9Q",
             "Uk9HUkVTUxAEEgoKBk1JU1NFRBAFEhcKE1BBUlRJQUxMWV9DT0xMRUNURUQQ",
-            "Bip/ChNOb2RlRGF0YUNvbnRlbnRUeXBlEgsKB0RFRkFVTFQQABIOCgpEQVRB",
-            "X1BPSU5UEAESDAoIU1BFQ1RSVU0QAhIPCgtUSU1FX1NFUklFUxADEggKBE5P",
-            "VEUQBBIMCghNRURJQV9WMhAHEhQKEFFVRVNUSU9OX0FOU1dFUlMQBipVCglN",
-            "ZWRpYVR5cGUSCwoHVU5LTk9XThAAEg0KCUFVRElPX1dBVhABEg4KCklNQUdF",
-            "X0pQRUcQAhINCglJTUFHRV9QTkcQAxINCglBVURJT19NUDQQBDKRDQoDSW9U",
-            "EjMKCERlZXBQaW5nEgwuY29tbW9uLlZvaWQaFy5jb21tb24uUHJpbWl0aXZl",
-            "U3RyaW5nIgASSwoKQ3JlYXRlVGFzaxIiLmlvdGdycGNhcGkuSW5pdGlhbFRh",
-            "c2tEZXNjcmlwdGlvbhoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJGCgtH",
-            "ZXRBbGxUYXNrcxIXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmcaHC5pb3RncnBj",
-            "YXBpLlRhc2tEZXNjcmlwdGlvbnMiABJOChNHZXRVbmNvbXBsZXRlZFRhc2tz",
-            "EhcuY29tbW9uLlByaW1pdGl2ZVN0cmluZxocLmlvdGdycGNhcGkuVGFza0Rl",
-            "c2NyaXB0aW9ucyIAEjIKCkRlbGV0ZVRhc2sSFC5pb3RncnBjYXBpLlRhc2tV",
-            "c2VyGgwuY29tbW9uLlZvaWQiABJZCh5HZXRVbmNvbXBsZXRlZFRhc2tzQnlI",
-            "aWVyYXJjaHkSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5nGhwuaW90Z3JwY2Fw",
-            "aS5UYXNrRGVzY3JpcHRpb25zIgASPwoNU2V0VGFza1N0YXR1cxIeLmlvdGdy",
-            "cGNhcGkuU2V0VGFza1N0YXR1c0lucHV0GgwuY29tbW9uLlZvaWQiABJbChBH",
-            "ZXRUYXNrc0J5U3RhdHVzEiEuaW90Z3JwY2FwaS5HZXRUYXNrc0J5U3RhdHVz",
-            "SW5wdXQaIi5pb3RncnBjYXBpLkdldFRhc2tzQnlTdGF0dXNPdXRwdXQiABJS",
-            "Cg1HZXRUYXNrQnlVVUlEEh4uaW90Z3JwY2FwaS5HZXRUYXNrQnlVVUlESW5w",
-            "dXQaHy5pb3RncnBjYXBpLkdldFRhc2tCeVVVSURPdXRwdXQiABJYCg9HZXRU",
-            "YXNrQnlMb25nSWQSIC5pb3RncnBjYXBpLkdldFRhc2tCeUxvbmdJZElucHV0",
-            "GiEuaW90Z3JwY2FwaS5HZXRUYXNrQnlMb25nSWRPdXRwdXQiABKFAQoeR2V0",
-            "VGFza3NNb2RpZmllZFNpbmNlVGltZXN0YW1wEi8uaW90Z3JwY2FwaS5HZXRU",
-            "YXNrc01vZGlmaWVkU2luY2VUaW1lc3RhbXBJbnB1dBowLmlvdGdycGNhcGku",
-            "R2V0VGFza3NNb2RpZmllZFNpbmNlVGltZXN0YW1wT3V0cHV0IgASWAoPSW5n",
-            "ZXN0Tm9kZXNEYXRhEiAuaW90Z3JwY2FwaS5Jbmdlc3ROb2Rlc0RhdGFJbnB1",
-            "dBohLmlvdGdycGNhcGkuSW5nZXN0Tm9kZXNEYXRhT3V0cHV0IgASVQoOSW5n",
-            "ZXN0Tm9kZURhdGESHy5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhSW5wdXQa",
-            "IC5pb3RncnBjYXBpLkluZ2VzdE5vZGVEYXRhT3V0cHV0IgASXgoRR2V0TGF0",
-            "ZXN0Tm9kZURhdGESIi5pb3RncnBjYXBpLkdldExhdGVzdE5vZGVEYXRhSW5w",
-            "dXQaIy5pb3RncnBjYXBpLkdldExhdGVzdE5vZGVEYXRhT3V0cHV0IgASTAoL",
-            "R2V0Tm9kZURhdGESHC5pb3RncnBjYXBpLkdldE5vZGVEYXRhSW5wdXQaHS5p",
-            "b3RncnBjYXBpLkdldE5vZGVEYXRhT3V0cHV0IgASQQoORGVsZXRlTm9kZURh",
-            "dGESHy5pb3RncnBjYXBpLkRlbGV0ZU5vZGVEYXRhSW5wdXQaDC5jb21tb24u",
-            "Vm9pZCIAElgKD0dldE5vZGVFdmVudExvZxIgLmlvdGdycGNhcGkuR2V0Tm9k",
-            "ZUV2ZW50TG9nSW5wdXQaIS5pb3RncnBjYXBpLkdldE5vZGVFdmVudExvZ091",
-            "dHB1dCIAEkMKCEdldE1lZGlhEhkuaW90Z3JwY2FwaS5HZXRNZWRpYUlucHV0",
-            "GhouaW90Z3JwY2FwaS5HZXRNZWRpYU91dHB1dCIAEmUKGFJlcXVlc3RHZXRN",
-            "ZWRpYVNpZ25lZFVybBIiLmlvdGdycGNhcGkuR2V0TWVkaWFTaWduZWRVcmxJ",
-            "bnB1dBojLmlvdGdycGNhcGkuR2V0TWVkaWFTaWduZWRVcmxPdXRwdXQiABJl",
-            "ChhSZXF1ZXN0UHV0TWVkaWFTaWduZWRVcmwSIi5pb3RncnBjYXBpLlB1dE1l",
-            "ZGlhU2lnbmVkVXJsSW5wdXQaIy5pb3RncnBjYXBpLlB1dE1lZGlhU2lnbmVk",
-            "VXJsT3V0cHV0IgBCFqoCE1NLRi5FbmxpZ2h0LkFQSS5Jb1RiBnByb3RvMw=="));
+            "BiqSAQoTTm9kZURhdGFDb250ZW50VHlwZRILCgdERUZBVUxUEAASDgoKREFU",
+            "QV9QT0lOVBABEgwKCFNQRUNUUlVNEAISDwoLVElNRV9TRVJJRVMQAxIICgRO",
+            "T1RFEAQSDAoITUVESUFfVjIQBxIUChBRVUVTVElPTl9BTlNXRVJTEAYSEQoN",
+            "TUlTU0lOR19WQUxVRRAIKlUKCU1lZGlhVHlwZRILCgdVTktOT1dOEAASDQoJ",
+            "QVVESU9fV0FWEAESDgoKSU1BR0VfSlBFRxACEg0KCUlNQUdFX1BORxADEg0K",
+            "CUFVRElPX01QNBAEMpENCgNJb1QSMwoIRGVlcFBpbmcSDC5jb21tb24uVm9p",
+            "ZBoXLmNvbW1vbi5QcmltaXRpdmVTdHJpbmciABJLCgpDcmVhdGVUYXNrEiIu",
+            "aW90Z3JwY2FwaS5Jbml0aWFsVGFza0Rlc2NyaXB0aW9uGhcuY29tbW9uLlBy",
+            "aW1pdGl2ZVN0cmluZyIAEkYKC0dldEFsbFRhc2tzEhcuY29tbW9uLlByaW1p",
+            "dGl2ZVN0cmluZxocLmlvdGdycGNhcGkuVGFza0Rlc2NyaXB0aW9ucyIAEk4K",
+            "E0dldFVuY29tcGxldGVkVGFza3MSFy5jb21tb24uUHJpbWl0aXZlU3RyaW5n",
+            "GhwuaW90Z3JwY2FwaS5UYXNrRGVzY3JpcHRpb25zIgASMgoKRGVsZXRlVGFz",
+            "axIULmlvdGdycGNhcGkuVGFza1VzZXIaDC5jb21tb24uVm9pZCIAElkKHkdl",
+            "dFVuY29tcGxldGVkVGFza3NCeUhpZXJhcmNoeRIXLmNvbW1vbi5QcmltaXRp",
+            "dmVTdHJpbmcaHC5pb3RncnBjYXBpLlRhc2tEZXNjcmlwdGlvbnMiABI/Cg1T",
+            "ZXRUYXNrU3RhdHVzEh4uaW90Z3JwY2FwaS5TZXRUYXNrU3RhdHVzSW5wdXQa",
+            "DC5jb21tb24uVm9pZCIAElsKEEdldFRhc2tzQnlTdGF0dXMSIS5pb3RncnBj",
+            "YXBpLkdldFRhc2tzQnlTdGF0dXNJbnB1dBoiLmlvdGdycGNhcGkuR2V0VGFz",
+            "a3NCeVN0YXR1c091dHB1dCIAElIKDUdldFRhc2tCeVVVSUQSHi5pb3RncnBj",
+            "YXBpLkdldFRhc2tCeVVVSURJbnB1dBofLmlvdGdycGNhcGkuR2V0VGFza0J5",
+            "VVVJRE91dHB1dCIAElgKD0dldFRhc2tCeUxvbmdJZBIgLmlvdGdycGNhcGku",
+            "R2V0VGFza0J5TG9uZ0lkSW5wdXQaIS5pb3RncnBjYXBpLkdldFRhc2tCeUxv",
+            "bmdJZE91dHB1dCIAEoUBCh5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1lc3Rh",
+            "bXASLy5pb3RncnBjYXBpLkdldFRhc2tzTW9kaWZpZWRTaW5jZVRpbWVzdGFt",
+            "cElucHV0GjAuaW90Z3JwY2FwaS5HZXRUYXNrc01vZGlmaWVkU2luY2VUaW1l",
+            "c3RhbXBPdXRwdXQiABJYCg9Jbmdlc3ROb2Rlc0RhdGESIC5pb3RncnBjYXBp",
+            "LkluZ2VzdE5vZGVzRGF0YUlucHV0GiEuaW90Z3JwY2FwaS5Jbmdlc3ROb2Rl",
+            "c0RhdGFPdXRwdXQiABJVCg5Jbmdlc3ROb2RlRGF0YRIfLmlvdGdycGNhcGku",
+            "SW5nZXN0Tm9kZURhdGFJbnB1dBogLmlvdGdycGNhcGkuSW5nZXN0Tm9kZURh",
+            "dGFPdXRwdXQiABJeChFHZXRMYXRlc3ROb2RlRGF0YRIiLmlvdGdycGNhcGku",
+            "R2V0TGF0ZXN0Tm9kZURhdGFJbnB1dBojLmlvdGdycGNhcGkuR2V0TGF0ZXN0",
+            "Tm9kZURhdGFPdXRwdXQiABJMCgtHZXROb2RlRGF0YRIcLmlvdGdycGNhcGku",
+            "R2V0Tm9kZURhdGFJbnB1dBodLmlvdGdycGNhcGkuR2V0Tm9kZURhdGFPdXRw",
+            "dXQiABJBCg5EZWxldGVOb2RlRGF0YRIfLmlvdGdycGNhcGkuRGVsZXRlTm9k",
+            "ZURhdGFJbnB1dBoMLmNvbW1vbi5Wb2lkIgASWAoPR2V0Tm9kZUV2ZW50TG9n",
+            "EiAuaW90Z3JwY2FwaS5HZXROb2RlRXZlbnRMb2dJbnB1dBohLmlvdGdycGNh",
+            "cGkuR2V0Tm9kZUV2ZW50TG9nT3V0cHV0IgASQwoIR2V0TWVkaWESGS5pb3Rn",
+            "cnBjYXBpLkdldE1lZGlhSW5wdXQaGi5pb3RncnBjYXBpLkdldE1lZGlhT3V0",
+            "cHV0IgASZQoYUmVxdWVzdEdldE1lZGlhU2lnbmVkVXJsEiIuaW90Z3JwY2Fw",
+            "aS5HZXRNZWRpYVNpZ25lZFVybElucHV0GiMuaW90Z3JwY2FwaS5HZXRNZWRp",
+            "YVNpZ25lZFVybE91dHB1dCIAEmUKGFJlcXVlc3RQdXRNZWRpYVNpZ25lZFVy",
+            "bBIiLmlvdGdycGNhcGkuUHV0TWVkaWFTaWduZWRVcmxJbnB1dBojLmlvdGdy",
+            "cGNhcGkuUHV0TWVkaWFTaWduZWRVcmxPdXRwdXQiAEIWqgITU0tGLkVubGln",
+            "aHQuQVBJLklvVGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::SKF.Enlight.API.Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.NodeEventType), typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), typeof(global::SKF.Enlight.API.IoT.MediaType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -227,6 +228,7 @@ namespace SKF.Enlight.API.IoT {
     [pbr::OriginalName("NOTE")] Note = 4,
     [pbr::OriginalName("MEDIA_V2")] MediaV2 = 7,
     [pbr::OriginalName("QUESTION_ANSWERS")] QuestionAnswers = 6,
+    [pbr::OriginalName("MISSING_VALUE")] MissingValue = 8,
   }
 
   public enum MediaType {
@@ -240,7 +242,11 @@ namespace SKF.Enlight.API.IoT {
   #endregion
 
   #region Messages
-  public sealed partial class TaskDescription : pb::IMessage<TaskDescription> {
+  public sealed partial class TaskDescription : pb::IMessage<TaskDescription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TaskDescription> _parser = new pb::MessageParser<TaskDescription>(() => new TaskDescription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -475,6 +481,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (UserId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(UserId);
@@ -523,7 +532,62 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TaskId);
+      }
+      if (TaskName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TaskName);
+      }
+      if (HierarchyId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(HierarchyId);
+      }
+      if (DueDateTimestamp != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(DueDateTimestamp);
+      }
+      if (IsCompleted != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsCompleted);
+      }
+      if (functionalLocationIds_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(FunctionalLocationIds);
+      }
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Status);
+      }
+      if (ExternalTaskId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ExternalTaskId);
+      }
+      if (StatusUpdatedAt != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(StatusUpdatedAt);
+      }
+      if (LongId != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(LongId);
+      }
+      nodes_.WriteTo(ref output, _repeated_nodes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -615,6 +679,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -674,11 +741,81 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TaskId = input.ReadString();
+            break;
+          }
+          case 26: {
+            TaskName = input.ReadString();
+            break;
+          }
+          case 34: {
+            HierarchyId = input.ReadString();
+            break;
+          }
+          case 40: {
+            DueDateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            IsCompleted = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (functionalLocationIds_ == null) {
+              FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+            }
+            input.ReadMessage(FunctionalLocationIds);
+            break;
+          }
+          case 64: {
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            ExternalTaskId = input.ReadString();
+            break;
+          }
+          case 80: {
+            StatusUpdatedAt = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            LongId = input.ReadInt64();
+            break;
+          }
+          case 98: {
+            nodes_.AddEntriesFrom(ref input, _repeated_nodes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class InitialTaskDescription : pb::IMessage<InitialTaskDescription> {
+  public sealed partial class InitialTaskDescription : pb::IMessage<InitialTaskDescription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InitialTaskDescription> _parser = new pb::MessageParser<InitialTaskDescription>(() => new InitialTaskDescription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -854,6 +991,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (UserId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(UserId);
@@ -886,7 +1026,46 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (TaskName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TaskName);
+      }
+      if (HierarchyId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(HierarchyId);
+      }
+      if (DueDateTimestamp != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(DueDateTimestamp);
+      }
+      if (functionalLocationIds_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FunctionalLocationIds);
+      }
+      if (ExternalTaskId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ExternalTaskId);
+      }
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Status);
+      }
+      nodes_.WriteTo(ref output, _repeated_nodes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -954,6 +1133,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -997,11 +1179,65 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TaskName = input.ReadString();
+            break;
+          }
+          case 26: {
+            HierarchyId = input.ReadString();
+            break;
+          }
+          case 32: {
+            DueDateTimestamp = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (functionalLocationIds_ == null) {
+              FunctionalLocationIds = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
+            }
+            input.ReadMessage(FunctionalLocationIds);
+            break;
+          }
+          case 50: {
+            ExternalTaskId = input.ReadString();
+            break;
+          }
+          case 56: {
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            nodes_.AddEntriesFrom(ref input, _repeated_nodes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Node : pb::IMessage<Node> {
+  public sealed partial class Node : pb::IMessage<Node>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Node> _parser = new pb::MessageParser<Node>(() => new Node());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1094,6 +1330,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -1105,7 +1344,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (NodeType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NodeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1138,6 +1395,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1154,11 +1414,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            NodeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class TaskUser : pb::IMessage<TaskUser> {
+  public sealed partial class TaskUser : pb::IMessage<TaskUser>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TaskUser> _parser = new pb::MessageParser<TaskUser>(() => new TaskUser());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1251,6 +1538,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (UserId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(UserId);
@@ -1262,7 +1552,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TaskId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1295,6 +1603,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1311,11 +1622,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TaskId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SetTaskStatusInput : pb::IMessage<SetTaskStatusInput> {
+  public sealed partial class SetTaskStatusInput : pb::IMessage<SetTaskStatusInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetTaskStatusInput> _parser = new pb::MessageParser<SetTaskStatusInput>(() => new SetTaskStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1439,6 +1777,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TaskId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(TaskId);
@@ -1458,7 +1799,33 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TaskId);
+      }
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Status);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(UserId);
+      }
+      if (UpdatedAt != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(UpdatedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1503,6 +1870,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1527,14 +1897,49 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TaskId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 32: {
+            UpdatedAt = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Task descriptions
   /// </summary>
-  public sealed partial class TaskDescriptions : pb::IMessage<TaskDescriptions> {
+  public sealed partial class TaskDescriptions : pb::IMessage<TaskDescriptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TaskDescriptions> _parser = new pb::MessageParser<TaskDescriptions>(() => new TaskDescriptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1612,11 +2017,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       taskDescriptionArr_.WriteTo(output, _repeated_taskDescriptionArr_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      taskDescriptionArr_.WriteTo(ref output, _repeated_taskDescriptionArr_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1639,6 +2058,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1651,11 +2073,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            taskDescriptionArr_.AddEntriesFrom(ref input, _repeated_taskDescriptionArr_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class FunctionalLocationIds : pb::IMessage<FunctionalLocationIds> {
+  public sealed partial class FunctionalLocationIds : pb::IMessage<FunctionalLocationIds>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FunctionalLocationIds> _parser = new pb::MessageParser<FunctionalLocationIds>(() => new FunctionalLocationIds());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1733,11 +2178,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       idArr_.WriteTo(output, _repeated_idArr_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      idArr_.WriteTo(ref output, _repeated_idArr_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1760,6 +2219,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1772,11 +2234,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            idArr_.AddEntriesFrom(ref input, _repeated_idArr_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class NodeData : pb::IMessage<NodeData> {
+  public sealed partial class NodeData : pb::IMessage<NodeData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NodeData> _parser = new pb::MessageParser<NodeData>(() => new NodeData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1980,6 +2465,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CreatedAt != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(CreatedAt);
@@ -2020,7 +2508,54 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CreatedAt != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(CreatedAt);
+      }
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ContentType);
+      }
+      if (dataPoint_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DataPoint);
+      }
+      if (spectrum_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Spectrum);
+      }
+      if (timeSeries_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TimeSeries);
+      }
+      if (Note.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Note);
+      }
+      questionAnswers_.WriteTo(ref output, _repeated_questionAnswers_codec);
+      if (mediaV2_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(MediaV2);
+      }
+      if (Tags.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Tags);
+      }
+      if (TenantId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(TenantId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2109,6 +2644,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2169,11 +2707,82 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CreatedAt = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (dataPoint_ == null) {
+              DataPoint = new global::SKF.Enlight.API.IoT.DataPoint();
+            }
+            input.ReadMessage(DataPoint);
+            break;
+          }
+          case 34: {
+            if (spectrum_ == null) {
+              Spectrum = new global::SKF.Enlight.API.IoT.Spectrum();
+            }
+            input.ReadMessage(Spectrum);
+            break;
+          }
+          case 42: {
+            if (timeSeries_ == null) {
+              TimeSeries = new global::SKF.Enlight.API.IoT.TimeSeries();
+            }
+            input.ReadMessage(TimeSeries);
+            break;
+          }
+          case 50: {
+            Note = input.ReadString();
+            break;
+          }
+          case 66: {
+            questionAnswers_.AddEntriesFrom(ref input, _repeated_questionAnswers_codec);
+            break;
+          }
+          case 74: {
+            if (mediaV2_ == null) {
+              MediaV2 = new global::SKF.Enlight.API.IoT.Media();
+            }
+            input.ReadMessage(MediaV2);
+            break;
+          }
+          case 82: {
+            Tags = input.ReadString();
+            break;
+          }
+          case 90: {
+            TenantId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Coordinate : pb::IMessage<Coordinate> {
+  public sealed partial class Coordinate : pb::IMessage<Coordinate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Coordinate> _parser = new pb::MessageParser<Coordinate>(() => new Coordinate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2266,6 +2875,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0D) {
         output.WriteRawTag(9);
         output.WriteDouble(X);
@@ -2277,7 +2889,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(X);
+      }
+      if (Y != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2310,6 +2940,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2326,11 +2959,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            X = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Y = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DataPoint : pb::IMessage<DataPoint> {
+  public sealed partial class DataPoint : pb::IMessage<DataPoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DataPoint> _parser = new pb::MessageParser<DataPoint>(() => new DataPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2437,6 +3097,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (coordinate_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Coordinate);
@@ -2452,7 +3115,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (coordinate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Coordinate);
+      }
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2494,6 +3179,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2517,11 +3205,45 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (coordinate_ == null) {
+              Coordinate = new global::SKF.Enlight.API.IoT.Coordinate();
+            }
+            input.ReadMessage(Coordinate);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Spectrum : pb::IMessage<Spectrum> {
+  public sealed partial class Spectrum : pb::IMessage<Spectrum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Spectrum> _parser = new pb::MessageParser<Spectrum>(() => new Spectrum());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2655,6 +3377,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       coordinates_.WriteTo(output, _repeated_coordinates_codec);
       if (XUnit.Length != 0) {
         output.WriteRawTag(18);
@@ -2675,7 +3400,34 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      coordinates_.WriteTo(ref output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (WindowFunction.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(WindowFunction);
+      }
+      if (SpeedRpm != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(SpeedRpm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2722,6 +3474,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2750,11 +3505,50 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(ref input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+          case 34: {
+            WindowFunction = input.ReadString();
+            break;
+          }
+          case 41: {
+            SpeedRpm = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class TimeSeries : pb::IMessage<TimeSeries> {
+  public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2860,6 +3654,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       coordinates_.WriteTo(output, _repeated_coordinates_codec);
       if (XUnit.Length != 0) {
         output.WriteRawTag(18);
@@ -2872,7 +3669,26 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      coordinates_.WriteTo(ref output, _repeated_coordinates_codec);
+      if (XUnit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(XUnit);
+      }
+      if (YUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(YUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2907,6 +3723,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2927,11 +3746,42 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            coordinates_.AddEntriesFrom(ref input, _repeated_coordinates_codec);
+            break;
+          }
+          case 18: {
+            XUnit = input.ReadString();
+            break;
+          }
+          case 26: {
+            YUnit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Media : pb::IMessage<Media> {
+  public sealed partial class Media : pb::IMessage<Media>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Media> _parser = new pb::MessageParser<Media>(() => new Media());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3038,6 +3888,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -3053,7 +3906,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (Media_.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Media_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3092,6 +3967,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3112,14 +3990,45 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Media_ = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// IngestNodeData messages
   /// </summary>
-  public sealed partial class IngestNodeDataInput : pb::IMessage<IngestNodeDataInput> {
+  public sealed partial class IngestNodeDataInput : pb::IMessage<IngestNodeDataInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IngestNodeDataInput> _parser = new pb::MessageParser<IngestNodeDataInput>(() => new IngestNodeDataInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3226,6 +4135,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -3241,7 +4153,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (nodeData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NodeData);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Origin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3286,6 +4220,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3312,14 +4249,51 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (nodeData_ == null) {
+              NodeData = new global::SKF.Enlight.API.IoT.NodeData();
+            }
+            input.ReadMessage(NodeData);
+            break;
+          }
+          case 26: {
+            if (origin_ == null) {
+              Origin = new global::SKF.Enlight.API.Common.Origin();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// DeleteNodeData message
   /// </summary>
-  public sealed partial class DeleteNodeDataInput : pb::IMessage<DeleteNodeDataInput> {
+  public sealed partial class DeleteNodeDataInput : pb::IMessage<DeleteNodeDataInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteNodeDataInput> _parser = new pb::MessageParser<DeleteNodeDataInput>(() => new DeleteNodeDataInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3412,6 +4386,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -3423,7 +4400,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Origin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3459,6 +4454,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3478,14 +4476,44 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (origin_ == null) {
+              Origin = new global::SKF.Enlight.API.Common.Origin();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// IngestNodesData messages
   /// </summary>
-  public sealed partial class IngestNodesDataInput : pb::IMessage<IngestNodesDataInput> {
+  public sealed partial class IngestNodesDataInput : pb::IMessage<IngestNodesDataInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IngestNodesDataInput> _parser = new pb::MessageParser<IngestNodesDataInput>(() => new IngestNodesDataInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3563,11 +4591,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       nodes_.WriteTo(output, _repeated_nodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodes_.WriteTo(ref output, _repeated_nodes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3590,6 +4632,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3602,11 +4647,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodes_.AddEntriesFrom(ref input, _repeated_nodes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class IngestNodesDataOutput : pb::IMessage<IngestNodesDataOutput> {
+  public sealed partial class IngestNodesDataOutput : pb::IMessage<IngestNodesDataOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IngestNodesDataOutput> _parser = new pb::MessageParser<IngestNodesDataOutput>(() => new IngestNodesDataOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3685,6 +4753,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Success != false) {
         output.WriteRawTag(8);
         output.WriteBool(Success);
@@ -3692,7 +4763,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Success != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3719,6 +4804,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3731,11 +4819,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetNodeEventLogInput : pb::IMessage<GetNodeEventLogInput> {
+  public sealed partial class GetNodeEventLogInput : pb::IMessage<GetNodeEventLogInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetNodeEventLogInput> _parser = new pb::MessageParser<GetNodeEventLogInput>(() => new GetNodeEventLogInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3814,6 +4925,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SeqId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(SeqId);
@@ -3821,7 +4935,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SeqId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SeqId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3848,6 +4976,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3860,11 +4991,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SeqId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class NodeEvent : pb::IMessage<NodeEvent> {
+  public sealed partial class NodeEvent : pb::IMessage<NodeEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NodeEvent> _parser = new pb::MessageParser<NodeEvent>(() => new NodeEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3999,6 +5153,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(AggregateId);
@@ -4022,7 +5179,37 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (SeqId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SeqId);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Timestamp);
+      }
+      if (EventType != global::SKF.Enlight.API.IoT.NodeEventType.UnknownEvent) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) EventType);
+      }
+      if (DataContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) DataContentType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4073,6 +5260,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4101,11 +5291,50 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 18: {
+            SeqId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            EventType = (global::SKF.Enlight.API.IoT.NodeEventType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            DataContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetNodeEventLogOutput : pb::IMessage<GetNodeEventLogOutput> {
+  public sealed partial class GetNodeEventLogOutput : pb::IMessage<GetNodeEventLogOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetNodeEventLogOutput> _parser = new pb::MessageParser<GetNodeEventLogOutput>(() => new GetNodeEventLogOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4197,6 +5426,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       events_.WriteTo(output, _repeated_events_codec);
       if (HasNext != false) {
         output.WriteRawTag(16);
@@ -4205,7 +5437,22 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      events_.WriteTo(ref output, _repeated_events_codec);
+      if (HasNext != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(HasNext);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4234,6 +5481,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4250,11 +5500,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            events_.AddEntriesFrom(ref input, _repeated_events_codec);
+            break;
+          }
+          case 16: {
+            HasNext = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class IngestNodeDataOutput : pb::IMessage<IngestNodeDataOutput> {
+  public sealed partial class IngestNodeDataOutput : pb::IMessage<IngestNodeDataOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IngestNodeDataOutput> _parser = new pb::MessageParser<IngestNodeDataOutput>(() => new IngestNodeDataOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4319,10 +5596,23 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4343,6 +5633,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4351,14 +5644,33 @@ namespace SKF.Enlight.API.IoT {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// GetNodeData messages
   /// </summary>
-  public sealed partial class GetNodeDataInput : pb::IMessage<GetNodeDataInput> {
+  public sealed partial class GetNodeDataInput : pb::IMessage<GetNodeDataInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetNodeDataInput> _parser = new pb::MessageParser<GetNodeDataInput>(() => new GetNodeDataInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4465,6 +5777,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -4480,7 +5795,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Timestamp);
+      }
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ContentType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4519,6 +5856,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4539,11 +5879,42 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetNodeDataOutput : pb::IMessage<GetNodeDataOutput> {
+  public sealed partial class GetNodeDataOutput : pb::IMessage<GetNodeDataOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetNodeDataOutput> _parser = new pb::MessageParser<GetNodeDataOutput>(() => new GetNodeDataOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4621,11 +5992,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       nodeDataList_.WriteTo(output, _repeated_nodeDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodeDataList_.WriteTo(ref output, _repeated_nodeDataList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4648,6 +6033,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4660,14 +6048,37 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodeDataList_.AddEntriesFrom(ref input, _repeated_nodeDataList_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// GetLatestNodeData messages
   /// </summary>
-  public sealed partial class GetLatestNodeDataInput : pb::IMessage<GetLatestNodeDataInput> {
+  public sealed partial class GetLatestNodeDataInput : pb::IMessage<GetLatestNodeDataInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetLatestNodeDataInput> _parser = new pb::MessageParser<GetLatestNodeDataInput>(() => new GetLatestNodeDataInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4760,6 +6171,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -4771,7 +6185,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (ContentType != global::SKF.Enlight.API.IoT.NodeDataContentType.Default) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ContentType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4804,6 +6236,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4820,11 +6255,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 16: {
+            ContentType = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetLatestNodeDataOutput : pb::IMessage<GetLatestNodeDataOutput> {
+  public sealed partial class GetLatestNodeDataOutput : pb::IMessage<GetLatestNodeDataOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetLatestNodeDataOutput> _parser = new pb::MessageParser<GetLatestNodeDataOutput>(() => new GetLatestNodeDataOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4903,6 +6365,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (nodeData_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(NodeData);
@@ -4910,7 +6375,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (nodeData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NodeData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4940,6 +6419,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4955,14 +6437,40 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (nodeData_ == null) {
+              NodeData = new global::SKF.Enlight.API.IoT.NodeData();
+            }
+            input.ReadMessage(NodeData);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// GetMedia messages
   /// </summary>
-  public sealed partial class GetMediaInput : pb::IMessage<GetMediaInput> {
+  public sealed partial class GetMediaInput : pb::IMessage<GetMediaInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetMediaInput> _parser = new pb::MessageParser<GetMediaInput>(() => new GetMediaInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5055,6 +6563,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NodeId);
@@ -5066,7 +6577,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NodeId);
+      }
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MediaId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5099,6 +6628,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5115,11 +6647,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NodeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            MediaId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class PutMediaSignedUrlInput : pb::IMessage<PutMediaSignedUrlInput> {
+  public sealed partial class PutMediaSignedUrlInput : pb::IMessage<PutMediaSignedUrlInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PutMediaSignedUrlInput> _parser = new pb::MessageParser<PutMediaSignedUrlInput>(() => new PutMediaSignedUrlInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5226,6 +6785,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (MediaId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(MediaId);
@@ -5241,7 +6803,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MediaId);
+      }
+      if (Type != global::SKF.Enlight.API.IoT.MediaType.Unknown) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (ContentMD5.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContentMD5);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5280,6 +6864,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5300,11 +6887,42 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MediaId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::SKF.Enlight.API.IoT.MediaType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            ContentMD5 = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class PutMediaSignedUrlOutput : pb::IMessage<PutMediaSignedUrlOutput> {
+  public sealed partial class PutMediaSignedUrlOutput : pb::IMessage<PutMediaSignedUrlOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PutMediaSignedUrlOutput> _parser = new pb::MessageParser<PutMediaSignedUrlOutput>(() => new PutMediaSignedUrlOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5383,6 +7001,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Url.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Url);
@@ -5390,7 +7011,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5417,6 +7052,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5429,11 +7067,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetMediaSignedUrlInput : pb::IMessage<GetMediaSignedUrlInput> {
+  public sealed partial class GetMediaSignedUrlInput : pb::IMessage<GetMediaSignedUrlInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetMediaSignedUrlInput> _parser = new pb::MessageParser<GetMediaSignedUrlInput>(() => new GetMediaSignedUrlInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5512,6 +7173,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (MediaId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(MediaId);
@@ -5519,7 +7183,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MediaId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5546,6 +7224,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5558,11 +7239,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MediaId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetMediaSignedUrlOutput : pb::IMessage<GetMediaSignedUrlOutput> {
+  public sealed partial class GetMediaSignedUrlOutput : pb::IMessage<GetMediaSignedUrlOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetMediaSignedUrlOutput> _parser = new pb::MessageParser<GetMediaSignedUrlOutput>(() => new GetMediaSignedUrlOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5641,6 +7345,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Url.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Url);
@@ -5648,7 +7355,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5675,6 +7396,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5687,11 +7411,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetMediaOutput : pb::IMessage<GetMediaOutput> {
+  public sealed partial class GetMediaOutput : pb::IMessage<GetMediaOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetMediaOutput> _parser = new pb::MessageParser<GetMediaOutput>(() => new GetMediaOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5770,6 +7517,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (media_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Media);
@@ -5777,7 +7527,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (media_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Media);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5807,6 +7571,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5822,11 +7589,37 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (media_ == null) {
+              Media = new global::SKF.Enlight.API.IoT.Media();
+            }
+            input.ReadMessage(Media);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTasksByStatusInput : pb::IMessage<GetTasksByStatusInput> {
+  public sealed partial class GetTasksByStatusInput : pb::IMessage<GetTasksByStatusInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTasksByStatusInput> _parser = new pb::MessageParser<GetTasksByStatusInput>(() => new GetTasksByStatusInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5919,6 +7712,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (HierarchyId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(HierarchyId);
@@ -5930,7 +7726,25 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HierarchyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HierarchyId);
+      }
+      if (Status != global::SKF.Enlight.API.IoT.TaskStatus.NotSent) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5963,6 +7777,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5979,11 +7796,38 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HierarchyId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Status = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTasksByStatusOutput : pb::IMessage<GetTasksByStatusOutput> {
+  public sealed partial class GetTasksByStatusOutput : pb::IMessage<GetTasksByStatusOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTasksByStatusOutput> _parser = new pb::MessageParser<GetTasksByStatusOutput>(() => new GetTasksByStatusOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6061,11 +7905,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       taskList_.WriteTo(output, _repeated_taskList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      taskList_.WriteTo(ref output, _repeated_taskList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6088,6 +7946,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6100,11 +7961,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            taskList_.AddEntriesFrom(ref input, _repeated_taskList_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTaskByUUIDInput : pb::IMessage<GetTaskByUUIDInput> {
+  public sealed partial class GetTaskByUUIDInput : pb::IMessage<GetTaskByUUIDInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTaskByUUIDInput> _parser = new pb::MessageParser<GetTaskByUUIDInput>(() => new GetTaskByUUIDInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6183,6 +8067,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TaskId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(TaskId);
@@ -6190,7 +8077,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TaskId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6217,6 +8118,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6229,11 +8133,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TaskId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTaskByUUIDOutput : pb::IMessage<GetTaskByUUIDOutput> {
+  public sealed partial class GetTaskByUUIDOutput : pb::IMessage<GetTaskByUUIDOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTaskByUUIDOutput> _parser = new pb::MessageParser<GetTaskByUUIDOutput>(() => new GetTaskByUUIDOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6312,6 +8239,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (task_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Task);
@@ -6319,7 +8249,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (task_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Task);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6349,6 +8293,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6364,11 +8311,37 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (task_ == null) {
+              Task = new global::SKF.Enlight.API.IoT.TaskDescription();
+            }
+            input.ReadMessage(Task);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTaskByLongIdInput : pb::IMessage<GetTaskByLongIdInput> {
+  public sealed partial class GetTaskByLongIdInput : pb::IMessage<GetTaskByLongIdInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTaskByLongIdInput> _parser = new pb::MessageParser<GetTaskByLongIdInput>(() => new GetTaskByLongIdInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6447,6 +8420,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TaskId != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(TaskId);
@@ -6454,7 +8430,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TaskId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TaskId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6481,6 +8471,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6493,11 +8486,34 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TaskId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTaskByLongIdOutput : pb::IMessage<GetTaskByLongIdOutput> {
+  public sealed partial class GetTaskByLongIdOutput : pb::IMessage<GetTaskByLongIdOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTaskByLongIdOutput> _parser = new pb::MessageParser<GetTaskByLongIdOutput>(() => new GetTaskByLongIdOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6576,6 +8592,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (task_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Task);
@@ -6583,7 +8602,21 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (task_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Task);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6613,6 +8646,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6628,11 +8664,37 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (task_ == null) {
+              Task = new global::SKF.Enlight.API.IoT.TaskDescription();
+            }
+            input.ReadMessage(Task);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTasksModifiedSinceTimestampInput : pb::IMessage<GetTasksModifiedSinceTimestampInput> {
+  public sealed partial class GetTasksModifiedSinceTimestampInput : pb::IMessage<GetTasksModifiedSinceTimestampInput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTasksModifiedSinceTimestampInput> _parser = new pb::MessageParser<GetTasksModifiedSinceTimestampInput>(() => new GetTasksModifiedSinceTimestampInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6739,6 +8801,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Timestamp != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(Timestamp);
@@ -6754,7 +8819,29 @@ namespace SKF.Enlight.API.IoT {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Timestamp != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Timestamp);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserId);
+      }
+      if (Limit != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Limit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6793,6 +8880,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6813,11 +8903,42 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Limit = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class GetTasksModifiedSinceTimestampOutput : pb::IMessage<GetTasksModifiedSinceTimestampOutput> {
+  public sealed partial class GetTasksModifiedSinceTimestampOutput : pb::IMessage<GetTasksModifiedSinceTimestampOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTasksModifiedSinceTimestampOutput> _parser = new pb::MessageParser<GetTasksModifiedSinceTimestampOutput>(() => new GetTasksModifiedSinceTimestampOutput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6895,11 +9016,25 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       taskList_.WriteTo(output, _repeated_taskList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      taskList_.WriteTo(ref output, _repeated_taskList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6922,6 +9057,9 @@ namespace SKF.Enlight.API.IoT {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6934,7 +9072,26 @@ namespace SKF.Enlight.API.IoT {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            taskList_.AddEntriesFrom(ref input, _repeated_taskList_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

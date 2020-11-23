@@ -12,25 +12,55 @@ namespace SKF.Enlight.API.Notification {
   {
     static readonly string __ServiceName = "grpcapi.Notification";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Common.PrimitiveString.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetNotificationTypeInput> __Marshaller_grpcapi_SetNotificationTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SetNotificationTypeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeInput> __Marshaller_grpcapi_GetNotificationTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetNotificationTypeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> __Marshaller_grpcapi_GetNotificationTypeOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetNotificationTypeOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveNotificationTypeInput> __Marshaller_grpcapi_RemoveNotificationTypeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.RemoveNotificationTypeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationInput> __Marshaller_grpcapi_InitiateNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.InitiateNotificationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> __Marshaller_grpcapi_InitiateNotificationOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.InitiateNotificationOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput> __Marshaller_grpcapi_GetInitiatedNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> __Marshaller_grpcapi_GetInitiatedNotificationOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveInitiatedNotificationInput> __Marshaller_grpcapi_RemoveInitiatedNotificationInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.RemoveInitiatedNotificationInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetUserPreferencesInput> __Marshaller_grpcapi_SetUserPreferencesInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.SetUserPreferencesInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesInput> __Marshaller_grpcapi_GetUserPreferencesInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserPreferencesInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesOutput> __Marshaller_grpcapi_GetUserPreferencesOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserPreferencesOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput> __Marshaller_grpcapi_RemoveUserPreferencesInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsInput> __Marshaller_grpcapi_GetUserNotificationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserNotificationsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsOutput> __Marshaller_grpcapi_GetUserNotificationsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.GetUserNotificationsOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput> __Marshaller_grpcapi_RemoveUserNotificationsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput> __Marshaller_grpcapi_UpdateUserNotificationStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.Void> __Marshaller_common_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.Void.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Common.PrimitiveString> __Marshaller_common_PrimitiveString = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Common.PrimitiveString.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetNotificationTypeInput> __Marshaller_grpcapi_SetNotificationTypeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.SetNotificationTypeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeInput> __Marshaller_grpcapi_GetNotificationTypeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetNotificationTypeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetNotificationTypeOutput> __Marshaller_grpcapi_GetNotificationTypeOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetNotificationTypeOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveNotificationTypeInput> __Marshaller_grpcapi_RemoveNotificationTypeInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.RemoveNotificationTypeInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationInput> __Marshaller_grpcapi_InitiateNotificationInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.InitiateNotificationInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.InitiateNotificationOutput> __Marshaller_grpcapi_InitiateNotificationOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.InitiateNotificationOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput> __Marshaller_grpcapi_GetInitiatedNotificationInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetInitiatedNotificationInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput> __Marshaller_grpcapi_GetInitiatedNotificationOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetInitiatedNotificationOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveInitiatedNotificationInput> __Marshaller_grpcapi_RemoveInitiatedNotificationInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.RemoveInitiatedNotificationInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.SetUserPreferencesInput> __Marshaller_grpcapi_SetUserPreferencesInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.SetUserPreferencesInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesInput> __Marshaller_grpcapi_GetUserPreferencesInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetUserPreferencesInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserPreferencesOutput> __Marshaller_grpcapi_GetUserPreferencesOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetUserPreferencesOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput> __Marshaller_grpcapi_RemoveUserPreferencesInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.RemoveUserPreferencesInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsInput> __Marshaller_grpcapi_GetUserNotificationsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetUserNotificationsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.GetUserNotificationsOutput> __Marshaller_grpcapi_GetUserNotificationsOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.GetUserNotificationsOutput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput> __Marshaller_grpcapi_RemoveUserNotificationsInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.RemoveUserNotificationsInput.Parser));
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput> __Marshaller_grpcapi_UpdateUserNotificationStatusInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SKF.Enlight.API.Notification.UpdateUserNotificationStatusInput.Parser));
 
     static readonly grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Common.Void, global::SKF.Enlight.API.Common.PrimitiveString>(
         grpc::MethodType.Unary,
