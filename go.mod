@@ -3,7 +3,7 @@ module github.com/SKF/proto/v2
 go 1.14
 
 require (
-	github.com/golang/protobuf v1.4.2
-	golang.org/x/net v0.0.0-20200822124328-c89045814202
-	google.golang.org/grpc v1.31.1
+	github.com/golang/protobuf v1.4.3
+	golang.org/x/net v0.0.0-20201110031124-69a78807bb2b
+	google.golang.org/grpc v1.33.2
 )
