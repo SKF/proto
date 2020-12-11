@@ -11,7 +11,7 @@ echo "files: $3"
 setup_git() {
   git config --global user.email "deploy@travis-ci.org"
   git config --global user.name "Travis CI"
-  git remote set-url origin https://${GITHUB_TOKEN}@github.com/kulbhushan-skf/proto.git > /dev/null 2>&1
+  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
@@ -34,7 +34,7 @@ commit_files() {
     git add go.{mod,sum}
   fi
 
-  git commit -v --allow-empty -m "Deploy kulbhushan-skf/proto to github.com/kulbhushan-skf/proto.git:$2"
+  git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
   git tag "${TRAVIS_TAG}-$1"
 }
 
