@@ -12,7 +12,7 @@ service Authorize {
   rpc IsAuthorized (IsAuthorizedInput) returns (IsAuthorizedOutput) {}
   rpc IsAuthorizedBulk (IsAuthorizedBulkInput) returns (IsAuthorizedBulkOutput) {}
   rpc IsAuthorizedByEndpoint (IsAuthorizedByEndpointInput) returns (IsAuthorizedByEndpointOutput) {}
-  rpc IsAuthorizedWithReason (IsAuthorizedInput) returns (IsAuthorizedOutputReason) {}
+  rpc IsAuthorizedWithReason (IsAuthorizedInput) returns (IsAuthorizedReasonOutput) {}
 
   rpc AddResource (AddResourceInput) returns (common.Void) {}
   rpc RemoveResource (RemoveResourceInput) returns (common.Void) {}
@@ -295,7 +295,7 @@ message LogClientStateInput {
   string hostname = 2;
 }
 
-message IsAuthorizedOutputReason {
+message IsAuthorizedReasonOutput {
   bool ok = 1;
   string reason = 2;
 }
