@@ -6,7 +6,7 @@ on:
     branches: [master]
 jobs:
   build:
-    name: proto-generate
+    name: proto-build-go
     runs-on: ubuntu-latest
     env:
       GOPATH: ${{ github.workspace }}
@@ -27,6 +27,8 @@ jobs:
           path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
 
       - name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
+        with:
+          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
         run: |
           rm -rf build
 
@@ -43,4 +45,6 @@ jobs:
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
+        with:
+          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
         run: ../../scripts/build_go.sh
