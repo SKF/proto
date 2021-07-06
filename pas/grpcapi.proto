@@ -207,5 +207,5 @@ enum FrequencyType {
 
 enum ThresholdValueType {
   ABSOLUTE = 1;
-  RELATIVE_DATAPOINT = 2;
+  RELATIVE_FULLSCALE = 2;
 }
