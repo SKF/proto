@@ -36,7 +36,7 @@ jobs:
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
           cd $GOPATH/src/github.com/golang
-          git clone github.com/golang/protobuf
+          git clone https://github.com/golang/protobuf
           git checkout checkout v1.2.0
           ls -l $GOPATH/src/github.com/golang
           cd ~/work/proto/proto
