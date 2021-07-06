@@ -42,4 +42,4 @@ jobs:
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        run: ../../scripts/build_go.sh
+        run: scripts/build_go.sh

@@ -33,12 +33,15 @@ jobs:
           
           go get -u google.golang.org/grpc
           go get -d -u github.com/golang/protobuf/protoc-gen-go
-          git -C $GOPATH/src/github.com/golang/protobuf checkout v1.2.0
-          go install github.com/golang/protobuf/protoc-gen-go
+          mkdir -p $GOPATH/src/github.com/golang
+          cd $GOPATH/src/github.com/golang
+          git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
+          cd ~/work/proto/proto
+          go install github.com/golang/protobuf/protoc-gen-go@latest
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        run: ../../scripts/build_go.sh
+        run: scripts/build_go.sh
 
       - name: "Go: Deploy generated sources back to repo"
         run: bash scripts/upload_to_github.sh go go1 build/go
