@@ -11,9 +11,6 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
-    defaults:
-      run:
-        working-directory: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -23,13 +20,10 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
 
       - name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
-        with:
-          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
         run: |
+          tree build
           rm -rf build
 
           mkdir -p build/protoc
@@ -45,6 +39,4 @@ jobs:
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        with:
-          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
         run: ../../scripts/build_go.sh
