@@ -81,9 +81,10 @@ message SetPointAlarmThresholdInput {
   string node_id = 1;
   string user_id = 2;
   ThresholdType type = 3;
-  Overall overall = 4;
+  optional Overall overall = 4;
   common.Origin origin = 5;
-  Inspection inspection = 6;
+  optional Inspection inspection = 6;
+  optional BandAlarms band_alarms = 7;
 }
 message SetPointAlarmThresholdOutput {}
 
@@ -172,4 +173,39 @@ message InspectionChoice {
   string answer = 1;
   string instruction = 2;
   AlarmStatus status = 3;
+}
+
+// Band Alarms
+
+message BandAlarms {
+  string label = 1;
+  Frequency min_frequency = 2;
+  Frequency max_frequency = 3;
+
+  BandAlarmOverallThreshold overall_threshold = 4;
+}
+
+message Frequency {
+  FrequencyType value_type = 1;
+  DoubleObject value = 2;
+}
+
+message BandAlarmOverallThreshold {
+  ThresholdValue upper_alert = 1;
+  ThresholdValue upper_danger = 2;
+}
+
+message ThresholdValue {
+  ThresholdValueType value_type = 1;
+  DoubleObject value = 2;
+}
+
+enum FrequencyType {
+  FIXED = 1;
+  SPEED_MULTIPLE = 2;
+}
+
+enum ThresholdValueType {
+  ABSOLUTE = 1;
+  RELATIVE_DATAPOINT = 2;
 }
