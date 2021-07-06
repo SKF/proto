@@ -8,6 +8,12 @@ jobs:
   build:
     name: proto-generate
     runs-on: ubuntu-latest
+    env:
+      GOPATH: ${{ github.workspace }}
+      GO111MODULE: on
+    defaults:
+      run:
+        working-directory: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -15,9 +21,13 @@ jobs:
           go-version: ^1.14
         id: go
 
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          path: ${{ env.GOPATH }}/src/github.com/${{ github.repository }}
+
       - name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
         run: |
-          tree build
           rm -rf build
 
           mkdir -p build/protoc
