@@ -81,10 +81,10 @@ message SetPointAlarmThresholdInput {
   string node_id = 1;
   string user_id = 2;
   ThresholdType type = 3;
-  optional Overall overall = 4;
+  Overall overall = 4;
   common.Origin origin = 5;
-  optional Inspection inspection = 6;
-  optional BandAlarms band_alarms = 7;
+  Inspection inspection = 6;
+  BandAlarms band_alarms = 7;
 }
 message SetPointAlarmThresholdOutput {}
 
@@ -201,11 +201,11 @@ message ThresholdValue {
 }
 
 enum FrequencyType {
-  FIXED = 1;
-  SPEED_MULTIPLE = 2;
+  FIXED = 0;
+  SPEED_MULTIPLE = 1;
 }
 
 enum ThresholdValueType {
-  ABSOLUTE = 1;
-  RELATIVE_FULLSCALE = 2;
+  ABSOLUTE = 0;
+  RELATIVE_FULLSCALE = 1;
 }
