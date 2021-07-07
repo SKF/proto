@@ -1,7 +1,8 @@
 syntax = "proto3";
-package reportsgrpcapi;
+package reports;
 
 option csharp_namespace = "SKF.Enlight.API.Reports";
+option go_package = "github.com/SKF/proto/reports";
 
 import "common/common.proto";
 

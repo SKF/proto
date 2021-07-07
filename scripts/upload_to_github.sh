@@ -9,18 +9,14 @@ echo "branch: $2"
 echo "files: $3"
 
 setup_git() {
-  git config --global user.email "deploy@travis-ci.org"
-  git config --global user.name "Travis CI"
-  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
+  git config --global user.name "GitHub Actions"
+  git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}}@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
   git fetch --all
   git checkout $2
   git rm -rf --ignore-unmatch .
-
-  cp -rf $3/common .
-  git add -v common
 
   for service in $( ls $3 ); do
     if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
@@ -35,7 +31,7 @@ commit_files() {
   fi
 
   git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  git tag "${TRAVIS_TAG}-$1"
+  git tag "${{ github.event.release.tag_name }}-$1"
 }
 
 upload_files() {

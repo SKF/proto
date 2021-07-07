@@ -1,7 +1,8 @@
 syntax = "proto3";
-package grpcapi;
+package hierarchy;
 
 option csharp_namespace = "SKF.Enlight.API.Hierarchy";
+option go_package = "github.com/SKF/proto/hierarchy";
 
 import "common/common.proto";
 
