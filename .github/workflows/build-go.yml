@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOPATH: ${{ github.workspace }}
+      GO111MODULE: on
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
         with:
-          go-version: 1.14
+          go-version: 1.16
         id: go
 
       - name: Checkout code
@@ -36,9 +37,8 @@ jobs:
           mkdir -p $GOPATH/src/github.com/golang
           cd $GOPATH/src/github.com/golang
           git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
-          cd ${{ github.workspace }}
-          pwd
-          go install github.com/golang/protobuf/protoc-gen-go
+          cd ~/work/proto/proto
+          go install github.com/golang/protobuf/protoc-gen-go@latest
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
