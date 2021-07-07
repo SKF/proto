@@ -47,7 +47,6 @@ jobs:
           bash ${{ github.workspace }}/scripts/build_go.sh
           tree build
           cd build/go
-          mv github.com/SKF/proto/* .
           tree .
-          cat iot/grpcapi.pb.go
+          cat pas/grpcapi.pb.go
 

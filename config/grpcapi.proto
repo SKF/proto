@@ -1,5 +1,5 @@
 syntax = "proto3";
-package grpcapi;
+package config;
 
 option csharp_namespace = "SKF.Enlight.API.Config";
 option go_package = "github.com/SKF/proto/config";

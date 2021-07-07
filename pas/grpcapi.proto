@@ -1,5 +1,5 @@
 syntax = "proto3";
-package pasapi;
+package pas;
 
 option csharp_namespace = "SKF.Enlight.API.PAS";
 option go_package = "github.com/SKF/proto/pas";

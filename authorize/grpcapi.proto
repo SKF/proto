@@ -1,5 +1,5 @@
 syntax = "proto3";
-package grpcapi;
+package authorize;
 
 option csharp_namespace = "SKF.Enlight.API.Authorize";
 option go_package = "github.com/SKF/proto/authorize";
