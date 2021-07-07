@@ -7,10 +7,13 @@ echo "language: $1"
 echo "branch: $2"
 # $3 files
 echo "files: $3"
+# $4 tag name
+echo "tag name: $4"
+# $5 github token
 
 setup_git() {
   git config --global user.name "GitHub Actions"
-  git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/SKF/proto.git > /dev/null 2>&1
+  git remote set-url origin https://$5@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
@@ -31,7 +34,7 @@ commit_files() {
   fi
 
   git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  git tag "${{ github.event.release.tag_name }}-$1"
+  git tag "$4-$1"
 }
 
 upload_files() {
