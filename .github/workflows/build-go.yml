@@ -43,9 +43,8 @@ jobs:
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        run: bash ${{ github.workspace }}/scripts/build_go.sh
-
-      - name: "Go: show result"
         run: |
+          bash ${{ github.workspace }}/scripts/build_go.sh
+          mv github.com/SKF/proto/* .
           tree build
           rm -rf build

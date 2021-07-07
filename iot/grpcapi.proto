@@ -2,7 +2,7 @@ syntax = "proto3";
 package iotgrpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.IoT";
-option go_package = "iot";
+option go_package = "github.com/SKF/proto/iot";
 
 import "common/common.proto";
 
