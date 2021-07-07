@@ -9,6 +9,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
+      SERVICES: common hierarchy iam iot pas reports config authorize notification
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -54,7 +55,6 @@ jobs:
           find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
           go mod tidy
           popd
-          tree build
 
       - name: "Go: Deploy generated sources back to repo"
         run: bash ${{ github.workspace }}/scripts/upload_to_github.sh go go1 build/go ${{ github.event.release.tag_name }} ${{ secrets.GITHUB_TOKEN }}
