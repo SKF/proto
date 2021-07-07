@@ -13,10 +13,11 @@ echo "tag name: $4"
 
 setup_git() {
   git config --global user.name "GitHub Actions"
-  git remote set-url origin https://$5@github.com/SKF/proto.git > /dev/null 2>&1
+  git remote set-url origin https://$1@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
+  tree $3
   git fetch --all
   git checkout $2
   git rm -rf --ignore-unmatch .
@@ -42,6 +43,6 @@ upload_files() {
   git push --tag
 }
 
-setup_git
-commit_files $1 $2 $3
+setup_git $5
+commit_files $1 $2 $3 $4
 upload_files $2
