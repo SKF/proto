@@ -45,18 +45,4 @@ jobs:
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        run: |
-          bash ${{ github.workspace }}/scripts/build_go.sh
-          tree build
-
-          MAJOR_VERSION=$(echo "v2.3.4" | awk -F. '{ print $1 }')
-          echo "Version: ${MAJOR_VERSION}"
-
-          pushd build/go
-          echo "Init go mod"
-          go mod init github.com/SKF/proto/${MAJOR_VERSION}
-          find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
-          echo "Tidy go mod"
-          go mod tidy
-          
-          cat go.mod
+        run: bash ${{ github.workspace }}/scripts/build_go.sh
