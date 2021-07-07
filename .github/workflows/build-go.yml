@@ -45,6 +45,6 @@ jobs:
       - name: "Go: Generate sources"
         run: |
           bash ${{ github.workspace }}/scripts/build_go.sh
-          mv github.com/SKF/proto/* .
           tree build
-          rm -rf build
+          mv build/github.com/SKF/proto/* build/
+          tree build
