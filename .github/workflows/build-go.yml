@@ -49,3 +49,5 @@ jobs:
           cd build/go
           mv github.com/SKF/proto/* .
           tree .
+          cat iot/grpcapi.pb.go
+
