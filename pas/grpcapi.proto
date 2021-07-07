@@ -2,7 +2,7 @@ syntax = "proto3";
 package pasapi;
 
 option csharp_namespace = "SKF.Enlight.API.PAS";
-option go_package = "github.com/SKF/proto/pas";
+option go_package = "pas";
 
 import "common/common.proto";
 

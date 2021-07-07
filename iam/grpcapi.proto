@@ -2,7 +2,7 @@ syntax = "proto3";
 package grpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.IAM";
-option go_package = "github.com/SKF/proto/iam";
+option go_package = "iam";
 
 import "common/common.proto";
 
