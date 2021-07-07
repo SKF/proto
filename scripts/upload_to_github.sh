@@ -10,7 +10,7 @@ echo "files: $3"
 
 setup_git() {
   git config --global user.name "GitHub Actions"
-  git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}}@github.com/SKF/proto.git > /dev/null 2>&1
+  git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
