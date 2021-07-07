@@ -8,7 +8,7 @@ $PROTOC \
   --go_out plugins=grpc:build/go/ \
   --plugin $PLUGIN \
   common/common.proto;
-mv build/go/github.com/SKF/proto/common/* build/go/common;
+mv build/go/github.com/SKF/proto/* build/go/;
 rm -rf build/go/github.com;
 
 for SERVICE in $SERVICES; do
