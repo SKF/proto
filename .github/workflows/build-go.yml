@@ -11,6 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
+      SERVICES: "hierarchy iam iot pas reports config authorize notification"
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -43,7 +44,7 @@ jobs:
 
       - name: "Go: Generate sources"
         run: bash ${{ github.workspace }}/scripts/build_go.sh
-        
+
       - name: "Go: show result"
         run: |
           tree build
