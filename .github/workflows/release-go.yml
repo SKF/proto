@@ -43,14 +43,14 @@ jobs:
 
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=MAJOR_VERSION::$(echo $GITHUB_REF | cut -d / -f 3 | awk -F. '{ print $1 }')
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
 
       - name: "Go: Generate mod files"
         run: |
-          echo "Generate ${{ steps.get_version.outputs.MAJOR_VERSION }}-go"
-          
+          MAJOR_VERSION=$(echo ${{ steps.get_version.outputs.VERSION }} | awk -F. '{ print $1 }')
+
           pushd build/go
-          go mod init github.com/SKF/proto/${{ steps.get_version.outputs.MAJOR_VERSION }}
+          go mod init github.com/SKF/proto/${MAJOR_VERSION}
           find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
           go mod tidy
           popd
