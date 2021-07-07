@@ -11,7 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
-      SERVICES: hierarchy iam iot pas reports config authorize notification
+      SERVICES: common hierarchy iam iot pas reports config authorize notification
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -36,9 +36,11 @@ jobs:
           go get -u google.golang.org/grpc
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
-          cd $GOPATH/src/github.com/golang
+
+          pushd $GOPATH/src/github.com/golang
           git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
-          cd ~/work/proto/proto
+          popd
+
           go install github.com/golang/protobuf/protoc-gen-go@latest
           mv $GOPATH/bin build/bin
 
@@ -46,14 +48,15 @@ jobs:
         run: |
           bash ${{ github.workspace }}/scripts/build_go.sh
           tree build
-          cat build/go/pas/grpcapi.pb.go
 
-          MAJOR_VERSION=MAJOR_VERSION=$(echo "v2.3.4" | awk -F. '{ print $1 }')
-          
+          MAJOR_VERSION=$(echo "v2.3.4" | awk -F. '{ print $1 }')
+          echo "Version: ${MAJOR_VERSION}"
+
           pushd build/go
+          echo "Init go mod"
           go mod init github.com/SKF/proto/${MAJOR_VERSION}
           find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
+          echo "Tidy go mod"
           go mod tidy
           
           cat go.mod
-
