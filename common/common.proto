@@ -1,8 +1,8 @@
 syntax = "proto3";
 package common;
 
-option go_package = "github.com/SKF/proto/common";
 option csharp_namespace = "SKF.Enlight.API.Common";
+option go_package = "github.com/SKF/proto/common";
 
 message Origin {
   string id = 1;
