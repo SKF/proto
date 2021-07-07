@@ -56,4 +56,4 @@ jobs:
           popd
 
       - name: "Go: Deploy generated sources back to repo"
-        run: bash ${{ github.workspace }}/scripts/upload_to_github.sh go go1 build/go
+        run: bash ${{ github.workspace }}/scripts/upload_to_github.sh go go1 build/go ${{ github.event.release.tag_name }} ${{ secrets.GITHUB_TOKEN }}
