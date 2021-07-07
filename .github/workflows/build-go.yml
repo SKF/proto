@@ -38,8 +38,8 @@ jobs:
           cd $GOPATH/src/github.com/golang
           git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
           cd ~/work/proto/proto
-          go install github.com/golang/protobuf/protoc-gen-go@latest
+          go install github.com/golang/protobuf/protoc-gen-go@v1.2.0
           mv $GOPATH/bin build/bin
 
       - name: "Go: Generate sources"
-        run: bash scripts/build_go.sh
+        run: bash ${{ github.workspace }}/scripts/build_go.sh
