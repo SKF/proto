@@ -11,7 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
-      SERVICES: "hierarchy iam iot pas reports config authorize notification"
+      SERVICES: hierarchy iam iot pas reports config authorize notification
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
