@@ -31,9 +31,11 @@ jobs:
           go get -u google.golang.org/grpc
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
-          cd $GOPATH/src/github.com/golang
+
+          pushd $GOPATH/src/github.com/golang
           git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
-          cd ~/work/proto/proto
+          popd
+
           go install github.com/golang/protobuf/protoc-gen-go@latest
           mv $GOPATH/bin build/bin
 
