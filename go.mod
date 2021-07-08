@@ -1,4 +1,4 @@
-module github.com/SKF/proto/2
+module github.com/SKF/proto/v2
 
 go 1.16
 
