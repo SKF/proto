@@ -190,6 +190,12 @@ message BandAlarm {
 message Frequency {
   FrequencyType value_type = 1;
   DoubleObject value = 2;
+
+  enum FrequencyType {
+    UNKNOWN = 0;
+    FIXED = 1;
+    SPEED_MULTIPLE = 2;
+  }
 }
 
 message BandAlarmOverallThreshold {
@@ -200,14 +206,10 @@ message BandAlarmOverallThreshold {
 message ThresholdValue {
   ThresholdValueType value_type = 1;
   DoubleObject value = 2;
-}
 
-enum FrequencyType {
-  FIXED = 0;
-  SPEED_MULTIPLE = 1;
-}
-
-enum ThresholdValueType {
-  ABSOLUTE = 0;
-  RELATIVE_FULLSCALE = 1;
+  enum ThresholdValueType {
+    UNKNOWN = 0;
+    ABSOLUTE = 1;
+    RELATIVE_FULLSCALE = 2;
+  }
 }
