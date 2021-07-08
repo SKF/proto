@@ -1,9 +1,9 @@
 name: Building
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 jobs:
   build:
     name: proto-build-go
@@ -29,7 +29,7 @@ jobs:
           wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
           unzip -o protoc*.zip
           popd
-          
+
           go get -u google.golang.org/grpc
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
@@ -43,3 +43,10 @@ jobs:
 
       - name: "Go: Generate sources"
         run: bash ${{ github.workspace }}/scripts/build_go.sh
+
+      - name: "Upload artifacts"
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated sources
+          path: build/go/
+          retention-days: 1
