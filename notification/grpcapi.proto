@@ -1,5 +1,5 @@
 syntax = "proto3";
-package notification;
+package grpcapi;
 
 option csharp_namespace = "SKF.Enlight.API.Notification";
 option go_package = "github.com/SKF/proto/notification";
