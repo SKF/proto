@@ -99,7 +99,7 @@ message GetPointAlarmThresholdOutput {
   ThresholdType type = 1;
   Overall overall = 2;
   Inspection inspection = 3;
-  double full_scale = 4;
+  DoubleObject full_scale = 4;
   repeated BandAlarm band_alarms = 5;
 }
 
