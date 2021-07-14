@@ -122,10 +122,12 @@ message GetPointAlarmStatusOutput {
   AlarmStatus alarm_status = 1;
   ExternalAlarm external_alarm = 2;
 }
-
 message ExternalAlarm {
   AlarmStatus status = 1;
-  string set_by = 2;
+  StringObject set_by = 2;
+}
+message StringObject {
+  string value = 1;
 }
 
 message PointAlarmStatusEvent {
