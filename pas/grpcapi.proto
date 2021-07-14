@@ -109,6 +109,7 @@ message SetPointAlarmStatusInput {
   string node_id = 1;
   AlarmStatus alarm_status = 2;
   common.Origin origin = 3;
+  string set_by = 4;
 }
 message SetPointAlarmStatusOutput {}
 
@@ -123,7 +124,8 @@ message GetPointAlarmStatusOutput {
 }
 
 message ExternalAlarm {
-  int32 status = 1;
+  AlarmStatus status = 1;
+  string set_by = 2;
 }
 
 message PointAlarmStatusEvent {
