@@ -109,7 +109,7 @@ message SetPointAlarmStatusInput {
   string node_id = 1;
   AlarmStatus alarm_status = 2;
   common.Origin origin = 3;
-  string set_by = 4;
+  StringObject set_by = 4;
 }
 message SetPointAlarmStatusOutput {}
 
