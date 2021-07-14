@@ -119,6 +119,11 @@ message GetPointAlarmStatusInput {
 }
 message GetPointAlarmStatusOutput {
   AlarmStatus alarm_status = 1;
+  ExternalAlarm external_alarm = 2;
+}
+
+message ExternalAlarm {
+  int32 status = 1;
 }
 
 message PointAlarmStatusEvent {
