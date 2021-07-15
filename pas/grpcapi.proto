@@ -31,8 +31,9 @@ message NodeData {
   Spectrum spectrum = 4;
   TimeSeries time_series = 5;
   string note = 6;
-  Media media_v2 = 9;
   repeated string question_answers = 8;
+  Media media_v2 = 9;
+  string measurement_id = 10;
 }
 enum NodeDataContentType {
   DEFAULT = 0;
