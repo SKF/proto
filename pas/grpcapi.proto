@@ -121,6 +121,8 @@ message GetPointAlarmStatusInput {
 message GetPointAlarmStatusOutput {
   AlarmStatus alarm_status = 1;
   ExternalAlarm external_alarm = 2;
+  Alarm data_point_overall_alarm = 3;
+  Alarm inspection_alarm = 4;
 }
 message ExternalAlarm {
   AlarmStatus status = 1;
@@ -128,6 +130,10 @@ message ExternalAlarm {
 }
 message StringObject {
   string value = 1;
+}
+message Alarm {
+  string triggering_measurement = 1;
+  AlarmStatus status = 2;
 }
 
 message PointAlarmStatusEvent {
