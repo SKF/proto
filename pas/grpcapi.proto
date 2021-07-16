@@ -203,7 +203,7 @@ message BandAlarmStatus {
   string label = 1;
   Frequency min_frequency = 2;
   Frequency max_frequency = 3;
-  BandCalculatedOverall band_calculated_overall = 4;
+  BandCalculatedOverall calculated_overall = 4;
   AlarmStatus status = 5;
   string triggering_measurement = 6;
 }
