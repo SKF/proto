@@ -125,6 +125,7 @@ message GetPointAlarmStatusOutput {
   Alarm data_point_overall_alarm = 3;
   Alarm inspection_alarm = 4;
   int64 updated_at = 5;
+  repeated BandAlarmStatus band_alarms = 6;
 }
 message ExternalAlarm {
   AlarmStatus status = 1;
@@ -197,6 +198,20 @@ message InspectionChoice {
 }
 
 // Band Alarms
+
+message BandAlarmStatus {
+  string label = 1;
+  Frequency min_frequency = 2;
+  Frequency max_frequency = 3;
+  BandCalculatedOverall band_calculated_overall = 4;
+  AlarmStatus status = 5;
+  string triggering_measurement = 6;
+}
+
+message BandCalculatedOverall {
+  string unit = 1;
+  double value = 2;
+}
 
 message BandAlarm {
   string label = 1;
