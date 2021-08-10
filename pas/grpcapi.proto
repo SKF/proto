@@ -14,7 +14,9 @@ service PointAlarmStatus {
 
   rpc SetPointAlarmStatus (SetPointAlarmStatusInput) returns (SetPointAlarmStatusOutput) {}
   rpc GetPointAlarmStatus (GetPointAlarmStatusInput) returns (GetPointAlarmStatusOutput) {}
-  rpc GetPointAlarmStatusEventLog (GetPointAlarmStatusEventLogInput) returns (GetPointAlarmStatusEventLogOutput) {}
+  rpc GetPointAlarmStatusEventLog (GetPointAlarmStatusEventLogInput) returns (GetPointAlarmStatusEventLogOutput) {
+    option deprecated = true;
+  }
   rpc CalculateAndSetPointAlarmStatus (CalculateAndSetPointAlarmStatusInput) returns (common.Void) {}
 }
 
