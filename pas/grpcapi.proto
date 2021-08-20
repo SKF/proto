@@ -124,7 +124,7 @@ message GetPointAlarmStatusInput {
 message GetPointAlarmStatusOutput {
   AlarmStatus alarm_status = 1;
   ExternalAlarm external_alarm = 2;
-  Alarm data_point_overall_alarm = 3;
+  Alarm overall_alarm = 3;
   Alarm inspection_alarm = 4;
   int64 updated_at = 5;
   repeated BandAlarmStatus band_alarms = 6;
