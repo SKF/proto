@@ -237,6 +237,7 @@ message Frequency {
 message BandAlarmOverallThreshold {
   ThresholdValue upper_alert = 1;
   ThresholdValue upper_danger = 2;
+  string unit = 3;
 }
 
 message ThresholdValue {
