@@ -89,8 +89,8 @@ message SetPointAlarmThresholdInput {
   common.Origin origin = 5;
   Inspection inspection = 6;
   repeated BandAlarm band_alarms = 7;
-  repeated HalAlarm hal_alarms = 8;
-  DoubleObject full_scale = 9;
+  DoubleObject full_scale = 8;
+  repeated HalAlarm hal_alarms = 9;
 }
 message SetPointAlarmThresholdOutput {}
 
