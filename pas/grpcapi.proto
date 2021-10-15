@@ -90,6 +90,7 @@ message SetPointAlarmThresholdInput {
   Inspection inspection = 6;
   repeated BandAlarm band_alarms = 7;
   DoubleObject full_scale = 8;
+  repeated HalAlarm hal_alarms = 9;
 }
 message SetPointAlarmThresholdOutput {}
 
@@ -104,6 +105,7 @@ message GetPointAlarmThresholdOutput {
   Inspection inspection = 3;
   DoubleObject full_scale = 4;
   repeated BandAlarm band_alarms = 5;
+  repeated HalAlarm hal_alarms = 6;
 }
 
 
@@ -128,6 +130,7 @@ message GetPointAlarmStatusOutput {
   Alarm inspection_alarm = 4;
   int64 updated_at = 5;
   repeated BandAlarmStatus band_alarms = 6;
+  repeated HalAlarmStatus hal_alarms = 7;
 }
 message ExternalAlarm {
   AlarmStatus status = 1;
@@ -221,6 +224,24 @@ message BandAlarm {
   Frequency max_frequency = 3;
 
   BandAlarmOverallThreshold overall_threshold = 4;
+}
+
+message HalAlarmStatus {
+  string label = 1;
+  AlarmStatus status = 2;
+  string triggering_measurement = 3;
+  DoubleObject fault_frequency = 4;
+  DoubleObject hal_index = 5;
+  DoubleObject number_harmonics_used = 6;
+  DoubleObject rpm_factor = 7;
+  string error_description = 8;
+}
+
+message HalAlarm {
+  string label = 1;
+  string hal_alarm_type = 2;
+  DoubleObject upper_alert = 3;
+  DoubleObject upper_danger = 4;
 }
 
 message Frequency {
