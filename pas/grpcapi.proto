@@ -36,6 +36,7 @@ message NodeData {
   repeated string question_answers = 8;
   Media media_v2 = 9;
   string measurement_id = 10;
+  string tags = 11;
 }
 enum NodeDataContentType {
   DEFAULT = 0;
