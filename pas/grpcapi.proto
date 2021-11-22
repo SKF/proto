@@ -235,6 +235,7 @@ message HalAlarmStatus {
   DoubleObject number_harmonics_used = 6;
   DoubleObject rpm_factor = 7;
   string error_description = 8;
+  Bearing bearing = 9;
 }
 
 message HalAlarm {
@@ -242,6 +243,7 @@ message HalAlarm {
   string hal_alarm_type = 2;
   DoubleObject upper_alert = 3;
   DoubleObject upper_danger = 4;
+  Bearing bearing = 5;
 }
 
 message Frequency {
@@ -270,4 +272,9 @@ message ThresholdValue {
     ABSOLUTE = 1;
     RELATIVE_FULLSCALE = 2;
   }
+}
+
+message Bearing {
+  string manufacturer = 1;
+  string model_number = 2;
 }
