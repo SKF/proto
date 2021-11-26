@@ -14,6 +14,7 @@ service IoT {
   rpc GetUncompletedTasks (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc DeleteTask (TaskUser) returns (common.Void) {}
   rpc GetUncompletedTasksByHierarchy (common.PrimitiveString) returns (TaskDescriptions) {}
+  rpc GetActiveTasks (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc SetTaskStatus (SetTaskStatusInput) returns (common.Void) {}
   rpc GetTasksByStatus (GetTasksByStatusInput) returns (GetTasksByStatusOutput) {}
   rpc GetTaskByUUID (GetTaskByUUIDInput) returns (GetTaskByUUIDOutput) {}
