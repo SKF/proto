@@ -28,7 +28,7 @@ jobs:
           unzip -o protoc*.zip
           popd
           
-          go get -u google.golang.org/grpc
+          go get -u google.golang.org/grpc@1.40.0
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
 
