@@ -10,6 +10,7 @@ jobs:
       GOPATH: ${{ github.workspace }}
       GO111MODULE: on
       SERVICES: common hierarchy iam iot pas reports config authorize notification
+      GRPC_VERSION: v1.40.0
     steps:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -28,7 +29,7 @@ jobs:
           unzip -o protoc*.zip
           popd
           
-          go get -u google.golang.org/grpc@v1.40.0
+          go get -u google.golang.org/grpc@${GRPC_VERSION}
           go get -d -u github.com/golang/protobuf/protoc-gen-go
           mkdir -p $GOPATH/src/github.com/golang
 
@@ -52,6 +53,7 @@ jobs:
 
           pushd build/go
           go mod init github.com/SKF/proto/${MAJOR_VERSION}
+          go get -u google.golang.org/grpc@${GRPC_VERSION}
           find . -type f -name \*.go -exec sed -i -e "s,github.com/SKF/proto,github.com/SKF/proto/${MAJOR_VERSION},g" {} \;
           go mod tidy
           popd
