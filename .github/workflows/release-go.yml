@@ -2,8 +2,6 @@ name: Release Go
 on:
   release:
     types: [published]
-  pull_request:
-    branches: [ master ]
 jobs:
   build:
     name: proto-release-go
@@ -61,5 +59,5 @@ jobs:
           cat go.mod
           popd
 
-#      - name: "Go: Deploy generated sources back to repo"
-#        run: bash ${{ github.workspace }}/scripts/upload_to_github.sh go go1 build/go ${{ github.event.release.tag_name }} ${{ secrets.GITHUB_TOKEN }}
+      - name: "Go: Deploy generated sources back to repo"
+        run: bash ${{ github.workspace }}/scripts/upload_to_github.sh go go1 build/go ${{ github.event.release.tag_name }} ${{ secrets.GITHUB_TOKEN }}
