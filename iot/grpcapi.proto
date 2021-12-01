@@ -11,6 +11,7 @@ service IoT {
   rpc CreateTask (InitialTaskDescription) returns (common.PrimitiveString) {}
   rpc GetAllTasks (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc GetUncompletedTasks (common.PrimitiveString) returns (TaskDescriptions) {}
+  rpc GetActiveTasks (common.PrimitiveString) returns (TaskDescriptions) {}
   rpc SetTaskCompleted (TaskUser) returns (common.Void) {
     option deprecated = true;
   }
