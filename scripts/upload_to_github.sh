@@ -7,20 +7,20 @@ echo "language: $1"
 echo "branch: $2"
 # $3 files
 echo "files: $3"
+# $4 tag name
+echo "tag name: $4"
+# $5 github token
 
 setup_git() {
-  git config --global user.email "deploy@travis-ci.org"
-  git config --global user.name "Travis CI"
-  git remote set-url origin https://${GITHUB_TOKEN}@github.com/SKF/proto.git > /dev/null 2>&1
+  git config --global user.name "GitHub Actions"
+  git remote set-url origin https://$1@github.com/SKF/proto.git > /dev/null 2>&1
 }
 
 commit_files() {
+  tree $3
   git fetch --all
   git checkout $2
   git rm -rf --ignore-unmatch .
-
-  cp -rf $3/common .
-  git add -v common
 
   for service in $( ls $3 ); do
     if [[ ${SERVICES} =~ (^|[[:space:]])$service($|[[:space:]]) ]]; then
@@ -29,8 +29,13 @@ commit_files() {
     fi
   done
 
+  if [ -f "$3/go.mod" ]; then
+    cp $3/go.{mod,sum} .
+    git add go.{mod,sum}
+  fi
+
   git commit -v --allow-empty -m "Deploy SKF/proto to github.com/SKF/proto.git:$2"
-  git tag "${TRAVIS_TAG}-$1"
+  git tag "$4-$1"
 }
 
 upload_files() {
@@ -38,6 +43,6 @@ upload_files() {
   git push --tag
 }
 
-setup_git
-commit_files $1 $2 $3
+setup_git $5
+commit_files $1 $2 $3 $4
 upload_files $2

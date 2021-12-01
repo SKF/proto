@@ -1,0 +1,53 @@
+name: Building
+on:
+  push:
+    branches: [ v1 ]
+  pull_request:
+    branches: [ v1 ]
+jobs:
+  build:
+    name: proto-build-go
+    runs-on: ubuntu-latest
+    env:
+      GOPATH: ${{ github.workspace }}
+      GO111MODULE: on
+      SERVICES: common hierarchy iam iot pas reports config authorize
+      GRPC_VERSION: v1.40.0
+    steps:
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+        id: go
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: "Go: Clean cache, install protoc compiler and fetch gRPC protoc plugin"
+        run: |
+          mkdir -p build/protoc
+          pushd build/protoc
+          wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
+          unzip -o protoc*.zip
+          popd
+
+          go get -u google.golang.org/grpc@${GRPC_VERSION}
+          go get -d -u github.com/golang/protobuf/protoc-gen-go
+          mkdir -p $GOPATH/src/github.com/golang
+
+          pushd $GOPATH/src/github.com/golang
+          git clone --depth 1 --branch v1.2.0 https://github.com/golang/protobuf
+          popd
+
+          go install github.com/golang/protobuf/protoc-gen-go@latest
+          mv $GOPATH/bin build/bin
+
+      - name: "Go: Generate sources"
+        run: bash ${{ github.workspace }}/scripts/build_go.sh
+
+      - name: "Upload artifacts"
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated sources
+          path: build/go/
+          retention-days: 1
