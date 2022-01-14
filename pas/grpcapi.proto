@@ -92,6 +92,7 @@ message SetPointAlarmThresholdInput {
   repeated BandAlarm band_alarms = 7;
   DoubleObject full_scale = 8;
   repeated HalAlarm hal_alarms = 9;
+  RateOfChange rate_of_change = 10;
 }
 message SetPointAlarmThresholdOutput {}
 
@@ -107,6 +108,7 @@ message GetPointAlarmThresholdOutput {
   DoubleObject full_scale = 4;
   repeated BandAlarm band_alarms = 5;
   repeated HalAlarm hal_alarms = 6;
+  RateOfChange rate_of_change = 7;
 }
 
 
@@ -132,6 +134,7 @@ message GetPointAlarmStatusOutput {
   int64 updated_at = 5;
   repeated BandAlarmStatus band_alarms = 6;
   repeated HalAlarmStatus hal_alarms = 7;
+  Alarm rate_of_change = 8;
 }
 message ExternalAlarm {
   AlarmStatus status = 1;
@@ -278,4 +281,12 @@ message ThresholdValue {
 message Bearing {
   string manufacturer = 1;
   string model_number = 2;
+}
+
+message RateOfChange {
+  DoubleObject outer_high = 1;
+  DoubleObject inner_high = 2;
+  DoubleObject inner_low = 3;
+  DoubleObject outer_low = 4;
+  string unit = 5;
 }
