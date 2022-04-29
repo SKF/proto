@@ -276,6 +276,7 @@ message ThresholdValue {
     UNKNOWN = 0;
     ABSOLUTE = 1;
     RELATIVE_FULLSCALE = 2;
+    RELATIVE_OVERALL = 3;
   }
 }
 
